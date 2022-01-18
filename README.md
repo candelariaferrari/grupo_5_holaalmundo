@@ -23,12 +23,14 @@ Sobre estetica:
    - https://www.estudiovolando.com/  - Animaciones 
    - https://brotherad.com/buenos-aires/ - Animacion Seleccion de lugar y una vez seleccionado como se ve el icono del mundo.
    - https://color.adobe.com/es/create/color-wheel# 
-   - 
+ 
+ Link muckups:
+ 
+   - https://www.figma.com/file/UB49FOnDZQgfJuQ1mQqVWf/Hola-al-Mundo?node-id=0%3A1
 
 ------------------- Descripción de los integrantes -----------------------
 
-1. Carlos Alberto Jaramillo Portilla -SM 
-- Mi nombre es Carlos Jaramillo y mi pasión es la implementación de tecnología en el campo jurídico y con impacto social. Soy abogado de profesión, magister en big data y BI, y magister en Derecho Informático. Experto en entender los problemas actuales, sobre todo relacionados con temas jurídicos y desarrollar software a la medida para solventar dichas problemáticas. Tengo la experiencia tanto desde la visión jurídica, pero también desde la visión tecnológica, lo que me permite generar un excelente empalme para comprender los problemas tecnológicos actuales, y generar un andamiaje jurídico frente a las coyunturas que se generan en el desarrollo de software. 
+1. Carlos Alberto Jaramillo Portilla -SM - Mi nombre es Carlos Jaramillo y mi pasión es la implementación de tecnología en el campo jurídico y con impacto social. Soy abogado de profesión, magister en big data y BI, y magister en Derecho Informático. Experto en entender los problemas actuales, sobre todo relacionados con temas jurídicos y desarrollar software a la medida para solventar dichas problemáticas. Tengo la experiencia tanto desde la visión jurídica, pero también desde la visión tecnológica, lo que me permite generar un excelente empalme para comprender los problemas tecnológicos actuales, y generar un andamiaje jurídico frente a las coyunturas que se generan en el desarrollo de software. 
 
 2. Martina Vissani - Me llamo Martina Vissani, tengo 22 años y soy de Rosario. El año pasado decidí finalmente anotarme para estudiar computación pero desde que empecé la secundaria siempre estuve muy interesada en el tema. Vi mi primer lenguaje 
 cuando empecé la carrera, nos enseñaron racket, y como me di cuenta que no era muy práctico ni conocido, quise 
