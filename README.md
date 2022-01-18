@@ -23,7 +23,10 @@ Sobre estetica:
    - https://www.estudiovolando.com/  - Animaciones 
    - https://brotherad.com/buenos-aires/ - Animacion Seleccion de lugar y una vez seleccionado como se ve el icono del mundo.
    - https://color.adobe.com/es/create/color-wheel# 
-   - 
+ 
+ Link muckups:
+ 
+   - https://www.figma.com/file/UB49FOnDZQgfJuQ1mQqVWf/Hola-al-Mundo?node-id=0%3A1
 
 ------------------- Descripción de los integrantes -----------------------
 
