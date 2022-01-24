@@ -1,0 +1,23 @@
+{
+  "name": "grupo_5_holaalmundo",
+  "version": "1.0.0",
+  "description": "Descripcion del proyecto",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/candelariaferrari/grupo_5_holaalmundo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/candelariaferrari/grupo_5_holaalmundo/issues"
+  },
+  "homepage": "https://github.com/candelariaferrari/grupo_5_holaalmundo#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
