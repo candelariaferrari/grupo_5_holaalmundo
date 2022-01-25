@@ -7,54 +7,80 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hola al Mundo</title>
   <script src="https://kit.fontawesome.com/3964fc737d.js" crossorigin="anonymous"></script>
-
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
   <!-- Menu -->
-  <header>
-    <section>
-      <img src="" alt="loguito">
-      <div>
-        <i class="fas fa-search"> Buscar</i>
+  <header id="top-header">
+    <div class="navbar">
+      <a href="#top-header">
+        <img src="/images/logo.svg" alt="logo">
+      </a>
+
+      <div class="search">
+        <i class="fas fa-search"></i>
+        <input class="input" type="search" name="buscar" placeholder="Buscar">
       </div>
-      <ul>
-        <li>Membresía</li>
-        <li>Da clases</li>
-        <li>Mis cursos</li>
-        <li>En</li>
+      <ul class="nav">
+        <li>
+          <a href="#">Home</a>
+        </li>
+        <li>
+          <a href="#"> Profesores</a>
+        </li>
+        <li>
+          <a href="#"> Paquetes</a>
+        </li>
+        <li>
+          <a href="#"> Contacto</a>
+        </li>
+        <li>
+          <a href="#">En</a>
+        </li>
       </ul>
-      <i class="far fa-heart"></i>
-      <i class="fas fa-shopping-cart"></i>
-      <i class="far fa-user-circle"></i>
-    </section>
-    <section class="menuDesplegable">
-      <div>
-        <i class="far fa-user-circle"></i>
-        <span>Usuario</span>
+      <div class="botones-iconos">
+        <i class="far fa-heart"></i>
+        <i class="fas fa-shopping-cart"></i>
+        <div class="dropdown">
+          <button class="dropbtn">
+            <i class="far fa-user-circle"></i>
+          </button>
+          <div class="dropdown-content">
+            <div class="drop-header">
+              <i class="far fa-user-circle"></i>
+              <h4>Usuario</h4>
+            </div>
+            <ul>
+              <li>Membresías</li>
+              <li>Da clases</li>
+              <li>Mis cursos</li>
+            </ul>
+            <ul>
+              <li>Configuración</li>
+              <li>Métodos de pago</li>
+              <li>Historial de compra</li>
+            </ul>
+            <ul>
+              <li>Idiomas</li>
+            </ul>
+            <ul>
+              <li>Editar perfil</li>
+            </ul>
+
+            <ul class="outline">
+              <li>Ayuda</li>
+              <li >Cerrar sesión</li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <div>
-        <ul>
-          <li>Membresías</li>
-          <li>Da clases</li>
-          <li>Mis cursos</li>
-        </ul>
-      </div>
-      <div>
-        <ul>
-          <li>Configuración</li>
-          <li>Métodos de pago</li>
-          <li>Historial de compra</li>
-        </ul>
-      </div>
-      <div>Idiomas</div>
-      <div>Editar perfil</div>
-      <div>
-        <ul>
-          <li>Ayuda</li>
-          <li>Cerrar sesión</li>
-        </ul>
-    </section>
+
+    </div>
+
   </header>
   <main>
     <!-- Slide principal -->
@@ -209,4 +235,5 @@
     </div>
   </footer>
 </body>
+
 </html>
