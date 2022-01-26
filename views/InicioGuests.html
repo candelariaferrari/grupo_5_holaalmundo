@@ -16,71 +16,78 @@
 <body>
   <!-- Menu -->
   <header id="top-header">
-    <div class="navbar">
-      <a href="#top-header">
-        <img src="/images/logo.svg" alt="logo">
-      </a>
-
-      <div class="search">
-        <i class="fas fa-search"></i>
-        <input class="input" type="search" name="buscar" placeholder="Buscar">
+    <nav class="navbar">
+      <div class="responsive-one">
+        <a class="logo" href="#top-header">
+          <img src="/images/logo.svg" alt="logo">
+        </a>
+        <div class="search">
+          <i class="fas fa-search"></i>
+          <input class="input" type="search" name="buscar" placeholder="Buscar">
+        </div>
       </div>
-      <ul class="nav">
-        <li>
-          <a href="#">Home</a>
+      <ul class="nav-list" id="navList">
+        <li class="nav-item">
+          <a class="border" href="#">Home</a>
         </li>
-        <li>
+        <li class="nav-item">
           <a href="#"> Profesores</a>
         </li>
-        <li>
+        <li class="nav-item">
           <a href="#"> Paquetes</a>
         </li>
-        <li>
+        <li class="nav-item">
           <a href="#"> Contacto</a>
         </li>
-        <li>
+        <li class="nav-item">
           <a href="#">En</a>
         </li>
       </ul>
-      <div class="botones-iconos">
-        <i class="far fa-heart"></i>
-        <i class="fas fa-shopping-cart"></i>
-        <div class="dropdown">
-          <button class="dropbtn">
+     <div class="responsive-two">
+      <div class="button-responsive" id="toggle-button">
+        <i class="fas fa-bars"></i>
+    </div>
+ 
+    <div class="botones-iconos">
+      <i class="far fa-heart"></i>
+      <i class="fas fa-shopping-cart"></i>
+      <div class="dropdown">
+        <button class="dropbtn">
+          <i class="far fa-user-circle"></i>
+        </button>
+        <!-- submenu -->
+        <div class="dropdown-content">
+          <div class="drop-header">
             <i class="far fa-user-circle"></i>
-          </button>
-          <div class="dropdown-content">
-            <div class="drop-header">
-              <i class="far fa-user-circle"></i>
-              <h4>Usuario</h4>
-            </div>
-            <ul>
-              <li>Membresías</li>
-              <li>Da clases</li>
-              <li>Mis cursos</li>
-            </ul>
-            <ul>
-              <li>Configuración</li>
-              <li>Métodos de pago</li>
-              <li>Historial de compra</li>
-            </ul>
-            <ul>
-              <li>Idiomas</li>
-            </ul>
-            <ul>
-              <li>Editar perfil</li>
-            </ul>
-
-            <ul class="outline">
-              <li>Ayuda</li>
-              <li >Cerrar sesión</li>
-            </ul>
+            <h4>Usuario</h4>
           </div>
+          <ul>
+            <li>Membresías</li>
+            <li>Da clases</li>
+            <li>Mis cursos</li>
+          </ul>
+          <ul>
+            <li>Configuración</li>
+            <li>Métodos de pago</li>
+            <li>Historial de compra</li>
+          </ul>
+          <ul>
+            <li>Idiomas</li>
+          </ul>
+          <ul>
+            <li>Editar perfil</li>
+          </ul>
+
+          <ul class="outline">
+            <li>Ayuda</li>
+            <li>Cerrar sesión</li>
+          </ul>
         </div>
       </div>
-
     </div>
-
+     </div>
+      
+    </nav>
   </header>
   <main>
     <!-- Slide principal -->
@@ -118,10 +125,10 @@
 
     </section>
     <!-- Seccion profesores -->
-    <section>
+    <section id="section-profesores">
       <!-- dividi la seccion en subsecciones 'article' para que no quede confuso-->
-      <article>
-        <div> Nuestros Profes</div>
+      <article class="background-profesores">
+        <h2> Nuestros Profes</h2>
         <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Adipiscing ut diam arcu
           vivamus erat dictum. Ipsum scelerisque aenean cursus id quis enim sagittis nullam
           sodales. Integer augue id cursus massa duis donec gravida. Non faucibus rmentum
@@ -234,6 +241,21 @@
       <i class="fab fa-whatsapp"></i>
     </div>
   </footer>
+
+  <script>
+    const toggleButton = document.getElementById("toggle-button");
+    const navList = document.getElementById("navList");
+    toggleButton.addEventListener('click',()=> {
+      navList.classList.toggle('active');
+    })
+   /*  function menuResponsive() {
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    } */
+  </script>
 </body>
 
 </html>
