@@ -16,15 +16,14 @@ blanco: #ffffff
   font-family: "Roboto", sans-serif;
   box-sizing: border-box;
 }
-.responsive-one{
+.responsive-one {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   width: 40%;
-
 }
-.responsive-two{
+.responsive-two {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -32,6 +31,9 @@ blanco: #ffffff
   width: 10%;
 }
 .navbar {
+  position: absolute;
+  z-index: 111;
+  top: 0;
   background-color: #212121;
   display: flex;
   flex-direction: row;
@@ -49,7 +51,6 @@ blanco: #ffffff
 .nav-list .nav-item {
   display: inline-block;
   padding: 1em 0.5em;
-  
 }
 .nav-list .nav-item a:after {
   content: "";
@@ -176,16 +177,258 @@ blanco: #ffffff
 .button-responsive {
   display: none;
 }
+
+/* ----- CARRUSEL ----- */
+.main-carrusel {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+  box-sizing: border-box;
+}
+.mySlides {
+  display: none;
+}
+.main-carrusel img.imagen {
+  width: 100%;
+  margin-top: 1em;
+  display: block;
+}
+.mySlides .content-text {
+  position: absolute;
+  top: 10em;
+  right: 10em;
+  box-sizing: border-box;
+}
+
+.content-text .text {
+  color: #fff;
+  background-color: #3657f7;
+  border-radius: 25px;
+  font-size: 25px;
+  font-weight: 300;
+  padding: 0.5em 1.5em;
+  margin: 0.5em auto;
+  width: 100%;
+}
+.mySlides .flex-form{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  top: 10em;
+}
+.text-one{
+  width: 35vw;
+
+}
+.text-one h2{
+  color: #00ffcb;
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 0.9em;
+  margin-bottom: 0.5em;
+}
+.text-one p{
+  color: #fff;
+  font-size: 25px;
+  font-weight: 300;
+}
+.text-one .subtitle{
+  margin-top: 0.5em;
+  font-size: 30px;
+  font-weight: 500;
+}
+.text-one .subtitle strong{
+  color: #00ffcb;
+}
+.form-carrusel{
+  background-color: #212121;
+  width: 400px;
+  height: 550px;
+  border-radius: 15px;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.form-carrusel.two{
+  background-color: #00ffcb;
+  width: 400px;
+  height: 550px;
+  border-radius: 15px;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.form-carrusel .flex-icon{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2em;
+  margin-top: 2em;
+}
+.form-carrusel .flex-icon .circulo{
+  background-color: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 0.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form-carrusel form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form-carrusel .flex-icon i{
+  color: #212121;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.form-carrusel.two .flex-icon i{
+  color: #6243F7;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.form-carrusel .input-form{
+  display: block;
+  width: 300px;
+  margin: 1em auto;
+  background-color: #00ffcb;
+  padding:0.5em 1em;
+  border-radius: 15px;
+  border: none;
+  font-size: 1rem;
+  color: #212121;
+}
+.form-carrusel.two .input-form{
+  display: block;
+  width: 300px;
+  margin: 1em auto;
+  background-color: #212121;
+  padding:0.5em 1em;
+  border-radius: 15px;
+  border: none;
+  font-size: 1rem;
+  color: #ffffff;
+}
+#input-two::placeholder {
+  color: #fff;
+  opacity: 1;
+}
+.input-form,input::placeholder {
+  color: #212121;
+  opacity: 1;
+}
+.input-form:focus, input:focus, input[type]:focus {
+  outline: 0 none;
+}
+.form-one button.register{
+  border: none;
+  background-color: #fff;
+  color: #212121;
+  font-size: 15px;
+  font-weight: 500;
+  width: 200px;
+  margin: 2em auto 0 auto;
+  padding: 0.5em;
+  text-transform: capitalize;
+  border-radius: 15px;
+}
+.content-dot{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 20vh;
+  width: 100%;
+}
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: background-color 0.6s ease;
+ 
+}
+
+.activeDot, .dot:hover {
+  background-color: #212121;
+  
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: #212121;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* ---------- RESPONSIVE --------- */
 @media (max-width: 480px) {
-  .responsive-one{
+  .responsive-one {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-
   }
-  .responsive-two{
+  .responsive-two {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -193,13 +436,13 @@ blanco: #ffffff
     width: 100%;
     margin-top: 1em;
   }
-  .navbar{
+  .navbar {
     flex-direction: column;
   }
   .navbar.logo {
     width: 40%;
   }
-  .nav-list{
+  .nav-list {
     display: none;
   }
   .nav-list .nav-item {
@@ -218,11 +461,11 @@ blanco: #ffffff
   .button-responsive {
     display: block;
   }
-  .button-responsive i{
+  .button-responsive i {
     color: #fff;
     font-size: 1.5rem;
   }
-  .active{
+  .active {
     display: block;
     order: 5;
     display: flex;
@@ -231,4 +474,28 @@ blanco: #ffffff
     align-items: center;
     width: 100%;
   }
+}
+
+
+
+/* Estilos para motores Webkit y blink (Chrome, Safari, Opera... )*/
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  display: none !important;
+}
+
+::-webkit-scrollbar:vertical {
+  width: 0px;
+}
+
+::-webkit-scrollbar-button:increment,
+.contenedor::-webkit-scrollbar-button {
+  display: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 20px;
+  width: 0px;
 }
