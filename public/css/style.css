@@ -468,9 +468,14 @@ input[type]:focus {
 }
 
 /* ----- PROFESORES ------- */
-#section-profesores {
+#profesores{
+  box-sizing: border-box;
   width: 100vw;
-  height: 110vh;
+  height: fit-content;
+}
+.section-profesores {
+  width: 1440px;
+  height: 1431px;
   margin: 5em 0em 0em 0em;
   background-image: url(../images/bkg-profes.png);
   background-repeat: no-repeat;
@@ -481,10 +486,10 @@ input[type]:focus {
   background-position: center top;
   position: relative;
 }
-#section-profesores .title-profesores{
+.section-profesores .title-profesores{
   position: absolute;
   z-index: 444;
-  left: 4em;
+  left: 6em;
   top: 8em;
   width: 30%;
 }
@@ -501,7 +506,7 @@ input[type]:focus {
   margin-top: 1em;
 }
 .content-right{
-  position: absolute;
+  position: relative;
   z-index: 333;
   right: 0;
 }
@@ -511,14 +516,15 @@ input[type]:focus {
   padding-top: 2em;
   display: grid;
   grid-template-columns: max-content max-content max-content max-content max-content max-content;
-  grid-template-rows: auto auto auto auto;
+  grid-template-rows: auto auto auto auto auto;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
     ". . . . g-uno ."
     ". . . g-tres . g-dos"
     ". . g-cinco . g-cuatro ."
-    "boton-mas g-ocho . g-siete . g-seis";
+    "boton-mas g-ocho . g-siete . g-seis"
+    "est est est est est est";
 }
 .container-teacher img {
   width: 90%;
@@ -578,6 +584,42 @@ input[type]:focus {
   width: 200px;
 }
 
+/* ---- section estadistica ----- */
+.est{
+  grid-area: est;
+}
+#section-estadisticas{
+  
+  width: 100%;
+  padding: 4em 2em;
+}
+.title-estadisticas h2{
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 2em auto;
+  color: #212121;
+}
+.cantidades{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.cantidades .number{
+  font-size: 80px;
+  font-weight: 600;
+  color: #6243f7;
+  text-align: center;
+}
+.cantidades .text{
+  font-size: 20px;
+  font-weight: 600;
+  color: #212121;
+  text-align: center;
+}
 /* ---------- RESPONSIVE --------- */
 @media (max-width: 480px) {
   .responsive-one {
