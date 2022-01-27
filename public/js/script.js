@@ -1,3 +1,4 @@
+
 /* boton desplegable responsive */
 const toggleButton = document.getElementById("toggle-button");
 const navList = document.getElementById("navList");
@@ -32,3 +33,7 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " activeDot";
 }
+
+/* ---- scroll chat -- */
+
+

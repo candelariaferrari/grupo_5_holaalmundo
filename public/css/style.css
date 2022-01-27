@@ -15,9 +15,9 @@ blanco: #ffffff
   padding: 0;
   box-sizing: border-box;
 }
-body{
+body {
   font-family: "Roboto", sans-serif;
-
+  height: fit-content;
 }
 .responsive-one {
   display: flex;
@@ -468,7 +468,7 @@ input[type]:focus {
 }
 
 /* ----- PROFESORES ------- */
-#profesores{
+#profesores {
   box-sizing: border-box;
   width: 100vw;
   height: fit-content;
@@ -486,26 +486,26 @@ input[type]:focus {
   background-position: center top;
   position: relative;
 }
-.section-profesores .title-profesores{
+.section-profesores .title-profesores {
   position: absolute;
   z-index: 444;
   left: 6em;
   top: 8em;
   width: 30%;
 }
-.title-profesores h2{
+.title-profesores h2 {
   font-size: 40px;
   font-weight: 800;
-  color: #3651F7;
+  color: #3651f7;
   text-transform: uppercase;
 }
-.title-profesores p{
+.title-profesores p {
   font-size: 1.2rem;
   font-weight: 400;
   color: #212121;
   margin-top: 1em;
 }
-.content-right{
+.content-right {
   position: relative;
   z-index: 333;
   right: 0;
@@ -573,7 +573,7 @@ input[type]:focus {
   justify-content: center;
   align-items: center;
 }
-.boton-mas button{
+.boton-mas button {
   background-color: #3657f7;
   color: #fff;
   font-size: 1rem;
@@ -585,40 +585,198 @@ input[type]:focus {
 }
 
 /* ---- section estadistica ----- */
-.est{
+.est {
   grid-area: est;
 }
-#section-estadisticas{
-  
+#section-estadisticas {
   width: 100%;
   padding: 4em 2em;
 }
-.title-estadisticas h2{
+.title-estadisticas h2 {
   text-align: center;
   font-size: 2.5rem;
   font-weight: 700;
   margin: 2em auto;
   color: #212121;
 }
-.cantidades{
+.cantidades {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
   width: 100%;
 }
-
-.cantidades .number{
+.cantidades .number {
   font-size: 80px;
   font-weight: 600;
   color: #6243f7;
   text-align: center;
 }
-.cantidades .text{
+.cantidades .text {
   font-size: 20px;
   font-weight: 600;
   color: #212121;
   text-align: center;
+}
+
+/* ------ CONTACTO ----- */
+#contactoHome {
+  box-sizing: border-box;
+  width: 100vw;
+  height: fit-content;
+}
+.contactoHome {
+  width: 1440px;
+  height: 725px;
+  margin: 0em 0em 0em 0em;
+  background-image: url(../images/bkg-contacto.png);
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center top;
+  position: relative;
+}
+.flexContacto {
+  width: 100%;
+  padding: 0em 2em;
+  position: absolute;
+  top: 15em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.titleContact {
+  width: 30%;
+}
+.titleContact h3 {
+  font-size: 55px;
+  color: #00ffcb;
+  font-weight: 600;
+}
+.titleContact p {
+  font-size: 25px;
+  font-weight: 400;
+  color: #fff;
+  padding: 0.2em 0em 1em;
+}
+.titleContact .redes ul {
+  list-style: none;
+}
+.titleContact .redes li{
+  margin: 0.5em 0em;
+}
+.titleContact .redes a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 25px;
+  font-weight: 400;
+  
+}
+.titleContact .redes a i {
+  color: #00ffcb;
+}
+.flexContacto .formulario {
+  width: 50%;
+}
+.flexContacto .formulario .input-form {
+  display: block;
+  width: 100%;
+  margin: 1em auto;
+  background-color: #00ffcb;
+  padding: 0.5em 1em;
+  border-radius: 15px;
+  border: none;
+  font-size: 1rem;
+  color: #212121;
+}
+.flexContacto .formulario .consulta{
+  display: block;
+  width: 100%;
+  margin: 1em auto;
+  background-color: #00ffcb;
+  padding: 0.5em 1em;
+  border-radius: 15px;
+  border: none;
+  font-size: 1rem;
+  color: #212121;
+}
+
+.consulta,
+textarea::placeholder {
+  color: #212121;
+  opacity: 1;
+  font-family: "Roboto", sans-serif;
+}
+.flexContacto .formulario button.enviar {
+  border: none;
+  background-color: #212121;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  width: 200px;
+  padding: 1em;
+  text-transform: capitalize;
+  border-radius: 15px;
+  float: right;
+}
+/* --------CHAT ------ */
+
+#contentChat {
+  position: fixed;
+  z-index: 1111111111;
+  bottom: 5vh;
+  right: 0;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+#contentChat img{
+  width: 45%;
+  position: relative;
+}
+#contentChat p{
+  color: #00ffcb;
+  position: absolute;
+  width: 30%;
+  margin-top: -1em;
+}
+/* ------ FOOTER ----- */
+footer{
+  background-color: #212121;
+  height: 150px;
+  padding: 0em 6em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .footerTeam {
+  color: #00ffcb;
+  font-size: 1rem;
+  font-weight: 300;
+}
+.footerTeam p{
+  display: inline-block;
+}
+.footerTeam ul{
+  list-style: none;
+}
+.footerTeam li{
+  display: inline-block;
+}
+.footerTeam a{
+  text-decoration: none;
+  color: #00ffcb;
+}
+.redesFooter a{
+  text-decoration: none;
+  color: #00ffcb;
+  font-size: 1rem;
+  margin-right: 0.5em;
 }
 /* ---------- RESPONSIVE --------- */
 @media (max-width: 480px) {

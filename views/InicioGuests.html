@@ -329,49 +329,101 @@
       <div> Ver más</div>
     </section>
     <!-- Contacto -->
-    <section class="contactoHome">
-      <div> Hola</div>
-      <div> Envianos tu consulta y ne el menor tiempo estarás empezando a comunicarte con el mundo.</div>
-      <div class="redes">
-        <ul>
-          <!--aca no se si van divs, spans o que para que quede el mismo espacio de separacion-->
-          <li>
-            <i class="fab fa-facebook-f"></i>
-            <span> holaalmundo</span>
-          </li>
-          <li>
-            <i class="fab fa-instagram"></i>
-            <span> holaalmundo</span>
-          </li>
-          <li>
-            <i class="fab fa-linkedin-in"></i>
-            <span> holaalmundo</span>
-          </li>
-          <li>
-            <i class="fab fa-whatsapp"></i>
-            <span>0303 456 shalalala</span>
-          </li>
-        </ul>
-      </div>
-      <div class="formulario">
-        <div>
-          <div>Nombre y apelllido</div>
-          <div>Email</div>
-          <div>Consulta</div>
+    <section id="contactoHome">
+      <div class="contactoHome">
+        <div class="flexContacto">
+          <div class="titleContact">
+            <h3>Hola!</h3>
+            <p> Envianos tu consulta y en el menor tiempo estarás empezando a comunicarte con el mundo.</p>
+            <div class="redes">
+              <ul>
+                <!--aca no se si van divs, spans o que para que quede el mismo espacio de separacion-->
+                <li>
+                  <a href="#" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                    <span> holaalmundo</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                    <span> holaalmundo</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                    <span> holaalmundo</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>0303 456 shalalala</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="formulario">
+            <form action="#" method="post">
+              <input class="input-form" type="text" name="nombre" id="nombre" placeholder="Nombre y Apellido">
+              <input class="input-form" type="email" name="email" id="email" placeholder="Email">
+              <textarea class="consulta" name="consulta" id="consulta" cols="30" rows="10" placeholder="Consulta..."></textarea>
+              <button type="submit" class="enviar">
+                Enviar
+              </button>
+            </form>
+          </div>
         </div>
-        <div>Enviar</div>
       </div>
     </section>
-
   </main>
+  <!-- chat -->
+  <div id="contentChat" class="desactivado">
+    <img src="/images/buttonChat.svg" alt="button-chat">
+    <p>Tenes una duda?</p>
+  </div>
   <!-- Footer -->
   <footer>
-    <div>Creado por Carlos - Martina - Carmela - Candelaria</div>
+    <div class="footerTeam">
+      <p>Creado por:</p>
+      <ul>
+        <li>
+          <a href="https://www.linkedin.com/" target="_blank">
+          Carlos -
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/" target="_blank">
+          Martina -
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/" target="_blank">
+          Carmela -
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/" target="_blank">
+          Candelaria
+          </a>
+        </li>
+      </ul>
+    </div>
     <div class="redesFooter">
-      <i class="fab fa-facebook-f"></i>
-      <i class="fab fa-instagram"></i>
-      <i class="fab fa-linkedin-in"></i>
-      <i class="fab fa-whatsapp"></i>
+      <a href="#" target="_blank">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="#" target="_blank">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="#" target="_blank">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a href="#" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+      </a>
     </div>
   </footer>
 
