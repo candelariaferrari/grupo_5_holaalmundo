@@ -63,15 +63,60 @@ const serviceContainers = [...document.querySelectorAll('.serviceContainer')];//
 const nxtBtn = document.getElementsByClassName('nxtBtn');
 const preBtn = document.getElementsByClassName('preBtn');
 
-serviceContainers.forEach((item,i)=> {
+serviceContainers.forEach((item, i) => {
   let containerDimensions = item.getBoundingClientRect();
   let containerWidth = containerDimensions.width;
 
-  nxtBtn[i].addEventListener('click', ()=>{
+  nxtBtn[i].addEventListener('click', () => {
     item.scrollLeft += containerWidth;
   })
-  preBtn[i].addEventListener('click', ()=>{
+  preBtn[i].addEventListener('click', () => {
     item.scrollLeft -= containerWidth;
   })
 })
 
+/* ---- PREVIEW CARRITO ----- */
+function openNav() {
+  document.getElementById("previewCarrito").style.width = "250px";
+  document.getElementById("main").style.marginRight = "250px";
+}
+
+function closeNav() {
+  document.getElementById("previewCarrito").style.width = "0";
+  document.getElementById("main").style.marginRight = "0";
+}
+
+const template = document.createElement('template');
+
+template.innerHTML = `
+  <div id="previewCarrito" class="sidebar">
+      <div class="title">
+        <h4>Mi carrito</h4>
+        <div href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+          <i class="far fa-times-circle"></i>
+        </div>
+      </div>
+      <div class="details">
+        <p>Nombre del paquete</p>
+        <p><strong>El detalle de lo que contiene el paquete</strong></p>
+      </div>
+      <div class="details">
+        <p>Cantidad</p>
+        <p><strong>1</strong></p>
+      </div>
+      <div class="details">
+        <p>Precio</p>
+        <p><strong>$5000</strong></p>
+      </div>
+     <button>
+      <i class="far fa-trash-alt"></i>
+       Borrar
+      </button>
+     <button>
+      <i class="far fa-smile-wink"></i>
+       Comprar
+      </button>
+    </div>
+`;
+
+document.body.appendChild(template.content);

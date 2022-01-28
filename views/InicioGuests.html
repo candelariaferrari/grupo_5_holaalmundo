@@ -16,7 +16,7 @@
 <body>
   <!-- Menu -->
   <header id="top-header">
-    <nav class="navbar">
+    <nav class="navbar" id="main">
       <div class="responsive-one">
         <a class="logo" href="#top-header">
           <img src="/images/logo.svg" alt="logo">
@@ -28,7 +28,7 @@
       </div>
       <ul class="nav-list" id="navList">
         <li class="nav-item">
-          <a class="border" href="#">Home</a>
+          <a class="border" href="/home">Home</a>
         </li>
         <li class="nav-item">
           <a href="#"> Profesores</a>
@@ -50,7 +50,9 @@
 
         <div class="botones-iconos">
           <i class="far fa-heart"></i>
-          <i class="fas fa-shopping-cart"></i>
+          <button class="carrito" onclick="openNav()">
+            <i class="fas fa-shopping-cart"></i>
+          </button>
           <div class="dropdown">
             <button class="dropbtn">
               <i class="far fa-user-circle"></i>
@@ -90,7 +92,7 @@
     </nav>
   </header>
   <main>
-
+  
     <!-- Carrusel principal -->
     <section>
       <div class="main-carrusel">
@@ -305,7 +307,7 @@
     <!-- Sección servicios -->
     <section id="sectionServicios" onload="reset()">
       <h2>Nuestros Servicios</h2>
-      
+
       <div class="serviceContainer">
         <button class="preBtn">
           <i class="fas fa-chevron-left"></i>
@@ -317,7 +319,7 @@
         <div class="serviceCard">
           <div class="serviceImg">
             <span class="discountTag">$5000</span>
-            <i class="fas fa-comments"></i>  
+            <i class="fas fa-comments"></i>
             <h4>Conversación</h4>
             <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
           </div>
@@ -332,7 +334,7 @@
         <div class="serviceCard">
           <div class="serviceImg">
             <span class="discountTag">$5000</span>
-            <i class="fas fa-comments"></i>  
+            <i class="fas fa-comments"></i>
             <h4>Conversación Grupal</h4>
             <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
           </div>
@@ -347,7 +349,7 @@
         <div class="serviceCard">
           <div class="serviceImg">
             <span class="discountTag">$5000</span>
-            <i class="fas fa-comments"></i>  
+            <i class="fas fa-comments"></i>
             <h4>Preparación Exámen</h4>
             <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
           </div>
@@ -362,7 +364,7 @@
         <div class="serviceCard">
           <div class="serviceImg">
             <span class="discountTag">$5000</span>
-            <i class="fas fa-comments"></i>  
+            <i class="fas fa-comments"></i>
             <h4>Perfeccionamiento profesional</h4>
             <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
           </div>
@@ -377,7 +379,7 @@
         <div class="serviceCard">
           <div class="serviceImg">
             <span class="discountTag">$5000</span>
-            <i class="fas fa-comments"></i>  
+            <i class="fas fa-comments"></i>
             <h4>Clases individuales</h4>
             <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
           </div>
@@ -392,7 +394,7 @@
         <div class="serviceCard">
           <div class="serviceImg">
             <span class="discountTag">$5000</span>
-            <i class="fas fa-comments"></i>  
+            <i class="fas fa-comments"></i>
             <h4>Clases Grupales</h4>
             <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
           </div>
@@ -407,7 +409,7 @@
         <div class="serviceCard">
           <div class="serviceImg">
             <span class="discountTag">$5000</span>
-            <i class="fas fa-comments"></i>  
+            <i class="fas fa-comments"></i>
             <h4>Conversacion por tematica</h4>
             <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
           </div>
@@ -422,7 +424,7 @@
         <div class="serviceCard">
           <div class="serviceImg">
             <span class="discountTag">$5000</span>
-            <i class="fas fa-comments"></i>  
+            <i class="fas fa-comments"></i>
             <h4>Clases semanales</h4>
             <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
           </div>
@@ -433,7 +435,7 @@
             </button>
           </div>
         </div>
-        
+
       </div>
     </section>
     <!-- Contacto -->
