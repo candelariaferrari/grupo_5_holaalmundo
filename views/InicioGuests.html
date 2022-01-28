@@ -302,31 +302,138 @@
         </div>
       </div>
     </section>
-
     <!-- Sección servicios -->
-    <section>
-      <div>Nuestros Servicios</div>
-      <div class="bloquesDeServicios">
-        <div>
-          <div>Conversación</div>
-          <div>Agregar al carrito</div>
+    <section id="sectionServicios" onload="reset()">
+      <h2>Nuestros Servicios</h2>
+      <button class="preBtn">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button class="nxtBtn">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+      <div class="serviceContainer">
+        <!-- card 1 -->
+        <div class="serviceCard">
+          <div class="serviceImg">
+            <span class="discountTag">$5000</span>
+            <i class="fas fa-comments"></i>  
+            <h4>Conversación</h4>
+            <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
+          </div>
+          <div class="serviceInfo">
+            <button>
+              <i class="fas fa-shopping-cart"></i>
+              Agregar al carrito
+            </button>
+          </div>
         </div>
-        <div>
-          <div>Perfecciona tu idioma para tu carrera</div>
-          <div>Agregar al carrito</div>
+        <!-- card 2 -->
+        <div class="serviceCard">
+          <div class="serviceImg">
+            <span class="discountTag">$5000</span>
+            <i class="fas fa-comments"></i>  
+            <h4>Conversación Grupal</h4>
+            <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
+          </div>
+          <div class="serviceInfo">
+            <button>
+              <i class="fas fa-shopping-cart"></i>
+              Agregar al carrito
+            </button>
+          </div>
         </div>
-        <div>
-          <div>Preparación de examenes</div>
-          <div>Agregar al carrito</div>
+        <!-- card 3 -->
+        <div class="serviceCard">
+          <div class="serviceImg">
+            <span class="discountTag">$5000</span>
+            <i class="fas fa-comments"></i>  
+            <h4>Preparación Exámen</h4>
+            <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
+          </div>
+          <div class="serviceInfo">
+            <button>
+              <i class="fas fa-shopping-cart"></i>
+              Agregar al carrito
+            </button>
+          </div>
         </div>
-        <div>
-          <div>Conectate con otras personas</div>
-          <div>Agregar al carrito</div>
+        <!-- card 4 -->
+        <div class="serviceCard">
+          <div class="serviceImg">
+            <span class="discountTag">$5000</span>
+            <i class="fas fa-comments"></i>  
+            <h4>Perfeccionamiento profesional</h4>
+            <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
+          </div>
+          <div class="serviceInfo">
+            <button>
+              <i class="fas fa-shopping-cart"></i>
+              Agregar al carrito
+            </button>
+          </div>
         </div>
-        <i class="fas fa-angle-left"></i>
-        <i class="fas fa-angle-right"></i>
+        <!-- card 5 -->
+        <div class="serviceCard">
+          <div class="serviceImg">
+            <span class="discountTag">$5000</span>
+            <i class="fas fa-comments"></i>  
+            <h4>Clases individuales</h4>
+            <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
+          </div>
+          <div class="serviceInfo">
+            <button>
+              <i class="fas fa-shopping-cart"></i>
+              Agregar al carrito
+            </button>
+          </div>
+        </div>
+        <!-- card 6 -->
+        <div class="serviceCard">
+          <div class="serviceImg">
+            <span class="discountTag">$5000</span>
+            <i class="fas fa-comments"></i>  
+            <h4>Clases Grupales</h4>
+            <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
+          </div>
+          <div class="serviceInfo">
+            <button>
+              <i class="fas fa-shopping-cart"></i>
+              Agregar al carrito
+            </button>
+          </div>
+        </div>
+        <!-- card 7 -->
+        <div class="serviceCard">
+          <div class="serviceImg">
+            <span class="discountTag">$5000</span>
+            <i class="fas fa-comments"></i>  
+            <h4>Conversacion por tematica</h4>
+            <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
+          </div>
+          <div class="serviceInfo">
+            <button>
+              <i class="fas fa-shopping-cart"></i>
+              Agregar al carrito
+            </button>
+          </div>
+        </div>
+        <!-- card 8 -->
+        <div class="serviceCard">
+          <div class="serviceImg">
+            <span class="discountTag">$5000</span>
+            <i class="fas fa-comments"></i>  
+            <h4>Clases semanales</h4>
+            <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
+          </div>
+          <div class="serviceInfo">
+            <button>
+              <i class="fas fa-shopping-cart"></i>
+              Agregar al carrito
+            </button>
+          </div>
+        </div>
+        
       </div>
-      <div> Ver más</div>
     </section>
     <!-- Contacto -->
     <section id="contactoHome">
@@ -369,7 +476,8 @@
             <form action="#" method="post">
               <input class="input-form" type="text" name="nombre" id="nombre" placeholder="Nombre y Apellido">
               <input class="input-form" type="email" name="email" id="email" placeholder="Email">
-              <textarea class="consulta" name="consulta" id="consulta" cols="30" rows="10" placeholder="Consulta..."></textarea>
+              <textarea class="consulta" name="consulta" id="consulta" cols="30" rows="10"
+                placeholder="Consulta..."></textarea>
               <button type="submit" class="enviar">
                 Enviar
               </button>
@@ -381,8 +489,12 @@
   </main>
   <!-- chat -->
   <div id="contentChat" class="desactivado">
-    <img src="/images/buttonChat.svg" alt="button-chat">
-    <p>Tenes una duda?</p>
+    <svg class="svgimg" width="100" height="100" viewBox="0 0 149 153" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M18.625 0.549561C13.6853 0.549561 8.948 2.63128 5.45514 6.33677C1.96227 10.0423 0 15.068 0 20.3083L0 99.3435C0 104.584 1.96227 109.61 5.45514 113.315C8.948 117.021 13.6853 119.102 18.625 119.102H41.9062C43.352 119.102 44.7778 119.459 46.0709 120.145C47.364 120.831 48.4888 121.827 49.3563 123.054L67.05 148.079C67.9174 149.305 69.0422 150.301 70.3353 150.987C71.6284 151.673 73.0543 152.03 74.5 152.03C75.9457 152.03 77.3716 151.673 78.6647 150.987C79.9578 150.301 81.0826 149.305 81.95 148.079L99.6437 123.054C100.511 121.827 101.636 120.831 102.929 120.145C104.222 119.459 105.648 119.102 107.094 119.102H130.375C135.315 119.102 140.052 117.021 143.545 113.315C147.038 109.61 149 104.584 149 99.3435V20.3083C149 15.068 147.038 10.0423 143.545 6.33677C140.052 2.63128 135.315 0.549561 130.375 0.549561L18.625 0.549561Z"
+        fill="#212121" border="1px solid #00ffcb" />
+    </svg>
+    <p>Chat</p>
   </div>
   <!-- Footer -->
   <footer>
@@ -391,22 +503,22 @@
       <ul>
         <li>
           <a href="https://www.linkedin.com/" target="_blank">
-          Carlos -
+            Carlos -
           </a>
         </li>
         <li>
           <a href="https://www.linkedin.com/" target="_blank">
-          Martina -
+            Martina -
           </a>
         </li>
         <li>
           <a href="https://www.linkedin.com/" target="_blank">
-          Carmela -
+            Carmela -
           </a>
         </li>
         <li>
           <a href="https://www.linkedin.com/" target="_blank">
-          Candelaria
+            Candelaria
           </a>
         </li>
       </ul>

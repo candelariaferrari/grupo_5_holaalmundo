@@ -618,6 +618,138 @@ input[type]:focus {
   color: #212121;
   text-align: center;
 }
+/* ----- SECCION SERVICIOS ---- */
+#sectionServicios {
+  width: 100%;
+  padding: 0em 6em;
+  position: relative;
+}
+#sectionServicios h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 1em auto;
+  color: #6243f7;
+  text-transform: uppercase;
+}
+.serviceContainer {
+  overflow-y: hidden;
+  overflow-x: auto;
+  display: flex;
+  scroll-behavior: smooth;
+  padding: 0 10vw 0 1vw;
+}
+.serviceContainer::-webkit-scrollbar {
+  display: none;
+}
+.serviceCard {
+  flex: 0 0 auto;
+  width: 300px;
+  height: 450px;
+  margin-right: 40px;
+}
+.serviceImg {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+  background-color: #6243f7;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s;
+
+}
+.serviceImg i {
+  font-size: 150px;
+  color: #00ffcb;
+  margin-bottom: 22px;
+}
+.serviceImg h4{
+  font-size: 1.2rem;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.discountTag {
+  position: absolute;
+  background-color: #fff;
+  border-radius: 15px;
+  color: #3651f7;
+  right: 10px;
+  top: 10px;
+  text-transform: capitalize;
+  padding: 5px;
+}
+.description {
+  margin-top: 1em;
+  width: 150px;
+  text-align: center;
+  border: none;
+  transition: 0.5s;
+  opacity: 0;
+  font-size: 1rem;
+  color: #fff;
+  transition: all 0.5s;
+
+}
+.serviceCard:hover .description {
+  opacity: 1;
+}
+.serviceCard:hover .serviceImg {
+  background-color: #212121;
+}
+.serviceInfo {
+  width: 100%;
+  height: 100%;
+  padding-top: 10px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  top: -1.5em;
+}
+.serviceInfo button{
+  position: absolute;
+  outline: none;
+  border: none;
+  width: 80%;
+  border-radius: 25px;
+  padding: 0.5em 1em;
+  font-size: 1rem;
+  background-color: #00ffcb;
+}
+
+.preBtn,
+.nxtBtn {
+  border: none;
+  width: 10vw;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(90deg, rgba(255,255,255,1) 100%, rgba(255,255,255,1) 0%);
+  cursor: pointer;
+  z-index: 9;
+}
+.preBtn {
+  left: 0;
+}
+.nxtBtn {
+  right: 0;
+}
+.preBtn i,
+.nxtBtn i {
+  opacity: 0.2;
+}
+.preBtn:hover i,
+.nxtBtn:hover i {
+  opacity: 1;
+}
 
 /* ------ CONTACTO ----- */
 #contactoHome {
@@ -665,7 +797,7 @@ input[type]:focus {
 .titleContact .redes ul {
   list-style: none;
 }
-.titleContact .redes li{
+.titleContact .redes li {
   margin: 0.5em 0em;
 }
 .titleContact .redes a {
@@ -673,7 +805,6 @@ input[type]:focus {
   color: #fff;
   font-size: 25px;
   font-weight: 400;
-  
 }
 .titleContact .redes a i {
   color: #00ffcb;
@@ -692,7 +823,7 @@ input[type]:focus {
   font-size: 1rem;
   color: #212121;
 }
-.flexContacto .formulario .consulta{
+.flexContacto .formulario .consulta {
   display: block;
   width: 100%;
   margin: 1em auto;
@@ -722,30 +853,40 @@ textarea::placeholder {
   border-radius: 15px;
   float: right;
 }
-/* --------CHAT ------ */
 
+/* --------CHAT ------ */
 #contentChat {
+  transition: transform 0.4s;
+  opacity: 0;
   position: fixed;
   z-index: 1111111111;
   bottom: 5vh;
-  right: 0;
+  right: 2vw;
   display: flex;
   align-content: center;
   align-items: center;
   justify-content: center;
 }
-#contentChat img{
-  width: 45%;
+
+.scroll-down #contentChat {
+  transform: translate3d(5, -100%, 5);
+  opacity: 1;
+}
+
+#contentChat .svgimg {
+  filter: drop-shadow(1px 1px 3px rgba(52, 52, 52, 0.695));
   position: relative;
 }
-#contentChat p{
+#contentChat p {
   color: #00ffcb;
   position: absolute;
   width: 30%;
   margin-top: -1em;
+  text-align: center;
 }
+
 /* ------ FOOTER ----- */
-footer{
+footer {
   background-color: #212121;
   height: 150px;
   padding: 0em 6em;
@@ -759,20 +900,20 @@ footer .footerTeam {
   font-size: 1rem;
   font-weight: 300;
 }
-.footerTeam p{
+.footerTeam p {
   display: inline-block;
 }
-.footerTeam ul{
+.footerTeam ul {
   list-style: none;
 }
-.footerTeam li{
+.footerTeam li {
   display: inline-block;
 }
-.footerTeam a{
+.footerTeam a {
   text-decoration: none;
   color: #00ffcb;
 }
-.redesFooter a{
+.redesFooter a {
   text-decoration: none;
   color: #00ffcb;
   font-size: 1rem;
