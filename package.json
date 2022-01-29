@@ -2,9 +2,9 @@
   "name": "grupo_5_holaalmundo",
   "version": "1.0.0",
   "description": "Descripcion del proyecto",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "nodemon app.js"
   },
   "repository": {
     "type": "git",
