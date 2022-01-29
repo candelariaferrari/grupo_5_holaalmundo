@@ -1,0 +1,1131 @@
+html {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/* TEMAS GENERALES */
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: space-around;
+}
+.headerBar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.8);
+    text-decoration: none;
+    /*position: fixed;*/
+    top: 0;
+    z-index: 9;
+    position:relative;
+}
+
+.leftBarContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 8em;
+}
+
+.logoContainer {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-decoration: none;
+    padding: 8px;
+}
+
+.logoImageContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logoImage {
+    width: 100%;
+    /*width: 8em;*/
+    padding: 8px;
+}
+
+.inputContainer {
+    color: white;
+    position: absolute;
+    left: 10em;
+    
+}
+
+.search-input {
+    border: black solid;
+    background: white;
+    color: gray;
+    cursor: pointer;
+    font-size: 1em;
+    border: 3px solid;
+    border-radius: 1em;
+    position: relative;
+    font-family: "izayoi";
+    /*animation: colorChange 0.75s infinite;
+    animation-direction: alternate;*/
+}
+
+.search-input:hover {
+    background: rgb(166, 243, 219);
+    color: black;
+}
+
+.centerBarContainer {
+    display: none;
+}
+
+.centerBarStuff {
+    position: relative;
+    color: white;
+    width: 15em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 2.5vw;
+}
+
+.home, .profesores, .paquetes, .contacto {
+    font-size: 16px;
+    text-decoration: none;
+    color:rgb(221, 221, 221);
+    font-family: "izayoi";
+    position: relative;
+    padding: 0 6px;
+}
+
+.home:after, .profesores:after, .paquetes:after, .contacto:after {
+    content: "";
+    position: absolute;
+    background-image: linear-gradient(to right, rgb(0, 217, 255), rgb(0, 4, 255));
+    height: 2px;
+    width: 0%;
+    left: 0;
+    bottom: -2px;
+    transition: 0.3s;
+}
+
+.home:hover:after, .profesores:hover:after, .paquetes:hover:after, .contacto:hover:after {
+    width: 100%;
+}
+
+.home:hover, .profesores:hover, .paquetes:hover, .contacto:hover {
+    text-shadow: 0 0 5px rgb(59, 210, 230), 0 0 12px rgb(59, 210, 230), 0 0 20px rgb(59, 210, 230);
+    color: white;
+}
+
+.rightBarContainer {
+    display: none;
+}
+
+.rightBarStuff {
+    display: flex;
+}
+
+.rightBarStuff i{
+    position: relative;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-right: 2.5vw;
+    font-size: 2.0em;
+}
+
+.rightBarStuff.show {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    z-index: 4;
+    padding: 1.5em 0;
+    top: 3.4em;
+    width: 10em;
+    right: -0.42em;
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.menuHamburger {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 4vw;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+
+.menuHamburgerBtn {
+    width: 25px;
+    height: 2.5px;
+    background: #fff;
+    border-radius: 2px;
+    transition: all .25s ease-in-out;
+}
+
+.menuHamburgerBtn::before, .menuHamburgerBtn::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 2.5px;
+    background: #fff;
+    border-radius: 2px;
+    transition: all .25s ease-in-out;
+}
+
+.menuHamburgerBtn::before {
+    transform: translateY(-10px);
+}
+
+.menuHamburgerBtn::after {
+    transform: translateY(10px);
+}
+
+.menuHamburger.open .menuHamburgerBtn {
+    transform: translateX(-50px);
+    background: transparent;
+}
+
+.menuHamburger.open .menuHamburgerBtn:before {
+    transform: rotate(45deg) translate(35px, -35px);
+
+}
+
+.menuHamburger.open .menuHamburgerBtn:after {
+    transform: rotate(-45deg) translate(35px, 35px);
+    
+}
+
+/* LAYER 1*/
+
+.layer1 {
+    background-image: url(/images/layer1-bg.png);
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    /*background-attachment: fixed;*/
+    filter: brightness(1.1);
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    /*-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: contain;
+    background-position: center center;
+    position: relative;*/
+}
+
+.layer1Container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 34px;
+    padding: 44px;
+    margin-bottom: 16px;
+    margin: auto;
+    /*background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 2em rgb(69, 69, 69);*/
+}
+
+.greetings {
+    font-size: 2.2em;
+    text-shadow: 0 0 0.8em rgb(255, 255, 255);
+    text-align: center;
+    font-family: "kawashiro";
+    color: white;
+}
+
+.paises {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.card {
+    /*border: 1px solid #eee;*/
+    box-shadow: 2px 4px 16px rgba(0,0,0,.06);
+    border-radius: 50%;
+    width: 130px;
+    height:  130px;
+  }
+
+ .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgb(2, 173, 164);
+ } 
+
+ .card img {
+     display: flex;
+     flex-direction: row;
+ } 
+
+.imagenes-paises {
+    width: 100%;
+}  
+
+/* LAYER 2 */
+
+.layer2Bg {
+    /*background-image: linear-gradient(rgb(105, 14, 14),rgb(56, 9, 9));*/
+    background-image: white;
+}
+
+.layer2Content {
+    padding-top: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+.layer2Heading {
+    text-align: center;
+    color: black;
+    margin: 0.5em;
+    font-family: "kamishirasawa";
+    font-size: 2.2em;
+    text-shadow: 0 0 0.8em rgb(83, 81, 81);
+}   
+
+.layer2Info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0.2em;
+}
+
+.layerFiltros {
+    width: 50%;
+    /*  border: 1px solid black;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    flex-shrink: 1;
+}
+
+/* Filtro desplegable*/
+
+.filtro-idiomas-formulario, .filtro-temas-interes-formulario, .filtro-profesiones-formulario, .filtro-horario-formulario, .filtro-conversacion-formulario, .filtro-match-formulario  {
+    display: none;
+}
+
+.layer-idiomas:hover > .filtro-idiomas-formulario {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    padding: 5px;
+    margin-left:15px;
+
+}
+
+.layer-temas:hover > .filtro-temas-interes-formulario {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    padding: 5px;
+    margin-left:15px;
+}
+
+.layer-profesiones:hover > .filtro-profesiones-formulario {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    padding: 5px;
+    margin-left:15px;
+
+}
+
+.layer-horario:hover > .filtro-horario-formulario {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    padding: 5px;
+    margin-left:15px;
+}
+
+.layer-conversacion:hover > .filtro-conversacion-formulario {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    padding: 5px;
+    margin-left:15px;
+
+}
+
+.layer-match:hover > .filtro-match-formulario {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    padding: 5px;
+    margin-left:15px;
+}
+  
+
+.cardFiltros1, .cardFiltros2, .cardFiltros3, .cardFiltros4, .cardFiltros5, .cardFiltros6 {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 16px;
+    margin: 20px;
+    color: white;
+    text-align: center;
+    width: 150px;
+    align-self: center;
+    padding: 4px;   
+    transition: all;
+}
+
+.cardFiltros {
+    transition: all;
+}
+.cardFiltros:hover {
+    color:rgb(59, 210, 230);
+}
+
+/*
+.filtro-idiomas-formulario, .filtro-temas-interes-formulario, .filtro-profesiones-formulario, .filtro-horario-formulario, .filtro-conversacion-formulario, .filtro-match-formulario  {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    padding: 5px;
+    margin-left:15px;
+}*/
+
+.form-group {
+    display: inline-block;
+}
+
+.input-control {
+    color: rgb(2, 173, 164);
+    background-color: rgb(2, 173, 164);
+    border: 1px rgb(2, 173, 164);
+}
+
+.layer2InfoContainer {
+    display: flex;
+    width: 50%;
+    flex-direction: row;
+    justify-content: space-around;
+    /*margin: 0 2.5em; */
+    flex-wrap: wrap;
+  
+}
+
+
+.profeContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 1 0px;
+}
+
+.profeImage  {
+    width: 10em;
+    height: 12em;
+    object-fit: cover;
+    border: 0.3em solid rgb(255, 255, 255);
+    border-radius: 1.5em;
+    box-shadow: 0 10px 30px black;
+    transition: 0.3s;
+    margin: 0.5em -1em -1em -1em;
+}
+
+.profeContainer:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgb(2, 173, 164);
+}
+
+.footer-profesor {
+    position: relative;
+    top: 1px;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 150px;
+    margin-bottom: 25px;
+    color: #fff;
+    border-radius: 16px;
+    text-align: center;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.layer2Profe {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* LAYER 3 */
+
+.layer3{
+    background-image: url(/images/layer3-bg.png);
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    /*background-attachment: fixed;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: brightness(1.1);
+    
+}
+
+.layer3Servicios, .layer4Servicios {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;       
+}
+.serviciosContainer {
+    /*border: 1px solid #eee;
+    box-shadow: 2px 4px 16px rgba(0,0,0,.06);
+    padding: 26px;
+    margin: 16px;
+    width: 200px;
+    height: 250px;
+    border-top-left-radius: 36px;
+    border-top-right-radius: 36px;
+    background-color: #6243F7;
+    border-radius: 1.5em;
+    margin: -0.5em -1em -1em -1em;*/
+
+    background-color: #6243F7;
+    text-align: center;    
+    width: 10em;
+    height: 12em;
+    /*object-fit: cover;*/
+    /*border: 0.1em solid rgb(255, 255, 255);*/
+    box-shadow: 0 0 30px rgb(2, 173, 164);
+    border-top-left-radius: 36px;
+    border-top-right-radius: 36px;
+    box-shadow: 0 10px 30px black;
+    transition: 0.3s;
+    margin: 16px;
+    text-align: space-between;
+    justify-content:space-between;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 24px;
+}
+
+.serviciosContainer:hover > .servicio-label {
+    font-weight: bold;
+}
+.servicio-label {
+    margin:auto;
+    transition: font-weight;
+}
+
+.container-servicios {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 30px;
+    color: #fff;
+    border-radius: 16px;
+    right: 5px;
+    position: absolute;
+    bottom: -10px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/*
+.footer-profesor {
+    position: relative;
+    top: 1px;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 150px;
+    margin-bottom: 25px;
+    color: #fff;
+    border-radius: 16px;
+    text-align: center;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+*/
+.footer-servicios {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.serviciosContainer:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgb(2, 173, 164);
+}
+
+.layer4 {
+    background-color: #fff;
+    background-size: cover;
+    object-fit: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: brightness(1.1);
+    margin-top: 24px;
+    flex-direction: column;
+}
+
+.layer4Heading {
+    font-size: 2em;
+    text-align: start;
+    color: black;
+    font-family: "kamishirasawa";
+}
+
+.footerLayerBg {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 1.25em 0;
+    box-shadow: 0 0 1em rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}  
+
+.footerLayerAuthor {
+    color: white;
+    align-self: end;
+    font-size: 0.5em;
+    font-family: "izayoi";
+    margin-left:5px;
+    
+}
+
+.iconos {
+    color: white;
+    font-size: 1.5em;
+    display: flex;
+    gap: 12px;
+    margin-right:20px;
+    
+}
+
+/* MEDIA QUERY*/
+
+@media (max-width: 480px){ 
+
+    .layer2InfoContainer {
+        margin-bottom: 24px;
+        margin-top: 24px;
+    }
+
+    .profeContainer:nth-of-type(n+4){
+        display: none;
+    }
+
+    .serviciosContainer:nth-of-type(n+5){
+        display: none;
+    }
+
+    .serviciosContainer {    
+        width: 9em;
+        height: 11em;
+    }
+
+}
+
+@media (min-width:481px) and (max-width: 810px){ 
+
+    .leftBarContainer {
+        width: 10em;
+    }
+
+    .layer1 {
+        height: 700px;
+    }
+
+    .layer1Container {
+        gap: 65px;
+        align-self: start;
+    }
+
+    .greetings {
+        font-size: 3.2em;
+        text-shadow: 0 0 0.8em rgb(255, 255, 255);
+        align-self: start;
+        font-family: "kawashiro";
+        color: white;
+    }
+
+    .layer2InfoContainer {
+        width: 90%;
+    }
+
+    .card {
+        width: 170px;
+        height:  170px;
+      }
+
+    .layer3 {
+        height: 500px;
+    }
+
+    .profeContainer:nth-of-type(n+10){
+        display: none;
+        scroll-behavior: smooth;
+    }
+    .serviciosContainer:nth-of-type(n+5){
+        display: none;
+    }
+
+    .footerLayerBg {
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 1.25em 0;
+        box-shadow: 0 0 1em rgb(0, 0, 0);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }  
+    
+    .footerLayerAuthor {
+        color: white;
+        align-self: end;
+        font-size: 1em;
+        font-family: "izayoi";
+        margin-left:5px;
+        
+    }
+    
+    .iconos {
+        color: white;
+        font-size: 2em;
+        display: flex;
+        gap: 12px;
+        margin-right:40px;
+        
+    }
+}
+
+@media (min-width:811px) and (max-width:1080px) { 
+
+    .leftBarContainer {
+        width: 10em;
+    }
+
+    .layer1 {
+        height: 700px;
+    }
+
+    .leftBarContainer {
+        width: 11em;
+    }
+
+    .inputContainer {
+        left: 12em;
+    }
+
+    .search-input {
+        font-size: 1em;
+    }
+
+    .centerBarContainer {
+        display: flex;
+        color: white;
+        position: absolute;
+        left: 27em;
+    }
+
+    .home, .profesores, .paquetes, .contacto {
+        font-size: 18px;
+    }
+    
+    .layer1 {
+        height: 700px;
+    }
+
+    .greetings {
+        font-size: 3.8em;
+        text-shadow: 0 0 0.8em rgb(255, 255, 255);
+        align-self: start;
+        font-family: "kawashiro";
+        color: white;
+    }
+
+    .card {
+        width: 200px;
+        height:  200px;
+      }
+
+    .layer2InfoContainer {
+        width: 90%;
+    }
+
+    .cardFiltros1, .cardFiltros2, .cardFiltros3, .cardFiltros4, .cardFiltros5, .cardFiltros6 {
+        width: 180px;
+        height: 40px;
+    }
+
+    .layer2InfoContainer {
+        gap: 25px;
+    }
+
+    .profeContainer:nth-of-type(n+10){
+        display: none;
+        scroll-behavior: smooth;
+    }
+    .serviciosContainer:nth-of-type(n+5){
+        display: none;
+    }
+
+    .profeImage  {
+        width: 12em;
+        height: 14em;
+    }
+
+    .layer3 {
+        height: 700px;
+    }
+
+    .serviciosContainer {    
+        width: 13em;
+        height: 15em;
+    }
+
+    .container-servicios {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        left: 2.5px;
+    }
+    .footerLayerBg {
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 1.25em 0;
+        box-shadow: 0 0 1em rgb(0, 0, 0);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }  
+    
+    .footerLayerAuthor {
+        color: white;
+        align-self: end;
+        font-size: 1em;
+        font-family: "izayoi";
+        margin-left:5px;
+        
+    }
+    
+    .iconos {
+        color: white;
+        font-size: 2em;
+        display: flex;
+        gap: 12px;
+        margin-right:80px;
+    }
+
+
+}
+
+@media (min-width:1081px) and (max-width:1149px){
+
+    .leftBarContainer {
+        width: 13em;
+    }
+
+    .inputContainer {
+        left: 17em;
+    }
+
+    .search-input {
+        font-size: 1.2em;
+    }
+
+    .centerBarContainer {
+        display: flex;
+        color: white;
+        position: absolute;
+        left: 39em;
+    }
+
+    .home, .profesores, .paquetes, .contacto {
+        font-size: 18px;
+    }
+        
+    .layer1 {
+        height: 900px;
+    }
+
+    .greetings {
+        font-size: 3.8em;
+        text-shadow: 0 0 0.8em rgb(255, 255, 255);
+        align-self: start;
+        font-family: "kawashiro";
+        color: white;
+    }
+
+    .card {
+        width: 200px;
+        height:  200px;
+      }
+
+    .layer2InfoContainer {
+        width: 90%;
+    }
+
+    .cardFiltros1, .cardFiltros2, .cardFiltros3, .cardFiltros4, .cardFiltros5, .cardFiltros6 {
+        width: 180px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    .layer2InfoContainer {
+        gap: 25px;
+    }
+
+    .profeContainer:nth-of-type(n+13){
+        display: none;
+        scroll-behavior: smooth;
+    }
+    .serviciosContainer:nth-of-type(n+6){
+        display: none;
+    }
+
+    .profeImage  {
+        width: 12em;
+        height: 14em;
+    }
+
+    .layer3 {
+        height: 700px;
+    }
+
+    .servicio-label {
+        font-size: 20px;
+    }
+
+    .serviciosContainer {    
+        width: 14em;
+        height: 16em;
+
+    }
+
+    .container-servicios {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        left: 2.5px;
+    }
+    .footerLayerBg {
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 1.25em 0;
+        box-shadow: 0 0 1em rgb(0, 0, 0);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }  
+    
+    .footerLayerAuthor {
+        color: white;
+        align-self: end;
+        font-size: 1em;
+        font-family: "izayoi";
+        margin-left:5px;
+        
+    }
+    
+    .iconos {
+        color: white;
+        font-size: 2em;
+        display: flex;
+        gap: 12px;
+        margin-right:80px;
+    }
+}
+
+@media (min-width:1150px) and (max-width:1900px){
+
+    .leftBarContainer {
+        width: 16em;
+    }
+
+    .inputContainer {
+        left: 19em;
+    }
+
+    .search-input {
+        font-size: 1.7em;
+    }
+
+    .menuHamburger {
+        display: none;
+    }
+
+    .centerBarContainer {
+        display: flex;
+        color: white;
+        position: absolute;
+        left: 50em;
+    }
+
+    .home, .profesores, .paquetes, .contacto {
+        font-size: 24px;
+    }
+        
+    .rightBarContainer {
+        display: flex;
+        flex-direction:row;
+        color: white;
+        position: absolute;
+        left: 82em;
+        justify-content: center;
+        width: 15em;
+    }
+
+    .rightBarStuff i:hover {
+        color: red;
+    }
+
+    .rightBarStuff i{
+        display: flex;
+        position: relative;
+        color: white;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-right: 2.5vw;
+        font-size: 2.0em;
+    }
+    
+    .rightBarStuff.show {
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        z-index: 4;
+        padding: 1.5em 0;
+        top: 3.4em;
+        width: 10em;
+        right: -0.42em;
+        background: rgba(0, 0, 0, 0.9);
+    }
+
+    .layer1 {
+        height: 1101px;
+    }
+
+    .greetings {
+        font-size: 4em;
+        text-shadow: 0 0 0.8em rgb(255, 255, 255);
+        align-self: start;
+        font-family: "kawashiro";
+        color: white;
+    }
+
+    .card {
+        width: 250px;
+        height:  250px;
+      }
+
+    .layer2InfoContainer {
+        width: 90%;
+    }
+
+    .cardFiltros1, .cardFiltros2, .cardFiltros3, .cardFiltros4, .cardFiltros5, .cardFiltros6 {
+        width: 200px;
+        height: 60px;
+        font-size: 24px;
+    }
+
+    .layer2InfoContainer {
+        gap: 25px;
+    }
+
+    .profeContainer:nth-of-type(n+13){
+        display: none;
+        scroll-behavior: smooth;
+    }
+    .serviciosContainer:nth-of-type(n+6){
+        display: none;
+    }
+
+    .profeImage  {
+        width: 14em;
+        height: 16em;
+    }
+
+    .layer3 {
+        height: 700px;
+    }
+
+    .serviciosContainer {    
+        width: 16em;
+        height: 18em;
+        align-self: center;
+    
+    }
+
+    .servicio-label {
+        font-size: 24px;
+    }
+
+    .container-servicios {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        left: 2.5px;
+    }
+    .footerLayerBg {
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 1.25em 0;
+        box-shadow: 0 0 1em rgb(0, 0, 0);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }  
+    
+    .footerLayerAuthor {
+        color: white;
+        align-self: end;
+        font-size: 1em;
+        font-family: "izayoi";
+        margin-left:5px;
+        
+    }
+    
+    .iconos {
+        color: white;
+        font-size: 2em;
+        display: flex;
+        gap: 12px;
+        margin-right:80px;
+    }
+
+
+}
+
