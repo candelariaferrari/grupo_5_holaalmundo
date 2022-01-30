@@ -1,9 +1,19 @@
+/* COLORES:
+azul mas fuerte: #3657F7
+azul mas oscuro: #1F58A5
+"violeta": #6243F7
+verde claro: #00FFCB
+verde oscuro: #00A987
+gris: #DAD9DE
+negro: #212121
+blanco: #ffffff
+ */
+
 html {
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
 }
-
 
 /* TEMAS GENERALES */
 
@@ -12,6 +22,10 @@ body {
     flex-direction: column;
     align-items: space-around;
 }
+
+
+/*
+HEADER 
 .headerBar {
     width: 100%;
     display: flex;
@@ -20,7 +34,6 @@ body {
     justify-content: space-between;
     background-color: rgba(0, 0, 0, 0.8);
     text-decoration: none;
-    /*position: fixed;*/
     top: 0;
     z-index: 9;
     position:relative;
@@ -52,7 +65,6 @@ body {
 
 .logoImage {
     width: 100%;
-    /*width: 8em;*/
     padding: 8px;
 }
 
@@ -73,8 +85,6 @@ body {
     border-radius: 1em;
     position: relative;
     font-family: "izayoi";
-    /*animation: colorChange 0.75s infinite;
-    animation-direction: alternate;*/
 }
 
 .search-input:hover {
@@ -208,10 +218,185 @@ body {
 .menuHamburger.open .menuHamburgerBtn:after {
     transform: rotate(-45deg) translate(35px, 35px);
     
-}
+}/*
 
 /* LAYER 1*/
 
+/* HEADER */
+
+.responsive-one {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 40%;
+  }
+  .responsive-two {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 10%;
+  }
+  .navbar {
+    position: absolute;
+    z-index: 111;
+    top: 0;
+    background-color: #212121;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 1em 1em;
+    box-sizing: border-box;
+  }
+  
+  .nav-list {
+    list-style: none;
+  }
+  .nav-list .nav-item {
+    display: inline-block;
+    padding: 1em 0.5em;
+  }
+  .nav-list .nav-item a:after {
+    content: "";
+    display: block;
+    height: 1.5px;
+    background: #00ffcb;
+    transform: scaleX(0);
+    transition: transform 0.3s;
+    margin-top: 5px;
+    opacity: 0.5;
+  }
+  .nav-list .nav-item a:hover:after {
+    transform: scaleX(1);
+    transition: transform 0.3s;
+    height: 1.5px;
+    opacity: 1;
+  }
+  .nav-list .nav-item a {
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 1rem;
+    color: #fff;
+  }
+  
+  .navbar img {
+    width: 8em;
+  }
+  .navbar .search {
+    width: 50%;
+  }
+  .navbar .search input {
+    width: 100%;
+    position: relative;
+    padding: 0.5em 1em;
+    border-radius: 50px;
+    border: none;
+    padding-inline-start: 35px;
+  }
+  .navbar .search input::placeholder {
+    padding-inline-start: 0px;
+  }
+  
+  .input:focus {
+    outline: 2px solid #00ffcb;
+  }
+  
+  .navbar .search i {
+    position: absolute;
+    z-index: 22222;
+    margin-top: 5px;
+    margin-left: 10px;
+  }
+  
+  .botones-iconos {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    width: fit-content;
+  }
+  .botones-iconos i {
+    color: #fff;
+    font-size: 1rem;
+    margin-left: 0.5em;
+  }
+  .botones-iconos i.fa-user-circle {
+    font-size: 2.5rem;
+  }
+  .botones-iconos button.carrito{
+    width: fit-content;
+    border: none;
+    outline: none;
+    background-color: transparent;
+  }
+  .botones-iconos button.carrito:hover i{
+    color: #00ffcb;
+  }
+  .dropdown {
+    position: relative;
+  }
+  .dropbtn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    width: fit-content;
+  }
+  .dropdown:hover .dropbtn i {
+    background-color: transparent;
+    color: #00ffcb;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #212121;
+    color: #fff;
+    width: 200px;
+    height: fit-content;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.475);
+    z-index: 1;
+    right: 5px;
+    border-radius: 25px;
+    padding: 1em auto;
+    border: 1px solid #00ffcb;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .drop-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1em 0em;
+    border-bottom: 1px solid #00ffcb;
+  }
+  .drop-header h4 {
+    margin-left: 0.5em;
+  }
+  .dropdown ul {
+    list-style: none;
+    border-bottom: 1px solid #00ffcb;
+  }
+  .dropdown ul.outline {
+    border-bottom: none;
+  }
+  .dropdown ul li {
+    padding: 0.5em 1em;
+    font-size: 1rem;
+    font-weight: 300;
+  }
+  .button-responsive {
+    display: none;
+  }
+
+ 
+/* LAYER 1 */
+  
 .layer1 {
     background-image: url(/images/layer1-bg.png);
     width: 100%;
@@ -240,6 +425,7 @@ body {
     padding: 44px;
     margin-bottom: 16px;
     margin: auto;
+    position: relative;
     /*background-color: rgba(0, 0, 0, 0.7);
     box-shadow: 0 0 2em rgb(69, 69, 69);*/
 }
@@ -247,9 +433,17 @@ body {
 .greetings {
     font-size: 2.2em;
     text-shadow: 0 0 0.8em rgb(255, 255, 255);
-    text-align: center;
-    font-family: "kawashiro";
+    align-self: center;
     color: white;
+    display: block;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    position: absolute;
+    top: -400px;
+    text-align: center;
 }
 
 .paises {
@@ -297,12 +491,12 @@ body {
 }
 
 .layer2Heading {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 1em auto;
+    color: #6243f7;
     text-align: center;
-    color: black;
-    margin: 0.5em;
-    font-family: "kamishirasawa";
-    font-size: 2.2em;
-    text-shadow: 0 0 0.8em rgb(83, 81, 81);
+
 }   
 
 .layer2Info {
@@ -335,7 +529,51 @@ body {
     width: 80%;
     padding: 5px;
     margin-left:15px;
+    
+}
 
+.layer-idiomas:hover button {
+    background-color: #3657F7;  
+}
+
+.layer-temas:hover button {
+    background-color: #3657F7;
+}
+
+.layer-profesiones:hover button {
+    background-color: #3657F7;
+}
+
+.layer-horario:hover button {
+    background-color: #3657F7;
+}
+
+.layer-conversacion:hover button {
+    background-color: #3657F7;
+}
+
+.layer-match:hover button {
+    background-color: #3657F7;
+}
+
+.layer-idiomas i {
+    color:#00ffcb;
+}
+
+.layer-temas i {
+    color:#00ffcb;
+}
+.layer-profesiones i {
+    color:#00ffcb;
+}
+.layer-horario i {
+    color:#00ffcb;
+}
+.layer-conversacion i {
+    color:#00ffcb;
+}
+.layer-match i {
+    color:#00ffcb;
 }
 
 .layer-temas:hover > .filtro-temas-interes-formulario {
@@ -429,12 +667,12 @@ body {
   
 }
 
-
 .profeContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
     flex: 1 1 0px;
+    position: relative;
 }
 
 .profeImage  {
@@ -453,21 +691,61 @@ body {
     box-shadow: 0 0 30px rgb(2, 173, 164);
 }
 
+.puntuacion {
+    display: flex;
+    font-size: 1em;
+    position: absolute;
+    top: 20px;
+}
+
+.puntuacion i {
+    color: #3657F7;
+}
+/*
 .footer-profesor {
     position: relative;
     top: 1px;
-    background-color: rgba(0, 0, 0, 0.8);
-    width: 150px;
+    background-color: #3657F7;
     margin-bottom: 25px;
     color: #fff;
     border-radius: 16px;
     text-align: center;
-    height: 30px;
+    height: 35px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    
-}
+    align-items: center;   
+    width: 25%;
+}*/
+
+.footer-profesor {
+    width: 100%;
+    height: 30px;
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    top: -1.5em;
+    position: relative;
+    top: 2px;
+    margin-bottom: 25px;
+    color: #fff;
+    border-radius: 16px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+  }
+  
+  .footer-profesor button {
+    height: 14px;  
+    position: absolute;
+    outline: none;
+    border: none;
+    width: 80%;
+    border-radius: 25px;
+    padding: 1em 1em;
+    font-size: 1rem;
+    background-color: #3657F7;
+  }
 
 .layer2Profe {
     display: flex;
@@ -491,6 +769,140 @@ body {
     
 }
 
+#sectionServicios {
+    width: 100%;
+    padding: 0em 6em;
+    position: relative;
+  }
+  #sectionServicios h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 1em auto;
+    color: #6243f7;
+    text-transform: uppercase;
+  }
+  .serviceContainer {
+    overflow-y: hidden;
+    overflow-x: auto;
+    display: flex;
+    scroll-behavior: smooth;
+    padding: 0 10vw 0 1vw;
+  }
+  .serviceContainer::-webkit-scrollbar {
+    display: none;
+  }
+  .serviceCard {
+    flex: 0 0 auto;
+    width: 300px;
+    height: 450px;
+    margin-right: 40px;
+  }
+  .serviceImg {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    background-color: #6243f7;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s;
+  }
+  .serviceImg i {
+    font-size: 150px;
+    color: #00ffcb;
+    margin-bottom: 22px;
+  }
+  .serviceImg h4 {
+    font-size: 1.2rem;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+  }
+  
+  .discountTag {
+    position: absolute;
+    background-color: #fff;
+    border-radius: 15px;
+    color: #3651f7;
+    right: 10px;
+    top: 10px;
+    text-transform: capitalize;
+    padding: 5px;
+  }
+  .description {
+    margin-top: 1em;
+    width: 150px;
+    text-align: center;
+    border: none;
+    transition: 0.5s;
+    opacity: 0;
+    font-size: 1rem;
+    color: #fff;
+    transition: all 0.5s;
+  }
+  .serviceCard:hover .description {
+    opacity: 1;
+  }
+  .serviceCard:hover .serviceImg {
+    background-color: #212121;
+  }
+  .serviceInfo {
+    width: 100%;
+    height: 100%;
+    padding-top: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top: -1.5em;
+  }
+
+  .serviceInfo button {
+    position: absolute;
+    outline: none;
+    border: none;
+    width: 80%;
+    border-radius: 25px;
+    padding: 0.5em 1em;
+    font-size: 1rem;
+    background-color: #00ffcb;
+    border: 1px solid black;
+  }
+  
+  .preBtn,
+  .nxtBtn {
+    border: none;
+    width: 5vw;
+    height: 80%;
+    position: absolute;
+    top: 50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    cursor: pointer;
+    z-index: 9;
+  }
+  .preBtn {
+    left: 0;
+  }
+  .nxtBtn {
+    right: 0;
+  }
+  .preBtn i,
+  .nxtBtn i {
+    opacity: 0.2;
+  }
+  .preBtn:hover i,
+  .nxtBtn:hover i {
+    opacity: 1;
+  }
+
+
+/*
 .layer3Servicios, .layer4Servicios {
     display: flex;
     flex-direction: row;
@@ -499,7 +911,7 @@ body {
     align-items: center;       
 }
 .serviciosContainer {
-    /*border: 1px solid #eee;
+    border: 1px solid #eee;
     box-shadow: 2px 4px 16px rgba(0,0,0,.06);
     padding: 26px;
     margin: 16px;
@@ -509,14 +921,14 @@ body {
     border-top-right-radius: 36px;
     background-color: #6243F7;
     border-radius: 1.5em;
-    margin: -0.5em -1em -1em -1em;*/
+    margin: -0.5em -1em -1em -1em;
 
     background-color: #6243F7;
     text-align: center;    
     width: 10em;
     height: 12em;
-    /*object-fit: cover;*/
-    /*border: 0.1em solid rgb(255, 255, 255);*/
+    /*object-fit: cover;
+    /*border: 0.1em solid rgb(255, 255, 255);
     box-shadow: 0 0 30px rgb(2, 173, 164);
     border-top-left-radius: 36px;
     border-top-right-radius: 36px;
@@ -554,24 +966,6 @@ body {
     text-align: center;
     background-color: rgba(0, 0, 0, 0.8);
 }
-
-/*
-.footer-profesor {
-    position: relative;
-    top: 1px;
-    background-color: rgba(0, 0, 0, 0.8);
-    width: 150px;
-    margin-bottom: 25px;
-    color: #fff;
-    border-radius: 16px;
-    text-align: center;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}
-*/
 .footer-servicios {
     background-color: rgba(0, 0, 0, 0.8);
     color: #fff;
@@ -586,6 +980,7 @@ body {
     transform: scale(1.05);
     box-shadow: 0 0 30px rgb(2, 173, 164);
 }
+*/
 
 .layer4 {
     background-color: #fff;
@@ -600,6 +995,7 @@ body {
     flex-direction: column;
 }
 
+/*
 .layer4Heading {
     font-size: 2em;
     text-align: start;
@@ -614,8 +1010,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-}  
+}  */
 
+/*
 .footerLayerAuthor {
     color: white;
     align-self: end;
@@ -630,13 +1027,51 @@ body {
     font-size: 1.5em;
     display: flex;
     gap: 12px;
-    margin-right:20px;
-    
-}
+    margin-right:20px;  
+}*/
+
+/* ------ FOOTER ----- */
+footer {
+    background-color: #212121;
+    height: 150px;
+    padding: 0em 6em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  footer .footerTeam {
+    color: #00ffcb;
+    font-size: 1rem;
+    font-weight: 300;
+  }
+  .footerTeam p {
+    display: inline-block;
+  }
+  .footerTeam ul {
+    list-style: none;
+  }
+  .footerTeam li {
+    display: inline-block;
+  }
+  .footerTeam a {
+    text-decoration: none;
+    color: #00ffcb;
+  }
+  .redesFooter a {
+    text-decoration: none;
+    color: #00ffcb;
+    font-size: 1rem;
+    margin-right: 0.5em;
+  }
 
 /* MEDIA QUERY*/
 
 @media (max-width: 480px){ 
+
+    .layer1Container {
+        border: 3px solid red;
+    }
 
     .layer2InfoContainer {
         margin-bottom: 24px;
@@ -674,11 +1109,18 @@ body {
     }
 
     .greetings {
-        font-size: 3.2em;
+        font-size: 2em;
         text-shadow: 0 0 0.8em rgb(255, 255, 255);
         align-self: start;
-        font-family: "kawashiro";
         color: white;
+        display: block;
+        margin-block-start: 0.83em;
+        margin-block-end: 0.83em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-weight: bold;
+        position: absolute;
+        top: -140px;
     }
 
     .layer2InfoContainer {
@@ -686,8 +1128,8 @@ body {
     }
 
     .card {
-        width: 170px;
-        height:  170px;
+        width: 150px;
+        height:  150px;
       }
 
     .layer3 {
@@ -763,21 +1205,24 @@ body {
         font-size: 18px;
     }
     
-    .layer1 {
-        height: 700px;
-    }
-
     .greetings {
-        font-size: 3.8em;
+        font-size: 2.1em;
         text-shadow: 0 0 0.8em rgb(255, 255, 255);
         align-self: start;
-        font-family: "kawashiro";
         color: white;
+        display: block;
+        margin-block-start: 0.83em;
+        margin-block-end: 0.83em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-weight: bold;
+        position: absolute;
+        top: -150px;
     }
 
     .card {
-        width: 200px;
-        height:  200px;
+        width: 170px;
+        height:  170px;
       }
 
     .layer2InfoContainer {
@@ -881,11 +1326,19 @@ body {
     }
 
     .greetings {
-        font-size: 3.8em;
+        font-size: 3.6em;
         text-shadow: 0 0 0.8em rgb(255, 255, 255);
         align-self: start;
-        font-family: "kawashiro";
         color: white;
+        display: block;
+        margin-block-start: 0.83em;
+        margin-block-end: 0.83em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-weight: bold;
+        position: absolute;
+        top: -300px;
+        text-align: center;
     }
 
     .card {
@@ -968,7 +1421,7 @@ body {
     }
 }
 
-@media (min-width:1150px) and (max-width:1900px){
+@media (min-width:1150px) and (max-width:2300px){
 
     .leftBarContainer {
         width: 16em;
@@ -1035,15 +1488,23 @@ body {
     }
 
     .layer1 {
-        height: 1101px;
+        height: 1250px;
     }
 
     .greetings {
         font-size: 4em;
         text-shadow: 0 0 0.8em rgb(255, 255, 255);
-        align-self: start;
-        font-family: "kawashiro";
+        align-self: center;
         color: white;
+        display: block;
+        margin-block-start: 0.83em;
+        margin-block-end: 0.83em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-weight: bold;
+        position: absolute;
+        top: -400px;
+        text-align: center;
     }
 
     .card {

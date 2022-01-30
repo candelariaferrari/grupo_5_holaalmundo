@@ -8,11 +8,16 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '/views/inicioGuests.html'));
 });
 
-app.get('/paquetes', (req, res) => {
-    res.sendFile(path.join(__dirname, '/views/detailView.html'));
-});
 app.get('/home', (req,res)=>{
     res.sendFile(path.join(__dirname + '/views/home.html'));
+});
+
+app.get('/servicios', (req, res) => {
+    res.sendFile(path.join(__dirname, '/views/paquetesServicios.html'));
+});
+
+app.get('/reserva', (req, res) => {
+    res.sendFile(path.join(__dirname, '/views/popUpReserva.html'));
 });
 
 app.get('/carritoCompras', (req, res) => {

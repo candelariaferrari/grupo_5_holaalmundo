@@ -1,0 +1,216 @@
+/* COLORES:
+azul mas fuerte: #3657F7
+azul mas oscuro: #1F58A5
+"violeta": #6243F7
+verde claro: #00FFCB
+verde oscuro: #00A987
+gris: #DAD9DE
+negro: #212121
+blanco: #ffffff
+ */
+* {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: "Roboto", sans-serif;
+    height: fit-content;
+  }
+
+.container-pop-header {
+    border: 5px solid #00ffcb;
+    border-radius: 13%;
+    border-top-right-radius: 9%;
+    height: 766px;
+    width: 920px;
+    margin: auto;
+}
+
+.header {
+    background-image: url(/images/header-popUp.png);
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    /*background-attachment: fixed;*/
+    filter: brightness(1.1);
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    padding: 10px;
+}
+
+.header h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 1em auto;
+    color: #6243f7;
+    text-transform: uppercase;
+}
+
+.container-pop-body {
+    border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin: 2em;
+}
+
+.container-text {
+    width: 80%;
+    border: 2px solid blue;
+    align-self: center;
+}
+
+
+/* ----- FILTROS ---- */
+
+.layerFiltros {
+    width: 80%;
+    border: 2px solid blue;
+    align-self: center;
+}
+
+.layer-horario {
+    border: 2px solid purple;
+    margin: auto;
+    
+}
+
+button.cardFiltrosHorario {
+    margin-left: 55px;
+}
+
+
+
+
+
+
+.filtro-horario-formulario {
+    display: flex;
+}
+
+.layer-idiomas i {
+    color:#00ffcb;
+}
+
+.layer-idiomas button {
+    align-self: center;
+    justify-content: center;
+}
+
+.cardFiltrosHorario {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 16px;
+    margin: 20px;
+    color: white;
+    width: 80%;
+    align-self: center;
+    padding: 4px;   
+}
+
+.filtro-idiomas-formulario, .filtro-temas-interes-formulario, .filtro-profesiones-formulario, .filtro-horario-formulario, .filtro-conversacion-formulario, .filtro-match-formulario  {
+    display: none;
+}
+
+.layer-idiomas:hover > .filtro-idiomas-formulario {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    padding: 5px;
+    margin-left:15px;
+    
+}
+
+.layer-idiomas:hover button {
+    background-color: #3657F7;  
+}
+
+.layer-temas:hover button {
+    background-color: #3657F7;
+}
+
+.layer-profesiones:hover button {
+    background-color: #3657F7;
+}
+
+.layer-horario:hover button {
+    background-color: #3657F7;
+}
+
+.layer-conversacion:hover button {
+    background-color: #3657F7;
+}
+
+.layer-match:hover button {
+    background-color: #3657F7;
+}
+
+.layer-temas:hover > .filtro-temas-interes-formulario {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    padding: 5px;
+    margin-left:15px;
+}
+
+.layer-profesiones:hover > .filtro-profesiones-formulario {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    padding: 5px;
+    margin-left:15px;
+
+}
+
+.layer-horario:hover > .filtro-horario-formulario {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    padding: 5px;
+    margin-left:15px;
+}
+
+.layer-conversacion:hover > .filtro-conversacion-formulario {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    padding: 5px;
+    margin-left:15px;
+
+}
+
+.layer-match:hover > .filtro-match-formulario {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    padding: 5px;
+    margin-left:15px;
+}
+  
+
+.cardFiltros {
+    transition: all;
+}
+.cardFiltros:hover {
+    color:rgb(59, 210, 230);
+}
+
+/*
+.filtro-idiomas-formulario, .filtro-temas-interes-formulario, .filtro-profesiones-formulario, .filtro-horario-formulario, .filtro-conversacion-formulario, .filtro-match-formulario  {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    padding: 5px;
+    margin-left:15px;
+}*/
+
+.form-group {
+    display: inline-block;
+}
+
+.input-control {
+    color: rgb(2, 173, 164);
+    background-color: rgb(2, 173, 164);
+    border: 1px rgb(2, 173, 164);
+}
