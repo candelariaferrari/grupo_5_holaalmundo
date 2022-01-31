@@ -1,0 +1,138 @@
+body
+{
+font-family: 'Roboto', sans-serif;
+}
+
+.logo
+{
+width: 250px;
+position: absolute;
+z-index: 1;
+top: 250px;
+left: 180px;
+}
+
+.bg
+{
+position: absolute;
+left: 0px;
+top: 0px;
+width: 700px; 
+height: 670px;
+}
+
+.campos :placeholder-shown
+{
+background-color: #00FFCB;
+border-radius: 10px;
+width: 240px;
+height: 32px;
+border: transparent;
+}
+
+::placeholder
+{
+color: #424242;
+margin-left: 150px;
+position: absolute;
+top: 8px;
+left: -140px;
+font-size: 14px;
+}
+
+.campos
+{
+position: relative;
+top: 50px;
+left: 804px;
+color: #424242;
+}
+
+.cr
+{
+position: absolute;
+z-index: 1;
+top: 580px;
+left: 180px;
+color: #FFFFFF;
+font-size: 12px;
+}
+
+.HAM
+{
+position: relative;
+color: #6243F7;
+left: 794px;
+font-size: 40px;
+top: 60px;
+}
+
+.formulario
+{
+position: relative;
+color: black;
+top: 50px;
+left: 806px;
+font-size: 16px;
+}
+
+.campos .bot-tyc
+{
+border-radius: 10px;
+border-color: #00FFCB;
+}
+
+.campos .term-y-cond
+{
+font-size: 11px;
+color: #424242;
+position: relative;
+top: -2px;
+left: -1px;
+}
+
+.campos .reg
+{
+width: 160px;
+height: 40px;
+border-radius: 14px;
+border: transparent;
+position: relative;
+left: 42px;
+color: #00FFCB;
+background-color: #6243F7;
+top: 20px;
+left: 42px;
+}
+
+select
+{
+text-align-last: left;
+padding-left: 6px;
+direction: ltr;
+background-color: #00FFCB;
+border-radius: 10px;
+width: 244px;
+height: 36px;
+border: transparent;
+color: #424242;
+font-size: 14px;
+}
+
+ul.iconos li
+{
+display: inline;
+padding-left: 20px;
+padding-right: 6px;
+}
+
+.iconos
+{
+position: absolute;
+z-index: 1;
+top: 518px;
+left: 170px;
+color: #00FFCB;
+font-size: 24px; 
+}
+
