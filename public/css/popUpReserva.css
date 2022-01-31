@@ -23,6 +23,7 @@ blanco: #ffffff
     height: 766px;
     width: 920px;
     margin: auto;
+    margin-top: 2em;
 }
 
 .header {
@@ -43,174 +44,140 @@ blanco: #ffffff
     font-size: 2.5rem;
     font-weight: 700;
     margin: 1em auto;
-    color: #6243f7;
+    color: #00ffcb;
     text-transform: uppercase;
 }
 
 .container-pop-body {
-    border: 2px solid red;
+    /*border: 2px solid red;*/
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
-    margin: 2em;
+    margin: 3em;
+    gap: 2em;
+    padding: 1em;
 }
 
 .container-text {
     width: 80%;
-    border: 2px solid blue;
+    /*border: 2px solid blue;*/
     align-self: center;
+    text-align: justify; 
+    letter-spacing: normal
 }
-
 
 /* ----- FILTROS ---- */
 
 .layerFiltros {
     width: 80%;
-    border: 2px solid blue;
+    /*border: 2px solid blue;*/
     align-self: center;
 }
 
-.layer-horario {
-    border: 2px solid purple;
+.layer-horario .layer.hora{
     margin: auto;
+    /*border: 7px solid purple;*/
     
 }
 
-button.cardFiltrosHorario {
-    margin-left: 55px;
-}
-
-
-
-
-
-
-.filtro-horario-formulario {
-    display: flex;
-}
-
-.layer-idiomas i {
+.cardFiltrosHorario i {
     color:#00ffcb;
-}
-
-.layer-idiomas button {
-    align-self: center;
-    justify-content: center;
+    margin-left: 500px;
+    font-size: 1.5em;
 }
 
 .cardFiltrosHorario {
     background-color: rgba(0, 0, 0, 0.8);
     border-radius: 16px;
-    margin: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     color: white;
-    width: 80%;
+    width: 100%;
     align-self: center;
     padding: 4px;   
 }
 
-.filtro-idiomas-formulario, .filtro-temas-interes-formulario, .filtro-profesiones-formulario, .filtro-horario-formulario, .filtro-conversacion-formulario, .filtro-match-formulario  {
+.filtro-horario-formulario {
     display: none;
 }
 
-.layer-idiomas:hover > .filtro-idiomas-formulario {
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    padding: 5px;
-    margin-left:15px;
-    
-}
-
-.layer-idiomas:hover button {
-    background-color: #3657F7;  
-}
-
-.layer-temas:hover button {
-    background-color: #3657F7;
-}
-
-.layer-profesiones:hover button {
-    background-color: #3657F7;
-}
-
-.layer-horario:hover button {
-    background-color: #3657F7;
-}
-
-.layer-conversacion:hover button {
-    background-color: #3657F7;
-}
-
-.layer-match:hover button {
-    background-color: #3657F7;
-}
-
-.layer-temas:hover > .filtro-temas-interes-formulario {
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    padding: 5px;
-    margin-left:15px;
-}
-
-.layer-profesiones:hover > .filtro-profesiones-formulario {
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    padding: 5px;
-    margin-left:15px;
-
+.filtro-hora-formulario {
+    display: none;
 }
 
 .layer-horario:hover > .filtro-horario-formulario {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     width: 80%;
-    padding: 5px;
-    margin-left:15px;
+    margin: auto;
+    padding: 10px;
+    gap: 5px;
+    margin-bottom: 10px;
 }
 
-.layer-conversacion:hover > .filtro-conversacion-formulario {
+.layer-hora:hover > .filtro-hora-formulario {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.grupo1 {
     display: flex;
     flex-direction: column;
-    width: 80%;
-    padding: 5px;
-    margin-left:15px;
-
+    width: 33%;
+    gap: 5px;
+    margin-left: 65px;
 }
 
-.layer-match:hover > .filtro-match-formulario {
+.grupo2 {
     display: flex;
     flex-direction: column;
-    width: 80%;
-    padding: 5px;
-    margin-left:15px;
-}
-  
-
-.cardFiltros {
-    transition: all;
-}
-.cardFiltros:hover {
-    color:rgb(59, 210, 230);
+    width: 33%;
+    gap: 5px;
 }
 
-/*
-.filtro-idiomas-formulario, .filtro-temas-interes-formulario, .filtro-profesiones-formulario, .filtro-horario-formulario, .filtro-conversacion-formulario, .filtro-match-formulario  {
+.grupo3 {
     display: flex;
     flex-direction: column;
+    width: 33%;
+    gap: 5px;
+}
+
+.form-group label {
+    background: transparent;
+    border: #00ffcb;
+}
+
+input[type="checkbox"]:checked {
+    box-shadow: 0 0 0 3px #00ffcb;
+  }
+
+.input-control[type="checkbox"] {
+    color: #00ffcb;
+}
+
+.container-button {
+    /*border: 3px solid red;*/
     width: 80%;
+    align-self: center;
+    display: flex;
+    justify-content: end;
+    font-size: 1.5rem;
+    font-weight: 700;
     padding: 5px;
-    margin-left:15px;
-}*/
-
-.form-group {
-    display: inline-block;
 }
 
-.input-control {
-    color: rgb(2, 173, 164);
-    background-color: rgb(2, 173, 164);
-    border: 1px rgb(2, 173, 164);
+.container-button button {
+    background-color: #00ffcb;
+    border-radius: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    border: none;
 }
+
