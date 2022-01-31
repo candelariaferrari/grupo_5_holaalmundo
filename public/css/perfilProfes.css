@@ -1,0 +1,27 @@
+/* azul 1 #3651f7
+azul oscuro #1f58a5
+lila 6243f7
+verde agua #00ffcb
+verde #00a987
+gris #dad9de
+gris topo #424242
+
+
+*/
+
+
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.formulario select option{
+    font-size: 3rem;
+}
+
+.titulo{
+    color: #6243f7;
+}
+.formulario div{
+    background-color: #424242;
+    color: wijh;
+}
