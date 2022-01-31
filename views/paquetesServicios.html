@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <title>Servicios Hola al Mundo</title>
+    <script src="https://kit.fontawesome.com/3964fc737d.js" crossorigin="anonymous"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link href = "/css/paquetesServicios.css" rel = "stylesheet">
+    <link href= "/css/normalize.css" rel="stylesheet">    
+    <!--<link rel="icon" href= "resources/paifang2.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+</head>
+
+<body>  
+    <header id="top-header">
+        <nav class="navbar" id="main">
+          <div class="responsive-one">
+            <a class="logo" href="#top-header">
+              <img src="/images/logo.svg" alt="logo">
+            </a>
+            <div class="search">
+              <i class="fas fa-search"></i>
+              <input class="input" type="search" name="buscar" placeholder="Buscar">
+            </div>
+          </div>
+          <ul class="nav-list" id="navList">
+            <li class="nav-item">
+              <a class="border" href="/home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="#"> Profesores</a>
+            </li>
+            <li class="nav-item">
+              <a href="#"> Paquetes</a>
+            </li>
+            <li class="nav-item">
+              <a href="#"> Contacto</a>
+            </li>
+            <li class="nav-item">
+              <a href="#">En</a>
+            </li>
+          </ul>
+          <div class="responsive-two">
+            <div class="button-responsive" id="toggle-button">
+              <i class="fas fa-bars"></i>
+            </div>
+            <div class="botones-iconos">
+              <i class="far fa-heart"></i>
+              <button class="carrito" onclick="openNav()">
+                <i class="fas fa-shopping-cart"></i>
+              </button>
+              <div class="dropdown">
+                <button class="dropbtn">
+                  <i class="far fa-user-circle"></i>
+                </button>
+                <!-- submenu -->
+                <div class="dropdown-content">
+                  <div class="drop-header">
+                    <i class="far fa-user-circle"></i>
+                    <h4>Usuario</h4>
+                  </div>
+                  <ul>
+                    <li>Membresías</li>
+                    <li>Da clases</li>
+                    <li>Mis cursos</li>
+                  </ul>
+                  <ul>
+                    <li>Configuración</li>
+                    <li>Métodos de pago</li>
+                    <li>Historial de compra</li>
+                  </ul>
+                  <ul>
+                    <li>Idiomas</li>
+                  </ul>
+                  <ul>
+                    <li>Editar perfil</li>
+                  </ul>
+    
+                  <ul class="outline">
+                    <li>Ayuda</li>
+                    <li>Cerrar sesión</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>   
+        </nav>
+      </header> 
+    <main class="main">
+        <div class = "layer1">
+            <!--<div class = "layer1BgSources"><a class = "layer1BgSource1" href = "https://www.pixiv.net/en/users/25088958/illustrations" target = "_blank">Background illustration by: MerlimAmbrosuis</a><br><a class = "layer1BgSource2" href = "https://www.youtube.com/watch?v=7zG87aNNf20&list=PL_mGxmgVfH1ORtai56pXbkWdlfRjcl1K2&index=21" target = "_blank">Animated by: Live Wallpaper Centre</a></div>-->
+            <div class = "layer1Container">
+                <div class = "greetings">
+                    <h2>¿Que idioma te gustaría aprender?</h2>
+                </div>
+                <div class = "paises">
+                        <div class="card"><img class ="imagenes-paises" src="/images/banderas-españa.png"></div>
+                        <div class="card"><img class ="imagenes-paises" src="/images/banderas-inglaterra.png"></div>
+                        <div class="card"><img class ="imagenes-paises" src="/images/banderas-italia.png"></div>
+                        <div class="card"><img class ="imagenes-paises" src="/images/banderas-brasil.png"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class = "layer2">
+            <div class = "layer2Bg">
+                <div class = "layer2Content">
+                    <div class = "layer2Heading">
+                        <h2>Elegí lo que mas te convenga!</h2>
+                    </div>
+                    <div class = "layer2Info">
+                        <div class = "layerFiltros">
+                            <div class="layer-idiomas">
+                                <button type = "button" class="cardFiltros1">Idiomas <i class="fas fa-caret-down"></i></button> 
+                                <!-- <form action="/create-product" method="POST" class="create-form">
+                                    <label for="">Idiomas</label>
+                                    <select name="categoria" id="" class="control">
+                                        <option value="ingles">Ingles</option>
+                                        <option value="español">Español</option>
+                                        <option value="portugués">Portugués</option>
+                                        <option value="frances">Frances</option>
+                                        <option value="aleman">Aleman</option>
+                                    </select>
+                                </form>-->
+                                <div class="filtro-idiomas-formulario">
+                                    <div class="form-group">
+                                        <input type="checkbox" name="idiomas" value="español" id="español" class="input-control">
+                                        <label for="español" >Español</label>  
+                                    </div>    
+                                    <div class="form-group">
+                                        <input type="checkbox" name="idiomas" value="ingles" id="ingles" class="input-control">
+                                        <label for="ingles" >Ingles</label>  
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="checkbox" name="idiomas" value="portugues" id="portugues" class="input-control">
+                                        <label for="portugues" >Portugués</label>  
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="checkbox" name="idiomas" value="italiano" id="italiano" class="input-control">
+                                        <label for="italiano" >Italiano</label>  
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="checkbox" name="idiomas" value="aleman" id="aleman" class="input-control">
+                                        <label for="aleman" >Aleman</label>  
+                                    </div>
+                                </div>  
+                            </div> 
+                            <div class="layer-temas">
+                                <button type = "button" class="cardFiltros2">Temas de interes <i class="fas fa-caret-down"></i></button>
+                                <div class="filtro-temas-interes-formulario">
+                                    <div class="form-group">
+                                        <input type="checkbox" name="temas-interes" value="cultura" id="cultura" class="input-control">
+                                        <label for="cultura" >Cultura</label>  
+                                    </div>    
+                                    <div class="form-group">
+                                        <input type="checkbox" name="temas-interes" value="noticias" id="noticias" class="input-control">
+                                        <label for="noticias" >Noticias</label>  
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="checkbox" name="temas-interes" value="deportes" id="deportes" class="input-control">
+                                        <label for="deportes" >Deportes</label>  
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="checkbox" name="temas-interes" value="culinaria" id="culinaria" class="input-control">
+                                        <label for="culinaria" >Culinaria</label>  
+                                    </div>
+                                </div>
+                            </div>    
+                            <div class="layer-profesiones">
+                                <button type = "button" class="cardFiltros3">Profesiones <i class="fas fa-caret-down"></i></button>
+                                <div class="filtro-profesiones-formulario">
+                                    <div class="form-group">
+                                        <input type="checkbox" name="idiomas" value="español" id="español" class="input-control">
+                                        <label for="español" >Abogado</label>  
+                                    </div>    
+                                    <div class="form-group">
+                                        <input type="checkbox" name="idiomas" value="ingles" id="ingles" class="input-control">
+                                        <label for="ingles" >Administrador</label>  
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="checkbox" name="idiomas" value="portugues" id="portugues" class="input-control">
+                                        <label for="portugues" >Contador</label>  
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="checkbox" name="idiomas" value="italiano" id="italiano" class="input-control">
+                                        <label for="italiano" >Ingeniero</label>  
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="checkbox" name="idiomas" value="aleman" id="aleman" class="input-control">
+                                        <label for="aleman" >Musico</label>  
+                                    </div>
+                                </div> 
+                            </div>       
+                            <div class="layer-horario">
+                                <button type = "button" class="cardFiltros4">Dias/Horario <i class="fas fa-caret-down"></i></button>
+                                <div class="filtro-horario-formulario">
+                                    <div class="form-group">
+                                        <input type="checkbox" name="idiomas" value="español" id="español" class="input-control">
+                                        <label for="español" >Lunes</label>  
+                                    </div>    
+                                    <div class="form-group">
+                                        <input type="checkbox" name="idiomas" value="ingles" id="ingles" class="input-control">
+                                        <label for="ingles" >Martes</label>  
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="checkbox" name="idiomas" value="portugues" id="portugues" class="input-control">
+                                        <label for="portugues" >Miercoles</label>  
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="checkbox" name="idiomas" value="italiano" id="italiano" class="input-control">
+                                        <label for="italiano" >Jueves</label>  
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="checkbox" name="idiomas" value="aleman" id="aleman" class="input-control">
+                                        <label for="aleman" >Viernes</label>  
+                                    </div>
+                                </div> 
+                            </div>   
+                            <div class="layer-conversacion">
+                                <button type = "button" class="cardFiltros5">Conversaciones <i class="fas fa-caret-down"></i></button>
+                                <div class="filtro-conversacion-formulario">
+                                    <div class="form-group">
+                                        <input type="checkbox" name="idiomas" value="español" id="español" class="input-control">
+                                        <label for="español" >Español</label>  
+                                    </div>    
+                                    <div class="form-group">
+                                        <input type="checkbox" name="idiomas" value="ingles" id="ingles" class="input-control">
+                                        <label for="ingles" >Ingles</label>  
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="checkbox" name="idiomas" value="portugues" id="portugues" class="input-control">
+                                        <label for="portugues" >Portugués</label>  
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="checkbox" name="idiomas" value="italiano" id="italiano" class="input-control">
+                                        <label for="italiano" >Italiano</label>  
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="checkbox" name="idiomas" value="aleman" id="aleman" class="input-control">
+                                        <label for="aleman" >Aleman</label>  
+                                    </div>
+                                </div> 
+                            </div>
+                            <div class="layer-match">
+                                <button type = "button" class="cardFiltros6">Match date <i class="fas fa-caret-down"></i></button>
+                                <div class="filtro-match-formulario">
+                                    <div class="form-group">
+                                        <input type="checkbox" name="idiomas" value="español" id="español" class="input-control">
+                                        <label for="español" >Museos</label>  
+                                    </div>    
+                                    <div class="form-group">
+                                        <input type="checkbox" name="idiomas" value="ingles" id="ingles" class="input-control">
+                                        <label for="ingles" >Rumba</label>  
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="checkbox" name="idiomas" value="portugues" id="portugues" class="input-control">
+                                        <label for="portugues" >Cena</label>  
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="checkbox" name="idiomas" value="italiano" id="italiano" class="input-control">
+                                        <label for="italiano" >Compartir</label>  
+                                    </div>
+                                </div> 
+                            </div>  
+                        </div>
+                        <div class = "layer2InfoContainer">
+                            <div class = "profeContainer">
+                                <img class = "profeImage" src = "/images/imagen-profesor.png">
+                                <div class="puntuacion">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <div class = "footer-profesor">
+                                    <button class = "footer-profesor">Nombre profesor</button>
+                                </div>
+                            </div>
+                            <div class = "profeContainer">
+                            <img class = "profeImage" src ="/images/imagen-profesor.png">
+                            <div class="puntuacion">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <div class = "footer-profesor">
+                                <button class = "footer-profesor">Nombre profesor</button>
+                            </div>
+                            </div>
+                            
+                            <div class = "profeContainer">
+                                <img class = "profeImage" src = "/images/imagen-profesor.png">
+                                <div class="puntuacion">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <div class = "footer-profesor">
+                                    <button class = "footer-profesor">Nombre profesor</button>
+                                </div>
+                            </div>
+                            <div class = "profeContainer">
+                                <img class = "profeImage" src = "/images/imagen-profesor.png">
+                                <div class="puntuacion">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <div class = "footer-profesor">
+                                    <button class = "footer-profesor">Nombre profesor</button>
+                                </div>
+                            </div>
+                            <div class = "profeContainer">
+                                <img class = "profeImage" src = "/images/imagen-profesor.png">
+                                <div class="puntuacion">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <div class = "footer-profesor">
+                                    <button class = "footer-profesor">Nombre profesor</button>
+                                </div>
+                            </div>
+                            <div class = "profeContainer">
+                                <img class = "profeImage" src = "/images/imagen-profesor.png">
+                                <div class="puntuacion">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <div class = "footer-profesor">
+                                    <button class = "footer-profesor">Nombre profesor</button>
+                                </div>
+                            </div>
+                            <div class = "profeContainer">
+                                <img class = "profeImage" src = "/images/imagen-profesor.png">
+                                <div class="puntuacion">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <div class = "footer-profesor">
+                                    <button class = "footer-profesor">Nombre profesor</button>
+                                </div>
+                            </div>
+                            <div class = "profeContainer">
+                                <img class = "profeImage" src = "/images/imagen-profesor.png">
+                                <div class="puntuacion">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <div class = "footer-profesor">
+                                    <button class = "footer-profesor">Nombre profesor</button>
+                                </div>
+                            </div>
+                            <div class = "profeContainer">
+                                <img class = "profeImage" src = "/images/imagen-profesor.png">
+                                <div class="puntuacion">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <div class = "footer-profesor">
+                                    <button class = "footer-profesor">Nombre profesor</button>
+                                </div>
+                            </div>
+                            <div class = "profeContainer">
+                                <img class = "profeImage" src = "/images/imagen-profesor.png">
+                                <div class="puntuacion">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <div class = "footer-profesor">
+                                    <button class = "footer-profesor">Nombre profesor</button>
+                                </div>
+                            </div>
+                            <div class = "profeContainer">
+                                <img class = "profeImage" src = "/images/imagen-profesor.png">
+                                <div class="puntuacion">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <div class = "footer-profesor">
+                                    <button class = "footer-profesor">Nombre profesor</button>
+                                </div>
+                            </div>
+                            <div class = "profeContainer">
+                                <img class = "profeImage" src = "/images/imagen-profesor.png">
+                                <div class="puntuacion">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <div class = "footer-profesor">
+                                    <button class = "footer-profesor">Nombre profesor</button>
+                                </div>
+                            </div>
+                            <div class = "profeContainer">
+                                <img class = "profeImage" src = "/images/imagen-profesor.png">
+                                <div class="puntuacion">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <div class = "footer-profesor">
+                                    <button >Nombre profesor</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <div class = "layer3">
+            <section id="sectionServicios" onload="reset()">
+                <h2>Nuestros Servicios</h2>
+          
+                <div class="serviceContainer">
+                  <button class="preBtn">
+                    <i class="fas fa-chevron-left"></i>
+                  </button>
+                  <button class="nxtBtn">
+                    <i class="fas fa-chevron-right"></i>
+                  </button>
+                  <!-- card 1 -->
+                  <div class="serviceCard">
+                    <div class="serviceImg">
+                      <span class="discountTag">$5000</span>
+                      <i class="fas fa-comments"></i>
+                      <h4>Conversación</h4>
+                      <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
+                    </div>
+                    <div class="serviceInfo">
+                      <button>
+                        <i class="fas fa-shopping-cart"></i>
+                        Agregar al carrito
+                      </button>
+                    </div>
+                  </div>
+                  <!-- card 2 -->
+                  <div class="serviceCard">
+                    <div class="serviceImg">
+                      <span class="discountTag">$5000</span>
+                      <i class="fas fa-comments"></i>
+                      <h4>Conversación Grupal</h4>
+                      <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
+                    </div>
+                    <div class="serviceInfo">
+                      <button>
+                        <i class="fas fa-shopping-cart"></i>
+                        Agregar al carrito
+                      </button>
+                    </div>
+                  </div>
+                  <!-- card 3 -->
+                  <div class="serviceCard">
+                    <div class="serviceImg">
+                      <span class="discountTag">$5000</span>
+                      <i class="fas fa-comments"></i>
+                      <h4>Preparación Exámen</h4>
+                      <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
+                    </div>
+                    <div class="serviceInfo">
+                      <button>
+                        <i class="fas fa-shopping-cart"></i>
+                        Agregar al carrito
+                      </button>
+                    </div>
+                  </div>
+                  <!-- card 4 -->
+                  <div class="serviceCard">
+                    <div class="serviceImg">
+                      <span class="discountTag">$5000</span>
+                      <i class="fas fa-comments"></i>
+                      <h4>Perfeccionamiento profesional</h4>
+                      <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
+                    </div>
+                    <div class="serviceInfo">
+                      <button>
+                        <i class="fas fa-shopping-cart"></i>
+                        Agregar al carrito
+                      </button>
+                    </div>
+                  </div>
+                  <!-- card 5 -->
+                  <div class="serviceCard">
+                    <div class="serviceImg">
+                      <span class="discountTag">$5000</span>
+                      <i class="fas fa-comments"></i>
+                      <h4>Clases individuales</h4>
+                      <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
+                    </div>
+                    <div class="serviceInfo">
+                      <button>
+                        <i class="fas fa-shopping-cart"></i>
+                        Agregar al carrito
+                      </button>
+                    </div>
+                  </div>
+                  <!-- card 6 -->
+                  <div class="serviceCard">
+                    <div class="serviceImg">
+                      <span class="discountTag">$5000</span>
+                      <i class="fas fa-comments"></i>
+                      <h4>Clases Grupales</h4>
+                      <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
+                    </div>
+                    <div class="serviceInfo">
+                      <button>
+                        <i class="fas fa-shopping-cart"></i>
+                        Agregar al carrito
+                      </button>
+                    </div>
+                  </div>
+                  <!-- card 7 -->
+                  <div class="serviceCard">
+                    <div class="serviceImg">
+                      <span class="discountTag">$5000</span>
+                      <i class="fas fa-comments"></i>
+                      <h4>Conversacion por tematica</h4>
+                      <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
+                    </div>
+                    <div class="serviceInfo">
+                      <button>
+                        <i class="fas fa-shopping-cart"></i>
+                        Agregar al carrito
+                      </button>
+                    </div>
+                  </div>
+                  <!-- card 8 -->
+                  <div class="serviceCard">
+                    <div class="serviceImg">
+                      <span class="discountTag">$5000</span>
+                      <i class="fas fa-comments"></i>
+                      <h4>Clases semanales</h4>
+                      <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
+                    </div>
+                    <div class="serviceInfo">
+                      <button>
+                        <i class="fas fa-shopping-cart"></i>
+                        Agregar al carrito
+                      </button>
+                    </div>
+                  </div>
+          
+                </div>
+              </section>
+        </div>
+
+        <div class = "layer4">
+            <section id="sectionServicios" onload="reset()">
+                <h2>Recomendados para ti</h2>
+                <div class="serviceContainer">
+                  <button class="preBtn">
+                    <i class="fas fa-chevron-left"></i>
+                  </button>
+                  <button class="nxtBtn">
+                    <i class="fas fa-chevron-right"></i>
+                  </button>
+                  <!-- card 1 -->
+                  <div class="serviceCard">
+                    <div class="serviceImg">
+                      <span class="discountTag">$5000</span>
+                      <i class="fas fa-comments"></i>
+                      <h4>Conversación</h4>
+                      <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
+                    </div>
+                    <div class="serviceInfo">
+                      <button>
+                        <i class="fas fa-shopping-cart"></i>
+                        Agregar al carrito
+                      </button>
+                    </div>
+                  </div>
+                  <!-- card 2 -->
+                  <div class="serviceCard">
+                    <div class="serviceImg">
+                      <span class="discountTag">$5000</span>
+                      <i class="fas fa-comments"></i>
+                      <h4>Conversación Grupal</h4>
+                      <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
+                    </div>
+                    <div class="serviceInfo">
+                      <button>
+                        <i class="fas fa-shopping-cart"></i>
+                        Agregar al carrito
+                      </button>
+                    </div>
+                  </div>
+                  <!-- card 3 -->
+                  <div class="serviceCard">
+                    <div class="serviceImg">
+                      <span class="discountTag">$5000</span>
+                      <i class="fas fa-comments"></i>
+                      <h4>Preparación Exámen</h4>
+                      <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
+                    </div>
+                    <div class="serviceInfo">
+                      <button>
+                        <i class="fas fa-shopping-cart"></i>
+                        Agregar al carrito
+                      </button>
+                    </div>
+                  </div>
+                  <!-- card 4 -->
+                  <div class="serviceCard">
+                    <div class="serviceImg">
+                      <span class="discountTag">$5000</span>
+                      <i class="fas fa-comments"></i>
+                      <h4>Perfeccionamiento profesional</h4>
+                      <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
+                    </div>
+                    <div class="serviceInfo">
+                      <button>
+                        <i class="fas fa-shopping-cart"></i>
+                        Agregar al carrito
+                      </button>
+                    </div>
+                  </div>
+                  <!-- card 5 -->
+                  <div class="serviceCard">
+                    <div class="serviceImg">
+                      <span class="discountTag">$5000</span>
+                      <i class="fas fa-comments"></i>
+                      <h4>Clases individuales</h4>
+                      <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
+                    </div>
+                    <div class="serviceInfo">
+                      <button>
+                        <i class="fas fa-shopping-cart"></i>
+                        Agregar al carrito
+                      </button>
+                    </div>
+                  </div>
+                  <!-- card 6 -->
+                  <div class="serviceCard">
+                    <div class="serviceImg">
+                      <span class="discountTag">$5000</span>
+                      <i class="fas fa-comments"></i>
+                      <h4>Clases Grupales</h4>
+                      <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
+                    </div>
+                    <div class="serviceInfo">
+                      <button>
+                        <i class="fas fa-shopping-cart"></i>
+                        Agregar al carrito
+                      </button>
+                    </div>
+                  </div>
+                  <!-- card 7 -->
+                  <div class="serviceCard">
+                    <div class="serviceImg">
+                      <span class="discountTag">$5000</span>
+                      <i class="fas fa-comments"></i>
+                      <h4>Conversacion por tematica</h4>
+                      <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
+                    </div>
+                    <div class="serviceInfo">
+                      <button>
+                        <i class="fas fa-shopping-cart"></i>
+                        Agregar al carrito
+                      </button>
+                    </div>
+                  </div>
+                  <!-- card 8 -->
+                  <div class="serviceCard">
+                    <div class="serviceImg">
+                      <span class="discountTag">$5000</span>
+                      <i class="fas fa-comments"></i>
+                      <h4>Clases semanales</h4>
+                      <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
+                    </div>
+                    <div class="serviceInfo">
+                      <button>
+                        <i class="fas fa-shopping-cart"></i>
+                        Agregar al carrito
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section id="sectionServicios" onload="reset()">
+                <h2>Los mas vendidos</h2>
+                <div class="serviceContainer">
+                  <button class="preBtn">
+                    <i class="fas fa-chevron-left"></i>
+                  </button>
+                  <button class="nxtBtn">
+                    <i class="fas fa-chevron-right"></i>
+                  </button>
+                  <!-- card 1 -->
+                  <div class="serviceCard">
+                    <div class="serviceImg">
+                      <span class="discountTag">$5000</span>
+                      <i class="fas fa-comments"></i>
+                      <h4>Conversación</h4>
+                      <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
+                    </div>
+                    <div class="serviceInfo">
+                      <button>
+                        <i class="fas fa-shopping-cart"></i>
+                        Agregar al carrito
+                      </button>
+                    </div>
+                  </div>
+                  <!-- card 2 -->
+                  <div class="serviceCard">
+                    <div class="serviceImg">
+                      <span class="discountTag">$5000</span>
+                      <i class="fas fa-comments"></i>
+                      <h4>Conversación Grupal</h4>
+                      <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
+                    </div>
+                    <div class="serviceInfo">
+                      <button>
+                        <i class="fas fa-shopping-cart"></i>
+                        Agregar al carrito
+                      </button>
+                    </div>
+                  </div>
+                  <!-- card 3 -->
+                  <div class="serviceCard">
+                    <div class="serviceImg">
+                      <span class="discountTag">$5000</span>
+                      <i class="fas fa-comments"></i>
+                      <h4>Preparación Exámen</h4>
+                      <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
+                    </div>
+                    <div class="serviceInfo">
+                      <button>
+                        <i class="fas fa-shopping-cart"></i>
+                        Agregar al carrito
+                      </button>
+                    </div>
+                  </div>
+                  <!-- card 4 -->
+                  <div class="serviceCard">
+                    <div class="serviceImg">
+                      <span class="discountTag">$5000</span>
+                      <i class="fas fa-comments"></i>
+                      <h4>Perfeccionamiento profesional</h4>
+                      <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
+                    </div>
+                    <div class="serviceInfo">
+                      <button>
+                        <i class="fas fa-shopping-cart"></i>
+                        Agregar al carrito
+                      </button>
+                    </div>
+                  </div>
+                  <!-- card 5 -->
+                  <div class="serviceCard">
+                    <div class="serviceImg">
+                      <span class="discountTag">$5000</span>
+                      <i class="fas fa-comments"></i>
+                      <h4>Clases individuales</h4>
+                      <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
+                    </div>
+                    <div class="serviceInfo">
+                      <button>
+                        <i class="fas fa-shopping-cart"></i>
+                        Agregar al carrito
+                      </button>
+                    </div>
+                  </div>
+                  <!-- card 6 -->
+                  <div class="serviceCard">
+                    <div class="serviceImg">
+                      <span class="discountTag">$5000</span>
+                      <i class="fas fa-comments"></i>
+                      <h4>Clases Grupales</h4>
+                      <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
+                    </div>
+                    <div class="serviceInfo">
+                      <button>
+                        <i class="fas fa-shopping-cart"></i>
+                        Agregar al carrito
+                      </button>
+                    </div>
+                  </div>
+                  <!-- card 7 -->
+                  <div class="serviceCard">
+                    <div class="serviceImg">
+                      <span class="discountTag">$5000</span>
+                      <i class="fas fa-comments"></i>
+                      <h4>Conversacion por tematica</h4>
+                      <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
+                    </div>
+                    <div class="serviceInfo">
+                      <button>
+                        <i class="fas fa-shopping-cart"></i>
+                        Agregar al carrito
+                      </button>
+                    </div>
+                  </div>
+                  <!-- card 8 -->
+                  <div class="serviceCard">
+                    <div class="serviceImg">
+                      <span class="discountTag">$5000</span>
+                      <i class="fas fa-comments"></i>
+                      <h4>Clases semanales</h4>
+                      <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
+                    </div>
+                    <div class="serviceInfo">
+                      <button>
+                        <i class="fas fa-shopping-cart"></i>
+                        Agregar al carrito
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </section>  
+            <!--  
+            <div>
+                <h2 class = "layer4Heading">Recomendados para ti</h2>
+            </div>
+            <div class = "layer4Servicios">
+                <div class = "serviciosContainer"> 
+                    <div class="servicio-label">Servicios</div>
+                    <div class="container-servicios">
+                        <footer class = "footer-servicios">Agregar al carrito</footer>
+                    </div>
+                </div>
+                <div class = "serviciosContainer">
+                    <div class="servicio-label">Servicios</div>
+                    <div class="container-servicios">
+                        <footer class = "footer-servicios">Agregar al carrito</footer>
+                    </div>
+                </div>
+                <div class = "serviciosContainer">
+                    <div class="servicio-label">Servicios</div>
+                    <div class="container-servicios">
+                        <footer class = "footer-servicios">Agregar al carrito</footer>
+                    </div>
+                </div>
+                <div class = "serviciosContainer">
+                    <div class="servicio-label">Servicios</div>
+                    <div class="container-servicios">
+                        <footer class = "footer-servicios">Agregar al carrito</footer>
+                    </div>
+                </div>
+                <div class = "serviciosContainer">
+                    <div class="servicio-label">Servicios</div>
+                    <div class="container-servicios">
+                        <footer class = "footer-servicios">Agregar al carrito</footer>
+                    </div>
+                </div>
+            </div>    
+            <div>
+                <h2 class = "layer4Heading">Los mas vendidos</h2>
+            </div>
+            <div class = "layer4Servicios">
+                <div class = "serviciosContainer"> 
+                    <div class="servicio-label">Servicios</div>
+                    <div class="container-servicios">
+                        <footer class = "footer-servicios">Agregar al carrito</footer>
+                    </div>
+                </div>
+                <div class = "serviciosContainer">
+                    <div class="servicio-label">Servicios</div>
+                    <div class="container-servicios">
+                        <footer class = "footer-servicios">Agregar al carrito</footer>
+                    </div>
+                </div>
+                <div class = "serviciosContainer">
+                    <div class="servicio-label">Servicios</div>
+                    <div class="container-servicios">
+                        <footer class = "footer-servicios">Agregar al carrito</footer>
+                    </div>
+                </div>
+                <div class = "serviciosContainer">
+                    <div class="servicio-label">Servicios</div>
+                    <div class="container-servicios">
+                        <footer class = "footer-servicios">Agregar al carrito</footer>
+                    </div>
+                </div>
+                <div class = "serviciosContainer">
+                    <div class="servicio-label">Servicios</div>
+                    <div class="container-servicios">
+                        <footer class = "footer-servicios">Agregar al carrito</footer>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </main>    
+    <footer>
+        <div class="footerTeam">
+          <p>Creado por:</p>
+          <ul>
+            <li>
+              <a href="https://www.linkedin.com/" target="_blank">
+                Carlos -
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/" target="_blank">
+                Martina -
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/" target="_blank">
+                Carmela -
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/" target="_blank">
+                Candelaria
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="redesFooter">
+          <a href="#" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#" target="_blank">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="#" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+      </footer>
+</body>    
+</html>
