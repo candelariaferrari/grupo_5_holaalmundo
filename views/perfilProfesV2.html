@@ -5,41 +5,134 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre mi</title>
+    <link rel="stylesheet" href="/css/perfilProfes.css">
     <script src="https://kit.fontawesome.com/3964fc737d.js" crossorigin="anonymous"></script>
-
 </head>
 <body>
     
-    <!-- aca va el header-->
+    <header id="top-header">
+        <nav class="navbar" id="main">
+          <div class="responsive-one">
+            <a class="logo" href="#top-header">
+              <img src="/images/logo.svg" alt="logo">
+            </a>
+            <div class="search">
+              <i class="fas fa-search"></i>
+              <input class="input" type="search" name="buscar" placeholder="Buscar">
+            </div>
+          </div>
+          <ul class="nav-list" id="navList">
+            <li class="nav-item">
+              <a class="border" href="#top-header">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="#"> Profesores</a>
+            </li>
+            <li class="nav-item">
+              <a href="#"> Paquetes</a>
+            </li>
+            <li class="nav-item">
+              <a href="#"> Contacto</a>
+            </li>
+            <li class="nav-item">
+              <a href="#">En</a>
+            </li>
+          </ul>
+          <div class="responsive-two">
+            <div class="button-responsive" id="toggle-button">
+              <i class="fas fa-bars"></i>
+            </div>
+    
+            <div class="botones-iconos">
+              <i class="far fa-heart"></i>
+              <button class="carrito" onclick="openNav()">
+                <i class="fas fa-shopping-cart"></i>
+              </button>
+              <div class="dropdown">
+                <button class="dropbtn">
+                  <i class="far fa-user-circle"></i>
+                </button>
+                <!-- submenu -->
+                <div class="dropdown-content">
+                  <div class="drop-header">
+                    <i class="far fa-user-circle"></i>
+                    <h4>Usuario</h4>
+                  </div>
+                  <ul>
+                    <li>Membresías</li>
+                    <li>Da clases</li>
+                    <li>Mis cursos</li>
+                  </ul>
+                  <ul>
+                    <li>Configuración</li>
+                    <li>Métodos de pago</li>
+                    <li>Historial de compra</li>
+                  </ul>
+                  <ul>
+                    <li>Idiomas</li>
+                  </ul>
+                  <ul>
+                    <li>Editar perfil</li>
+                  </ul>
+    
+                  <ul class="outline">
+                    <li>Ayuda</li>
+                    <li>Cerrar sesión</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+    
+        </nav>
+      </header>
 
 
     <main>
 
-        <section>
-            <div>Completa tu perfil</div>
+        <section class="infoProfe">
+            <div class="title">Completa tu perfil</div>
 
-            <form action="#" method="POST">
-                <div><label for="descripcion">Contanos sobre vos</label></div>
+            <form action="#" method="POST" class="formularioInfoLibre">
+                <div class="subtitulo"><label for="descripcion">Contanos sobre vos</label></div>
                 <div>
                     <textarea name="descripcion" id="descripcion" cols="30" rows="10">Hola soy...</textarea>
                 </div>
 
-                <button type="submit">Continuar</button>
+                <button type="submit" class="botones">Continuar</button>
 
             </form>
             <!--ahi te mete un scroll bien piola-->
         </section>
 
-        <section>
+        <section class="uploadPhotos">
 
-        <form action="#" method="POST">
-            <div><label for="fotoPerfil"></label>Subi una foto tuya</div>
-            <input type="file" id="fotoPerfil">
-            <div>
-                <div><input type="button" onclick="history.back()" name="volver atrás" value="Volver atrás"></div>
-                <div><button type="submit">Continuar</button> </div>
-            </div>
-        </form>
+            <form action="#" method="POST">
+                <div class="subtitulo">Subi una foto tuya</div>
+                <div class="uploads">
+                    <div class="uploadFrom">
+                        <div>
+                            <img src="/images/upload_drive.png" alt="subi desde Drive">
+                            <p class="subtitulo">Drive</p>
+                        </div>
+                        <div>
+                            <img src="/images/upload_dropbox.png" alt="subi desde Dropbox">
+                            <p class="subtitulo">Dropbox</p>
+                        </div>
+                        <div id="uploadFromDevice">
+                            <label for="fotoPerfil">
+                                <img src="/images/upload_device.png" alt="subi desde tu computadora">
+                                <p class="subtitulo">Computadora</p>
+                            </label>
+                            <input type="file" id="fotoPerfil" class="input-file">
+                        </div>
+                    </div>
+                </div>
+                <div class="botonesConfirmacionFoto">
+                    <div><input type="button" onclick="history.back()" name="volver atrás" value=" Volver atrás " class="botones" ></div>
+                    <div><button type="submit" class="botones"> Continuar </button> </div>
+                </div>
+            </form>
 
         <!--ahi te mete otro scroll bien piola-->
        </section>
@@ -80,7 +173,7 @@
        </section>
     
     
-</div>
+       
 
 
 
@@ -89,9 +182,15 @@
 
     </main>
 
-
-
-    <!-- footer-->
+    <footer>
+        <div>Creado por Carlos - Martina - Carmela - Candelaria</div>
+        <div class="redesFooter">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-linkedin-in"></i>
+            <i class="fab fa-whatsapp"></i>
+        </div>
+    </footer>
 
 </body>
 </html>
