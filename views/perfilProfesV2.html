@@ -5,8 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre mi</title>
-    <link rel="stylesheet" href="/css/perfilProfes.css">
     <script src="https://kit.fontawesome.com/3964fc737d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/perfilProfesV2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
 </head>
 <body>
     
@@ -137,26 +140,30 @@
         <!--ahi te mete otro scroll bien piola-->
        </section>
 
-       <section> <!-- en esta hay un monton de cosas que todavia no aprendimos a hacer, entonces lo hago tipo replica de imagen-->
-            <div>
-                <div>Nombre</div>
-                <div>$ por hora</div>
-                <div>
-                    <img src="#" alt="foto de perfil">
-                    <div>
+       <section class="resumenDePerfil"> <!-- en esta hay un monton de cosas que todavia no aprendimos a hacer, entonces lo hago tipo replica de imagen-->
+            <div class="contenedorResumen">
+                <div class="opcionesSuperiores">
+                    <div id="nombre">Nombre</div>
+                    <div id="precio">$ por hora</div>
+                </div>
+                <div class="resumenPrincipal">
+                    <img src="/images/imagen-profesor.png" alt="foto de perfil">
+                    <div class="elementosResumen">
                         <div>En</div>
                         <div>Es</div>
                         <div>Ger</div>
                     </div>
-                    <div>
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>Ciudad, Pais</div>
-                    </div>
-                    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum sint obcaecati fugit omnis. 
+                    <div class="elementosResumen">
+                           <div> 
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Ciudad, Pais</span>
+                            </div>
+                        <div class="elementosResumen" >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum sint obcaecati fugit omnis. 
                         Sapiente at, eligendi atque quasi aut voluptatibus unde repellat consectetur nesciunt quo voluptates
                          maxime reiciendis vero. Nulla.
+                        </div>
                     </div>
-                    <div>
+                    <div class="elementosResumen">
                         <div>Categoria</div>
                         <div>Categoria</div>
                         <div>Categoria</div>

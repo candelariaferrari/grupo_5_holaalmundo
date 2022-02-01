@@ -219,20 +219,25 @@ display: none;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 20vh;
+    padding-bottom: 10vh;
     background-color: #6243f7;
+    margin-bottom: 5vh;
 }
 
 .title{
-    font-size: 2.3em;
+    font-size: 2em;
     padding-bottom: 8vh;
+    font-weight: bold;
 }
 
 .subtitulo{
-    font-size: 2em;
+    font-size: 1.8em;
+}
+.formularioInfoLibre div{
+    text-align: center;
 }
 .formularioInfoLibre div textarea{
-    width: 60vw;
+    width: 70vw;
     font-size: 1.5rem;
     padding-left: 2vw;
     padding-top: 2vh;
@@ -256,15 +261,16 @@ display: none;
     padding-right: 2%;
     padding-left: 2%;
     height: 5vh;
-    font-size: 1.3em;
+    font-size: 1em;
     background: radial-gradient(ellipse farthest-corner, #00ffcb, #0ed8b0);
     border: transparent;
     transition: all 2ms;
+    font-weight: bolder;
 }
 
 .botones:hover{
-    background: radial-gradient(ellipse farthest-corner, #66ffe0, #00ffcb );
-    font-size: 1.35em;
+    color: #1f58a5
+    
 }
 
 
@@ -280,10 +286,14 @@ display: none;
     text-align:center;
 
 }
+.uploads{
+    margin-top: 4vh;;
+}
 
 .uploadFrom{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    
     margin-bottom: 2vh;
 
 }
@@ -298,7 +308,7 @@ display: none;
     display: none;
 }
 .uploadFrom div img{
-    width: 25vw;
+    width: 20vw;
     transition: all 2ms;
 }
 .uploadFrom img:hover{
@@ -314,7 +324,7 @@ display: none;
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
-    font-size: 1.5em;
+    font-size: 1.3em;
 }
 .botonesConfirmacionFoto div{
     margin-left: 5vw;
@@ -325,12 +335,52 @@ display: none;
 .botonesConfirmacionFoto div input{
     padding-right: 10%;
 }
+.resumenDePerfil{
+    margin-top: 10vh;
+}
+.contenedorResumen{
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    width: 80vw;
+    justify-content: center;
+    font-size: 1.5em;
+}
+#nombre{
+    position: relative;
+    right: 8vw;
+}
+#precio{
+    position: relative;
+    align-self: baseline;
+    left: 8vw;
+    bottom: 3vh;
+}
+.resumenPrincipal{
+    display: flex;
+    flex-wrap: wrap;
+    border:solid orange 4px;
+}
 
-
-
-
-
-
+.resumenPrincipal img{
+    position:relative;
+    width: 35%;
+    bottom: 10%;
+    left: -5%;
+}
+.elementosResumen{
+    display: flex;
+    width: 60%;
+    height: fit-content;
+    border: solid black 1px;
+}
+.elementosResumen div{    
+    margin: 4%;
+    display: flex;
+    width: fit-content;
+    justify-self: flex-end;
+    justify-items: flex-end;
+}
 
 @media (max-width:480px){
     .uploadFrom div p{
