@@ -195,10 +195,7 @@ body {
 
   /* ------ MAIN ----- */
 
-.main {
-    border: 3px solid red;
-    
-}
+  /* ------ LAYER 1 ----- */
 
 .layer1 {
     background-image: url(/images/layer1-bg.png);
@@ -208,12 +205,369 @@ body {
     object-fit: cover;
     filter: brightness(1.1);
     display: flex;
-    align-items: start;
-    justify-content: start;
+    align-items: center ;
+    justify-content: center;
+    height: 1050px;
+    position: relative;
+    
 }
 
 .layer1Container {
     display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 34px;
+    padding: 44px;
+    margin-bottom: 16px;
+    position: absolute;
+    width: 40%;
+    top: 150px;
+    
+}
+
+.greetings {
+  color: #00FFCB;
+  font-size: 1.7em;
+  top: 1;
+  position: relative;
+  left: 200px;
+}
+
+.infoProfe {
+  color: #ffffff;
+  font-size: 1.2em;
+  position: relative;
+  bottom: 25px;
+}
+
+.infoCompleta textarea {
+  height: 20em;
+  width: 700px;
+  border: 4px solid white;
+  border-radius: 8px;
+  position: relative;
+  bottom: 65px;
+}
+
+.container-button {
+  position: relative;
+  bottom: 85px;
+  left: 570px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 5px;
+}
+
+.container-button button {
+  background-color: #00ffcb;
+  border-radius: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: none;
+  height: 2.1em;
+}
+
+/* ------ LAYER 2 ----- */
+
+.layer2Container {
+  height: 1050px;
+  display: flex;
+  flex-direction: column;
+  padding: 44px;
+  margin-bottom: 16px;
+  align-items: space-around;
+  justify-content: space-around;
+  
+}
+
+.texto-subir-foto {
+  align-self: center;
+  color: #6243F7;
+  font-size: 1.7em;
+}
+
+.file-update {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 150px;
+  padding: 44px;
+
+}
+
+.container-image {
+  gap: 100px;
+  align-self: center;
+ 
+}
+
+.card {
+  box-shadow: 2px 4px 16px rgba(0,0,0,.06);
+  border-radius: 50%;
+  width: 150px;
+  height:  150px;
+  background-color: black;
+  padding: 44px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card img {
+  position: absolute;
+  height: 150px;
+  width: 150px;
+  margin:auto;
+}
+
+.footer-file {
+  color: #3651F7;
+  font-size: 1.7em;
+  text-align: center;
+}
+
+.footer-file input {
+  cursor: pointer;
+  margin: 0;
+  opacity: 0;
+  outline: 0 none;
+  padding: 0;
+  position: absolute;
+}
+
+.nombre-archivo {
+  width: 80%;
+  align-self: center;
+}
+
+.nombre-archivo input {
+  color: white;
+  font-size: 1.4em;
+  background-color: #6243F7;
+  border-radius: 8px;
+  width: 100%;
+  height: 50px;
+  padding-left: 16px;
+}
+
+::placeholder { color: #ffffff; }
+
+.botones {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 5px;
+  width: 80%;
+  align-self: center;
+}
+
+.botones .continuar {
+  background-color: #00ffcb;
+  border-radius: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: none;
+  height: 2.1em;
+}
+
+.botones .volver {
+  background-color: #424242;
+  border-radius: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: none;
+  height: 2.1em;
+  color: #00FFCB;
+}
+
+
+.layer3 {
+  background-image: url(/images/bkg-layer3.png);
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+  filter: brightness(1.1);
+  display: flex;
+  align-items: center ;
+  justify-content: center;
+  height: 1050px;
+  position: relative;
+  
+}
+
+.layer3Container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 34px;
+  padding: 44px;
+  margin-bottom: 16px;
+  position: absolute;
+  width: 70%;
+  top: 230px;
+  
+}
+
+.layer3Container .container-info-header {
+  align-self: center;
+}
+
+.container-info-header {
+  display: flex; 
+  justify-content: space-between;
+  border-radius: 16px;
+  width: 80%;
+  align-self: center;
+  padding: 16px;
+}
+
+.container-header {
+  display: flex; 
+  justify-content: space-between;
+  width: 100%;
+}
+
+.nombre-profe {
+  color: #6243F7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.valor-hora {
+  background-color: #2f2f2f;
+  border-radius: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: none;
+  height: 2.1em;
+  color: #00FFCB;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+}
+
+.container-info {
+  display: flex;
+  background-color: #6243F7;
+  border-radius: 16px;
+  width: 80%;
+  align-self: center;
+  padding: 16px;
+}
+
+.foto-perfil {
+  padding: 16px;
+}
+
+.info-profe {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+
+.header-info {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.idioma {
+  display: flex;
+  color: #ffffff;
+  margin-left: 200px;
+  gap: 1em;
+  padding: 10px;
+}
+
+.ingles, .espa, .aleman {
+  border: 2px dotted #00FFCB;
+  width: 25px;
+  text-align: center;
+}
+
+.ubicacion {
+  display: flex;
+  color: #ffffff;
+  gap: 0.5em;
+  padding: 10px;
+}
+
+.ubicacion i {
+  color: #00FFCB;
+}
+
+.texto-perfil {
+  color: #fff;
+  font-size: 1em;
+}
+
+.categorias {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  border-radius: 16px;
+  width: 80%;
+  align-self: center;
+  padding: 16px;
+}
+
+.categoria {
+  background-color: #2f2f2f;
+  border-radius: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: none;
+  height: 2.4em;
+  color: #00FFCB;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+}
+
+.botones-profesores {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 5px;
+  border-radius: 16px;
+  width: 80%;
+  align-self: center;
+  padding: 16px;
+}
+
+.botones-profesores .listo {
+  background-color: #6243F7;
+  border-radius: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: none;
+  height: 2.1em;
+  color: #00FFCB;
+}
+
+.botones-profesores .volver-profe {
+  background-color: #6243F7;
+  border-radius: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: none;
+  height: 2.1em;
+  color: #00FFCB;
 }
 
 
