@@ -325,7 +325,6 @@ display: none;
 
 .botonesConfirmacionFoto, .botones-profesores{
     display: flex;
-    flex-direction: row-reverse;
     justify-content: center;
     font-size: 1.3em;
 }
