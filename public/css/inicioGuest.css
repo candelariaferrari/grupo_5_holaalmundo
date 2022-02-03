@@ -1168,7 +1168,8 @@ footer .footerTeam {
   /* profes */
   #profesores {
     height: 200vh;
-    margin-top: -10em;
+    width: 100vw;
+    margin-top: -8em;
   }
   .section-profesores {
     width: 100%;
@@ -1178,10 +1179,10 @@ footer .footerTeam {
   .container-teacher {
     box-sizing: border-box;
     width: 100%;
-    padding-top: 15em;
+    padding-top: 20em;
     display: grid;
-    grid-template-columns: 120px 120px 120px;
-    grid-template-rows: 130px 130px 130px auto;
+    grid-template-columns: 140px 140px 140px;
+    grid-template-rows: 150px 150px 150px auto;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
@@ -1189,6 +1190,11 @@ footer .footerTeam {
       ". boton-mas g-dos"
       "g-cinco g-cuatro g-tres"
       "est est est";
+  }
+  .g-seis,
+  .g-siete,
+  .g-ocho{
+    display: none !important;
   }
   .section-profesores .title-profesores {
     left: 0em;
@@ -1219,7 +1225,7 @@ footer .footerTeam {
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    height: 100%;
+    height: 95%;
     margin-top: -1.5em;
     align-content: center;
   }
@@ -1248,7 +1254,7 @@ footer .footerTeam {
   }
   /* contacto */
   .contactoHome {
-    width: 360px;
+    width: 100%;
     background-image: url(../images/bkg-contacto-responsive.svg);
   }
   .flexContacto {
