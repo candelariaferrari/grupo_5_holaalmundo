@@ -222,16 +222,19 @@ display: none;
     padding-bottom: 10vh;
     background-color: #6243f7;
     margin-bottom: 5vh;
+    text-align: center;
 }
 
 .title{
-    font-size: 2em;
+    font-size: 2.4em;
+    font-weight: bolder;
     padding-bottom: 8vh;
     font-weight: bold;
 }
 
 .subtitulo{
     font-size: 1.8em;
+    font-weight: bold;
 }
 .formularioInfoLibre div{
     text-align: center;
@@ -266,10 +269,11 @@ display: none;
     border: transparent;
     transition: all 2ms;
     font-weight: bolder;
+    color: #1f58a5;
 }
 
 .botones:hover{
-    color: #1f58a5
+    color: #00a987;
     
 }
 
