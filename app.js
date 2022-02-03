@@ -27,21 +27,6 @@ app.get('/carritoCompras', (req, res) => {
 });
 
 
-/* CARMELA IGNORAR*/
-
-app.get('/carmela1', (req,res)=>{
-    res.sendFile(path.resolve(__dirname, './views/perfilProfesV1.html'));
-})
-
-
-app.get('/carmela2', (req,res)=>{
-    res.sendFile(path.resolve(__dirname, './views/perfilProfesV2.html'));
-})
-
-app.get('/carmela3', (req,res)=>{
-    res.sendFile(path.resolve(__dirname, './views/administracionProfes.html'));
-})
-
 /** VISTA PROFESOR */
 
 app.get('/perfilProfesores1', (req, res) => {
