@@ -305,7 +305,6 @@ display: none;
     width: 100%;
     text-align: center;
     font-size: 0.8em;
-    border: solid black 1px;
 }
 
 #uploadFromDevice input{
@@ -324,13 +323,13 @@ display: none;
 
 
 
-.botonesConfirmacionFoto{
+.botonesConfirmacionFoto, .botones-profesores{
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
     font-size: 1.3em;
 }
-.botonesConfirmacionFoto div{
+.botonesConfirmacionFoto div, .botones-profesores div{
     margin-left: 5vw;
     margin-right: 5vw;
     padding: 1%;
@@ -339,6 +338,8 @@ display: none;
 .botonesConfirmacionFoto div input{
     padding-right: 10%;
 }
+
+/* CAMBIANDO PARA USAR CODIGO DE CHARLY. IGNORAR POR AHORA
 .resumenDePerfil{
     margin-top: 10vh;
 }
@@ -385,9 +386,246 @@ display: none;
     justify-self: flex-end;
     justify-items: flex-end;
 }
+*/
+
+/* ----- Elementos de la seccion 3. Clase Layer3 -------*/
+
+.layer3Container {
+    padding-top: 15vh;
+    padding-bottom: 15vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: auto;
+    width: 100%;
+    text-align: left;
+}
+  
+.layer3Container .container-info-header {
+    align-self: center;
+}
+  
+.container-info-header {
+    display: flex; 
+    flex-wrap: wrap;
+    flex-direction: column;
+    border-radius: 16px;
+    width: 100%;
+    align-self: center;
+    padding: 2%;
+}
+  
+.container-header {
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+}
+    
+#nombre-profe {
+    color: #6243F7;
+    display: flex;
+    position: relative;
+    right: -11%;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+  
+#precio {
+    background-color: #2f2f2f;
+    border-radius: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: none;
+    height: 2.1em;
+    color: #00FFCB;
+    display: flex;
+    position: relative;
+    right: -8%;
+    bottom: 13px;
+
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+
+}
+    
+.container-info {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    background-color: #6243F7;
+    border-radius: 16px;
+    width: 80%;
+    align-self: center;
+    padding-left: 15%;
+}
+  
+.foto-perfil {
+    display: flex;
+    width: 20%;
+    position: absolute;
+    bottom: 8%;
+    left: -8%;
+}
+    
+.info-profe { 
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    width: 95%;
+    padding: 16px;
+}
+  
+.header-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+
+  /* no puedo hacer que en responsive, no se vaya de su lugar*/
+    
+.idioma {
+    display: flex;
+    width: fit-content;
+    color: #ffffff;
+    gap: 1em;
+    padding: 10px;
+}
+  
+.ingles, .espa, .aleman {
+    border: 2px dotted #00FFCB;
+    width: fit-content;
+    text-align: center;
+}
+    
+.ubicacion {
+    width: fit-content;
+    display: flex;
+    flex-wrap: nowrap;
+    color: #ffffff;
+    gap: 0.5em;
+    padding: 10px;
+}
+  
+.ubicacion i {
+    color: #00FFCB;
+}
+    
+.texto-perfil {
+    color: #fff;
+    font-size: 1em;
+    padding: 2%;
+    text-align: justify;
+    flex-direction: row;
+    align-self: center;
+}
+  
+.categorias {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px;
+    border-radius: 16px;
+    width: 80%;
+    align-self: center;
+    padding: 16px;
+}
+  
+.categoria {
+    background-color: #2f2f2f;
+    border-radius: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: none;
+    height: 2.4em;
+    color: #00FFCB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+}
+  
+
+
+
+
+    /* ------ FOOTER ----- */
+footer {
+background-color: #212121;
+height: 150px;
+padding: 0em 6em;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+}
+footer .footerTeam {
+color: #00ffcb;
+font-size: 1rem;
+font-weight: 300;
+}
+.footerTeam p {
+display: inline-block;
+}
+.footerTeam ul {
+list-style: none;
+}
+.footerTeam li {
+display: inline-block;
+}
+.footerTeam a {
+text-decoration: none;
+color: #00ffcb;
+}
+.redesFooter a {
+text-decoration: none;
+color: #00ffcb;
+font-size: 1rem;
+margin-right: 0.5em;
+}
+
+.botones-profesores{
+    align-items: flex-start;
+}
+.botones-profesores div{
+    align-self: center;
+    justify-self: center;
+}
+/*y aca no se como bajarlos*/
 
 @media (max-width:480px){
     .uploadFrom div p{
         display: none;
     }
+}
+
+@media (max-width:533px) {
+    
+    .container-info{
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        padding: 0;
+   
+    }
+
+    .foto-perfil {
+        position: initial;
+    }
+    /* no lo puedo centrar*/
+
+
+
+ 
+
+
+
+
+
+
+
 }

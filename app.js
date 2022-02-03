@@ -4,6 +4,8 @@ const app = express();
 
 app.use(express.static('public'));
 
+/** VISTA USUARIO */
+
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '/views/inicioGuests.html'));
 });
@@ -24,10 +26,6 @@ app.get('/carritoCompras', (req, res) => {
     res.sendFile(path.join(__dirname, './views/carritoCompras.html'));
 });
 
-app.get('/', (req,res)=>{
-    res.sendFile(path.resolve(__dirname, './views/seteoPerfilProfes.html'));
-})
-
 
 /* CARMELA IGNORAR*/
 
@@ -44,6 +42,17 @@ app.get('/carmela3', (req,res)=>{
     res.sendFile(path.resolve(__dirname, './views/administracionProfes.html'));
 })
 
+/** VISTA PROFESOR */
+
+app.get('/perfilProfesores1', (req, res) => {
+    res.sendFile(path.join(__dirname, './views/seteoPerfilProfes-1.html'));
+});
+
+app.get('/perfilProfesores2', (req, res) => {
+    res.sendFile(path.join(__dirname, './views/seteoPerfilProfes-2.html'));
+});
+
+/** SERVIDOR */
 
 app.listen(3000, () => { 
     console.log("Servidor corriendo en puerto 3000");
