@@ -6,6 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mis Aulas</title>
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/adminProfes.css">    
+    <script src="https://kit.fontawesome.com/3964fc737d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/perfilProfesV2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <header id="top-header">
@@ -86,59 +93,96 @@
       </header>
 
     <main>
-        <section>
-            <div>
+        <section class="agenda">
+            <div class="diaAgenda">
                 <div>Hoy</div>
                 <i class="far fa-clock"></i>
             </div>
 
-            <div>
-                <img src="#" alt="avatar del alumno">
-                <div>Alumno</div>
-                <div>
-                    <div>Horario</div>
-                    <div>Tema a ver</div>
-                    <div>Plataforma</div>
+            <div class="elementosAgenda">
+                <div class="fotoAlumnoAgenda"> 
+                  <img src="/images/imagen-profesor.png" alt="avatar del alumno">
+                  <div id="nombreAlumnoAgenda">Alumno</div>
                 </div>
-                <i class="fas fa-ellipsis-h"></i>
+                <div class="infoClasesAgenda">
+                    <div id="horarioAgenda">Horario</div>
+                    <div id="temaAgenda">Tema a ver</div>
+                    <div id="plataformaAgenda">Plataforma</div>
+                </div>
             </div>
+            <i class="fas fa-ellipsis-h"></i>
         </section>
 
-        <section>
-            <div>Administra tus clases</div>
-            <div>
-                <div>Mis alumnos</div>
-                <!-- aca puede seleccionar multiple, no se si esta bien un form ahi, asi que hare un div-->
-                <div>nombre</div>
-                <div>nombre</div>
-                <div>nombre</div>
-                <div>nombre</div>
-            </div>
-            <div>
-                <div>Idiomas</div>
-                <div>Ingles</div>
-                <div>Espanol</div>
-                <div>Portugues</div>
-                <div>Italiano</div>
-            </div>
-            <div>
-                <div>Mi semana</div>
-                <div>Lunes</div>
-                <div>Martes</div>
-                <div>Miercoles</div>
-                <div>Jueves</div>
-                <div>Viernes</div>
-                <div>Sabado</div>
-                <div>Domingo</div>
-            </div>
+        <section class="administraClases">
+            <div class="tituloAdminClases">Administra tus clases</div>
+            
+            <div class="contenedorMenuFiltroAgenda">
 
-            <div>Conversaciones</div>
-            <!-- aca ni idea que va-->
+              <div class="menuFiltroAgenda">
 
-            <div>
+                <div id="misAlumnos">
+                    <div class="categoriaFiltro">Mis alumnos</div>
+                    <!-- aca puede seleccionar multiple, no se si esta bien un form ahi, asi que hare un div-->
+                    <div class="opcionesFiltro">
+                      <ul class="opcionesFiltroUL">
+                        <li class="elementoFiltro"><a href="#">Idioma</a></li>
+                        <li class="elementoFiltro"><a href="#">Idioma</a></li>
+                        <li class="elementoFiltro"><a href="#">Idioma</a></li>
+                        <li class="elementoFiltro"><a href="#">Idioma</a></li>
+                      </ul>
+                    </div>
+                </div>
+
+                <div id="misIdiomas">
+                    <div class="categoriaFiltro">Idiomas</div>
+                    <div class="opcionesFiltro">
+                      <ul class="opcionesFiltroUL">
+                        <li class="elementoFiltro"><a href="#">Ingles</a></li>
+                        <li class="elementoFiltro"><a href="#">Espanol</a></li>
+                        <li class="elementoFiltro"><a href="#">Portugues</a></li>
+                        <li class="elementoFiltro"><a href="#">Italiano</a></li>
+                      </ul>
+                    </div>
+                </div>  
+
+                <div id="diaSemana">
+                    <div class="categoriaFiltro">Mi semana</div>
+                    <div class="opcionesFiltro">
+                      <ul class="opcionesFiltroUL">
+                        <li class="elementoFiltro"><a href="#">Domingo</a></li>
+                        <li class="elementoFiltro"><a href="#">Lunes</a></li>
+                        <li class="elementoFiltro"><a href="#">Martes</a></li>
+                        <li class="elementoFiltro"><a href="#">Miercoles</a></li>
+                        <li class="elementoFiltro"><a href="#">Jueves</a></li>
+                        <li class="elementoFiltro"><a href="#">Viernes</a></li>
+                        <li class="elementoFiltro"><a href="#">Sabado</a></li>
+                      </ul>
+                    </div>
+                </div>
+
+                <div id="conversaciones">  <!-- aca ni idea que va-->
+                  <div class="categoriaFiltro">Conversaciones</div>
+                  <div class="opcionesFiltro">
+                    <ul class="opcionesFiltroUL">
+                      <li class="elementoFiltro"><a href="#">conv</a></li>
+                      <li class="elementoFiltro"><a href="#">conv</a></li>
+                      <li class="elementoFiltro"><a href="#">conv</a></li>
+                      <li class="elementoFiltro"><a href="#">conv</a></li>
+                    </ul>
+                  </div>
+                </div>
+
+               
+              </div> <!-- fin menuFiltroAgenda-->
+              <div><!-- div vacio hasta que resolvamos el grafico. Mantiene estructura. !--></div>
+              <div class="graficoStatsProf">
                 <!-- aca va un grafico hermoso que suplantaremos con una imagen-->
                 <img src="#" alt="grafico de stats del prof">
-            </div>
+              </div>
+         
+          </div> <!-- cierre del contenedor-->
+          
+            
         </section>
 
 
