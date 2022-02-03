@@ -154,3 +154,40 @@ padding: 0;
     max-width: 12%;
     right: 55%;
 }
+
+    /* ------ FOOTER ----- */
+    footer {
+        background-color: #212121;
+        height: 150px;
+        padding: 0em 6em;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        color: #00ffcb;
+        }
+        footer .footerTeam {
+        color: #00ffcb;
+        font-size: 1rem;
+        font-weight: 300;
+        }
+        .footerTeam p {
+        display: inline-block;
+        }
+        .footerTeam ul {
+        list-style: none;
+        }
+        .footerTeam li {
+        display: inline-block;
+        }
+        .footerTeam a {
+        text-decoration: none;
+        color: #00ffcb;
+        }
+        .redesFooter a {
+        text-decoration: none;
+        color: #00ffcb;
+        font-size: 1rem;
+        margin-right: 0.5em;
+        }
+        
