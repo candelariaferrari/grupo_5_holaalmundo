@@ -26,22 +26,6 @@ app.get('/carritoCompras', (req, res) => {
     res.sendFile(path.join(__dirname, './views/carritoCompras.html'));
 });
 
-
-/* CARMELA IGNORAR*/
-
-app.get('/carmela1', (req,res)=>{
-    res.sendFile(path.resolve(__dirname, './views/perfilProfesV1.html'));
-})
-
-
-app.get('/carmela2', (req,res)=>{
-    res.sendFile(path.resolve(__dirname, './views/perfilProfesV2.html'));
-})
-
-app.get('/carmela3', (req,res)=>{
-    res.sendFile(path.resolve(__dirname, './views/administracionProfes.html'));
-})
-
 /** VISTA PROFESOR */
 
 app.get('/perfilProfesores1', (req, res) => {
@@ -57,9 +41,3 @@ app.get('/perfilProfesores2', (req, res) => {
 app.listen(3000, () => { 
     console.log("Servidor corriendo en puerto 3000");
 });
-
-
-
-
-
-
