@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profesores Hola al Mundo</title>
+    <script
+      src="https://kit.fontawesome.com/3964fc737d.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="/css/normalize.css" rel="stylesheet" />
+    <link href="/css/seteoPerfilProfes-2.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header id="top-header">
+      <nav class="navbar" id="main">
+        <div class="responsive-one">
+          <a class="logo" href="#top-header">
+            <img src="/images/logo.svg" alt="logo" />
+          </a>
+          <div class="search">
+            <i class="fas fa-search"></i>
+            <input
+              class="input"
+              type="search"
+              name="buscar"
+              placeholder="Buscar"
+            />
+          </div>
+        </div>
+        <ul class="nav-list" id="navList">
+          <li class="nav-item">
+            <a class="border" href="/home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#"> Profesores</a>
+          </li>
+          <li class="nav-item">
+            <a href="#"> Paquetes</a>
+          </li>
+          <li class="nav-item">
+            <a href="#"> Contacto</a>
+          </li>
+          <li class="nav-item">
+            <a href="#">En</a>
+          </li>
+        </ul>
+        <div class="responsive-two">
+          <div class="button-responsive" id="toggle-button">
+            <i class="fas fa-bars"></i>
+          </div>
+          <div class="botones-iconos">
+            <i class="far fa-heart"></i>
+            <button class="carrito" onclick="openNav()">
+              <i class="fas fa-shopping-cart"></i>
+            </button>
+            <div class="dropdown">
+              <button class="dropbtn">
+                <i class="far fa-user-circle"></i>
+              </button>
+              <!-- submenu -->
+              <div class="dropdown-content">
+                <div class="drop-header">
+                  <i class="far fa-user-circle"></i>
+                  <h4>Usuario</h4>
+                </div>
+                <ul>
+                  <li>Membresías</li>
+                  <li>Da clases</li>
+                  <li>Mis cursos</li>
+                </ul>
+                <ul>
+                  <li>Configuración</li>
+                  <li>Métodos de pago</li>
+                  <li>Historial de compra</li>
+                </ul>
+                <ul>
+                  <li>Idiomas</li>
+                </ul>
+                <ul>
+                  <li>Editar perfil</li>
+                </ul>
+
+                <ul class="outline">
+                  <li>Ayuda</li>
+                  <li>Cerrar sesión</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      </header>
+    <main class="main">
+      <!-- LAYER 1 -->
+      <div class="layer1">
+        <div class="layer1Container">
+          <div class="greetings">
+            <h2>Completa tu perfil</h2>
+          </div>
+          <div class="infoProfe">
+            <p>Cuentanos sobre vos</p>
+          </div>
+          <div class="infoCompleta">
+            <textarea> </textarea>
+          </div>
+          <div class="container-button">
+            <button type="button">Continuar</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="layer2">
+        <div class="layer2Container">
+          <div class="texto-subir-foto">
+              <h2>Subí una foto tuya</h2>
+          </div>
+          <div class="file-update">
+              <div class="container-image">
+                <div class="card"><img src="/images/entypo-social_google-drive.png"></div>
+                <div class = "footer-file">Drive
+                  <input type="file"></input>
+                </div>  
+              </div>    
+              <div class="container-image">
+                <div class="card"><img src="/images/akar-icons_dropbox-fill.png"></div>
+                <div class = "footer-file">DropBox
+                  <input type="file"></input>
+                </div> 
+              </div>  
+              <div class="container-image">
+                <div class="card"><img src="/images/ic_round-file-upload.png"></div>
+                <div class = "footer-file">Computadora
+                  <input type="file"></input>
+                </div>  
+              </div>
+          </div>
+          <div class="nombre-archivo">
+            <input type="text" placeholder="Nombre del Archivo"></input>
+          </div>
+          <div class="botones">
+            <button type="button" class="volver">
+              Volver
+            </button>
+            <button type="button" class="continuar">
+              Continuar
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="layer3">
+        <div class="layer3Container">
+          <div class="container-info-header">
+            <div class="container-header">
+              <div class="nombre-profe">Nombre Profesor</div>
+              <div class="valor-hora"><p>$ por hora</p></div>
+            </div>
+          </div>
+          <div class="container-info">
+            <div class="foto-perfil">
+              <img class = "profeImage" src ="/images/imagen-profesor.png">
+            </div>
+            <div class="info-profe">
+              <div class="header-info">
+                <div class="idioma">
+                  <div class="ingles">
+                      En
+                  </div>
+                  <div class="espa">
+                      Es
+                  </div>
+                  <div class="aleman">
+                      Ger
+                  </div>
+                </div>
+                <div class="ubicacion">
+                  <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+                  <div class="ciudad">Ciudad, Pais</div>
+                </div>
+              </div>
+              <div class="texto-perfil">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                  Vestibulum lorem sed risus ultricies tristique nulla. Neque ornare aenean euismod elementum nisi. 
+                  Penatibus et magnis dis parturient. Risus nullam eget felis eget nunc lobortis. Volutpat blandit aliquam etiam erat. </p>
+              </div>
+            </div>
+          </div>
+          <div class="categorias">
+            <div class="categoria">Categoria</div>
+            <div class="categoria">Categoria</div>
+            <div class="categoria">Categoria</div>
+            <div class="categoria">Categoria</div>
+          </div>
+          <div class="botones-profesores">
+            <button type="button" class="volver-profe">
+              Volver
+            </button>
+            <button type="button" class="listo">
+              Listo!
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footerTeam">
+        <p>Creado por:</p>
+        <ul>
+          <li>
+            <a href="https://www.linkedin.com/" target="_blank"> Carlos - </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/" target="_blank"> Martina - </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/" target="_blank"> Carmela - </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/" target="_blank"> Candelaria </a>
+          </li>
+        </ul>
+      </div>
+      <div class="redesFooter">
+        <a href="#" target="_blank">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" target="_blank">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#" target="_blank">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="#" target="_blank">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>
