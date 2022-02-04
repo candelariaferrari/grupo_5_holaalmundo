@@ -10,9 +10,29 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '/views/inicioGuests.html'));
 });
 
+/** LOGIN */
+
+app.get('/inicioInvitado', (req, res) => {
+    res.sendFile(path.join(__dirname, './views/inicioGuests.html'));
+});
+
+app.get('/iniciarSesion', (req, res) => {
+    res.sendFile(path.join(__dirname, './views/login.html'));
+});
+
+/** SIGN UP */
+
+app.get('/registro', (req, res) => {
+    res.sendFile(path.join(__dirname, './views/register.html'));
+});
+
+/** HOME */
+
 app.get('/home', (req,res)=>{
     res.sendFile(path.join(__dirname + '/views/home.html'));
 });
+
+/** SERVICIOS */
 
 app.get('/servicios', (req, res) => {
     res.sendFile(path.join(__dirname, '/views/paquetesServicios.html'));
@@ -21,6 +41,8 @@ app.get('/servicios', (req, res) => {
 app.get('/reserva', (req, res) => {
     res.sendFile(path.join(__dirname, '/views/popUpReserva.html'));
 });
+
+/** CARRITO DE COMPRAS */
 
 app.get('/carritoCompras', (req, res) => {
     res.sendFile(path.join(__dirname, './views/carritoCompras.html'));

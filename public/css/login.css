@@ -1,0 +1,118 @@
+body
+{
+font-family: 'Roboto', sans-serif;
+}
+
+.logo
+{
+width: 250px;
+position: absolute;
+z-index: 1;
+top: 250px;
+left: 180px;
+}
+
+.bg
+{
+position: absolute;
+left: 0px;
+top: 0px;
+width: 700px; 
+height: 670px;
+}
+
+.campos :placeholder-shown
+{
+background-color: #00FFCB;
+border-radius: 10px;
+width: 280px;
+height: 40px;
+border: transparent;
+}
+
+::placeholder
+{
+color: #424242;
+margin-left: 150px;
+position: absolute;
+top: 12px;
+left: -140px;
+font-size: 14px;
+}
+
+.campos
+{
+position: relative;
+top: 140px;
+left: 804px;
+color: #424242;
+}
+
+.cr
+{
+position: absolute;
+z-index: 1;
+top: 580px;
+left: 180px;
+color: #FFFFFF;
+font-size: 12px;
+}
+
+.inicio-sesion
+{
+position: relative;
+color: #6243F7;
+top: 140px;
+left: 804px;
+font-size: 40px;
+}
+
+.campos .ini
+{
+width: 160px;
+height: 40px;
+border-radius: 14px;
+border: transparent;
+position: relative;
+color: #00FFCB;
+background-color: #6243F7;
+top: 16px;
+left: 60px;
+}
+
+ul.iconos li
+{
+display: inline;
+padding-left: 20px;
+padding-right: 6px;
+}
+
+.iconos
+{
+position: absolute;
+z-index: 1;
+top: 518px;
+left: 170px;
+color: #00FFCB;
+font-size: 24px; 
+}
+
+.ic-menu
+{
+color: white;
+position: absolute;
+font-size: 26px;
+z-index: 1;
+left: 950px;
+top: 4px;
+}
+
+.olv-cont
+{
+color: #424242;
+position: relative;
+left: 890px;
+top: 144px;
+font-size: 10px;
+text-decoration: underline #00FFCB 2px;
+}

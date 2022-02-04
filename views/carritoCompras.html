@@ -1,12 +1,222 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+         <meta charset="UTF-8">
+         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title> Carrito De Compras </title>
+         <link href="/css/cart.css" rel="stylesheet">
+         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
+         <header>
+
+         <img class="inicio" src="/images/top-gris.png">
+
+         <img class="logo" src="/images/logo-holaalmundo.png">
+
+         <input class="busqueda" type="search" placeholder="Buscar...">
+
+         <p class="lupa">
+         <i class="fas fa-search"> </i>
+         </p>
+         
+         <ul class="nom">
+         <li type="none"> Membresias </li>
+         <li type="none"> Teach on HalM </li>
+         <li type="none"> My learning </li>
+         <li type="none"> En </li>
+         </ul>
+        
+         <ul class="ic-menu">
+         <li type="none"> <i class="fas fa-heart"> </i> </li>
+         <li type="none"> <i class="fas fa-shopping-cart"> </i> </li>
+         <li type="none"> <i class="far fa-user-circle"> </i> </li>
+         </ul> 
+
+         </header>
+
+         <main>
+ 
+         <img class="fon" src="/images/bg-violeta.png">
+
+         <p class="tit"> Mi compra </p>
+
+         <hr class="lin1" color= #00FFCB>
+
+         <p>
+         <ul class="linea-sup">
+         <li type="none"> Nombre del paquete </li>
+         <li type="none"> Cantidad </li>
+         <li type="none"> Precio </li>
+         </ul>
+         </p>
+        
+         <hr class="lin2" color= #00FFCB>
+
+         <p>
+         <ul class="linea-inf">
+         <li type="none"> Paquete 1 </li>
+         <li type="none"> 1  </li>
+         <li type="none"> $5000 </li>
+         <li type="none" class="tacho"> <i class="far fa-trash-alt"> </i> </li>
+         </ul>
+         </p>
+
+         <hr class="lin3" color= #00FFCB>
+
+         <p>
+         <ul class="linea-der1">
+         <li type="none"> Subtotal </li>
+         <li type="none"> $5000 </li>
+         </ul>
+         </p>
+
+         <hr class="lin4" color= #00FFCB>
+
+         <p>
+         <ul class="linea-der2">
+         <li type="none"> Código de descuento </li>
+         <li type="none"> BIENV2022 </li>
+         </ul>
+         </p>
+
+         <hr class="lin5" color= #00FFCB>
+
+         <p>
+         <ul class="linea-der3">
+         <li type="none"> TOTAL </li>
+         <li type="none"> $4000 </li>
+         </ul>
+         </p>
+
+         <p>
+         <button class="bot-com" type="submit"> Comprar </button>
+         </p>
+
+         </main>
+
+         <section>
+         
+         <img class="verde1" src="/images/side-verde.png">
+
+         <img class="azul" src="/images/side-azul.png">
+
+         <img class="violeta" src="/images/side-violeta.png">
+
+         <img class="verde2" src="/images/side-verde-2.png">
+
+         <p class="tit-sec"> Login </p>
+ 
+         <img class="cir1" src="/images/cir-verde.png">
+
+         <img class="cir2" src="/images/cir-verde.png">
+
+         <ul class="ic"> 
+         <li type="none"> <a href="https://www.google.com/account/about/?hl=es&utm_source=google-account&utm_medium=web"> <i class="fab fa-google"> </i> </a> </li>
+         <li type="none"> <a href="https://es-la.facebook.com/login/device-based/regular/login/"> <i class="fab fa-facebook-f"> </i> </a> </li>
+         </ul>
+
+         <form action="/carritoDeCompras" method="POST"> 
+              
+         <p class="campos">
+         <input placeholder= "Nombre" type="text" name="Nombre" required> 
+         </p>
+                     
+         <p class="campos">
+         <input placeholder= "Apellido" type="text" name="Apellido" required>
+         </p>
+                     
+         <p class="campos">
+         <input placeholder= "Mail" type="email" name="Mail" required>
+         </p>
+
+         <p class="campos">
+         <input placeholder= "Celular" type="tel" name="Celular" required>
+         </p>
+
+         <p class="campos">
+         <button class="reg" type="submit"> Ingresar </button>
+         </p>
+
+         </form>
+              
+         <p class="tit-ter"> Métodos de pago </p>
+
+         <ul class="tar-acep">
+         <li type="none"> TARJETA DE CRÉDITO  </li>
+         <li type="none"> TARJETA DE DÉBITO  </li>
+         <li type="none"> MERCADO PAGO </li>
+         </ul>
+
+         <img class="rec1" src="/images/tar-verde.png">
+
+         <img class="rec2" src="/images/tar-verde.png">
+
+         <img class="rec3" src="/images/tar-verde.png">
+
+         <form action="/carritoDeCompras" method="POST"> 
+              
+         <p class="camp">
+         <input placeholder="Número de tarjeta" type="tel" name="Tarjeta" required> 
+         </p>
+                        
+         <p class="camp">
+         <input placeholder="Nombre y Apellido del titular (como figura en la tarjeta)" type="text" name="NyA" required>
+         </p>
+                        
+         <p class="camp">
+         <input class="fecha" placeholder="Vencimiento (MM/AA)" type="tel" name="Vencimiento" required>
+         </p>
+   
+         <p class="camp">
+         <input placeholder="Código de seguridad" type="tel" name="Codigo" required>
+         </p>
+
+         <p class="camp">
+         <select required>
+         <option value=" " selected hidden> Cantidad de cuotas </option>
+         <option value="1"> 1 </option>
+         <option value="3"> 3 </option>
+         <option value="6"> 6 </option>
+         <option value="12"> 12 </option>
+         </select>
+         </p>
+
+         <p class="camp">
+         <input placeholder="Documento del titular" type="tel" name="Documento" required>
+         </p>
+
+         <p class="camp">
+         <button class="pag" type="submit"> Pagar </button>
+         </p>
+   
+         </form>
+
+         </section>
+
+         <footer>
+
+         <img class="gris" src="/images/top-gris.png"> 
+
+         <ul class="iconos">
+         <li type="none"> <i class="fab fa-facebook-f"> </i> </li>
+         <li type="none"> <i class="fab fa-instagram"> </i> </li>   
+         <li type="none"> <i class="fab fa-linkedin-in"> </i> </li>
+         <li type="none"> <i class="fab fa-whatsapp"> </i> </li>
+         </ul>
+  
+         <div class="cr"> Creado por Carlos - Martina - Carmela - Candelaria </div>
+
+         </footer>
+
 </body>
+
 </html>
