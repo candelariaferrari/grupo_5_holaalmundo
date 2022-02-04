@@ -34,8 +34,12 @@ app.get('/home', (req,res)=>{
 
 /** SERVICIOS */
 
-app.get('/servicios', (req, res) => {
-    res.sendFile(path.join(__dirname, '/views/paquetesServicios.html'));
+app.get('/servicios1', (req, res) => {
+    res.sendFile(path.join(__dirname, '/views/Servicios-Cliente/paquetesServicios-1.html'));
+});
+
+app.get('/servicios2', (req, res) => {
+    res.sendFile(path.join(__dirname, '/views/Servicios-Cliente/paquetesServicios-2.html'));
 });
 
 app.get('/reserva', (req, res) => {

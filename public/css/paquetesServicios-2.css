@@ -9,7 +9,7 @@ negro: #212121
 blanco: #ffffff
  */
 
-html {
+ html {
     box-sizing: border-box;
   
 }
@@ -196,7 +196,7 @@ html {
 
 
 .container-filtros {
-  background-image: url(/images/bkg-perfilProfes.png);
+  background-image: url(/images/layer1-bg.png);
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -206,16 +206,16 @@ html {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 900px;
+  height: 1200px;
 }
 
 .container-header {
     font-size: 2.5rem;
     font-weight: 700;
     margin: 1em auto;
-    color: #6243f7;
+    color: #ffffff;
     position: absolute;
-    top: 80px;
+    top: 100px;
 }
 
 
@@ -233,14 +233,14 @@ html {
 }
 
 .cardFiltrosHorario {
-    background-color: rgba(0, 0, 0, 0.79);
+    background-color: #00ffcb;
     border-radius: 16px;
     margin-top: 20px;
     margin-bottom: 20px;
-    color: white;
+    color: black;
     width: 100%;
     padding: 4px;   
-    height: 50px; 
+    height: 60px; 
 }
 
 .form-group label{
@@ -250,7 +250,7 @@ html {
 .cardFiltrosHorario i {
     color:#00ffcb;
     margin-left: 800px;
-    font-size: 1.5em;
+    font-size: 1.9em;
 }
 
 .filtro-idiomas-formulario {
@@ -367,7 +367,6 @@ input[type="checkbox"]:checked {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    border: 4px solid red;
     width: 100%;
 }
 
@@ -378,8 +377,8 @@ input[type="checkbox"]:checked {
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
-  border: 4px solid red;
   gap: 50px;
+  margin-top: 50px;
 
 }
 
@@ -389,7 +388,6 @@ input[type="checkbox"]:checked {
   align-items: center;
   flex: 1 1 0px;
   position: relative;
-  border: 4px solid blue;
   padding: 4px;
 
 }
@@ -405,9 +403,37 @@ input[type="checkbox"]:checked {
   margin: 0.5em -1em -1em -1em;
 }
 
+.reserva {
+  width: 100%;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  background-color:#00ffcb;
+  color: black;
+  text-align: center;
+  height: 50px;
+  font-size: 1.2em;
+  position: absolute;
+  top: 140px;
+  padding: 8px;
+}
+
+.reserva {
+  display: none;
+}
+
 .profeContainer:hover {
   transform: scale(1.05);
   box-shadow: 0 0 30px rgb(2, 173, 164);
+}
+
+.profeContainer:hover {
+  background-color: #6243f7;
+  
+}
+
+.profeContainer:hover .reserva {
+  display: flex;
 }
 
 .puntuacion {
@@ -465,7 +491,6 @@ input[type="checkbox"]:checked {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 5px solid black;
   align-self: center;
 }
 
