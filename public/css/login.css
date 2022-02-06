@@ -3,116 +3,152 @@ body
 font-family: 'Roboto', sans-serif;
 }
 
-.logo
-{
-width: 250px;
-position: absolute;
-z-index: 1;
-top: 250px;
-left: 180px;
+
+.main-content {
+    display: flex;
+    height: 900px;
 }
 
-.bg
-{
-position: absolute;
-left: 0px;
-top: 0px;
-width: 700px; 
-height: 670px;
+.left-content {
+    width: 70%;
+    position: relative;
 }
 
-.campos :placeholder-shown
-{
-background-color: #00FFCB;
-border-radius: 10px;
-width: 280px;
-height: 40px;
-border: transparent;
+.container-bg {  
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/bkg-signup.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    filter: brightness(1.1);
+
 }
 
-::placeholder
-{
-color: #424242;
-margin-left: 150px;
-position: absolute;
-top: 12px;
-left: -140px;
-font-size: 14px;
+.logo img {
+    width: 450px;
+    position: absolute;
+    z-index: 1;
+    top: 300px;
+    left: 280px;
+}
+
+.right-content {
+    width: 30%;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.inicio-sesion {
+    color: #6243F7;
+    font-size: 40px;
+    text-align: center;
+}
+
+.formulario {
+    color: black;
+    font-size: 16px;
+    text-align: center;
+}
+
+.formulario {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
 }
 
 .campos
 {
-position: relative;
-top: 140px;
-left: 804px;
-color: #424242;
+    border-radius: 10px;
+    width: 240px;
+    height: 32px;
+    border: transparent;
+    position: relative;
+    color: #00FFCB;
+
 }
 
-.cr
-{
-position: absolute;
-z-index: 1;
-top: 580px;
-left: 180px;
-color: #FFFFFF;
-font-size: 12px;
+.campos :placeholder-shown {
+    background-color: #00FFCB;
+    border-radius: 10px;
+    width: 240px;
+    height: 32px;
+    border: transparent;
 }
 
-.inicio-sesion
-{
-position: relative;
-color: #6243F7;
-top: 140px;
-left: 804px;
-font-size: 40px;
+::placeholder {
+    color: #424242;
+    margin-left: 150px;
+    position: absolute;
+    top: 12px;
+    left: -140px;
+    font-size: 14px;
 }
 
-.campos .ini
-{
-width: 160px;
-height: 40px;
-border-radius: 14px;
-border: transparent;
-position: relative;
-color: #00FFCB;
-background-color: #6243F7;
-top: 16px;
-left: 60px;
-}
-
-ul.iconos li
-{
-display: inline;
-padding-left: 20px;
-padding-right: 6px;
-}
-
-.iconos
-{
-position: absolute;
-z-index: 1;
-top: 518px;
-left: 170px;
-color: #00FFCB;
-font-size: 24px; 
-}
-
-.ic-menu
-{
-color: white;
-position: absolute;
-font-size: 26px;
-z-index: 1;
-left: 950px;
-top: 4px;
-}
 
 .olv-cont
 {
 color: #424242;
 position: relative;
-left: 890px;
-top: 144px;
 font-size: 10px;
 text-decoration: underline #00FFCB 2px;
+}
+
+.ini {
+    width: 160px;
+    height: 40px;
+    border-radius: 14px;
+    border: transparent;
+    color: #00FFCB;
+    background-color: #6243F7;
+    margin-top: 24px;
+}
+
+.campos .ini:hover {
+    color: #00FFCB;
+    background-color: black;
+}
+
+/**  FOOOTER */
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    top: 500px;
+}
+
+.iconos
+{
+    position: absolute;
+    z-index: 1;
+    top: 700px;
+    left: 310px;
+    color: #00FFCB;
+    font-size: 24px; 
+}
+
+.cr
+{
+    position: absolute;
+    z-index: 1;
+    top: 790px;
+    left: 330px;
+    color: #FFFFFF;
+    font-size: 12px;
+}
+
+ul.iconos li
+{
+    display: inline;
+    padding-left: 20px;
+    padding-right: 6px;
 }
