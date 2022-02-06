@@ -7,23 +7,23 @@ app.use(express.static('public'));
 /** VISTA USUARIO */
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '/views/inicioGuests.html'));
+    res.sendFile(path.join(__dirname, '/views/Home-Guest/inicioGuests.html'));
 });
-
-/** LOGIN */
 
 app.get('/inicioInvitado', (req, res) => {
     res.sendFile(path.join(__dirname, './views/inicioGuests.html'));
 });
 
-app.get('/iniciarSesion', (req, res) => {
-    res.sendFile(path.join(__dirname, './views/login.html'));
+/** LOGIN */
+
+app.get('/login', (req, res) => {
+    res.sendFile(path.join(__dirname, './views/Login/login.html'));
 });
 
 /** SIGN UP */
 
 app.get('/registro', (req, res) => {
-    res.sendFile(path.join(__dirname, './views/register.html'));
+    res.sendFile(path.join(__dirname, './views/Registro/register.html'));
 });
 
 /** HOME */
