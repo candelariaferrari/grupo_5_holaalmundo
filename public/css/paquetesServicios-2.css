@@ -359,7 +359,6 @@ input[type="checkbox"]:checked {
   
 } 
 
-
 /* ----- LAYER 2 ------- */
 
 .container-profesores {
@@ -370,7 +369,6 @@ input[type="checkbox"]:checked {
     width: 100%;
 }
 
-
 .layer2InfoContainer {
   display: flex;
   width: 80%;
@@ -379,7 +377,6 @@ input[type="checkbox"]:checked {
   flex-wrap: wrap;
   gap: 50px;
   margin-top: 50px;
-
 }
 
 .profeContainer {
@@ -425,15 +422,40 @@ input[type="checkbox"]:checked {
 .profeContainer:hover {
   transform: scale(1.05);
   box-shadow: 0 0 30px rgb(2, 173, 164);
+  background-color: #6243f7;
+  z-index: 1;
+  position: relative;
+}
+
+.profeContainer:hover .puntuacion {
+  z-index: 3;
+}
+
+.profeContainer:hover .reserva {
+  z-index: 3;
+}
+
+.profeContainer:hover .container-image {
+  background-color: rgba(17, 17, 20, 0.8);
+  z-index: -1;
+}
+
+.profeContainer:hover .container-button {
+  background-color: rgba(17, 17, 20, 0.9);
+
 }
 
 .profeContainer:hover {
-  background-color: #6243f7;
-  
+  background-color: rgba(67, 74, 208, 0.9);
 }
 
 .profeContainer:hover .reserva {
   display: flex;
+}
+
+.profeContainer:hover .footer-profesor {
+  background-color: black;
+  color: #00ffcb;
 }
 
 .puntuacion {
