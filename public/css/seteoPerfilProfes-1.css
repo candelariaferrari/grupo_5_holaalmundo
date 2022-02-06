@@ -218,7 +218,6 @@ html {
     top: 80px;
 }
 
-
 .layerFiltros {
     width: 60%;
     align-self: center;
@@ -226,7 +225,6 @@ html {
     flex-direction: column;
     top: 300px;
 }
-
 
 .layer-idioma .layer-tematicas .layer-profesion{
     margin: auto;
