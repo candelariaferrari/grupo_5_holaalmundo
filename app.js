@@ -29,7 +29,7 @@ app.get('/registro', (req, res) => {
 /** HOME */
 
 app.get('/home', (req,res)=>{
-    res.sendFile(path.join(__dirname + '/views/home.html'));
+    res.sendFile(path.join(__dirname + '/views/Home/InicioLogged.html'));
 });
 
 /** SERVICIOS */
