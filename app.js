@@ -43,13 +43,13 @@ app.get('/servicios2', (req, res) => {
 });
 
 app.get('/reserva', (req, res) => {
-    res.sendFile(path.join(__dirname, '/views/popUpReserva.html'));
+    res.sendFile(path.join(__dirname, '/views/Servicios-Cliente/popUpReserva.html'));
 });
 
 /** CARRITO DE COMPRAS */
 
 app.get('/carritoCompras', (req, res) => {
-    res.sendFile(path.join(__dirname, './views/carritoCompras.html'));
+    res.sendFile(path.join(__dirname, './views/Carrito-Compra/carritoCompras.html'));
 });
 
 /** VISTA PROFESOR */
