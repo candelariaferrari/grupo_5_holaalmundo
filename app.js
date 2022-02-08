@@ -55,15 +55,19 @@ app.get('/carritoCompras', (req, res) => {
 /** VISTA PROFESOR */
 
 app.get('/inicioProfes', (req, res) => {
-    res.sendFile(path.join(__dirname, './views/inicioProfes.html'));
+    res.sendFile(path.join(__dirname, './views/Home-Profesores/inicioProfes.html'));
 });
 
 app.get('/perfilProfesores1', (req, res) => {
-    res.sendFile(path.join(__dirname, './views/seteoPerfilProfes-1.html'));
+    res.sendFile(path.join(__dirname, './views/Perfil-Profesor/seteoPerfilProfes-1.html'));
 });
 
 app.get('/perfilProfesores2', (req, res) => {
-    res.sendFile(path.join(__dirname, './views/seteoPerfilProfes-2.html'));
+    res.sendFile(path.join(__dirname, './views/Perfil-Profesor/seteoPerfilProfes-2.html'));
+});
+
+app.get('/administraClases', (req, res) => {
+    res.sendFile(path.join(__dirname, './views/Perfil-Profesor/administraClases.html'));
 });
 
 /** SERVIDOR */
@@ -71,3 +75,4 @@ app.get('/perfilProfesores2', (req, res) => {
 app.listen(3000, () => { 
     console.log("Servidor corriendo en puerto 3000");
 });
+
