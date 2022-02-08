@@ -555,7 +555,7 @@ input[type]:focus {
   height: fit-content;
 }
 .section-profesores {
-  width: 1440px;
+  width: 100%;
   height: 1431px;
   margin: 5em 0em 0em 0em;
   background-image: url(../images/bkg-profes.png);
@@ -600,13 +600,22 @@ input[type]:focus {
   grid-template-rows: auto auto auto auto auto;
   gap: 0px 0px;
   grid-auto-flow: row;
-  grid-template-areas:
+  /*grid-template-areas:
     ". . . . g-uno ."
     ". . . g-tres . g-dos"
     ". . g-cinco . g-cuatro ."
     "boton-mas g-ocho . g-siete . g-seis"
-    "est est est est est est";
+    "est est est est est est";*/
+  
+  grid-template-areas:
+    ". . . . . . . g-uno ."
+    ". . . . . . g-tres . g-dos"
+    ". . . . . g-cinco . g-cuatro ."
+    ". . . boton-mas g-ocho . g-siete . g-seis"
+    ". . . est est est est est est";
 }
+
+
 .container-teacher img {
   width: 90%;
   height: 90%;
@@ -837,7 +846,8 @@ input[type]:focus {
   height: fit-content;
 }
 .contactoHome {
-  width: 1440px;
+  /*width: 1440px;*/
+  width: 100%;
   height: 725px;
   margin: 0em 0em 0em 0em;
   background-image: url(../images/bkg-contacto.png);
@@ -889,7 +899,7 @@ input[type]:focus {
   color: #00ffcb;
 }
 .flexContacto .formulario {
-  width: 50%;
+  width: 40%;
 }
 .flexContacto .formulario .input-form {
   display: block;
