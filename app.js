@@ -54,6 +54,10 @@ app.get('/carritoCompras', (req, res) => {
 
 /** VISTA PROFESOR */
 
+app.get('/inicioProfes', (req, res) => {
+    res.sendFile(path.join(__dirname, './views/inicioProfes.html'));
+});
+
 app.get('/perfilProfesores1', (req, res) => {
     res.sendFile(path.join(__dirname, './views/seteoPerfilProfes-1.html'));
 });
