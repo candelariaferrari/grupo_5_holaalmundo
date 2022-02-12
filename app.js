@@ -9,6 +9,8 @@ const rutasServicios = require('./src/routes/servicios.js');
 const app = express();
 
 app.use(express.static('public'));
+app.set('views', './src/views');
+app.set('view engine', 'ejs');
 
 /** MODULARIZANDO LAS RUTAS */
 

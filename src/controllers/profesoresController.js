@@ -4,22 +4,22 @@ let profesoresController = {
 
 /**  Aqui van los metodos que se encargan de manejar a los estudiantes*/
     login: function(req, res) {
-        res.sendFile(path.join(__dirname, '../views/Login/login.html'));
+        res.render('Login/login');
     },
     registro: function(req, res) {
-        res.sendFile(path.join(__dirname, '../views/Registro/register.html'));
+        res.render('Registro/register');
     },
     homeLogged: function(req, res) {
-        res.sendFile(path.join(__dirname, '../views/Home-Profesores/inicioProfes.html'));
+        res.render('Home-Profesores/inicioProfes');
     }, 
     perfil1: function(req, res) {
-        res.sendFile(path.join(__dirname, '../views/Perfil-Profesor/seteoPerfilProfes-1.html'));
+        res.render('Perfil-Profesor/seteoPerfilProfes-1');
     }, 
     perfil2: function(req, res) {
-        res.sendFile(path.join(__dirname, '../views/Perfil-Profesor/seteoPerfilProfes-2.html'));
+        res.render('Perfil-Profesor/seteoPerfilProfes-2');
     }, 
     administrar_clases: function(req, res) {
-        res.sendFile(path.join(__dirname, '../views/Perfil-Profesor/administraClases.html'));
+        res.render('Perfil-Profesor/administraClases');
     }, 
 };
 

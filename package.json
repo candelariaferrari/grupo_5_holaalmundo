@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/candelariaferrari/grupo_5_holaalmundo#readme",
   "dependencies": {
+    "ejs": "^3.1.6",
     "express": "^4.17.2"
   }
 }

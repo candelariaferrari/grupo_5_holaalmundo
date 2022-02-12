@@ -4,25 +4,25 @@ let estudiantesController = {
 
 /**  Aqui van los metodos que se encargan de manejar a los estudiantes*/
     login: function(req, res) {
-        res.sendFile(path.join(__dirname, '../views/Login/login.html'));
+        res.render('Login/login');
     },
     registro: function(req, res) {
-        res.sendFile(path.join(__dirname, '../views/Registro/register.html'));
+        res.render('Registro/register');
     },
     homeLogged: function(req, res) {
-        res.sendFile(path.join(__dirname, '../views/Home/InicioLogged.html'));
+        res.render('Home/InicioLogged');
     }, 
     servicios: function(req, res) {
-        res.sendFile(path.join(__dirname, '../views/Servicios-Cliente/paquetesServicios-1.html'));
+        res.render('Servicios-Cliente/paquetesServicios-1');
     },
     filtroProfesores: function(req, res) {
-        res.sendFile(path.join(__dirname, '../views/Servicios-Cliente/paquetesServicios-2.html'));
+        res.render('Servicios-Cliente/paquetesServicios-2');
     },
     reserva: function(req, res) {
-        res.sendFile(path.join(__dirname, '../views/Servicios-Cliente/popUpReserva.html'));
+        res.render('Servicios-Cliente/popUpReserva');
     },
     carritoCompras: function(req, res) {
-        res.sendFile(path.join(__dirname, '../views/Carrito-Compra/carritoCompras.html'));
+        res.render('Carrito-Compra/carritoCompras');
     }, 
 };
 
