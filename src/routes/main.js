@@ -6,6 +6,4 @@ let mainController = require('../controllers/mainController');
 
 router.get('/', mainController.homeGuest);
 
-
-
 module.exports = router;
