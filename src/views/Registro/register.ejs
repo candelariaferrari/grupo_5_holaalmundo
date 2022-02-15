@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title> Registro </title>
+          <script src="https://kit.fontawesome.com/3964fc737d.js" crossorigin="anonymous"></script>
+          <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+          <link href= "/css/normalize.css" rel="stylesheet">   
+          <link href="/css/register.css" rel="stylesheet">
+</head>
+
+<body>    
+    <main class="main-content"> 
+        <section class="left-content">
+            <div class="container-bg">
+                <div class="logo">
+                    <img  src="/images/logo-ham-blanco.png" alt="logo">
+                </div>
+                <div class="footer-container">
+                    <ul class="iconos">
+                        <li type="none"> <i class="fab fa-facebook-f"> </i> </li>
+                        <li type="none"> <i class="fab fa-instagram"> </i> </li>   
+                        <li type="none"> <i class="fab fa-linkedin-in"> </i> </li>
+                        <li type="none"> <i class="fab fa-whatsapp"> </i> </li>
+                    </ul>
+                    <div class="cr"> Creado por Carlos - Martina - Carmela - Candelaria </div>
+                </div>    
+            </div>
+        </section>
+        <section class="right-content">
+            <div class="HAM"><p> Hola al Mundo </p></div>
+            <div class="formulario"><p> Formulario de registro </p></div>
+            <form class="formulario" action="/registro" method="POST">    
+                <div class="campos">
+                    <label for="Nombre"></label>
+                    <input placeholder= "Nombre" type="text" name="Nombre" required> 
+                </div>
+                            
+                <div class="campos">
+                    <label for="Apellido"></label>
+                    <input placeholder= "Apellido" type="text" name="Apellido" required>
+                </div>
+                            
+                <div class="campos">
+                    <label for="Celular"></label>
+                    <input placeholder= "Celular" type="tel" name="Celular" required>
+                </div>
+                            
+                <div class="campos">
+                    <label for="Mail"></label>
+                    <input placeholder= "Mail" type="email" name="Mail" required>
+                </div>
+
+                <div class="campos">
+                    <label for="Contrasenia"></label>
+                    <input placeholder= "Contraseña" type="password" name="Contrasenia" required>
+                </div>
+                <div class="campos">
+                    <select required>
+                        <option value=" " selected hidden> Sexo </option>
+                        <option value="M"> Mujer </option>
+                        <option value="H"> Hombre </option>
+                    </select>
+                </div>           
+                <div class="campos">
+                    <input class="bot-tyc" type="checkbox" name="Condiciones" required>
+                    <label class="term-y-cond"> Acepto los términos y condiciones </label>
+                </div>
+                <div class="campos">
+                    <button class="reg" type="submit"> Registrarme </button>
+                </div>
+
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>
