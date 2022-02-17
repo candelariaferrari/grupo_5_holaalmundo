@@ -842,10 +842,11 @@ blanco: #ffffff
   /* ------- IDIOMAS -----------*/
 
   .idiomas {
-    background-image: url(../images/bkg-contacto.png);
+    background-image: url(../images/bkgIdiomas.png);
     width: 100%;
-    height: 725px;
-    margin: 0em 0em 0em 0em;
+    height: 825px;
+    margin: 0em 0em -12em 0em;
+    padding: 10em 6em 0em;
     background-repeat: no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -856,14 +857,17 @@ blanco: #ffffff
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    align-items: center;
-    gap: 50px;
+    align-items: flex-start;
   }
 
   .paises {
       display: flex;
+      justify-content: space-between;
+      align-content: space-between;
       width: 400px;
+      height: 400px;
       flex-wrap: wrap;
+      
   }
 
   .label {
@@ -872,6 +876,7 @@ blanco: #ffffff
       width: 600px;
       display: flex;
       flex-wrap: wrap;
+      padding-top: 3em;
   }
 
   

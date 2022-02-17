@@ -113,10 +113,24 @@ template.innerHTML = `
        Borrar
       </button>
      <button>
+     <a class="comprar" href="inicioAlumnos/carrito">
       <i class="far fa-smile-wink"></i>
        Comprar
+      </a>
       </button>
     </div>
 `;
 
 document.body.appendChild(template.content);
+
+
+
+
+/* function myFunction() {
+  var x = document.getElementById("contentTwo");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+} */

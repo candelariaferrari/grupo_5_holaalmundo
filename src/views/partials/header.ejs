@@ -1,0 +1,137 @@
+<!-- Menu -->
+<header id="top-header">
+  <nav class="navbar" id="main">
+    <div class="responsive-one">
+      <a class="logo" href="#top-header">
+        <img src="/images/logo.svg" alt="logo">
+      </a>
+      <div class="search">
+        <i class="fas fa-search"></i>
+        <input class="input" type="search" name="buscar" placeholder="Buscar">
+      </div>
+    </div>
+
+    <ul class="nav-list profesores" id="navList">
+      <li class="nav-item">
+        <a class="border" href="#top-header">Hola</a>
+      </li>
+    </ul>
+
+    <ul class="nav-list alumnos" id="navList">
+      <li class="nav-item">
+        <a class="border" href="#top-header">Hola alumnos</a>
+      </li>
+    </ul>
+
+
+    <ul class="nav-list" id="navList">
+      <li class="nav-item">
+        <a class="border" href="#top-header">Home</a>
+      </li>
+      <li class="nav-item">
+        <a href="#"> Paquetes</a>
+      </li>
+      <li class="nav-item">
+        <a href="#contacto"> Contacto</a>
+      </li>
+      <li class="nav-item">
+        <a href="#">En</a>
+      </li>
+    </ul>
+
+    <div class="responsive-two">
+      <div class="button-responsive" id="toggle-button">
+        <i class="fas fa-bars"></i>
+      </div>
+
+      <div class="botones-iconos">
+        <!-- <i class="far fa-heart"></i> -->
+        <button class="carrito" onclick="openNav()">
+          <i class="fas fa-shopping-cart"></i>
+        </button>
+        <div class="dropdown">
+          <button class="dropbtn">
+            <i class="far fa-user-circle"></i>
+          </button>
+
+          <!-- submenu invitado -->
+          <!-- <div class="dropdown-content">
+            <ul class="outline">
+              <li> <a href="register">Registrarse</a> </li>
+              <li><a href="login">Iniciar sesión</a></li>
+            </ul>
+          </div> -->
+          
+          <!-- submenu loged-->
+          <div class="dropdown-content">
+            
+            <div class="drop-header">
+              <i class="far fa-user-circle"></i>
+              <h4>Usuario</h4>
+            </div>
+            <ul>
+              <li>Membresías</li>
+              <li>Da clases</li>
+              <li>Mis cursos</li>
+            </ul>
+            <ul>
+              <li>Configuración</li>
+              <li>Métodos de pago</li>
+              <li>Historial de compra</li>
+            </ul>
+            <ul>
+              <li>Idiomas</li>
+            </ul>
+            <ul>
+              <li>Editar perfil</li>
+            </ul>
+
+            <ul class="outline">
+              <li>Ayuda</li>
+              <li>Cerrar sesión</li>
+            </ul>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+
+  </nav>
+</header>
+
+
+<script>
+  function navlist() {
+    let navList = document.getElementsByClassName("nav-list")
+    let userP = document.getElementById("profesores");
+    let navP = document.getElementsByClassName("profesores");
+    let userA = document.getElementById("alumnos");
+    let navA = document.getElementsByClassName("alumnos");
+    let navProfes;
+    let navAlumnos;
+    if (userP == "profesores" && navP == "profesores") {
+      let navProfes = navList + navP;
+     
+    } else if (userA == "alumnos" && navA == "alumnos") {
+      navList + navA;
+    } else {
+      navList;
+    }
+  }
+
+  /* toggleNotifi(){
+    var box = document.getElementById('boxNotification');
+    if (this.notificationsDown) {
+      box.style.height  = '0px';
+      box.style.opacity = '0';
+      box.style.zIndex = '-1000';
+      this.notificationsDown = false;
+    } else {
+      box.style.height  = '400px';
+      box.style.opacity = '1';
+      box.style.zIndex = '99999';
+      this.notificationsDown = true;
+    }
+  } */
+</script>

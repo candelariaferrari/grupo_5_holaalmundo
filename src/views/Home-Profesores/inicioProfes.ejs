@@ -1,368 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profesores</title>
-    <script src="https://kit.fontawesome.com/3964fc737d.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/css/inicioProfes.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profesores</title>
+  <script src="https://kit.fontawesome.com/3964fc737d.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/css/inicioProfes.css">
+  <link rel="stylesheet" href="/css/partialsCss/partials.css">
 </head>
-<body>
-    <header id="top-header">
-        <nav class="navbar" id="main">
-          <div class="responsive-one">
-            <a class="logo" href="#top-header">
-              <img src="/images/logo.svg" alt="logo">
-            </a>
-            <div class="search">
-              <i class="fas fa-search"></i>
-              <input class="input" type="search" name="buscar" placeholder="Buscar">
-            </div>
-          </div>
-          <ul class="nav-list" id="navList">
-            <li class="nav-item">
-              <a class="border" href="#top-header">Home</a>
-            </li>
-            <li class="nav-item">
-              <a href="#"> Profesores</a>
-            </li>
-            <li class="nav-item">
-              <a href="#"> Paquetes</a>
-            </li>
-            <li class="nav-item">
-              <a href="#"> Contacto</a>
-            </li>
-            <li class="nav-item">
-              <a href="#">En</a>
-            </li>
-          </ul>
-          <div class="responsive-two">
-            <div class="button-responsive" id="toggle-button">
-              <i class="fas fa-bars"></i>
-            </div>
-    
-            <div class="botones-iconos">
-              <i class="far fa-heart"></i>
-              <button class="carrito" onclick="openNav()">
-                <i class="fas fa-shopping-cart"></i>
-              </button>
-              <div class="dropdown">
-                <button class="dropbtn">
-                  <i class="far fa-user-circle"></i>
-                </button>
-                <!-- submenu -->
-                <div class="dropdown-content">
-                  <div class="drop-header">
-                    <i class="far fa-user-circle"></i>
-                    <h4>Usuario</h4>
-                  </div>
-                  <ul>
-                    <li>Membresías</li>
-                    <li>Da clases</li>
-                    <li>Mis cursos</li>
-                  </ul>
-                  <ul>
-                    <li>Configuración</li>
-                    <li>Métodos de pago</li>
-                    <li>Historial de compra</li>
-                  </ul>
-                  <ul>
-                    <li>Idiomas</li>
-                  </ul>
-                  <ul>
-                    <li>Editar perfil</li>
-                  </ul>
-    
-                  <ul class="outline">
-                    <li>Ayuda</li>
-                    <li>Cerrar sesión</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-    
-        </nav>
-      </header>
 
-      <main>
-        <!-- Carrusel principal -->
-        <section>
-          <div class="main-carrusel">
-            <!-- img 1 -->
-            <div class="mySlides fade">
-              <img class="imagen1" src="/images/african-woman.png">
-              <div class="content-text">
-                <p class="text">Lorem ipsum dolor sit amet. </p>
-                <p class="text">Lorem ipsum dolor sit amet. </p>
-                <p class="text">Lorem ipsum dolor sit amet. </p>
-              </div>
-            </div>
-            <!-- img 2 -->
-            <div class="mySlides fade">
-              <img class="imagen" src="/images/carrusel02.png">
-              <div class="flex-form">
-                <div class="text-one">
-                  <h2>Te gustaría enseñar con nosotros?</h2>
-                  <p>Lorem ipsum dolor, sit amet consectetur
-                    adipisicing elit. Alias, illo minima quidem
-                    nihil quae earum ex quas maxime at nulla deleniti
-                    aliquid modi atque minus iusto consequuntur
-                    quibusdam cupiditate sequi.
-                  </p>
-                  <p class="subtitle">Que esperas?
-                    <strong>forma parte de la comunidad</strong>
-                    hola al mundo!
-                  </p>
-                </div>
-                <div class="form-carrusel">
-                  <div class="flex-icon">
-                    <div class="circulo">
-                      <i class="fab fa-google"></i>
-                    </div>
-                    <div class="circulo">
-                      <i class="fab fa-facebook-f"></i>
-                    </div>
-                    <div class="circulo">
-                      <i class="fab fa-linkedin-in"></i>
-                    </div>
-                  </div>
-                  <div class="form-one">
-                    <form action="#" method="post">
-                      <input class="input-form" type="text" name="nombre" id="nombre" placeholder="Nombre">
-                      <input class="input-form" type="text" name="apellido" id="apellido" placeholder="Apellido">
-                      <input class="input-form" type="email" name="email" id="email" placeholder="Email">
-                      <input class="input-form" type="password" name="contrasena" id="contrasena" placeholder="Contraseña">
-                      <button type="submit" class="register">
-                        registrate
-                      </button>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- img 3 -->
-            <div class="mySlides fade">
-              <img class="imagen" src="/images/carrusel03.png">
-              <div class="flex-form">
-                <div class="form-carrusel two">
-                  <div class="flex-icon">
-                    <div class="circulo">
-                      <i class="fab fa-google"></i>
-                    </div>
-                    <div class="circulo">
-                      <i class="fab fa-facebook-f"></i>
-                    </div>
-                    <div class="circulo">
-                      <i class="fab fa-linkedin-in"></i>
-                    </div>
-                  </div>
-                  <div class="form-one">
-                    <form action="#" method="post">
-                      <input class="input-form" type="text" name="nombre" id="input-two" placeholder="Nombre">
-                      <input class="input-form" type="text" name="apellido" id="input-two" placeholder="Apellido">
-                      <input class="input-form" type="email" name="email" id="input-two" placeholder="Email">
-                      <input class="input-form" type="password" name="contrasena" id="input-two" placeholder="Contraseña">
-                      <button type="submit" class="register">
-                        registrate
-                      </button>
-                    </form>
-                  </div>
-                </div>
-                <div class="text-one">
-                  <h2>Te gustaría aprender con nosotros?</h2>
-                  <p>Lorem ipsum dolor, sit amet consectetur
-                    adipisicing elit. Alias, illo minima quidem
-                    nihil quae earum ex quas maxime at nulla deleniti
-                    aliquid modi atque minus iusto consequuntur
-                    quibusdam cupiditate sequi.
-                  </p>
-                  <p class="subtitle">Que esperas?
-                    <strong>forma parte de la comunidad</strong>
-                    hola al mundo!
-                  </p>
-                </div>
-              </div>
-            </div>
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-            <div class="content-dot">
-              <span class="dot" onclick="currentSlide(1)"></span>
-              <span class="dot" onclick="currentSlide(2)"></span>
-              <span class="dot" onclick="currentSlide(3)"></span>
+<body id="profesores">
+  <%- include('../partials/header.ejs')%>
+    <main>
+      <!-- Carrusel principal -->
+      <section>
+        <div class="main-carrusel">
+          <!-- img 1 -->
+          <div class="mySlides fade">
+            <img class="imagen" src="/images/slideProfes.png">
+            <div class="content-text">
+              <p class="text">Lorem ipsum dolor sit amet. </p>
+              <p class="text">Lorem ipsum dolor sit amet. </p>
+              <p class="text">Lorem ipsum dolor sit amet. </p>
             </div>
           </div>
-    
-        </section>
-    
-        <!-- Caracteristicas -->
-        <section>
-          <div class="content-characteristics">
-            <div class="caracteristicas one">
-              <div class="circulo">
-                <i class="far fa-user-circle"></i>
-              </div>
-              <h3>caracteritica 1</h3>
-              <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Tempora ea quod voluptate nisi nihil soluta vero quia excepturi.
-              </p>
-            </div>
-            <div class="caracteristicas">
-              <div class="circulo">
-                <i class="far fa-user-circle"></i>
-              </div>
-              <h3>caracteritica 2</h3>
-              <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Tempora ea quod voluptate nisi nihil soluta vero quia excepturi.
-              </p>
-            </div>
-            <div class="caracteristicas">
-              <div class="circulo">
-                <i class="far fa-user-circle"></i>
-              </div>
-              <h3>caracteritica 3</h3>
-              <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Tempora ea quod voluptate nisi nihil soluta vero quia excepturi.
-              </p>
-            </div>
-    
-          </div>
-    
-        </section>
-        <!-- Seccion profesores -->
-        <section id="profesores">
-          <div class="section-profesores">
-            <div class="title-profesores">
-              <h2> Nuestros Profes</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Adipiscing ut diam arcu
-                vivamus erat dictum. Ipsum scelerisque aenean cursus id quis enim sagittis nullam
-                sodales. Integer augue id cursus massa duis donec gravida. Non faucibus rmentum
-              </p>
-            </div>
-            <!-- grilla -->
-            <div class="content-right">
-              <div class="container-teacher">
-                <div class="g-uno">
-                  <img src="/images/profe.png" alt="profe">
-                </div>
-                <div class="g-dos">
-                  <img src="/images/profe.png" alt="profe">
-                </div>
-                <div class="g-tres">
-                  <img src="/images/profe.png" alt="profe">
-                </div>
-                <div class="g-cuatro">
-                  <img src="/images/profe.png" alt="profe">
-                </div>
-                <div class="g-cinco">
-                  <img src="/images/profe.png" alt="profe">
-                </div>
-                <div class="g-seis">
-                  <img src="/images/profe.png" alt="profe">
-                </div>
-                <div class="g-siete">
-                  <img src="/images/profe.png" alt="profe">
-                </div>
-                <div class="g-ocho">
-                  <img src="/images/profe.png" alt="profe">
-                </div>
-                <div class="boton-mas">
-                  <button>Ver mas</button>
-                </div>
-                <!-- Seccion Estadisticas -->
-                <div class="est" id="section-estadisticas">
-                  <div class="title-estadisticas">
-                    <h2>Hola al Mundo cuenta con </h2>
-                  </div>
-                  <div class="cantidades">
-                    <div>
-                      <p class="number"> 50 </p>
-                      <p class="text">Profesores</p>
-                    </div>
-                    <div>
-                      <p class="number">+ 5000 </p>
-                      <p class="text">Alumnos</p>
-                    </div>
-                    <div>
-                      <p class="number"> 150 </p>
-                      <p class="text">Temáticas</p>
-                    </div>
-                    <div>
-                      <p class="number"> 4 </p>
-                      <p class="text">Idomas</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
         
-        <!-- Contacto -->
-        <section id="contactoHome">
-          <div class="contactoHome">
-            <div class="flexContacto">
-              <div class="titleContact">
-                <h3>Hola!</h3>
-                <p> Envianos tu consulta y en el menor tiempo estarás empezando a comunicarte con el mundo.</p>
-                <div class="redes">
-                  <ul>
-                    <!--aca no se si van divs, spans o que para que quede el mismo espacio de separacion-->
-                    <li>
-                      <a href="#" target="_blank">
-                        <i class="fab fa-facebook-f"></i>
-                        <span> holaalmundo</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" target="_blank">
-                        <i class="fab fa-instagram"></i>
-                        <span> holaalmundo</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" target="_blank">
-                        <i class="fab fa-linkedin-in"></i>
-                        <span> holaalmundo</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" target="_blank">
-                        <i class="fab fa-whatsapp"></i>
-                        <span>0303 456 shalalala</span>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
+          <!-- <div class="mySlides fade">
+            <img class="imagen" src="/images/carrusel02.png">
+            <div class="flex-form">
+              <div class="text-one">
+                <h2>Te gustaría enseñar con nosotros?</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur
+                  adipisicing elit. Alias, illo minima quidem
+                  nihil quae earum ex quas maxime at nulla deleniti
+                  aliquid modi atque minus iusto consequuntur
+                  quibusdam cupiditate sequi.
+                </p>
+                <p class="subtitle">Que esperas?
+                  <strong>forma parte de la comunidad</strong>
+                  hola al mundo!
+                </p>
               </div>
-              <div class="formulario">
-                <form action="#" method="post">
-                  <input class="input-form" type="text" name="nombre" id="nombre" placeholder="Nombre y Apellido">
-                  <input class="input-form" type="email" name="email" id="email" placeholder="Email">
-                  <textarea class="consulta" name="consulta" id="consulta" cols="30" rows="10"
-                    placeholder="Consulta..."></textarea>
-                  <button type="submit" class="enviar">
-                    Enviar
-                  </button>
-                </form>
+              <div class="form-carrusel">
+                <div class="flex-icon">
+                  <div class="circulo">
+                    <i class="fab fa-google"></i>
+                  </div>
+                  <div class="circulo">
+                    <i class="fab fa-facebook-f"></i>
+                  </div>
+                  <div class="circulo">
+                    <i class="fab fa-linkedin-in"></i>
+                  </div>
+                </div>
+                <div class="form-one">
+                  <form action="#" method="post">
+                    <input class="input-form" type="text" name="nombre" id="nombre" placeholder="Nombre">
+                    <input class="input-form" type="text" name="apellido" id="apellido" placeholder="Apellido">
+                    <input class="input-form" type="email" name="email" id="email" placeholder="Email">
+                    <input class="input-form" type="password" name="contrasena" id="contrasena"
+                      placeholder="Contraseña">
+                    <button type="submit" class="register">
+                      registrate
+                    </button>
+                  </form>
+                </div>
               </div>
             </div>
           </div>
-        </section>
-      </main>
-      <!-- chat -->
-      <div id="contentChat" class="desactivado">
-        <svg class="svgimg" width="100" height="100" viewBox="0 0 149 153" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M18.625 0.549561C13.6853 0.549561 8.948 2.63128 5.45514 6.33677C1.96227 10.0423 0 15.068 0 20.3083L0 99.3435C0 104.584 1.96227 109.61 5.45514 113.315C8.948 117.021 13.6853 119.102 18.625 119.102H41.9062C43.352 119.102 44.7778 119.459 46.0709 120.145C47.364 120.831 48.4888 121.827 49.3563 123.054L67.05 148.079C67.9174 149.305 69.0422 150.301 70.3353 150.987C71.6284 151.673 73.0543 152.03 74.5 152.03C75.9457 152.03 77.3716 151.673 78.6647 150.987C79.9578 150.301 81.0826 149.305 81.95 148.079L99.6437 123.054C100.511 121.827 101.636 120.831 102.929 120.145C104.222 119.459 105.648 119.102 107.094 119.102H130.375C135.315 119.102 140.052 117.021 143.545 113.315C147.038 109.61 149 104.584 149 99.3435V20.3083C149 15.068 147.038 10.0423 143.545 6.33677C140.052 2.63128 135.315 0.549561 130.375 0.549561L18.625 0.549561Z"
-            fill="#212121" border="1px solid #00ffcb" />
-        </svg>
-        <p>Chat</p>
-      </div>
-      <!-- Footer -->
+          <div class="mySlides fade">
+            <img class="imagen" src="/images/carrusel03.png">
+            <div class="flex-form">
+              <div class="form-carrusel two">
+                <div class="flex-icon">
+                  <div class="circulo">
+                    <i class="fab fa-google"></i>
+                  </div>
+                  <div class="circulo">
+                    <i class="fab fa-facebook-f"></i>
+                  </div>
+                  <div class="circulo">
+                    <i class="fab fa-linkedin-in"></i>
+                  </div>
+                </div>
+                <div class="form-one">
+                  <form action="#" method="post">
+                    <input class="input-form" type="text" name="nombre" id="input-two" placeholder="Nombre">
+                    <input class="input-form" type="text" name="apellido" id="input-two" placeholder="Apellido">
+                    <input class="input-form" type="email" name="email" id="input-two" placeholder="Email">
+                    <input class="input-form" type="password" name="contrasena" id="input-two" placeholder="Contraseña">
+                    <button type="submit" class="register">
+                      registrate
+                    </button>
+                  </form>
+                </div>
+              </div>
+              <div class="text-one">
+                <h2>Te gustaría aprender con nosotros?</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur
+                  adipisicing elit. Alias, illo minima quidem
+                  nihil quae earum ex quas maxime at nulla deleniti
+                  aliquid modi atque minus iusto consequuntur
+                  quibusdam cupiditate sequi.
+                </p>
+                <p class="subtitle">Que esperas?
+                  <strong>forma parte de la comunidad</strong>
+                  hola al mundo!
+                </p>
+              </div>
+            </div>
+          </div> -->
+          <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          <div class="content-dot">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+          </div> -->
+        </div>
 
-    <!--<main>
+      </section>
+
+      <!-- Caracteristicas -->
+      <section>
+        <div class="content-characteristics">
+          <div class="caracteristicas one">
+            <div class="circulo">
+              <i class="far fa-user-circle"></i>
+            </div>
+            <h3>caracteritica 1</h3>
+            <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Tempora ea quod voluptate nisi nihil soluta vero quia excepturi.
+            </p>
+          </div>
+          <div class="caracteristicas">
+            <div class="circulo">
+              <i class="far fa-user-circle"></i>
+            </div>
+            <h3>caracteritica 2</h3>
+            <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Tempora ea quod voluptate nisi nihil soluta vero quia excepturi.
+            </p>
+          </div>
+          <div class="caracteristicas">
+            <div class="circulo">
+              <i class="far fa-user-circle"></i>
+            </div>
+            <h3>caracteritica 3</h3>
+            <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Tempora ea quod voluptate nisi nihil soluta vero quia excepturi.
+            </p>
+          </div>
+
+        </div>
+
+      </section>
+      <!-- Seccion profesores -->
+      <section id="profesores">
+        <div class="section-profesores">
+          <div class="title-profesores">
+            <h2> Nuestros Profes</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Adipiscing ut diam arcu
+              vivamus erat dictum. Ipsum scelerisque aenean cursus id quis enim sagittis nullam
+              sodales. Integer augue id cursus massa duis donec gravida. Non faucibus rmentum
+            </p>
+          </div>
+          <!-- grilla -->
+          <div class="content-right">
+            <div class="container-teacher">
+              <div class="g-uno">
+                <img src="/images/profe.png" alt="profe">
+              </div>
+              <div class="g-dos">
+                <img src="/images/profe.png" alt="profe">
+              </div>
+              <div class="g-tres">
+                <img src="/images/profe.png" alt="profe">
+              </div>
+              <div class="g-cuatro">
+                <img src="/images/profe.png" alt="profe">
+              </div>
+              <div class="g-cinco">
+                <img src="/images/profe.png" alt="profe">
+              </div>
+              <div class="g-seis">
+                <img src="/images/profe.png" alt="profe">
+              </div>
+              <div class="g-siete">
+                <img src="/images/profe.png" alt="profe">
+              </div>
+              <div class="g-ocho">
+                <img src="/images/profe.png" alt="profe">
+              </div>
+              <div class="boton-mas">
+                <button>Ver mas</button>
+              </div>
+              <!-- Seccion Estadisticas -->
+              <div class="est" id="section-estadisticas">
+                <div class="title-estadisticas">
+                  <h2>Hola al Mundo cuenta con </h2>
+                </div>
+                <div class="cantidades">
+                  <div>
+                    <p class="number"> 50 </p>
+                    <p class="text">Profesores</p>
+                  </div>
+                  <div>
+                    <p class="number">+ 5000 </p>
+                    <p class="text">Alumnos</p>
+                  </div>
+                  <div>
+                    <p class="number"> 150 </p>
+                    <p class="text">Temáticas</p>
+                  </div>
+                  <div>
+                    <p class="number"> 4 </p>
+                    <p class="text">Idomas</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    <!-- section Contacto -->
+    <%- include('../partials/contact.ejs')%>
+    </main>
+    <!-- chat -->
+    <%- include('../partials/chat.ejs')%>
+    <!-- Footer -->
+    <%- include('../partials/footer.ejs')%>
+
+</body>
+
+</html>
+
+
+ <!--<main>
         <section>
             <p>Como comenzar?<p>
             <ol>
@@ -498,50 +374,3 @@
                 <div>Enviar</div>
             </div>
         </section>-->
-    </main>
-    <footer>
-        <div class="footerTeam">
-          <p>Creado por:</p>
-          <ul>
-            <li>
-              <a href="https://www.linkedin.com/" target="_blank">
-                Carlos -
-              </a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/" target="_blank">
-                Martina -
-              </a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/" target="_blank">
-                Carmela -
-              </a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/" target="_blank">
-                Candelaria
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="redesFooter">
-          <a href="#" target="_blank">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a href="#" target="_blank">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="#" target="_blank">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-          <a href="#" target="_blank">
-            <i class="fab fa-whatsapp"></i>
-          </a>
-        </div>
-      </footer>
-    
-      <script src="/js/script.js"></script>
-    
-</body>
-</html>
