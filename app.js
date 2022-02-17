@@ -1,74 +1,22 @@
 const express = require('express');
 const path = require('path');
+
+const rutasMain = require('./src/routes/main.js');
+const rutasProfesores = require('./src/routes/profesores.js');
+const rutasEstudiantes = require('./src/routes/estudiantes.js');
+const rutasServicios = require('./src/routes/servicios.js');
+
 const app = express();
 
 app.use(express.static('public'));
+app.set('views', './src/views');
+app.set('view engine', 'ejs');
 
-/** VISTA USUARIO */
+/** MODULARIZANDO LAS RUTAS */
 
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '/views/Home-Guest/inicioGuests.html'));
-});
-
-app.get('/inicioInvitado', (req, res) => {
-    res.sendFile(path.join(__dirname, './views/inicioGuests.html'));
-});
-
-/** LOGIN */
-
-app.get('/login', (req, res) => {
-    res.sendFile(path.join(__dirname, './views/Login/login.html'));
-});
-
-/** SIGN UP */
-
-app.get('/registro', (req, res) => {
-    res.sendFile(path.join(__dirname, './views/Registro/register.html'));
-});
-
-/** HOME */
-
-app.get('/home', (req,res)=>{
-    res.sendFile(path.join(__dirname + '/views/Home/InicioLogged.html'));
-});
-
-/** SERVICIOS */
-
-app.get('/servicios1', (req, res) => {
-    res.sendFile(path.join(__dirname, '/views/Servicios-Cliente/paquetesServicios-1.html'));
-});
-
-app.get('/servicios2', (req, res) => {
-    res.sendFile(path.join(__dirname, '/views/Servicios-Cliente/paquetesServicios-2.html'));
-});
-
-app.get('/reserva', (req, res) => {
-    res.sendFile(path.join(__dirname, '/views/Servicios-Cliente/popUpReserva.html'));
-});
-
-/** CARRITO DE COMPRAS */
-
-app.get('/carritoCompras', (req, res) => {
-    res.sendFile(path.join(__dirname, './views/Carrito-Compra/carritoCompras.html'));
-});
-
-/** VISTA PROFESOR */
-
-app.get('/inicioProfes', (req, res) => {
-    res.sendFile(path.join(__dirname, './views/Home-Profesores/inicioProfes.html'));
-});
-
-app.get('/perfilProfesores1', (req, res) => {
-    res.sendFile(path.join(__dirname, './views/Perfil-Profesor/seteoPerfilProfes-1.html'));
-});
-
-app.get('/perfilProfesores2', (req, res) => {
-    res.sendFile(path.join(__dirname, './views/Perfil-Profesor/seteoPerfilProfes-2.html'));
-});
-
-app.get('/administraClases', (req, res) => {
-    res.sendFile(path.join(__dirname, './views/Perfil-Profesor/administraClases.html'));
-});
+app.use('/', rutasMain);
+app.use('/estudiantes', rutasEstudiantes);
+app.use('/profesores', rutasProfesores);
 
 /** SERVIDOR */
 
