@@ -270,6 +270,7 @@ h1 {
     background-color: #00ffcb;
     transform: all 0.5s;
   }
+  
   .sidebar button:hover {
     background-color: #6243f7;
     color: #00ffcb;

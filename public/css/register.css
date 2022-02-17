@@ -6,7 +6,8 @@ font-family: 'Roboto', sans-serif;
 
 .main-content {
     display: flex;
-    height: 900px;
+    height: 100vh;
+    overflow-y: hidden;
 }
 
 .left-content {

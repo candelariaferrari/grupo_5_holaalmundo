@@ -1,12 +1,11 @@
-body
-{
-font-family: 'Roboto', sans-serif;
+body {
+    font-family: "Roboto", sans-serif;
 }
-
 
 .main-content {
     display: flex;
-    height: 900px;
+    height: 100vh;
+    overflow-y: hidden;
 }
 
 .left-content {
@@ -14,7 +13,7 @@ font-family: 'Roboto', sans-serif;
     position: relative;
 }
 
-.container-bg {  
+.container-bg {
     width: 100%;
     height: 100%;
     background-image: url(../images/bkg-signup.png);
@@ -26,27 +25,25 @@ font-family: 'Roboto', sans-serif;
     justify-content: center;
     align-items: center;
     filter: brightness(1.1);
-
 }
 
 .logo img {
     width: 450px;
     position: absolute;
     z-index: 1;
-    top: 300px;
+    top: 200px;
     left: 280px;
 }
 
 .right-content {
     width: 30%;
-    display: flex; 
+    display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-
 .inicio-sesion {
-    color: #6243F7;
+    color: #6243f7;
     font-size: 40px;
     text-align: center;
 }
@@ -58,28 +55,27 @@ font-family: 'Roboto', sans-serif;
 }
 
 .formulario {
-    display: flex; 
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 16px;
+    /* margin-top: -30px; */
 }
 
-.campos
-{
+.campos {
     border-radius: 10px;
-    width: 240px;
+    width: 100%;
     height: 32px;
     border: transparent;
     position: relative;
-    color: #00FFCB;
-
+    color: #00ffcb;
 }
 
 .campos :placeholder-shown {
-    background-color: #00FFCB;
+    background-color: #00ffcb;
     border-radius: 10px;
-    width: 240px;
+    width: 100%;
     height: 32px;
     border: transparent;
 }
@@ -93,13 +89,11 @@ font-family: 'Roboto', sans-serif;
     font-size: 14px;
 }
 
-
-.olv-cont
-{
-color: #424242;
-position: relative;
-font-size: 10px;
-text-decoration: underline #00FFCB 2px;
+.olv-cont {
+    color: #424242;
+    position: relative;
+    font-size: 10px;
+    text-decoration: underline #00ffcb 2px;
 }
 
 .ini {
@@ -107,13 +101,16 @@ text-decoration: underline #00FFCB 2px;
     height: 40px;
     border-radius: 14px;
     border: transparent;
-    color: #00FFCB;
-    background-color: #6243F7;
+    
+    background-color: #6243f7;
     margin-top: 24px;
 }
-
+.ini a{
+    text-decoration: none;
+    color: #00ffcb;
+}
 .campos .ini:hover {
-    color: #00FFCB;
+    color: #00ffcb;
     background-color: black;
 }
 
@@ -126,29 +123,113 @@ text-decoration: underline #00FFCB 2px;
     top: 500px;
 }
 
-.iconos
-{
+.iconos {
     position: absolute;
     z-index: 1;
-    top: 700px;
+    top: 500px;
     left: 310px;
-    color: #00FFCB;
-    font-size: 24px; 
+    color: #00ffcb;
+    font-size: 24px;
 }
 
-.cr
-{
+.cr {
     position: absolute;
     z-index: 1;
-    top: 790px;
+    top: 570px;
     left: 330px;
-    color: #FFFFFF;
+    color: #ffffff;
     font-size: 12px;
 }
 
-ul.iconos li
-{
+ul.iconos li {
     display: inline;
     padding-left: 20px;
     padding-right: 6px;
+}
+.contenedorFormulario{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.title p{
+    margin: 0;
+}
+.HAM {
+    color: #6243F7;
+    font-size: 40px;
+    margin: 0;
+}
+.subtitle{
+    font-size: 18px;
+}
+
+.campos {
+    position: relative;
+    top: 50px;
+    color: #424242;
+    align-self: center;
+}
+
+.campos :placeholder-shown {
+    background-color: #00FFCB;
+    border-radius: 10px;
+    width: 100%;
+    height: 32px;
+    border: transparent;
+}
+
+::placeholder {
+    color: #424242;
+    margin-left: 150px;
+    position: absolute;
+    top: 8px;
+    left: -140px;
+    font-size: 14px;
+}
+
+.campos .bot-tyc {
+    border-radius: 10px;
+    border-color: #00FFCB;
+}
+
+.campos .term-y-cond {
+    font-size: 11px;
+    color: #424242;
+    position: relative;
+    top: -2px;
+    left: -1px;
+}
+
+.campos .reg{
+    width: 160px;
+    height: 40px;
+    border-radius: 14px;
+    border: transparent;
+    position: relative;
+    color: #00FFCB;
+    background-color: #6243F7;
+    margin-top: 8px;
+}
+
+.campos .reg a{
+    color: #00FFCB;
+    text-decoration: none;
+}
+.campos .reg:hover {
+    color: #00FFCB;
+    background-color: black;
+}
+
+select {
+    text-align-last: left;
+    padding-left: 6px;
+    direction: ltr;
+    background-color: #00FFCB;
+    border-radius: 10px;
+    width: 244px;
+    height: 36px;
+    border: transparent;
+    color: #424242;
+    font-size: 14px;
 }

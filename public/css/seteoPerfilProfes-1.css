@@ -8,7 +8,10 @@ gris: #DAD9DE
 negro: #212121
 blanco: #ffffff
  */
-
+ body {
+  font-family: "Roboto", sans-serif;
+  height: fit-content;
+}
 html {
     box-sizing: border-box;
   
@@ -202,22 +205,99 @@ html {
   background-size: cover;
   object-fit: cover;
   filter: brightness(1.1);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   height: 900px;
+  padding-top: 5vh;
+  margin-top: 12vh;
 }
 
 .container-header {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin: 1em auto;
+    font-size: 1.5rem;
+    font-weight: 400;
     color: #6243f7;
-    position: absolute;
-    top: 80px;
+    margin-bottom: 2em;
 }
 
+.formPaquetes{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contentInput{
+  display: flex;
+  flex-direction: column;
+  width: 40vw;
+}
+.formPaquetes .inputPaquete {
+  display: block;
+  width: 100%;
+  margin: 0.5em auto;
+  background-color: #212121;
+  padding: 0.5em 1em;
+  border-radius: 15px;
+  border: none;
+  font-size: 1rem;
+  color: #fff;
+}
+.inputPaquete::placeholder,
+.price::placeholder {
+  color: #fff;
+  opacity: 1;
+}
+
+.input-form:focus,
+.price:focus,
+input:focus,
+input[type]:focus {
+  outline: 0 none;
+}
+
+select#cars{
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  margin: 0.5em auto;
+}
+.inputPaquete .check{
+display: flex;
+justify-content: space-between;
+margin-top: 0.5em;
+flex-wrap: wrap;
+}
+.price{
+  background-color: transparent;
+  border: none;
+  color: #fff;
+}
+.btnNext{
+  display: flex;
+  justify-content: flex-end;
+}
+.btnBack{
+  display: flex;
+  justify-content: flex-start;
+}
+button.next,
+button.back{
+  border: none;
+  background-color: #6243f7;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  width: fit-content;
+  padding: 0.5em;
+  text-transform: capitalize;
+  border-radius: 15px;
+}
+.next i{
+  margin-left: 0.5em;
+  align-self: flex-end;
+}
+
+.back i{
+  margin-right: 0.5em;
+  align-self: flex-start !important;
+}
 .layerFiltros {
     width: 60%;
     align-self: center;
@@ -478,37 +558,4 @@ input[type="checkbox"]:checked {
 }
 
 
-  /* ------ FOOTER ----- */
-footer {
-    background-color: #212121;
-    height: 150px;
-    padding: 0em 6em;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-  footer .footerTeam {
-    color: #00ffcb;
-    font-size: 1rem;
-    font-weight: 300;
-  }
-  .footerTeam p {
-    display: inline-block;
-  }
-  .footerTeam ul {
-    list-style: none;
-  }
-  .footerTeam li {
-    display: inline-block;
-  }
-  .footerTeam a {
-    text-decoration: none;
-    color: #00ffcb;
-  }
-  .redesFooter a {
-    text-decoration: none;
-    color: #00ffcb;
-    font-size: 1rem;
-    margin-right: 0.5em;
-  }
+ 
