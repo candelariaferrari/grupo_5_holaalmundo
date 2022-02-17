@@ -1,0 +1,183 @@
+/* COLORES:
+azul mas fuerte: #3657F7
+azul mas oscuro: #1F58A5
+"violeta": #6243F7
+verde claro: #00FFCB
+verde oscuro: #00A987
+gris: #DAD9DE
+negro: #212121
+blanco: #ffffff
+ */
+* {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: "Roboto", sans-serif;
+    height: fit-content;
+  }
+
+.container-pop-header {
+    border: 5px solid #00ffcb;
+    border-radius: 13%;
+    border-top-right-radius: 9%;
+    height: 766px;
+    width: 920px;
+    margin: auto;
+    margin-top: 2em;
+}
+
+.header {
+    background-image: url(/images/header-popUp.png);
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    /*background-attachment: fixed;*/
+    filter: brightness(1.1);
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    padding: 10px;
+}
+
+.header h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 1em auto;
+    color: #00ffcb;
+    text-transform: uppercase;
+}
+
+.container-pop-body {
+    /*border: 2px solid red;*/
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin: 3em;
+    gap: 2em;
+    padding: 1em;
+}
+
+.container-text {
+    width: 80%;
+    /*border: 2px solid blue;*/
+    align-self: center;
+    text-align: justify; 
+    letter-spacing: normal
+}
+
+/* ----- FILTROS ---- */
+
+.layerFiltros {
+    width: 80%;
+    /*border: 2px solid blue;*/
+    align-self: center;
+}
+
+.layer-horario .layer.hora{
+    margin: auto;
+    /*border: 7px solid purple;*/
+    
+}
+
+.cardFiltrosHorario i {
+    color:#00ffcb;
+    margin-left: 500px;
+    font-size: 1.5em;
+}
+
+.cardFiltrosHorario {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 16px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: white;
+    width: 100%;
+    align-self: center;
+    padding: 4px;   
+}
+
+.filtro-horario-formulario {
+    display: none;
+}
+
+.filtro-hora-formulario {
+    display: none;
+}
+
+.layer-horario:hover > .filtro-horario-formulario {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.layer-hora:hover > .filtro-hora-formulario {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.grupo1 {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    gap: 5px;
+    margin-left: 65px;
+}
+
+.grupo2 {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    gap: 5px;
+}
+
+.grupo3 {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    gap: 5px;
+}
+
+.form-group label {
+    background: transparent;
+    border: #00ffcb;
+}
+
+input[type="checkbox"]:checked {
+    box-shadow: 0 0 0 3px #00ffcb;
+  }
+
+.input-control[type="checkbox"] {
+    color: #00ffcb;
+}
+
+.container-button {
+    /*border: 3px solid red;*/
+    width: 80%;
+    align-self: center;
+    display: flex;
+    justify-content: end;
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 5px;
+}
+
+.container-button button {
+    background-color: #00ffcb;
+    border-radius: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: none;
+    height: 2.1em;
+}
+

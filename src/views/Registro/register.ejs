@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Registro </title>
+  <script src="https://kit.fontawesome.com/3964fc737d.js" crossorigin="anonymous"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link href="/css/normalize.css" rel="stylesheet">
+  <link href="/css/login.css" rel="stylesheet">
+</head>
+
+<body>
+  <main class="main-content">
+    <%- include('../partials/backgroundLogin.ejs')%>
+      <section class="right-content">
+        <div class="contenedorFormulario">
+          <div class="title">
+            <p class="HAM"> Hola al Mundo </p>
+            <p class="subtitle"> Formulario de registro </p>
+          </div>
+          <form name="form" class="formulario" action="/registro" method="POST">
+            <div class="campos">
+              <label for="Nombre"></label>
+              <input placeholder="Nombre" type="text" name="Nombre" required>
+            </div>
+
+            <div class="campos">
+              <label for="Apellido"></label>
+              <input placeholder="Apellido" type="text" name="Apellido" required>
+            </div>
+
+            <div class="campos">
+              <label for="Celular"></label>
+              <input placeholder="Celular" type="tel" name="Celular" required>
+            </div>
+
+            <div class="campos">
+              <label for="Mail"></label>
+              <input placeholder="Mail" type="email" name="Mail" required>
+            </div>
+
+            <div class="campos">
+              <label for="Contrasenia"></label>
+              <input placeholder="Contraseña" type="password" name="Contrasenia" required>
+            </div>
+            <div class="campos">
+              <select required>
+                <option value=" " selected hidden> Sexo </option>
+                <option value="M"> Mujer </option>
+                <option value="H"> Hombre </option>
+              </select>
+            </div>
+            <div class="campos">
+              <select required name="user" id="user">
+                <label for="Soy:"></label>
+                <option name="soy" value="profesor"> Profesor </option>
+                <option name="soy" value="estudiante"> Estudiante </option>
+              </select>
+            </div>
+            <div class="campos">
+              <input class="bot-tyc" type="checkbox" name="Condiciones" required>
+              <label class="term-y-cond"> Acepto los términos y condiciones </label>
+            </div>
+            <div class="campos">
+              <button class="reg" onclick="register()">
+                <a href="/inicioProfesores">
+                  Registrarse
+                </a>
+              </button>
+
+            </div>
+          </form>
+
+        </div>
+      </section>
+
+
+  </main>
+  <script>
+     var select = document.getElementById('user');
+
+    select.addEventListener('change',
+      function () {
+        var selectedOption = this.options[select.selectedIndex];
+        console.log(selectedOption.value + ': ' + selectedOption.text);
+        return selectedOption.value;
+      });
+
+    function register() {
+      var user = selectedOption.value;
+      if (user === "profesor") {
+        alert("No funciono");
+      } else {
+        alert("funciono");
+      }
+    }
+  </script>
+</body>
+
+</html>
