@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "nombre": "Nicolas",
+        "apellido": "Paez",
+        "idioma": "ingles",
+        "temas": "vacaciones",
+        "profesion": "Abogado",
+        "fotoPerfil": "/ruta",
+        "precioHora": 10,
+        "descripcion": "bio lorem ipsum",
+        "pais": "Argentina",
+        "ciudad": "Buenos Aires"
+
+    },
+    {
+        "id": 1,
+        "nombre": "Juan",
+        "apellido": "Perez",
+        "idioma": "ingles",
+        "temas": "vacaciones",
+        "profesion": "Medico",
+        "fotoPerfil": "/ruta",
+        "precioHora": 13,
+        "descripcion": "bio lorem ipsum",
+        "pais": "Chile",
+        "ciudad": "Santiago"
+
+    }
+]

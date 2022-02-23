@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "nombreAlumno": "Juan",
+        "apellidoAlumno": "Perez",
+        "horario": 13,
+        "temas": "viajes",
+        "idioma": "ingles",
+        "plataforma": "Zoom"
+
+    },
+    {
+        "id": 2,
+        "nombreAlumno": "Pedro",
+        "apellidoAlumno": "Martinez",
+        "horario": 16,
+        "temas": "negocios",
+        "idioma": "ingles",
+        "plataforma": "Zoom"
+
+    },
+    {
+        "id": 3,
+        "nombreAlumno": "Micaela",
+        "apellidoAlumno": "Suarez",
+        "horario": 10,
+        "temas": "escolar",
+        "idioma": "portugues",
+        "plataforma": "classroom"
+
+    }
+]
