@@ -124,13 +124,68 @@ template.innerHTML = `
 document.body.appendChild(template.content);
 
 
+/* intento de submenu */
+let type = window.location.pathname.slice(1);
 
+console.log(type);
+if(type == 'inicioAlumnos'){
+  document.getElementById("subMenu").innerHTML = `<div class="drop-header">
+    <i class="far fa-user-circle"></i>
+    <h4>Usuario</h4>
+  </div>
+  <ul>
+    <li>Membresías</li>
+    <li>Mis cursos</li>
+    <li>Mis compañeros</li>
+  </ul>
+  <ul>
+    <li>Configuración</li>
+    <li>Métodos de pago</li>
+    <li>Historial de compra</li>
+  </ul>
+  <ul>
+    <li>Idiomas</li>
+  </ul>
+  <ul>
+    <li>Editar perfil</li>
+  </ul>
 
-/* function myFunction() {
-  var x = document.getElementById("contentTwo");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-} */
+  <ul class="outline">
+    <li>Ayuda</li>
+    <li>Cerrar sesión</li>
+  </ul>`;
+
+} else if (type == 'inicioProfesores'){
+  document.getElementById("subMenu").innerHTML = ` <div class="drop-header">
+  <i class="far fa-user-circle"></i>
+  <h4>Usuario</h4>
+</div>
+<ul>
+  <li>Membresías</li>
+  <li>Da clases</li>
+  <li>Mis cursos</li>
+</ul>
+<ul>
+  <li>Configuración</li>
+  <li>Métodos de pago</li>
+  <li>Historial de compra</li>
+</ul>
+<ul>
+  <li>Idiomas</li>
+</ul>
+<ul>
+  <li>Editar perfil</li>
+</ul>
+
+<ul class="outline">
+  <li>Ayuda</li>
+  <li>Cerrar sesión</li>
+</ul>`;
+
+} else {
+  document.getElementById("subMenu").innerHTML = `<ul class="outline">
+  <li> <a href="register">Registrarse</a> </li>
+  <li><a href="login">Iniciar sesión</a></li>
+</ul>`;
+
+}

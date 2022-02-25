@@ -11,19 +11,6 @@
       </div>
     </div>
 
-    <ul class="nav-list profesores" id="navList">
-      <li class="nav-item">
-        <a class="border" href="#top-header">Hola</a>
-      </li>
-    </ul>
-
-    <ul class="nav-list alumnos" id="navList">
-      <li class="nav-item">
-        <a class="border" href="#top-header">Hola alumnos</a>
-      </li>
-    </ul>
-
-
     <ul class="nav-list" id="navList">
       <li class="nav-item">
         <a class="border" href="#top-header">Home</a>
@@ -38,6 +25,10 @@
         <a href="#">En</a>
       </li>
     </ul>
+      <div class="prueba">
+      </div>
+      <p id="p1"></p>
+
 
     <div class="responsive-two">
       <div class="button-responsive" id="toggle-button">
@@ -53,46 +44,10 @@
           <button class="dropbtn">
             <i class="far fa-user-circle"></i>
           </button>
-
-          
-          
           <!-- submenu loged-->
-          <div class="dropdown-content">
-            <!-- submenu invitado -->
-          <!-- <div class="dropdown-content">
-            <ul class="outline">
-              <li> <a href="register">Registrarse</a> </li>
-              <li><a href="login">Iniciar sesión</a></li>
-            </ul>
-          </div> -->
-            <div class="drop-header">
-              <i class="far fa-user-circle"></i>
-              <h4>Usuario</h4>
-            </div>
-            <ul>
-              <li>Membresías</li>
-              <li>Da clases</li>
-              <li>Mis cursos</li>
-            </ul>
-            <ul>
-              <li>Configuración</li>
-              <li>Métodos de pago</li>
-              <li>Historial de compra</li>
-            </ul>
-            <ul>
-              <li>Idiomas</li>
-            </ul>
-            <ul>
-              <li>Editar perfil</li>
-            </ul>
-
-            <ul class="outline">
-              <li>Ayuda</li>
-              <li>Cerrar sesión</li>
-            </ul>
+          <div id="subMenu" class="dropdown-content">
+            
           </div>
-
-
         </div>
       </div>
     </div>
@@ -102,23 +57,6 @@
 
 
 <script>
-  function navlist() {
-    let navList = document.getElementsByClassName("nav-list")
-    let userP = document.getElementById("profesores");
-    let navP = document.getElementsByClassName("profesores");
-    let userA = document.getElementById("alumnos");
-    let navA = document.getElementsByClassName("alumnos");
-    let navProfes;
-    let navAlumnos;
-    if (userP == "profesores" && navP == "profesores") {
-      let navProfes = navList + navP;
-     
-    } else if (userA == "alumnos" && navA == "alumnos") {
-      navList + navA;
-    } else {
-      navList;
-    }
-  }
 
   /* toggleNotifi(){
     var box = document.getElementById('boxNotification');
