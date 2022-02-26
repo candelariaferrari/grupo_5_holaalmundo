@@ -129,16 +129,18 @@
     <!-- Caracteristicas -->
     <section>
       <div class="content-characteristics">
-        <div class="caracteristicas one">
-          <div class="circulo">
-            <i class="far fa-user-circle"></i>
+        <% for( let i = 0; i < caracteritica.length; i++ ) { %>
+          <div class="caracteristicas one">
+            <div class="circulo">
+              <i <%= caracteritica[i].icono %>></i>
+            </div>
+            <h3><%= caracteritica[i].nombre %></h3>
+            <p> <%= caracteritica[i].descripcion %>
+            </p>
           </div>
-          <h3>caracteritica 1</h3>
-          <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            Tempora ea quod voluptate nisi nihil soluta vero quia excepturi.
-          </p>
-        </div>
-        <div class="caracteristicas">
+        <% } %> 
+       
+      <!--   <div class="caracteristicas">
           <div class="circulo">
             <i class="far fa-user-circle"></i>
           </div>
@@ -155,7 +157,7 @@
           <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit.
             Tempora ea quod voluptate nisi nihil soluta vero quia excepturi.
           </p>
-        </div>
+        </div> -->
 
       </div>
 
@@ -240,12 +242,13 @@
           <i class="fas fa-chevron-right"></i>
         </button>
         <!-- card 1 -->
+       <% for( let i = 0; i < servicios.length; i++ ) { %>
         <div class="serviceCard">
           <div class="serviceImg">
-            <span class="discountTag">$5000</span>
+            <span class="discountTag"><%= servicios[i].precio %></span>
             <i class="fas fa-comments"></i>
-            <h4>Conversación</h4>
-            <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
+            <h4><%= servicios[i].nombre %></h4>  <!--  ej: conversación, preparación examen  -->
+            <p class="description"><%= servicios[i].descripcion %></p>
           </div>
           <div class="serviceInfo">
             <button>
