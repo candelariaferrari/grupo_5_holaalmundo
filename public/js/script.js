@@ -124,11 +124,11 @@ template.innerHTML = `
 document.body.appendChild(template.content);
 
 
-/* intento de submenu */
+/* NAVBAR CHANGE AND SUBMENU */
 let type = window.location.pathname.slice(1);
 
 console.log(type);
-if(type == 'inicioAlumnos'){
+if (type == 'inicioAlumnos') {
   document.getElementById("subMenu").innerHTML = `<div class="drop-header">
     <i class="far fa-user-circle"></i>
     <h4>Usuario</h4>
@@ -154,9 +154,27 @@ if(type == 'inicioAlumnos'){
     <li>Ayuda</li>
     <li>Cerrar sesión</li>
   </ul>`;
+  document.getElementById("navBarChange").innerHTML = `<ul class="nav-list" id="navList">
+        <li class="nav-item">
+          <a class="border" href="#top-header">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="#"> Profesores</a>
+        </li>
+        <li class="nav-item">
+          <a href="#"> Paquetes</a>
+        </li>
+        <li class="nav-item">
+          <a href="#"> Contacto</a>
+        </li>
+        <li class="nav-item">
+          <a href="#">En</a>
+        </li>
+      </ul>`;
 
-} else if (type == 'inicioProfesores'){
-  document.getElementById("subMenu").innerHTML = ` <div class="drop-header">
+
+} else if (type == 'inicioProfesores') {
+  document.getElementById("subMenu").innerHTML = `<div class="drop-header">
   <i class="far fa-user-circle"></i>
   <h4>Usuario</h4>
 </div>
@@ -181,11 +199,44 @@ if(type == 'inicioAlumnos'){
   <li>Ayuda</li>
   <li>Cerrar sesión</li>
 </ul>`;
+document.getElementById("navBarChange").innerHTML = `<ul class="nav-list" id="navList">
+        <li class="nav-item">
+          <a class="border" href="#top-header">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="#"> Mis Alumnos</a>
+        </li>
+        <li class="nav-item">
+          <a href="#"> Mis Paquetes</a>
+        </li>
+        <li class="nav-item">
+          <a href="#"> Ir a clase</a>
+        </li>
+        <li class="nav-item">
+          <a href="#">En</a>
+        </li>
+      </ul>`;
 
 } else {
   document.getElementById("subMenu").innerHTML = `<ul class="outline">
   <li> <a href="register">Registrarse</a> </li>
   <li><a href="login">Iniciar sesión</a></li>
 </ul>`;
+document.getElementById("navBarChange").innerHTML = `<ul class="nav-list" id="navList">
+        <li class="nav-item">
+          <a class="border" href="#top-header">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="#"> Paquetes</a>
+        </li>
+        <li class="nav-item">
+          <a href="#contacto"> Contacto</a>
+        </li>
+        <li class="nav-item">
+          <a href="#">En</a>
+        </li>
+      </ul>`;
 
 }
+
+
