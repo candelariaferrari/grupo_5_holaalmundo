@@ -177,7 +177,7 @@ body {
 .dropdown ul li a{
   text-decoration: none;
   color: #fff;
-  padding: 0.5em 1em;
+  padding: 0.5em auto;
 }
 .button-responsive {
   display: none;

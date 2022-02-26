@@ -65,7 +65,7 @@ if (type == 'inicioAlumnos' || type == 'inicioAlumnos/paquetes' || type == 'inic
   <li>Mis cursos</li>
 </ul>
 <ul>
-  <li>Configuración</li>
+  <li> <a href="/inicioProfesores/perfil2"> Configuración </a></li>
   <li>Métodos de pago</li>
   <li>Historial de compra</li>
 </ul>
@@ -82,13 +82,13 @@ if (type == 'inicioAlumnos' || type == 'inicioAlumnos/paquetes' || type == 'inic
 </ul>`;
 document.getElementById("navBarChange").innerHTML = `<ul class="nav-list" id="navList">
         <li class="nav-item">
-          <a class="border" href="#top-header">Home</a>
+          <a class="border" href="/inicioProfesores">Home</a>
         </li>
         <li class="nav-item">
           <a href="#"> Mis Alumnos</a>
         </li>
         <li class="nav-item">
-          <a href="#"> Mis Paquetes</a>
+          <a href="/inicioProfesores/perfil1"> Mis Paquetes</a>
         </li>
         <li class="nav-item">
           <a href="#"> Ir a clase</a>

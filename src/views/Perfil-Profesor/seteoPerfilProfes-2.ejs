@@ -25,15 +25,13 @@
           <div class="greetings">
             <h2>Completa tu perfil</h2>
           </div>
-          <div class="infoProfe">
-            <p>Cuentanos sobre vos</p>
-          </div>
-          <div class="infoCompleta">
-            <textarea> </textarea>
-          </div>
-          <div class="container-button">
-            <button type="button">Continuar</button>
-          </div>
+          <form class="formCuentanos">
+            <label for="">Cuentanos sobre vos</label>
+            <textarea name="descripcion" id="" placeholder="Hola, soy .."></textarea>
+            <div class="container-button">
+              <button type="submit">Continuar</button>
+            </div>
+          </form>
         </div>
       </div>
 
@@ -44,19 +42,25 @@
           </div>
           <div class="file-update">
             <div class="container-image">
-              <div class="card"><img src="/images/entypo-social_google-drive.png"></div>
+              <div class="card">
+                <i class="fa-brands fa-google-drive"></i>
+              </div>
               <div class="footer-file">Drive
                 <input type="file"></input>
               </div>
             </div>
             <div class="container-image">
-              <div class="card"><img src="/images/akar-icons_dropbox-fill.png"></div>
+              <div class="card">
+                <i class="fa-brands fa-dropbox"></i>
+              </div>
               <div class="footer-file">DropBox
                 <input type="file"></input>
               </div>
             </div>
             <div class="container-image">
-              <div class="card"><img src="/images/ic_round-file-upload.png"></div>
+              <div class="card">
+                <i class="fa-solid fa-up-from-line"></i>
+              </div>
               <div class="footer-file">Computadora
                 <input type="file"></input>
               </div>
