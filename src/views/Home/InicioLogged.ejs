@@ -19,720 +19,646 @@
 
 <body id="alumnos">
   <%- include('../partials/header.ejs')%>
-  <!-- <header id="top-header">
-    <nav class="navbar" id="main">
-      <div class="responsive-one">
-        <a class="logo" href="#top-header">
-          <img src="/images/logo.svg" alt="logo">
-        </a>
-        <div class="search">
-          <i class="fas fa-search"></i>
-          <input class="input" type="search" name="buscar" placeholder="Buscar">
-        </div>
-      </div>
-      <ul class="nav-list" id="navList">
-        <li class="nav-item">
-          <a class="border" href="#top-header">Home</a>
-        </li>
-        <li class="nav-item">
-          <a href="#"> Profesores</a>
-        </li>
-        <li class="nav-item">
-          <a href="#"> Paquetes</a>
-        </li>
-        <li class="nav-item">
-          <a href="#"> Contacto</a>
-        </li>
-        <li class="nav-item">
-          <a href="#">En</a>
-        </li>
-      </ul>
-      <div class="responsive-two">
-        <div class="button-responsive" id="toggle-button">
-          <i class="fas fa-bars"></i>
+    <main>
+      <!-- Carrusel principal -->
+      <section>
+        <div class="main-carrusel">
+          <!-- img 1 -->
+          <div class="mySlides fade">
+            <img class="imagen" src="/images/carrusel01.png">
+            <div class="content-text">
+              <p class="text">Lorem ipsum dolor sit amet. </p>
+              <p class="text">Lorem ipsum dolor sit amet. </p>
+              <p class="text">Lorem ipsum dolor sit amet. </p>
+            </div>
+          </div>
+          <!-- img 2 -->
+          <div class="mySlides fade">
+            <img class="imagen" src="/images/carrusel02.png">
+            <div class="flex-form">
+              <div class="text-one">
+                <h2>Te gustaría enseñar con nosotros?</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur
+                  adipisicing elit. Alias, illo minima quidem
+                  nihil quae earum ex quas maxime at nulla deleniti
+                  aliquid modi atque minus iusto consequuntur
+                  quibusdam cupiditate sequi.
+                </p>
+                <p class="subtitle">Que esperas?
+                  <strong>forma parte de la comunidad</strong>
+                  hola al mundo!
+                </p>
+              </div>
+              <div class="form-carrusel">
+                <div class="flex-icon">
+                  <div class="circulo">
+                    <i class="fab fa-google"></i>
+                  </div>
+                  <div class="circulo">
+                    <i class="fab fa-facebook-f"></i>
+                  </div>
+                  <div class="circulo">
+                    <i class="fab fa-linkedin-in"></i>
+                  </div>
+                </div>
+                <div class="form-one">
+                  <form action="#" method="post">
+                    <input class="input-form" type="text" name="nombre" id="nombre" placeholder="Nombre">
+                    <input class="input-form" type="text" name="apellido" id="apellido" placeholder="Apellido">
+                    <input class="input-form" type="email" name="email" id="email" placeholder="Email">
+                    <input class="input-form" type="password" name="contrasena" id="contrasena"
+                      placeholder="Contraseña">
+                    <button type="submit" class="register">
+                      registrate
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- img 3 -->
+          <div class="mySlides fade">
+            <img class="imagen" src="/images/carrusel03.png">
+            <div class="flex-form">
+              <div class="form-carrusel two">
+                <div class="flex-icon">
+                  <div class="circulo">
+                    <i class="fab fa-google"></i>
+                  </div>
+                  <div class="circulo">
+                    <i class="fab fa-facebook-f"></i>
+                  </div>
+                  <div class="circulo">
+                    <i class="fab fa-linkedin-in"></i>
+                  </div>
+                </div>
+                <div class="form-one">
+                  <form action="#" method="post">
+                    <input class="input-form" type="text" name="nombre" id="input-two" placeholder="Nombre">
+                    <input class="input-form" type="text" name="apellido" id="input-two" placeholder="Apellido">
+                    <input class="input-form" type="email" name="email" id="input-two" placeholder="Email">
+                    <input class="input-form" type="password" name="contrasena" id="input-two" placeholder="Contraseña">
+                    <button type="submit" class="register">
+                      registrate
+                    </button>
+                  </form>
+                </div>
+              </div>
+              <div class="text-one">
+                <h2>Te gustaría aprender con nosotros?</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur
+                  adipisicing elit. Alias, illo minima quidem
+                  nihil quae earum ex quas maxime at nulla deleniti
+                  aliquid modi atque minus iusto consequuntur
+                  quibusdam cupiditate sequi.
+                </p>
+                <p class="subtitle">Que esperas?
+                  <strong>forma parte de la comunidad</strong>
+                  hola al mundo!
+                </p>
+              </div>
+            </div>
+          </div>
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          <div class="content-dot">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+          </div>
         </div>
 
-        <div class="botones-iconos">
-          <i class="far fa-heart"></i>
-          <button class="carrito" onclick="openNav()">
-            <i class="fas fa-shopping-cart"></i>
-          </button>
-          <div class="dropdown">
-            <button class="dropbtn">
+      </section>
+
+      <!-- Caracteristicas -->
+      <section>
+        <div class="content-characteristics">
+          <div class="caracteristicas one">
+            <div class="circulo">
               <i class="far fa-user-circle"></i>
-            </button>
-            
-            <div class="dropdown-content">
-              <div class="drop-header">
-                <i class="far fa-user-circle"></i>
-                <h4>Usuario</h4>
+            </div>
+            <h3>caracteritica 1</h3>
+            <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Tempora ea quod voluptate nisi nihil soluta vero quia excepturi.
+            </p>
+          </div>
+          <div class="caracteristicas">
+            <div class="circulo">
+              <i class="far fa-user-circle"></i>
+            </div>
+            <h3>caracteritica 2</h3>
+            <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Tempora ea quod voluptate nisi nihil soluta vero quia excepturi.
+            </p>
+          </div>
+          <div class="caracteristicas">
+            <div class="circulo">
+              <i class="far fa-user-circle"></i>
+            </div>
+            <h3>caracteritica 3</h3>
+            <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Tempora ea quod voluptate nisi nihil soluta vero quia excepturi.
+            </p>
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- Seccion profesores -->
+      <section id="profesores">
+        <div class="section-profesores">
+          <div class="title-profesores">
+            <h2> Nuestros Profes</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Adipiscing ut diam arcu
+              vivamus erat dictum. Ipsum scelerisque aenean cursus id quis enim sagittis nullam
+              sodales. Integer augue id cursus massa duis donec gravida. Non faucibus rmentum
+            </p>
+          </div>
+          <!-- grilla -->
+          <div class="content-right">
+            <div class="container-teacher">
+              <div class="g-uno">
+                <img src="/images/profe.png" alt="profe">
               </div>
-              <ul>
-                <li>Membresías</li>
-                <li>Da clases</li>
-                <li>Mis cursos</li>
-              </ul>
-              <ul>
-                <li>Configuración</li>
-                <li>Métodos de pago</li>
-                <li>Historial de compra</li>
-              </ul>
-              <ul>
-                <li>Idiomas</li>
-              </ul>
-              <ul>
-                <li>Editar perfil</li>
-              </ul>
-
-              <ul class="outline">
-                <li>Ayuda</li>
-                <li>Cerrar sesión</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </nav>
-  </header> -->
-  <main>
-
-    <!-- Carrusel principal -->
-    <section>
-      <div class="main-carrusel">
-        <!-- img 1 -->
-        <div class="mySlides fade">
-          <img class="imagen" src="/images/carrusel01.png">
-          <div class="content-text">
-            <p class="text">Lorem ipsum dolor sit amet. </p>
-            <p class="text">Lorem ipsum dolor sit amet. </p>
-            <p class="text">Lorem ipsum dolor sit amet. </p>
-          </div>
-        </div>
-        <!-- img 2 -->
-        <div class="mySlides fade">
-          <img class="imagen" src="/images/carrusel02.png">
-          <div class="flex-form">
-            <div class="text-one">
-              <h2>Te gustaría enseñar con nosotros?</h2>
-              <p>Lorem ipsum dolor, sit amet consectetur
-                adipisicing elit. Alias, illo minima quidem
-                nihil quae earum ex quas maxime at nulla deleniti
-                aliquid modi atque minus iusto consequuntur
-                quibusdam cupiditate sequi.
-              </p>
-              <p class="subtitle">Que esperas?
-                <strong>forma parte de la comunidad</strong>
-                hola al mundo!
-              </p>
-            </div>
-            <div class="form-carrusel">
-              <div class="flex-icon">
-                <div class="circulo">
-                  <i class="fab fa-google"></i>
-                </div>
-                <div class="circulo">
-                  <i class="fab fa-facebook-f"></i>
-                </div>
-                <div class="circulo">
-                  <i class="fab fa-linkedin-in"></i>
-                </div>
+              <div class="g-dos">
+                <img src="/images/profe.png" alt="profe">
               </div>
-              <div class="form-one">
-                <form action="#" method="post">
-                  <input class="input-form" type="text" name="nombre" id="nombre" placeholder="Nombre">
-                  <input class="input-form" type="text" name="apellido" id="apellido" placeholder="Apellido">
-                  <input class="input-form" type="email" name="email" id="email" placeholder="Email">
-                  <input class="input-form" type="password" name="contrasena" id="contrasena" placeholder="Contraseña">
-                  <button type="submit" class="register">
-                    registrate
-                  </button>
-                </form>
+              <div class="g-tres">
+                <img src="/images/profe.png" alt="profe">
               </div>
-            </div>
-          </div>
-        </div>
-        <!-- img 3 -->
-        <div class="mySlides fade">
-          <img class="imagen" src="/images/carrusel03.png">
-          <div class="flex-form">
-            <div class="form-carrusel two">
-              <div class="flex-icon">
-                <div class="circulo">
-                  <i class="fab fa-google"></i>
-                </div>
-                <div class="circulo">
-                  <i class="fab fa-facebook-f"></i>
-                </div>
-                <div class="circulo">
-                  <i class="fab fa-linkedin-in"></i>
-                </div>
+              <div class="g-cuatro">
+                <img src="/images/profe.png" alt="profe">
               </div>
-              <div class="form-one">
-                <form action="#" method="post">
-                  <input class="input-form" type="text" name="nombre" id="input-two" placeholder="Nombre">
-                  <input class="input-form" type="text" name="apellido" id="input-two" placeholder="Apellido">
-                  <input class="input-form" type="email" name="email" id="input-two" placeholder="Email">
-                  <input class="input-form" type="password" name="contrasena" id="input-two" placeholder="Contraseña">
-                  <button type="submit" class="register">
-                    registrate
-                  </button>
-                </form>
+              <div class="g-cinco">
+                <img src="/images/profe.png" alt="profe">
               </div>
-            </div>
-            <div class="text-one">
-              <h2>Te gustaría aprender con nosotros?</h2>
-              <p>Lorem ipsum dolor, sit amet consectetur
-                adipisicing elit. Alias, illo minima quidem
-                nihil quae earum ex quas maxime at nulla deleniti
-                aliquid modi atque minus iusto consequuntur
-                quibusdam cupiditate sequi.
-              </p>
-              <p class="subtitle">Que esperas?
-                <strong>forma parte de la comunidad</strong>
-                hola al mundo!
-              </p>
-            </div>
-          </div>
-        </div>
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        <div class="content-dot">
-          <span class="dot" onclick="currentSlide(1)"></span>
-          <span class="dot" onclick="currentSlide(2)"></span>
-          <span class="dot" onclick="currentSlide(3)"></span>
-        </div>
-      </div>
-
-    </section>
-
-    <!-- Caracteristicas -->
-    <section>
-      <div class="content-characteristics">
-        <div class="caracteristicas one">
-          <div class="circulo">
-            <i class="far fa-user-circle"></i>
-          </div>
-          <h3>caracteritica 1</h3>
-          <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            Tempora ea quod voluptate nisi nihil soluta vero quia excepturi.
-          </p>
-        </div>
-        <div class="caracteristicas">
-          <div class="circulo">
-            <i class="far fa-user-circle"></i>
-          </div>
-          <h3>caracteritica 2</h3>
-          <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            Tempora ea quod voluptate nisi nihil soluta vero quia excepturi.
-          </p>
-        </div>
-        <div class="caracteristicas">
-          <div class="circulo">
-            <i class="far fa-user-circle"></i>
-          </div>
-          <h3>caracteritica 3</h3>
-          <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            Tempora ea quod voluptate nisi nihil soluta vero quia excepturi.
-          </p>
-        </div>
-
-      </div>
-
-    </section>
-
-    <!-- Seccion profesores -->
-    <section id="profesores">
-      <div class="section-profesores">
-        <div class="title-profesores">
-          <h2> Nuestros Profes</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Adipiscing ut diam arcu
-            vivamus erat dictum. Ipsum scelerisque aenean cursus id quis enim sagittis nullam
-            sodales. Integer augue id cursus massa duis donec gravida. Non faucibus rmentum
-          </p>
-        </div>
-        <!-- grilla -->
-        <div class="content-right">
-          <div class="container-teacher">
-            <div class="g-uno">
-              <img src="/images/profe.png" alt="profe">
-            </div>
-            <div class="g-dos">
-              <img src="/images/profe.png" alt="profe">
-            </div>
-            <div class="g-tres">
-              <img src="/images/profe.png" alt="profe">
-            </div>
-            <div class="g-cuatro">
-              <img src="/images/profe.png" alt="profe">
-            </div>
-            <div class="g-cinco">
-              <img src="/images/profe.png" alt="profe">
-            </div>
-            <div class="g-seis">
-              <img src="/images/profe.png" alt="profe">
-            </div>
-            <div class="g-siete">
-              <img src="/images/profe.png" alt="profe">
-            </div>
-            <div class="g-ocho">
-              <img src="/images/profe.png" alt="profe">
-            </div>
-            <div class="boton-mas">
-              <button>Ver mas</button>
-            </div>
-            <!-- Seccion Estadisticas -->
-            <div class="est" id="section-estadisticas">
-              <div class="title-estadisticas">
-                <h2>Hola al Mundo cuenta con </h2>
+              <div class="g-seis">
+                <img src="/images/profe.png" alt="profe">
               </div>
-              <div class="cantidades">
-                <div>
-                  <p class="number"> 50 </p>
-                  <p class="text">Profesores</p>
+              <div class="g-siete">
+                <img src="/images/profe.png" alt="profe">
+              </div>
+              <div class="g-ocho">
+                <img src="/images/profe.png" alt="profe">
+              </div>
+              <div class="boton-mas">
+                <button>Ver mas</button>
+              </div>
+              <!-- Seccion Estadisticas -->
+              <div class="est" id="section-estadisticas">
+                <div class="title-estadisticas">
+                  <h2>Hola al Mundo cuenta con </h2>
                 </div>
-                <div>
-                  <p class="number">+ 5000 </p>
-                  <p class="text">Alumnos</p>
-                </div>
-                <div>
-                  <p class="number"> 150 </p>
-                  <p class="text">Temáticas</p>
-                </div>
-                <div>
-                  <p class="number"> 4 </p>
-                  <p class="text">Idomas</p>
+                <div class="cantidades">
+                  <div>
+                    <p class="number"> 50 </p>
+                    <p class="text">Profesores</p>
+                  </div>
+                  <div>
+                    <p class="number">+ 5000 </p>
+                    <p class="text">Alumnos</p>
+                  </div>
+                  <div>
+                    <p class="number"> 150 </p>
+                    <p class="text">Temáticas</p>
+                  </div>
+                  <div>
+                    <p class="number"> 4 </p>
+                    <p class="text">Idomas</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Sección servicios -->
-    <section id="sectionServicios" onload="reset()">
-      <h2>Nuestros Servicios</h2>
+      <!-- Sección servicios -->
+      <section id="sectionServicios" onload="reset()">
+        <h2>Nuestros Servicios</h2>
 
-      <div class="serviceContainer">
-        <button class="preBtn">
-          <i class="fas fa-chevron-left"></i>
-        </button>
-        <button class="nxtBtn">
-          <i class="fas fa-chevron-right"></i>
-        </button>
-        <!-- card 1 -->
-        <div class="serviceCard">
-          <div class="serviceImg">
-            <span class="discountTag">$5000</span>
-            <i class="fas fa-comments"></i>
-            <h4>Conversación</h4>
-            <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
+        <div class="serviceContainer">
+          <button class="preBtn">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="nxtBtn">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+          <!-- card 1 -->
+          <div class="serviceCard">
+            <div class="serviceImg">
+              <span class="discountTag">$5000</span>
+              <i class="fas fa-comments"></i>
+              <h4>Conversación</h4>
+              <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
+            </div>
+            <div class="serviceInfo">
+              <button>
+                <i class="fas fa-shopping-cart"></i>
+                Agregar al carrito
+              </button>
+            </div>
           </div>
-          <div class="serviceInfo">
-            <button>
-              <i class="fas fa-shopping-cart"></i>
-              Agregar al carrito
-            </button>
+          <!-- card 2 -->
+          <div class="serviceCard">
+            <div class="serviceImg">
+              <span class="discountTag">$5000</span>
+              <i class="fas fa-comments"></i>
+              <h4>Conversación Grupal</h4>
+              <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
+            </div>
+            <div class="serviceInfo">
+              <button>
+                <i class="fas fa-shopping-cart"></i>
+                Agregar al carrito
+              </button>
+            </div>
+          </div>
+          <!-- card 3 -->
+          <div class="serviceCard">
+            <div class="serviceImg">
+              <span class="discountTag">$5000</span>
+              <i class="fas fa-comments"></i>
+              <h4>Preparación Exámen</h4>
+              <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
+            </div>
+            <div class="serviceInfo">
+              <button>
+                <i class="fas fa-shopping-cart"></i>
+                Agregar al carrito
+              </button>
+            </div>
+          </div>
+          <!-- card 4 -->
+          <div class="serviceCard">
+            <div class="serviceImg">
+              <span class="discountTag">$5000</span>
+              <i class="fas fa-comments"></i>
+              <h4>Perfeccionamiento profesional</h4>
+              <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
+            </div>
+            <div class="serviceInfo">
+              <button>
+                <i class="fas fa-shopping-cart"></i>
+                Agregar al carrito
+              </button>
+            </div>
+          </div>
+          <!-- card 5 -->
+          <div class="serviceCard">
+            <div class="serviceImg">
+              <span class="discountTag">$5000</span>
+              <i class="fas fa-comments"></i>
+              <h4>Clases individuales</h4>
+              <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
+            </div>
+            <div class="serviceInfo">
+              <button>
+                <i class="fas fa-shopping-cart"></i>
+                Agregar al carrito
+              </button>
+            </div>
+          </div>
+          <!-- card 6 -->
+          <div class="serviceCard">
+            <div class="serviceImg">
+              <span class="discountTag">$5000</span>
+              <i class="fas fa-comments"></i>
+              <h4>Clases Grupales</h4>
+              <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
+            </div>
+            <div class="serviceInfo">
+              <button>
+                <i class="fas fa-shopping-cart"></i>
+                Agregar al carrito
+              </button>
+            </div>
+          </div>
+          <!-- card 7 -->
+          <div class="serviceCard">
+            <div class="serviceImg">
+              <span class="discountTag">$5000</span>
+              <i class="fas fa-comments"></i>
+              <h4>Conversacion por tematica</h4>
+              <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
+            </div>
+            <div class="serviceInfo">
+              <button>
+                <i class="fas fa-shopping-cart"></i>
+                Agregar al carrito
+              </button>
+            </div>
+          </div>
+          <!-- card 8 -->
+          <div class="serviceCard">
+            <div class="serviceImg">
+              <span class="discountTag">$5000</span>
+              <i class="fas fa-comments"></i>
+              <h4>Clases semanales</h4>
+              <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
+            </div>
+            <div class="serviceInfo">
+              <button>
+                <i class="fas fa-shopping-cart"></i>
+                Agregar al carrito
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section id="sectionServicios" onload="reset()">
+        <h2>Recomendados para ti</h2>
+        <div class="serviceContainer">
+          <button class="preBtn">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="nxtBtn">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+          <!-- card 1 -->
+          <div class="serviceCard">
+            <div class="serviceImg">
+              <span class="discountTag">$5000</span>
+              <i class="fas fa-comments"></i>
+              <h4>Conversación</h4>
+              <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
+            </div>
+            <div class="serviceInfo">
+              <button>
+                <i class="fas fa-shopping-cart"></i>
+                Agregar al carrito
+              </button>
+            </div>
+          </div>
+          <!-- card 2 -->
+          <div class="serviceCard">
+            <div class="serviceImg">
+              <span class="discountTag">$5000</span>
+              <i class="fas fa-comments"></i>
+              <h4>Conversación Grupal</h4>
+              <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
+            </div>
+            <div class="serviceInfo">
+              <button>
+                <i class="fas fa-shopping-cart"></i>
+                Agregar al carrito
+              </button>
+            </div>
+          </div>
+          <!-- card 3 -->
+          <div class="serviceCard">
+            <div class="serviceImg">
+              <span class="discountTag">$5000</span>
+              <i class="fas fa-comments"></i>
+              <h4>Preparación Exámen</h4>
+              <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
+            </div>
+            <div class="serviceInfo">
+              <button>
+                <i class="fas fa-shopping-cart"></i>
+                Agregar al carrito
+              </button>
+            </div>
+          </div>
+          <!-- card 4 -->
+          <div class="serviceCard">
+            <div class="serviceImg">
+              <span class="discountTag">$5000</span>
+              <i class="fas fa-comments"></i>
+              <h4>Perfeccionamiento profesional</h4>
+              <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
+            </div>
+            <div class="serviceInfo">
+              <button>
+                <i class="fas fa-shopping-cart"></i>
+                Agregar al carrito
+              </button>
+            </div>
+          </div>
+          <!-- card 5 -->
+          <div class="serviceCard">
+            <div class="serviceImg">
+              <span class="discountTag">$5000</span>
+              <i class="fas fa-comments"></i>
+              <h4>Clases individuales</h4>
+              <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
+            </div>
+            <div class="serviceInfo">
+              <button>
+                <i class="fas fa-shopping-cart"></i>
+                Agregar al carrito
+              </button>
+            </div>
+          </div>
+          <!-- card 6 -->
+          <div class="serviceCard">
+            <div class="serviceImg">
+              <span class="discountTag">$5000</span>
+              <i class="fas fa-comments"></i>
+              <h4>Clases Grupales</h4>
+              <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
+            </div>
+            <div class="serviceInfo">
+              <button>
+                <i class="fas fa-shopping-cart"></i>
+                Agregar al carrito
+              </button>
+            </div>
+          </div>
+          <!-- card 7 -->
+          <div class="serviceCard">
+            <div class="serviceImg">
+              <span class="discountTag">$5000</span>
+              <i class="fas fa-comments"></i>
+              <h4>Conversacion por tematica</h4>
+              <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
+            </div>
+            <div class="serviceInfo">
+              <button>
+                <i class="fas fa-shopping-cart"></i>
+                Agregar al carrito
+              </button>
+            </div>
+          </div>
+          <!-- card 8 -->
+          <div class="serviceCard">
+            <div class="serviceImg">
+              <span class="discountTag">$5000</span>
+              <i class="fas fa-comments"></i>
+              <h4>Clases semanales</h4>
+              <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
+            </div>
+            <div class="serviceInfo">
+              <button>
+                <i class="fas fa-shopping-cart"></i>
+                Agregar al carrito
+              </button>
+            </div>
           </div>
         </div>
-        <!-- card 2 -->
-        <div class="serviceCard">
-          <div class="serviceImg">
-            <span class="discountTag">$5000</span>
-            <i class="fas fa-comments"></i>
-            <h4>Conversación Grupal</h4>
-            <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
+      </section>
+
+      <section id="sectionServicios" onload="reset()">
+        <h2>Los mas vendidos</h2>
+        <div class="serviceContainer">
+          <button class="preBtn">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="nxtBtn">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+          <!-- card 1 -->
+          <div class="serviceCard">
+            <div class="serviceImg">
+              <span class="discountTag">$5000</span>
+              <i class="fas fa-comments"></i>
+              <h4>Conversación</h4>
+              <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
+            </div>
+            <div class="serviceInfo">
+              <button>
+                <i class="fas fa-shopping-cart"></i>
+                Agregar al carrito
+              </button>
+            </div>
           </div>
-          <div class="serviceInfo">
-            <button>
-              <i class="fas fa-shopping-cart"></i>
-              Agregar al carrito
-            </button>
+          <!-- card 2 -->
+          <div class="serviceCard">
+            <div class="serviceImg">
+              <span class="discountTag">$5000</span>
+              <i class="fas fa-comments"></i>
+              <h4>Conversación Grupal</h4>
+              <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
+            </div>
+            <div class="serviceInfo">
+              <button>
+                <i class="fas fa-shopping-cart"></i>
+                Agregar al carrito
+              </button>
+            </div>
+          </div>
+          <!-- card 3 -->
+          <div class="serviceCard">
+            <div class="serviceImg">
+              <span class="discountTag">$5000</span>
+              <i class="fas fa-comments"></i>
+              <h4>Preparación Exámen</h4>
+              <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
+            </div>
+            <div class="serviceInfo">
+              <button>
+                <i class="fas fa-shopping-cart"></i>
+                Agregar al carrito
+              </button>
+            </div>
+          </div>
+          <!-- card 4 -->
+          <div class="serviceCard">
+            <div class="serviceImg">
+              <span class="discountTag">$5000</span>
+              <i class="fas fa-comments"></i>
+              <h4>Perfeccionamiento profesional</h4>
+              <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
+            </div>
+            <div class="serviceInfo">
+              <button>
+                <i class="fas fa-shopping-cart"></i>
+                Agregar al carrito
+              </button>
+            </div>
+          </div>
+          <!-- card 5 -->
+          <div class="serviceCard">
+            <div class="serviceImg">
+              <span class="discountTag">$5000</span>
+              <i class="fas fa-comments"></i>
+              <h4>Clases individuales</h4>
+              <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
+            </div>
+            <div class="serviceInfo">
+              <button>
+                <i class="fas fa-shopping-cart"></i>
+                Agregar al carrito
+              </button>
+            </div>
+          </div>
+          <!-- card 6 -->
+          <div class="serviceCard">
+            <div class="serviceImg">
+              <span class="discountTag">$5000</span>
+              <i class="fas fa-comments"></i>
+              <h4>Clases Grupales</h4>
+              <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
+            </div>
+            <div class="serviceInfo">
+              <button>
+                <i class="fas fa-shopping-cart"></i>
+                Agregar al carrito
+              </button>
+            </div>
+          </div>
+          <!-- card 7 -->
+          <div class="serviceCard">
+            <div class="serviceImg">
+              <span class="discountTag">$5000</span>
+              <i class="fas fa-comments"></i>
+              <h4>Conversacion por tematica</h4>
+              <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
+            </div>
+            <div class="serviceInfo">
+              <button>
+                <i class="fas fa-shopping-cart"></i>
+                Agregar al carrito
+              </button>
+            </div>
+          </div>
+          <!-- card 8 -->
+          <div class="serviceCard">
+            <div class="serviceImg">
+              <span class="discountTag">$5000</span>
+              <i class="fas fa-comments"></i>
+              <h4>Clases semanales</h4>
+              <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
+            </div>
+            <div class="serviceInfo">
+              <button>
+                <i class="fas fa-shopping-cart"></i>
+                Agregar al carrito
+              </button>
+            </div>
           </div>
         </div>
-        <!-- card 3 -->
-        <div class="serviceCard">
-          <div class="serviceImg">
-            <span class="discountTag">$5000</span>
-            <i class="fas fa-comments"></i>
-            <h4>Preparación Exámen</h4>
-            <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
-          </div>
-          <div class="serviceInfo">
-            <button>
-              <i class="fas fa-shopping-cart"></i>
-              Agregar al carrito
-            </button>
-          </div>
+      </section>
+
+      <!-- Contacto -->
+
+      <section class="idiomas">
+        <div class="paises">
+          <div class="card"><img class="imagenes-paises" src="/images/banderas-españa.png"></div>
+          <div class="card"><img class="imagenes-paises" src="/images/banderas-inglaterra.png"></div>
+          <div class="card"><img class="imagenes-paises" src="/images/banderas-italia.png"></div>
+          <div class="card"><img class="imagenes-paises" src="/images/banderas-brasil.png"></div>
         </div>
-        <!-- card 4 -->
-        <div class="serviceCard">
-          <div class="serviceImg">
-            <span class="discountTag">$5000</span>
-            <i class="fas fa-comments"></i>
-            <h4>Perfeccionamiento profesional</h4>
-            <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
-          </div>
-          <div class="serviceInfo">
-            <button>
-              <i class="fas fa-shopping-cart"></i>
-              Agregar al carrito
-            </button>
-          </div>
-        </div>
-        <!-- card 5 -->
-        <div class="serviceCard">
-          <div class="serviceImg">
-            <span class="discountTag">$5000</span>
-            <i class="fas fa-comments"></i>
-            <h4>Clases individuales</h4>
-            <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
-          </div>
-          <div class="serviceInfo">
-            <button>
-              <i class="fas fa-shopping-cart"></i>
-              Agregar al carrito
-            </button>
-          </div>
-        </div>
-        <!-- card 6 -->
-        <div class="serviceCard">
-          <div class="serviceImg">
-            <span class="discountTag">$5000</span>
-            <i class="fas fa-comments"></i>
-            <h4>Clases Grupales</h4>
-            <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
-          </div>
-          <div class="serviceInfo">
-            <button>
-              <i class="fas fa-shopping-cart"></i>
-              Agregar al carrito
-            </button>
-          </div>
-        </div>
-        <!-- card 7 -->
-        <div class="serviceCard">
-          <div class="serviceImg">
-            <span class="discountTag">$5000</span>
-            <i class="fas fa-comments"></i>
-            <h4>Conversacion por tematica</h4>
-            <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
-          </div>
-          <div class="serviceInfo">
-            <button>
-              <i class="fas fa-shopping-cart"></i>
-              Agregar al carrito
-            </button>
-          </div>
-        </div>
-        <!-- card 8 -->
-        <div class="serviceCard">
-          <div class="serviceImg">
-            <span class="discountTag">$5000</span>
-            <i class="fas fa-comments"></i>
-            <h4>Clases semanales</h4>
-            <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
-          </div>
-          <div class="serviceInfo">
-            <button>
-              <i class="fas fa-shopping-cart"></i>
-              Agregar al carrito
-            </button>
+        <div class="label">
+          <div>
+            ¿Que idioma te gustaría aprender o tener una conversación ?
           </div>
         </div>
 
-      </div>
-    </section>
+      </section>
 
-    <section id="sectionServicios" onload="reset()">
-      <h2>Recomendados para ti</h2>
-      <div class="serviceContainer">
-        <button class="preBtn">
-          <i class="fas fa-chevron-left"></i>
-        </button>
-        <button class="nxtBtn">
-          <i class="fas fa-chevron-right"></i>
-        </button>
-        <!-- card 1 -->
-        <div class="serviceCard">
-          <div class="serviceImg">
-            <span class="discountTag">$5000</span>
-            <i class="fas fa-comments"></i>
-            <h4>Conversación</h4>
-            <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
-          </div>
-          <div class="serviceInfo">
-            <button>
-              <i class="fas fa-shopping-cart"></i>
-              Agregar al carrito
-            </button>
-          </div>
-        </div>
-        <!-- card 2 -->
-        <div class="serviceCard">
-          <div class="serviceImg">
-            <span class="discountTag">$5000</span>
-            <i class="fas fa-comments"></i>
-            <h4>Conversación Grupal</h4>
-            <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
-          </div>
-          <div class="serviceInfo">
-            <button>
-              <i class="fas fa-shopping-cart"></i>
-              Agregar al carrito
-            </button>
-          </div>
-        </div>
-        <!-- card 3 -->
-        <div class="serviceCard">
-          <div class="serviceImg">
-            <span class="discountTag">$5000</span>
-            <i class="fas fa-comments"></i>
-            <h4>Preparación Exámen</h4>
-            <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
-          </div>
-          <div class="serviceInfo">
-            <button>
-              <i class="fas fa-shopping-cart"></i>
-              Agregar al carrito
-            </button>
-          </div>
-        </div>
-        <!-- card 4 -->
-        <div class="serviceCard">
-          <div class="serviceImg">
-            <span class="discountTag">$5000</span>
-            <i class="fas fa-comments"></i>
-            <h4>Perfeccionamiento profesional</h4>
-            <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
-          </div>
-          <div class="serviceInfo">
-            <button>
-              <i class="fas fa-shopping-cart"></i>
-              Agregar al carrito
-            </button>
-          </div>
-        </div>
-        <!-- card 5 -->
-        <div class="serviceCard">
-          <div class="serviceImg">
-            <span class="discountTag">$5000</span>
-            <i class="fas fa-comments"></i>
-            <h4>Clases individuales</h4>
-            <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
-          </div>
-          <div class="serviceInfo">
-            <button>
-              <i class="fas fa-shopping-cart"></i>
-              Agregar al carrito
-            </button>
-          </div>
-        </div>
-        <!-- card 6 -->
-        <div class="serviceCard">
-          <div class="serviceImg">
-            <span class="discountTag">$5000</span>
-            <i class="fas fa-comments"></i>
-            <h4>Clases Grupales</h4>
-            <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
-          </div>
-          <div class="serviceInfo">
-            <button>
-              <i class="fas fa-shopping-cart"></i>
-              Agregar al carrito
-            </button>
-          </div>
-        </div>
-        <!-- card 7 -->
-        <div class="serviceCard">
-          <div class="serviceImg">
-            <span class="discountTag">$5000</span>
-            <i class="fas fa-comments"></i>
-            <h4>Conversacion por tematica</h4>
-            <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
-          </div>
-          <div class="serviceInfo">
-            <button>
-              <i class="fas fa-shopping-cart"></i>
-              Agregar al carrito
-            </button>
-          </div>
-        </div>
-        <!-- card 8 -->
-        <div class="serviceCard">
-          <div class="serviceImg">
-            <span class="discountTag">$5000</span>
-            <i class="fas fa-comments"></i>
-            <h4>Clases semanales</h4>
-            <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
-          </div>
-          <div class="serviceInfo">
-            <button>
-              <i class="fas fa-shopping-cart"></i>
-              Agregar al carrito
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="sectionServicios" onload="reset()">
-      <h2>Los mas vendidos</h2>
-      <div class="serviceContainer">
-        <button class="preBtn">
-          <i class="fas fa-chevron-left"></i>
-        </button>
-        <button class="nxtBtn">
-          <i class="fas fa-chevron-right"></i>
-        </button>
-        <!-- card 1 -->
-        <div class="serviceCard">
-          <div class="serviceImg">
-            <span class="discountTag">$5000</span>
-            <i class="fas fa-comments"></i>
-            <h4>Conversación</h4>
-            <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
-          </div>
-          <div class="serviceInfo">
-            <button>
-              <i class="fas fa-shopping-cart"></i>
-              Agregar al carrito
-            </button>
-          </div>
-        </div>
-        <!-- card 2 -->
-        <div class="serviceCard">
-          <div class="serviceImg">
-            <span class="discountTag">$5000</span>
-            <i class="fas fa-comments"></i>
-            <h4>Conversación Grupal</h4>
-            <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
-          </div>
-          <div class="serviceInfo">
-            <button>
-              <i class="fas fa-shopping-cart"></i>
-              Agregar al carrito
-            </button>
-          </div>
-        </div>
-        <!-- card 3 -->
-        <div class="serviceCard">
-          <div class="serviceImg">
-            <span class="discountTag">$5000</span>
-            <i class="fas fa-comments"></i>
-            <h4>Preparación Exámen</h4>
-            <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
-          </div>
-          <div class="serviceInfo">
-            <button>
-              <i class="fas fa-shopping-cart"></i>
-              Agregar al carrito
-            </button>
-          </div>
-        </div>
-        <!-- card 4 -->
-        <div class="serviceCard">
-          <div class="serviceImg">
-            <span class="discountTag">$5000</span>
-            <i class="fas fa-comments"></i>
-            <h4>Perfeccionamiento profesional</h4>
-            <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
-          </div>
-          <div class="serviceInfo">
-            <button>
-              <i class="fas fa-shopping-cart"></i>
-              Agregar al carrito
-            </button>
-          </div>
-        </div>
-        <!-- card 5 -->
-        <div class="serviceCard">
-          <div class="serviceImg">
-            <span class="discountTag">$5000</span>
-            <i class="fas fa-comments"></i>
-            <h4>Clases individuales</h4>
-            <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
-          </div>
-          <div class="serviceInfo">
-            <button>
-              <i class="fas fa-shopping-cart"></i>
-              Agregar al carrito
-            </button>
-          </div>
-        </div>
-        <!-- card 6 -->
-        <div class="serviceCard">
-          <div class="serviceImg">
-            <span class="discountTag">$5000</span>
-            <i class="fas fa-comments"></i>
-            <h4>Clases Grupales</h4>
-            <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
-          </div>
-          <div class="serviceInfo">
-            <button>
-              <i class="fas fa-shopping-cart"></i>
-              Agregar al carrito
-            </button>
-          </div>
-        </div>
-        <!-- card 7 -->
-        <div class="serviceCard">
-          <div class="serviceImg">
-            <span class="discountTag">$5000</span>
-            <i class="fas fa-comments"></i>
-            <h4>Conversacion por tematica</h4>
-            <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
-          </div>
-          <div class="serviceInfo">
-            <button>
-              <i class="fas fa-shopping-cart"></i>
-              Agregar al carrito
-            </button>
-          </div>
-        </div>
-        <!-- card 8 -->
-        <div class="serviceCard">
-          <div class="serviceImg">
-            <span class="discountTag">$5000</span>
-            <i class="fas fa-comments"></i>
-            <h4>Clases semanales</h4>
-            <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
-          </div>
-          <div class="serviceInfo">
-            <button>
-              <i class="fas fa-shopping-cart"></i>
-              Agregar al carrito
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contacto -->
-
-    <section class="idiomas">
-      <div class="paises">
-        <div class="card"><img class="imagenes-paises" src="/images/banderas-españa.png"></div>
-        <div class="card"><img class="imagenes-paises" src="/images/banderas-inglaterra.png"></div>
-        <div class="card"><img class="imagenes-paises" src="/images/banderas-italia.png"></div>
-        <div class="card"><img class="imagenes-paises" src="/images/banderas-brasil.png"></div>
-      </div>
-      <div class="label">
-        <div>
-          ¿Que idioma te gustaría aprender o tener una conversación ?
-        </div>
-      </div>
-
-    </section>
-
-    <!-- section Contacto -->
-    <%- include('../partials/contact.ejs')%>
-  </main>
-  <!-- chat -->
-  <%- include('../partials/chat.ejs')%>
+      <!-- section Contacto -->
+      <%- include('../partials/contact.ejs')%>
+    </main>
+    <!-- chat -->
+    <%- include('../partials/chat.ejs')%>
     <!-- Footer -->
     <%- include('../partials/footer.ejs')%>
+      <script src="/js/scriptHeader.js"></script>
+      <script src="/js/scriptCarrusel.js"></script>
 </body>
 
 </html>

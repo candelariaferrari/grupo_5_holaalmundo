@@ -9,7 +9,7 @@ toggleButton.addEventListener('click', () => {
 let type = window.location.pathname.slice(1);
 
 console.log(type);
-if (type == 'inicioAlumnos' || type == 'inicioProfesores/paquetes' || type == 'inicioProfesores/profesores' || type == 'inicioProfesores/carrito') {
+if (type == 'inicioAlumnos' || type == 'inicioAlumnos/paquetes' || type == 'inicioAlumnos/profesores' || type == 'inicioAlumnos/carrito') {
   document.getElementById("subMenu").innerHTML = `<div class="drop-header">
     <i class="far fa-user-circle"></i>
     <h4>Usuario</h4>
@@ -54,7 +54,7 @@ if (type == 'inicioAlumnos' || type == 'inicioProfesores/paquetes' || type == 'i
       </ul>`;
 
 
-} else if (type == 'inicioProfesores' || type == 'inicioProfesores/perfil1' || type == 'inicioProfesores/perfil2' || type == 'inicioProfesores/administrarClases' ) {
+} else if (type == 'inicioProfesores' || type == 'inicioProfesores/perfil1' || type == 'inicioProfesores/perfil2' || type == 'inicioProfesores/administrarClases' || type == 'inicioProfesores/carrito') {
   document.getElementById("subMenu").innerHTML = `<div class="drop-header">
   <i class="far fa-user-circle"></i>
   <h4>Usuario</h4>
