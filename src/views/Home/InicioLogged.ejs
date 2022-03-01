@@ -1,50 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi cuenta</title>
+    <script
+      src="https://kit.fontawesome.com/3964fc737d.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link href="/css/normalize.css" rel="stylesheet" />
+    <link href="/css/InicioLogged.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/partialsCss/partials.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mi cuenta</title>
-  <script src="https://kit.fontawesome.com/3964fc737d.js" crossorigin="anonymous"></script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  <link href="/css/normalize.css" rel="stylesheet">
-  <link href="/css/InicioLogged.css" rel="stylesheet">
-  <link rel="stylesheet" href="/css/partialsCss/partials.css">
-
-</head>
-
-<body id="alumnos">
-  <%- include('../partials/header.ejs')%>
+  <body id="alumnos">
+    <%- include('../partials/header.ejs')%>
     <main>
       <!-- Carrusel principal -->
       <section>
         <div class="main-carrusel">
           <!-- img 1 -->
           <div class="mySlides fade">
-            <img class="imagen" src="/images/carrusel01.png">
+            <img class="imagen" src="/images/carrusel01.png" />
             <div class="content-text">
-              <p class="text">Lorem ipsum dolor sit amet. </p>
-              <p class="text">Lorem ipsum dolor sit amet. </p>
-              <p class="text">Lorem ipsum dolor sit amet. </p>
+              <p class="text">Lorem ipsum dolor sit amet.</p>
+              <p class="text">Lorem ipsum dolor sit amet.</p>
+              <p class="text">Lorem ipsum dolor sit amet.</p>
             </div>
           </div>
           <!-- img 2 -->
           <div class="mySlides fade">
-            <img class="imagen" src="/images/carrusel02.png">
+            <img class="imagen" src="/images/carrusel02.png" />
             <div class="flex-form">
               <div class="text-one">
                 <h2>Te gustaría enseñar con nosotros?</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur
-                  adipisicing elit. Alias, illo minima quidem
-                  nihil quae earum ex quas maxime at nulla deleniti
-                  aliquid modi atque minus iusto consequuntur
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Alias, illo minima quidem nihil quae earum ex quas maxime at
+                  nulla deleniti aliquid modi atque minus iusto consequuntur
                   quibusdam cupiditate sequi.
                 </p>
-                <p class="subtitle">Que esperas?
+                <p class="subtitle">
+                  Que esperas?
                   <strong>forma parte de la comunidad</strong>
                   hola al mundo!
                 </p>
@@ -63,14 +71,35 @@
                 </div>
                 <div class="form-one">
                   <form action="#" method="post">
-                    <input class="input-form" type="text" name="nombre" id="nombre" placeholder="Nombre">
-                    <input class="input-form" type="text" name="apellido" id="apellido" placeholder="Apellido">
-                    <input class="input-form" type="email" name="email" id="email" placeholder="Email">
-                    <input class="input-form" type="password" name="contrasena" id="contrasena"
-                      placeholder="Contraseña">
-                    <button type="submit" class="register">
-                      registrate
-                    </button>
+                    <input
+                      class="input-form"
+                      type="text"
+                      name="nombre"
+                      id="nombre"
+                      placeholder="Nombre"
+                    />
+                    <input
+                      class="input-form"
+                      type="text"
+                      name="apellido"
+                      id="apellido"
+                      placeholder="Apellido"
+                    />
+                    <input
+                      class="input-form"
+                      type="email"
+                      name="email"
+                      id="email"
+                      placeholder="Email"
+                    />
+                    <input
+                      class="input-form"
+                      type="password"
+                      name="contrasena"
+                      id="contrasena"
+                      placeholder="Contraseña"
+                    />
+                    <button type="submit" class="register">registrate</button>
                   </form>
                 </div>
               </div>
@@ -78,7 +107,7 @@
           </div>
           <!-- img 3 -->
           <div class="mySlides fade">
-            <img class="imagen" src="/images/carrusel03.png">
+            <img class="imagen" src="/images/carrusel03.png" />
             <div class="flex-form">
               <div class="form-carrusel two">
                 <div class="flex-icon">
@@ -94,25 +123,48 @@
                 </div>
                 <div class="form-one">
                   <form action="#" method="post">
-                    <input class="input-form" type="text" name="nombre" id="input-two" placeholder="Nombre">
-                    <input class="input-form" type="text" name="apellido" id="input-two" placeholder="Apellido">
-                    <input class="input-form" type="email" name="email" id="input-two" placeholder="Email">
-                    <input class="input-form" type="password" name="contrasena" id="input-two" placeholder="Contraseña">
-                    <button type="submit" class="register">
-                      registrate
-                    </button>
+                    <input
+                      class="input-form"
+                      type="text"
+                      name="nombre"
+                      id="input-two"
+                      placeholder="Nombre"
+                    />
+                    <input
+                      class="input-form"
+                      type="text"
+                      name="apellido"
+                      id="input-two"
+                      placeholder="Apellido"
+                    />
+                    <input
+                      class="input-form"
+                      type="email"
+                      name="email"
+                      id="input-two"
+                      placeholder="Email"
+                    />
+                    <input
+                      class="input-form"
+                      type="password"
+                      name="contrasena"
+                      id="input-two"
+                      placeholder="Contraseña"
+                    />
+                    <button type="submit" class="register">registrate</button>
                   </form>
                 </div>
               </div>
               <div class="text-one">
                 <h2>Te gustaría aprender con nosotros?</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur
-                  adipisicing elit. Alias, illo minima quidem
-                  nihil quae earum ex quas maxime at nulla deleniti
-                  aliquid modi atque minus iusto consequuntur
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Alias, illo minima quidem nihil quae earum ex quas maxime at
+                  nulla deleniti aliquid modi atque minus iusto consequuntur
                   quibusdam cupiditate sequi.
                 </p>
-                <p class="subtitle">Que esperas?
+                <p class="subtitle">
+                  Que esperas?
                   <strong>forma parte de la comunidad</strong>
                   hola al mundo!
                 </p>
@@ -127,7 +179,6 @@
             <span class="dot" onclick="currentSlide(3)"></span>
           </div>
         </div>
-
       </section>
 
       <!-- Caracteristicas -->
@@ -138,8 +189,9 @@
               <i class="far fa-user-circle"></i>
             </div>
             <h3>caracteritica 1</h3>
-            <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Tempora ea quod voluptate nisi nihil soluta vero quia excepturi.
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora
+              ea quod voluptate nisi nihil soluta vero quia excepturi.
             </p>
           </div>
           <div class="caracteristicas">
@@ -147,8 +199,9 @@
               <i class="far fa-user-circle"></i>
             </div>
             <h3>caracteritica 2</h3>
-            <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Tempora ea quod voluptate nisi nihil soluta vero quia excepturi.
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora
+              ea quod voluptate nisi nihil soluta vero quia excepturi.
             </p>
           </div>
           <div class="caracteristicas">
@@ -156,47 +209,64 @@
               <i class="far fa-user-circle"></i>
             </div>
             <h3>caracteritica 3</h3>
-            <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Tempora ea quod voluptate nisi nihil soluta vero quia excepturi.
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora
+              ea quod voluptate nisi nihil soluta vero quia excepturi.
             </p>
           </div>
-
         </div>
-
       </section>
 
       <!-- Seccion profesores -->
       <section id="profesores">
         <div class="section-profesores">
           <div class="title-profesores">
-            <h2> Nuestros Profes</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Adipiscing ut diam arcu
-              vivamus erat dictum. Ipsum scelerisque aenean cursus id quis enim sagittis nullam
-              sodales. Integer augue id cursus massa duis donec gravida. Non faucibus rmentum
+            <h2>Nuestros Profes</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Adipiscing ut diam arcu vivamus erat dictum. Ipsum scelerisque
+              aenean cursus id quis enim sagittis nullam sodales. Integer augue
+              id cursus massa duis donec gravida. Non faucibus rmentum
             </p>
           </div>
           <!-- grilla -->
           <div class="content-right">
             <div class="container-teacher">
               <div class="g-uno">
-                <img src="/images/profe.png" alt="profe">
+                <img src="/images/profe.png" alt="profe" />
               </div>
-              <div class="cantidades">
-                <div>
-                  <p class="number"> <%= profesores.length %> </p>
-                  <p class="text">Profesores</p>
-                </div>
-                <div>
-                  <p class="number">+ 5000 </p>
-                  <p class="text">Alumnos</p>
-                </div>
-                <div>
-                  <p class="number"> 150 </p>
-                  <p class="text">Temáticas</p>
+              <div class="g-dos">
+                <img src="/images/profe.png" alt="profe" />
+              </div>
+              <div class="g-tres">
+                <img src="/images/profe.png" alt="profe" />
+              </div>
+              <div class="g-cuatro">
+                <img src="/images/profe.png" alt="profe" />
+              </div>
+              <div class="g-cinco">
+                <img src="/images/profe.png" alt="profe" />
+              </div>
+              <div class="g-seis">
+                <img src="/images/profe.png" alt="profe" />
+              </div>
+              <div class="g-siete">
+                <img src="/images/profe.png" alt="profe" />
+              </div>
+              <div class="g-ocho">
+                <img src="/images/profe.png" alt="profe" />
+              </div>
+              <div class="boton-mas">
+                <button>Ver mas</button>
+              </div>
+
+              <div class="est" id="section-estadisticas">
+                <div class="title-estadisticas">
+                  <h2>Hola al Mundo cuenta con </h2>
                 </div>
                 <div class="cantidades">
                   <div>
-                    <p class="number"> 50 </p>
+                    <p class="number"> <%=profesores.length %></p>
                     <p class="text">Profesores</p>
                   </div>
                   <div>
@@ -222,14 +292,14 @@
       <section id="sectionServicios" onload="reset()">
         <h2>Nuestros Servicios</h2>
 
-      <div class="serviceContainer">
-        <button class="preBtn">
-          <i class="fas fa-chevron-left"></i>
-        </button>
-        <button class="nxtBtn">
-          <i class="fas fa-chevron-right"></i>
-        </button>
-        <% servicios.forEach(function(servicio){ %>
+        <div class="serviceContainer">
+          <button class="preBtn">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="nxtBtn">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+          <% servicios.forEach(function(servicio){ %>
           <!-- card 1 -->
           <div class="serviceCard">
             <div class="serviceImg">
@@ -245,86 +315,91 @@
               </button>
             </div>
           </div>
-      <% }) %>
-
+          <% }) %>
         </div>
       </section>
 
-    <section id="sectionServicios" onload="reset()">
-      <h2>Recomendados para ti</h2>
-      <div class="serviceContainer">
-        <button class="preBtn">
-          <i class="fas fa-chevron-left"></i>
-        </button>
-        <button class="nxtBtn">
-          <i class="fas fa-chevron-right"></i>
-        </button>
+      <section id="sectionServicios" onload="reset()">
+        <h2>Recomendados para ti</h2>
+        <div class="serviceContainer">
+          <button class="preBtn">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="nxtBtn">
+            <i class="fas fa-chevron-right"></i>
+          </button>
           <% serviciosRecomendados.forEach(function(servicio){ %>
-            <!-- card 1 -->
-            <div class="serviceCard">
-              <div class="serviceImg">
-                <span class="discountTag">$ <%=servicio.price %></span>
-                <i class="fas fa-comments"></i>
-                <h4><%=servicio.name %></h4>
-                <p class="description"><%=servicio.description %></p>
-              </div>
-              <div class="serviceInfo">
-                <button>
-                  <i class="fas fa-shopping-cart"></i>
-                  Agregar al carrito
-                </button>
-              </div>
+          <!-- card 1 -->
+          <div class="serviceCard">
+            <div class="serviceImg">
+              <span class="discountTag">$ <%=servicio.price %></span>
+              <i class="fas fa-comments"></i>
+              <h4><%=servicio.name %></h4>
+              <p class="description"><%=servicio.description %></p>
             </div>
-        <% }) %>
-      </div>
-    </section>
+            <div class="serviceInfo">
+              <button>
+                <i class="fas fa-shopping-cart"></i>
+                Agregar al carrito
+              </button>
+            </div>
+          </div>
+          <% }) %>
+        </div>
+      </section>
 
-    <section id="sectionServicios" onload="reset()">
-      <h2>Los mas vendidos</h2>
-      <div class="serviceContainer">
-        <button class="preBtn">
-          <i class="fas fa-chevron-left"></i>
-        </button>
-        <button class="nxtBtn">
-          <i class="fas fa-chevron-right"></i>
-        </button>
+      <section id="sectionServicios" onload="reset()">
+        <h2>Los mas vendidos</h2>
+        <div class="serviceContainer">
+          <button class="preBtn">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="nxtBtn">
+            <i class="fas fa-chevron-right"></i>
+          </button>
           <% serviciosMasVendidos.forEach(function(servicio){ %>
-            <!-- card 1 -->
-            <div class="serviceCard">
-              <div class="serviceImg">
-                <span class="discountTag">$ <%=servicio.price %></span>
-                <i class="fas fa-comments"></i>
-                <h4><%=servicio.name %></h4>
-                <p class="description"><%=servicio.description %></p>
-              </div>
-              <div class="serviceInfo">
-                <button>
-                  <i class="fas fa-shopping-cart"></i>
-                  Agregar al carrito
-                </button>
-              </div>
+          <!-- card 1 -->
+          <div class="serviceCard">
+            <div class="serviceImg">
+              <span class="discountTag">$ <%=servicio.price %></span>
+              <i class="fas fa-comments"></i>
+              <h4><%=servicio.name %></h4>
+              <p class="description"><%=servicio.description %></p>
             </div>
-        <% }) %>
-
-
-      </div>
-    </section>
+            <div class="serviceInfo">
+              <button>
+                <i class="fas fa-shopping-cart"></i>
+                Agregar al carrito
+              </button>
+            </div>
+          </div>
+          <% }) %>
+        </div>
+      </section>
 
       <!-- Contacto -->
 
       <section class="idiomas">
         <div class="paises">
-          <div class="card"><img class="imagenes-paises" src="/images/banderas-españa.png"></div>
-          <div class="card"><img class="imagenes-paises" src="/images/banderas-inglaterra.png"></div>
-          <div class="card"><img class="imagenes-paises" src="/images/banderas-italia.png"></div>
-          <div class="card"><img class="imagenes-paises" src="/images/banderas-brasil.png"></div>
-        </div>
-        <div class="label">
-          <div>
-            ¿Que idioma te gustaría aprender o tener una conversación ?
+          <div class="card">
+            <img class="imagenes-paises" src="/images/banderas-españa.png" />
+          </div>
+          <div class="card">
+            <img
+              class="imagenes-paises"
+              src="/images/banderas-inglaterra.png"
+            />
+          </div>
+          <div class="card">
+            <img class="imagenes-paises" src="/images/banderas-italia.png" />
+          </div>
+          <div class="card">
+            <img class="imagenes-paises" src="/images/banderas-brasil.png" />
           </div>
         </div>
-
+        <div class="label">
+          <div>¿Que idioma te gustaría aprender o tener una conversación ?</div>
+        </div>
       </section>
 
       <!-- section Contacto -->
@@ -334,8 +409,7 @@
     <%- include('../partials/chat.ejs')%>
     <!-- Footer -->
     <%- include('../partials/footer.ejs')%>
-      <script src="/js/scriptHeader.js"></script>
-      <script src="/js/scriptCarrusel.js"></script>
-</body>
-
+    <script src="/js/scriptHeader.js"></script>
+    <script src="/js/scriptCarrusel.js"></script>
+  </body>
 </html>
