@@ -17,80 +17,8 @@
 </head>
 
 <body>
-  <header id="top-header">
-    <nav class="navbar" id="main">
-      <div class="responsive-one">
-        <a class="logo" href="#top-header">
-          <img src="/images/logo.svg" alt="logo">
-        </a>
-        <div class="search">
-          <i class="fas fa-search"></i>
-          <input class="input" type="search" name="buscar" placeholder="Buscar">
-        </div>
-      </div>
-      <ul class="nav-list" id="navList">
-        <li class="nav-item">
-          <a class="border" href="/home">Home</a>
-        </li>
-        <li class="nav-item">
-          <a href="#"> Profesores</a>
-        </li>
-        <li class="nav-item">
-          <a href="#"> Paquetes</a>
-        </li>
-        <li class="nav-item">
-          <a href="#"> Contacto</a>
-        </li>
-        <li class="nav-item">
-          <a href="#">En</a>
-        </li>
-      </ul>
-      <div class="responsive-two">
-        <div class="button-responsive" id="toggle-button">
-          <i class="fas fa-bars"></i>
-        </div>
-        <div class="botones-iconos">
-          <i class="far fa-heart"></i>
-          <button class="carrito" onclick="openNav()">
-            <i class="fas fa-shopping-cart"></i>
-          </button>
-          <div class="dropdown">
-            <button class="dropbtn">
-              <i class="far fa-user-circle"></i>
-            </button>
-            <!-- submenu -->
-            <div class="dropdown-content">
-              <div class="drop-header">
-                <i class="far fa-user-circle"></i>
-                <h4>Usuario</h4>
-              </div>
-              <ul>
-                <li>Membresías</li>
-                <li>Da clases</li>
-                <li>Mis cursos</li>
-              </ul>
-              <ul>
-                <li>Configuración</li>
-                <li>Métodos de pago</li>
-                <li>Historial de compra</li>
-              </ul>
-              <ul>
-                <li>Idiomas</li>
-              </ul>
-              <ul>
-                <li>Editar perfil</li>
-              </ul>
-
-              <ul class="outline">
-                <li>Ayuda</li>
-                <li>Cerrar sesión</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </nav>
-  </header>
+  <!-- Header -->
+  <%- include('../partials/header.ejs')%>
   <main class="container-main">
     <section class="container-filtros">
 
@@ -369,6 +297,8 @@
   <!-- Footer -->
   <%- include('../partials/footer.ejs')%>
 
+
+  <script src="/js/scriptHeader.js"></script>
 </body>
 
 </html>

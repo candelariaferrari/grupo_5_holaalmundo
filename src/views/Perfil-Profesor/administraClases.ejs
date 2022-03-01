@@ -10,86 +10,12 @@
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="/css/administraClases.css">
+    <link rel="stylesheet" href="/css/partialsCss/partials.css">
 
 </head>
 <body>
-    <header id="top-header">
-        <nav class="navbar" id="main">
-          <div class="responsive-one">
-            <a class="logo" href="#top-header">
-              <img src="/images/logo.svg" alt="logo">
-            </a>
-            <div class="search">
-              <i class="fas fa-search"></i>
-              <input class="input" type="search" name="buscar" placeholder="Buscar">
-            </div>
-          </div>
-          <ul class="nav-list" id="navList">
-            <li class="nav-item">
-              <a class="border" href="#top-header">Home</a>
-            </li>
-            <li class="nav-item">
-              <a href="#"> Profesores</a>
-            </li>
-            <li class="nav-item">
-              <a href="#"> Paquetes</a>
-            </li>
-            <li class="nav-item">
-              <a href="#"> Contacto</a>
-            </li>
-            <li class="nav-item">
-              <a href="#">En</a>
-            </li>
-          </ul>
-          <div class="responsive-two">
-            <div class="button-responsive" id="toggle-button">
-              <i class="fas fa-bars"></i>
-            </div>
-    
-            <div class="botones-iconos">
-              <i class="far fa-heart"></i>
-              <button class="carrito" onclick="openNav()">
-                <i class="fas fa-shopping-cart"></i>
-              </button>
-              <div class="dropdown">
-                <button class="dropbtn">
-                  <i class="far fa-user-circle"></i>
-                </button>
-                <!-- submenu -->
-                <div class="dropdown-content">
-                  <div class="drop-header">
-                    <i class="far fa-user-circle"></i>
-                    <h4>Usuario</h4>
-                  </div>
-                  <ul>
-                    <li>Membresías</li>
-                    <li>Da clases</li>
-                    <li>Mis cursos</li>
-                  </ul>
-                  <ul>
-                    <li>Configuración</li>
-                    <li>Métodos de pago</li>
-                    <li>Historial de compra</li>
-                  </ul>
-                  <ul>
-                    <li>Idiomas</li>
-                  </ul>
-                  <ul>
-                    <li>Editar perfil</li>
-                  </ul>
-    
-                  <ul class="outline">
-                    <li>Ayuda</li>
-                    <li>Cerrar sesión</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-    
-        </nav>
-      </header>
-
+    <!-- Header -->
+  <%- include('../partials/header.ejs')%>
       <main>
         <!-- Carrusel principal -->
         <section>
@@ -267,49 +193,8 @@
       <p>Chat</p>
     </div>
     <!-- Footer -->
-    <footer>
-      <div class="footerTeam">
-        <p>Creado por:</p>
-        <ul>
-          <li>
-            <a href="https://www.linkedin.com/" target="_blank">
-              Carlos -
-            </a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/" target="_blank">
-              Martina -
-            </a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/" target="_blank">
-              Carmela -
-            </a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/" target="_blank">
-              Candelaria
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div class="redesFooter">
-        <a href="#" target="_blank">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-        <a href="#" target="_blank">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="#" target="_blank">
-          <i class="fab fa-linkedin-in"></i>
-        </a>
-        <a href="#" target="_blank">
-          <i class="fab fa-whatsapp"></i>
-        </a>
-      </div>
-    </footer>
-  
-    <script src="/js/script.js"></script>
+    <%- include('../partials/footer.ejs')%>
+      <script src="/js/scriptHeader.js"></script>
 
 </body>
 </html>
