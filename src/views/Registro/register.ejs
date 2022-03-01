@@ -25,62 +25,57 @@
             <p class="HAM"> Hola al Mundo </p>
             <p class="subtitle"> Formulario de registro </p>
           </div>
-          <form name="form" class="formulario" action="/registro" method="POST">
+          <form name="form" class="formulario" action="/register" method="POST">
             <div class="campos">
               <label for="Nombre"></label>
-              <input placeholder="Nombre" type="text" name="Nombre" required>
+              <input placeholder="Nombre" type="text" name="nombre" required>
             </div>
 
             <div class="campos">
               <label for="Apellido"></label>
-              <input placeholder="Apellido" type="text" name="Apellido" required>
+              <input placeholder="Apellido" type="text" name="apellido" required>
             </div>
 
             <div class="campos">
               <label for="Celular"></label>
-              <input placeholder="Celular" type="tel" name="Celular" required>
+              <input placeholder="Celular" type="tel" name="celular" required>
             </div>
 
             <div class="campos">
               <label for="Mail"></label>
-              <input placeholder="Mail" type="email" name="Mail" required>
+              <input placeholder="Mail" type="email" name="email" required>
             </div>
 
             <div class="campos">
               <label for="Contrasenia"></label>
-              <input placeholder="Contraseña" type="password" name="Contrasenia" required>
+              <input placeholder="Contraseña" type="password" name="contrasenia" required>
             </div>
             <div class="campos">
-              <select required>
-                <option value=" " selected hidden> Sexo </option>
-                <option value="M"> Mujer </option>
-                <option value="H"> Hombre </option>
-              </select>
-            </div>
-            <div class="campos">
-              <select required name="user" id="user">
+              <select required name="sexo" id="sexo">
                 <label for="Soy:"></label>
-                <option name="soy" value="profesor"> Profesor </option>
-                <option name="soy" value="estudiante"> Estudiante </option>
+                <option name="sexo" value="M"> Mujer </option>
+                <option name="sexo" value="H"> Hombre </option>
               </select>
             </div>
             <div class="campos">
-              <input class="bot-tyc" type="checkbox" name="Condiciones" required>
+              <select required name="userRol" id="user">
+                <label for="Soy:"></label>
+                <option name="rol" value="profesor"> Profesor </option>
+                <option name="rol" value="estudiante"> Estudiante </option>
+              </select>
+            </div>
+            <div class="campos">
+              <input class="bot-tyc" type="checkbox" name="terminosCondiciones" required>
               <label class="term-y-cond"> Acepto los términos y condiciones </label>
             </div>
             <div class="campos">
-              <button class="reg" onclick="register()">
-                <a href="/inicioProfesores">
-                  Registrarse
-                </a>
+              <button type="submit" class="reg" onclick="register()">  Registrarse
+              
               </button>
-
             </div>
           </form>
-
         </div>
       </section>
-
 
   </main>
   <script>

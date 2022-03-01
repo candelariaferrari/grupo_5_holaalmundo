@@ -116,37 +116,27 @@
                     <div class = "layer2Info">
                         <div class = "layerFiltros">
                             <div class="layer-idiomas">
-                                <button type = "button" class="cardFiltros1">Idiomas <i class="fas fa-caret-down"></i></button> 
-                                <!-- <form action="/create-product" method="POST" class="create-form">
-                                    <label for="">Idiomas</label>
-                                    <select name="categoria" id="" class="control">
-                                        <option value="ingles">Ingles</option>
-                                        <option value="español">Español</option>
-                                        <option value="portugués">Portugués</option>
-                                        <option value="frances">Frances</option>
-                                        <option value="aleman">Aleman</option>
-                                    </select>
-                                </form>-->
+                                <button type = "button" class="cardFiltros1"> Idiomas <i class="fas fa-caret-down"></i></button> 
                                 <div class="filtro-idiomas-formulario">
                                     <div class="form-group">
                                         <input type="checkbox" name="idiomas" value="español" id="español" class="input-control">
-                                        <label for="español" >Español</label>  
+                                        <label for="español"> Español </label>  
                                     </div>    
                                     <div class="form-group">
                                         <input type="checkbox" name="idiomas" value="ingles" id="ingles" class="input-control">
-                                        <label for="ingles" >Ingles</label>  
+                                        <label for="ingles"> Ingles </label>  
                                     </div>
                                     <div class="form-group">
                                         <input type="checkbox" name="idiomas" value="portugues" id="portugues" class="input-control">
-                                        <label for="portugues" >Portugués</label>  
+                                        <label for="portugues"> Portugués </label>  
                                     </div>
                                     <div class="form-group">
                                         <input type="checkbox" name="idiomas" value="italiano" id="italiano" class="input-control">
-                                        <label for="italiano" >Italiano</label>  
+                                        <label for="italiano"> Italiano </label>  
                                     </div>
                                     <div class="form-group">
                                         <input type="checkbox" name="idiomas" value="aleman" id="aleman" class="input-control">
-                                        <label for="aleman" >Aleman</label>  
+                                        <label for="aleman"> Aleman </label>  
                                     </div>
                                 </div>  
                             </div> 
@@ -195,32 +185,7 @@
                                         <label for="aleman" >Musico</label>  
                                     </div>
                                 </div> 
-                            </div>       
-                            <div class="layer-horario">
-                                <button type = "button" class="cardFiltros4">Dias/Horario <i class="fas fa-caret-down"></i></button>
-                                <div class="filtro-horario-formulario">
-                                    <div class="form-group">
-                                        <input type="checkbox" name="idiomas" value="español" id="español" class="input-control">
-                                        <label for="español" >Lunes</label>  
-                                    </div>    
-                                    <div class="form-group">
-                                        <input type="checkbox" name="idiomas" value="ingles" id="ingles" class="input-control">
-                                        <label for="ingles" >Martes</label>  
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="checkbox" name="idiomas" value="portugues" id="portugues" class="input-control">
-                                        <label for="portugues" >Miercoles</label>  
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="checkbox" name="idiomas" value="italiano" id="italiano" class="input-control">
-                                        <label for="italiano" >Jueves</label>  
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="checkbox" name="idiomas" value="aleman" id="aleman" class="input-control">
-                                        <label for="aleman" >Viernes</label>  
-                                    </div>
-                                </div> 
-                            </div>   
+                            </div>        
                             <div class="layer-conversacion">
                                 <button type = "button" class="cardFiltros5">Conversaciones <i class="fas fa-caret-down"></i></button>
                                 <div class="filtro-conversacion-formulario">
@@ -269,8 +234,9 @@
                             </div>  
                         </div>
                         <div class = "layer2InfoContainer">
-                            <div class = "profeContainer">
-                                <img class = "profeImage" src = "/images/imagen-profesor.png">
+                          <% profesores.forEach(function(profesor) { %>
+                              <div class = "profeContainer">
+                                <img class = "profeImage" src = "/images/<%=profesor.image %>">
                                 <div class="puntuacion">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
@@ -279,166 +245,10 @@
                                     <i class="far fa-star"></i>
                                 </div>
                                 <div class = "footer-profesor">
-                                    <button class = "footer-profesor">Nombre profesor</button>
+                                    <button class = "footer-profesor"><%= profesor.name %> </button>
                                 </div>
                             </div>
-                            <div class = "profeContainer">
-                            <img class = "profeImage" src ="/images/imagen-profesor.png">
-                            <div class="puntuacion">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="far fa-star"></i>
-                                <i class="far fa-star"></i>
-                            </div>
-                            <div class = "footer-profesor">
-                                <button class = "footer-profesor">Nombre profesor</button>
-                            </div>
-                            </div>
-                            
-                            <div class = "profeContainer">
-                                <img class = "profeImage" src = "/images/imagen-profesor.png">
-                                <div class="puntuacion">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="far fa-star"></i>
-                                    <i class="far fa-star"></i>
-                                </div>
-                                <div class = "footer-profesor">
-                                    <button class = "footer-profesor">Nombre profesor</button>
-                                </div>
-                            </div>
-                            <div class = "profeContainer">
-                                <img class = "profeImage" src = "/images/imagen-profesor.png">
-                                <div class="puntuacion">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="far fa-star"></i>
-                                    <i class="far fa-star"></i>
-                                </div>
-                                <div class = "footer-profesor">
-                                    <button class = "footer-profesor">Nombre profesor</button>
-                                </div>
-                            </div>
-                            <div class = "profeContainer">
-                                <img class = "profeImage" src = "/images/imagen-profesor.png">
-                                <div class="puntuacion">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="far fa-star"></i>
-                                    <i class="far fa-star"></i>
-                                </div>
-                                <div class = "footer-profesor">
-                                    <button class = "footer-profesor">Nombre profesor</button>
-                                </div>
-                            </div>
-                            <div class = "profeContainer">
-                                <img class = "profeImage" src = "/images/imagen-profesor.png">
-                                <div class="puntuacion">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="far fa-star"></i>
-                                    <i class="far fa-star"></i>
-                                </div>
-                                <div class = "footer-profesor">
-                                    <button class = "footer-profesor">Nombre profesor</button>
-                                </div>
-                            </div>
-                            <div class = "profeContainer">
-                                <img class = "profeImage" src = "/images/imagen-profesor.png">
-                                <div class="puntuacion">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="far fa-star"></i>
-                                    <i class="far fa-star"></i>
-                                </div>
-                                <div class = "footer-profesor">
-                                    <button class = "footer-profesor">Nombre profesor</button>
-                                </div>
-                            </div>
-                            <div class = "profeContainer">
-                                <img class = "profeImage" src = "/images/imagen-profesor.png">
-                                <div class="puntuacion">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="far fa-star"></i>
-                                    <i class="far fa-star"></i>
-                                </div>
-                                <div class = "footer-profesor">
-                                    <button class = "footer-profesor">Nombre profesor</button>
-                                </div>
-                            </div>
-                            <div class = "profeContainer">
-                                <img class = "profeImage" src = "/images/imagen-profesor.png">
-                                <div class="puntuacion">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="far fa-star"></i>
-                                    <i class="far fa-star"></i>
-                                </div>
-                                <div class = "footer-profesor">
-                                    <button class = "footer-profesor">Nombre profesor</button>
-                                </div>
-                            </div>
-                            <div class = "profeContainer">
-                                <img class = "profeImage" src = "/images/imagen-profesor.png">
-                                <div class="puntuacion">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="far fa-star"></i>
-                                    <i class="far fa-star"></i>
-                                </div>
-                                <div class = "footer-profesor">
-                                    <button class = "footer-profesor">Nombre profesor</button>
-                                </div>
-                            </div>
-                            <div class = "profeContainer">
-                                <img class = "profeImage" src = "/images/imagen-profesor.png">
-                                <div class="puntuacion">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="far fa-star"></i>
-                                    <i class="far fa-star"></i>
-                                </div>
-                                <div class = "footer-profesor">
-                                    <button class = "footer-profesor">Nombre profesor</button>
-                                </div>
-                            </div>
-                            <div class = "profeContainer">
-                                <img class = "profeImage" src = "/images/imagen-profesor.png">
-                                <div class="puntuacion">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="far fa-star"></i>
-                                    <i class="far fa-star"></i>
-                                </div>
-                                <div class = "footer-profesor">
-                                    <button class = "footer-profesor">Nombre profesor</button>
-                                </div>
-                            </div>
-                            <div class = "profeContainer">
-                                <img class = "profeImage" src = "/images/imagen-profesor.png">
-                                <div class="puntuacion">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="far fa-star"></i>
-                                    <i class="far fa-star"></i>
-                                </div>
-                                <div class = "footer-profesor">
-                                    <button >Nombre profesor</button>
-                                </div>
-                            </div>
+                          <% }) %>
                         </div>
                     </div>
                 </div>
@@ -455,127 +265,23 @@
                   <button class="nxtBtn">
                     <i class="fas fa-chevron-right"></i>
                   </button>
-                  <!-- card 1 -->
-                  <div class="serviceCard">
-                    <div class="serviceImg">
-                      <span class="discountTag">$5000</span>
-                      <i class="fas fa-comments"></i>
-                      <h4>Conversación</h4>
-                      <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
+                  <% servicios.forEach(function(servicio){ %>
+                    <!-- card 1 -->
+                    <div class="serviceCard">
+                      <div class="serviceImg">
+                        <span class="discountTag">$ <%=servicio.price %></span>
+                        <i class="fas fa-comments"></i>
+                        <h4><%=servicio.name %></h4>
+                        <p class="description"><%=servicio.description %></p>
+                      </div>
+                      <div class="serviceInfo">
+                        <button>
+                          <i class="fas fa-shopping-cart"></i>
+                          Agregar al carrito
+                        </button>
+                      </div>
                     </div>
-                    <div class="serviceInfo">
-                      <button>
-                        <i class="fas fa-shopping-cart"></i>
-                        Agregar al carrito
-                      </button>
-                    </div>
-                  </div>
-                  <!-- card 2 -->
-                  <div class="serviceCard">
-                    <div class="serviceImg">
-                      <span class="discountTag">$5000</span>
-                      <i class="fas fa-comments"></i>
-                      <h4>Conversación Grupal</h4>
-                      <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
-                    </div>
-                    <div class="serviceInfo">
-                      <button>
-                        <i class="fas fa-shopping-cart"></i>
-                        Agregar al carrito
-                      </button>
-                    </div>
-                  </div>
-                  <!-- card 3 -->
-                  <div class="serviceCard">
-                    <div class="serviceImg">
-                      <span class="discountTag">$5000</span>
-                      <i class="fas fa-comments"></i>
-                      <h4>Preparación Exámen</h4>
-                      <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
-                    </div>
-                    <div class="serviceInfo">
-                      <button>
-                        <i class="fas fa-shopping-cart"></i>
-                        Agregar al carrito
-                      </button>
-                    </div>
-                  </div>
-                  <!-- card 4 -->
-                  <div class="serviceCard">
-                    <div class="serviceImg">
-                      <span class="discountTag">$5000</span>
-                      <i class="fas fa-comments"></i>
-                      <h4>Perfeccionamiento profesional</h4>
-                      <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
-                    </div>
-                    <div class="serviceInfo">
-                      <button>
-                        <i class="fas fa-shopping-cart"></i>
-                        Agregar al carrito
-                      </button>
-                    </div>
-                  </div>
-                  <!-- card 5 -->
-                  <div class="serviceCard">
-                    <div class="serviceImg">
-                      <span class="discountTag">$5000</span>
-                      <i class="fas fa-comments"></i>
-                      <h4>Clases individuales</h4>
-                      <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
-                    </div>
-                    <div class="serviceInfo">
-                      <button>
-                        <i class="fas fa-shopping-cart"></i>
-                        Agregar al carrito
-                      </button>
-                    </div>
-                  </div>
-                  <!-- card 6 -->
-                  <div class="serviceCard">
-                    <div class="serviceImg">
-                      <span class="discountTag">$5000</span>
-                      <i class="fas fa-comments"></i>
-                      <h4>Clases Grupales</h4>
-                      <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
-                    </div>
-                    <div class="serviceInfo">
-                      <button>
-                        <i class="fas fa-shopping-cart"></i>
-                        Agregar al carrito
-                      </button>
-                    </div>
-                  </div>
-                  <!-- card 7 -->
-                  <div class="serviceCard">
-                    <div class="serviceImg">
-                      <span class="discountTag">$5000</span>
-                      <i class="fas fa-comments"></i>
-                      <h4>Conversacion por tematica</h4>
-                      <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
-                    </div>
-                    <div class="serviceInfo">
-                      <button>
-                        <i class="fas fa-shopping-cart"></i>
-                        Agregar al carrito
-                      </button>
-                    </div>
-                  </div>
-                  <!-- card 8 -->
-                  <div class="serviceCard">
-                    <div class="serviceImg">
-                      <span class="discountTag">$5000</span>
-                      <i class="fas fa-comments"></i>
-                      <h4>Clases semanales</h4>
-                      <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
-                    </div>
-                    <div class="serviceInfo">
-                      <button>
-                        <i class="fas fa-shopping-cart"></i>
-                        Agregar al carrito
-                      </button>
-                    </div>
-                  </div>
-          
+                  <% }) %>
                 </div>
               </section>
         </div>
@@ -591,125 +297,23 @@
                     <i class="fas fa-chevron-right"></i>
                   </button>
                   <!-- card 1 -->
-                  <div class="serviceCard">
-                    <div class="serviceImg">
-                      <span class="discountTag">$5000</span>
-                      <i class="fas fa-comments"></i>
-                      <h4>Conversación</h4>
-                      <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
-                    </div>
-                    <div class="serviceInfo">
-                      <button>
-                        <i class="fas fa-shopping-cart"></i>
-                        Agregar al carrito
-                      </button>
-                    </div>
-                  </div>
-                  <!-- card 2 -->
-                  <div class="serviceCard">
-                    <div class="serviceImg">
-                      <span class="discountTag">$5000</span>
-                      <i class="fas fa-comments"></i>
-                      <h4>Conversación Grupal</h4>
-                      <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
-                    </div>
-                    <div class="serviceInfo">
-                      <button>
-                        <i class="fas fa-shopping-cart"></i>
-                        Agregar al carrito
-                      </button>
-                    </div>
-                  </div>
-                  <!-- card 3 -->
-                  <div class="serviceCard">
-                    <div class="serviceImg">
-                      <span class="discountTag">$5000</span>
-                      <i class="fas fa-comments"></i>
-                      <h4>Preparación Exámen</h4>
-                      <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
-                    </div>
-                    <div class="serviceInfo">
-                      <button>
-                        <i class="fas fa-shopping-cart"></i>
-                        Agregar al carrito
-                      </button>
-                    </div>
-                  </div>
-                  <!-- card 4 -->
-                  <div class="serviceCard">
-                    <div class="serviceImg">
-                      <span class="discountTag">$5000</span>
-                      <i class="fas fa-comments"></i>
-                      <h4>Perfeccionamiento profesional</h4>
-                      <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
-                    </div>
-                    <div class="serviceInfo">
-                      <button>
-                        <i class="fas fa-shopping-cart"></i>
-                        Agregar al carrito
-                      </button>
-                    </div>
-                  </div>
-                  <!-- card 5 -->
-                  <div class="serviceCard">
-                    <div class="serviceImg">
-                      <span class="discountTag">$5000</span>
-                      <i class="fas fa-comments"></i>
-                      <h4>Clases individuales</h4>
-                      <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
-                    </div>
-                    <div class="serviceInfo">
-                      <button>
-                        <i class="fas fa-shopping-cart"></i>
-                        Agregar al carrito
-                      </button>
-                    </div>
-                  </div>
-                  <!-- card 6 -->
-                  <div class="serviceCard">
-                    <div class="serviceImg">
-                      <span class="discountTag">$5000</span>
-                      <i class="fas fa-comments"></i>
-                      <h4>Clases Grupales</h4>
-                      <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
-                    </div>
-                    <div class="serviceInfo">
-                      <button>
-                        <i class="fas fa-shopping-cart"></i>
-                        Agregar al carrito
-                      </button>
-                    </div>
-                  </div>
-                  <!-- card 7 -->
-                  <div class="serviceCard">
-                    <div class="serviceImg">
-                      <span class="discountTag">$5000</span>
-                      <i class="fas fa-comments"></i>
-                      <h4>Conversacion por tematica</h4>
-                      <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
-                    </div>
-                    <div class="serviceInfo">
-                      <button>
-                        <i class="fas fa-shopping-cart"></i>
-                        Agregar al carrito
-                      </button>
-                    </div>
-                  </div>
-                  <!-- card 8 -->
-                  <div class="serviceCard">
-                    <div class="serviceImg">
-                      <span class="discountTag">$5000</span>
-                      <i class="fas fa-comments"></i>
-                      <h4>Clases semanales</h4>
-                      <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
-                    </div>
-                    <div class="serviceInfo">
-                      <button>
-                        <i class="fas fa-shopping-cart"></i>
-                        Agregar al carrito
-                      </button>
-                    </div>
-                  </div>
+                    <% serviciosRecomendados.forEach(function(servicio){ %>
+                      <!-- card 1 -->
+                      <div class="serviceCard">
+                        <div class="serviceImg">
+                          <span class="discountTag">$ <%=servicio.price %></span>
+                          <i class="fas fa-comments"></i>
+                          <h4><%=servicio.name %></h4>
+                          <p class="description"><%=servicio.description %></p>
+                        </div>
+                        <div class="serviceInfo">
+                          <button>
+                            <i class="fas fa-shopping-cart"></i>
+                            Agregar al carrito
+                          </button>
+                        </div>
+                      </div>
+                    <% }) %>
                 </div>
               </section>
               <section id="sectionServicios" onload="reset()">
@@ -722,125 +326,23 @@
                     <i class="fas fa-chevron-right"></i>
                   </button>
                   <!-- card 1 -->
-                  <div class="serviceCard">
-                    <div class="serviceImg">
-                      <span class="discountTag">$5000</span>
-                      <i class="fas fa-comments"></i>
-                      <h4>Conversación</h4>
-                      <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
-                    </div>
-                    <div class="serviceInfo">
-                      <button>
-                        <i class="fas fa-shopping-cart"></i>
-                        Agregar al carrito
-                      </button>
-                    </div>
-                  </div>
-                  <!-- card 2 -->
-                  <div class="serviceCard">
-                    <div class="serviceImg">
-                      <span class="discountTag">$5000</span>
-                      <i class="fas fa-comments"></i>
-                      <h4>Conversación Grupal</h4>
-                      <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
-                    </div>
-                    <div class="serviceInfo">
-                      <button>
-                        <i class="fas fa-shopping-cart"></i>
-                        Agregar al carrito
-                      </button>
-                    </div>
-                  </div>
-                  <!-- card 3 -->
-                  <div class="serviceCard">
-                    <div class="serviceImg">
-                      <span class="discountTag">$5000</span>
-                      <i class="fas fa-comments"></i>
-                      <h4>Preparación Exámen</h4>
-                      <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
-                    </div>
-                    <div class="serviceInfo">
-                      <button>
-                        <i class="fas fa-shopping-cart"></i>
-                        Agregar al carrito
-                      </button>
-                    </div>
-                  </div>
-                  <!-- card 4 -->
-                  <div class="serviceCard">
-                    <div class="serviceImg">
-                      <span class="discountTag">$5000</span>
-                      <i class="fas fa-comments"></i>
-                      <h4>Perfeccionamiento profesional</h4>
-                      <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
-                    </div>
-                    <div class="serviceInfo">
-                      <button>
-                        <i class="fas fa-shopping-cart"></i>
-                        Agregar al carrito
-                      </button>
-                    </div>
-                  </div>
-                  <!-- card 5 -->
-                  <div class="serviceCard">
-                    <div class="serviceImg">
-                      <span class="discountTag">$5000</span>
-                      <i class="fas fa-comments"></i>
-                      <h4>Clases individuales</h4>
-                      <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
-                    </div>
-                    <div class="serviceInfo">
-                      <button>
-                        <i class="fas fa-shopping-cart"></i>
-                        Agregar al carrito
-                      </button>
-                    </div>
-                  </div>
-                  <!-- card 6 -->
-                  <div class="serviceCard">
-                    <div class="serviceImg">
-                      <span class="discountTag">$5000</span>
-                      <i class="fas fa-comments"></i>
-                      <h4>Clases Grupales</h4>
-                      <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
-                    </div>
-                    <div class="serviceInfo">
-                      <button>
-                        <i class="fas fa-shopping-cart"></i>
-                        Agregar al carrito
-                      </button>
-                    </div>
-                  </div>
-                  <!-- card 7 -->
-                  <div class="serviceCard">
-                    <div class="serviceImg">
-                      <span class="discountTag">$5000</span>
-                      <i class="fas fa-comments"></i>
-                      <h4>Conversacion por tematica</h4>
-                      <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
-                    </div>
-                    <div class="serviceInfo">
-                      <button>
-                        <i class="fas fa-shopping-cart"></i>
-                        Agregar al carrito
-                      </button>
-                    </div>
-                  </div>
-                  <!-- card 8 -->
-                  <div class="serviceCard">
-                    <div class="serviceImg">
-                      <span class="discountTag">$5000</span>
-                      <i class="fas fa-comments"></i>
-                      <h4>Clases semanales</h4>
-                      <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
-                    </div>
-                    <div class="serviceInfo">
-                      <button>
-                        <i class="fas fa-shopping-cart"></i>
-                        Agregar al carrito
-                      </button>
-                    </div>
-                  </div>
+                    <% serviciosMasVendidos.forEach(function(servicio){ %>
+                      <!-- card 1 -->
+                      <div class="serviceCard">
+                        <div class="serviceImg">
+                          <span class="discountTag">$ <%=servicio.price %></span>
+                          <i class="fas fa-comments"></i>
+                          <h4><%=servicio.name %></h4>
+                          <p class="description"><%=servicio.description %></p>
+                        </div>
+                        <div class="serviceInfo">
+                          <button>
+                            <i class="fas fa-shopping-cart"></i>
+                            Agregar al carrito
+                          </button>
+                        </div>
+                      </div>
+                    <% }) %> 
                 </div>
               </section>  
             <!--  
