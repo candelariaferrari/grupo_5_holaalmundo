@@ -1,0 +1,76 @@
+[
+    {
+        "id": "a0129fpmkzk",
+        "nombre": "andres",
+        "apellido": "jaramillo",
+        "celular": "3187936659",
+        "email": "andres@yahoo.com",
+        "contrasenia": "125",
+        "sexo": "H",
+        "userRol": "profesor",
+        "terminosCondiciones": "on",
+        "admin": false
+    },
+    {
+        "id": "9uisg7ni42q",
+        "nombre": "Carlos",
+        "apellido": "Jaramillo",
+        "celular": "3187936659",
+        "email": "cjaramilloportilla@gmail.com",
+        "contrasenia": "12345",
+        "sexo": "H",
+        "userRol": "estudiante",
+        "terminosCondiciones": "on",
+        "admin": true
+    },
+    {
+        "id": "ostyhkjyzte",
+        "nombre": "Andrea",
+        "apellido": "Jaramillo",
+        "email": "andre@gmail.com",
+        "contrasena": "12345"
+    },
+    {
+        "id": "1wjyju7zc7m",
+        "nombre": "CARLOS ALBERTO",
+        "apellido": "PORTILLA",
+        "email": "cARLOS.JARAMILLO18@YAHOO.COM",
+        "contrasena": "12345"
+    },
+    {
+        "id": "gi0c8698g7t",
+        "nombre": "andres",
+        "apellido": "jaramillo",
+        "celular": "3187936659",
+        "email": "andres@yahoo.com",
+        "contrasenia": "12345",
+        "sexo": "H",
+        "userRol": "estudiante",
+        "terminosCondiciones": "on"
+    },
+    {
+        "id": "wx6z2knid1n",
+        "nombre": "Esteban",
+        "apellido": "PORTILLA",
+        "email": "esteban@gmail.com",
+        "contrasena": "12345"
+    },
+    {
+        "id": "cvymcyqtj9h",
+        "nombre": "Cande",
+        "apellido": "Digital",
+        "email": "cande@gmail.com",
+        "contrasena": "12345"
+    },
+    {
+        "id": "hpg1y5by8xl",
+        "nombre": "carme",
+        "apellido": "digital",
+        "celular": "3187936659",
+        "email": "cande@gmail.com",
+        "contrasenia": "12345",
+        "sexo": "H",
+        "userRol": "estudiante",
+        "terminosCondiciones": "on"
+    }
+]

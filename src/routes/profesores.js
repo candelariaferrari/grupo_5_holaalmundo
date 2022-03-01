@@ -1,15 +1,30 @@
+// ************ Require's ************
 const express = require('express');
-
 const router = express.Router();
+const multer = require('multer');
+const path = require('path');
 
-let profesoresController = require('../controllers/profesoresController');
+// ************ Controller Require ************
+const profesController = require('../controllers/profesoresController');
 
-router.get('/login', profesoresController.login);
-router.get('/registro', profesoresController.registro);
-router.get('/logged', profesoresController.homeLogged);
-router.get('/perfil1', profesoresController.perfil1);
-router.get('/perfil2', profesoresController.perfil2);
-router.get('/administrar', profesoresController.administrar_clases);
+// ************ Handler Image Files Profesores ****************************
+const multerDiskStorageProfesores = multer.diskStorage({
+    destination: (req, file, cb) => {
+        cb(null, path.join(__dirname, '../../public/images/profesores'));
+    },
+    filename: (req, file, cb) => {
+        const newFileName = 'img-user-' + Date.now() + path.extname(file.originalname);
+        cb(null, newFileName);
+    }
+});
+
+const fileUploadProfesores = multer({storage: multerDiskStorageProfesores});
+
+/* Profes */
+router.get('/inicioProfesores', profesController.homeLogged);
+router.get('/inicioProfesores/perfil1', profesController.perfil1);
+router.get('/inicioProfesores/perfil2', profesController.perfil2);
+router.get('/inicioProfesores/administrarClases', profesController.administrarClases);
 
 
 module.exports = router;

@@ -14,8 +14,8 @@
   <link rel="stylesheet" href="/css/partialsCss/partials.css">
 </head>
 
-<body id="guest">
-  <%- include('../partials/header.ejs')%>
+<body>
+  <%- include('../partials/header')%>
   <main>
     <!-- Carrusel principal -->
     <section>
@@ -34,14 +34,14 @@
           <img class="imagen" src="/images/carrusel02.png">
           <div class="flex-form">
             <div class="text-one">
-              <h2>Te gustaría enseñar con nosotros?</h2>
+              <h2>¿Te gustaría enseñar con nosotros?</h2>
               <p>Lorem ipsum dolor, sit amet consectetur
                 adipisicing elit. Alias, illo minima quidem
                 nihil quae earum ex quas maxime at nulla deleniti
                 aliquid modi atque minus iusto consequuntur
                 quibusdam cupiditate sequi.
               </p>
-              <p class="subtitle">Que esperas?
+              <p class="subtitle">¿Que esperas?
                 <strong>forma parte de la comunidad</strong>
                 hola al mundo!
               </p>
@@ -59,7 +59,7 @@
                 </div>
               </div>
               <div class="form-one">
-                <form action="#" method="post">
+                <form action="/" method="POST">
                   <input class="input-form" type="text" name="nombre" id="nombre" placeholder="Nombre">
                   <input class="input-form" type="text" name="apellido" id="apellido" placeholder="Apellido">
                   <input class="input-form" type="email" name="email" id="email" placeholder="Email">
@@ -89,7 +89,7 @@
                 </div>
               </div>
               <div class="form-one">
-                <form action="#" method="post">
+                <form action="/" method="POST">
                   <input class="input-form" type="text" name="nombre" id="input-two" placeholder="Nombre">
                   <input class="input-form" type="text" name="apellido" id="input-two" placeholder="Apellido">
                   <input class="input-form" type="email" name="email" id="input-two" placeholder="Email">
@@ -155,7 +155,7 @@
     <section id="profesores">
       <div class="section-profesores">
         <div class="title-profesores">
-          <h2> Nuestros Profes</h2>
+          <h2> Nuestros Profesores</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Adipiscing ut diam arcu
             vivamus erat dictum. Ipsum scelerisque aenean cursus id quis enim sagittis nullam
             sodales. Integer augue id cursus massa duis donec gravida. Non faucibus rmentum
@@ -164,30 +164,27 @@
         <!-- grilla -->
         <div class="content-right">
           <div class="container-teacher">
-            <div class="g-uno">
-              <img src="/images/profe.png" alt="profe">
-            </div>
-            <div class="g-dos">
-              <img src="/images/profe.png" alt="profe">
-            </div>
-            <div class="g-tres">
-              <img src="/images/profe.png" alt="profe">
-            </div>
-            <div class="g-cuatro">
-              <img src="/images/profe.png" alt="profe">
-            </div>
-            <div class="g-cinco">
-              <img src="/images/profe.png" alt="profe">
-            </div>
-            <div class="g-seis">
-              <img src="/images/profe.png" alt="profe">
-            </div>
-            <div class="g-siete">
-              <img src="/images/profe.png" alt="profe">
-            </div>
-            <div class="g-ocho">
-              <img src="/images/profe.png" alt="profe">
-            </div>
+
+            <% data.profesores.forEach(function(profesor){ %>
+              <div class="g-uno">
+                <img src="/images/<%=profesor.image %>" alt="profe"> 
+              </div>
+              <div class="g-dos">
+                <img src="/images/<%=profesor.image %>" alt="profe">              </div>
+              <div class="g-tres">
+                <img src="/images/<%=profesor.image %>" alt="profe">              </div>
+              <div class="g-cuatro">
+                <img src="/images/<%=profesor.image %>" alt="profe">              </div>
+              <div class="g-cinco">
+                <img src="/images/<%=profesor.image %>" alt="profe">              </div>
+              <div class="g-seis">
+                <img src="/images/<%=profesor.image %>" alt="profe">              </div>
+              <div class="g-siete">
+                <img src="/images/<%=profesor.image %>" alt="profe">              </div>
+              <div class="g-ocho">
+                <img src="/images/<%=profesor.image %>" alt="profe">              </div>
+            <% }) %>
+          
             <div class="boton-mas">
               <button>Ver mas</button>
             </div>
@@ -198,7 +195,7 @@
               </div>
               <div class="cantidades">
                 <div>
-                  <p class="number"> 50 </p>
+                  <p class="number"> <%= data.profesores.length %> </p>
                   <p class="text">Profesores</p>
                 </div>
                 <div>
@@ -230,120 +227,32 @@
         <button class="nxtBtn">
           <i class="fas fa-chevron-right"></i>
         </button>
-        <!-- card 1 -->
-        <!-- card 2 -->
-        <div class="serviceCard">
-          <div class="serviceImg">
-            <span class="discountTag">$5000</span>
-            <i class="fas fa-comments"></i>
-            <h4>Conversación Grupal</h4>
-            <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
-          </div>
-          <div class="serviceInfo">
-            <button>
-              <i class="fas fa-shopping-cart"></i>
-              Agregar al carrito
-            </button>
-          </div>
-        </div>
-        <!-- card 3 -->
-        <div class="serviceCard">
-          <div class="serviceImg">
-            <span class="discountTag">$5000</span>
-            <i class="fas fa-comments"></i>
-            <h4>Preparación Exámen</h4>
-            <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
-          </div>
-          <div class="serviceInfo">
-            <button>
-              <i class="fas fa-shopping-cart"></i>
-              Agregar al carrito
-            </button>
-          </div>
-        </div>
-        <!-- card 4 -->
-        <div class="serviceCard">
-          <div class="serviceImg">
-            <span class="discountTag">$5000</span>
-            <i class="fas fa-comments"></i>
-            <h4>Perfeccionamiento profesional</h4>
-            <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
-          </div>
-          <div class="serviceInfo">
-            <button>
-              <i class="fas fa-shopping-cart"></i>
-              Agregar al carrito
-            </button>
-          </div>
-        </div>
-        <!-- card 5 -->
-        <div class="serviceCard">
-          <div class="serviceImg">
-            <span class="discountTag">$5000</span>
-            <i class="fas fa-comments"></i>
-            <h4>Clases individuales</h4>
-            <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
-          </div>
-          <div class="serviceInfo">
-            <button>
-              <i class="fas fa-shopping-cart"></i>
-              Agregar al carrito
-            </button>
-          </div>
-        </div>
-        <!-- card 6 -->
-        <div class="serviceCard">
-          <div class="serviceImg">
-            <span class="discountTag">$5000</span>
-            <i class="fas fa-comments"></i>
-            <h4>Clases Grupales</h4>
-            <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
-          </div>
-          <div class="serviceInfo">
-            <button>
-              <i class="fas fa-shopping-cart"></i>
-              Agregar al carrito
-            </button>
-          </div>
-        </div>
-        <!-- card 7 -->
-        <div class="serviceCard">
-          <div class="serviceImg">
-            <span class="discountTag">$5000</span>
-            <i class="fas fa-comments"></i>
-            <h4>Conversacion por tematica</h4>
-            <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
-          </div>
-          <div class="serviceInfo">
-            <button>
-              <i class="fas fa-shopping-cart"></i>
-              Agregar al carrito
-            </button>
-          </div>
-        </div>
-        <!-- card 8 -->
-        <div class="serviceCard">
-          <div class="serviceImg">
-            <span class="discountTag">$5000</span>
-            <i class="fas fa-comments"></i>
-            <h4>Clases semanales</h4>
-            <p class="description">Lorem ipsum dolor sit amet dolor sit amet</p>
-          </div>
-          <div class="serviceInfo">
-            <button>
-              <i class="fas fa-shopping-cart"></i>
-              Agregar al carrito
-            </button>
-          </div>
-        </div>
+        <% data.servicios.forEach(function(servicio){ %>
+            <!-- card 1 -->
+            <div class="serviceCard">
+              <div class="serviceImg">
+                <span class="discountTag">$ <%=servicio.price %></span>
+                <i class="fas fa-comments"></i>
+                <h4><%=servicio.name %></h4>
+                <p class="description"><%=servicio.description %></p>
+              </div>
+              <div class="serviceInfo">
+                <button>
+                  <i class="fas fa-shopping-cart"></i>
+                  Agregar al carrito
+                </button>
+              </div>
+            </div>
+        <% }) %>
 
       </div>
     </section>
     <!-- section Contacto -->
-    <%- include('../partials/contact.ejs')%>
+   <%- include('../partials/contact')%>
+  
   </main>
   <!-- chat -->
-  <%- include('../partials/chat.ejs')%>
+  <%- include('../partials/chat')%>
   <!-- Footer -->
   <%- include('../partials/footer.ejs')%>
   <script src="/js/scriptHeader.js"></script>
