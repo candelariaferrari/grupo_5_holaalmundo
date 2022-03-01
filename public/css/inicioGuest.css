@@ -81,7 +81,7 @@ blanco: #ffffff
   width: 400px;
   height: 550px;
   border-radius: 15px;
-  padding: 2em;
+  padding: 1em 2em;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -92,7 +92,7 @@ blanco: #ffffff
   width: 400px;
   height: 550px;
   border-radius: 15px;
-  padding: 2em;
+  padding: 1em 2em;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -103,8 +103,7 @@ blanco: #ffffff
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin-bottom: 2em;
-  margin-top: 2em;
+  margin: 0.5em auto 1em auto;
 }
 .form-carrusel .flex-icon .circulo {
   background-color: #fff;
@@ -134,7 +133,7 @@ blanco: #ffffff
 .form-carrusel .input-form {
   display: block;
   width: 300px;
-  margin: 1em auto;
+  margin: 0.5em auto;
   background-color: #00ffcb;
   padding: 0.5em 1em;
   border-radius: 15px;
@@ -145,7 +144,7 @@ blanco: #ffffff
 .form-carrusel.two .input-form {
   display: block;
   width: 300px;
-  margin: 1em auto;
+  margin: 0.5em auto;
   background-color: #212121;
   padding: 0.5em 1em;
   border-radius: 15px;
@@ -167,6 +166,41 @@ input:focus,
 input[type]:focus {
   outline: 0 none;
 }
+.flexTerminos{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.5em;
+}
+.bot-tyc {
+  border-radius: 10px;
+  border-color: #00FFCB;
+}
+
+.term-y-cond {
+  font-size: 11px;
+  color: #fff;
+  position: relative;
+  margin-left: 0.5em;
+}
+#input-two .bot-tyc{
+  border-color: #212121;
+}
+#input-two .term-y-cond{
+  color: #212121;
+}
+select {
+  text-align-last: left;
+  padding-left: 6px;
+  direction: ltr;
+  background-color: #00FFCB;
+  border-radius: 10px;
+  width: 244px;
+  height: 36px;
+  border: transparent;
+  color: #424242;
+  font-size: 14px;
+}
 .form-one button.register {
   border: none;
   background-color: #fff;
@@ -178,6 +212,11 @@ input[type]:focus {
   padding: 0.5em;
   text-transform: capitalize;
   border-radius: 15px;
+  
+}
+.form-one button:hover.register{
+  background-color: #6243f7;
+  color: #00FFCB;
 }
 .content-dot {
   display: flex;
