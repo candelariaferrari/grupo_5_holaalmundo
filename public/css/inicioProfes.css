@@ -19,7 +19,49 @@ blanco: #ffffff
     font-family: "Roboto", sans-serif;
     height: fit-content;
   }
-
+  /* ----- SLIDE PROFES ----- */
+  #slideProfes{
+    background-image: url(../images/slideProfes.png);
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center top; 
+    width: 100vw;
+    height: 888px;
+  }
+  .contenedorSlide{
+    position: relative;
+    padding: 0em 10em 5em 10em;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    
+  }
+  .contenedorSlide h1{
+    font-size: 3rem;
+    color: #00ffcb;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1.5em;
+  }
+  .flexSlide{
+    color: #fff !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+   
+  }
+  .flexSlide div{
+    width: 45%;
+  }
+  .flexSlide h2{
+    font-size: 2rem;
+    margin-bottom: 0.5em;
+  }
   /* ----- CARRUSEL ----- */
   .main-carrusel {
     max-width: 100%;

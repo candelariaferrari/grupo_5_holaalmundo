@@ -15,110 +15,26 @@
   <%- include('../partials/header.ejs')%>
     <main>
       <!-- Carrusel principal -->
-      <section>
-        <div class="main-carrusel">
-          <!-- img 1 -->
-          <div class="mySlides fade">
-            <img class="imagen" src="/images/slideProfes.png">
-            <div class="content-text">
-              <p class="text">Lorem ipsum dolor sit amet. </p>
-              <p class="text">Lorem ipsum dolor sit amet. </p>
-              <p class="text">Lorem ipsum dolor sit amet. </p>
+      <section id="slideProfes">
+        <div class="contenedorSlide">
+          <h1>Como comenzar?</h1>
+          <div class="flexSlide">
+            <div>
+              <h2>1. Configura tu perfil</h2>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Nobis placeat dolor porro nesciunt. Eius dolorum, asperiores
+              </p>
+            </div>
+            <div>
+              <h2>2. Empeza a dar tus clases</h2>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Nobis placeat dolor porro nesciunt. Eius dolorum, asperiores
+              </p>
             </div>
           </div>
-        
-          <!-- <div class="mySlides fade">
-            <img class="imagen" src="/images/carrusel02.png">
-            <div class="flex-form">
-              <div class="text-one">
-                <h2>Te gustaría enseñar con nosotros?</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur
-                  adipisicing elit. Alias, illo minima quidem
-                  nihil quae earum ex quas maxime at nulla deleniti
-                  aliquid modi atque minus iusto consequuntur
-                  quibusdam cupiditate sequi.
-                </p>
-                <p class="subtitle">Que esperas?
-                  <strong>forma parte de la comunidad</strong>
-                  hola al mundo!
-                </p>
-              </div>
-              <div class="form-carrusel">
-                <div class="flex-icon">
-                  <div class="circulo">
-                    <i class="fab fa-google"></i>
-                  </div>
-                  <div class="circulo">
-                    <i class="fab fa-facebook-f"></i>
-                  </div>
-                  <div class="circulo">
-                    <i class="fab fa-linkedin-in"></i>
-                  </div>
-                </div>
-                <div class="form-one">
-                  <form action="#" method="post">
-                    <input class="input-form" type="text" name="nombre" id="nombre" placeholder="Nombre">
-                    <input class="input-form" type="text" name="apellido" id="apellido" placeholder="Apellido">
-                    <input class="input-form" type="email" name="email" id="email" placeholder="Email">
-                    <input class="input-form" type="password" name="contrasena" id="contrasena"
-                      placeholder="Contraseña">
-                    <button type="submit" class="register">
-                      registrate
-                    </button>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="mySlides fade">
-            <img class="imagen" src="/images/carrusel03.png">
-            <div class="flex-form">
-              <div class="form-carrusel two">
-                <div class="flex-icon">
-                  <div class="circulo">
-                    <i class="fab fa-google"></i>
-                  </div>
-                  <div class="circulo">
-                    <i class="fab fa-facebook-f"></i>
-                  </div>
-                  <div class="circulo">
-                    <i class="fab fa-linkedin-in"></i>
-                  </div>
-                </div>
-                <div class="form-one">
-                  <form action="#" method="post">
-                    <input class="input-form" type="text" name="nombre" id="input-two" placeholder="Nombre">
-                    <input class="input-form" type="text" name="apellido" id="input-two" placeholder="Apellido">
-                    <input class="input-form" type="email" name="email" id="input-two" placeholder="Email">
-                    <input class="input-form" type="password" name="contrasena" id="input-two" placeholder="Contraseña">
-                    <button type="submit" class="register">
-                      registrate
-                    </button>
-                  </form>
-                </div>
-              </div>
-              <div class="text-one">
-                <h2>Te gustaría aprender con nosotros?</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur
-                  adipisicing elit. Alias, illo minima quidem
-                  nihil quae earum ex quas maxime at nulla deleniti
-                  aliquid modi atque minus iusto consequuntur
-                  quibusdam cupiditate sequi.
-                </p>
-                <p class="subtitle">Que esperas?
-                  <strong>forma parte de la comunidad</strong>
-                  hola al mundo!
-                </p>
-              </div>
-            </div>
-          </div> -->
-          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-          <a class="next" onclick="plusSlides(1)">&#10095;</a>
-          <div class="content-dot">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <!-- <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span> -->
-          </div>
+         
         </div>
 
       </section>
@@ -161,7 +77,7 @@
       <section id="profesores">
         <div class="section-profesores">
           <div class="title-profesores">
-            <h2> Nuestros Profes</h2>
+            <h2> Nuestros Alumnos</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Adipiscing ut diam arcu
               vivamus erat dictum. Ipsum scelerisque aenean cursus id quis enim sagittis nullam
               sodales. Integer augue id cursus massa duis donec gravida. Non faucibus rmentum
@@ -225,22 +141,22 @@
           </div>
         </div>
       </section>
-    <!-- section Contacto -->
-    <%- include('../partials/contact.ejs')%>
+      <!-- section Contacto -->
+      <%- include('../partials/contact.ejs')%>
     </main>
     <!-- chat -->
     <%- include('../partials/chat.ejs')%>
-    <!-- Footer -->
-    <%- include('../partials/footer.ejs')%>
-    <script src="/js/scriptHeader.js"></script>
-   <script src="/js/scriptCarrusel.js"></script>
+      <!-- Footer -->
+      <%- include('../partials/footer.ejs')%>
+        <script src="/js/scriptHeader.js"></script>
+        <script src="/js/scriptCarrusel.js"></script>
 
 </body>
 
 </html>
 
 
- <!--<main>
+<!--<main>
         <section>
             <p>Como comenzar?<p>
             <ol>
