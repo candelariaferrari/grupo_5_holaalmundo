@@ -129,18 +129,7 @@
     <!-- Caracteristicas -->
     <section>
       <div class="content-characteristics">
-        <% for( let i = 0; i < caracteritica.length; i++ ) { %>
-          <div class="caracteristicas one">
-            <div class="circulo">
-              <i <%= caracteritica[i].icono %>></i>
-            </div>
-            <h3><%= caracteritica[i].nombre %></h3>
-            <p> <%= caracteritica[i].descripcion %>
-            </p>
-          </div>
-        <% } %> 
-       
-      <!--   <div class="caracteristicas">
+       <div class="caracteristicas">
           <div class="circulo">
             <i class="far fa-user-circle"></i>
           </div>
@@ -157,7 +146,7 @@
           <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit.
             Tempora ea quod voluptate nisi nihil soluta vero quia excepturi.
           </p>
-        </div> -->
+        </div>
 
       </div>
 
@@ -242,21 +231,6 @@
           <i class="fas fa-chevron-right"></i>
         </button>
         <!-- card 1 -->
-       <% for( let i = 0; i < servicios.length; i++ ) { %>
-        <div class="serviceCard">
-          <div class="serviceImg">
-            <span class="discountTag"><%= servicios[i].precio %></span>
-            <i class="fas fa-comments"></i>
-            <h4><%= servicios[i].nombre %></h4>  <!--  ej: conversación, preparación examen  -->
-            <p class="description"><%= servicios[i].descripcion %></p>
-          </div>
-          <div class="serviceInfo">
-            <button>
-              <i class="fas fa-shopping-cart"></i>
-              Agregar al carrito
-            </button>
-          </div>
-        </div>
         <!-- card 2 -->
         <div class="serviceCard">
           <div class="serviceImg">

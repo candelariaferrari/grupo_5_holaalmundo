@@ -69,7 +69,7 @@
               <label class="term-y-cond"> Acepto los términos y condiciones </label>
             </div>
             <div class="campos">
-              <button class="reg" onclick="register()">
+              <button class="reg">
                 <a href="/inicioProfesores">
                   Registrarse
                 </a>
@@ -83,25 +83,6 @@
 
 
   </main>
-  <script>
-     var select = document.getElementById('user');
-
-    select.addEventListener('change',
-      function () {
-        var selectedOption = this.options[select.selectedIndex];
-        console.log(selectedOption.value + ': ' + selectedOption.text);
-        return selectedOption.value;
-      });
-
-    function register() {
-      var user = selectedOption.value;
-      if (user === "profesor") {
-        alert("No funciono");
-      } else {
-        alert("funciono");
-      }
-    }
-  </script>
 </body>
 
 </html>
