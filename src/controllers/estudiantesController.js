@@ -1,19 +1,38 @@
 const path = require('path');
+const profesoresServices = require("../services/profesoresService");
+const serviciosService = require("../services/serviciosService");
+const comentariosService = require("../services/comentariosService");
 
 let estudiantesController = {
 
 /**  Aqui van los metodos que se encargan de manejar a los estudiantes*/
-   /*  login: function(req, res) {
-        res.render('Login/login');
-    },
-    registro: function(req, res) {
-        res.render('Registro/register');
-    }, */
+
     homeLogged: function(req, res) {
-        res.render('Home/InicioLogged');
+        const servicios = serviciosService.findAllServices();
+        const profesores = profesoresServices.findAllProfesores();
+        const serviciosRecomendados = serviciosService.findAllRecomendados();
+        const serviciosMasVendidos = serviciosService.findMasVendidos();
+
+        res.render('Home/InicioLogged', {servicios: servicios, 
+                                        serviciosRecomendados: serviciosRecomendados,
+                                        serviciosMasVendidos: serviciosMasVendidos,
+                                        profesores: profesores});
     }, 
+    createComment: function(req, res){
+        /** PREGUNTAR COMO SE MANEJAN DOS POST EN UNA MISA PAGINA WEB */
+        comentariosService.createComment(req.body);
+        res.redirect('/inicioAlumnos');
+    },
     servicios: function(req, res) {
-        res.render('Servicios-Cliente/paquetesServicios-1');
+        const profesores = profesoresServices.findAllProfesores();
+        const serviciosRecomendados = serviciosService.findAllRecomendados();
+        const serviciosMasVendidos = serviciosService.findMasVendidos();
+        const servicios = serviciosService.findAllServices();
+    
+        res.render('Servicios-Cliente/paquetesServicios-1', {profesores: profesores, 
+                                                            servicios: servicios,
+                                                            serviciosRecomendados: serviciosRecomendados,
+                                                            serviciosMasVendidos:serviciosMasVendidos});
     },
     filtroProfesores: function(req, res) {
         res.render('Servicios-Cliente/paquetesServicios-2');

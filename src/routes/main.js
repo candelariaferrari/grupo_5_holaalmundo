@@ -1,23 +1,44 @@
+// ************ Require's ************
 const express = require('express');
 const router = express.Router();
+const multer = require('multer');
+const path = require('path');
 
+// ************ Controller Require ************
+const mainController = require('../controllers/mainController');
 
-let mainController = require('../controllers/mainController');
-let profesController = require('../controllers/profesoresController');
-let alumnosController = require('../controllers/estudiantesController');
+// ************ Handler Image Files Home Guest ****************************
+const multerDiskStorage = multer.diskStorage({
+    destination: (req, file, cb) => {
+        cb(null, path.join(__dirname, '../../public/images/clients'));
+    },
+    filename: (req, file, cb) => {
+        const newFileName = 'img-user-' + Date.now() + path.extname(file.originalname);
+        cb(null, newFileName);
+    }
+});
+
+const fileUpload = multer({storage: multerDiskStorage});
+
 /* Inicio */
-router.get('/', mainController.homeGuest);
+/*** GET ALL INFO IN HOME GUEST ***/ 
+router.get('/', mainController.list);
+
+/*** CREATE USER IN HOME GUEST ***/ 
+router.post('/', mainController.createUser);
+
+/*** CREATE COMENTARIO IN HOME GUEST */
+router.post('/comment', mainController.createComment);
+
+/*** GET LOGIN VIEW */
 router.get('/login', mainController.login);
+
+router.post('/login', mainController.userValidation);
+
+/*** GET REGISTER */
 router.get('/register', mainController.register);
-/* Profes */
-router.get('/inicioProfesores', profesController.homeLogged);
-router.get('/inicioProfesores/perfil1', profesController.perfil1);
-router.get('/inicioProfesores/perfil2', profesController.perfil2);
-router.get('/inicioProfesores/administrarClases', profesController.administrarClases);
-/* Alumnos */
-router.get('/inicioAlumnos', alumnosController.homeLogged);
-router.get('/inicioAlumnos/paquetes', alumnosController.servicios);
-router.get('/inicioAlumnos/profesores', alumnosController.filtroProfesores);
-router.get('/inicioAlumnos/reserva', alumnosController.reserva);
-router.get('/inicioAlumnos/carrito', alumnosController.carritoCompras);
+
+/*** CREATE USER */
+router.post('/register', mainController.createUser);
+
 module.exports = router;

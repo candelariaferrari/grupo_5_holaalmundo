@@ -1,15 +1,43 @@
+// ************ Require's ************
 const express = require('express');
-
 const router = express.Router();
+const multer = require('multer');
+const path = require('path');
 
-let estudiantesController = require('../controllers/estudiantesController');
+// ************ Controller Require ************
+const alumnosController = require('../controllers/estudiantesController');
 
-router.get('/login', estudiantesController.login);
-router.get('/registro', estudiantesController.registro);
-router.get('/logged', estudiantesController.homeLogged);
-router.get('/servicios', estudiantesController.servicios);
-router.get('/filtro-profesores', estudiantesController.filtroProfesores);
-router.get('/reserva', estudiantesController.reserva);
-router.get('/carritoCompras', estudiantesController.carritoCompras);
+// ************ Handler Image Files Clientes ****************************
+const multerDiskStorageClientes = multer.diskStorage({
+    destination: (req, file, cb) => {
+        cb(null, path.join(__dirname, '../../public/images/clients'));
+    },
+    filename: (req, file, cb) => {
+        const newFileName = 'img-user-' + Date.now() + path.extname(file.originalname);
+        cb(null, newFileName);
+    }
+});
+
+const fileUploadClientes = multer({storage: multerDiskStorageClientes});
+
+/* Alumnos */
+/*** GET ALL INFO IN HOME LOGGED ***/ 
+router.get('/inicioAlumnos', alumnosController.homeLogged);
+
+/*** POST COMMENTS ***/ 
+router.post('/inicioAlumnos', alumnosController.createComment);
+
+/*** GET ALL PROFESORES  */
+router.get('/inicioAlumnos/paquetes', alumnosController.servicios);
+
+/*** GET PROFESORES */
+router.get('/inicioAlumnos/profesores', alumnosController.filtroProfesores);
+
+
+router.get('/inicioAlumnos/reserva', alumnosController.reserva);
+
+
+router.get('/inicioAlumnos/carrito', alumnosController.carritoCompras);
+
 
 module.exports = router;

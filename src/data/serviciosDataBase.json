@@ -1,0 +1,101 @@
+[
+    {
+        "id": 1,
+        "name": "Conversación",
+        "price": 100,
+        "discount": 50,
+        "category": "visited",
+        "description": "Lorem ipsum dolor sit amet dolor sit amet",
+        "visitados": true,
+        "vendido": 0,
+        "image": ""
+    },
+    {
+        "id": 2,
+        "name": "Conversación Grupal",
+        "price": 100,
+        "discount": 50,
+        "category": "visited",
+        "description": "Lorem ipsum dolor sit amet dolor sit amet",
+        "visitados": true,
+        "vendido": 0,
+        "image": ""
+    },
+    {
+        "id": 3,
+        "name": "Preparación Exámen",
+        "price": 100,
+        "discount": 50,
+        "category": "visited",
+        "description": "Lorem ipsum dolor sit amet dolor sit amet",
+        "visitados": true,
+        "vendido": 0,
+        "image": ""
+    },
+    {
+        "id": 4,
+        "name": "Perfeccionamiento profesiona",
+        "price": 100,
+        "discount": 50,
+        "category": "visited",
+        "description": "Lorem ipsum dolor sit amet dolor sit amet",
+        "visitados": false,
+        "vendido": 0,
+        "image": ""
+    },
+    {
+        "id": 5,
+        "name": "Clases individuales",
+        "price": 100,
+        "discount": 50,
+        "category": "visited",
+        "description": "Lorem ipsum dolor sit amet dolor sit amet",
+        "visitados": false,
+        "vendido": 0,
+        "image": ""
+    },
+    {
+        "id": 6,
+        "name": "Clases Grupales",
+        "price": 100,
+        "discount": 50,
+        "category": "visited",
+        "description": "Lorem ipsum dolor sit amet dolor sit amet",
+        "visitados": false,
+        "vendido": 0,
+        "image": ""
+    },
+    {
+        "id": 7,
+        "name": "Conversacion por tematica",
+        "price": 100,
+        "discount": 50,
+        "category": "visited",
+        "description": "Lorem ipsum dolor sit amet dolor sit amet",
+        "visitados": false,
+        "vendido": 11,
+        "image": ""
+    },
+    {
+        "id": 8,
+        "name": "Clases semanales",
+        "price": 100,
+        "discount": 50,
+        "category": "visited",
+        "description": "Lorem ipsum dolor sit amet dolor sit amet",
+        "visitados": false,
+        "vendido": 15,
+        "image": ""
+    },
+    {
+        "id": 9,
+        "name": "Salidas de Campo",
+        "price": 200,
+        "discount": 50,
+        "category": "visited",
+        "description": "Lorem ipsum dolor sit amet dolor sit amet",
+        "visitados": false,
+        "vendido": 20,
+        "image": ""
+    }
+]

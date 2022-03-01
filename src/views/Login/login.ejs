@@ -25,15 +25,15 @@
           <div class="title">
             <p class="HAM">Inicio de sesión</p>
           </div>
-          <form class="formulario" action="/iniciarSesion" method="POST" style="width: 60%;">
+          <form class="formulario" action="/login" method="POST" style="width: 60%;">
             <div class="campos">
               <label for="Mail"></label>
-              <input placeholder="Mail" type="email" name="Mail" required>
+              <input placeholder="Mail" type="email" name="email" required>
             </div>
 
             <div class="campos">
               <label for="Contrasenia"></label>
-              <input placeholder="Contraseña" type="password" name="Contrasenia" required>
+              <input placeholder="Contraseña" type="password" name="contrasenia" required>
             </div>
 
             <div class="campos">
@@ -41,10 +41,7 @@
             </div>
 
             <div class="campos">
-              <button class="ini" type="submit">
-                <a href="/inicioAlumnos">
-                  Iniciar
-                </a>
+              <button class="ini" type="submit"> Iniciar
               </button>
             </div>
           </form>
