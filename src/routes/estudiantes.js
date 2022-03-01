@@ -33,7 +33,6 @@ router.get('/inicioAlumnos/paquetes', alumnosController.servicios);
 /*** GET PROFESORES */
 router.get('/inicioAlumnos/profesores', alumnosController.filtroProfesores);
 
-
 router.get('/inicioAlumnos/reserva', alumnosController.reserva);
 
 
