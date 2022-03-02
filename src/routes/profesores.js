@@ -22,6 +22,7 @@ const fileUploadProfesores = multer({storage: multerDiskStorageProfesores});
 
 /* Profes */
 router.get('/inicioProfesores', profesController.homeLogged);
+router.get('/inicioProfesores/misAlumnos', profesController.misAlumnos);
 router.get('/inicioProfesores/perfil1', profesController.perfil1);
 router.get('/inicioProfesores/perfil2', profesController.perfil2);
 router.get('/inicioProfesores/administrarClases', profesController.administrarClases);

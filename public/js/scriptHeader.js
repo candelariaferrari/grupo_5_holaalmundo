@@ -65,10 +65,10 @@ if (type == 'estudiantes/inicioAlumnos' || type == 'estudiantes/inicioAlumnos/pa
 <ul>
   <li>Membresías</li>
   <li>Da clases</li>
-  <li>Mis cursos</li>
+  <li> <a href="/profesores/inicioProfesores/administrarClases">Mis cursos</a></li>
 </ul>
 <ul>
-  <li> <a href="/inicioProfesores/perfil2"> Configuración </a></li>
+  <li> <a href="/profesores/inicioProfesores/perfil2"> Configuración </a></li>
   <li>Métodos de pago</li>
   <li>Historial de compra</li>
 </ul>
@@ -86,16 +86,16 @@ if (type == 'estudiantes/inicioAlumnos' || type == 'estudiantes/inicioAlumnos/pa
 /* navBar */
 document.getElementById("navBarChange").innerHTML = `<ul class="nav-list" id="navList">
         <li class="nav-item">
-          <a class="border" href="/inicioProfesores">Home</a>
+          <a class="border" href="/profesores/inicioProfesores">Home</a>
         </li>
         <li class="nav-item">
-          <a href="#"> Mis Alumnos</a>
+          <a href="/profesores/inicioProfesores/misAlumnos"> Mis Alumnos</a>
         </li>
         <li class="nav-item">
-          <a href="/inicioProfesores/perfil1"> Mis Paquetes</a>
+          <a href="/profesores/inicioProfesores/perfil1"> Mis Paquetes</a>
         </li>
         <li class="nav-item">
-          <a href="#"> Ir a clase</a>
+          <a href="https://zoom.us/signin"> Ir a clase</a>
         </li>
         <li class="nav-item">
           <a href="#">En</a>

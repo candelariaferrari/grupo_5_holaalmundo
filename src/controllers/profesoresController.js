@@ -13,6 +13,9 @@ let profesoresController = {
     homeLogged: function (req, res) {
         res.render('Home-Profesores/inicioProfes');
     },
+    misAlumnos: function (req, res) {
+        res.render('listadoAlumnos/listadoAlumnos');
+    },
     perfil1: function (req, res) {
         res.render('Perfil-Profesor/seteoPerfilProfes-1');
     },
