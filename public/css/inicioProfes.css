@@ -63,7 +63,7 @@ blanco: #ffffff
     margin-bottom: 0.5em;
   }
   
-  /* -------- PREVIEW CARRITO -------- */
+  /*  PREVIEW CARRITO 
   
   #main {
     transition: margin-left 0.5s;
@@ -136,7 +136,7 @@ blanco: #ffffff
     color: #00ffcb;
     width: 200px;
     border-radius: 25px;
-  }
+  } */
   /* -------- CARACTERISTICAS ---------- */
   .content-characteristics {
     margin: 4em auto;

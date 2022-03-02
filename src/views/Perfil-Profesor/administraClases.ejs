@@ -1,200 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Administrando Clases</title>
-    <script src="https://kit.fontawesome.com/3964fc737d.js" crossorigin="anonymous"></script>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="/css/administraClases.css">
-    <link rel="stylesheet" href="/css/partialsCss/partials.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Administrando Clases</title>
+  <script src="https://kit.fontawesome.com/3964fc737d.js" crossorigin="anonymous"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/css/administraClases.css">
+  <link rel="stylesheet" href="/css/partialsCss/partials.css">
 
 </head>
+
 <body>
-    <!-- Header -->
+  <!-- Header -->
   <%- include('../partials/header.ejs')%>
-      <main>
-        <!-- Carrusel principal -->
-        <section>
-          <div class="main-carrusel">
-            <!-- img 1 -->
-            <div class="mySlides-fade">
-                <div class="container-top">
-                    <div class="header">
-                        Hoy <i class="far fa-clock"></i>
-                    </div>
-                    <div class="container-info">
-                        <div class="left">
-                            <div class="imagen"> <img class = "profeImage" src = "/images/imagen-profesor.png"></div>
-                            <div class="alumno">Alumno</div>
-                        </div>
-                        <div class="right">
-                            <div class="body-info">Horario</div>
-                            <div class="body-info">Tema a ver</div>
-                            <div class="body-info">Plataforma</div>
-                        </div>
-                    </div>
-                </div>
-            </div>    
-            <div class="content-dot">
-              <span class="dot" onclick="currentSlide(1)"></span>
-              <span class="dot" onclick="currentSlide(2)"></span>
-              <span class="dot" onclick="currentSlide(3)"></span>
+    <main>
+      <!-- Slide principal -->
+      <section id="slideProfes">
+        <div class="contenedorSlide">
+          <h1>HOY <i class="far fa-clock"></i></h1>
+          <div class="flexSlide">
+            <div class="imgAlumno">
+              <img src="/images/profe.png" alt="alumno">
+              <p>Nombre del alumno</p>
+            </div>
+            <div class="texto">
+              <p>Horario: <strong>19:00 - 20:30hs</strong></p>
+              <p>Tema a ver: <strong>Present perfect</strong></p>
+              <p>Plataforma: <strong> Zoom</strong></p>
             </div>
           </div>
-        </section>
-        <section>
-            <div class="container">
-                <div class="texto">
-                    Administra tus clases
-                </div>
-                <div class="container-info">
-                    <div class = "layerFiltros">
-                        <div class="layer-profesiones">
-                            <button type = "button" class="cardFiltros3">Mis alumnos <i class="fas fa-caret-down"></i></button>
-                            <div class="filtro-profesiones-formulario">
-                                <div class="form-group">
-                                    <input type="checkbox" name="idiomas" value="español" id="español" class="input-control">
-                                    <label for="español" >Carlos</label>  
-                                </div>    
-                                <div class="form-group">
-                                    <input type="checkbox" name="idiomas" value="ingles" id="ingles" class="input-control">
-                                    <label for="ingles" >Martina</label>  
-                                </div>
-                                <div class="form-group">
-                                    <input type="checkbox" name="idiomas" value="portugues" id="portugues" class="input-control">
-                                    <label for="portugues" >Carmela</label>  
-                                </div>
-                                <div class="form-group">
-                                    <input type="checkbox" name="idiomas" value="italiano" id="italiano" class="input-control">
-                                    <label for="italiano" >Candelaria</label>  
-                                </div>
-                                <div class="form-group">
-                                    <input type="checkbox" name="idiomas" value="aleman" id="aleman" class="input-control">
-                                    <label for="aleman" >David</label>  
-                                </div>
-                            </div> 
-                        </div>    
-                        <div class="layer-idiomas">
-                            <button type = "button" class="cardFiltros1">Idiomas <i class="fas fa-caret-down"></i></button> 
-                            <div class="filtro-idiomas-formulario">
-                                <div class="form-group">
-                                    <input type="checkbox" name="idiomas" value="español" id="español" class="input-control">
-                                    <label for="español" >Español</label>  
-                                </div>    
-                                <div class="form-group">
-                                    <input type="checkbox" name="idiomas" value="ingles" id="ingles" class="input-control">
-                                    <label for="ingles" >Ingles</label>  
-                                </div>
-                                <div class="form-group">
-                                    <input type="checkbox" name="idiomas" value="portugues" id="portugues" class="input-control">
-                                    <label for="portugues" >Portugués</label>  
-                                </div>
-                                <div class="form-group">
-                                    <input type="checkbox" name="idiomas" value="italiano" id="italiano" class="input-control">
-                                    <label for="italiano" >Italiano</label>  
-                                </div>
-                                <div class="form-group">
-                                    <input type="checkbox" name="idiomas" value="aleman" id="aleman" class="input-control">
-                                    <label for="aleman" >Aleman</label>  
-                                </div>
-                            </div>  
-                        </div> 
-                        <div class="layer-temas">
-                            <button type = "button" class="cardFiltros2">Temas de interes <i class="fas fa-caret-down"></i></button>
-                            <div class="filtro-temas-interes-formulario">
-                                <div class="form-group">
-                                    <input type="checkbox" name="temas-interes" value="cultura" id="cultura" class="input-control">
-                                    <label for="cultura" >Cultura</label>  
-                                </div>    
-                                <div class="form-group">
-                                    <input type="checkbox" name="temas-interes" value="noticias" id="noticias" class="input-control">
-                                    <label for="noticias" >Noticias</label>  
-                                </div>
-                                <div class="form-group">
-                                    <input type="checkbox" name="temas-interes" value="deportes" id="deportes" class="input-control">
-                                    <label for="deportes" >Deportes</label>  
-                                </div>
-                                <div class="form-group">
-                                    <input type="checkbox" name="temas-interes" value="culinaria" id="culinaria" class="input-control">
-                                    <label for="culinaria" >Culinaria</label>  
-                                </div>
-                            </div>
-                        </div>       
-                        <div class="layer-horario">
-                            <button type = "button" class="cardFiltros4">Dias/Horario <i class="fas fa-caret-down"></i></button>
-                            <div class="filtro-horario-formulario">
-                                <div class="form-group">
-                                    <input type="checkbox" name="idiomas" value="español" id="español" class="input-control">
-                                    <label for="español" >Lunes</label>  
-                                </div>    
-                                <div class="form-group">
-                                    <input type="checkbox" name="idiomas" value="ingles" id="ingles" class="input-control">
-                                    <label for="ingles" >Martes</label>  
-                                </div>
-                                <div class="form-group">
-                                    <input type="checkbox" name="idiomas" value="portugues" id="portugues" class="input-control">
-                                    <label for="portugues" >Miercoles</label>  
-                                </div>
-                                <div class="form-group">
-                                    <input type="checkbox" name="idiomas" value="italiano" id="italiano" class="input-control">
-                                    <label for="italiano" >Jueves</label>  
-                                </div>
-                                <div class="form-group">
-                                    <input type="checkbox" name="idiomas" value="aleman" id="aleman" class="input-control">
-                                    <label for="aleman" >Viernes</label>  
-                                </div>
-                            </div> 
-                        </div>   
-                        <div class="layer-conversacion">
-                            <button type = "button" class="cardFiltros5">Conversaciones <i class="fas fa-caret-down"></i></button>
-                            <div class="filtro-conversacion-formulario">
-                                <div class="form-group">
-                                    <input type="checkbox" name="idiomas" value="español" id="español" class="input-control">
-                                    <label for="español" >Español</label>  
-                                </div>    
-                                <div class="form-group">
-                                    <input type="checkbox" name="idiomas" value="ingles" id="ingles" class="input-control">
-                                    <label for="ingles" >Ingles</label>  
-                                </div>
-                                <div class="form-group">
-                                    <input type="checkbox" name="idiomas" value="portugues" id="portugues" class="input-control">
-                                    <label for="portugues" >Portugués</label>  
-                                </div>
-                                <div class="form-group">
-                                    <input type="checkbox" name="idiomas" value="italiano" id="italiano" class="input-control">
-                                    <label for="italiano" >Italiano</label>  
-                                </div>
-                                <div class="form-group">
-                                    <input type="checkbox" name="idiomas" value="aleman" id="aleman" class="input-control">
-                                    <label for="aleman" >Aleman</label>  
-                                </div>
-                            </div> 
-                        </div> 
-                    </div>
-                    <div class="imagen-estadisticas">
-                        <img class="imagen" src="/images/grafico-estadisticas.png">
-                    </div>
-                </div>
-            </div>
-            
-        </section>
-    </main>
-    <!-- chat -->
-    <div id="contentChat" class="desactivado">
-      <svg class="svgimg" width="100" height="100" viewBox="0 0 149 153" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="M18.625 0.549561C13.6853 0.549561 8.948 2.63128 5.45514 6.33677C1.96227 10.0423 0 15.068 0 20.3083L0 99.3435C0 104.584 1.96227 109.61 5.45514 113.315C8.948 117.021 13.6853 119.102 18.625 119.102H41.9062C43.352 119.102 44.7778 119.459 46.0709 120.145C47.364 120.831 48.4888 121.827 49.3563 123.054L67.05 148.079C67.9174 149.305 69.0422 150.301 70.3353 150.987C71.6284 151.673 73.0543 152.03 74.5 152.03C75.9457 152.03 77.3716 151.673 78.6647 150.987C79.9578 150.301 81.0826 149.305 81.95 148.079L99.6437 123.054C100.511 121.827 101.636 120.831 102.929 120.145C104.222 119.459 105.648 119.102 107.094 119.102H130.375C135.315 119.102 140.052 117.021 143.545 113.315C147.038 109.61 149 104.584 149 99.3435V20.3083C149 15.068 147.038 10.0423 143.545 6.33677C140.052 2.63128 135.315 0.549561 130.375 0.549561L18.625 0.549561Z"
-          fill="#212121" border="1px solid #00ffcb" />
-      </svg>
-      <p>Chat</p>
-    </div>
-    <!-- Footer -->
-    <%- include('../partials/footer.ejs')%>
-      <script src="/js/scriptHeader.js"></script>
 
+        </div>
+
+      </section>
+      <!-- Carrusel principal -->
+      <!-- <section>
+        <div class="main-carrusel">
+          <div class="mySlides-fade">
+            <div class="container-top">
+              <div class="header">
+                Hoy <i class="far fa-clock"></i>
+              </div>
+              <div class="container-info">
+                <div class="left">
+                  <div class="imagen"> <img class="profeImage" src="/images/imagen-profesor.png">
+                  </div>
+                  <div class="alumno">Alumno</div>
+                </div>
+                <div class="right">
+                  <div class="body-info">Horario</div>
+                  <div class="body-info">Tema a ver</div>
+                  <div class="body-info">Plataforma</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content-dot">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+          </div>
+        </div>
+      </section> -->
+      <section>
+        <div class="container">
+          <h2>Administra tus clases</h2>
+          <div class="flexContenedor">
+            <div class="containerFiltros">
+              <button class="btnFiltro">Mis alumnos <i class="fas fa-angle-down"></i></button>
+              <div class="check">
+                <div>
+                  <input type="checkbox" name="alumno" id="">
+                  <p>Carlos</p>
+                </div>
+                <div>
+                  <input type="checkbox" name="alumno" id="">
+                  <p>Carmela</p>
+                </div>
+                <div>
+                  <input type="checkbox" name="alumno" id="">
+                  <p>Martina</p>
+                </div>
+                <div>
+                  <input type="checkbox" name="alumno" id="">
+                  <p>Candelaria</p>
+                </div>
+  
+              </div>
+              <button class="btnFiltro">Idiomas <i class="fas fa-angle-down"></i></button>
+              <div class="check">
+                <div>
+                  <input type="checkbox" name="espanol" id="">
+                  <p>Español</p>
+                </div>
+                <div>
+                  <input type="checkbox" name="ingles" id="">
+                  <p>Ingles</p>
+                </div>
+                <div>
+                  <input type="checkbox" name="italiano" id="">
+                  <p>Italiano</p>
+                </div>
+                <div>
+                  <input type="checkbox" name="portugues" id="">
+                  <p>Portugués</p>
+                </div>
+  
+              </div>
+              <button class="btnFiltro">Temas de interes <i class="fas fa-angle-down"></i></button>
+              <div class="check">
+                <div>
+                  <input type="checkbox" name="temas-interes" value="cultura" id="cultura">
+                  <p>Cultura</p>
+                </div>
+                <div>
+                  <input type="checkbox" name="temas-interes" value="noticias" id="cultura">
+                  <p>Noticias</p>
+                </div>
+                <div>
+                  <input type="checkbox" name="temas-interes" value="deportes" id="cultura">
+                  <p>Deportes</p>
+                </div>
+                <div>
+                  <input type="checkbox" name="temas-interes" value="culinaria" id="cultura">
+                  <p>Culinaria</p>
+                </div>
+                <div>
+                  <input type="checkbox" name="temas-interes" value="naturaleza" id="cultura">
+                  <p>Naturaleza</p>
+                </div>
+                <div>
+                  <input type="checkbox" name="temas-interes" value="musica" id="cultura">
+                  <p>Música</p>
+                </div>
+              </div>
+              <button class="btnFiltro">Días <i class="fas fa-angle-down"></i></button>
+              <div class="check">
+                <div>
+                  <input type="checkbox" name="dia" value="lunes" id="#">
+                  <p>Lunes</p>
+                </div>
+                <div>
+                  <input type="checkbox" name="dia" value="martes" id="#">
+                  <p>Martes</p>
+                </div>
+                <div>
+                  <input type="checkbox" name="dia" value="miercoles" id="#">
+                  <p>Miércoles</p>
+                </div>
+                <div>
+                  <input type="checkbox" name="dia" value="jueves" id="#">
+                  <p>Jueves</p>
+                </div>
+                <div>
+                  <input type="checkbox" name="dia" value="viernes" id="#">
+                  <p>Viernes</p>
+                </div>
+                <div>
+                  <input type="checkbox" name="dia" value="sabado" id="#">
+                  <p>Sábado</p>
+                </div>
+              </div>
+            </div>
+            <div class="imagen-estadisticas">
+              <img class="imagen" src="/images/grafico-estadisticas.png">
+            </div>
+          </div>
+          
+
+        </div>
+
+      </section>
+    </main>
+    <!-- chat 
+    -->
+    <%- include('../partials/chat.ejs')%>
+      <!-- Footer -->
+      <%- include('../partials/footer.ejs')%>
+        <script src="/js/scriptHeader.js"></script>
+        <!-- grafico -->
+        <script>
+          var btnFiltro = document.getElementsByClassName("btnFiltro");
+          var i;
+
+          for (i = 0; i < btnFiltro.length; i++) {
+            btnFiltro[i].addEventListener("click", function () {
+              this.classList.toggle("active");
+              var check = this.nextElementSibling;
+              if (check.style.maxHeight) {
+                check.style.maxHeight = null;
+              } else {
+                check.style.maxHeight = check.scrollHeight + "px";
+              }
+            });
+          }
+        </script>
 </body>
+
 </html>
