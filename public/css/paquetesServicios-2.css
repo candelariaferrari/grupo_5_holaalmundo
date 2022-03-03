@@ -370,6 +370,7 @@ button.active.btnFiltro {
   gap: 2em;
   width: 100vw;
   margin: 2em auto;
+  padding: 1em 6em;
 }
 
 .borde {
@@ -526,4 +527,36 @@ button.reservar {
   color: #6243f7;
   text-decoration: none;
   cursor: pointer;
+}
+
+
+/* mis alumnos */
+ .searchAlumno {
+  width: 50%;
+}
+.searchAlumno input {
+  width: 100%;
+  position: relative;
+  padding: 0.5em 1em;
+  border-radius: 50px;
+  border: none;
+  padding-inline-start: 35px;
+  background-color: #212121;
+  color: #fff;
+}
+.searchAlumno input::placeholder {
+  padding-inline-start: 0px;
+  color: #fff;
+}
+
+/* .input:focus {
+  outline: 2px solid #00ffcb;
+} */
+
+.searchAlumno i {
+  position: absolute;
+  z-index: 22222;
+  margin-top: 5px;
+  margin-left: 10px;
+  color: #00ffcb;
 }
