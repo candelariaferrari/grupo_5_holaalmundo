@@ -56,7 +56,9 @@ if (type == 'estudiantes/inicioAlumnos' || type == 'estudiantes/inicioAlumnos/pa
       </ul>`;
 
 
-} else if (type == 'profesores/inicioProfesores' || type == 'profesores/inicioProfesores/perfil1' || type == 'profesores/inicioProfesores/perfil2' || type == 'profesores/inicioProfesores/administrarClases' || type == 'profesores/inicioProfesores/carrito') {
+} else if (type == 'profesores/inicioProfesores' || type == 'profesores/inicioProfesores/perfil1' || 
+type == 'profesores/inicioProfesores/perfil2' || type == 'profesores/inicioProfesores/administrarClases' || 
+type == 'profesores/inicioProfesores/carrito' || type == 'profesores/inicioProfesores/misAlumnos') {
   /* subMenu */
   document.getElementById("subMenu").innerHTML = `<div class="drop-header">
   <i class="far fa-user-circle"></i>
