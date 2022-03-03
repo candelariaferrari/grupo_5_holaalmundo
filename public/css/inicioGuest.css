@@ -11,7 +11,10 @@ blanco: #ffffff
 
 /* Header - Menu */
 
-
+body {
+  font-family: "Roboto", sans-serif;
+  height: fit-content;
+}
 /* ----- CARRUSEL ----- */
 .main-carrusel {
   max-width: 100%;
