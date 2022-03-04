@@ -33,7 +33,8 @@ router.get('/inicioAlumnos/paquetes', alumnosController.servicios);
 /*** GET PROFESORES */
 router.get('/inicioAlumnos/profesores', alumnosController.filtroProfesores);
 
-router.get('/inicioAlumnos/reserva', alumnosController.reserva);
+/* * * ESTE NO DEBERIA IR PORQUE PASO A SER UN MODAL
+router.get('/inicioAlumnos/reserva', alumnosController.reserva); */
 
 
 router.get('/inicioAlumnos/carrito', alumnosController.carritoCompras);
