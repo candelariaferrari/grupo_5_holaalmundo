@@ -28,14 +28,42 @@
           <form class="formCuentanos">
             <label for="">Cuentanos sobre vos</label>
             <textarea name="descripcion" id="" placeholder="Hola, soy .."></textarea>
-            <div class="container-button">
-              <button type="submit">Continuar</button>
+            <div class="container-button" style="align-self: flex-end !important;">
+              <button type="submit" class="continuar">Continuar</button>
             </div>
           </form>
         </div>
       </div>
+      <!-- layer 2 -->
+      <div class="contenedorFoto">
+        <h2>Subí una foto tuya</h2>
+        <div class="flexCargar">
+          <div class="cargar">
+            <i class="fab fa-google-drive"></i>
+            <p>Drive</p>
+          </div>
+          <div class="cargar">
+            <i class="fab fa-dropbox"></i>
+            <p>DropBox</p>
+          </div>
+  
+          <div class="cargar">
+            <i class="fas fa-upload"></i>            
+            <p>Computadora</p>
+          </div>
+        </div>
+        <div class="nombreArchivo">
+          <p>Nombre del archivo</p>
+        </div>
+        <div class="container-button">
+          <button class="volver">
+            volver
+          </button>
+          <button type="submit" class="continuar">Continuar</button>
+        </div>
+      </div>
 
-      <div class="layer2">
+     <!--  <div class="layer2">
         <div class="layer2Container">
           <div class="texto-subir-foto">
             <h2>Subí una foto tuya</h2>
@@ -78,7 +106,7 @@
             </button>
           </div>
         </div>
-      </div>
+      </div> -->
       <div class="layer3">
         <div class="layer3Container">
           <div class="container-info-header">
@@ -126,19 +154,17 @@
             <div class="categoria">Categoria</div>
             <div class="categoria">Categoria</div>
           </div>
-          <div class="botones-profesores">
-            <button type="button" class="volver-profe">
+          <div class="container-button">
+            <button class="volver">
               Volver
             </button>
-            <button type="button" class="listo">
-              Listo!
-            </button>
+            <button class="listo">Continuar</button>
           </div>
         </div>
       </div>
     </main>
     <!-- chat -->
-    <!-- <%- include('../partials/chat.ejs')%> -->
+     <%- include('../partials/chat.ejs')%>
     <!-- Footer -->
     <%- include('../partials/footer.ejs')%>
       <script src="/js/scriptHeader.js"></script>

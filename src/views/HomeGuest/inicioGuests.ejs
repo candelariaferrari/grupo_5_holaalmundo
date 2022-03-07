@@ -1,51 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hola al Mundo</title>
-    <script
-      src="https://kit.fontawesome.com/3964fc737d.js"
-      crossorigin="anonymous"
-    ></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="/css/inicioGuest.css" />
-    <link rel="stylesheet" href="/css/partialsCss/partials.css" />
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hola al Mundo</title>
+  <script src="https://kit.fontawesome.com/3964fc737d.js" crossorigin="anonymous"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/css/inicioGuest.css">
+  <link rel="stylesheet" href="/css/partialsCss/partials.css">
+</head>
 
-  <body>
-    <%- include('../partials/header')%>
+<body>
+  <%- include('../partials/header')%>
     <main>
       <!-- Carrusel principal -->
       <section>
         <div class="main-carrusel">
           <!-- img 1 -->
           <div class="mySlides fade">
-            <img class="imagen" src="/images/carrusel01.png" />
+            <img class="imagen" src="/images/carrusel01.png">
             <div class="content-text">
-              <p class="text">Lorem ipsum dolor sit amet.</p>
-              <p class="text">Lorem ipsum dolor sit amet.</p>
-              <p class="text">Lorem ipsum dolor sit amet.</p>
+              <p class="text">Lorem ipsum dolor sit amet. </p>
+              <p class="text">Lorem ipsum dolor sit amet. </p>
+              <p class="text">Lorem ipsum dolor sit amet. </p>
             </div>
           </div>
           <!-- img 2 -->
           <div class="mySlides fade">
-            <img class="imagen" src="/images/carrusel02.png" />
+            <img class="imagen" src="/images/carrusel02.png">
             <div class="flex-form">
               <div class="text-one">
                 <h2>¿Te gustaría enseñar con nosotros?</h2>
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Alias, illo minima quidem nihil quae earum ex quas maxime at
-                  nulla deleniti aliquid modi atque minus iusto consequuntur
+                <p>Lorem ipsum dolor, sit amet consectetur
+                  adipisicing elit. Alias, illo minima quidem
+                  nihil quae earum ex quas maxime at nulla deleniti
+                  aliquid modi atque minus iusto consequuntur
                   quibusdam cupiditate sequi.
                 </p>
-                <p class="subtitle">
-                  ¿Que esperas?
+                <p class="subtitle">¿Que esperas?
                   <strong>forma parte de la comunidad</strong>
                   hola al mundo!
                 </p>
@@ -64,35 +59,25 @@
                 </div>
                 <div class="form-one">
                   <form action="/" method="POST">
-                    <input
-                      class="input-form"
-                      type="text"
-                      name="nombre"
-                      id="nombre"
-                      placeholder="Nombre"
-                    />
-                    <input
-                      class="input-form"
-                      type="text"
-                      name="apellido"
-                      id="apellido"
-                      placeholder="Apellido"
-                    />
-                    <input
-                      class="input-form"
-                      type="email"
-                      name="email"
-                      id="email"
-                      placeholder="Email"
-                    />
-                    <input
-                      class="input-form"
-                      type="password"
-                      name="contrasena"
-                      id="contrasena"
-                      placeholder="Contraseña"
-                    />
-                    <button type="submit" class="register">registrate</button>
+                    <input class="input-form" type="text" name="nombre" id="nombre" placeholder="Nombre">
+                    <input class="input-form" type="text" name="apellido" id="apellido" placeholder="Apellido">
+                    <input class="input-form" type="text" name="celular" id="celular" placeholder="Celular">
+                    <input class="input-form" type="email" name="email" id="email" placeholder="Email">
+                    <input class="input-form" type="password" name="contrasena" id="contrasena"
+                      placeholder="Contraseña">
+                    <select class="input-form" required name="userRol" id="user">
+                      <label for="Soy:"></label>
+                      <option name="rol" value="profesor"> Profesor </option>
+                      <option name="rol" value="estudiante"> Estudiante </option>
+                    </select>
+                    <div class="flexTerminos">
+                      <input class="bot-tyc" type="checkbox" name="terminosCondiciones" required>
+                      <label class="term-y-cond"> Acepto los términos y condiciones </label>
+                    </div>
+
+                    <button type="submit" class="register">
+                      registrate
+                    </button>
                   </form>
                 </div>
               </div>
@@ -100,7 +85,7 @@
           </div>
           <!-- img 3 -->
           <div class="mySlides fade">
-            <img class="imagen" src="/images/carrusel03.png" />
+            <img class="imagen" src="/images/carrusel03.png">
             <div class="flex-form">
               <div class="form-carrusel two">
                 <div class="flex-icon">
@@ -116,48 +101,35 @@
                 </div>
                 <div class="form-one">
                   <form action="/" method="POST">
-                    <input
-                      class="input-form"
-                      type="text"
-                      name="nombre"
-                      id="input-two"
-                      placeholder="Nombre"
-                    />
-                    <input
-                      class="input-form"
-                      type="text"
-                      name="apellido"
-                      id="input-two"
-                      placeholder="Apellido"
-                    />
-                    <input
-                      class="input-form"
-                      type="email"
-                      name="email"
-                      id="input-two"
-                      placeholder="Email"
-                    />
-                    <input
-                      class="input-form"
-                      type="password"
-                      name="contrasena"
-                      id="input-two"
-                      placeholder="Contraseña"
-                    />
-                    <button type="submit" class="register">registrate</button>
+                    <input class="input-form" type="text" name="nombre" id="input-two" placeholder="Nombre">
+                    <input class="input-form" type="text" name="apellido" id="input-two" placeholder="Apellido">
+                    <input class="input-form" type="text" name="celular" id="input-two" placeholder="Celular">
+                    <input class="input-form" type="email" name="email" id="input-two" placeholder="Email">
+                    <input class="input-form" type="password" name="contrasena" id="input-two" placeholder="Contraseña">
+                    <select class="input-form" required name="userRol" id="user">
+                      <label for="Soy:"></label>
+                      <option name="rol" value="profesor"> Profesor </option>
+                      <option name="rol" value="estudiante"> Estudiante </option>
+                    </select>
+                    <div class="flexTerminos" id="input-two">
+                      <input class="bot-tyc" type="checkbox" name="terminosCondiciones" required>
+                      <label class="term-y-cond"> Acepto los términos y condiciones </label>
+                    </div>
+                    <button type="submit" class="register">
+                      registrate
+                    </button>
                   </form>
                 </div>
               </div>
               <div class="text-one">
                 <h2>Te gustaría aprender con nosotros?</h2>
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Alias, illo minima quidem nihil quae earum ex quas maxime at
-                  nulla deleniti aliquid modi atque minus iusto consequuntur
+                <p>Lorem ipsum dolor, sit amet consectetur
+                  adipisicing elit. Alias, illo minima quidem
+                  nihil quae earum ex quas maxime at nulla deleniti
+                  aliquid modi atque minus iusto consequuntur
                   quibusdam cupiditate sequi.
                 </p>
-                <p class="subtitle">
-                  Que esperas?
+                <p class="subtitle">Que esperas?
                   <strong>forma parte de la comunidad</strong>
                   hola al mundo!
                 </p>
@@ -182,9 +154,8 @@
               <i class="far fa-user-circle"></i>
             </div>
             <h3>caracteritica 2</h3>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora
-              ea quod voluptate nisi nihil soluta vero quia excepturi.
+            <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Tempora ea quod voluptate nisi nihil soluta vero quia excepturi.
             </p>
           </div>
           <div class="caracteristicas">
@@ -192,23 +163,22 @@
               <i class="far fa-user-circle"></i>
             </div>
             <h3>caracteritica 3</h3>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora
-              ea quod voluptate nisi nihil soluta vero quia excepturi.
+            <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Tempora ea quod voluptate nisi nihil soluta vero quia excepturi.
             </p>
           </div>
+
         </div>
+
       </section>
       <!-- Seccion profesores -->
       <section id="profesores">
         <div class="section-profesores">
           <div class="title-profesores">
-            <h2>Nuestros Profesores</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Adipiscing ut diam arcu vivamus erat dictum. Ipsum scelerisque
-              aenean cursus id quis enim sagittis nullam sodales. Integer augue
-              id cursus massa duis donec gravida. Non faucibus rmentum
+            <h2> Nuestros Profesores</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Adipiscing ut diam arcu
+              vivamus erat dictum. Ipsum scelerisque aenean cursus id quis enim sagittis nullam
+              sodales. Integer augue id cursus massa duis donec gravida. Non faucibus rmentum
             </p>
           </div>
           <!-- grilla -->
@@ -267,7 +237,49 @@
                     <p class="text">Idomas</p>
                   </div>
                 </div>
-              </div>
+                <div class="g-cinco">
+                  <img src="/images/<%=profesor.image %>" alt="profe">
+                </div>
+                <div class="g-seis">
+                  <img src="/images/<%=profesor.image %>" alt="profe">
+                </div>
+                <div class="g-siete">
+                  <img src="/images/<%=profesor.image %>" alt="profe">
+                </div>
+                <div class="g-ocho">
+                  <img src="/images/<%=profesor.image %>" alt="profe">
+                </div>
+                <% }) %>
+
+                  <div class="boton-mas">
+                    <button>Ver mas</button>
+                  </div>
+                  <!-- Seccion Estadisticas -->
+                  <div class="est" id="section-estadisticas">
+                    <div class="title-estadisticas">
+                      <h2>Hola al Mundo cuenta con </h2>
+                    </div>
+                    <div class="cantidades">
+                      <div>
+                        <p class="number">
+                          <%= data.profesores.length %>
+                        </p>
+                        <p class="text">Profesores</p>
+                      </div>
+                      <div>
+                        <p class="number">+ 5000 </p>
+                        <p class="text">Alumnos</p>
+                      </div>
+                      <div>
+                        <p class="number"> 150 </p>
+                        <p class="text">Temáticas</p>
+                      </div>
+                      <div>
+                        <p class="number"> 4 </p>
+                        <p class="text">Idomas</p>
+                      </div>
+                    </div>
+                  </div>
             </div>
           </div>
         </div>
@@ -304,12 +316,14 @@
       </section>
       <!-- section Contacto -->
       <%- include('../partials/contact')%>
+
     </main>
     <!-- chat -->
     <%- include('../partials/chat')%>
-    <!-- Footer -->
-    <%- include('../partials/footer.ejs')%>
-    <script src="/js/scriptHeader.js"></script>
-    <script src="/js/scriptCarrusel.js"></script>
-  </body>
+      <!-- Footer -->
+      <%- include('../partials/footer.ejs')%>
+        <script src="/js/scriptHeader.js"></script>
+        <script src="/js/scriptCarrusel.js"></script>
+</body>
+
 </html>

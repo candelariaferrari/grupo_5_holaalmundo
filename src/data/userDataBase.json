@@ -21,6 +21,7 @@
         "sexo": "H",
         "userRol": "estudiante",
         "terminosCondiciones": "on",
+        "image": "profe.png",
         "admin": true
     },
     {
@@ -46,6 +47,7 @@
         "contrasenia": "12345",
         "sexo": "H",
         "userRol": "estudiante",
+        "image": "profe.png",
         "terminosCondiciones": "on"
     },
     {
@@ -71,6 +73,7 @@
         "contrasenia": "12345",
         "sexo": "H",
         "userRol": "estudiante",
+        "image": "profe.png",
         "terminosCondiciones": "on"
     },
     {

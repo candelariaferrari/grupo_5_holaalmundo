@@ -9,65 +9,62 @@ negro: #212121
 blanco: #ffffff*/
 
 html {
-    box-sizing: border-box;
-
+  box-sizing: border-box;
 }
 
 /* TEMAS GENERALES */
 
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: space-around;
+  display: flex;
+  flex-direction: column;
+  align-items: space-around;
 }
 
-  /* ------ MAIN ----- */
+/* ------ MAIN ----- */
 
-  /* ------ LAYER 1 ----- */
+/* ------ LAYER 1 ----- */
 
 .layer1 {
-    background-image: url(/images/bkgConfiguracion.png);
-    width: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    object-fit: cover;
-    filter: brightness(1.1);
- 
-    height: 778px;
-    position: relative;
-    
+  background-image: url(/images/bkgConfiguracion.png);
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+  filter: brightness(1.1);
+
+  height: 778px;
+  position: relative;
 }
 
 .layer1Container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 16px;
-    position: relative;
-    width: 100%;
-    top: 150px; 
-    
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+  position: relative;
+  width: 100%;
+  top: 150px;
 }
 
-.greetings h2{
-  color: #00FFCB;
+.greetings h2 {
+  color: #00ffcb;
   font-size: 1.5rem;
   font-weight: 400;
 }
-.formCuentanos{
+.formCuentanos {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
-.formCuentanos label{
+.formCuentanos label {
   color: #ffffff;
-  font-size: 1.2em; 
+  font-size: 1.2em;
   margin-top: 2em;
   padding: 0em 1em;
   margin-bottom: -0.5em;
 }
-.formCuentanos textarea{
+.formCuentanos textarea {
   height: 20em;
   width: 700px;
   border: 4px solid white;
@@ -75,11 +72,12 @@ body {
   margin: 1em auto;
   padding: 1em;
 }
-
-.container-button{
-  align-self: flex-end;
+.container-button {
+  display: flex;
+  justify-content: space-between;
 }
-.container-button button {
+
+button.continuar {
   background-color: #00ffcb;
   border-radius: 25px;
   padding: 1em 2em;
@@ -88,8 +86,80 @@ body {
   font-weight: 700;
   right: 0;
 }
-
+button.volver {
+  background-color: #2f2f2f;
+  color: #00ffcb;
+  border-radius: 25px;
+  padding: 1em 2em;
+  border: none;
+  font-size: 0.8rem;
+  font-weight: 700;
+  right: 0;
+}
+button.volver {
+  background-color: #2f2f2f;
+  color: #00ffcb;
+  border-radius: 25px;
+  padding: 1em 2em;
+  border: none;
+  font-size: 0.8rem;
+  font-weight: 700;
+  right: 0;
+}
+button.listo {
+  background-color: #6243f7;
+  color: #fff;
+  border-radius: 25px;
+  padding: 1em 2em;
+  border: none;
+  font-size: 0.8rem;
+  font-weight: 700;
+  right: 0;
+}
 /* ------ LAYER 2 ----- */
+.contenedorFoto {
+  width: 50vw;
+  margin: 2em auto;
+  display: flex;
+  flex-direction: column;
+}
+.contenedorFoto h2 {
+  font-size: 2rem;
+  color: #6243f7;
+  margin-bottom: 2em;
+  text-align: center;
+}
+.flexCargar {
+  display: flex;
+  justify-content: space-between;
+}
+.cargar i {
+  background-color: #2f2f2f;
+  color: #00ffcb;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  font-size: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.2em;
+}
+.cargar p {
+  color: #6243f7;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+}
+.nombreArchivo {
+  margin: 2em auto;
+  background-color: #6243f7;
+  padding: 0.5em 1em;
+  text-align: left;
+  color: #fff;
+  border-radius: 15px;
+  width: 100%;
+}
 
 .layer2Container {
   height: fit-content;
@@ -99,12 +169,11 @@ body {
   margin-bottom: 16px;
   align-items: space-around;
   justify-content: space-around;
-  
 }
 
 .texto-subir-foto {
   align-self: center;
-  color: #6243F7;
+  color: #6243f7;
   font-size: 1.7em;
 }
 
@@ -116,20 +185,18 @@ body {
   align-items: center;
   gap: 150px;
   padding: 44px;
-
 }
 
 .container-image {
   gap: 100px;
   align-self: center;
- 
 }
 
 .card {
-  box-shadow: 2px 4px 16px rgba(0,0,0,.06);
+  box-shadow: 2px 4px 16px rgba(0, 0, 0, 0.06);
   border-radius: 50%;
   width: 150px;
-  height:  150px;
+  height: 150px;
   background-color: black;
   padding: 44px;
   position: relative;
@@ -137,19 +204,19 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #00FFCB;
+  color: #00ffcb;
 }
 
 .card i {
   position: absolute;
   height: 150px;
   width: 150px;
-  margin:auto;
-  color: #00FFCB;
+  margin: auto;
+  color: #00ffcb;
 }
 
 .footer-file {
-  color: #3651F7;
+  color: #3651f7;
   font-size: 1.7em;
   text-align: center;
 }
@@ -171,14 +238,16 @@ body {
 .nombre-archivo input {
   color: white;
   font-size: 1.4em;
-  background-color: #6243F7;
+  background-color: #6243f7;
   border-radius: 8px;
   width: 100%;
   height: 50px;
   padding-left: 16px;
 }
 
-::placeholder { color: #ffffff; }
+::placeholder {
+  color: #ffffff;
+}
 
 .botones {
   display: flex;
@@ -206,9 +275,8 @@ body {
   padding-right: 20px;
   border: none;
   height: 2.1em;
-  color: #00FFCB;
+  color: #00ffcb;
 }
-
 
 .layer3 {
   background-image: url(/images/bkg-layer3.png);
@@ -218,48 +286,42 @@ body {
   object-fit: cover;
   filter: brightness(1.1);
   display: flex;
-  align-items: center ;
+  align-items: center;
   justify-content: center;
-  height: 1050px;
+  height: 890px;
   position: relative;
-  
 }
 
 .layer3Container {
   display: flex;
   flex-direction: column;
-  justify-content: start;
-  align-items: start;
-  gap: 34px;
-  padding: 44px;
-  margin-bottom: 16px;
-  position: absolute;
-  width: 70%;
-  top: 230px;
-  
+  justify-content: center;
+  align-content: space-between;
+  align-items: stretch;
+  padding: 1em 1.5em;
+  width: 55%;
+  margin-top: 10em;
 }
 
-.layer3Container .container-info-header {
-  align-self: center;
-}
+
 
 .container-info-header {
-  display: flex; 
+  display: flex;
   justify-content: space-between;
   border-radius: 16px;
-  width: 80%;
+  width: 100%;
   align-self: center;
   padding: 16px;
 }
 
 .container-header {
-  display: flex; 
+  display: flex;
   justify-content: space-between;
   width: 100%;
 }
 
 .nombre-profe {
-  color: #6243F7;
+  color: #6243f7;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -270,22 +332,18 @@ body {
 .valor-hora {
   background-color: #2f2f2f;
   border-radius: 15px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 0.5em 1em;
   border: none;
-  height: 2.1em;
-  color: #00FFCB;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.5em;
+  color: #00ffcb;
+  font-size: 1rem;
+  text-transform: capitalize;
 }
 
 .container-info {
   display: flex;
-  background-color: #6243F7;
+  background-color: #6243f7;
   border-radius: 16px;
-  width: 80%;
+  width: 100%;
   align-self: center;
   padding: 16px;
 }
@@ -302,22 +360,23 @@ body {
 
 .header-info {
   display: flex;
-  justify-content: space-between;
-
+  justify-content: flex-end;
 }
 
 .idioma {
   display: flex;
-  color: #ffffff;
-  margin-left: 200px;
-  gap: 1em;
-  padding: 10px;
+    color: #ffffff;
+    gap: 1em;
+    padding: 0.5em 1em;
 }
 
-.ingles, .espa, .aleman {
+.ingles,
+.espa,
+.aleman {
   border: 2px dotted #00FFCB;
-  width: 25px;
   text-align: center;
+  padding: 0.2em;
+  font-size: 0.9rem;
 }
 
 .ubicacion {
@@ -328,36 +387,31 @@ body {
 }
 
 .ubicacion i {
-  color: #00FFCB;
+  color: #00ffcb;
 }
 
 .texto-perfil {
   color: #fff;
   font-size: 1em;
+  margin-top: 2em;
 }
 
 .categorias {
   display: flex;
-  justify-content: space-around;
-  padding: 10px;
+  justify-content: space-between;
   border-radius: 16px;
-  width: 80%;
+  width: 100%;
   align-self: center;
-  padding: 16px;
+  padding: 1em 1em 3em;
 }
 
 .categoria {
-  background-color: #2f2f2f;
+  background-color: #fff;
   border-radius: 15px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 0.5em 1em;
   border: none;
-  height: 2.4em;
-  color: #00FFCB;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 120px;
+  color: #6243f7;
+  font-weight: 500;
 }
 
 .botones-profesores {
@@ -374,21 +428,21 @@ body {
 }
 
 .botones-profesores .listo {
-  background-color: #6243F7;
+  background-color: #6243f7;
   border-radius: 15px;
   padding-left: 20px;
   padding-right: 20px;
   border: none;
   height: 2.1em;
-  color: #00FFCB;
+  color: #00ffcb;
 }
 
 .botones-profesores .volver-profe {
-  background-color: #6243F7;
+  background-color: #6243f7;
   border-radius: 15px;
   padding-left: 20px;
   padding-right: 20px;
   border: none;
   height: 2.1em;
-  color: #00FFCB;
+  color: #00ffcb;
 }
