@@ -1,26 +1,13 @@
 // ************ Require's ************
 const express = require('express');
 const router = express.Router();
-const multer = require('multer');
-const path = require('path');
-
-// ************ Controller Require ************
 const alumnosController = require('../controllers/estudiantesController');
+//const authMiddlewars = require('../middlewares/authMiddleware');
+//const adminMiddlware = require('../middlewares/adminMiddleware');
 
-// ************ Handler Image Files Clientes ****************************
-const multerDiskStorageClientes = multer.diskStorage({
-    destination: (req, file, cb) => {
-        cb(null, path.join(__dirname, '../../public/images/clients'));
-    },
-    filename: (req, file, cb) => {
-        const newFileName = 'img-user-' + Date.now() + path.extname(file.originalname);
-        cb(null, newFileName);
-    }
-});
 
-const fileUploadClientes = multer({storage: multerDiskStorageClientes});
+///* CRUD ESTUDIANTES *///
 
-/* Alumnos */
 /*** GET ALL INFO IN HOME LOGGED ***/ 
 router.get('/inicioAlumnos', alumnosController.homeLogged);
 

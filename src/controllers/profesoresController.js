@@ -1,6 +1,7 @@
 const path = require('path');
 const profesoresServices = require('../services/profesoresService');
 
+
 let profesoresController = {
 
     /**  Aqui van los metodos que se encargan de manejar a los profesores*/
@@ -12,6 +13,7 @@ let profesoresController = {
         res.render('Registro/register');
     },
     homeLogged: function (req, res) {
+        /** Llamar al servicio */
         res.render('Home-Profesores/inicioProfes');
         
     },

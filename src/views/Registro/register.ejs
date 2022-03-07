@@ -20,23 +20,130 @@
   <main class="main-content">
     <%- include('../partials/backgroundLogin.ejs')%>
       <section class="right-content">
+
         <div class="contenedorFormulario">
           <div class="title">
             <p class="HAM"> Hola al Mundo </p>
             <p class="subtitle"> Formulario de registro </p>
           </div>
           <form name="form" class="formulario" action="/register" method="POST">
-            <input class="input-form" placeholder="Nombre" type="text" name="nombre" required>
-            <input class="input-form" placeholder="Apellido" type="text" name="apellido" required>
-            <input class="input-form" placeholder="Celular" type="text" name="celular" required>
-            <input class="input-form" placeholder="Mail" type="email" name="email" required>
-            <input class="input-form" placeholder="Contraseña" type="password" name="contrasenia" required>
-            <select class="input-form" required name="userRol" id="user">
-              <label for="Soy:"></label>
-              <option name="rol" value="profesor"> Profesor </option>
-              <option name="rol" value="estudiante"> Estudiante </option>
+            <div class="campos">
+              <label for="Nombre"></label>
+              <input placeholder="Nombre" type="text" name="nombre"  
+              <%= locals.errors && errors.nombre ? 'is-invalid' : null %>
+							value="<%= locals.oldData ? oldData.nombre : null %>"
+              >
+              <% if(locals.errors && errors.nombre) { %>
+                <div class="text-danger" style="color: red">
+                  <%= errors.nombre.msg %>
+                </div>
+              <% } %>
+            </div>
+            <div class="campos">
+              <label for="Apellido"></label>
+              <input placeholder="Apellido" type="text" name="apellido"
+              <%= locals.errors && errors.apellido ? 'is-invalid' : null %>
+							value="<%= locals.oldData ? oldData.apellido : null %>"
+              >
+              <% if(locals.errors && errors.apellido) { %>
+                <div class="text-danger" style="color: red">
+                  <%= errors.apellido.msg %>
+                </div>
+              <% } %>
+            </div>
+
+            <div class="campos">
+              <label for="Celular"></label>
+              <input placeholder="Celular" type="tel" name="celular"
+              <%= locals.errors && errors.nombre ? 'is-invalid' : null %>
+							value="<%= locals.oldData ? oldData.celular : null %>"
+              >
+              <% if(locals.errors && errors.celular) { %>
+                <div class="text-danger" style="color: red">
+                  <%= errors.celular.msg %>
+                </div>
+              <% } %>
+            </div>
+
+            <div class="campos">
+              <label for="Mail"></label>
+              <input placeholder="Mail" type="email" name="email"
+              <%= locals.errors && errors.email ? 'is-invalid' : null %>
+							value="<%= locals.oldData ? oldData.email : null %>"
+              >
+              <% if(locals.errors && errors.email) { %>
+                <div class="text-danger" style="color: red">
+                  <%= errors.email.msg %>
+                </div>
+              <% } %>
+            </div>
+
+            <div class="campos">
+              <label for="Contrasenia"></label>
+              <input placeholder="Contraseña" type="password" name="contrasenia"
+              <%= locals.errors && errors.contrasenia ? 'is-invalid' : null %>
+							value="<%= locals.oldData ? oldData.contrasenia : null %>"
+              >
+              <% if(locals.errors && errors.contrasenia) { %>
+                <div class="text-danger" style="color: red">
+                  <%= errors.contrasenia.msg %>
+                </div>
+              <% } %>
+            </div>
+            <div class="campos">
+              <label for="validationContrasenia"></label>
+              <input placeholder="Confirma la contraseña" type="password" name="validationContrasenia"
+              <%= locals.errors && errors.validationContrasenia ? 'is-invalid' : null %>
+							value="<%= locals.oldData ? oldData.validationContrasenia : null %>"
+              >
+              <% if(locals.errors && errors.validationContrasenia) { %>
+                <div class="text-danger" style="color: red">
+                  <%= errors.validationContrasenia.msg %>
+                </div>
+              <% } %>
+            </div>
+            <div class="campos">
+                <label for="sexo:"></label>
+                <select name="sexo" id="sexo" class="form-input" 
+                <%= locals.errors && errors.sexo ? 'is-invalid' : null %>>
+                <option value=""></option>
+                <% let genero = ['Mujer', 'Hombre'] %>
+                <% for (const sexo in genero) { %>
+                  <option 
+                    <%= locals.oldData && (`${sexo}` == oldData.sexo) ? "selected" : null %>
+                    > 
+                      <%= `${genero[sexo]}` %> 
+                  </option>
+                <% } %>
+              </select>
+              <% if (locals.errors && errors.sexo) { %>
+                <div class="text-danger" style="color: red" style="font-weight: bold">
+                  <%= errors.sexo.msg %>
+                </div>
+              <% } %>
+            </div>
+            <div class="campos">
+              <label for="userRol:"></label>
+              <select name="userRol" id="userRol" class="form-input" 
+              <%= locals.errors && errors.userRol ? 'is-invalid' : null %>>
+              <option value=""></option>
+              
+              <% let tipoUser = ['Estudiante', 'Profesor'] %>
+              <% for (const user in tipoUser) { %>
+                <option 
+                  <%= locals.oldData && (`${user}` == oldData.userRol) ? "selected" : null %>
+                  > 
+                    <%= `${tipoUser[user]}` %> 
+                </option>
+              <% } %>
             </select>
-            <div class="flexTerminos">
+            <% if (locals.errors && errors.userRol) { %>
+              <div class="text-danger" style="color: red" style="font-weight: bold">
+                <%= errors.userRol.msg %>
+              </div>
+            <% } %>
+          </div>
+            <div class="campos">
               <input class="bot-tyc" type="checkbox" name="terminosCondiciones" required>
               <label class="term-y-cond"> Acepto los términos y condiciones </label>
             </div>
