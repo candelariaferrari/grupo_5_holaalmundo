@@ -44,9 +44,9 @@
         "apellido": "jaramillo",
         "celular": "3187936659",
         "email": "andres@yahoo.com",
-        "contrasenia": "12345",
-        "sexo": "H",
-        "userRol": "estudiante",
+        "validationContrasenia": "Rafanadal13*",
+        "sexo": "Hombre",
+        "userRol": "Estudiante",
         "image": "profe.png",
         "terminosCondiciones": "on"
     },
@@ -71,8 +71,9 @@
         "celular": "3187936659",
         "email": "cande@gmail.com",
         "contrasenia": "12345",
-        "sexo": "H",
-        "userRol": "estudiante",
+        "validationContrasenia": "Rafanadal13*",
+        "sexo": "Hombre",
+        "userRol": "Estudiante",
         "image": "profe.png",
         "terminosCondiciones": "on"
     },
@@ -83,8 +84,10 @@
         "celular": "3187936659",
         "email": "pipo@gmail.com",
         "contrasenia": "123",
-        "sexo": "H",
-        "userRol": "estudiante",
+        "validationContrasenia": "Rafanadal13*",
+        "sexo": "Hombre",
+        "userRol": "Estudiante",
+        "image": "profe.png",
         "terminosCondiciones": "on"
     },
     {
@@ -97,6 +100,7 @@
         "validationContrasenia": "Andesynene13*",
         "sexo": "1",
         "userRol": "0",
+        "image": "profe.png",
         "terminosCondiciones": "on"
     },
     {
@@ -109,6 +113,20 @@
         "validationContrasenia": "Rafanadal13*",
         "sexo": "Mujer",
         "userRol": "Estudiante",
+        "image": "profe.png",
+        "terminosCondiciones": "on"
+    },
+    {
+        "id": "zc0g8ld1kn",
+        "nombre": "María Candelaria",
+        "apellido": "Ferrari",
+        "celular": "3512552343",
+        "email": "ferrari.candelaria@gmail.com",
+        "contrasenia": "$2b$10$q63AWILXWTPBXh1R56p.4eFh6pbjWYNFGf0CB5F5aS/qhhzcwMKsu",
+        "validationContrasenia": "Cande123",
+        "sexo": "Mujer",
+        "userRol": "Estudiante",
+        "image": "profe.png",
         "terminosCondiciones": "on"
     }
 ]
