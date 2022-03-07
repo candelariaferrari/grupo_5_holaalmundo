@@ -3,6 +3,7 @@ const req = require("express/lib/request");
 const fs = require('fs');
 const path = require('path');
 
+const estudiantesServices = require('../services/usersService');
 // ************ Service ************
 
 const serviceProfesores = {
@@ -33,6 +34,16 @@ const serviceProfesores = {
     },
     
      // ************ Create User ***************
+
+    // **** find studient ***//
+    findAllStudients: function(){
+    
+       let estudiantes = estudiantesServices.findAllUsers();
+       let filterEstudiantes = estudiantes.filter(function(estudiante){
+        return estudiante.userRol == "Estudiante";
+       })
+       return filterEstudiantes;
+    }
 
 }
 
