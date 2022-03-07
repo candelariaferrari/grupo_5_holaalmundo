@@ -5,6 +5,7 @@ const express = require('express');
 const logger = require('morgan');
 const path = require('path');
 const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
+const session = require("express-session");
 
 // ************ express() - (don't touch) ************
 const app = express();
@@ -28,6 +29,12 @@ const rutasEstudiantes = require('./routes/estudiantes');
 const rutasProfesores = require('./routes/profesores');
 // const rutasServicios = require('./routes/servicios');
 
+
+app.use(session({
+  secret:"Secretoo breoo!!",
+  resave: true ,
+  saveUninitialized: true 
+}));
 app.use('/', rutasMain);
 app.use('/estudiantes', rutasEstudiantes);
 app.use('/profesores', rutasProfesores);
