@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -153,6 +154,15 @@
             <div class="circulo">
               <i class="far fa-user-circle"></i>
             </div>
+            <h3>caracteritica 1</h3>
+            <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Tempora ea quod voluptate nisi nihil soluta vero quia excepturi.
+            </p>
+          </div>
+          <div class="caracteristicas">
+            <div class="circulo">
+              <i class="far fa-user-circle"></i>
+            </div>
             <h3>caracteritica 2</h3>
             <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               Tempora ea quod voluptate nisi nihil soluta vero quia excepturi.
@@ -185,75 +195,36 @@
           <div class="content-right">
             <div class="container-teacher">
               <% data.profesores.forEach(function(profesor){ %>
-              <div class="g-uno">
-                <img src="/images/<%=profesor.image %>" alt="profe" />
-              </div>
-              <div class="g-dos">
-                <img src="/images/<%=profesor.image %>" alt="profe" />
-              </div>
-              <div class="g-tres">
-                <img src="/images/<%=profesor.image %>" alt="profe" />
-              </div>
-              <div class="g-cuatro">
-                <img src="/images/<%=profesor.image %>" alt="profe" />
-              </div>
-              <div class="g-cinco">
-                <img src="/images/<%=profesor.image %>" alt="profe" />
-              </div>
-              <div class="g-seis">
-                <img src="/images/<%=profesor.image %>" alt="profe" />
-              </div>
-              <div class="g-siete">
-                <img src="/images/<%=profesor.image %>" alt="profe" />
-              </div>
-              <div class="g-ocho">
-                <img src="/images/<%=profesor.image %>" alt="profe" />
-              </div>
-              <% }) %>
-
-              <div class="boton-mas">
-                <button>Ver mas</button>
-              </div>
-              <!-- Seccion Estadisticas -->
-              <div class="est" id="section-estadisticas">
-                <div class="title-estadisticas">
-                  <h2>Hola al Mundo cuenta con</h2>
+                <div class="g-uno">
+                  <img src="/images/<%=profesor.image %>" alt="profe" />
                 </div>
-                <div class="cantidades">
-                  <div>
-                    <p class="number"><%= data.profesores.length %></p>
-                    <p class="text">Profesores</p>
-                  </div>
-                  <div>
-                    <p class="number">+ 5000</p>
-                    <p class="text">Alumnos</p>
-                  </div>
-                  <div>
-                    <p class="number">150</p>
-                    <p class="text">Temáticas</p>
-                  </div>
-                  <div>
-                    <p class="number">4</p>
-                    <p class="text">Idomas</p>
-                  </div>
+                <div class="g-dos">
+                  <img src="/images/<%=profesor.image %>" alt="profe" />
+                </div>
+                <div class="g-tres">
+                  <img src="/images/<%=profesor.image %>" alt="profe" />
+                </div>
+                <div class="g-cuatro">
+                  <img src="/images/<%=profesor.image %>" alt="profe" />
                 </div>
                 <div class="g-cinco">
-                  <img src="/images/<%=profesor.image %>" alt="profe">
+                  <img src="/images/<%=profesor.image %>" alt="profe" />
                 </div>
                 <div class="g-seis">
-                  <img src="/images/<%=profesor.image %>" alt="profe">
+                  <img src="/images/<%=profesor.image %>" alt="profe" />
                 </div>
                 <div class="g-siete">
-                  <img src="/images/<%=profesor.image %>" alt="profe">
+                  <img src="/images/<%=profesor.image %>" alt="profe" />
                 </div>
                 <div class="g-ocho">
-                  <img src="/images/<%=profesor.image %>" alt="profe">
+                  <img src="/images/<%=profesor.image %>" alt="profe" />
                 </div>
                 <% }) %>
 
                   <div class="boton-mas">
                     <button>Ver mas</button>
                   </div>
+
                   <!-- Seccion Estadisticas -->
                   <div class="est" id="section-estadisticas">
                     <div class="title-estadisticas">
@@ -296,22 +267,26 @@
             <i class="fas fa-chevron-right"></i>
           </button>
           <% data.servicios.forEach(function(servicio){ %>
-          <!-- card 1 -->
-          <div class="serviceCard">
-            <div class="serviceImg">
-              <span class="discountTag">$ <%=servicio.price %></span>
-              <i class="fas fa-comments"></i>
-              <h4><%=servicio.name %></h4>
-              <p class="description"><%=servicio.description %></p>
+            <!-- card 1 -->
+            <div class="serviceCard">
+              <div class="serviceImg">
+                <span class="discountTag">$ <%=servicio.price %></span>
+                <i class="fas fa-comments"></i>
+                <h4>
+                  <%=servicio.name %>
+                </h4>
+                <p class="description">
+                  <%=servicio.description %>
+                </p>
+              </div>
+              <div class="serviceInfo">
+                <button>
+                  <i class="fas fa-shopping-cart"></i>
+                  Agregar al carrito
+                </button>
+              </div>
             </div>
-            <div class="serviceInfo">
-              <button>
-                <i class="fas fa-shopping-cart"></i>
-                Agregar al carrito
-              </button>
-            </div>
-          </div>
-          <% }) %>
+            <% }) %>
         </div>
       </section>
       <!-- section Contacto -->
