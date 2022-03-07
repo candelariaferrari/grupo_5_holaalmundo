@@ -9,7 +9,9 @@ toggleButton.addEventListener('click', () => {
 let type = window.location.pathname.slice(1);
 
 console.log(type);
-if (type == 'estudiantes/inicioAlumnos' || type == 'estudiantes/inicioAlumnos/paquetes' || type == 'estudiantes/inicioAlumnos/profesores' || type == 'estudiantes/inicioAlumnos/carrito') {
+if (type == 'estudiantes/inicioAlumnos' || type == 'estudiantes/inicioAlumnos/paquetes' 
+|| type == 'estudiantes/inicioAlumnos/profesores' || 
+type == 'estudiantes/inicioAlumnos/carrito' || type == 'estudiantes/inicioAlumnos/configuracion') {
   /* subMenu */
   document.getElementById("subMenu").innerHTML = `<div class="drop-header">
     <i class="far fa-user-circle"></i>

@@ -40,6 +40,9 @@ let estudiantesController = {
     reserva: function(req, res) {
         res.render('Servicios-Cliente/popUpReserva');
     },
+    configuracion: function(req, res) {
+        res.render('configuracion/alumnoConfiguracion');
+    }, 
     carritoCompras: function(req, res) {
         res.render('Carrito-Compra/carritoCompras');
     }, 

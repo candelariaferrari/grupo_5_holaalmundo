@@ -1,5 +1,5 @@
 const path = require('path');
-
+const userServices = require('../services/usersService');
 let profesoresController = {
 
     /**  Aqui van los metodos que se encargan de manejar a los profesores*/
@@ -12,9 +12,11 @@ let profesoresController = {
     },
     homeLogged: function (req, res) {
         res.render('Home-Profesores/inicioProfes');
+        
     },
     misAlumnos: function (req, res) {
         res.render('listadoAlumnos/listadoAlumnos');
+        const alumnos = userServices.findAllAlumnos();
     },
     perfil1: function (req, res) {
         res.render('Perfil-Profesor/seteoPerfilProfes-1');
