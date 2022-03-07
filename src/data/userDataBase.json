@@ -72,5 +72,40 @@
         "sexo": "H",
         "userRol": "estudiante",
         "terminosCondiciones": "on"
+    },
+    {
+        "id": "8b2kjeqwc9m",
+        "nombre": "Pipo",
+        "apellido": "Jaramillo",
+        "celular": "3187936659",
+        "email": "pipo@gmail.com",
+        "contrasenia": "123",
+        "sexo": "H",
+        "userRol": "estudiante",
+        "terminosCondiciones": "on"
+    },
+    {
+        "id": "do6g5powj1h",
+        "nombre": "Lorena",
+        "apellido": "Portilla",
+        "celular": "3102410335",
+        "email": "lorena@gmail.com",
+        "contrasenia": "$2b$10$8bX4f5dtWhRzJfQnTHBUeO9yavf0Ysvg.zHDjPXfnxO8NXpUrwW2q",
+        "validationContrasenia": "Andesynene13*",
+        "sexo": "1",
+        "userRol": "0",
+        "terminosCondiciones": "on"
+    },
+    {
+        "id": "dzq613mlhdm",
+        "nombre": "Juliana",
+        "apellido": "Molano",
+        "celular": "3102410335",
+        "email": "juli@gmail.com",
+        "contrasenia": "$2b$10$JW5dn1lIb57dJlUD7uRHeu38hLF9UjpzL4r.eZ9abhJXSKONSxwg6",
+        "validationContrasenia": "Rafanadal13*",
+        "sexo": "Mujer",
+        "userRol": "Estudiante",
+        "terminosCondiciones": "on"
     }
 ]

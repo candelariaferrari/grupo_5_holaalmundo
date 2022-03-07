@@ -19,7 +19,7 @@ let mainController = {
     }, 
     createUser: function(req, res){
         // Se debe revisar ya que hay dos formularios con diferentes campos un en la ruta root y otro en la ruta /register
-        userServices.createUser(req.body);
+        userServices.createUser(req.body, res);
         res.redirect('/login');
     },
     createComment: function(req, res){
@@ -31,27 +31,16 @@ let mainController = {
         res.render('Login/login');
     },
     userValidation: function(req, res) {
-        let userEncontrado = userServices.findByEmail(req.body.email, req.body.contrasenia);
-        /** Se debera crear una vista de admin para hacer el CRUD de los servicios */
-        /** Creo que el post, put y delete de los servicios se puede crear desde la vista de los profesores */
-        //let usuarioAdmin = serviceRegister.findAllUsers()
-        
-        //if(usuarioAdmin.admin == true){
-        //    res.redirect('/admin');
-        //} 
+        // Codificar el password
+        userServices.findByEmail(req, res);
 
-        if(userEncontrado.userRol == "estudiante"){
-            res.redirect('/estudiantes/inicioAlumnos');
-        } else {
-            res.redirect('/profesores/inicioProfesores');
-        } 
     },
     register: function(req, res) {
         res.render('Registro/register');
     },
     createRegister: function(req, res) {
         // Se debe revisar y ajustar los campos del forumario puesto que pierden su enfoque
-        userServices.createRegister(req.body);
+        userServices.createUser(req, res);
         res.redirect('/login');
     }, 
 

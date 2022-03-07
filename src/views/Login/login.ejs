@@ -21,6 +21,13 @@
   <main class="main-content">
     <%- include('../partials/backgroundLogin.ejs')%>
       <section class="right-content">
+
+        <% if(locals.errors) { %>
+            <% for(let oneError in errors) { %>
+              <p><%= errors[oneError].msg %></p>
+          <% } %>
+        <% } %>
+
         <div class="contenedorFormulario">
           <div class="title">
             <p class="HAM">Inicio de sesión</p>
@@ -28,14 +35,30 @@
           <form class="formulario" action="/login" method="POST" style="width: 60%;">
             <div class="campos">
               <label for="Mail"></label>
-              <input placeholder="Mail" type="email" name="email" required>
+              <input placeholder="Mail" type="email" name="email" 
+              <%= locals.errors && errors.email ? 'is-invalid' : null %>
+							value="<%= locals.oldData ? oldData.email : null %>"
+              >
+              <% if(locals.errors && errors.email) { %>
+                <div class="text-danger" style="color: red">
+                  <%= errors.email.msg %>
+                </div>
+              <% } %>
             </div>
 
             <div class="campos">
               <label for="Contrasenia"></label>
-              <input placeholder="Contraseña" type="password" name="contrasenia" required>
+              <input placeholder="Contraseña" type="password" name="contrasenia"
+              <%= locals.errors && errors.contrasenia ? 'is-invalid' : null %>
+							value="<%= locals.oldData ? oldData.contrasenia : null %>"
+              >
+              <% if(locals.errors && errors.contrasenia) { %>
+                <div class="text-danger" style="color: red">
+                  <%= errors.contrasenia.msg %>
+                </div>
+              <% } %>
             </div>
-
+          
             <div class="campos">
               <a class="olv-cont" href="#"> ¿Olvidaste tu contraseña? </a>
             </div>
