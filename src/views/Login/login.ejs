@@ -35,7 +35,7 @@
           <form class="formulario" action="/login" method="POST" style="width: 60%;">
             <div class="campos">
               <label for="Mail"></label>
-              <input placeholder="Mail" type="email" name="email" 
+              <input placeholder="Mail" type="email" name="email" class="input-form"
               <%= locals.errors && errors.email ? 'is-invalid' : null %>
 							value="<%= locals.oldData ? oldData.email : null %>"
               >
@@ -48,7 +48,7 @@
 
             <div class="campos">
               <label for="Contrasenia"></label>
-              <input placeholder="Contraseña" type="password" name="contrasenia"
+              <input placeholder="Contraseña" type="password" name="contrasenia" class="input-form"
               <%= locals.errors && errors.contrasenia ? 'is-invalid' : null %>
 							value="<%= locals.oldData ? oldData.contrasenia : null %>"
               >

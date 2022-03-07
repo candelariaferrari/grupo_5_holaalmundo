@@ -29,7 +29,7 @@
           <form name="form" class="formulario" action="/register" method="POST">
             <div class="campos">
               <label for="Nombre"></label>
-              <input placeholder="Nombre" type="text" name="nombre"  
+              <input placeholder="Nombre" type="text" name="nombre"  class="input-form"
               <%= locals.errors && errors.nombre ? 'is-invalid' : null %>
 							value="<%= locals.oldData ? oldData.nombre : null %>"
               >
@@ -41,7 +41,7 @@
             </div>
             <div class="campos">
               <label for="Apellido"></label>
-              <input placeholder="Apellido" type="text" name="apellido"
+              <input placeholder="Apellido" type="text" name="apellido" class="input-form"
               <%= locals.errors && errors.apellido ? 'is-invalid' : null %>
 							value="<%= locals.oldData ? oldData.apellido : null %>"
               >
@@ -54,7 +54,7 @@
 
             <div class="campos">
               <label for="Celular"></label>
-              <input placeholder="Celular" type="tel" name="celular"
+              <input placeholder="Celular" type="tel" name="celular" class="input-form"
               <%= locals.errors && errors.nombre ? 'is-invalid' : null %>
 							value="<%= locals.oldData ? oldData.celular : null %>"
               >
@@ -67,7 +67,7 @@
 
             <div class="campos">
               <label for="Mail"></label>
-              <input placeholder="Mail" type="email" name="email"
+              <input placeholder="Mail" type="email" name="email" class="input-form"
               <%= locals.errors && errors.email ? 'is-invalid' : null %>
 							value="<%= locals.oldData ? oldData.email : null %>"
               >
@@ -80,7 +80,7 @@
 
             <div class="campos">
               <label for="Contrasenia"></label>
-              <input placeholder="Contraseña" type="password" name="contrasenia"
+              <input placeholder="Contraseña" type="password" name="contrasenia" class="input-form"
               <%= locals.errors && errors.contrasenia ? 'is-invalid' : null %>
 							value="<%= locals.oldData ? oldData.contrasenia : null %>"
               >
@@ -92,7 +92,7 @@
             </div>
             <div class="campos">
               <label for="validationContrasenia"></label>
-              <input placeholder="Confirma la contraseña" type="password" name="validationContrasenia"
+              <input placeholder="Confirma la contraseña" type="password" name="validationContrasenia" class="input-form"
               <%= locals.errors && errors.validationContrasenia ? 'is-invalid' : null %>
 							value="<%= locals.oldData ? oldData.validationContrasenia : null %>"
               >
@@ -102,9 +102,9 @@
                 </div>
               <% } %>
             </div>
-            <div class="campos">
+            <div>
                 <label for="sexo:"></label>
-                <select name="sexo" id="sexo" class="form-input" 
+                <select name="sexo" id="sexo" class="input-form" 
                 <%= locals.errors && errors.sexo ? 'is-invalid' : null %>>
                 <option value=""></option>
                 <% let genero = ['Mujer', 'Hombre'] %>
@@ -122,9 +122,9 @@
                 </div>
               <% } %>
             </div>
-            <div class="campos">
+            <div>
               <label for="userRol:"></label>
-              <select name="userRol" id="userRol" class="form-input" 
+              <select name="userRol" id="userRol" class="input-form"
               <%= locals.errors && errors.userRol ? 'is-invalid' : null %>>
               <option value=""></option>
               
