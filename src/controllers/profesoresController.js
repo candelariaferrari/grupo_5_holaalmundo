@@ -18,8 +18,8 @@ let profesoresController = {
         
     },
     misAlumnos: function (req, res) {
-        let estudiantes = profesoresServices.findAllStudients();
-
+        const estudiantes = profesoresServices.findAllStudients();
+        console.log(estudiantes)
         res.render('listadoAlumnos/listadoAlumnos', {estudiantes: estudiantes});
         
     },

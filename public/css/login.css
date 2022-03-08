@@ -119,10 +119,7 @@ input[type]:focus {
     text-decoration: none;
     color: #00ffcb;
 }
-.campos .ini:hover {
-    color: #00ffcb;
-    background-color: black;
-}
+
 
 /**  FOOOTER */
 
@@ -175,42 +172,6 @@ ul.iconos li {
     font-size: 18px;
 }
 
-/* .campos {
-    position: relative;
-    top: 50px;
-    color: #424242;
-    align-self: center;
-}
-
-.campos :placeholder-shown {
-    background-color: #00FFCB;
-    border-radius: 10px;
-    width: 100%;
-    height: 32px;
-    border: transparent;
-}
-
-::placeholder {
-    color: #424242;
-    margin-left: 150px;
-    position: absolute;
-    top: 8px;
-    left: -140px;
-    font-size: 14px;
-}
-
-.campos .bot-tyc {
-    border-radius: 10px;
-    border-color: #00FFCB;
-}
-
-.campos .term-y-cond {
-    font-size: 11px;
-    color: #424242;
-    position: relative;
-    top: -2px;
-    left: -1px;
-} */
 
  .reg {
     width: 160px;
@@ -237,4 +198,8 @@ select.input-form {
     width: 100%;
     border: transparent;
     color: #424242;
+}
+
+.campos{
+    width: 100%;
 }
