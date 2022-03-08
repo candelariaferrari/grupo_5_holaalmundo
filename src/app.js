@@ -30,13 +30,12 @@ app.use(userLoggedMiddlware);
 
 // ************ Route System require and use() ************
 const rutasMain = require('./routes/main');
-const rutasEstudiantes = require('./routes/estudiantes');
-const rutasProfesores = require('./routes/profesores');
-// const rutasServicios = require('./routes/servicios');
+const routsStudentes = require('./routes/students');
+const routTeachers = require('./routes/teachers');
 
 app.use('/', rutasMain);
-app.use('/estudiantes', rutasEstudiantes);
-app.use('/profesores', rutasProfesores);
+app.use('/students', routsStudentes);
+app.use('/teachers', routTeachers);
 
 // ************ Template Engine - (don't touch) ************
 app.set('view engine', 'ejs');
