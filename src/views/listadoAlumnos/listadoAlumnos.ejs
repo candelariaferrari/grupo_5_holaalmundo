@@ -31,8 +31,30 @@
         </div>
       </section>
       <section>
+       
         <div class="containerProfes">
+          <% estudiantes.forEach(function(estudiante) { %>
           <div class="contenedorImg">
+            <div class="borde">
+              <div class="hovereffect">
+                <div class="start">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+                <img class="img-responsive" src="/images/<%=estudiante.image %>" alt="diego" />
+                <div class="overlay">
+                  <button id="myBtn" class="reservar">Contactar</button>
+                </div>
+              </div>
+            </div>
+            <p class="nombre"><%= estudiante.nombre %> <%= estudiante.apellido %></p>
+          </div>
+          <% }) %>
+
+         <!--  <div class="contenedorImg">
             <div class="borde">
               <div class="hovereffect">
                 <div class="start">
@@ -157,25 +179,7 @@
               </div>
             </div>
             <p class="nombre">Pepito Juarez</p>
-          </div>
-          <div class="contenedorImg">
-            <div class="borde">
-              <div class="hovereffect">
-                <div class="start">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="far fa-star"></i>
-                  <i class="far fa-star"></i>
-                </div>
-                <img class="img-responsive" src="/images/profeDos.png" alt="diego" />
-                <div class="overlay">
-                  <button id="myBtn" class="reservar">Contactar</button>
-                </div>
-              </div>
-            </div>
-            <p class="nombre">Pepito Juarez</p>
-          </div>
+          </div> -->
         </div>
         <div class="container-button-ver">
           <button type="button">Ver mas</button>

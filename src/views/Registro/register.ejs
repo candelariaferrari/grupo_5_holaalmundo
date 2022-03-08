@@ -102,11 +102,11 @@
                 </div>
               <% } %>
             </div>
-            <div>
+            <div class="campos">
                 <label for="sexo:"></label>
                 <select name="sexo" id="sexo" class="input-form" 
                 <%= locals.errors && errors.sexo ? 'is-invalid' : null %>>
-                <option value=""></option>
+                <option value="">Sexo:</option>
                 <% let genero = ['Mujer', 'Hombre'] %>
                 <% for (const sexo in genero) { %>
                   <option 
@@ -122,11 +122,11 @@
                 </div>
               <% } %>
             </div>
-            <div>
+            <div class="campos">
               <label for="userRol:"></label>
               <select name="userRol" id="userRol" class="input-form"
               <%= locals.errors && errors.userRol ? 'is-invalid' : null %>>
-              <option value=""></option>
+              <option value="">Soy:</option>
               
               <% let tipoUser = ['Estudiante', 'Profesor'] %>
               <% for (const user in tipoUser) { %>
