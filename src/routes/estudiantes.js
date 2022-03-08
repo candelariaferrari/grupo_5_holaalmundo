@@ -27,5 +27,7 @@ router.get('/inicioAlumnos/configuracion', alumnosController.configuracion);
 
 router.get('/inicioAlumnos/carrito', alumnosController.carritoCompras);
 
+router.get('/inicioAlumnos/logout', alumnosController.logout);
+
 
 module.exports = router;

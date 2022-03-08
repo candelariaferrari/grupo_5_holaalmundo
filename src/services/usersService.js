@@ -80,10 +80,22 @@ const serviceUsers = {
             let password = req.body.contrasenia;
             let decodePassword = bcrypt.compareSync(password, userEncontrado.contrasenia);
             if(decodePassword){
-                console.log("Usuario validado en el controlador")
+                // Borrar la propiedad del password
+                delete userEncontrado.contrasenia;
+
+                // Cookies
+                // if(req.body.remeber_user){ se debe poner el req. del boton de recodar usuario
+                if(true){
+                    res.cookie('userEmail', req.body.email, { maxAge: (1000 * 30) * 2})
+                } 
+
+                // Session 
+                req.session.userLogged = userEncontrado;
                 if(userEncontrado.userRol == "Estudiante"){
+                    //res.render('Home/InicioLogged', {user: req.session.userLogged})
                     res.redirect('/estudiantes/inicioAlumnos');
                 } else if (userEncontrado.userRol == "Profesor") {
+                    //res.render('Home-Profesores/inicioProfes', {user: req.session.userLogged})
                     res.redirect('/profesores/inicioProfesores');
                 } else {
                     res.redirect('/')
@@ -112,6 +124,11 @@ const serviceUsers = {
         });
         console.log("El usuario esta validado " + userEncontrado);
         return userEncontrado;
+    }, 
+    findByField: function(field, text){
+        let allUsers = this.findAllUsers();
+        let userFound = allUsers.find(oneUser => oneUser[field] === text);
+        return userFound;
     }
 }
 

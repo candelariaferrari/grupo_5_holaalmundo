@@ -6,6 +6,7 @@ const uploadFileEstudiantes = require('../middlewares/multer/multerRegisterEstud
 const uploadFileProfesores = require('../middlewares/multer/multerRegisterProfesores');
 //const authMiddlewars = require('../middlewares/authMiddleware');
 //const adminMiddlware = require('../middlewares/adminMiddleware');
+//const guestMiddlware = require('../middlewares/guestMiddlware');
 const validator = require('../middlewares/express-validator');
 const logUserMiddleware = require('../middlewares/userLogs');
 
