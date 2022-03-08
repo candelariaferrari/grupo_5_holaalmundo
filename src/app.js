@@ -1,11 +1,12 @@
 // ************ Require's ************
 const createError = require('http-errors');
-const cookieParser = require('cookie-parser');
+const cookies = require('cookie-parser');
 const express = require('express');
 const logger = require('morgan');
 const path = require('path');
 const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
 const session = require("express-session");
+const userLoggedMiddlware = require('./middlewares/userLoggedMiddlware');
 
 // ************ express() - (don't touch) ************
 const app = express();
@@ -15,29 +16,31 @@ app.use(express.static(path.join(__dirname, '../public')));  // Necesario para l
 app.use(express.urlencoded({ extended: false })); //Necesario para tener el req.body
 app.use(logger('dev'));
 app.use(express.json());
-app.use(cookieParser());
 app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
-
-// ************ Template Engine - (don't touch) ************
-app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, './views'));
-
-// ************ WRITE YOUR CODE FROM HERE ************
-// ************ Route System require and use() ************
-const rutasMain = require('./routes/main');
-const rutasEstudiantes = require('./routes/estudiantes');
-const rutasProfesores = require('./routes/profesores');
-// const rutasServicios = require('./routes/servicios');
-
 
 app.use(session({
   secret:"Secretoo breoo!!",
   resave: true ,
   saveUninitialized: true 
 }));
+
+app.use(cookies());
+
+app.use(userLoggedMiddlware);
+
+// ************ Route System require and use() ************
+const rutasMain = require('./routes/main');
+const rutasEstudiantes = require('./routes/estudiantes');
+const rutasProfesores = require('./routes/profesores');
+// const rutasServicios = require('./routes/servicios');
+
 app.use('/', rutasMain);
 app.use('/estudiantes', rutasEstudiantes);
 app.use('/profesores', rutasProfesores);
+
+// ************ Template Engine - (don't touch) ************
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, './views'));
 
 // ************ DON'T TOUCH FROM HERE ************
 // ************ catch 404 and forward to error handler ************

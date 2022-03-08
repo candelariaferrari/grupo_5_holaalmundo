@@ -12,6 +12,7 @@ let estudiantesController = {
         const profesores = profesoresServices.findAllProfesores();
         const serviciosRecomendados = serviciosService.findAllRecomendados();
         const serviciosMasVendidos = serviciosService.findMasVendidos();
+        console.log(req.cookies.userEmail);
 
         res.render('Home/InicioLogged', {servicios: servicios, 
                                         serviciosRecomendados: serviciosRecomendados,
@@ -46,6 +47,11 @@ let estudiantesController = {
     carritoCompras: function(req, res) {
         res.render('Carrito-Compra/carritoCompras');
     }, 
+    logout: function(req, res) {
+        res.clearCookie('userEmail');
+        req.session.destroy();
+        return res.redirect('/');
+    }
 };
 
 module.exports = estudiantesController;

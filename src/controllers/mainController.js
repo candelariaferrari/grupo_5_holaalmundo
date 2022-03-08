@@ -1,5 +1,4 @@
 // ************ Require's ************
-const req = require("express/lib/request");
 const userServices = require("../services/usersService");
 const profesoresServices = require("../services/profesoresService");
 const serviciosService = require("../services/serviciosService");
