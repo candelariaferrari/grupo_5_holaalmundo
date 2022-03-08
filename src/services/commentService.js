@@ -32,13 +32,13 @@ const serviceComentarios = {
     },
 
      // ************ Create Comments ************
-     createComment: function(payload){
+     createComment: function(req){
         let comments = this.findAllComments();
-        console.log(comments);
+      
         let commentId = this.generateId();
         let comment = {
             id: commentId,
-            ...payload
+            ...req.body
         }
         console.log(comment);
         comments.push(comment);

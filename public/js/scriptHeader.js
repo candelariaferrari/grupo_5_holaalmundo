@@ -9,9 +9,9 @@ toggleButton.addEventListener('click', () => {
 let type = window.location.pathname.slice(1);
 
 console.log(type);
-if (type == 'estudiantes/inicioAlumnos' || type == 'estudiantes/inicioAlumnos/paquetes' 
-|| type == 'estudiantes/inicioAlumnos/profesores' || 
-type == 'estudiantes/inicioAlumnos/carrito' || type == 'estudiantes/inicioAlumnos/configuracion') {
+if (type == 'students/home' || type == 'students/packages' 
+|| type == 'students/teachers' || 
+type == 'students/shoppingCart' || type == 'students/configuracion') {
   /* subMenu */
   document.getElementById("subMenu").innerHTML = `<div class="drop-header">
     <i class="far fa-user-circle"></i>
@@ -58,9 +58,9 @@ type == 'estudiantes/inicioAlumnos/carrito' || type == 'estudiantes/inicioAlumno
       </ul>`;
 
 
-} else if (type == 'profesores/inicioProfesores' || type == 'profesores/inicioProfesores/perfil1' || 
-type == 'profesores/inicioProfesores/perfil2' || type == 'profesores/inicioProfesores/administrarClases' || 
-type == 'profesores/inicioProfesores/carrito' || type == 'profesores/inicioProfesores/misAlumnos') {
+} else if (type == 'teachers/home' || type == 'teachers/packages' || 
+type == 'teachers/configuration' || type == 'teachers/dashboardLessons' || 
+type == 'teacehrs/students') {
   /* subMenu */
   document.getElementById("subMenu").innerHTML = `<div class="drop-header">
   <i class="far fa-user-circle"></i>
@@ -127,8 +127,6 @@ document.getElementById("navBarChange").innerHTML = `<ul class="nav-list" id="na
       </ul>`;
 
 }
-
-
 
 /* ---- PREVIEW CARRITO ----- */
 function openNav() {

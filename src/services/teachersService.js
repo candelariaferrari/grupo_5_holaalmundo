@@ -3,10 +3,10 @@ const req = require("express/lib/request");
 const fs = require('fs');
 const path = require('path');
 
-const estudiantesServices = require('../services/usersService');
+const estudiantesServices = require('./usersService');
 // ************ Service ************
 
-const serviceProfesores = {
+const serviceTeachers = {
     
     // ************ Rutas  ************
     profesoresFilePath: path.join(__dirname, '../data/profesoresDataBase.json'),
@@ -29,7 +29,7 @@ const serviceProfesores = {
 
  // ************ Find All ************
    
-    findAllProfesores: function(){
+    findAllTeachers: function(){
         return JSON.parse(this.readFileProfesores());
     },
     
@@ -37,7 +37,6 @@ const serviceProfesores = {
 
     // **** find studient ***//
     findAllStudients: function(){
-    
        let estudiantes = estudiantesServices.findAllUsers();
        let filterEstudiantes = estudiantes.filter(function(estudiante){
         return estudiante.userRol == "Estudiante";
@@ -47,5 +46,5 @@ const serviceProfesores = {
 
 }
 
-module.exports = serviceProfesores;
+module.exports = serviceTeachers;
 
