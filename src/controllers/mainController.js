@@ -1,49 +1,39 @@
 // ************ Require's ************
-const req = require("express/lib/request");
 const userServices = require("../services/usersService");
-const profesoresServices = require("../services/profesoresService");
-const serviciosService = require("../services/serviciosService");
-const comentariosService = require("../services/comentariosService");
+const profesoresServices = require("../services/teachersService");
+const serviciosService = require("../services/packagesService");
+const comentariosService = require("../services/commentService");
 
 let mainController = {
 
-    list: function(req, res) {
+    home: function(req, res) {
         const servicios = serviciosService.findAllServices();
-        const profesores = profesoresServices.findAllProfesores();
+        console.log(servicios);
+        const profesores = profesoresServices.findAllTeachers();
+        console.log(profesores);
         
         let data = {
 			servicios: servicios, 
 			profesores: profesores}
-
-        res.render('HomeGuest/inicioGuests', {data: data});
-    }, 
-    createUser: function(req, res){
-        // Se debe revisar ya que hay dos formularios con diferentes campos un en la ruta root y otro en la ruta /register
-        userServices.createUser(req.body, res);
-        res.redirect('/login');
+        res.render('homeGuest/homeGuest', {data: data});
     },
     createComment: function(req, res){
-        /** PREGUNTAR COMO SE MANEJAN DOS POST EN UNA MISA PAGINA WEB */
-        comentariosService.createComment(req.body);
+        comentariosService.createComment(req);
         res.redirect('/');
     },
     login: function(req, res) {
-        res.render('Login/login');
+        res.render('login/login');
     },
     userValidation: function(req, res) {
-        // Codificar el password
         userServices.findByEmail(req, res);
-
     },
     register: function(req, res) {
-        res.render('Registro/register');
+        res.render('register/register');
     },
-    createRegister: function(req, res) {
-        // Se debe revisar y ajustar los campos del forumario puesto que pierden su enfoque
-        userServices.createUser(req, res);
+    createUser: function(req, res){
+        userServices.createUser(req.body, res);
         res.redirect('/login');
-    }, 
-
+    }
 };
 
 module.exports = mainController;

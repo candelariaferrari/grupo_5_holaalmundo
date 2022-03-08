@@ -5,7 +5,7 @@ const path = require('path');
 
 // ************ Service ************
 
-const serviceServicios = {
+const servicePackages = {
     
     // ************ Rutas  ************
     serviciosFilePath: path.join(__dirname, '../data/serviciosDataBase.json'),
@@ -32,17 +32,15 @@ const serviceServicios = {
     },
 
  // ************ Servicios Filtros ****************
-    findAllRecomendados: function(){
+    findAllSuggest: function(){
             
         let services = this.findAllServices();
-
         let serviceRecomendado = services.filter(function(service){
             return service.visitados != false;
         });
-
         return serviceRecomendado;
     }, 
-    findMasVendidos: function(){
+    findAllSold: function(){
         let services = this.findAllServices();
 
         let serviceMasVendidos = services.filter(function(service){
@@ -56,5 +54,5 @@ const serviceServicios = {
    
 }
 
-module.exports = serviceServicios;
+module.exports = servicePackages;
 
