@@ -374,10 +374,11 @@ button.active.btnFiltro {
 }
 
 .borde {
-  border-radius: 38px;
+  border-radius: 48px;
   border: 3px solid #00ffcb;
   width: 100%;
   height: 306px;
+  
 }
 .start {
   color: #3651f7;
@@ -397,7 +398,7 @@ button.active.btnFiltro {
   text-align: center;
   cursor: default;
   background: #3651f7;
-  border-radius: 35px;
+  border-radius: 46px;
 }
 
 .hovereffect .overlay {

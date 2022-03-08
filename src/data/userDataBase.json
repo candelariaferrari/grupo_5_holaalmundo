@@ -47,7 +47,7 @@
         "validationContrasenia": "Rafanadal13*",
         "sexo": "Hombre",
         "userRol": "Estudiante",
-        "image": "profe.png",
+        "image": "persona-03.png",
         "terminosCondiciones": "on"
     },
     {
@@ -74,7 +74,7 @@
         "validationContrasenia": "Rafanadal13*",
         "sexo": "Hombre",
         "userRol": "Estudiante",
-        "image": "profe.png",
+        "image": "persona-04.png",
         "terminosCondiciones": "on"
     },
     {
@@ -87,7 +87,7 @@
         "validationContrasenia": "Rafanadal13*",
         "sexo": "Hombre",
         "userRol": "Estudiante",
-        "image": "profe.png",
+        "image": "persona-05.png",
         "terminosCondiciones": "on"
     },
     {
@@ -113,7 +113,7 @@
         "validationContrasenia": "Rafanadal13*",
         "sexo": "Mujer",
         "userRol": "Estudiante",
-        "image": "profe.png",
+        "image": "persona-02.png",
         "terminosCondiciones": "on"
     },
     {
@@ -126,7 +126,20 @@
         "validationContrasenia": "Cande123",
         "sexo": "Mujer",
         "userRol": "Estudiante",
-        "image": "profe.png",
+        "image": "persona-01.png",
+        "terminosCondiciones": "on"
+    },
+    {
+        "id": "l2sayg9r1c",
+        "nombre": "Julian",
+        "apellido": "Rossotto",
+        "celular": "3512552343",
+        "email": "julianrossotto@gmail.com",
+        "contrasenia": "$2b$10$HV9zH3PUaymStu43NS7u8u/NS62Rr5UUyAlMaYelzgeff7cDMBd8G",
+        "validationContrasenia": "Cande1234",
+        "sexo": "Hombre",
+        "userRol": "Estudiante",
+        "image": "persona-00.png",
         "terminosCondiciones": "on"
     }
 ]
