@@ -8,11 +8,11 @@ const path = require('path');
 const teacherController = require('../controllers/teachersController');
 
 /* Profes */
-router.get('/home', teacherController.home);
-router.get('/students', teacherController.students);
-router.get('/packages', teacherController.packages);
-router.get('/configuration', teacherController.configuration);
-router.get('/dashboardLessons', teacherController.dashboardLessons);
+router.get('/home', teacherController.home); //funciona
+router.get('/students', teacherController.students); //funciona
+router.get('/packages', teacherController.packages); //funcona
+router.get('/configuration', teacherController.configuration); //funciona
+router.get('/dashboardLessons', teacherController.dashboardLessons);//funciona
 
 
 module.exports = router;

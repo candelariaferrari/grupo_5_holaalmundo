@@ -6,24 +6,24 @@ const studentsController = require('../controllers/studentsController');
 //const adminMiddlware = require('../middlewares/adminMiddleware');
 
 ///* CRUD ESTUDIANTES *///
-
+console.log(studentsController)
 /*** GET ALL INFO IN HOME LOGGED ***/ 
-router.get('/home', studentsController.home);
+router.get('/home', studentsController.home); //funciona
 
 /*** POST COMMENTS ***/ 
 router.post('/home', studentsController.createComment);
 
 /*** GET ALL PROFESORES  */
-router.get('/packages', studentsController.services);
+router.get('/packages', studentsController.services); //funciona
 
 /*** GET PROFESORES */
 router.get('/teachers', studentsController.filterTeachers);
 
 /*** PROFIL PROFESORES */
-router.get('/configuracion', studentsController.configuracion);
+router.get('/configuration', studentsController.configuration); //funciona
 
 /*** SHOPPING CART  */
-router.get('/shoppingCart', studentsController.shoppingCart);
+router.get('/shoppingCart', studentsController.shoppingCart); //funciona
 
 /*** LOGOUT */
 router.get('/logout', studentsController.logout);

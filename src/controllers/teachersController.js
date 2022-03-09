@@ -5,7 +5,8 @@ const profesoresServices = require('../services/teachersService');
 let teachersController = {
 
     home: function (req, res) {
-        res.render('teachers/home');   
+        res.render('teachers/homeTeachers');   
+
     },
     students: function (req, res) {
         const estudiantes = profesoresServices.findAllStudients();

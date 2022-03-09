@@ -13,8 +13,8 @@ let studentsController = {
         const serviciosRecomendados = serviciosService.findAllSuggest();
         const serviciosMasVendidos = serviciosService.findAllSold();
         //console.log(req.cookies.userEmail);
-
-        res.render('/students/homeStudents',   {servicios: servicios, 
+        
+        res.render('students/homeStudents',{servicios: servicios, 
                                         serviciosRecomendados: serviciosRecomendados,
                                         serviciosMasVendidos: serviciosMasVendidos,
                                         profesores: profesores});
@@ -28,20 +28,21 @@ let studentsController = {
         const serviciosRecomendados = serviciosService.findAllSuggest();
         const serviciosMasVendidos = serviciosService.findAllSold();
         const servicios = serviciosService.findAllServices();
-    
+        
         res.render('students/packageStudents', {profesores: profesores, 
                                                             servicios: servicios,
                                                             serviciosRecomendados: serviciosRecomendados,
                                                             serviciosMasVendidos:serviciosMasVendidos});
     },
     filterTeachers: function(req, res) {
-        res.render('studentes/viewTeachers');
+        res.render('students/viewTeachers');
+        
     },
     reserva: function(req, res) {
-        res.render('Servicios-Cliente/popUpReserva');
-    },
-    configuracion: function(req, res) {
-        res.render('studentes/configurationStudents');
+        res.render('partials/popUpReserve');
+    }, 
+    configuration: function(req, res) {
+        res.render('students/configurationStudents');
     }, 
     shoppingCart: function(req, res) {
         res.render('shoppingCart/shoppingCart');
@@ -52,5 +53,4 @@ let studentsController = {
         return res.redirect('/');
     }
 };
-
 module.exports = studentsController;

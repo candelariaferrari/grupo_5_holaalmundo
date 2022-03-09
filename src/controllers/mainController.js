@@ -2,7 +2,7 @@
 const userServices = require("../services/usersService");
 const profesoresServices = require("../services/teachersService");
 const serviciosService = require("../services/packagesService");
-const comentariosService = require("../services/commentService");
+const commentService = require("../services/commentService");
 
 let mainController = {
 
@@ -18,7 +18,7 @@ let mainController = {
         res.render('homeGuest/homeGuest', {data: data});
     },
     createComment: function(req, res){
-        comentariosService.createComment(req);
+        commentService.createComment(req);
         res.redirect('/');
     },
     login: function(req, res) {
