@@ -30,10 +30,14 @@ const serviceTeachers = {
  // ************ Find All ************
    
     findAllTeachers: function(){
-        return JSON.parse(this.readFileProfesores());
+        let profesores = estudiantesServices.findAllUsers();
+       let filterProfesores = profesores.filter(function(profesor){
+        return profesor.userRol == "Estudiante";
+       })
+       return filterProfesores;
+        /* return JSON.parse(this.readFileProfesores()); */
     },
     
-     // ************ Create User ***************
 
     // **** find studient ***//
     findAllStudients: function(){
@@ -43,7 +47,7 @@ const serviceTeachers = {
        })
        return filterEstudiantes;
     }
-
+    
 }
 
 module.exports = serviceTeachers;

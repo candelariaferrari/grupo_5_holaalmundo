@@ -5,7 +5,8 @@ const profesoresServices = require('../services/teachersService');
 let teachersController = {
 
     home: function (req, res) {
-        res.render('teachers/home');   
+        res.render('teachers/homeTeachers');   
+
     },
     students: function (req, res) {
         const estudiantes = profesoresServices.findAllStudients();
@@ -20,6 +21,11 @@ let teachersController = {
     dashboardLessons: function (req, res) {
         res.render('teachers/dashboardLessons');
     },
+    logout: function(req, res) {
+        res.clearCookie('userEmail');
+        req.session.destroy();
+        return res.redirect('/');
+    }
 };
 
 module.exports = teachersController;

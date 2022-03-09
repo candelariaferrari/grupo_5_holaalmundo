@@ -8,6 +8,7 @@
         "contrasenia": "125",
         "sexo": "H",
         "userRol": "profesor",
+        "image": "profesor-01.png",
         "terminosCondiciones": "on",
         "admin": false
     },
@@ -99,8 +100,8 @@
         "contrasenia": "$2b$10$8bX4f5dtWhRzJfQnTHBUeO9yavf0Ysvg.zHDjPXfnxO8NXpUrwW2q",
         "validationContrasenia": "Andesynene13*",
         "sexo": "1",
-        "userRol": "0",
-        "image": "profe.png",
+        "userRol": "Profesor",
+        "image": "profesor-02.png",
         "terminosCondiciones": "on"
     },
     {

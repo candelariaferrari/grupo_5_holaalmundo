@@ -269,35 +269,35 @@
         </div>
         <div id="myModal" class="modal">
           <div class="modal-content">
-            <%- include('../partials/popUpReserva.ejs') %>
+            <%- include('../partials/popUpReserve.ejs') %>
           </div>
-        </div>
+        </div> 
       </section>
 
     </main>
     <!-- chat -->
     <%- include('../partials/chat.ejs')%>
-      <!-- Footer -->
-      <%- include('../partials/footer.ejs')%>
-        <script src="/js/scriptHeader.js"></script>
-        <script src="/js/scriptPopUpReserve.js"></script>
+    <!-- Footer -->
+    <%- include('../partials/footer.ejs')%>
+    <script src="/js/scriptHeader.js"></script>
+    <script src="/js/scriptPopUpReserve.js"></script>
 
-        <script>
-          var btnFiltro = document.getElementsByClassName("btnFiltro");
-          var i;
+    <script>
+      var btnFiltro = document.getElementsByClassName("btnFiltro");
+      var i;
 
-          for (i = 0; i < btnFiltro.length; i++) {
-            btnFiltro[i].addEventListener("click", function () {
-              this.classList.toggle("active");
-              var check = this.nextElementSibling;
-              if (check.style.maxHeight) {
-                check.style.maxHeight = null;
-              } else {
-                check.style.maxHeight = check.scrollHeight + "px";
-              }
-            });
+      for (i = 0; i < btnFiltro.length; i++) {
+        btnFiltro[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var check = this.nextElementSibling;
+          if (check.style.maxHeight) {
+            check.style.maxHeight = null;
+          } else {
+            check.style.maxHeight = check.scrollHeight + "px";
           }
-        </script>
+        });
+      }
+    </script>
 </body>
 
 </html>
