@@ -13,6 +13,7 @@ router.get('/students', teacherController.students); //funciona
 router.get('/packages', teacherController.packages); //funcona
 router.get('/configuration', teacherController.configuration); //funciona
 router.get('/dashboardLessons', teacherController.dashboardLessons);//funciona
-
+/*** LOGOUT */
+router.get('/logout', teacherController.logout);
 
 module.exports = router;

@@ -21,6 +21,11 @@ let teachersController = {
     dashboardLessons: function (req, res) {
         res.render('teachers/dashboardLessons');
     },
+    logout: function(req, res) {
+        res.clearCookie('userEmail');
+        req.session.destroy();
+        return res.redirect('/');
+    }
 };
 
 module.exports = teachersController;

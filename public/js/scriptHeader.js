@@ -11,11 +11,11 @@ let type = window.location.pathname.slice(1);
 console.log(type);
 if (type == 'students/home' || type == 'students/packages' 
 || type == 'students/teachers' || 
-type == 'students/shoppingCart' || type == 'students/configuracion') {
+type == 'students/shoppingCart' || type == 'students/configuration') {
   /* subMenu */
   document.getElementById("subMenu").innerHTML = `<div class="drop-header">
     <i class="far fa-user-circle"></i>
-    <h4>Usuario</h4>
+    <h4>usuario</h4>
   </div>
   <ul>
     <li>Membresías</li>
@@ -23,34 +23,30 @@ type == 'students/shoppingCart' || type == 'students/configuracion') {
     <li>Mis compañeros</li>
   </ul>
   <ul>
-    <li>Configuración</li>
+    <li> <a href="/students/configuration">Configuración</a></li>
     <li>Métodos de pago</li>
     <li>Historial de compra</li>
   </ul>
   <ul>
     <li>Idiomas</li>
   </ul>
-  <ul>
-    <li>Editar perfil</li>
-  </ul>
-
   <ul class="outline">
     <li>Ayuda</li>
-    <li>Cerrar sesión</li>
+    <li> <a href="/students/logout"> Cerrar sesión </a> </li>
   </ul>`;
   /* navBar */
   document.getElementById("navBarChange").innerHTML = `<ul class="nav-list" id="navList">
         <li class="nav-item">
-          <a class="border" href="#top-header">Home</a>
+          <a class="border" href="/students/home">Home</a>
         </li>
         <li class="nav-item">
-          <a href="#"> Profesores</a>
+          <a href="/students/teachers"> Profesores</a>
         </li>
         <li class="nav-item">
-          <a href="#"> Paquetes</a>
+          <a href="/students/packages"> Paquetes</a>
         </li>
         <li class="nav-item">
-          <a href="#"> Contacto</a>
+          <a href="/students/home#contacto"> Contacto</a>
         </li>
         <li class="nav-item">
           <a href="#">En</a>
@@ -72,34 +68,34 @@ type == 'teacehrs/students') {
   <li> <a href="/profesores/inicioProfesores/administrarClases">Mis cursos</a></li>
 </ul>
 <ul>
-  <li> <a href="/profesores/inicioProfesores/perfil2"> Configuración </a></li>
+  <li> <a href="/teachers/configuration"> Configuración </a></li>
   <li>Métodos de pago</li>
   <li>Historial de compra</li>
 </ul>
 <ul>
   <li>Idiomas</li>
 </ul>
-<ul>
-  <li>Editar perfil</li>
-</ul>
 
 <ul class="outline">
   <li>Ayuda</li>
-  <li>Cerrar sesión</li>
+  <li><a href="/teachers/logout">Cerrar sesión</a></li>
 </ul>`;
 /* navBar */
 document.getElementById("navBarChange").innerHTML = `<ul class="nav-list" id="navList">
         <li class="nav-item">
-          <a class="border" href="/profesores/inicioProfesores">Home</a>
+          <a class="border" href="/teachers/home">Home</a>
         </li>
         <li class="nav-item">
-          <a href="/profesores/inicioProfesores/misAlumnos"> Mis Alumnos</a>
+          <a href="/teachers/students"> Mis Alumnos</a>
         </li>
         <li class="nav-item">
-          <a href="/profesores/inicioProfesores/perfil1"> Mis Paquetes</a>
+          <a href="/teachers/packages"> Mis Paquetes</a>
         </li>
         <li class="nav-item">
           <a href="https://zoom.us/signin"> Ir a clase</a>
+        </li>
+        <li class="nav-item">
+          <a href="/teachers/home#contacto"> Contacto</a>
         </li>
         <li class="nav-item">
           <a href="#">En</a>
@@ -116,10 +112,10 @@ document.getElementById("navBarChange").innerHTML = `<ul class="nav-list" id="na
           <a class="border" href="#top-header">Home</a>
         </li>
         <li class="nav-item">
-          <a href="#"> Paquetes</a>
+          <a href="#sectionEstadisticas"> Paquetes</a>
         </li>
         <li class="nav-item">
-          <a href="#contacto"> Contacto</a>
+          <a href="/#contacto"> Contacto</a>
         </li>
         <li class="nav-item">
           <a href="#">En</a>
