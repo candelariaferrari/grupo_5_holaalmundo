@@ -42,7 +42,9 @@ app.use('/', rutasMain);
 app.use('/students', routsStudents);
 app.use('/teachers', routTeachers);
 
-
+// ************ Template Engine - (don't touch) ************
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, './views/'));
 
 // ************ DON'T TOUCH FROM HERE ************
 // ************ catch 404 and forward to error handler ************

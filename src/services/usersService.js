@@ -84,7 +84,8 @@ const serviceUsers = {
                 // Cookies
                 // if(req.body.remeber_user){ se debe poner el req. del boton de recodar usuario
                 if(true){
-                    res.cookie('userEmail', req.body.email, { maxAge: (1000 * 30) * 2})
+                    res.cookie('userEmail', req.body.email, {maxAge: 60 * 1000})
+                    
                 } 
                 // Session 
                 req.session.userLogged = userEncontrado;

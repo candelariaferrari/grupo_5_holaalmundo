@@ -1,6 +1,6 @@
 const path = require('path');
-const profesoresServices = require("../services/teachersService");
-const serviciosService = require("../services/packagesService");
+const teacherServices = require("../services/teachersService");
+const packageService = require("../services/packagesService");
 const commentService = require("../services/commentService");
 
 let studentsController = {
@@ -8,10 +8,14 @@ let studentsController = {
 /**  Aqui van los metodos que se encargan de manejar a los estudiantes*/
 
     home: function(req, res) {
-        const servicios = serviciosService.findAllServices();
-        const profesores = profesoresServices.findAllTeachers();
-        const serviciosRecomendados = serviciosService.findAllSuggest();
-        const serviciosMasVendidos = serviciosService.findAllSold();
+        const servicios = packageService.findAllServices();
+        //console.log(servicios);
+        const profesores = teacherServices.findAllTeachers();
+        //console.log(profesores);
+        const serviciosRecomendados = packageService.findAllSuggest();
+        //console.log(serviciosRecomendados);
+        const serviciosMasVendidos = packageService.findAllSold();
+        //console.log(serviciosMasVendidos);
         //console.log(req.cookies.userEmail);
         
         res.render('students/homeStudents',{servicios: servicios, 
@@ -36,12 +40,14 @@ let studentsController = {
     },
     filterTeachers: function(req, res) {
         res.render('students/viewTeachers');
-        
+    },
+    configuracion: function(req, res) {       
     },
     reserva: function(req, res) {
         res.render('partials/popUpReserve');
     }, 
     configuration: function(req, res) {
+
         res.render('students/configurationStudents');
     }, 
     shoppingCart: function(req, res) {
