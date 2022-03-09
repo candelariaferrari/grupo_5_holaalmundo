@@ -169,7 +169,7 @@ input:focus,
 input[type]:focus {
   outline: 0 none;
 }
-.flexTerminos{
+.flexTerminos {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -177,7 +177,7 @@ input[type]:focus {
 }
 .bot-tyc {
   border-radius: 10px;
-  border-color: #00FFCB;
+  border-color: #00ffcb;
 }
 
 .term-y-cond {
@@ -186,17 +186,17 @@ input[type]:focus {
   position: relative;
   margin-left: 0.5em;
 }
-#input-two .bot-tyc{
+#input-two .bot-tyc {
   border-color: #212121;
 }
-#input-two .term-y-cond{
+#input-two .term-y-cond {
   color: #212121;
 }
 select {
   text-align-last: left;
   padding-left: 6px;
   direction: ltr;
-  background-color: #00FFCB;
+  background-color: #00ffcb;
   border-radius: 10px;
   width: 244px;
   height: 36px;
@@ -215,11 +215,10 @@ select {
   padding: 0.5em;
   text-transform: capitalize;
   border-radius: 15px;
-  
 }
-.form-one button:hover.register{
+.form-one button:hover.register {
   background-color: #6243f7;
-  color: #00FFCB;
+  color: #00ffcb;
 }
 .content-dot {
   display: flex;
@@ -389,29 +388,28 @@ select {
   width: 100%;
   padding-top: 2em;
   display: grid;
-  grid-template-columns: max-content max-content max-content max-content max-content max-content;
+  grid-template-columns: auto auto auto auto auto auto;
   grid-template-rows: auto auto auto auto auto;
   gap: 0px 0px;
   grid-auto-flow: row;
-  /*grid-template-areas:
+  grid-template-areas:
     ". . . . g-uno ."
     ". . . g-tres . g-dos"
     ". . g-cinco . g-cuatro ."
     "boton-mas g-ocho . g-siete . g-seis"
-    "est est est est est est";*/
-  
-  grid-template-areas:
+    "est est est est est est";
+
+  /* grid-template-areas:
     ". . . . . . . g-uno ."
     ". . . . . . g-tres . g-dos"
     ". . . . . g-cinco . g-cuatro ."
     ". . . boton-mas g-ocho . g-siete . g-seis"
-    ". . . est est est est est est";
+    ". . . est est est est est est"; */
 }
 
-
 .container-teacher img {
-  width: 90%;
-  height: 90%;
+  width: 100%;
+  height: 100%;
   margin: auto;
   border-radius: 35px;
   border: 3px solid #fff;
@@ -632,7 +630,6 @@ select {
   opacity: 1;
 }
 
-
 /* ---------- RESPONSIVE --------- */
 @media (max-width: 480px) {
   .responsive-one {
@@ -828,7 +825,7 @@ select {
   }
   .g-seis,
   .g-siete,
-  .g-ocho{
+  .g-ocho {
     display: none !important;
   }
   .section-profesores .title-profesores {
@@ -934,5 +931,3 @@ select {
     display: block;
   }
 }
-
-

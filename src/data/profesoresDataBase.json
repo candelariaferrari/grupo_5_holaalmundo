@@ -51,7 +51,7 @@
         "dias": ["lunes", "miercoles", "viernes"],
         "hora": [10, 12, 14],
         "precio": 500,
-        "image": "profe.png"
+        "image": "profesor-01.png"
     },
     {
         "id":6,
@@ -60,7 +60,7 @@
         "dias": ["lunes", "miercoles", "viernes"],
         "hora": [10, 12, 14],
         "precio": 500,
-        "image": "profe.png"
+        "image": "profesor-01.png"
     },
     {
         "id":7,
@@ -69,7 +69,7 @@
         "dias": ["lunes", "miercoles", "viernes"],
         "hora": [10, 12, 14],
         "precio": 500,
-        "image": "profe.png"
+        "image": "profesor-01.png"
     },
     {
         "id":8,
@@ -78,7 +78,7 @@
         "dias": ["lunes", "miercoles", "viernes"],
         "hora": [10, 12, 14],
         "precio": 500,
-        "image": "profe.png"
+        "image": "profesor-01.png"
     },
     {
         "id":9,
@@ -87,7 +87,7 @@
         "dias": ["lunes", "miercoles", "viernes"],
         "hora": [10, 12, 14],
         "precio": 500,
-        "image": "profe.png"
+        "image": "profesor-01.png"
     },
     {
         "id":10,
@@ -96,7 +96,7 @@
         "dias": ["lunes", "miercoles", "viernes"],
         "hora": [10, 12, 14],
         "precio": 500,
-        "image": "profe.png"
+        "image": "profesor-01.png"
     },
     {
         "id":11,
@@ -105,7 +105,7 @@
         "dias": ["lunes", "miercoles", "viernes"],
         "hora": [10, 12, 14],
         "precio": 500,
-        "image": "profe.png"
+        "image": "profesor-01.png"
     },
     {
         "id":12,
@@ -114,6 +114,6 @@
         "dias": ["lunes", "miercoles", "viernes"],
         "hora": [10, 12, 14],
         "precio": 500,
-        "image": "profe.png"
+        "image": "profesor-01.png"
     }
 ]
