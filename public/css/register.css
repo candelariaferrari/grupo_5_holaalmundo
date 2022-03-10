@@ -74,7 +74,27 @@ font-family: 'Roboto', sans-serif;
     align-items: center;
     gap: 16px;
 }
-
+.input-form {
+    display: block;
+    width: 300px;
+    margin: 0.5em auto;
+    background-color: #00ffcb;
+    padding: 0.5em 1em;
+    border-radius: 15px;
+    border: none;
+    font-size: 1rem;
+    color: #212121;
+  }
+.input-form,
+input::placeholder {
+  color: #212121;
+  opacity: 1;
+}
+.input-form:focus,
+input:focus,
+input[type]:focus {
+  outline: 0 none;
+}
 .campos {
     position: relative;
     top: 50px;
@@ -82,15 +102,15 @@ font-family: 'Roboto', sans-serif;
     align-self: center;
 }
 
-.campos :placeholder-shown {
+
+/* .campos :placeholder-shown {
     background-color: #00FFCB;
     border-radius: 10px;
     width: 240px;
     height: 32px;
     border: transparent;
 }
-
-::placeholder {
+ ::placeholder {
     color: #424242;
     margin-left: 150px;
     position: absolute;
@@ -110,7 +130,7 @@ font-family: 'Roboto', sans-serif;
     position: relative;
     top: -2px;
     left: -1px;
-}
+} */
 
 .campos .reg
 {
@@ -126,7 +146,7 @@ font-family: 'Roboto', sans-serif;
 
 .campos .reg:hover {
     color: #00FFCB;
-    background-color: black;
+    background-color: #212121;
 }
 
 select {

@@ -11,7 +11,10 @@ blanco: #ffffff
 
 /* Header - Menu */
 
-
+body {
+  font-family: "Roboto", sans-serif;
+  height: fit-content;
+}
 /* ----- CARRUSEL ----- */
 .main-carrusel {
   max-width: 100%;
@@ -79,9 +82,9 @@ blanco: #ffffff
 .form-carrusel {
   background-color: #212121;
   width: 400px;
-  height: 550px;
+  height: 730px;
   border-radius: 15px;
-  padding: 2em;
+  padding: 1em 2em;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -92,7 +95,7 @@ blanco: #ffffff
   width: 400px;
   height: 550px;
   border-radius: 15px;
-  padding: 2em;
+  padding: 1em 2em;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -103,8 +106,7 @@ blanco: #ffffff
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin-bottom: 2em;
-  margin-top: 2em;
+  margin: 0.5em auto 1em auto;
 }
 .form-carrusel .flex-icon .circulo {
   background-color: #fff;
@@ -145,7 +147,7 @@ blanco: #ffffff
 .form-carrusel.two .input-form {
   display: block;
   width: 300px;
-  margin: 1em auto;
+  margin: 0.5em auto;
   background-color: #212121;
   padding: 0.5em 1em;
   border-radius: 15px;
@@ -167,6 +169,41 @@ input:focus,
 input[type]:focus {
   outline: 0 none;
 }
+.flexTerminos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.5em;
+}
+.bot-tyc {
+  border-radius: 10px;
+  border-color: #00ffcb;
+}
+
+.term-y-cond {
+  font-size: 11px;
+  color: #fff;
+  position: relative;
+  margin-left: 0.5em;
+}
+#input-two .bot-tyc {
+  border-color: #212121;
+}
+#input-two .term-y-cond {
+  color: #212121;
+}
+select {
+  text-align-last: left;
+  padding-left: 6px;
+  direction: ltr;
+  background-color: #00ffcb;
+  border-radius: 10px;
+  width: 244px;
+  height: 36px;
+  border: transparent;
+  color: #424242;
+  font-size: 14px;
+}
 .form-one button.register {
   border: none;
   background-color: #fff;
@@ -178,6 +215,10 @@ input[type]:focus {
   padding: 0.5em;
   text-transform: capitalize;
   border-radius: 15px;
+}
+.form-one button:hover.register {
+  background-color: #6243f7;
+  color: #00ffcb;
 }
 .content-dot {
   display: flex;
@@ -347,29 +388,28 @@ input[type]:focus {
   width: 100%;
   padding-top: 2em;
   display: grid;
-  grid-template-columns: max-content max-content max-content max-content max-content max-content;
+  grid-template-columns: auto auto auto auto auto auto;
   grid-template-rows: auto auto auto auto auto;
   gap: 0px 0px;
   grid-auto-flow: row;
-  /*grid-template-areas:
+  grid-template-areas:
     ". . . . g-uno ."
     ". . . g-tres . g-dos"
     ". . g-cinco . g-cuatro ."
     "boton-mas g-ocho . g-siete . g-seis"
-    "est est est est est est";*/
-  
-  grid-template-areas:
+    "est est est est est est";
+
+  /* grid-template-areas:
     ". . . . . . . g-uno ."
     ". . . . . . g-tres . g-dos"
     ". . . . . g-cinco . g-cuatro ."
     ". . . boton-mas g-ocho . g-siete . g-seis"
-    ". . . est est est est est est";
+    ". . . est est est est est est"; */
 }
 
-
 .container-teacher img {
-  width: 90%;
-  height: 90%;
+  width: 100%;
+  height: 100%;
   margin: auto;
   border-radius: 35px;
   border: 3px solid #fff;
@@ -590,7 +630,6 @@ input[type]:focus {
   opacity: 1;
 }
 
-
 /* ---------- RESPONSIVE --------- */
 @media (max-width: 480px) {
   .responsive-one {
@@ -786,7 +825,7 @@ input[type]:focus {
   }
   .g-seis,
   .g-siete,
-  .g-ocho{
+  .g-ocho {
     display: none !important;
   }
   .section-profesores .title-profesores {
@@ -892,5 +931,3 @@ input[type]:focus {
     display: block;
   }
 }
-
-

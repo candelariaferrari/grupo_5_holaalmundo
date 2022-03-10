@@ -1,23 +1,31 @@
+// ************ Require's ************
 const express = require('express');
 const router = express.Router();
+const mainController = require('../controllers/mainController');
+//const uploadFileEstudiantes = require('../middlewares/multer/multerRegisterEstudiantes');
+//const uploadFileProfesores = require('../middlewares/multer/multerRegisterProfesores');
+//const authMiddlewars = require('../middlewares/authMiddleware');
+//const adminMiddlware = require('../middlewares/adminMiddleware');
+//const guestMiddlware = require('../middlewares/guestMiddlware');
+const validator = require('../middlewares/express-validator');
+const logUserMiddleware = require('../middlewares/userLogs');
 
-
-let mainController = require('../controllers/mainController');
-let profesController = require('../controllers/profesoresController');
-let alumnosController = require('../controllers/estudiantesController');
 /* Inicio */
-router.get('/', mainController.homeGuest);
+/*** GET ALL INFO IN HOME GUEST ***/ 
+router.get('/', mainController.home);
+
+/*** CREATE USER IN HOME GUEST ***/ 
+router.post('/', validator.register, mainController.createUserCarusel);
+
+/*** CREATE COMENTARIO IN HOME GUEST */
+router.post('/comment', mainController.createComment);
+
+/*** GET LOGIN VIEW */
 router.get('/login', mainController.login);
+router.post('/login', logUserMiddleware, validator.login, mainController.userValidation);
+
+/*** GET REGISTER */
 router.get('/register', mainController.register);
-/* Profes */
-router.get('/inicioProfesores', profesController.homeLogged);
-router.get('/inicioProfesores/perfil1', profesController.perfil1);
-router.get('/inicioProfesores/perfil2', profesController.perfil2);
-router.get('/inicioProfesores/administrarClases', profesController.administrarClases);
-/* Alumnos */
-router.get('/inicioAlumnos', alumnosController.homeLogged);
-router.get('/inicioAlumnos/paquetes', alumnosController.servicios);
-router.get('/inicioAlumnos/profesores', alumnosController.filtroProfesores);
-router.get('/inicioAlumnos/reserva', alumnosController.reserva);
-router.get('/inicioAlumnos/carrito', alumnosController.carritoCompras);
+router.post('/register', validator.register, mainController.createUser);
+
 module.exports = router;

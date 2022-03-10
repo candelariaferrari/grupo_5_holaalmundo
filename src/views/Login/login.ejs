@@ -21,32 +21,49 @@
   <main class="main-content">
     <%- include('../partials/backgroundLogin.ejs')%>
       <section class="right-content">
+
+        <% if(locals.errors) { %>
+            <% for(let oneError in errors) { %>
+              <p><%= errors[oneError].msg %></p>
+          <% } %>
+        <% } %>
+
         <div class="contenedorFormulario">
           <div class="title">
             <p class="HAM">Inicio de sesión</p>
           </div>
-          <form class="formulario" action="/iniciarSesion" method="POST" style="width: 60%;">
+          <form class="formulario" action="/login" method="POST" style="width: 60%;">
             <div class="campos">
               <label for="Mail"></label>
-              <input placeholder="Mail" type="email" name="Mail" required>
+              <input placeholder="Mail" type="email" name="email" class="input-form"
+              <%= locals.errors && errors.email ? 'is-invalid' : null %>
+							value="<%= locals.oldData ? oldData.email : null %>"
+              >
+              <% if(locals.errors && errors.email) { %>
+                <div class="text-danger" style="color: red">
+                  <%= errors.email.msg %>
+                </div>
+              <% } %>
             </div>
 
             <div class="campos">
-              <label for="Contrasenia"></label>
-              <input placeholder="Contraseña" type="password" name="Contrasenia" required>
+              <label for="password"></label>
+              <input placeholder="Contraseña" type="password" name="password" class="input-form"
+              <%= locals.errors && errors.password ? 'is-invalid' : null %>
+							value="<%= locals.oldData ? oldData.password : null %>"
+              >
+              <% if(locals.errors && errors.password) { %>
+                <div class="text-danger" style="color: red">
+                  <%= errors.password.msg %>
+                </div>
+              <% } %>
             </div>
-
+          
             <div class="campos">
               <a class="olv-cont" href="#"> ¿Olvidaste tu contraseña? </a>
-            </div>
-
-            <div class="campos">
-              <button class="ini" type="submit">
-                <a href="/inicioAlumnos">
-                  Iniciar
-                </a>
+              <button class="reg" type="submit"> 
+                Iniciar
               </button>
-            </div>
           </form>
         </div>
 

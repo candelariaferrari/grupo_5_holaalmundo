@@ -52,41 +52,51 @@ body {
     color: black;
     font-size: 16px;
     text-align: center;
-}
-
-.formulario {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 16px;
-    /* margin-top: -30px; */
+    width: 80%;
+    margin-top: 1em;
 }
-
-.campos {
-    border-radius: 10px;
-    width: 100%;
-    height: 32px;
-    border: transparent;
-    position: relative;
-    color: #00ffcb;
-}
-
-.campos :placeholder-shown {
+.input-form {
+    display: block;
+    width: 90%;
+    margin: 0.5em auto;
     background-color: #00ffcb;
+    padding: 0.5em 1em;
+    border-radius: 15px;
+    border: none;
+    font-size: 1rem;
+    color: #212121;
+}
+.input-form,
+input::placeholder {
+    color: #212121;
+    opacity: 1;
+}
+.input-form:focus,
+input:focus,
+input[type]:focus {
+    outline: 0 none;
+}
+.flexTerminos {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 0.5em;
+    width: 90%;
+}
+.bot-tyc {
     border-radius: 10px;
-    width: 100%;
-    height: 32px;
-    border: transparent;
+    border-color: #00ffcb;
 }
 
-::placeholder {
-    color: #424242;
-    margin-left: 150px;
-    position: absolute;
-    top: 12px;
-    left: -140px;
-    font-size: 14px;
+.term-y-cond {
+    font-size: 11px;
+    color: #212121;
+    position: relative;
+    margin-left: 0.5em;
 }
 
 .olv-cont {
@@ -101,18 +111,15 @@ body {
     height: 40px;
     border-radius: 14px;
     border: transparent;
-    
+
     background-color: #6243f7;
     margin-top: 24px;
 }
-.ini a{
+.ini a {
     text-decoration: none;
     color: #00ffcb;
 }
-.campos .ini:hover {
-    color: #00ffcb;
-    background-color: black;
-}
+
 
 /**  FOOOTER */
 
@@ -146,90 +153,53 @@ ul.iconos li {
     padding-left: 20px;
     padding-right: 6px;
 }
-.contenedorFormulario{
+.contenedorFormulario {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    width: 25vw;
 }
-.title p{
+.title p {
     margin: 0;
 }
 .HAM {
-    color: #6243F7;
+    color: #6243f7;
     font-size: 40px;
     margin: 0;
 }
-.subtitle{
+.subtitle {
     font-size: 18px;
 }
 
-.campos {
-    position: relative;
-    top: 50px;
-    color: #424242;
-    align-self: center;
-}
 
-.campos :placeholder-shown {
-    background-color: #00FFCB;
-    border-radius: 10px;
-    width: 100%;
-    height: 32px;
-    border: transparent;
-}
-
-::placeholder {
-    color: #424242;
-    margin-left: 150px;
-    position: absolute;
-    top: 8px;
-    left: -140px;
-    font-size: 14px;
-}
-
-.campos .bot-tyc {
-    border-radius: 10px;
-    border-color: #00FFCB;
-}
-
-.campos .term-y-cond {
-    font-size: 11px;
-    color: #424242;
-    position: relative;
-    top: -2px;
-    left: -1px;
-}
-
-.campos .reg{
+ .reg {
     width: 160px;
     height: 40px;
     border-radius: 14px;
     border: transparent;
     position: relative;
-    color: #00FFCB;
-    background-color: #6243F7;
-    margin-top: 8px;
+    color: #00ffcb;
+    background-color: #6243f7;
+    margin-top: 1em;
 }
 
-.campos .reg a{
-    color: #00FFCB;
+ .reg a {
+    color: #00ffcb;
     text-decoration: none;
 }
-.campos .reg:hover {
-    color: #00FFCB;
+ .reg:hover {
+    color: #00ffcb;
     background-color: black;
 }
 
-select {
-    text-align-last: left;
-    padding-left: 6px;
-    direction: ltr;
-    background-color: #00FFCB;
-    border-radius: 10px;
-    width: 244px;
-    height: 36px;
+select.input-form {
+    background-color: #00ffcb;
+    width: 100%;
     border: transparent;
     color: #424242;
-    font-size: 14px;
+}
+
+.campos{
+    width: 100%;
 }

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profesores Hola al Mundo</title>
+  <script src="https://kit.fontawesome.com/3964fc737d.js" crossorigin="anonymous"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link href="/css/normalize.css" rel="stylesheet">
+  <link href="/css/paquetesServicios-2.css" rel="stylesheet">
+  <link href="/css/partialsCss/partials.css" rel="stylesheet">
+  <link href="/css/popUpReserva.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <%- include('../partials/header.ejs')%>
+    <main>
+
+      <section class="container-filtros">
+        <div class="container-header">
+          <h2>¿Que idioma te gustaría aprender?</h2>
+        </div>
+        <!-- idioma -->
+        <button class="btnFiltro">Seleccionar Idioma <i class="fas fa-angle-down"></i></button>
+        <div class="check">
+          <div>
+            <input type="checkbox" name="idiomas" value="español" id="español" class="input-control">
+            <label for="español">Español</label>
+          </div>
+          <div>
+            <input type="checkbox" name="idiomas" value="ingles" id="ingles" class="input-control">
+            <label for="ingles">Ingles</label>
+          </div>
+          <div>
+            <input type="checkbox" name="idiomas" value="portugues" id="portugues" class="input-control">
+            <label for="portugues">Portugués</label>
+          </div>
+          <div>
+            <input type="checkbox" name="idiomas" value="italiano" id="italiano" class="input-control">
+            <label for="italiano">Italiano</label>
+          </div>
+
+        </div>
+        <!-- tematica -->
+        <button class="btnFiltro">Seleccionar Tematicas <i class="fas fa-angle-down"></i></button>
+        <div class="check">
+          <div>
+            <input type="checkbox" name="idiomas" value="español" id="español" class="input-control">
+            <label for="español">Conversacion</label>
+          </div>
+          <div>
+            <input type="checkbox" name="idiomas" value="ingles" id="ingles" class="input-control">
+            <label for="ingles">Clases</label>
+          </div>
+          <div>
+            <input type="checkbox" name="idiomas" value="portugues" id="portugues" class="input-control">
+            <label for="portugues">Viajes</label>
+          </div>
+          <div>
+            <input type="checkbox" name="idiomas" value="italiano" id="italiano" class="input-control">
+            <label for="italiano">Culinaria</label>
+          </div>
+          <div>
+            <input type="checkbox" name="idiomas" value="aleman" id="aleman" class="input-control">
+            <label for="aleman">Deportes</label>
+          </div>
+          <div>
+            <input type="checkbox" name="idiomas" value="aleman" id="aleman" class="input-control">
+            <label for="aleman">Cultura</label>
+          </div>
+        </div>
+        <!-- profesion -->
+        <button class="btnFiltro">Seleccionar Profesion <i class="fas fa-angle-down"></i></button>
+        <div class="check">
+          <div>
+            <input type="checkbox" name="idiomas" value="español" id="español" class="input-control">
+            <label for="español">Abogado</label>
+          </div>
+          <div>
+            <input type="checkbox" name="idiomas" value="ingles" id="ingles" class="input-control">
+            <label for="ingles">Contador</label>
+          </div>
+          <div>
+            <input type="checkbox" name="idiomas" value="portugues" id="portugues" class="input-control">
+            <label for="portugues">Administrador</label>
+          </div>
+          <div>
+            <input type="checkbox" name="idiomas" value="italiano" id="italiano" class="input-control">
+            <label for="italiano">Economista</label>
+          </div>
+          <div>
+            <input type="checkbox" name="idiomas" value="aleman" id="aleman" class="input-control">
+            <label for="aleman">Chef</label>
+          </div>
+          <div>
+            <input type="checkbox" name="idiomas" value="aleman" id="aleman" class="input-control">
+            <label for="aleman">Atleta</label>
+          </div>
+
+          <div>
+            <input type="checkbox" name="idiomas" value="aleman" id="aleman" class="input-control">
+            <label for="aleman">IT</label>
+          </div>
+          <div>
+            <input type="checkbox" name="idiomas" value="aleman" id="aleman" class="input-control">
+            <label for="aleman">Ingeniero</label>
+          </div>
+          <div>
+            <input type="checkbox" name="idiomas" value="aleman" id="aleman" class="input-control">
+            <label for="aleman">Artista</label>
+          </div>
+        </div>
+
+      </section>
+      <section>
+        <div class="containerProfes">
+          <div class="contenedorImg">
+            <div class="borde">
+              <div class="hovereffect">
+                <div class="start">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+                <img class="img-responsive" src="/images/profeDos.png" alt="diego" />
+                <div class="overlay">
+                  <button id="myBtn" class="reservar">Reservar</button>
+                </div>
+              </div>
+            </div>
+            <p class="nombre">Pepito Juarez</p>
+          </div>
+          <div class="contenedorImg">
+            <div class="borde">
+              <div class="hovereffect">
+                <div class="start">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+                <img class="img-responsive" src="/images/profeDos.png" alt="diego" />
+                <div class="overlay">
+                  <button id="myBtn" class="reservar">Reservar</button>
+                </div>
+              </div>
+            </div>
+            <p class="nombre">Pepito Juarez</p>
+          </div>
+          <div class="contenedorImg">
+            <div class="borde">
+              <div class="hovereffect">
+                <div class="start">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+                <img class="img-responsive" src="/images/profeDos.png" alt="diego" />
+                <div class="overlay">
+                  <button id="myBtn" class="reservar">Reservar</button>
+                </div>
+              </div>
+            </div>
+            <p class="nombre">Pepito Juarez</p>
+          </div>
+          <div class="contenedorImg">
+            <div class="borde">
+              <div class="hovereffect">
+                <div class="start">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+                <img class="img-responsive" src="/images/profeDos.png" alt="diego" />
+                <div class="overlay">
+                  <button id="myBtn" class="reservar">Reservar</button>
+                </div>
+              </div>
+            </div>
+            <p class="nombre">Pepito Juarez</p>
+          </div>
+          <div class="contenedorImg">
+            <div class="borde">
+              <div class="hovereffect">
+                <div class="start">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+                <img class="img-responsive" src="/images/profeDos.png" alt="diego" />
+                <div class="overlay">
+                  <button id="myBtn" class="reservar">Reservar</button>
+                </div>
+              </div>
+            </div>
+            <p class="nombre">Pepito Juarez</p>
+          </div>
+          <div class="contenedorImg">
+            <div class="borde">
+              <div class="hovereffect">
+                <div class="start">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+                <img class="img-responsive" src="/images/profeDos.png" alt="diego" />
+                <div class="overlay">
+                  <button id="myBtn" class="reservar">Reservar</button>
+                </div>
+              </div>
+            </div>
+            <p class="nombre">Pepito Juarez</p>
+          </div>
+          <div class="contenedorImg">
+            <div class="borde">
+              <div class="hovereffect">
+                <div class="start">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+                <img class="img-responsive" src="/images/profeDos.png" alt="diego" />
+                <div class="overlay">
+                  <button id="myBtn" class="reservar">Reservar</button>
+                </div>
+              </div>
+            </div>
+            <p class="nombre">Pepito Juarez</p>
+          </div>
+          <div class="contenedorImg">
+            <div class="borde">
+              <div class="hovereffect">
+                <div class="start">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+                <img class="img-responsive" src="/images/profeDos.png" alt="diego" />
+                <div class="overlay">
+                  <button id="myBtn" class="reservar">Reservar</button>
+                </div>
+              </div>
+            </div>
+            <p class="nombre">Pepito Juarez</p>
+          </div>
+        </div>
+        <div class="container-button-ver">
+          <button type="button">Ver mas</button>
+        </div>
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <%- include('../partials/popUpReserve.ejs') %>
+          </div>
+        </div> 
+      </section>
+
+    </main>
+    <!-- chat -->
+    <%- include('../partials/chat.ejs')%>
+    <!-- Footer -->
+    <%- include('../partials/footer.ejs')%>
+    <script src="/js/scriptHeader.js"></script>
+    <script src="/js/scriptPopUpReserve.js"></script>
+
+    <script>
+      var btnFiltro = document.getElementsByClassName("btnFiltro");
+      var i;
+
+      for (i = 0; i < btnFiltro.length; i++) {
+        btnFiltro[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var check = this.nextElementSibling;
+          if (check.style.maxHeight) {
+            check.style.maxHeight = null;
+          } else {
+            check.style.maxHeight = check.scrollHeight + "px";
+          }
+        });
+      }
+    </script>
+</body>
+
+</html>

@@ -22,8 +22,8 @@ body {
   width: 10%;
 }
 .navbar {
-  position: absolute;
-  z-index: 111;
+  position: fixed;
+  z-index: 100000;
   top: 0;
   background-color: #212121;
   display: flex;
@@ -177,7 +177,7 @@ body {
 .dropdown ul li a{
   text-decoration: none;
   color: #fff;
-  padding: 0.5em 1em;
+  padding: 0.5em auto;
 }
 .button-responsive {
   display: none;
@@ -372,8 +372,8 @@ footer .footerTeam {
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 1;
-  top: 8vh;
+  z-index: 88888;
+  top: 6vh;
   right: 0;
   background-color: #212121;
   overflow-x: hidden;

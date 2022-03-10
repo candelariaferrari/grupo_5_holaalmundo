@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mis alumnos</title>
+  <script src="https://kit.fontawesome.com/3964fc737d.js" crossorigin="anonymous"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link href="/css/normalize.css" rel="stylesheet">
+  <link href="/css/paquetesServicios-2.css" rel="stylesheet">
+  <link href="/css/partialsCss/partials.css" rel="stylesheet">
+  <link href="/css/popUpReserva.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <%- include('../partials/header.ejs')%>
+    <main>
+
+      <section class="container-filtros">
+        <div class="container-header">
+          <h2>Mis alumnos</h2>
+        </div>
+        <div class="searchAlumno">
+          <i class="fas fa-search"></i>
+          <input class="input" type="search" name="buscar" placeholder="Buscar alumno ...">
+        </div>
+      </section>
+      <section>
+       
+        <div class="containerProfes">
+          <% estudiantes.forEach(function(estudiante) { %>
+          <div class="contenedorImg">
+            <div class="borde">
+              <div class="hovereffect">
+                <div class="start">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+                <img class="img-responsive" src="/images/<%=estudiante.image %>" alt="diego" />
+                <div class="overlay">
+                  <button id="myBtn" class="reservar">Contactar</button>
+                </div>
+              </div>
+            </div>
+            <p class="nombre"><%= estudiante.nombre %> <%= estudiante.apellido %></p>
+          </div>
+          <% }) %>
+        </div>
+        <div class="container-button-ver">
+          <button type="button">Ver mas</button>
+        </div>
+      </section>
+
+    </main>
+    <!-- chat -->
+    <%- include('../partials/chat.ejs')%>
+    <!-- Footer -->
+    <%- include('../partials/footer.ejs')%>
+    <script src="/js/scriptHeader.js"></script>
+</body>
+
+</html>

@@ -9,175 +9,230 @@ negro: #212121
 blanco: #ffffff
  */
 * {
-    box-sizing: border-box;
-  }
-  body {
-    font-family: "Roboto", sans-serif;
-    height: fit-content;
-  }
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  height: fit-content;
+}
 
 .container-pop-header {
-    border: 5px solid #00ffcb;
-    border-radius: 13%;
-    border-top-right-radius: 9%;
-    height: 766px;
-    width: 920px;
-    margin: auto;
-    margin-top: 2em;
+  border: 5px solid #00ffcb;
+  border-radius: 13%;
+  border-top-right-radius: 9%;
+  height: 766px;
+  width: 920px;
+  margin: auto;
+  margin-top: 2em;
 }
 
 .header {
-    background-image: url(/images/header-popUp.png);
-    width: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    object-fit: cover;
-    /*background-attachment: fixed;*/
-    filter: brightness(1.1);
-    display: flex;
-    align-items: start;
-    justify-content: start;
-    padding: 10px;
+  background-image: url(/images/header-popUp.png);
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+  /*background-attachment: fixed;*/
+  filter: brightness(1.1);
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  padding: 10px;
 }
 
 .header h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin: 1em auto;
-    color: #00ffcb;
-    text-transform: uppercase;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 1em auto;
+  color: #00ffcb;
+  text-transform: uppercase;
 }
 
-.container-pop-body {
-    /*border: 2px solid red;*/
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: center;
-    margin: 3em;
-    gap: 2em;
-    padding: 1em;
-}
+
 
 .container-text {
-    width: 80%;
-    /*border: 2px solid blue;*/
-    align-self: center;
-    text-align: justify; 
-    letter-spacing: normal
+  width: 80%;
+  margin-bottom: 1em;
+  align-self: center;
+  text-align: justify;
+  letter-spacing: normal;
 }
 
 /* ----- FILTROS ---- */
 
 .layerFiltros {
-    width: 80%;
-    /*border: 2px solid blue;*/
-    align-self: center;
+  width: 80%;
+  /*border: 2px solid blue;*/
+  align-self: center;
 }
 
-.layer-horario .layer.hora{
-    margin: auto;
-    /*border: 7px solid purple;*/
-    
+.layer-horario .layer.hora {
+  margin: auto;
+  /*border: 7px solid purple;*/
 }
 
 .cardFiltrosHorario i {
-    color:#00ffcb;
-    margin-left: 500px;
-    font-size: 1.5em;
+  color: #00ffcb;
+  margin-left: 500px;
+  font-size: 1.5em;
 }
 
 .cardFiltrosHorario {
-    background-color: rgba(0, 0, 0, 0.8);
-    border-radius: 16px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    color: white;
-    width: 100%;
-    align-self: center;
-    padding: 4px;   
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 16px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: white;
+  width: 100%;
+  align-self: center;
+  padding: 4px;
 }
 
 .filtro-horario-formulario {
-    display: none;
+  display: none;
 }
 
 .filtro-hora-formulario {
-    display: none;
+  display: none;
 }
 
 .layer-horario:hover > .filtro-horario-formulario {
-    display: flex;
-    flex-direction: row;
-    width: 80%;
-    margin: auto;
-    padding: 10px;
-    gap: 5px;
-    margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  margin: auto;
+  padding: 10px;
+  gap: 5px;
+  margin-bottom: 10px;
 }
 
 .layer-hora:hover > .filtro-hora-formulario {
-    display: flex;
-    flex-direction: row;
-    width: 80%;
-    margin: auto;
-    padding: 10px;
-    gap: 5px;
-    margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  margin: auto;
+  padding: 10px;
+  gap: 5px;
+  margin-bottom: 10px;
 }
 
-.grupo1 {
-    display: flex;
-    flex-direction: column;
-    width: 33%;
-    gap: 5px;
-    margin-left: 65px;
-}
 
-.grupo2 {
-    display: flex;
-    flex-direction: column;
-    width: 33%;
-    gap: 5px;
-}
-
-.grupo3 {
-    display: flex;
-    flex-direction: column;
-    width: 33%;
-    gap: 5px;
-}
 
 .form-group label {
-    background: transparent;
-    border: #00ffcb;
+  background: transparent;
+  border: #00ffcb;
 }
 
 input[type="checkbox"]:checked {
-    box-shadow: 0 0 0 3px #00ffcb;
-  }
+  box-shadow: 0 0 0 3px #00ffcb;
+}
 
 .input-control[type="checkbox"] {
-    color: #00ffcb;
+  color: #00ffcb;
 }
 
-.container-button {
-    /*border: 3px solid red;*/
-    width: 80%;
-    align-self: center;
-    display: flex;
-    justify-content: end;
-    font-size: 1.5rem;
-    font-weight: 700;
-    padding: 5px;
+
+
+/* nuevos */
+section.contenedor {
+  background-color: transparent;
+  border-radius: 25px;
+  /* padding: 1em; */
+  /* width: 1000px; */
+  /* height: 800px; */
+  border-radius: 100px;
+}
+.nombreProfe {
+  background-image: url(/images/bkgPopUp.png);
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+  filter: brightness(1.1);
+}
+.flexTitulo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  width: 820px;
+  height: 100px;
+  margin: auto;
+}
+button.btnFiltroReserva {
+  background-color: #212121;
+  border: none;
+  border-radius: 15px;
+  color: #fff;
+  padding: 0.5em 1em;
+  width: 100%;
+  font-size: 1rem;
+  margin: 0.5em auto;
+  display: flex;
+  justify-content: space-between;
+}
+button:hover.btnFiltro {
+  background-color: #00ffcb;
+  color: #212121;
+}
+button.active.btnFiltro {
+  background-color: #00ffcb;
+  color: #212121;
 }
 
-.container-button button {
-    background-color: #00ffcb;
-    border-radius: 15px;
-    padding-left: 20px;
-    padding-right: 20px;
-    border: none;
-    height: 2.1em;
+#contenedorCheck .check {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 0.5em 1em;
+  background-color: transparent;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+#contenedorCheck .check div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0.2em 0em;
+  padding: 0.5em 0em;
+  color: #212121;
+}
+.check div label {
+  margin-left: 0.5em;
 }
 
+.grupo1,
+.grupo2,
+.grupo3 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 5px;
+}
+.container-pop-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1em auto;
+  padding: 1em;
+  width: 90%;
+}
+
+.containerBtn{
+align-self: flex-end;
+margin-right: 4em;
+} 
+ button.btnReservaPopUp {
+  background-color: #00ffcb;
+  border-radius: 15px;
+  padding: 0.5em 1em;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #212121;
+
+}
