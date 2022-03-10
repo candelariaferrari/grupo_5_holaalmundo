@@ -25,3 +25,11 @@ Existieron confusiones y algunos de nosotros terminamos realizando una tarea que
 
 Otra vez más, gracias al trabajo en equipo, pudimos asegurarnos de tener todo el material listo para ser entregado en tiempo y forma. Vamos a seguir trabajando en nuestros puntos débiles para llegar con menos inconvenientes a las próximas entregas.
 
+Retro Sprint 4
+
+Como mencionamos en la retrospectiva anterior, tuvimos problemas con Jira y perdimos nuestro tablero donde comenzamos la organización del trabajo. Como no hubo manera de recuperarlo, la solución que tomamos fue crear uno nuevo para organizar nuestro trabajo de ahora en adelante en el mismo: 
+https://grupo5-dh.atlassian.net/jira/software/projects/GD/boards/1
+
+En el caso de este Sprint, desde el primer momento logramos organizar nuestro tablero de trabajo y una reunión para dividir las tareas. En esta reunión volvimos a pactar un día y horario cómodo para todos con el objetivo de ver el avance individual en cada una de las tareas a desarrollar pero terminamos no realizandolas por cambios de último momento.
+
+A pesar de ello, estamos conformes porque hasta el momento logramos cumplir con lo pactado en cada uno de los Sprints e ir simultáneamente mejorando partes del código para estar cada vez más cerca de conseguir el diseño planteado en el primer Sprint.
