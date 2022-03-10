@@ -10,15 +10,11 @@ const userLoggedMiddlware = require('./middlewares/userLoggedMiddlware');
 const rutasMain = require('./routes/main');
 const routsStudents = require('./routes/students');
 const routTeachers = require('./routes/teachers');
+
 // ************ express() - (don't touch) ************
 const app = express();
-// ************ Template Engine - (don't touch) ************
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
-
 
 // ************ Middlewares - (don't touch) ************
-
 app.use(express.static(path.join(__dirname, '../public')));  // Necesario para los archivos estáticos en el folder /public
 app.use(express.urlencoded({ extended: false })); //Necesario para tener el req.body
 app.use(logger('dev'));
@@ -35,16 +31,18 @@ app.use(cookies());
 
 app.use(userLoggedMiddlware);
 
+// ************ Template Engine - (don't touch) ************
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
+
 // ************ Route System require and use() ************
-
-
 app.use('/', rutasMain);
 app.use('/students', routsStudents);
 app.use('/teachers', routTeachers);
 
 // ************ Template Engine - (don't touch) ************
 app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, './views/'));
+app.set('views', path.join(__dirname, './views'));
 
 // ************ DON'T TOUCH FROM HERE ************
 // ************ catch 404 and forward to error handler ************

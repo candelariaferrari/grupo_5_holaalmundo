@@ -40,7 +40,6 @@ const serviceComentarios = {
             id: commentId,
             ...req.body
         }
-        console.log(comment);
         comments.push(comment);
         this.writeFileComments(comments);
      }

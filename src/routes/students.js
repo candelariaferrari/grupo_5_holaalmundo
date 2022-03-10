@@ -6,7 +6,7 @@ const studentsController = require('../controllers/studentsController');
 //const adminMiddlware = require('../middlewares/adminMiddleware');
 
 ///* CRUD ESTUDIANTES *///
-console.log(studentsController)
+
 /*** GET ALL INFO IN HOME LOGGED ***/ 
 router.get('/home', studentsController.home); //funciona
 

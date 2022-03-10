@@ -36,10 +36,37 @@ const serviceUsers = {
     },
 
      // ************ Create User ***************
+    createUserCarusel: function(req, res){
+        // REVISAR
+        const errorsValidation = validationResult(req);
+      
+        if(errorsValidation.errors.length > 0) {
+			return res.render('homeGuest/homeGuest', 
+							  {errors: errorsValidation.mapped(),
+							   oldData: req.body});
+		} else {
+            let users = this.findAllUsers();
+            let userId = this.generateId();
+            let password = req.body.password;
+            let passEncoded = bcrypt.hashSync(password, 10);
+        
+            let user = {
+                id: userId,
+                ...req.body, 
+                // Revisar lo de subir imagenes image: 'persona-00.png',
+                password: passEncoded,
+            }
+            
+            users.push(user);
+            this.writeFileUsers(users);
+        
+        }
+          
+    }, 
     createUser: function(req, res){
 
         const errorsValidation = validationResult(req);
-        
+      
         if(errorsValidation.errors.length > 0) {
 			return res.render('register/register', 
 							  {errors: errorsValidation.mapped(),
@@ -47,20 +74,31 @@ const serviceUsers = {
 		} else {
             let users = this.findAllUsers();
             let userId = this.generateId();
-            let password = req.body.contrasenia
+            let password = req.body.password;
             let passEncoded = bcrypt.hashSync(password, 10);
-    
+        
             let user = {
                 id: userId,
                 ...req.body, 
-                image: 'persona-00.png',
-                contrasenia: passEncoded,    
+                // Revisar lo de subir imagenes image: 'persona-00.png',
+                password: passEncoded,
             }
             
             users.push(user);
             this.writeFileUsers(users);
+        
         }
+
     }, 
+    emailFound: function(req) {
+        let users = this.findAllUsers();
+
+        let userEncontrado = users.find(function(user){
+            return user.email == req.body.email
+            });
+
+            return userEncontrado;
+    },
     findByEmail: function(req, res){
 
         const errorsValidation = validationResult(req);
@@ -75,12 +113,12 @@ const serviceUsers = {
                 return user.email == req.body.email
             });
 
-            let password = req.body.contrasenia;
-            let decodePassword = bcrypt.compareSync(password, userEncontrado.contrasenia);
+            let password = req.body.password;
+            let decodePassword = bcrypt.compareSync(password, userEncontrado.password);
             if(decodePassword){
                 // TODO
                 // Borrar la propiedad del password
-                delete userEncontrado.contrasenia;
+                delete userEncontrado.password;
                 // Cookies
                 // if(req.body.remeber_user){ se debe poner el req. del boton de recodar usuario
                 if(true){
@@ -101,15 +139,6 @@ const serviceUsers = {
             }
         }
     }, 
-    emailValidation: function(req) {
-        let users = this.findAllUsers();
-
-        let userEncontrado = users.find(function(user){
-            return user.email == req.body.email
-            });
-
-            return userEncontrado;
-    },
     findPassword: function(email, password) {
         let users = this.findAllUsers();
 
