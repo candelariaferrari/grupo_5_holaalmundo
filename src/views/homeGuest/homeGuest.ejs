@@ -58,27 +58,132 @@
                     <i class="fab fa-linkedin-in"></i>
                   </div>
                 </div>
+                <!-- REVISAR LAS VALIDACIONES-->
                 <div class="form-one">
-                  <form action="/" method="POST">
-                    <input class="input-form" type="text" name="nombre" id="nombre" placeholder="Nombre">
-                    <input class="input-form" type="text" name="apellido" id="apellido" placeholder="Apellido">
-                    <input class="input-form" type="text" name="celular" id="celular" placeholder="Celular">
-                    <input class="input-form" type="email" name="email" id="email" placeholder="Email">
-                    <input class="input-form" type="password" name="contrasena" id="contrasena"
-                      placeholder="Contraseña">
-                    <select class="input-form" required name="userRol" id="user">
-                      <label for="Soy:"></label>
-                      <option name="rol" value="profesor"> Profesor </option>
-                      <option name="rol" value="estudiante"> Estudiante </option>
+                  <form name="form" class="formulario" action="/" method="POST">
+                    <div class="campos">
+                      <label for="name"></label>
+                      <input placeholder="Nombre" type="text" name="name" class="input-form"
+                          <%= locals.errors && errors.name ? 'is-invalid' : null %>
+                          value="<%= locals.oldData ? oldData.name : null %>"
+                          >
+                          <% if(locals.errors && errors.name) { %>
+                            <div class="text-danger" style="color: red">
+                              <%= errors.name.msg %>
+                            </div>
+                          <% } %>
+                    </div>
+                    <div class="campos">
+                      <label for="lastName"></label>
+                      <input placeholder="Apellido" type="text" name="lastName" class="input-form"
+                      <%= locals.errors && errors.lastName ? 'is-invalid' : null %>
+                      value="<%= locals.oldData ? oldData.lastName : null %>"
+                      >
+                      <% if(locals.errors && errors.lastName) { %>
+                        <div class="text-danger" style="color: red">
+                          <%= errors.lastName.msg %>
+                        </div>
+                      <% } %>
+                    </div>     
+                    <div class="campos">
+                      <label for="phone"></label>
+                      <input placeholder="Celular" type="tel" name="phone" class="input-form"
+                      <%= locals.errors && errors.phone ? 'is-invalid' : null %>
+                      value="<%= locals.oldData ? oldData.phone : null %>"
+                      >
+                      <% if(locals.errors && errors.phone) { %>
+                        <div class="text-danger" style="color: red">
+                          <%= errors.phone.msg %>
+                        </div>
+                      <% } %>
+                    </div>       
+                    <div class="campos">
+                      <label for="Mail"></label>
+                      <input placeholder="Mail" type="email" name="email" class="input-form"
+                      <%= locals.errors && errors.email ? 'is-invalid' : null %>
+                      value="<%= locals.oldData ? oldData.email : null %>"
+                      >
+                      <% if(locals.errors && errors.email) { %>
+                        <div class="text-danger" style="color: red">
+                          <%= errors.email.msg %>
+                        </div>
+                      <% } %>
+                    </div>       
+                    <div class="campos">
+                      <label for="password"></label>
+                      <input placeholder="Contraseña" type="password" name="password" class="input-form"
+                      <%= locals.errors && errors.contrasenia ? 'is-invalid' : null %>
+                      value="<%= locals.oldData ? oldData.password : null %>"
+                      >
+                      <% if(locals.errors && errors.password) { %>
+                        <div class="text-danger" style="color: red">
+                          <%= errors.password.msg %>
+                        </div>
+                      <% } %>
+                    </div>
+                    <div class="campos">
+                      <label for="validationContrasenia"></label>
+                      <input placeholder="Confirma la contraseña" type="password" name="validationPassword" class="input-form"
+                      <%= locals.errors && errors.validationPassword ? 'is-invalid' : null %>
+                      value="<%= locals.oldData ? oldData.validationPassword : null %>"
+                      >
+                      <% if(locals.errors && errors.validationPassword) { %>
+                        <div class="text-danger" style="color: red">
+                          <%= errors.validationPassword.msg %>
+                        </div>
+                      <% } %>
+                    </div>
+                    <div class="campos">
+                        <label for="gender:"></label>
+                        <select name="gender" id="gender" class="input-form" 
+                        <%= locals.errors && errors.gender ? 'is-invalid' : null %>>
+                        <option value="">Sexo:</option>
+                        <% let genero = ['Mujer', 'Hombre'] %>
+                        <% for (const gener in genero) { %>
+                          <option 
+                            value="<%= `${gener}` %>"
+                            <%= locals.oldData && (`${gener}` === oldData.gender) ? "selected" : null %>
+                            > 
+                              <%= `${genero[gener]}` %> 
+                          </option>
+                        <% } %>
+                      </select>
+                      <% if (locals.errors && errors.gender) { %>
+                        <div class="text-danger" style="color: red" style="font-weight: bold">
+                          <%= errors.gender.msg %>
+                        </div>
+                      <% } %>
+                    </div>
+                    <div class="campos">
+                      <label for="userRol:"></label>
+                      <select name="userRol" id="userRol" class="input-form"
+                      <%= locals.errors && errors.userRol ? 'is-invalid' : null %>>
+                      <option value="">Soy:</option>
+                      
+                      <% let tipoUser = ['Estudiante', 'Profesor'] %>
+                      
+                      <% for (const user in tipoUser) { %>
+                        <option 
+                          value="<%= `${user}` %>"
+                          <%= locals.oldData && (`${user}` === oldData.userRol) ? "selected" : null %>
+                          > 
+                            <%= `${tipoUser[user]}` %> 
+                        </option>
+                      <% } %>
                     </select>
-                    <div class="flexTerminos">
+                    <% if (locals.errors && errors.userRol) { %>
+                      <div class="text-danger" style="color: red" style="font-weight: bold">
+                        <%= errors.userRol.msg %>
+                      </div>
+                    <% } %>
+                  </div>
+                    <div class="campos">
                       <input class="bot-tyc" type="checkbox" name="terminosCondiciones" required>
                       <label class="term-y-cond"> Acepto los términos y condiciones </label>
                     </div>
-
                     <button type="submit" class="register">
                       registrate
-                    </button>
+                    </button>  
                   </form>
                 </div>
               </div>
@@ -101,12 +206,18 @@
                   </div>
                 </div>
                 <div class="form-one">
-                  <form action="/" method="POST">
-                    <input class="input-form" type="text" name="nombre" id="input-two" placeholder="Nombre">
-                    <input class="input-form" type="text" name="apellido" id="input-two" placeholder="Apellido">
-                    <input class="input-form" type="text" name="celular" id="input-two" placeholder="Celular">
+                  <!--<form action="/" method="POST">
+                    <input class="input-form" type="text" name="name" id="input-two" placeholder="Nombre">
+                    <input class="input-form" type="text" name="lastName" id="input-two" placeholder="Apellido">
+                    <input class="input-form" type="text" name="phone" id="input-two" placeholder="Celular">
                     <input class="input-form" type="email" name="email" id="input-two" placeholder="Email">
                     <input class="input-form" type="password" name="contrasena" id="input-two" placeholder="Contraseña">
+                    <input class="input-form" type="password" name="validationPassword" id="input-two" placeholder="Validacion Contraseña">
+                    <select class="input-form" required name="gender" id="gender">
+                      <label for="Soy:"></label>
+                      <option name="gender" value="Mujer"> Mujer </option>
+                      <option name="gender" value="Hombre"> Hombre </option>
+                    </select>
                     <select class="input-form" required name="userRol" id="user">
                       <label for="Soy:"></label>
                       <option name="rol" value="profesor"> Profesor </option>
@@ -119,7 +230,7 @@
                     <button type="submit" class="register">
                       registrate
                     </button>
-                  </form>
+                  </form>-->
                 </div>
               </div>
               <div class="text-one">

@@ -13,19 +13,6 @@
         "admin": false
     },
     {
-        "id": "9uisg7ni42q",
-        "nombre": "Carlos",
-        "apellido": "Jaramillo",
-        "celular": "3187936659",
-        "email": "cjaramilloportilla@gmail.com",
-        "contrasenia": "12345",
-        "sexo": "H",
-        "userRol": "estudiante",
-        "terminosCondiciones": "on",
-        "image": "profe.png",
-        "admin": true
-    },
-    {
         "id": "ostyhkjyzte",
         "nombre": "Andrea",
         "apellido": "Jaramillo",
@@ -92,19 +79,6 @@
         "terminosCondiciones": "on"
     },
     {
-        "id": "do6g5powj1h",
-        "nombre": "Lorena",
-        "apellido": "Portilla",
-        "celular": "3102410335",
-        "email": "lorena@gmail.com",
-        "contrasenia": "$2b$10$8bX4f5dtWhRzJfQnTHBUeO9yavf0Ysvg.zHDjPXfnxO8NXpUrwW2q",
-        "validationContrasenia": "Andesynene13*",
-        "sexo": "1",
-        "userRol": "Profesor",
-        "image": "profesor-02.png",
-        "terminosCondiciones": "on"
-    },
-    {
         "id": "dzq613mlhdm",
         "nombre": "Juliana",
         "apellido": "Molano",
@@ -141,6 +115,66 @@
         "sexo": "Hombre",
         "userRol": "Estudiante",
         "image": "persona-00.png",
+        "terminosCondiciones": "on"
+    },
+    {
+        "id": "6midizuh1g5",
+        "name": "Andres",
+        "lastName": "Jaramillo",
+        "phone": "3187936659",
+        "email": "andres@gmail.com",
+        "password": "$2b$10$PIVTRQeJj7lGRoJmBlgwfuavso2AmRKkhbeCsIe2kArOIXhZvqEJu",
+        "validationPassword": "Rafanadal13*",
+        "gender": "1",
+        "userRol": "0",
+        "terminosCondiciones": "on"
+    },
+    {
+        "id": "qznshh3s5h8",
+        "name": "Carlos",
+        "lastName": "Jaramillo",
+        "phone": "3187936659",
+        "email": "camila@gmail.com",
+        "password": "$2b$10$SdhdvzR6CEcU9bvh7HnCDuyk091VWHgeKx0B88.hd0sXIEPSay9Gm",
+        "validationPassword": "123",
+        "gender": "1",
+        "userRol": "0",
+        "terminosCondiciones": "on"
+    },
+    {
+        "id": "woc8xoz4ime",
+        "name": "Carlos",
+        "lastName": "Jaramillo",
+        "phone": "3187936659",
+        "email": "cjaramilloportilla@gmail.com",
+        "password": "$2b$10$eL3RtcCe4u.A/k4bDPyoduPS6bphWQ/k9sL6q3mCEvYdnop4TO10C",
+        "validationPassword": "Rafanadal13*",
+        "gender": "1",
+        "userRol": "0",
+        "terminosCondiciones": "on"
+    },
+    {
+        "id": "8e3osre6fpk",
+        "name": "Andres",
+        "lastName": "Jaramillo",
+        "phone": "3187936659",
+        "email": "andres2@gmail.com",
+        "password": "$2b$10$Y/GZf/zyFjVSZiIbAyWgkOSX5aHdRf4PJ./HOh6LoWBewmGvEUGEq",
+        "validationPassword": "Rafanadal13*",
+        "gender": "Hombre",
+        "userRol": "Estudiante",
+        "terminosCondiciones": "on"
+    },
+    {
+        "id": "vx8igfqqh7",
+        "name": "Andres",
+        "lastName": "Jaramillo",
+        "phone": "3187936659",
+        "email": "andres3@gmail.com",
+        "password": "$2b$10$s9Yb53c6ndAFKqyjNT7SbuN6xjYLVv9i6v.0Svbs0RBjbD/oJ4NsO",
+        "validationPassword": "Rafanadal13*",
+        "gender": "Hombre",
+        "userRol": "Estudiante",
         "terminosCondiciones": "on"
     }
 ]

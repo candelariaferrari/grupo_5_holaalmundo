@@ -15,7 +15,7 @@ const logUserMiddleware = require('../middlewares/userLogs');
 router.get('/', mainController.home);
 
 /*** CREATE USER IN HOME GUEST ***/ 
-router.post('/', mainController.createUser);
+router.post('/', validator.register, mainController.createUserCarusel);
 
 /*** CREATE COMENTARIO IN HOME GUEST */
 router.post('/comment', mainController.createComment);

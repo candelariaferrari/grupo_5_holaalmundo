@@ -7,19 +7,19 @@ const userServices = require("../services/usersService");
 const validar = {
 
     register: [
-        body('nombre')
+        body('name')
             .notEmpty()
             .withMessage('Tines que ingresar el nombre')
             .bail()
             .isLength({min:3})
             .withMessage("Campo de nombre debe tener un minimo de 3 caracteres"),
-        body('apellido')
+        body('lastName')
             .notEmpty()
             .withMessage('Tines que ingresar el apellido')
             .bail()
             .isLength({min:3})
             .withMessage("Campo de apellido debe tener un minimo de 3 caracteres"),
-        body('celular')
+        body('phone')
             .notEmpty()
             .withMessage('Tines que ingresar el celular')
             .bail()
@@ -31,7 +31,7 @@ const validar = {
             .bail()
             .custom((value, {req}) => {
 
-                let emailValido = userServices.emailValidation(req);
+                let emailValido = userServices.emailFound(req);
 
                 if(emailValido){
                     throw new Error('El email ya esta registrado');
@@ -39,14 +39,14 @@ const validar = {
                     return true;
                 }
             }),
-        body('contrasenia')
+        body('password')
             .notEmpty()
             .withMessage('Tines que ingresar la contraseña')
             .bail()
             .isLength({min: 4})
             .withMessage("La contraseña debe tener un minimo de 4 caracteres")
             .custom((value, {req}) => {
-                let password = req.body.contrasenia;
+                let password = req.body.password;
         
                 // let regex = /^(?=.*\d)(?=.*[\u0021-\u002b\u003c-\u0040])(?=.*[A-Z])(?=.*[a-z])\S{8,16}$/
                 mayusculas = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','Ñ','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
@@ -91,13 +91,13 @@ const validar = {
                     }
                 }
             }),
-        body('validationContrasenia')
+        body('validationPassword')
             .notEmpty()
             .withMessage('Tines que ingresar la misma contraseña')
             .custom((value, {req}) => {            
-                let password = req.body.contrasenia;
+                let password = req.body.password;
                 
-                let validationPassword = req.body.validationContrasenia
+                let validationPassword = req.body.validationPassword;
         
                 if(!password){
                     throw new Error('Tienes que confirmar tu contraseña');
@@ -112,7 +112,7 @@ const validar = {
                     return true;
                 }
             }),
-        body('sexo')
+        body('gender')
             .notEmpty()
             .withMessage('Tines que ingresar el genero')
             .bail(),
@@ -133,22 +133,23 @@ const validar = {
             .bail()
             .custom((value, {req}) => {
 
-                let emailUser = userServices.emailValidation(req); 
+                let emailUser = userServices.emailFound(req); 
+                console.log(emailUser)
               
-                if(!emailUser.email){
+                if(emailUser == undefined){
                     throw new Error('Se debe ingresar un email registrado');
                 } else {
                     return true; 
             }    
         }),
-        body('contrasenia')
+        body('password')
             .notEmpty()
             .withMessage('Tines que ingresar la contraseña')
             .custom((value, {req}) => {
 
-                let user = userServices.emailValidation(req); 
-                let password = req.body.contrasenia;
-                let decodePassword = bcrypt.compareSync(password, user.contrasenia);
+                let user = userServices.emailFound(req); 
+                let password = req.body.password;
+                let decodePassword = bcrypt.compareSync(password, user.password);
 
                 if(!decodePassword){
                     throw new Error('Las credenciales no son validas');

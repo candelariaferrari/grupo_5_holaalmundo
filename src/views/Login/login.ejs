@@ -47,14 +47,14 @@
             </div>
 
             <div class="campos">
-              <label for="Contrasenia"></label>
-              <input placeholder="Contraseña" type="password" name="contrasenia" class="input-form"
-              <%= locals.errors && errors.contrasenia ? 'is-invalid' : null %>
-							value="<%= locals.oldData ? oldData.contrasenia : null %>"
+              <label for="password"></label>
+              <input placeholder="Contraseña" type="password" name="password" class="input-form"
+              <%= locals.errors && errors.password ? 'is-invalid' : null %>
+							value="<%= locals.oldData ? oldData.password : null %>"
               >
-              <% if(locals.errors && errors.contrasenia) { %>
+              <% if(locals.errors && errors.password) { %>
                 <div class="text-danger" style="color: red">
-                  <%= errors.contrasenia.msg %>
+                  <%= errors.password.msg %>
                 </div>
               <% } %>
             </div>
