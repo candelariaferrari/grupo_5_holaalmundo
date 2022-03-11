@@ -8,20 +8,20 @@ let studentsController = {
 /**  Aqui van los metodos que se encargan de manejar a los estudiantes*/
 
     home: function(req, res) {
+        // console.log("Estas en el Home de estudiantes");
+        // console.log(req.session); 
+        
         const servicios = packageService.findAllServices();
-        //console.log(servicios);
         const profesores = teacherServices.findAllTeachers();
-        //console.log(profesores);
         const serviciosRecomendados = packageService.findAllSuggest();
-        //console.log(serviciosRecomendados);
         const serviciosMasVendidos = packageService.findAllSold();
-        //console.log(serviciosMasVendidos);
-        //console.log(req.cookies.userEmail);
+        console.log(req.cookies.userEmail);
         
         res.render('students/homeStudents',{servicios: servicios, 
                                         serviciosRecomendados: serviciosRecomendados,
                                         serviciosMasVendidos: serviciosMasVendidos,
-                                        profesores: profesores});
+                                        profesores: profesores, 
+                                        user: req.session.userLogged});
     }, 
     createComment: function(req, res){
         commentService.createComment(req.body);

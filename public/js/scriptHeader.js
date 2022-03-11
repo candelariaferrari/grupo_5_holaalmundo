@@ -15,7 +15,7 @@ type == 'students/shoppingCart' || type == 'students/configuration') {
   /* subMenu */
   document.getElementById("subMenu").innerHTML = `<div class="drop-header">
     <i class="far fa-user-circle"></i>
-    <h4>usuario</h4>
+    <h4> Usuario </h4>
   </div>
   <ul>
     <li>Membresías</li>

@@ -2,13 +2,13 @@
 const express = require('express');
 const router = express.Router();
 const studentsController = require('../controllers/studentsController');
-//const authMiddlewars = require('../middlewares/authMiddleware');
+const authMiddlewars = require('../middlewares/authMiddleware');
 //const adminMiddlware = require('../middlewares/adminMiddleware');
 
 ///* CRUD ESTUDIANTES *///
 
 /*** GET ALL INFO IN HOME LOGGED ***/ 
-router.get('/home', studentsController.home); //funciona
+router.get('/home', authMiddlewars, studentsController.home); //funciona
 
 /*** POST COMMENTS ***/ 
 router.post('/home', studentsController.createComment);

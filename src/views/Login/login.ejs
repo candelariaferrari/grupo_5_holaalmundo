@@ -21,13 +21,6 @@
   <main class="main-content">
     <%- include('../partials/backgroundLogin.ejs')%>
       <section class="right-content">
-
-        <% if(locals.errors) { %>
-            <% for(let oneError in errors) { %>
-              <p><%= errors[oneError].msg %></p>
-          <% } %>
-        <% } %>
-
         <div class="contenedorFormulario">
           <div class="title">
             <p class="HAM">Inicio de sesión</p>
@@ -57,6 +50,11 @@
                   <%= errors.password.msg %>
                 </div>
               <% } %>
+            </div>
+            <div class="formulario"> 
+                <label for="">
+                  <input type="checkbox" name="remember_user" > Recordar Usuario
+                </label>
             </div>
           
             <div class="campos">
