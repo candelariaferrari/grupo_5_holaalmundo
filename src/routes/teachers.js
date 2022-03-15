@@ -6,9 +6,10 @@ const path = require('path');
 
 // ************ Controller Require ************
 const teacherController = require('../controllers/teachersController');
+const authMiddlewars = require('../middlewares/authMiddleware');
 
 /* Profes */
-router.get('/home', teacherController.home); //funciona
+router.get('/home', authMiddlewars, teacherController.home); //funciona
 router.get('/students', teacherController.students); //funciona
 router.get('/packages', teacherController.packages); //funcona
 router.get('/configuration', teacherController.configuration); //funciona

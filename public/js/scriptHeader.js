@@ -6,16 +6,16 @@ toggleButton.addEventListener('click', () => {
 })
 
 /* NAVBAR CHANGE AND SUBMENU */
-let type = window.location.pathname.slice(1);
+/*let type = window.location.pathname.slice(1);
 
 console.log(type);
 if (type == 'students/home' || type == 'students/packages' 
 || type == 'students/teachers' || 
-type == 'students/shoppingCart' || type == 'students/configuration') {
+type == 'students/shoppingCart' || type == 'students/configuration') {*/
   /* subMenu */
-  document.getElementById("subMenu").innerHTML = `<div class="drop-header">
+ /* document.getElementById("subMenu").innerHTML = `<div class="drop-header">
     <i class="far fa-user-circle"></i>
-    <h4>usuario</h4>
+    <h4> Usuario </h4>
   </div>
   <ul>
     <li>Membresías</li>
@@ -33,9 +33,9 @@ type == 'students/shoppingCart' || type == 'students/configuration') {
   <ul class="outline">
     <li>Ayuda</li>
     <li> <a href="/students/logout"> Cerrar sesión </a> </li>
-  </ul>`;
+  </ul>`;*/
   /* navBar */
-  document.getElementById("navBarChange").innerHTML = `<ul class="nav-list" id="navList">
+  /*document.getElementById("navBarChange").innerHTML = `<ul class="nav-list" id="navList">
         <li class="nav-item">
           <a class="border" href="/students/home">Home</a>
         </li>
@@ -53,12 +53,11 @@ type == 'students/shoppingCart' || type == 'students/configuration') {
         </li>
       </ul>`;
 
-
 } else if (type == 'teachers/home' || type == 'teachers/packages' || 
 type == 'teachers/configuration' || type == 'teachers/dashboardLessons' || 
-type == 'teacehrs/students') {
+type == 'teacehrs/students') {*/
   /* subMenu */
-  document.getElementById("subMenu").innerHTML = `<div class="drop-header">
+ /* document.getElementById("subMenu").innerHTML = `<div class="drop-header">
   <i class="far fa-user-circle"></i>
   <h4>Usuario</h4>
 </div>
@@ -81,7 +80,7 @@ type == 'teacehrs/students') {
   <li><a href="/teachers/logout">Cerrar sesión</a></li>
 </ul>`;
 /* navBar */
-document.getElementById("navBarChange").innerHTML = `<ul class="nav-list" id="navList">
+/*document.getElementById("navBarChange").innerHTML = `<ul class="nav-list" id="navList">
         <li class="nav-item">
           <a class="border" href="/teachers/home">Home</a>
         </li>
@@ -122,7 +121,7 @@ document.getElementById("navBarChange").innerHTML = `<ul class="nav-list" id="na
         </li>
       </ul>`;
 
-}
+}*/
 
 /* ---- PREVIEW CARRITO ----- */
 function openNav() {

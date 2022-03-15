@@ -107,10 +107,12 @@
                 <select name="gender" id="gender" class="input-form" 
                 <%= locals.errors && errors.gender ? 'is-invalid' : null %>>
                 <option value="">Sexo:</option>
+
                 <% let genero = ['Mujer', 'Hombre'] %>
+                
                 <% for (const gener in genero) { %>
                   <option 
-                    value="<%= `${genero[gener]}` %>"
+                    value="<%= `${gener}` %>"
                     <%= locals.oldData && (`${gener}` === oldData.gender) ? "selected" : null %>
                     > 
                       <%= `${genero[gener]}` %> 
@@ -133,8 +135,8 @@
               
               <% for (const user in tipoUser) { %>
                 <option 
-                  value="<%= `${tipoUser[user]}` %>"
-                  <%= locals.oldData && (`${user}` === oldData.userRol) ? "selected" : null %>
+                  value="<%= `${user}` %>"
+                  <%= locals.oldData && (`${user}` === oldData.userRol) ? 'selected' : null %>
                   > 
                     <%= `${tipoUser[user]}` %> 
                 </option>

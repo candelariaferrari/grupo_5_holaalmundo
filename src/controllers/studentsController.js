@@ -8,35 +8,36 @@ let studentsController = {
 /**  Aqui van los metodos que se encargan de manejar a los estudiantes*/
 
     home: function(req, res) {
-        const servicios = packageService.findAllServices();
-        //console.log(servicios);
-        const profesores = teacherServices.findAllTeachers();
-        //console.log(profesores);
-        const serviciosRecomendados = packageService.findAllSuggest();
-        //console.log(serviciosRecomendados);
-        const serviciosMasVendidos = packageService.findAllSold();
-        //console.log(serviciosMasVendidos);
-        //console.log(req.cookies.userEmail);
         
-        res.render('students/homeStudents',{servicios: servicios, 
+        // ¿Como se pasa el session a local para userlo en todas las vistas?
+        // res.locals.userLogged = req.session.userLogged;
+        
+        const servicios = packageService.findAllServices();
+        const profesores = teacherServices.findAllTeachers();
+        const serviciosRecomendados = packageService.findAllSuggest();
+        const serviciosMasVendidos = packageService.findAllSold();
+        
+        
+        res.render('students/homeStudents', {servicios: servicios, 
                                         serviciosRecomendados: serviciosRecomendados,
                                         serviciosMasVendidos: serviciosMasVendidos,
-                                        profesores: profesores});
+                                        profesores: profesores, 
+                                        user: res.locals.userLogged});
     }, 
     createComment: function(req, res){
         commentService.createComment(req.body);
         res.redirect('/home');
     },
     services: function(req, res) {
-        const profesores = profesoresServices.findAllTeachers();
-        const serviciosRecomendados = serviciosService.findAllSuggest();
-        const serviciosMasVendidos = serviciosService.findAllSold();
-        const servicios = serviciosService.findAllServices();
+        const profesores = teacherServices.findAllTeachers();
+        const serviciosRecomendados = packageService.findAllSuggest();
+        const serviciosMasVendidos = packageService.findAllSold();
+        const servicios = packageService.findAllServices();
         
         res.render('students/packageStudents', {profesores: profesores, 
-                                                            servicios: servicios,
-                                                            serviciosRecomendados: serviciosRecomendados,
-                                                            serviciosMasVendidos:serviciosMasVendidos});
+                                                servicios: servicios,
+                                                serviciosRecomendados: serviciosRecomendados,
+                                                serviciosMasVendidos:serviciosMasVendidos});
     },
     filterTeachers: function(req, res) {
         res.render('students/viewTeachers');
@@ -56,6 +57,7 @@ let studentsController = {
     logout: function(req, res) {
         res.clearCookie('userEmail');
         req.session.destroy();
+        console.log(req.session);
         return res.redirect('/');
     }
 };
