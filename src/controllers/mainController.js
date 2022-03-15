@@ -8,14 +8,16 @@ let mainController = {
 
     home: function(req, res) {
         const servicios = serviciosService.findAllServices();
-        console.log(servicios);
         const profesores = profesoresServices.findAllTeachers();
-        console.log(profesores);
         
         let data = {
 			servicios: servicios, 
 			profesores: profesores}
         res.render('homeGuest/homeGuest', {data: data});
+    },
+    createUserCarusel: function(req, res) {
+        userServices.createUserCarusel(req, res);
+        // res.redirect('/login');
     },
     createComment: function(req, res){
         commentService.createComment(req);
@@ -28,10 +30,11 @@ let mainController = {
         userServices.findByEmail(req, res);
     },
     register: function(req, res) {
+        console.log("Entro en el controlador de register")
         res.render('register/register');
     },
     createUser: function(req, res){
-        userServices.createUser(req.body, res);
+        userServices.createUser(req, res);
         res.redirect('/login');
     }
 };

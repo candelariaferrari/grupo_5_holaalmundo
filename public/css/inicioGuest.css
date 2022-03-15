@@ -82,7 +82,7 @@ body {
 .form-carrusel {
   background-color: #212121;
   width: 400px;
-  height: 550px;
+  height: 730px;
   border-radius: 15px;
   padding: 1em 2em;
   display: flex;
@@ -136,7 +136,7 @@ body {
 .form-carrusel .input-form {
   display: block;
   width: 300px;
-  margin: 0.5em auto;
+  margin: 1em auto;
   background-color: #00ffcb;
   padding: 0.5em 1em;
   border-radius: 15px;
