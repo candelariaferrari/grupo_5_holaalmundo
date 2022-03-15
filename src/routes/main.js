@@ -4,7 +4,6 @@ const router = express.Router();
 const mainController = require('../controllers/mainController');
 //const uploadFileEstudiantes = require('../middlewares/multer/multerRegisterEstudiantes');
 //const uploadFileProfesores = require('../middlewares/multer/multerRegisterProfesores');
-//const authMiddlewars = require('../middlewares/authMiddleware');
 //const adminMiddlware = require('../middlewares/adminMiddleware');
 const guestMiddlware = require('../middlewares/guestMiddlware');
 const validator = require('../middlewares/express-validator');
@@ -21,11 +20,11 @@ router.post('/', validator.register, mainController.createUserCarusel);
 router.post('/comment', mainController.createComment);
 
 /*** GET LOGIN VIEW */
-router.get('/login', mainController.login);
+router.get('/login', guestMiddlware, mainController.login);
 router.post('/login', logUserMiddleware, validator.login, mainController.userValidation);
 
 /*** GET REGISTER */
-router.get('/register', mainController.register);
+router.get('/register', guestMiddlware, mainController.register);
 router.post('/register', validator.register, mainController.createUser);
 
 module.exports = router;

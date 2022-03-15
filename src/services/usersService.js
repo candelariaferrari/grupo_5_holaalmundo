@@ -131,10 +131,12 @@ const serviceUsers = {
                 if(isOkThePassword){
                     delete userToLogin.password;
                     delete userToLogin.validationPassword;
-
+                    
+                    console.log("No se elimina la contraseña al enviar el usuario a session: " + userToLogin);
                     // Creamos una Session del usuario
                     req.session.userLogged = userToLogin;
-
+                    // Lo pasamos a variables glabales
+            
                     // Creamos una cookie para recordar usuario
                     // if(req.body.remeber_user){ se debe poner el req. del boton de recodar usuario
                     if(req.body.remember_user){

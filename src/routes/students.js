@@ -14,16 +14,16 @@ router.get('/home', authMiddlewars, studentsController.home); //funciona
 router.post('/home', studentsController.createComment);
 
 /*** GET ALL PROFESORES  */
-router.get('/packages', studentsController.services); //funciona
+router.get('/packages', authMiddlewars, studentsController.services); //funciona
 
 /*** GET PROFESORES */
-router.get('/teachers', studentsController.filterTeachers);
+router.get('/teachers', authMiddlewars, studentsController.filterTeachers);
 
 /*** PROFIL PROFESORES */
-router.get('/configuration', studentsController.configuration); //funciona
+router.get('/configuration', authMiddlewars, studentsController.configuration); //funciona
 
 /*** SHOPPING CART  */
-router.get('/shoppingCart', studentsController.shoppingCart); //funciona
+router.get('/shoppingCart', authMiddlewars, studentsController.shoppingCart); //funciona
 
 /*** LOGOUT */
 router.get('/logout', studentsController.logout);

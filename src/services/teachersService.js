@@ -3,7 +3,7 @@ const req = require("express/lib/request");
 const fs = require('fs');
 const path = require('path');
 
-const estudiantesServices = require('./usersService');
+const userServices = require('./usersService');
 // ************ Service ************
 
 const serviceTeachers = {
@@ -30,9 +30,9 @@ const serviceTeachers = {
  // ************ Find All ************
    
     findAllTeachers: function(){
-        let profesores = estudiantesServices.findAllUsers();
+       let profesores = userServices.findAllUsers();
        let filterProfesores = profesores.filter(function(profesor){
-        return profesor.userRol == "Estudiante";
+        return profesor.userRol == "1";
        })
        return filterProfesores;
         /* return JSON.parse(this.readFileProfesores()); */
@@ -41,9 +41,9 @@ const serviceTeachers = {
 
     // **** find studient ***//
     findAllStudients: function(){
-       let estudiantes = estudiantesServices.findAllUsers();
+       let estudiantes = userServices.findAllUsers();
        let filterEstudiantes = estudiantes.filter(function(estudiante){
-        return estudiante.userRol == "Estudiante";
+        return estudiante.userRol == "0";
        })
        return filterEstudiantes;
     }
