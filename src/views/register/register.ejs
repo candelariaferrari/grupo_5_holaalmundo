@@ -103,21 +103,17 @@
               <% } %>
             </div>
             <div class="campos">
-                <label for="gender:"></label>
-                <select name="gender" id="gender" class="input-form" 
+              <label for="gender:"></label>
+              <select name="gender" id="gender" class="input-form" 
                 <%= locals.errors && errors.gender ? 'is-invalid' : null %>>
-                <option value="">Sexo:</option>
-
-                <% let genero = ['Mujer', 'Hombre'] %>
+                <option value="" disabled selected>- Seleciona el genero - </option>
                 
-                <% for (const gener in genero) { %>
-                  <option 
-                    value="<%= `${gener}` %>"
-                    <%= locals.oldData && (`${gener}` === oldData.gender) ? "selected" : null %>
-                    > 
-                      <%= `${genero[gener]}` %> 
+                <% allGenres.forEach(genre => { %>
+                  <option value="<%= `${genre.idSex}` %>">
+                    <%= locals.oldData && (genre.idSex === oldData.gender) ? "select" : null %>
+                    <%= `${genre.description}` %> 
                   </option>
-                <% } %>
+                <% }) %>  
               </select>
               <% if (locals.errors && errors.gender) { %>
                 <div class="text-danger" style="color: red" style="font-weight: bold">
@@ -125,22 +121,20 @@
                 </div>
               <% } %>
             </div>
+
             <div class="campos">
               <label for="userRol:"></label>
               <select name="userRol" id="userRol" class="input-form"
               <%= locals.errors && errors.userRol ? 'is-invalid' : null %>>
-              <option value="">Soy:</option>
+              <option value="" disabled selected>- Seleciona el rol - </option>
               
-              <% let tipoUser = ['Estudiante', 'Profesor'] %>
-              
-              <% for (const user in tipoUser) { %>
-                <option 
-                  value="<%= `${user}` %>"
-                  <%= locals.oldData && (`${user}` === oldData.userRol) ? 'selected' : null %>
-                  > 
-                    <%= `${tipoUser[user]}` %> 
+              <% allRol.forEach(rol => { %>
+                <option  value="<%= `${rol.idRol}` %>">
+                  <%= locals.oldData && (rol.idRol == oldData.userRol) ? "selected" : null %>
+                  <%= rol.description %> 
                 </option>
-              <% } %>
+              <% }) %> 
+              
             </select>
             <% if (locals.errors && errors.userRol) { %>
               <div class="text-danger" style="color: red" style="font-weight: bold">
