@@ -3,6 +3,10 @@ const req = require("express/lib/request");
 const fs = require('fs');
 const path = require('path');
 
+const db = require('../database/models');
+const sequelize = db.sequelize;
+const { Op } = require("sequelize");
+
 // ************ Service ************
 
 const servicePackages = {
@@ -30,6 +34,14 @@ const servicePackages = {
     findAllServices: function(){
         return JSON.parse(this.readFileServices());
     },
+    findAllServicesDataBase: function(){
+        db.Class.findAll().then(servicio => {
+            /* console.log(servicio)*/
+            return servicio 
+        }).catch(error => {
+            console.log(error);
+        })
+    }, 
 
  // ************ Servicios Filtros ****************
     findAllSuggest: function(){

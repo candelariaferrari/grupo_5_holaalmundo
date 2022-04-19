@@ -60,7 +60,7 @@
                 </div>
                 <!-- REVISAR LAS VALIDACIONES-->
                 <div class="form-one">
-                  <form name="form" class="formulario" action="/" method="POST">
+                  <form name="form" class="formulario" action="/register" method="POST">
                     <div class="campos">
                       <label for="name"></label>
                       <input placeholder="Nombre" type="text" name="name" class="input-form"
@@ -84,7 +84,8 @@
                           <%= errors.lastName.msg %>
                         </div>
                       <% } %>
-                    </div>     
+                    </div>
+        
                     <div class="campos">
                       <label for="phone"></label>
                       <input placeholder="Celular" type="tel" name="phone" class="input-form"
@@ -96,7 +97,8 @@
                           <%= errors.phone.msg %>
                         </div>
                       <% } %>
-                    </div>       
+                    </div>
+        
                     <div class="campos">
                       <label for="Mail"></label>
                       <input placeholder="Mail" type="email" name="email" class="input-form"
@@ -108,7 +110,8 @@
                           <%= errors.email.msg %>
                         </div>
                       <% } %>
-                    </div>       
+                    </div>
+        
                     <div class="campos">
                       <label for="password"></label>
                       <input placeholder="Contraseña" type="password" name="password" class="input-form"
@@ -137,16 +140,14 @@
                         <label for="gender:"></label>
                         <select name="gender" id="gender" class="input-form" 
                         <%= locals.errors && errors.gender ? 'is-invalid' : null %>>
-                        <option value="">Sexo:</option>
-                        <% let genero = ['Mujer', 'Hombre'] %>
-                        <% for (const gener in genero) { %>
-                          <option 
-                            value="<%= `${gener}` %>"
-                            <%= locals.oldData && (`${gener}` === oldData.gender) ? "selected" : null %>
-                            > 
-                              <%= `${genero[gener]}` %> 
+                        <option value="" disabled selected>- Seleciona el genero - </option>
+                        
+                        <% data.allGenres.forEach(genre => { %>
+                          <option value="<%= `${genre.idSex}` %>">
+                            <%= locals.oldData && (genre.description === oldData.gender) ? "selected" : null %>
+                            <%= `${genre.description}` %> 
                           </option>
-                        <% } %>
+                        <% }) %>  
                       </select>
                       <% if (locals.errors && errors.gender) { %>
                         <div class="text-danger" style="color: red" style="font-weight: bold">
@@ -154,22 +155,19 @@
                         </div>
                       <% } %>
                     </div>
+        
                     <div class="campos">
                       <label for="userRol:"></label>
                       <select name="userRol" id="userRol" class="input-form"
                       <%= locals.errors && errors.userRol ? 'is-invalid' : null %>>
-                      <option value="">Soy:</option>
+                      <option value="" disabled selected>- Seleciona el rol - </option>
                       
-                      <% let tipoUser = ['Estudiante', 'Profesor'] %>
-                      
-                      <% for (const user in tipoUser) { %>
-                        <option 
-                          value="<%= `${user}` %>"
-                          <%= locals.oldData && (`${user}` === oldData.userRol) ? "selected" : null %>
-                          > 
-                            <%= `${tipoUser[user]}` %> 
+                      <% data.allRol.forEach(rol => { %>
+                        <option value="<%= `${rol.idRol}` %>">
+                          <%= locals.oldData && (rol.description === oldData.userRol) ? "selected" : null %>
+                          <%= `${rol.description}` %> 
                         </option>
-                      <% } %>
+                      <% }) %>                   
                     </select>
                     <% if (locals.errors && errors.userRol) { %>
                       <div class="text-danger" style="color: red" style="font-weight: bold">
@@ -181,9 +179,9 @@
                       <input class="bot-tyc" type="checkbox" name="terminosCondiciones" required>
                       <label class="term-y-cond"> Acepto los términos y condiciones </label>
                     </div>
-                    <button type="submit" class="register">
-                      registrate
-                    </button>  
+                    <button type="submit" class="reg" onclick="register()">
+                      Registrarse
+                    </button>
                   </form>
                 </div>
               </div>
@@ -350,11 +348,11 @@
                   <p class="text">Alumnos</p>
                 </div>
                 <div>
-                  <p class="number"> 150 </p>
+                  <p class="number"> <%= data.cantidadTemas.length %> </p>
                   <p class="text">Temáticas</p>
                 </div>
                 <div>
-                  <p class="number"> 4 </p>
+                  <p class="number"> <%= data.cantidadIdiomas.length %> </p>
                   <p class="text">Idomas</p>
                 </div>
               </div>
@@ -373,27 +371,29 @@
           <button class="nxtBtn">
             <i class="fas fa-chevron-right"></i>
           </button>
-          <% data.servicios.forEach(function(servicio){ %>
-            <!-- card 1 -->
-            <div class="serviceCard">
-              <div class="serviceImg">
-                <span class="discountTag">$ <%=servicio.price %></span>
-                <i class="fas fa-comments"></i>
-                <h4>
-                  <%=servicio.name %>
-                </h4>
-                <p class="description">
-                  <%=servicio.description %>
-                </p>
-              </div>
-              <div class="serviceInfo">
-                <button>
-                  <i class="fas fa-shopping-cart"></i>
-                  Agregar al carrito
-                </button>
-              </div>
-            </div>
-            <% }) %>
+          <%if (data.servicios) { %>
+              <% data.servicios.forEach(function(servicio){ %>
+                <!-- card 1 -->
+                <div class="serviceCard">
+                  <div class="serviceImg">
+                    <span class="discountTag">$ <%= servicio.price %></span>
+                    <i class="fas fa-comments"></i>
+                    <h4>
+                      <%=servicio.language %>
+                    </h4>
+                    <p class="description">
+                      <%=servicio.description %>
+                    </p>
+                  </div>
+                  <div class="serviceInfo">
+                    <button>
+                      <i class="fas fa-shopping-cart"></i>
+                      Agregar al carrito
+                    </button>
+                  </div>
+                </div>
+                <% }) %>
+            <% } %> 
         </div>
       </section>
       <!-- section Contacto -->
