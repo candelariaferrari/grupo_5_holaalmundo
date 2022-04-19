@@ -30,6 +30,7 @@ let mainController = {
         userServices.findByEmail(req, res);
     },
     register: function(req, res) {
+        console.log("Entro en el controlador de register")
         res.render('register/register');
     },
     createUser: function(req, res){

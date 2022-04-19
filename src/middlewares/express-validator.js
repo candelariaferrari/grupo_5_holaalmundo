@@ -134,7 +134,6 @@ const validar = {
             .custom((value, {req}) => {
 
                 let emailUser = userServices.emailFound(req); 
-                console.log(emailUser)
               
                 if(emailUser == undefined){
                     throw new Error('Se debe ingresar un email registrado');
@@ -148,14 +147,23 @@ const validar = {
             .custom((value, {req}) => {
 
                 let user = userServices.emailFound(req); 
-                let password = req.body.password;
-                let decodePassword = bcrypt.compareSync(password, user.password);
+            
+                if(user == undefined){
+                    throw new Error('La contraseña no corresponde al correo ingresado');
+                }
+                else {
 
-                if(!decodePassword){
-                    throw new Error('Las credenciales no son validas');
-                } else {
-                    return user;
-                }                          
+                    let password = req.body.password;
+            
+                    let decodePassword = bcrypt.compareSync(password, user.password);
+
+                    if(!decodePassword){
+                        throw new Error('Las credenciales no son validas');
+                    } else {
+                        return user;
+                    }
+                     
+                }                         
             })
         ]
 }

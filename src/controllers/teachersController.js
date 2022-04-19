@@ -5,7 +5,8 @@ const profesoresServices = require('../services/teachersService');
 let teachersController = {
 
     home: function (req, res) {
-        res.render('teachers/homeTeachers');   
+        
+        res.render('teachers/homeTeachers', {user: res.locals.userLogged});   
 
     },
     students: function (req, res) {
@@ -24,6 +25,7 @@ let teachersController = {
     logout: function(req, res) {
         res.clearCookie('userEmail');
         req.session.destroy();
+        console.log(req.session);
         return res.redirect('/');
     }
 };
