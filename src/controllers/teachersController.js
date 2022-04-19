@@ -6,7 +6,7 @@ let teachersController = {
 
     home: function (req, res) {
         
-        res.render('teachers/homeTeachers', {user: res.locals.userLogged});   
+        res.render('teachers/homeTeachers');   
 
     },
     students: function (req, res) {
