@@ -257,6 +257,17 @@ body {
   font-size: 1rem;
   color: #212121;
 }
+
+.flexContacto .formulario .input-form,
+input::placeholder {
+  color: #212121;
+  opacity: 1;
+}
+.input-form:focus,
+input:focus,
+input[type]:focus {
+  outline: 0 none;
+}
 .flexContacto .formulario .consulta {
   display: block;
   width: 100%;

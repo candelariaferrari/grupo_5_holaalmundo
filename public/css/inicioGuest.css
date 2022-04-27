@@ -168,6 +168,8 @@ input::placeholder {
 input:focus,
 input[type]:focus {
   outline: 0 none;
+  color: #212121;
+
 }
 .flexTerminos {
   display: flex;
@@ -919,6 +921,8 @@ select {
     padding: 0.5em;
     font-size: 0.9rem;
   }
+
+  
   /* footer */
   footer {
     padding: 0em;
