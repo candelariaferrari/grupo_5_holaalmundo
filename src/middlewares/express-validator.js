@@ -2,7 +2,8 @@ const {check, body, validationResult} = require("express-validator");
 const fs = require("fs");
 const path = require ("path");
 const bcrypt = require("bcrypt");
-const userServices = require("../services/usersService");
+// const userServices = require("../services/usersService");
+const db = require('../database/models');
 
 const validar = {
 
@@ -31,14 +32,16 @@ const validar = {
             .bail()
             .custom((value, {req}) => {
 
-                let emailValido = userServices.emailFound(req);
-
-                if(emailValido){
-                    throw new Error('El email ya esta registrado');
-                } else {
-                    return true;
-                }
-            }),
+                return db.User.findOne({
+                    where:{
+                        email: value
+                    }
+                }).then(user => {
+                    if(user){
+                        return Promise.reject("Email ya registrado!")
+                    }
+            })
+        }),
         body('password')
             .notEmpty()
             .withMessage('Tines que ingresar la contraseña')
@@ -133,39 +136,34 @@ const validar = {
             .bail()
             .custom((value, {req}) => {
 
-                let emailUser = userServices.emailFound(req); 
-              
-                if(emailUser == undefined){
-                    throw new Error('Se debe ingresar un email registrado');
-                } else {
-                    return true; 
-            }    
+                return db.User.findOne({
+                    where:{
+                        email: value
+                    }
+                 }).then(user => {
+                        if(!user){
+                            return Promise.reject("Usuario invalido")
+                        }
+                })
         }),
         body('password')
             .notEmpty()
             .withMessage('Tines que ingresar la contraseña')
             .custom((value, {req}) => {
-
-                let user = userServices.emailFound(req); 
-            
-                if(user == undefined){
-                    throw new Error('La contraseña no corresponde al correo ingresado');
-                }
-                else {
-
-                    let password = req.body.password;
-            
-                    let decodePassword = bcrypt.compareSync(password, user.password);
-
-                    if(!decodePassword){
-                        throw new Error('Las credenciales no son validas');
-                    } else {
-                        return user;
+ 
+                return db.User.findOne({
+                    where:{
+                        email: req.body.email
                     }
-                     
-                }                         
+                 }).then(user => {
+                    if(!user){
+                        return Promise.reject("Usuario invalido")
+                    } else if(!bcrypt.compareSync(req.body.password, user.password)) {
+                        return Promise.reject("La contraseña no corresponde al email ingresado")
+                    }
+                })                      
             })
-        ]
+    ]
 }
 
 module.exports = validar;

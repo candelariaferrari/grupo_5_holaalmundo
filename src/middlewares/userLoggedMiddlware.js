@@ -1,4 +1,5 @@
-const User= require('../services/usersService')
+const User = require('../services/usersService')
+const db = require('../database/models');
 
 // Middleware de aplicacion
 function userLoggedMiddlware(req, res, next) {
@@ -7,19 +8,25 @@ function userLoggedMiddlware(req, res, next) {
     res.locals.isLogged = false;
     res.locals.loggedStudent = false;
     res.locals.loggedTeacher = false;
-
+    res.locals.user = false
     // Email que viene en la cookie
     let emailInCookie = req.cookies.userEmail;
-    let userFromCookie = User.findByField('email', emailInCookie);
-    // console.log("¿Hay usuario con cookie? " + userFromCookie)
-
-    if(userFromCookie){
-        req.session.userLogged = userFromCookie;
-    } 
-
+    // let userFromCookie = User.findByField('email', emailInCookie);
+    if (emailInCookie) {
+        db.User.findOne({
+            where: {
+                email: emailInCookie
+            }
+        }).then(userFromCookie => {
+            if (userFromCookie) {
+                req.session.userLogged = userFromCookie;
+            }
+        });
+    }
     // Visualizar barra de navegacion si esta logeado o no
-    if(req.session.userLogged){
-        if(req.session.userLogged.userRol === '0'){
+    if (req.session.userLogged) {
+        if (req.session.userLogged.rol_id === 1) {
+
             res.locals.loggedStudent = true;
         } else {
             res.locals.loggedTeacher = true;

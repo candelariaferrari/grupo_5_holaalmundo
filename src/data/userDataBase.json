@@ -51,5 +51,17 @@
         "gender": "0",
         "userRol": "0",
         "terminosCondiciones": "on"
+    },
+    {
+        "id": "n92rjo5009k",
+        "name": "Carlos",
+        "lastName": "Jaramillo",
+        "phone": "3187936659",
+        "email": "cjaramillo@gmail.com",
+        "password": "$2b$10$8OAE9lr.qj6JLIeIEJ9qs.6rGoakq2Hl4yfhw3I.V./uKFw9LODRa",
+        "validationPassword": "Rafanadal13*",
+        "gender": "1",
+        "userRol": "0",
+        "terminosCondiciones": "on"
     }
 ]
