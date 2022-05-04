@@ -60,9 +60,9 @@ let studentsController = {
                  res.render('students/homeStudents', {servicios: servicios, 
                                                       profesores: profesores, 
                                                       estudiantes: estudiantes,
-                                                      cantidadIdiomas:cantidadIdiomas, 
-                                                      cantidadTemas:cantidadTemas,
-                                                      serviciosRecomendados,
+                                                      cantidadIdiomas: cantidadIdiomas, 
+                                                      cantidadTemas: cantidadTemas,
+                                                      serviciosRecomendados: serviciosRecomendados,
                                                       serviciosMasVendidos: serviciosMasVendidos})})
         
                  .catch(error => {console.log(error)});
