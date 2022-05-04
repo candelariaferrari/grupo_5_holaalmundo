@@ -1,4 +1,4 @@
-// CREO Y EXPORTO EL MODELO 
+// CREO Y EXPORTO EL MODELO
 
 module.exports = function(sequelize, dataTypes) 
 {
