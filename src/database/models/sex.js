@@ -1,32 +1,38 @@
-module.exports = (sequelize, dataTypes) => {
-    let alias = 'Sex'; // esto debería estar en singular
-    let cols = {
-        idSex: {
-            type: dataTypes.BIGINT(10).UNSIGNED,
-            primaryKey: true,
-            allowNull: false,
-            autoIncrement: true
-        },
-        description: {
-            type: dataTypes.STRING,
-            allowNull: false
-        }
-    };
-    let config = {
-        tableName: "Sex",
-        timestamps: false,
-    }
+// CREO Y EXPORTO EL MODELO 
 
-    const Sex = sequelize.define(alias,cols,config);
+module.exports = function(sequelize, dataTypes) 
+{
+let alias = 'Sex'
 
-    //Aquí debes realizar lo necesario para crear las relaciones con los otros modelos
-    Sex.associate = function(models){
-        Sex.hasMany(models.User, {
-            as: "users",
-            foreignKey: "sex_id"
-        });
-    }
+let cols = 
+{
+idSex: {
+        type: dataTypes.BIGINT(10).UNSIGNED,
+        primaryKey: true,
+        allowNull: false,
+        autoIncrement: true
+       },
+description: {
+              type: dataTypes.STRING,
+              allowNull: false
+             }
+}
+    
+let config = {
+              tableName: "Sex",
+              timestamps: false,
+             }
 
-    return Sex
+const Sex = sequelize.define(alias,cols,config)
+
+// RELACIONES ENTRE MODELOS 
+
+Sex.associate = function(models)
+{
+Sex.hasMany(models.User, {as: "users",
+                          foreignKey: "sex_id"})
+}
+
+return Sex
 
 };
