@@ -1,9 +1,15 @@
-function authMiddlware(req, res, next) {
+// MIDDLEWARE
 
-    if(!req.session.userLogged){
-        return res.redirect('/')
-    } 
-    next();
+function authMiddleware(req, res, next) 
+{
+if(!req.session.userLogged)
+{
+ return res.redirect('/')
+} 
+
+next();
 }
 
-module.exports = authMiddlware;
+// EXPORTO EL MIDDLEWARE
+
+module.exports = authMiddleware;
