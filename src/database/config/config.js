@@ -1,3 +1,5 @@
+// EXPORTO LA CONFIGURACIÓN DE LA BASE DE DATOS
+
 module.exports = {
   "development": {
     "username": "root",
