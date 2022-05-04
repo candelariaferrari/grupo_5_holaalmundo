@@ -44,6 +44,3 @@ User_Class.hasMany(models.Class, {as: "classes",
 return User_Class
 
 };
-
-
-};
