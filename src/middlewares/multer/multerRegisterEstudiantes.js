@@ -21,8 +21,8 @@ const upload = multer({
       fileFilter: function(req, file, cb)
       {
        const imagenesValidas = [".jpg", "jpeg", ".png", ".PNG", ".JPG", ".JPEG"];
-       const extencion = path.extname(file.originalname);
-       const resultado = imagenesValidas.includes(extencion);
+       const extension = path.extname(file.originalname);
+       const resultado = imagenesValidas.includes(extension);
           
        if(resultado == false) 
        {
