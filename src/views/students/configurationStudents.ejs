@@ -1,62 +1,68 @@
+<!-- CONFIGURACION ESTUDIANTES -->
+
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Configuracion</title>
-  <script src="https://kit.fontawesome.com/3964fc737d.js" crossorigin="anonymous"></script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
-  <link href="/css/normalize.css" rel="stylesheet" />
-  <link href="/css/configuracion.css" rel="stylesheet" />
-  <link rel="stylesheet" href="/css/partialsCss/partials.css" />
+       <meta charset="UTF-8" />
+       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+       <title> Configuración </title>
+       <script src="https://kit.fontawesome.com/3964fc737d.js" crossorigin="anonymous"></script>
+       <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+       <link rel="preconnect" href="https://fonts.googleapis.com" />
+       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+       <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+       <link href="/css/normalize.css" rel="stylesheet" />
+       <link href="/css/configuracion.css" rel="stylesheet" />
+       <link rel="stylesheet" href="/css/partialsCss/partials.css" />
 </head>
 
 <body id="alumnos">
-  <%- include('../partials/header.ejs')%>
-    <main>
-      <section class="contenedorConfiguracion">
-        <h1>Mis datos</h1>
-        <form name="form" class="formulario" action="#" method="POST">
-          <input class="input-form" placeholder="Nombre" type="text" name="nombre" required>
-          <input class="input-form" placeholder="Apellido" type="text" name="apellido" required>
-          <input class="input-form" placeholder="Celular" type="text" name="celular" required>
-          <input class="input-form" placeholder="Mail" type="email" name="email" required>
-          <input class="input-form" placeholder="Contraseña" type="password" name="contrasenia" required>
-          <select class="input-form" required name="userRol" id="user">
-            <label for="Soy:"></label>
-            <option name="rol" value="profesor"> Profesor </option>
-            <option name="rol" value="estudiante"> Estudiante </option>
-          </select>
-          
-         
 
-          <div class="subir">
-<!--              <label for="nuestroinput">Subir imagen</label> 
- -->            <input  type="file" name="group-image" id="nuestroinput" class="inputSubir">
-          </div>
-          <div class="contenedorBtn"> 
-            <button type="submit" class="cancelar">
-              Cancelar
-            </button>
-            <button type="submit" class="reg">
-              Guardar
-            </button>
-          </div>
-          
+ <%- include('../partials/header.ejs')%>
 
-        </form>
-      </section>
-    </main>
-    <!-- chat -->
-    <%- include('../partials/chat.ejs')%>
-      <!-- Footer -->
-      <%- include('../partials/footer.ejs')%>
-        <script src="/js/scriptHeader.js"></script>
+ <main>
+
+ <section class="contenedorConfiguracion">
+
+          <h1> Mis datos </h1>
+
+          <form name="form" class="formulario" action="#" method="POST">
+
+                <input class="input-form" placeholder="Nombre" type="text" name="nombre" required>
+                <input class="input-form" placeholder="Apellido" type="text" name="apellido" required>
+                <input class="input-form" placeholder="Celular" type="text" name="celular" required>
+                <input class="input-form" placeholder="Email" type="email" name="email" required>
+                <input class="input-form" placeholder="Contraseña" type="password" name="contrasenia" required>
+                <select class="input-form" required name="userRol" id="user">
+                <label for="Soy:"></label>
+                <option name="rol" value="profesor"> Profesor </option>
+                <option name="rol" value="estudiante"> Estudiante </option>
+                </select>
+          
+                <div class="subir">
+                     <input  type="file" name="group-image" id="nuestroinput" class="inputSubir">
+                </div>
+
+                <div class="contenedorBtn"> 
+                     <button type="submit" class="cancelar"> Cancelar </button>
+                     <button type="submit" class="reg"> Guardar </button>
+                </div>
+          
+          </form>
+
+ </section>
+
+ </main>
+
+ <%- include('../partials/chat.ejs')%>
+
+ <%- include('../partials/footer.ejs')%>
+        
+ <script src="/js/scriptHeader.js"> </script>
+
 </body>
 
 </html>
