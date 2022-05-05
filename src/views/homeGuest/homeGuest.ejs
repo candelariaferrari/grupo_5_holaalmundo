@@ -1,411 +1,409 @@
+<!-- INICIO INVITADOS -->
+
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hola al Mundo</title>
-  <script src="https://kit.fontawesome.com/3964fc737d.js" crossorigin="anonymous"></script>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="/css/inicioGuest.css">
-  <link rel="stylesheet" href="/css/partialsCss/partials.css">
+       <meta charset="UTF-8">
+       <meta http-equiv="X-UA-Compatible" content="IE=edge">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title> Hola al Mundo </title>
+       <script src="https://kit.fontawesome.com/3964fc737d.js" crossorigin="anonymous"> </script>
+       <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+             rel="stylesheet">
+       <link rel="stylesheet" href="/css/inicioGuest.css">
+       <link rel="stylesheet" href="/css/partialsCss/partials.css">
 </head>
 
 <body>
-  <%- include('../partials/header')%>
-    <main>
-      <!-- Carrusel principal -->
-      <section>
-        <div class="main-carrusel">
-          <!-- img 1 -->
-          <div class="mySlides fade">
-            <img class="imagen" src="/images/carrusel01.png">
-            <div class="content-text">
-              <p class="text">Lorem ipsum dolor sit amet. </p>
-              <p class="text">Lorem ipsum dolor sit amet. </p>
-              <p class="text">Lorem ipsum dolor sit amet. </p>
-            </div>
-          </div>
-          <!-- img 2 -->
-          <div class="mySlides fade">
-            <img class="imagen" src="/images/carrusel02.png">
-            <div class="flex-form">
-              <div class="text-one">
-                <h2>¿Te gustaría enseñar con nosotros? </h2> 
-                <p>Lorem ipsum dolor, sit amet consectetur
-                  adipisicing elit. Alias, illo minima quidem
-                  nihil quae earum ex quas maxime at nulla deleniti
-                  aliquid modi atque minus iusto consequuntur
-                  quibusdam cupiditate sequi.
-                </p>
-                <p class="subtitle">¿Que esperas?
-                  <strong>forma parte de la comunidad</strong>
-                  hola al mundo!
-                </p>
-              </div>
-              <div class="form-carrusel">
-                <div class="flex-icon">
-                  <div class="circulo">
-                    <i class="fab fa-google"></i>
-                  </div>
-                  <div class="circulo">
-                    <i class="fab fa-facebook-f"></i>
-                  </div>
-                  <div class="circulo">
-                    <i class="fab fa-linkedin-in"></i>
-                  </div>
-                </div>
-                <!-- REVISAR LAS VALIDACIONES-->
-                <div class="form-one">
-                  <form name="form" class="formulario" action="/register" method="POST">
-                    <div class="campos">
-                      <label for="name"></label>
-                      <input placeholder="Nombre" type="text" name="name" class="input-form"
-                          <%= locals.errors && errors.name ? 'is-invalid' : null %>
-                          value="<%= locals.oldData ? oldData.name : null %>"
-                          >
-                          <% if(locals.errors && errors.name) { %>
-                            <div class="text-danger" style="color: red">
-                              <%= errors.name.msg %>
-                            </div>
-                          <% } %>
-                    </div>
-                    <div class="campos">
-                      <label for="lastName"></label>
-                      <input placeholder="Apellido" type="text" name="lastName" class="input-form"
-                      <%= locals.errors && errors.lastName ? 'is-invalid' : null %>
-                      value="<%= locals.oldData ? oldData.lastName : null %>"
-                      >
-                      <% if(locals.errors && errors.lastName) { %>
-                        <div class="text-danger" style="color: red">
-                          <%= errors.lastName.msg %>
+ 
+ <%- include('../partials/header')%>
+
+ <main>
+
+ <section>
+
+    <div class="main-carrusel">
+
+         <div class="mySlides fade">
+
+              <img class="imagen" src="/images/carrusel01.png">
+
+                   <div class="content-text">
+                        <p class="text"> Comenzá tu experiencia </p>
+                        <p class="text"> Registrate hoy mismo </p>
+                        <p class="text"> Sólo toma unos minutos </p>
+                   </div>
+
+         </div>
+          
+         <div class="mySlides fade">
+
+              <img class="imagen" src="/images/carrusel02.png">
+
+                   <div class="flex-form">
+
+                        <div class="text-one">
+                             <h2> ¿Te gustaría enseñar con nosotros? </h2> 
+                             <br>
+                             <p class="subtitle"> ¿Qué estas esperando para formar parte de la comunidad de hola al mundo? </p>
+                             <br>
+                             <p> ¡Completá en este mismo instante nuestro formulario de registro! </p>
                         </div>
-                      <% } %>
-                    </div>
+
+                        <div class="form-carrusel">
+
+                             <div class="flex-icon">
+                                  <div class="circulo"> <i class="fab fa-google"> </i> </div>
+                                  <div class="circulo"> <i class="fab fa-facebook-f"> </i> </div>
+                                  <div class="circulo"> <i class="fab fa-linkedin-in"> </i> </div>
+                             </div>
+
+                             <div class="form-one">
+
+                                  <form name="form" class="formulario" action="/" method="POST">
+                                                     
+                                        <div class="campos">
+                                             <label for="name"></label>
+                                             <input placeholder="Nombre" type="text" name="name" class="input-form"
+                                             <%= locals.errors && errors.name ? 'is-invalid' : null %>
+                                                 value="<%= locals.oldData ? oldData.name : null %>" >
+                                             <% if(locals.errors && errors.name) { %>
+                                                  <div class="text-danger" style="color: red"> <%= errors.name.msg %> </div>
+                                             <% } %>
+                                        </div>
+
+                                        <div class="campos">
+                                             <label for="lastName"></label>
+                                             <input placeholder="Apellido" type="text" name="lastName" class="input-form"
+                                             <%= locals.errors && errors.lastName ? 'is-invalid' : null %>
+                                                 value="<%= locals.oldData ? oldData.lastName : null %>" >
+                                             <% if(locals.errors && errors.lastName) { %>
+                                                  <div class="text-danger" style="color: red"> <%= errors.lastName.msg %> </div>
+                                             <% } %>
+                                        </div>
         
-                    <div class="campos">
-                      <label for="phone"></label>
-                      <input placeholder="Celular" type="tel" name="phone" class="input-form"
-                      <%= locals.errors && errors.phone ? 'is-invalid' : null %>
-                      value="<%= locals.oldData ? oldData.phone : null %>"
-                      >
-                      <% if(locals.errors && errors.phone) { %>
-                        <div class="text-danger" style="color: red">
-                          <%= errors.phone.msg %>
-                        </div>
-                      <% } %>
-                    </div>
+                                        <div class="campos">
+                                             <label for="phone"></label>
+                                             <input placeholder="Celular" type="tel" name="phone" class="input-form"
+                                             <%= locals.errors && errors.phone ? 'is-invalid' : null %>
+                                                 value="<%= locals.oldData ? oldData.phone : null %>" >
+                                             <% if(locals.errors && errors.phone) { %>
+                                                  <div class="text-danger" style="color: red"> <%= errors.phone.msg %> </div>
+                                             <% } %>
+                                        </div>
         
-                    <div class="campos">
-                      <label for="Mail"></label>
-                      <input placeholder="Mail" type="email" name="email" class="input-form"
-                      <%= locals.errors && errors.email ? 'is-invalid' : null %>
-                      value="<%= locals.oldData ? oldData.email : null %>"
-                      >
-                      <% if(locals.errors && errors.email) { %>
-                        <div class="text-danger" style="color: red">
-                          <%= errors.email.msg %>
-                        </div>
-                      <% } %>
-                    </div>
+                                        <div class="campos">               
+                                             <label for="Mail"></label>
+                                             <input placeholder="Email" type="email" name="email" class="input-form"
+                                             <%= locals.errors && errors.email ? 'is-invalid' : null %>
+                                                 value="<%= locals.oldData ? oldData.email : null %>" >
+                                             <% if(locals.errors && errors.email) { %>
+                                                  <div class="text-danger" style="color: red"> <%= errors.email.msg %> </div>
+                                             <% } %>
+                                        </div>
         
-                    <div class="campos">
-                      <label for="password"></label>
-                      <input placeholder="Contraseña" type="password" name="password" class="input-form"
-                      <%= locals.errors && errors.contrasenia ? 'is-invalid' : null %>
-                      value="<%= locals.oldData ? oldData.password : null %>"
-                      >
-                      <% if(locals.errors && errors.password) { %>
-                        <div class="text-danger" style="color: red">
-                          <%= errors.password.msg %>
-                        </div>
-                      <% } %>
-                    </div>
-                    <div class="campos">
-                      <label for="validationContrasenia"></label>
-                      <input placeholder="Confirma la contraseña" type="password" name="validationPassword" class="input-form"
-                      <%= locals.errors && errors.validationPassword ? 'is-invalid' : null %>
-                      value="<%= locals.oldData ? oldData.validationPassword : null %>"
-                      >
-                      <% if(locals.errors && errors.validationPassword) { %>
-                        <div class="text-danger" style="color: red">
-                          <%= errors.validationPassword.msg %>
-                        </div>
-                      <% } %>
-                    </div>
-                    <div class="campos">
-                        <label for="gender:"></label>
-                        <select name="gender" id="gender" class="input-form" 
-                        <%= locals.errors && errors.gender ? 'is-invalid' : null %>>
-                        <option value="" disabled selected>- Seleciona el genero - </option>
-                        
-                        <% data.allGenres.forEach(genre => { %>
-                          <option value="<%= `${genre.idSex}` %>">
-                            <%= locals.oldData && (genre.description === oldData.gender) ? "selected" : null %>
-                            <%= `${genre.description}` %> 
-                          </option>
-                        <% }) %>  
-                      </select>
-                      <% if (locals.errors && errors.gender) { %>
-                        <div class="text-danger" style="color: red" style="font-weight: bold">
-                          <%= errors.gender.msg %>
-                        </div>
-                      <% } %>
-                    </div>
+                                        <div class="campos">
+                                             <label for="password"></label>
+                                             <input placeholder="Contraseña" type="password" name="password" class="input-form"
+                                             <%= locals.errors && errors.contrasenia ? 'is-invalid' : null %>
+                                                 value="<%= locals.oldData ? oldData.password : null %>" >
+                                             <% if(locals.errors && errors.password) { %>
+                                                  <div class="text-danger" style="color: red"> <%= errors.password.msg %> </div>
+                                             <% } %>
+                                        </div>
+
+                                        <div class="campos">
+                                             <label for="validationContrasenia"></label>
+                                             <input placeholder="Confirma tu contraseña" type="password" name="validationPassword" class="input-form"
+                                             <%= locals.errors && errors.validationPassword ? 'is-invalid' : null %>
+                                                 value="<%= locals.oldData ? oldData.validationPassword : null %>" >
+                                             <% if(locals.errors && errors.validationPassword) { %>
+                                                  <div class="text-danger" style="color: red"> <%= errors.validationPassword.msg %> </div>
+                                             <% } %>
+                                        </div>
+
+                                        <div class="campos">
+                                             <label for="gender:"></label>
+                                             <select name="gender" id="gender" class="input-form" 
+                                             <%= locals.errors && errors.gender ? 'is-invalid' : null %> >
+                                             <option value="" disabled selected> Seleciona tu género </option>
+                                             <% data.allGenres.forEach(genre => { %>
+                                             <option value="<%= `${genre.idSex}` %>">
+                                             <%= locals.oldData && (genre.description === oldData.gender) ? "selected" : null %>
+                                             <%= `${genre.description}` %> 
+                                             </option>
+                                             <% }) %>  
+                                             </select>
+                                             <% if(locals.errors && errors.gender) { %>
+                                                  <div class="text-danger" style="color: red" style="font-weight: bold"> <%= errors.gender.msg %> </div>
+                                             <% } %>
+                                        </div>
         
-                    <div class="campos">
-                      <label for="userRol:"></label>
-                      <select name="userRol" id="userRol" class="input-form"
-                      <%= locals.errors && errors.userRol ? 'is-invalid' : null %>>
-                      <option value="" disabled selected>- Seleciona el rol - </option>
-                      
-                      <% data.allRol.forEach(rol => { %>
-                        <option value="<%= `${rol.idRol}` %>">
-                          <%= locals.oldData && (rol.description === oldData.userRol) ? "selected" : null %>
-                          <%= `${rol.description}` %> 
-                        </option>
-                      <% }) %>                   
-                    </select>
-                    <% if (locals.errors && errors.userRol) { %>
-                      <div class="text-danger" style="color: red" style="font-weight: bold">
-                        <%= errors.userRol.msg %>
-                      </div>
-                    <% } %>
-                  </div>
-                    <div class="campos">
-                      <input class="bot-tyc" type="checkbox" name="terminosCondiciones" required>
-                      <label class="term-y-cond"> Acepto los términos y condiciones </label>
-                    </div>
-                    <button type="submit" class="reg" onclick="register()">
-                      Registrarse
-                    </button>
-                  </form>
-                </div>
+                                        <div class="campos">
+                                             <label for="userRol:"></label>
+                                             <select name="userRol" id="userRol" class="input-form">
+                                             <option value="2"> Profesor </option>                 
+                                             </select>
+                                        </div>
+
+                                        <div class="campos">
+                                             <input class="bot-tyc" type="checkbox" name="terminosCondiciones" required>
+                                             <label class="term-y-cond"> Acepto los términos y condiciones </label>
+                                        </div>
+
+                                        <button type="submit" class="reg" onclick="register()"> Registrarse </button>
+                                          
+                                  </form>
+
+                             </div>
+
+                        </div>
+
+                   </div>
+
+         </div>
+
+         <div class="mySlides fade">
+                           
+              <img class="imagen" src="/images/carrusel03.png">
+                                
+                   <div class="flex-form">
+
+                        <div class="form-carrusel two">
+
+                             <div class="flex-icon">
+                                  <div class="circulo"> <i class="fab fa-google"> </i> </div>
+                                  <div class="circulo"> <i class="fab fa-facebook-f"> </i> </div>
+                                  <div class="circulo"> <i class="fab fa-linkedin-in"> </i> </div>
+                             </div>
+
+                             <div class="form-two">
+
+                                  <form name="form" class="formulario" action="/" method="POST">
+
+                                        <div class="campos">
+                                             <label for="name"></label>
+                                             <input placeholder="Nombre" type="text" name="name" class="input-form" id="input-two"
+                                             <%= locals.errors && errors.name ? 'is-invalid' : null %>
+                                                 value="<%= locals.oldData ? oldData.name : null %>" >
+                                             <% if(locals.errors && errors.name) { %>
+                                                  <div class="text-danger" style="color: red"> <%= errors.name.msg %> </div>
+                                             <% } %>
+                                        </div>
+
+                                        <div class="campos">
+                                             <label for="lastName"></label>
+                                             <input placeholder="Apellido" type="text" name="lastName" class="input-form" id="input-two"
+                                             <%= locals.errors && errors.lastName ? 'is-invalid' : null %>
+                                                 value="<%= locals.oldData ? oldData.lastName : null %>" >
+                                             <% if(locals.errors && errors.lastName) { %>
+                                                  <div class="text-danger" style="color: red"> <%= errors.lastName.msg %> </div>
+                                             <% } %>
+                                        </div>
+
+                                        <div class="campos">
+                                             <label for="phone"></label>
+                                             <input placeholder="Celular" type="tel" name="phone" class="input-form" id="input-two"
+                                             <%= locals.errors && errors.phone ? 'is-invalid' : null %>
+                                                 value="<%= locals.oldData ? oldData.phone : null %>" >
+                                             <% if(locals.errors && errors.phone) { %>
+                                                  <div class="text-danger" style="color: red"> <%= errors.phone.msg %> </div>
+                                             <% } %>
+                                        </div>
+
+                                        <div class="campos">               
+                                             <label for="Mail"></label>
+                                             <input placeholder="Email" type="email" name="email" class="input-form" id="input-two"
+                                             <%= locals.errors && errors.email ? 'is-invalid' : null %>
+                                                 value="<%= locals.oldData ? oldData.email : null %>" >
+                                             <% if(locals.errors && errors.email) { %>
+                                                  <div class="text-danger" style="color: red"> <%= errors.email.msg %> </div>
+                                             <% } %>
+                                        </div>
+
+                                        <div class="campos">
+                                             <label for="password"></label>
+                                             <input placeholder="Contraseña" type="password" name="password" class="input-form" id="input-two"
+                                             <%= locals.errors && errors.contrasenia ? 'is-invalid' : null %>
+                                                 value="<%= locals.oldData ? oldData.password : null %>" >
+                                             <% if(locals.errors && errors.password) { %>
+                                                  <div class="text-danger" style="color: red"> <%= errors.password.msg %> </div>
+                                             <% } %>
+                                        </div>
+
+                                        <div class="campos">
+                                             <label for="validationContrasenia"></label>
+                                             <input placeholder="Confirma tu contraseña" type="password" name="validationPassword" class="input-form" id="input-two"
+                                             <%= locals.errors && errors.validationPassword ? 'is-invalid' : null %>
+                                                 value="<%= locals.oldData ? oldData.validationPassword : null %>" >
+                                             <% if(locals.errors && errors.validationPassword) { %>
+                                                  <div class="text-danger" style="color: red"> <%= errors.validationPassword.msg %> </div>
+                                             <% } %>
+                                        </div>
+
+                                        <div class="campos">
+                                             <label for="gender:"></label>
+                                             <select name="gender" id="gender" class="input-form" id="input-two"
+                                             <%= locals.errors && errors.gender ? 'is-invalid' : null %> >
+                                             <option value="" disabled selected> Seleciona tu género </option>
+                                             <% data.allGenres.forEach(genre => { %>
+                                             <option value="<%= `${genre.idSex}` %>">
+                                             <%= locals.oldData && (genre.description === oldData.gender) ? "selected" : null %>
+                                             <%= `${genre.description}` %> 
+                                             </option>
+                                             <% }) %>  
+                                             </select>
+                                             <% if(locals.errors && errors.gender) { %>
+                                                  <div class="text-danger" style="color: red" style="font-weight: bold"> <%= errors.gender.msg %> </div>
+                                             <% } %>
+                                        </div>
+
+                                        <div class="campos">
+                                             <label for="userRol:"></label>
+                                             <select name="userRol" id="userRol" class="input-form" id="input-two">
+                                             <option value="1"> Estudiante </option>                 
+                                             </select>
+                                        </div>
+
+                                        <div class="campos">
+                                             <input class="bot-tyc2" type="checkbox" name="terminosCondiciones" required>
+                                             <label class="term-y-cond2"> Acepto los términos y condiciones </label>
+                                        </div>
+
+                                        <button type="submit" class="register" onclick="register()"> Registrarse </button>
+                    
+                                  </form>
+
+                             </div>
+
+                        </div>
+              
+                        <div class="text-one">
+                             <h2> Te gustaría aprender con nosotros? </h2>
+                             <br>
+                             <p class="subtitle"> ¿Qué estas esperando para formar parte de la comunidad de hola al mundo? </p>
+                             <br>
+                             <p> ¡Completá en este mismo instante nuestro formulario de registro! </p>
+                        </div>
+
+                   </div>
+
+         </div>
+
+         <a class="prev" onclick="plusSlides(-1)">&#10094; </a>
+         <a class="next" onclick="plusSlides(1)">&#10095; </a>
+
+            <div class="content-dot">
+                 <span class="dot" onclick="currentSlide(1)"> </span>
+                 <span class="dot" onclick="currentSlide(2)"> </span>
+                 <span class="dot" onclick="currentSlide(3)"> </span>
+            </div>
+
+    </div>
+
+ </section>
+
+ <section id="sectionServicios" onload="reset()">
+
+    <h2> Nuestros Servicios </h2>
+
+    <div class="serviceContainer">
+         <button class="preBtn"> <i class="fas fa-chevron-left"> </i> </button>
+         <button class="nxtBtn"> <i class="fas fa-chevron-right"> </i> </button>
+         <%if (data.servicios) { %>
+         <% data.servicios.forEach(function(servicio){ %>
+            
+            <div class="serviceCard">
+                 
+                 <div class="serviceImg">
+                      <span class="discountTag">$ <%= servicio.price %> </span>
+                      <i class="fas fa-comments"> </i>
+                      <h4> <%= servicio.language %> </h4>
+                      <p class="description"> <%= servicio.description %> </p>
+                 </div>
+
+                 <div class="serviceInfo">
+                      <button> <i class="fas fa-shopping-cart"> </i> Agregar al carrito </button>
+                 </div>
+
+            </div>
+
+         <% }) %>
+         <% } %>
+
+    </div>
+    
+ </section>
+
+ <section id="profesores">
+
+    <div class="section-profesores">
+
+         <div class="title-profesores"> <h2> Nuestros Profesores </h2> </div>
+
+              <div class="container-teacher">
+
+                   <div class="g-uno"> <img src="/images/profe.png" alt="profe" /> </div>
+                   <div class="g-dos"> <img src="/images/persona-01.png" alt="profe" /> </div>
+                   <div class="g-tres"> <img src="/images/persona-02.png" alt="profe" /> </div>
+                   <div class="g-cuatro"> <img src="/images/persona-03.png" alt="profe" /> </div>
+                   <div class="g-cinco"> <img src="/images/persona-04.png" alt="profe" /> </div>
+                   <div class="g-seis"> <img src="/images/persona-08.png" alt="profe" /> </div>
+                   <div class="g-siete"> <img src="/images/persona-06.png" alt="profe" /> </div>
+                   <div class="g-ocho"> <img src="/images/persona-09.png" alt="profe" /> </div>
+
+                   <div class="boton-mas"> <button> Ver más </button> </div>
+
+                   <div class="est" id="sectionEstadisticas">
+
+                        <div class="title-estadisticas"> <h2> Hola al Mundo cuenta con: </h2> </div>
+
+                        <div class="cantidades">
+
+                             <div>
+                                  <p class="number"> <%= data.profesores.length %> </p>
+                                  <p class="text"> Profesores </p>
+                             </div>
+
+                             <div>
+                                  <p class="number">  <%= data.estudiantes.length %> </p>
+                                  <p class="text"> Alumnos </p>
+                             </div>
+                            
+                             <div>
+                                  <p class="number"> <%= data.cantidadTemas.length %> </p>
+                                  <p class="text"> Temáticas </p>
+                             </div>
+                
+                             <div>
+                                  <p class="number"> <%= data.cantidadIdiomas.length %> </p>
+                                  <p class="text"> Idiomas </p>
+                             </div>
+
+                        </div>
+
+                   </div>
+
               </div>
-            </div>
-          </div>
-          <!-- img 3 -->
-          <div class="mySlides fade">
-            <img class="imagen" src="/images/carrusel03.png">
-            <div class="flex-form">
-              <div class="form-carrusel two">
-                <div class="flex-icon">
-                  <div class="circulo">
-                    <i class="fab fa-google"></i>
-                  </div>
-                  <div class="circulo">
-                    <i class="fab fa-facebook-f"></i>
-                  </div>
-                  <div class="circulo">
-                    <i class="fab fa-linkedin-in"></i>
-                  </div>
-                </div>
-                <div class="form-one">
-                  <form action="/" method="POST">
-                    <input class="input-form" type="text" name="name" id="input-two" placeholder="Nombre">
-                    <input class="input-form" type="text" name="lastName" id="input-two" placeholder="Apellido">
-                    <input class="input-form" type="text" name="phone" id="input-two" placeholder="Celular">
-                    <input class="input-form" type="email" name="email" id="input-two" placeholder="Email">
-                    <input class="input-form" type="password" name="contrasena" id="input-two" placeholder="Contraseña">
-                    <input class="input-form" type="password" name="validationPassword" id="input-two" placeholder="Validacion Contraseña">
-                    <select class="input-form" required name="gender" id="gender">
-                      <label for="Soy:"></label>
-                      <option name="gender" value="Mujer"> Mujer </option>
-                      <option name="gender" value="Hombre"> Hombre </option>
-                    </select>
-                    <select class="input-form" required name="userRol" id="user">
-                      <label for="Soy:"></label>
-                      <option name="rol" value="profesor"> Profesor </option>
-                      <option name="rol" value="estudiante"> Estudiante </option>
-                    </select>
-                    <div class="flexTerminos" id="input-two">
-                      <input class="bot-tyc" type="checkbox" name="terminosCondiciones" required>
-                      <label class="term-y-cond"> Acepto los términos y condiciones </label>
-                    </div>
-                    <button type="submit" class="register">
-                      registrate
-                    </button>
-                  </form>
-                </div>
-              </div>
-              <div class="text-one">
-                <h2>Te gustaría aprender con nosotros?</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur
-                  adipisicing elit. Alias, illo minima quidem
-                  nihil quae earum ex quas maxime at nulla deleniti
-                  aliquid modi atque minus iusto consequuntur
-                  quibusdam cupiditate sequi.
-                </p>
-                <p class="subtitle">Que esperas?
-                  <strong>forma parte de la comunidad</strong>
-                  hola al mundo!
-                </p>
-              </div>
-            </div>
-          </div>
-          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-          <a class="next" onclick="plusSlides(1)">&#10095;</a>
-          <div class="content-dot">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-          </div>
-        </div>
-      </section>
 
-      <!-- Caracteristicas -->
-      <section>
-        <div class="content-characteristics">
-          <div class="caracteristicas">
-            <div class="circulo">
-              <i class="far fa-user-circle"></i>
-            </div>
-            <h3>caracteritica 1</h3>
-            <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Tempora ea quod voluptate nisi nihil soluta vero quia excepturi.
-            </p>
-          </div>
-          <div class="caracteristicas">
-            <div class="circulo">
-              <i class="far fa-user-circle"></i>
-            </div>
-            <h3>caracteritica 2</h3>
-            <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Tempora ea quod voluptate nisi nihil soluta vero quia excepturi.
-            </p>
-          </div>
-          <div class="caracteristicas">
-            <div class="circulo">
-              <i class="far fa-user-circle"></i>
-            </div>
-            <h3>caracteritica 3</h3>
-            <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Tempora ea quod voluptate nisi nihil soluta vero quia excepturi.
-            </p>
-          </div>
+    </div>
 
-        </div>
+ </section>
 
-      </section>
-      <!-- Seccion profesores -->
-      <section id="profesores">
-        <div class="section-profesores">
-          <div class="title-profesores">
-            <h2> Nuestros Profesores</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Adipiscing ut diam arcu
-              vivamus erat dictum. Ipsum scelerisque aenean cursus id quis enim sagittis nullam
-              sodales. Integer augue id cursus massa duis donec gravida. Non faucibus rmentum
-            </p>
-          </div>
-          <!-- grilla -->
-          <div class="container-teacher">
-            <div class="g-uno">
-              <img src="/images/profe.png" alt="profe" />
-            </div>
-            <div class="g-dos">
-              <img src="/images/persona-01.png" alt="profe" />
-            </div>
-            <div class="g-tres">
-              <img src="/images/persona-02.png" alt="profe" />
-            </div>
-            <div class="g-cuatro">
-              <img src="/images/persona-03.png" alt="profe" />
-            </div>
-            <div class="g-cinco">
-              <img src="/images/persona-04.png" alt="profe" />
-            </div>
-            <div class="g-seis">
-              <img src="/images/persona-05.png" alt="profe" />
-            </div>
-            <div class="g-siete">
-              <img src="/images/profe.png" alt="profe" />
-            </div>
-            <div class="g-ocho">
-              <img src="/images/persona-01.png" alt="profe" />
-            </div>
+ <%- include('../partials/contact')%>
 
-            <div class="boton-mas">
-              <button>Ver mas</button>
-            </div>
+ </main>
 
-            <!-- Seccion Estadisticas -->
-            <div class="est" id="sectionEstadisticas">
-              <div class="title-estadisticas">
-                <h2>Hola al Mundo cuenta con </h2>
-              </div>
-              <div class="cantidades">
-                <div>
-                  <p class="number">
-                    <%= data.profesores.length %>
-                  </p>
-                  <p class="text">Profesores</p>
-                </div>
-                <div>
-                  <p class="number">+ 5000 </p>
-                  <p class="text">Alumnos</p>
-                </div>
-                <div>
-                  <p class="number"> <%= data.cantidadTemas.length %> </p>
-                  <p class="text">Temáticas</p>
-                </div>
-                <div>
-                  <p class="number"> <%= data.cantidadIdiomas.length %> </p>
-                  <p class="text">Idomas</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Sección servicios -->
-      <section id="sectionServicios" onload="reset()">
-        <h2>Nuestros Servicios</h2>
+ <%- include('../partials/chat')%>
 
-        <div class="serviceContainer">
-          <button class="preBtn">
-            <i class="fas fa-chevron-left"></i>
-          </button>
-          <button class="nxtBtn">
-            <i class="fas fa-chevron-right"></i>
-          </button>
-          <%if (data.servicios) { %>
-              <% data.servicios.forEach(function(servicio){ %>
-                <!-- card 1 -->
-                <div class="serviceCard">
-                  <div class="serviceImg">
-                    <span class="discountTag">$ <%= servicio.price %></span>
-                    <i class="fas fa-comments"></i>
-                    <h4>
-                      <%=servicio.language %>
-                    </h4>
-                    <p class="description">
-                      <%=servicio.description %>
-                    </p>
-                  </div>
-                  <div class="serviceInfo">
-                    <button>
-                      <i class="fas fa-shopping-cart"></i>
-                      Agregar al carrito
-                    </button>
-                  </div>
-                </div>
-                <% }) %>
-            <% } %> 
-        </div>
-      </section>
-      <!-- section Contacto -->
-      <%- include('../partials/contact')%>
+ <%- include('../partials/footer.ejs')%>
+        
+ <script src="/js/scriptHeader.js"> </script>
 
-    </main>
-    <!-- chat -->
-    <%- include('../partials/chat')%>
-      <!-- Footer -->
-      <%- include('../partials/footer.ejs')%>
-        <script src="/js/scriptHeader.js"></script>
-        <script src="/js/scriptCarrusel.js"></script>
+ <script src="/js/scriptCarrusel.js"> </script>
+
 </body>
 
 </html>
