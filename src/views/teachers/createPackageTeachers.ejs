@@ -1,224 +1,179 @@
+<!-- PAQUETES DE PROFESORES -->
+
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Profesores Hola al Mundo</title>
-  <script src="https://kit.fontawesome.com/3964fc737d.js" crossorigin="anonymous"></script>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-    rel="stylesheet">
-  <link href="/css/normalize.css" rel="stylesheet">
-  <link href="/css/seteoPerfilProfes-1.css" rel="stylesheet">
-  <link rel="stylesheet" href="/css/partialsCss/partials.css">
-
+       <meta charset="UTF-8">
+       <meta http-equiv="X-UA-Compatible" content="IE=edge">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title> Hola al Mundo </title>
+       <script src="https://kit.fontawesome.com/3964fc737d.js" crossorigin="anonymous"></script>
+       <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+             rel="stylesheet">
+       <link href="/css/normalize.css" rel="stylesheet">
+       <link href="/css/seteoPerfilProfes-1.css" rel="stylesheet">
+       <link rel="stylesheet" href="/css/partialsCss/partials.css">
 </head>
 
 <body>
-  <!-- Header -->
-  <%- include('../partials/header.ejs')%>
-    <main class="container-main">
-      <section class="container-filtros">
-        <div class="formPaquetes">
-          <div class="container-header">
-            <h2>Crea tus paquetes</h2>
+
+ <%- include('../partials/header.ejs')%>
+
+ <main class="container-main">
+
+ <section class="container-filtros">
+
+          <div class="formPaquetes">
+          
+               <div class="container-header"> <h2> Creá tu paquete </h2> </div>
+
+               <form action="" method="post">
+                     
+                     <div class="contentInput">
+                          <input class="inputPaquete" type="text" name="name" id="name" placeholder="Nombre del paquete: ">
+                     </div>
+
+                     <div class="inputPaquete">
+                          <label for="lenguaje"> Idioma que vas a enseñar: </label>
+                          <select id="cars" name="carlist" form="carform">
+                          <option value="ing"> Inglés </option>
+                          <option value="es"> Español </option>
+                          <option value="port"> Portugués </option>
+                          <option value="ita"> Italiano </option>
+                          <option value="ale"> Alemán </option>
+                          <option value="chi"> Chino </option>
+                          </select>
+                     </div>
+
+                     <div class="inputPaquete">
+                          <label for="dias"> Días disponibles: </label>
+                          <div class="check">
+                          <div> <input type="checkbox" value="lunes"> Lunes </div>
+                          <div> <input type="checkbox" value="Martes"> Martes </div>
+                          <div> <input type="checkbox" value="Miercoles"> Miércoles </div>
+                          <div> <input type="checkbox" value="jueves"> Jueves </div>
+                          <div> <input type="checkbox" value="Viernes"> Viernes </div>
+                          <div> <input type="checkbox" value="sabado"> Sábado </div>
+                          <div> <input type="checkbox" value="domingo"> Domingo </div>
+                          </div>
+                     </div>
+
+                     <div id="contentTwo">
+
+                          <div class="inputPaquete">
+                               <label for="lenguaje"> Horarios disponibles: </label>
+                               <div class="check">
+                               <div> <input type="checkbox" value="#"> 08:00 a 9:00 </div>
+                               <div> <input type="checkbox" value="#"> 10:00 a 11:00 </div>
+                               <div> <input type="checkbox" value="#"> 14:00 a 15:00 </div>
+                               </div>
+                               <div class="check">
+                               <div> <input type="checkbox" value="#"> 16:00 a 17:00 </div>
+                               <div> <input type="checkbox" value="#"> 18:00 a 19:00 </div>
+                               <div> <input type="checkbox" value="#"> 20:00 a 21:00 </div>
+                               </div>
+                          </div>
+
+                          <div class="inputPaquete">
+                               <label for="lenguaje"> Tipo: </label>
+                               <select id="cars" name="carlist" form="carform">
+                               <option value="clase"> Clases </option>
+                               <option value="preparacion"> Preparación para exámenes </option>
+                               <option value="conversacion"> Conversación </option>
+                               </select>
+                          </div>
+
+                          <div class="inputPaquete">
+                               <label for="lenguaje"> Nivel a enseñar: </label>
+                               <select id="cars" name="carlist" form="carform">
+                               <option value="basico"> Básico </option>
+                               <option value="avanzado"> Avanzado </option>
+                               </select>
+                          </div>
+
+                          <div class="inputPaquete">
+                               <label for="lenguaje"> Temáticas: </label>
+                               <div class="check">
+                               <div> <input type="checkbox" value="#"> Naturaleza </div>
+                               <div> <input type="checkbox" value="#"> Música </div>
+                               <div> <input type="checkbox" value="#"> Deportes </div>
+                               <div> <input type="checkbox" value="#"> Profesiones </div>
+                               <div> <input type="checkbox" value="#"> Viajes </div>
+                               </div>
+                          </div>
+
+                          <div class="inputPaquete">
+                               <label for="price"> Precio por hora: </label>
+                               <input type="text" name="price" id="price" class="price">
+                          </div>
+
+                          <div class="btnNext">
+                               <button class="next"> Crear <i class="fas fa-check"> </i> </button>
+                          </div>
+
+                     </div>
+
+               </form>
+
           </div>
-          <form action="" method="post">
-            <div class="contentInput">
-              <input class="inputPaquete" type="text" name="name" id="name" placeholder="Nombre del paquete: ">
-            </div>
-            <div class="inputPaquete">
-              <label for="lenguaje">Idioma que vas a enseñanar:</label>
-              <select id="cars" name="carlist" form="carform">
-                <option value="ing">Ingles</option>
-                <option value="es">Español</option>
-                <option value="port">Portugues</option>
-                <option value="ita">Italiano</option>
-              </select>
-            </div>
-            <div class="inputPaquete">
-              <label for="dias">Dias disponibles:</label>
-              <div class="check">
-                <div>
-                  <input type="checkbox" value="lunes"> Lunes
-                </div>
-                <div>
-                  <input type="checkbox" value="Martes"> Martes
-                </div>
-                <div>
-                  <input type="checkbox" value="Miercoles"> Miércoles
-                </div>
-                <div>
-                  <input type="checkbox" value="jueves"> Jueves
-                </div>
-                <div>
-                  <input type="checkbox" value="Viernes"> Viernes
-                </div>
-                <div>
-                  <input type="checkbox" value="sabado"> Sábado
-                </div>
-                <div>
-                  <input type="checkbox" value="domingo"> Domingo
-                </div>
+
+ </section>
+
+ <h2 class="misPaq"> Mis paquetes </h2>
+      
+     <div class="crearPaquete">
+
+          <div>
+
+               <div class="serviceImg">
+                    <span class="discountTag"> $4000</span>
+                    <i class="fas fa-comments"></i>
+                    <h4> Clase </h4>
+                    <p class="description"> Clase individual de inglés básico </p>
               </div>
 
-            </div>
-            <!-- <div class="btnNext">
-            <button class="next">Continuar<i class="fas fa-angle-down"></i> </button>
-          </div> -->
-            <div id="contentTwo">
+              <button class="serviceInfo"> <i class="fas fa-pen"> </i> Modificar </button>
 
-              <!--  <div class="btnBack">
-              <button class="back"> <i class="fas fa-angle-up"></i> Volver </button>
-            </div> -->
-              <div class="inputPaquete">
-                <label for="lenguaje">Horarios disponibles:</label>
-                <div class="check">
-                  <div>
-                    <input type="checkbox" value="#"> 08:00 a 9:00
-                  </div>
-                  <div>
-                    <input type="checkbox" value="#"> 10:00 a 11:00
-                  </div>
-                  <div>
-                    <input type="checkbox" value="#"> 14:00 a 15:00
-                  </div>
-                </div>
-                <div class="check">
-                  <div>
-                    <input type="checkbox" value="#"> 16:00 a 17:00
-                  </div>
-                  <div>
-                    <input type="checkbox" value="#"> 18:00 a 19:00
-                  </div>
-                  <div>
-                    <input type="checkbox" value="#"> 20:00 a 21:00
-                  </div>
-                </div>
-              </div>
-              <div class="inputPaquete">
-                <label for="lenguaje">Nivel a enseñar:</label>
-                <select id="cars" name="carlist" form="carform">
-                  <option value="basico">Básico</option>
-                  <option value="medio">Medio</option>
-                  <option value="avanzado">Avanzado</option>
-                </select>
-              </div>
-              <div class="inputPaquete">
-                <label for="lenguaje">Temáticas de interes:</label>
-                <div class="check">
-                  <div>
-                    <input type="checkbox" value="#"> Naturaleza
-                  </div>
-                  <div>
-                    <input type="checkbox" value="#"> Música
-                  </div>
-                  <div>
-                    <input type="checkbox" value="#"> Deportes
-                  </div>
-                  <div>
-                    <input type="checkbox" value="#"> Profesiones
-                  </div>
-                  <div>
-                    <input type="checkbox" value="#"> Viajes
-                  </div>
-                </div>
-              </div>
-              <div class="inputPaquete">
-                <label for="price">Precio por hora:</label>
-                <input type="text" name="price" id="price" class="price">
-              </div>
-              <div class="btnNext">
-                <button class="next">crear<i class="fas fa-check"></i></i> </button>
-              </div>
-            </div>
-
-          </form>
-        </div>
-      </section>
-      <h2 class="misPaq">Mis paquetes</h2>
-      <div class="crearPaquete">
-        <!-- card 1 -->
-        <div>
-          <div class="serviceImg">
-            <span class="discountTag"> $5000</span>
-            <i class="fas fa-comments"></i>
-            <h4>
-              Conversación
-            </h4>
-            <p class="description">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa,
-            </p>
           </div>
-          <button class="serviceInfo">
-            <i class="fas fa-pen"></i>
-            Modificar
-          </button>
-        </div>
-        <!-- card 1 -->
-        <div>
-          <div class="serviceImg">
-            <span class="discountTag"> $5000</span>
-            <i class="fas fa-comments"></i>
-            <h4>
-              Conversación
-            </h4>
-            <p class="description">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa,
-            </p>
+
+          <div>
+
+               <div class="serviceImg">
+                    <span class="discountTag"> $3000</span>
+                    <i class="fas fa-comments"></i>
+                    <h4> Conversación </h4>
+                    <p class="description"> Conversación individual de inglés básico </p>
+               </div>
+
+               <button class="serviceInfo"> <i class="fas fa-pen"> </i> Modificar </button>
+
           </div>
-          <button class="serviceInfo">
-            <i class="fas fa-pen"></i>
-            Modificar
-          </button>
-        </div>
-        <!-- card 1 -->
-        <div>
-          <div class="serviceImg">
-            <span class="discountTag"> $5000</span>
-            <i class="fas fa-comments"></i>
-            <h4>
-              Conversación
-            </h4>
-            <p class="description">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa,
-            </p>
+
+          <div>
+
+               <div class="serviceImg">
+                    <span class="discountTag"> $5000</span>
+                    <i class="fas fa-comments"></i>
+                    <h4> Preparación para exámenes </h4>
+                    <p class="description"> Preparación para exámenes de inglés </p>
+               </div>
+
+               <button class="serviceInfo"> <i class="fas fa-pen"> </i> Modificar </button>
+
           </div>
-          <button class="serviceInfo">
-            <i class="fas fa-pen"></i>
-            Modificar
-          </button>
-        </div>
-        <!-- card 1 -->
-        <div>
-          <div class="serviceImg">
-            <span class="discountTag"> $5000</span>
-            <i class="fas fa-comments"></i>
-            <h4>
-              Conversación
-            </h4>
-            <p class="description">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa,
-            </p>
-          </div>
-          <button class="serviceInfo">
-            <i class="fas fa-pen"></i>
-            Modificar
-          </button>
-        </div>
+        
+     </div>
 
-      </div>
+ </main>
 
-    </main>
-    <!-- chat -->
-    <%- include('../partials/chat.ejs')%>
-      <!-- Footer -->
-      <%- include('../partials/footer.ejs')%>
+ <%- include('../partials/chat.ejs')%>
 
+ <%- include('../partials/footer.ejs')%>
 
-        <script src="/js/scriptHeader.js"></script>
+ <script src="/js/scriptHeader.js"></script>
+ 
 </body>
 
 </html>
