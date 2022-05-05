@@ -1,204 +1,145 @@
+<!-- CLASES DE PROFESORES -->
+
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Administrando Clases</title>
-  <script src="https://kit.fontawesome.com/3964fc737d.js" crossorigin="anonymous"></script>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="/css/administraClases.css">
-  <link rel="stylesheet" href="/css/partialsCss/partials.css">
-
+       <meta charset="UTF-8">
+       <meta http-equiv="X-UA-Compatible" content="IE=edge">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title> Clases </title>
+       <script src="https://kit.fontawesome.com/3964fc737d.js" crossorigin="anonymous"></script>
+       <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+             rel="stylesheet">
+       <link rel="stylesheet" href="/css/administraClases.css">
+       <link rel="stylesheet" href="/css/partialsCss/partials.css">
 </head>
 
 <body>
-  <!-- Header -->
-  <%- include('../partials/header.ejs')%>
-    <main>
-      <!-- Slide principal -->
-      <section id="slideProfes">
-        <div class="contenedorSlide">
-          <h1>HOY <i class="far fa-clock"></i></h1>
-          <div class="flexSlide">
-            <div class="imgAlumno">
-              <img src="/images/profe.png" alt="alumno">
-              <p>Nombre del alumno</p>
-            </div>
-            <div class="texto">
-              <p>Horario: <strong>19:00 - 20:30hs</strong></p>
-              <p>Tema a ver: <strong>Present perfect</strong></p>
-              <p>Plataforma: <strong> Zoom</strong></p>
-            </div>
+
+ <%- include('../partials/header.ejs')%>
+
+ <main>
+    
+ <section id="slideProfes">
+
+          <div class="contenedorSlide">
+               
+               <h1> HOY <i class="far fa-clock"></i></h1>
+               
+               <div class="flexSlide">
+                    
+                    <div class="imgAlumno">
+                         <img src="/images/profe.png" alt="alumno">
+                         <p> Alumno... </p>
+                    </div>
+
+                    <div class="texto">
+                         <p> Horario: <strong> 19:00 - 20:30hs </strong> </p>
+                         <p> Temas: <strong> Tiempos verbales </strong> </p>
+                         <p> Plataforma: <strong> Zoom </strong> </p>
+                    </div>
+
+               </div>
+
           </div>
 
-        </div>
+ </section>
+ 
+ <section>
 
-      </section>
-      <!-- Carrusel principal -->
-      <!-- <section>
-        <div class="main-carrusel">
-          <div class="mySlides-fade">
-            <div class="container-top">
-              <div class="header">
-                Hoy <i class="far fa-clock"></i>
-              </div>
-              <div class="container-info">
-                <div class="left">
-                  <div class="imagen"> <img class="profeImage" src="/images/imagen-profesor.png">
-                  </div>
-                  <div class="alumno">Alumno</div>
-                </div>
-                <div class="right">
-                  <div class="body-info">Horario</div>
-                  <div class="body-info">Tema a ver</div>
-                  <div class="body-info">Plataforma</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="content-dot">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-          </div>
-        </div>
-      </section> -->
-      <section>
-        <div class="container">
-          <h2>Administra tus clases</h2>
-          <div class="flexContenedor">
-            <div class="containerFiltros">
-              <button class="btnFiltro">Mis alumnos <i class="fas fa-angle-down"></i></button>
-              <div class="check">
-                <div>
-                  <input type="checkbox" name="alumno" id="">
-                  <p>Carlos</p>
-                </div>
-                <div>
-                  <input type="checkbox" name="alumno" id="">
-                  <p>Carmela</p>
-                </div>
-                <div>
-                  <input type="checkbox" name="alumno" id="">
-                  <p>Martina</p>
-                </div>
-                <div>
-                  <input type="checkbox" name="alumno" id="">
-                  <p>Candelaria</p>
-                </div>
-  
-              </div>
-              <button class="btnFiltro">Idiomas <i class="fas fa-angle-down"></i></button>
-              <div class="check">
-                <div>
-                  <input type="checkbox" name="espanol" id="">
-                  <p>Español</p>
-                </div>
-                <div>
-                  <input type="checkbox" name="ingles" id="">
-                  <p>Ingles</p>
-                </div>
-                <div>
-                  <input type="checkbox" name="italiano" id="">
-                  <p>Italiano</p>
-                </div>
-                <div>
-                  <input type="checkbox" name="portugues" id="">
-                  <p>Portugués</p>
-                </div>
-  
-              </div>
-              <button class="btnFiltro">Temas de interes <i class="fas fa-angle-down"></i></button>
-              <div class="check">
-                <div>
-                  <input type="checkbox" name="temas-interes" value="cultura" id="cultura">
-                  <p>Cultura</p>
-                </div>
-                <div>
-                  <input type="checkbox" name="temas-interes" value="noticias" id="cultura">
-                  <p>Noticias</p>
-                </div>
-                <div>
-                  <input type="checkbox" name="temas-interes" value="deportes" id="cultura">
-                  <p>Deportes</p>
-                </div>
-                <div>
-                  <input type="checkbox" name="temas-interes" value="culinaria" id="cultura">
-                  <p>Culinaria</p>
-                </div>
-                <div>
-                  <input type="checkbox" name="temas-interes" value="naturaleza" id="cultura">
-                  <p>Naturaleza</p>
-                </div>
-                <div>
-                  <input type="checkbox" name="temas-interes" value="musica" id="cultura">
-                  <p>Música</p>
-                </div>
-              </div>
-              <button class="btnFiltro">Días <i class="fas fa-angle-down"></i></button>
-              <div class="check">
-                <div>
-                  <input type="checkbox" name="dia" value="lunes" id="#">
-                  <p>Lunes</p>
-                </div>
-                <div>
-                  <input type="checkbox" name="dia" value="martes" id="#">
-                  <p>Martes</p>
-                </div>
-                <div>
-                  <input type="checkbox" name="dia" value="miercoles" id="#">
-                  <p>Miércoles</p>
-                </div>
-                <div>
-                  <input type="checkbox" name="dia" value="jueves" id="#">
-                  <p>Jueves</p>
-                </div>
-                <div>
-                  <input type="checkbox" name="dia" value="viernes" id="#">
-                  <p>Viernes</p>
-                </div>
-                <div>
-                  <input type="checkbox" name="dia" value="sabado" id="#">
-                  <p>Sábado</p>
-                </div>
-              </div>
-            </div>
-            <div class="imagen-estadisticas">
-              <img class="imagen" src="/images/grafico-estadisticas.png">
-            </div>
-          </div>
+ <div class="container">
           
+      <h2> Administrá tus clases </h2>
+          
+      <div class="flexContenedor">
 
-        </div>
+           <div class="containerFiltros">
 
-      </section>
-    </main>
-    <!-- chat 
-    -->
-    <%- include('../partials/chat.ejs')%>
-      <!-- Footer -->
-      <%- include('../partials/footer.ejs')%>
-        <script src="/js/scriptHeader.js"></script>
-        <script>
+                <button class="btnFiltro"> Mis alumnos <i class="fas fa-angle-down"> </i> </button>
+                
+                <div class="check">
+                <div> <input type="checkbox" name="alumno" id=""> <p> Carlos </p> </div>
+                <div> <input type="checkbox" name="alumno" id=""> <p> Martina </p> </div>
+                <div> <input type="checkbox" name="alumno" id=""> <p> Candelaria </p> </div>
+                </div>
+                
+                <button class="btnFiltro"> Idiomas <i class="fas fa-angle-down"> </i> </button>
+                
+                <div class="check">
+                <div> <input type="checkbox" name="espanol" id=""> <p> Español </p> </div>
+                <div> <input type="checkbox" name="ingles" id=""> <p> Inglés </p> </div>
+                <div> <input type="checkbox" name="italiano" id=""> <p> Italiano </p> </div>
+                <div> <input type="checkbox" name="portugues" id=""> <p> Portugués </p> </div>
+                <div> <input type="checkbox" name="frances" id=""> <p> Francés </p> </div>
+                <div> <input type="checkbox" name="chino" id=""> <p> Chino </p> </div>
+                </div>
+
+                <button class="btnFiltro"> Temas de interes <i class="fas fa-angle-down"> </i> </button>
+                
+                <div class="check">
+                <div> <input type="checkbox" name="temas-interes" value="cultura" id="cultura"> <p> Cultura </p> </div>
+                <div> <input type="checkbox" name="temas-interes" value="noticias" id="cultura"> <p> Actualidad </p> </div>
+                <div> <input type="checkbox" name="temas-interes" value="deportes" id="cultura"> <p> Deportes </p> </div>
+                <div> <input type="checkbox" name="temas-interes" value="culinaria" id="cultura"> <p> Cocina </p> </div>
+                <div> <input type="checkbox" name="temas-interes" value="naturaleza" id="cultura"> <p> Naturaleza </p> </div>
+                <div> <input type="checkbox" name="temas-interes" value="musica" id="cultura"> <p> Música </p> </div>
+                </div>
+
+                <button class="btnFiltro"> Días <i class="fas fa-angle-down"> </i> </button>
+                
+                <div class="check">
+                <div> <input type="checkbox" name="dia" value="lunes" id="#"> <p> Lunes </p> </div>
+                <div> <input type="checkbox" name="dia" value="martes" id="#"> <p> Martes </p> </div>
+                <div> <input type="checkbox" name="dia" value="miercoles" id="#"> <p> Miércoles </p> </div>
+                <div> <input type="checkbox" name="dia" value="jueves" id="#"> <p> Jueves </p> </div>
+                <div> <input type="checkbox" name="dia" value="viernes" id="#"> <p> Viernes </p> </div>
+                <div> <input type="checkbox" name="dia" value="sabado" id="#"> <p> Sábado </p></div>
+                </div>
+
+           </div>
+
+            <div class="imagen-estadisticas">
+                 <img class="imagen" src="/images/grafico-estadisticas.png">
+            </div>
+
+      </div>   
+
+ </div>
+
+ </section>
+
+ </main>
+
+ <%- include('../partials/chat.ejs')%>
+
+ <%- include('../partials/footer.ejs')%>
+        
+ <script src="/js/scriptHeader.js"></script>
+        
+ <script>
           var btnFiltro = document.getElementsByClassName("btnFiltro");
           var i;
 
-          for (i = 0; i < btnFiltro.length; i++) {
-            btnFiltro[i].addEventListener("click", function () {
+          for (i = 0; i < btnFiltro.length; i++) 
+          {
+            btnFiltro[i].addEventListener("click", function () 
+            {
               this.classList.toggle("active");
               var check = this.nextElementSibling;
-              if (check.style.maxHeight) {
+              if (check.style.maxHeight) 
+              {
                 check.style.maxHeight = null;
-              } else {
+              } 
+              else 
+              {
                 check.style.maxHeight = check.scrollHeight + "px";
               }
             });
           }
-        </script>
+ </script>
+
 </body>
 
 </html>
