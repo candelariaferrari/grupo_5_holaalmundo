@@ -1,31 +1,34 @@
-// ************ Require's ************
+// CONSTANTES
+
 const express = require('express');
 const router = express.Router();
 const studentsController = require('../controllers/studentsController');
-const authMiddlewars = require('../middlewares/authMiddleware');
-//const adminMiddlware = require('../middlewares/adminMiddleware');
+const authMiddleware = require('../middlewares/authMiddleware');
+//const adminMiddleware = require('../middlewares/adminMiddleware');
 
-///* CRUD ESTUDIANTES *///
+// RUTAS 
 
-/*** GET ALL INFO IN HOME LOGGED ***/ 
-router.get('/home', authMiddlewars, studentsController.home); //funciona
+// INICIO DE ESTUDIANTES
+router.get('/home', authMiddleware, studentsController.home); 
 
-/*** POST COMMENTS ***/ 
+// CREAR UN COMENTARIO EN EL INICIO DE ESTUDIANTES
 router.post('/home', studentsController.createComment);
 
-/*** GET ALL PROFESORES  */
-router.get('/packages', authMiddlewars, studentsController.services); //funciona
+// OBTENER TODOS LOS PAQUETES PARA LOS ESTUDIANTES
+router.get('/packages', authMiddleware, studentsController.services); 
 
-/*** GET PROFESORES */
-router.get('/teachers', authMiddlewars, studentsController.filterTeachers);
+// OBTENER TODOS LOS PROFESORES PARA LOS ESTUDIANTES
+router.get('/teachers', authMiddleware, studentsController.filterTeachers);
 
-/*** PROFIL PROFESORES */
-router.get('/configuration', authMiddlewars, studentsController.configuration); //funciona
+// CONFIGURACIONES DEL PERFIL DE LOS ESTUDIANTES
+router.get('/configuration', authMiddleware, studentsController.configuration); 
 
-/*** SHOPPING CART  */
-router.get('/shoppingCart', authMiddlewars, studentsController.shoppingCart); //funciona
+// CARRITO DE COMPRAS DE LOS ESTUDIANTES
+router.get('/shoppingCart', authMiddleware, studentsController.shoppingCart); 
 
-/*** LOGOUT */
+// CERRAR SESIÓN DEL ESTUDIANTE 
 router.get('/logout', studentsController.logout);
+
+// EXPORTAR EL MODULO 
 
 module.exports = router;
