@@ -1,72 +1,74 @@
+<!-- INICIO DE SESIÓN -->
+
 <!DOCTYPE html>
 
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> Iniciar Sesión </title>
-  <script src="https://kit.fontawesome.com/3964fc737d.js" crossorigin="anonymous"></script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  <link href="/css/normalize.css" rel="stylesheet">
-  <link href="/css/login.css" rel="stylesheet">
+       <meta charset="UTF-8">
+       <meta http-equiv="X-UA-Compatible" content="IE=edge">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title> Iniciar Sesión </title>
+       <script src="https://kit.fontawesome.com/3964fc737d.js" crossorigin="anonymous"></script>
+       <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+       <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+       <link href="/css/normalize.css" rel="stylesheet">
+       <link href="/css/login.css" rel="stylesheet">
 </head>
 
 <body>
 
-  <main class="main-content">
-    <%- include('../partials/backgroundLogin.ejs')%>
-      <section class="right-content">
-        <div class="contenedorFormulario">
-          <div class="title">
-            <p class="HAM">Inicio de sesión</p>
-          </div>
-          <form class="formulario" action="/login" method="POST" style="width: 60%;">
-            <div class="campos">
-              <label for="Mail"></label>
-              <input placeholder="Mail" type="email" name="email" class="input-form"
-              <%= locals.errors && errors.email ? 'is-invalid' : null %>
-							value="<%= locals.oldData ? oldData.email : null %>"
-              >
-              <% if(locals.errors && errors.email) { %>
-                <div class="text-danger" style="color: red">
-                  <%= errors.email.msg %>
-                </div>
-              <% } %>
-            </div>
+ <main class="main-content">
 
-            <div class="campos">
-              <label for="password"></label>
-              <input placeholder="Contraseña" type="password" name="password" class="input-form"
-              <%= locals.errors && errors.password ? 'is-invalid' : null %>
-							value="<%= locals.oldData ? oldData.password : null %>"
-              >
-              <% if(locals.errors && errors.password) { %>
-                <div class="text-danger" style="color: red">
-                  <%= errors.password.msg %>
-                </div>
-              <% } %>
-            </div>
-            <div class="formulario"> 
-                <label for="">
-                  <input type="checkbox" name="remember_user" > Recordar Usuario
-                </label>
-            </div>
+ <%- include('../partials/backgroundLogin.ejs')%>
+
+ <section class="right-content">
+        
+          <div class="contenedorFormulario">
+
+               <div class="title"> <p class="HAM"> Inicio de sesión </p> </div>
+
+               <form class="formulario" action="/login" method="POST" style="width: 60%">
+
+                     <div class="campos">
+                          <label for="Mail"></label>
+                          <input placeholder="Email" type="email" name="email" class="input-form"
+                          <%= locals.errors && errors.email ? 'is-invalid' : null %>
+						value="<%= locals.oldData ? oldData.email : null %>" >
+                          <% if(locals.errors && errors.email) { %>
+                               <div class="text-danger" style="color: red"> <%= errors.email.msg %> </div>
+                          <% } %>
+                     </div>
+
+                     <div class="campos">
+                          <label for="password"></label>
+                          <input placeholder="Contraseña" type="password" name="password" class="input-form"
+                          <%= locals.errors && errors.password ? 'is-invalid' : null %>
+						value="<%= locals.oldData ? oldData.password : null %>" >
+                          <% if(locals.errors && errors.password) { %>
+                               <div class="text-danger" style="color: red"> <%= errors.password.msg %> </div>
+                          <% } %>
+                     </div>
+
+                     <div class="formulario"> 
+                          <label for=""> <input type="checkbox" name="remember_user" > Recordarme </label>
+                     </div>
           
-            <div class="campos">
-              <a class="olv-cont" href="#"> ¿Olvidaste tu contraseña? </a>
-              <button class="reg" type="submit"> 
-                Iniciar
-              </button>
-          </form>
-        </div>
+                     <div class="campos">
+                          <a class="olv-cont" href="#"> ¿Olvidaste tu contraseña? </a>
+                          <button class="reg" type="submit"> Iniciar </button>
+                     </div>
 
-      </section>
-  </main>
+               </form>
+
+          </div>
+
+ </section>
+
+ </main>
+
 </body>
 
 </html>
