@@ -72,13 +72,13 @@ register: [
                                                       if(contadorMayuscula >= 1 && contadorMinusculas >= 1 && contadorNumeros >= 0 && caracteresEspeciales >= 1)
                                                       {return true} 
                                                       else {if(contadorMayuscula == 0)
-                                                               throw new Error('Debes ingresar minimo una letra Mayuscula');
+                                                               throw new Error('Tu contraseña debe contener al menos una letra mayúscula');
                                                             if(contadorMinusculas == 0)
-                                                               throw new Error('Debes ingresar minimo una letra Minuscula');
+                                                               throw new Error('Tu contraseña debe contener al menos una letra minúscula');
                                                             if(contadorNumeros == 0)
-                                                               throw new Error('Debes ingresar minimo un numero');
+                                                               throw new Error('Tu contraseña debe contener al menos un número');
                                                             if(caracteresEspeciales == 0)
-                                                               throw new Error('Debes ingresar minimo un caracter especial');}
+                                                               throw new Error('Tu contraseña debe contener al menos un caracter especial');}
                                                       }}),
            body('validationPassword')
                                      .notEmpty()
