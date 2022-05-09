@@ -25,7 +25,7 @@ function userLoggedMiddlware(req, res, next) {
     }
     // Visualizar barra de navegacion si esta logeado o no
     if (req.session.userLogged) {
-        if (req.session.userLogged.rol_id === 1) {
+        if (req.session.userLogged.user_rol_fk === 1) {
 
             res.locals.loggedStudent = true;
         } else {

@@ -1,9 +1,9 @@
 function authMiddlware(req, res, next) {
 
     if(!req.session.userLogged){
-        return res.redirect('/')
+        return res.redirect("/users/login");
     } 
-    next();
+    return next();
 }
 
 module.exports = authMiddlware;

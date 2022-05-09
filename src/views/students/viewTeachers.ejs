@@ -20,249 +20,151 @@
 <body>
   <%- include('../partials/header.ejs')%>
     <main>
-
       <section class="container-filtros">
         <div class="container-header">
           <h2>¿Que idioma te gustaría aprender?</h2>
         </div>
         <!-- idioma -->
-        <button class="btnFiltro">Seleccionar Idioma <i class="fas fa-angle-down"></i></button>
-        <div class="check">
-          <div>
-            <input type="checkbox" name="idiomas" value="español" id="español" class="input-control">
-            <label for="español">Español</label>
-          </div>
-          <div>
-            <input type="checkbox" name="idiomas" value="ingles" id="ingles" class="input-control">
-            <label for="ingles">Ingles</label>
-          </div>
-          <div>
-            <input type="checkbox" name="idiomas" value="portugues" id="portugues" class="input-control">
-            <label for="portugues">Portugués</label>
-          </div>
-          <div>
-            <input type="checkbox" name="idiomas" value="italiano" id="italiano" class="input-control">
-            <label for="italiano">Italiano</label>
-          </div>
-
-        </div>
-        <!-- tematica -->
-        <button class="btnFiltro">Seleccionar Tematicas <i class="fas fa-angle-down"></i></button>
-        <div class="check">
-          <div>
-            <input type="checkbox" name="idiomas" value="español" id="español" class="input-control">
-            <label for="español">Conversacion</label>
-          </div>
-          <div>
-            <input type="checkbox" name="idiomas" value="ingles" id="ingles" class="input-control">
-            <label for="ingles">Clases</label>
-          </div>
-          <div>
-            <input type="checkbox" name="idiomas" value="portugues" id="portugues" class="input-control">
-            <label for="portugues">Viajes</label>
-          </div>
-          <div>
-            <input type="checkbox" name="idiomas" value="italiano" id="italiano" class="input-control">
-            <label for="italiano">Culinaria</label>
-          </div>
-          <div>
-            <input type="checkbox" name="idiomas" value="aleman" id="aleman" class="input-control">
-            <label for="aleman">Deportes</label>
-          </div>
-          <div>
-            <input type="checkbox" name="idiomas" value="aleman" id="aleman" class="input-control">
-            <label for="aleman">Cultura</label>
-          </div>
-        </div>
-        <!-- profesion -->
-        <button class="btnFiltro">Seleccionar Profesion <i class="fas fa-angle-down"></i></button>
-        <div class="check">
-          <div>
-            <input type="checkbox" name="idiomas" value="español" id="español" class="input-control">
-            <label for="español">Abogado</label>
-          </div>
-          <div>
-            <input type="checkbox" name="idiomas" value="ingles" id="ingles" class="input-control">
-            <label for="ingles">Contador</label>
-          </div>
-          <div>
-            <input type="checkbox" name="idiomas" value="portugues" id="portugues" class="input-control">
-            <label for="portugues">Administrador</label>
-          </div>
-          <div>
-            <input type="checkbox" name="idiomas" value="italiano" id="italiano" class="input-control">
-            <label for="italiano">Economista</label>
-          </div>
-          <div>
-            <input type="checkbox" name="idiomas" value="aleman" id="aleman" class="input-control">
-            <label for="aleman">Chef</label>
-          </div>
-          <div>
-            <input type="checkbox" name="idiomas" value="aleman" id="aleman" class="input-control">
-            <label for="aleman">Atleta</label>
-          </div>
-
-          <div>
-            <input type="checkbox" name="idiomas" value="aleman" id="aleman" class="input-control">
-            <label for="aleman">IT</label>
-          </div>
-          <div>
-            <input type="checkbox" name="idiomas" value="aleman" id="aleman" class="input-control">
-            <label for="aleman">Ingeniero</label>
-          </div>
-          <div>
-            <input type="checkbox" name="idiomas" value="aleman" id="aleman" class="input-control">
-            <label for="aleman">Artista</label>
-          </div>
-        </div>
-
+        <form action="/students/teachers" method="GET">
+          <button class="btnFiltro">Seleccionar Idioma <i class="fas fa-angle-down"></i></button>
+            <div class="check">
+              <div>
+                <input type="checkbox" name="idiomas" value="Spanish" id="español" class="input-control">
+                <label for="español">Español</label>
+              </div>
+              <div>
+                <input type="checkbox" name="idiomas" value="English" id="ingles" class="input-control">
+                <label for="ingles">Ingles</label>
+              </div>
+              <div>
+                <input type="checkbox" name="idiomas" value="Portuges" id="portugues" class="input-control">
+                <label for="portugues">Portugués</label>
+              </div>
+              <div>
+                <input type="checkbox" name="idiomas" value="German" id="german" class="input-control">
+                <label for="German">Aleman</label>
+              </div>
+              <div>
+                <input type="checkbox" name="idiomas" value="Franch" id="franch" class="input-control">
+                <label for="Franch">Frances</label>
+              </div>
+            </div>
+          <!-- tematica -->
+          <button class="btnFiltro">Seleccionar Tematicas <i class="fas fa-angle-down"></i></button>
+            <div class="check">
+              <div>
+                <input type="checkbox" name="tematica" value="Conversacion" id="conversacion" class="input-control">
+                <label for="conversacion">Conversacion</label>
+              </div>
+              <div>
+                <input type="checkbox" name="tematica" value="clases" id="clases" class="input-control">
+                <label for="clases">Clases</label>
+              </div>
+              <div>
+                <input type="checkbox" name="tematica" value="viajes" id="viajes" class="input-control">
+                <label for="viajes">Viajes</label>
+              </div>
+              <div>
+                <input type="checkbox" name="tematica" value="culinaria" id="culinaria" class="input-control">
+                <label for="culinaria">Culinaria</label>
+              </div>
+              <div>
+                <input type="checkbox" name="tematica" value="deportes" id="deportes" class="input-control">
+                <label for="deportes">Deportes</label>
+              </div>
+              <div>
+                <input type="checkbox" name="tematica" value="cultura" id="cultura" class="input-control">
+                <label for="cultura">Cultura</label>
+              </div>
+            </div>
+          <!-- profesion -->
+          <button class="btnFiltro">Seleccionar Profesion <i class="fas fa-angle-down"></i></button>
+            <div class="check">
+              <div>
+                <input type="checkbox" name="profesion" value="abogado" id="abogado" class="input-control">
+                <label for="abogado">Abogado</label>
+              </div>
+              <div>
+                <input type="checkbox" name="profesion" value="contador" id="contador" class="input-control">
+                <label for="contador">Contador</label>
+              </div>
+              <div>
+                <input type="checkbox" name="profesion" value="administrador" id="administrador" class="input-control">
+                <label for="administrador">Administrador</label>
+              </div>
+              <div>
+                <input type="checkbox" name="profesion" value="economista" id="economista" class="input-control">
+                <label for="economista">Economista</label>
+              </div>
+              <div>
+                <input type="checkbox" name="profesion" value="chef" id="chef" class="input-control">
+                <label for="chef">Chef</label>
+              </div>
+              <div>
+                <input type="checkbox" name="atleta" value="atleta" id="atleta" class="input-control">
+                <label for="atleta">Atleta</label>
+              </div>
+              <div>
+                <input type="checkbox" name="profesion" value="it" id="it" class="input-control">
+                <label for="it">IT</label>
+              </div>
+              <div>
+                <input type="checkbox" name="profesion" value="ingeniero" id="ingeniero" class="input-control">
+                <label for="ingeniero">Ingeniero</label>
+              </div>
+              <div>
+                <input type="checkbox" name="artista" value="artista" id="artista" class="input-control">
+                <label for="artista">Artista</label>
+              </div>
+            </div>
+          <button class="btnAgregar" type="submit">Filtrar</button>
+        </form>
       </section>
       <section>
         <div class="containerProfes">
-          <div class="contenedorImg">
-            <div class="borde">
-              <div class="hovereffect">
-                <div class="start">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="far fa-star"></i>
-                  <i class="far fa-star"></i>
+          <% if(profesoresFiltro.length > 0) { %>
+            <% profesoresFiltro.forEach(function(profesor) { %>
+              <div class="contenedorImg">
+                <div class="borde">
+                  <div class="hovereffect">
+                    <div class="start">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="far fa-star"></i>
+                      <i class="far fa-star"></i>
+                    </div>
+                    <img class="img-responsive" src="/images/profeDos.png" alt="<%=profesor.name %>" />
+                    <div class="overlay">
+                      <button id="myBtn" class="reservar">Reservar</button>
+                    </div>
+                  </div>
                 </div>
-                <img class="img-responsive" src="/images/profeDos.png" alt="diego" />
-                <div class="overlay">
-                  <button id="myBtn" class="reservar">Reservar</button>
-                </div>
+                <p class="nombre"><%=profesor.name %></p>
               </div>
-            </div>
-            <p class="nombre">Pepito Juarez</p>
-          </div>
-          <div class="contenedorImg">
-            <div class="borde">
-              <div class="hovereffect">
-                <div class="start">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="far fa-star"></i>
-                  <i class="far fa-star"></i>
+            <% }) %>
+          <% } else { %>
+            <% profesores.forEach(function(profesor){ %>
+              <div class="contenedorImg">
+                <div class="borde">
+                  <div class="hovereffect">
+                    <div class="start">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="far fa-star"></i>
+                      <i class="far fa-star"></i>
+                    </div>
+                    <img class="img-responsive" src="/images/profeDos.png" alt="<%=profesor.name %>" />
+                    <div class="overlay">
+                      <button id="myBtn" class="reservar">Reservar</button>
+                    </div>
+                  </div>
                 </div>
-                <img class="img-responsive" src="/images/profeDos.png" alt="diego" />
-                <div class="overlay">
-                  <button id="myBtn" class="reservar">Reservar</button>
-                </div>
+                <p class="nombre"><%=profesor.name %></p>
               </div>
-            </div>
-            <p class="nombre">Pepito Juarez</p>
-          </div>
-          <div class="contenedorImg">
-            <div class="borde">
-              <div class="hovereffect">
-                <div class="start">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="far fa-star"></i>
-                  <i class="far fa-star"></i>
-                </div>
-                <img class="img-responsive" src="/images/profeDos.png" alt="diego" />
-                <div class="overlay">
-                  <button id="myBtn" class="reservar">Reservar</button>
-                </div>
-              </div>
-            </div>
-            <p class="nombre">Pepito Juarez</p>
-          </div>
-          <div class="contenedorImg">
-            <div class="borde">
-              <div class="hovereffect">
-                <div class="start">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="far fa-star"></i>
-                  <i class="far fa-star"></i>
-                </div>
-                <img class="img-responsive" src="/images/profeDos.png" alt="diego" />
-                <div class="overlay">
-                  <button id="myBtn" class="reservar">Reservar</button>
-                </div>
-              </div>
-            </div>
-            <p class="nombre">Pepito Juarez</p>
-          </div>
-          <div class="contenedorImg">
-            <div class="borde">
-              <div class="hovereffect">
-                <div class="start">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="far fa-star"></i>
-                  <i class="far fa-star"></i>
-                </div>
-                <img class="img-responsive" src="/images/profeDos.png" alt="diego" />
-                <div class="overlay">
-                  <button id="myBtn" class="reservar">Reservar</button>
-                </div>
-              </div>
-            </div>
-            <p class="nombre">Pepito Juarez</p>
-          </div>
-          <div class="contenedorImg">
-            <div class="borde">
-              <div class="hovereffect">
-                <div class="start">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="far fa-star"></i>
-                  <i class="far fa-star"></i>
-                </div>
-                <img class="img-responsive" src="/images/profeDos.png" alt="diego" />
-                <div class="overlay">
-                  <button id="myBtn" class="reservar">Reservar</button>
-                </div>
-              </div>
-            </div>
-            <p class="nombre">Pepito Juarez</p>
-          </div>
-          <div class="contenedorImg">
-            <div class="borde">
-              <div class="hovereffect">
-                <div class="start">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="far fa-star"></i>
-                  <i class="far fa-star"></i>
-                </div>
-                <img class="img-responsive" src="/images/profeDos.png" alt="diego" />
-                <div class="overlay">
-                  <button id="myBtn" class="reservar">Reservar</button>
-                </div>
-              </div>
-            </div>
-            <p class="nombre">Pepito Juarez</p>
-          </div>
-          <div class="contenedorImg">
-            <div class="borde">
-              <div class="hovereffect">
-                <div class="start">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="far fa-star"></i>
-                  <i class="far fa-star"></i>
-                </div>
-                <img class="img-responsive" src="/images/profeDos.png" alt="diego" />
-                <div class="overlay">
-                  <button id="myBtn" class="reservar">Reservar</button>
-                </div>
-              </div>
-            </div>
-            <p class="nombre">Pepito Juarez</p>
-          </div>
+            <% }) %>
+          <% } %>
         </div>
         <div class="container-button-ver">
           <button type="button">Ver mas</button>

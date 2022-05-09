@@ -1,22 +1,23 @@
 module.exports = (sequelize, dataTypes) => {
     let alias = 'User_Class'; // esto debería estar en singular
     let cols = {
-        idUsuarios_Clases: {
+        id: {
             type: dataTypes.BIGINT(10).UNSIGNED,
             primaryKey: true,
             allowNull: false,
             autoIncrement: true
         },
-        id_user: {
+        id_user_fk: {
             type: dataTypes.INTEGER,
             allowNull: false
         },
-        id_class: {
+        id_class_fk: {
             type: dataTypes.INTEGER,
             allowNull: false
         }
     };
     let config = {
+        tableName: "User_Class",
         timestamps: false,
     }
 

@@ -1,13 +1,13 @@
 module.exports = (sequelize, dataTypes) => {
     let alias = 'Comment'; // esto debería estar en singular
     let cols = {
-        idComment: {
+        id: {
             type: dataTypes.BIGINT(10).UNSIGNED,
             primaryKey: true,
             allowNull: false,
             autoIncrement: true
         },
-        nombres: {
+        name: {
             type: dataTypes.STRING,
             allowNull: false
         },
@@ -18,7 +18,7 @@ module.exports = (sequelize, dataTypes) => {
         description: {
             type: dataTypes.STRING,
             allowNull: false
-        }
+        },
     };
     let config = {
         tableName: "Comment",
@@ -26,15 +26,6 @@ module.exports = (sequelize, dataTypes) => {
     }
 
     const Comment = sequelize.define(alias,cols,config);
-
-    //Aquí debes realizar lo necesario para crear las relaciones con los otros modelos
-    /*Comment.associate = function(models){
-        Comment.belongsTo(models.User, {
-            as: "user",
-            foreignKey: "idUsuarioFK"
-        });
-    }*/
-
     return Comment;
 
 };
