@@ -26,7 +26,7 @@
             <p class="HAM"> Hola al Mundo </p>
             <p class="subtitle"> Formulario de registro </p>
           </div>
-          <form name="form" class="formulario" action="/register" method="POST">
+          <form name="form" class="formulario" action="/users/register" method="POST">
             <div class="campos">
               <label for="name"></label>
               <input placeholder="Nombre" type="text" name="name" class="input-form"
@@ -40,14 +40,14 @@
                   <% } %>
             </div>
             <div class="campos">
-              <label for="lastName"></label>
-              <input placeholder="Apellido" type="text" name="lastName" class="input-form"
-              <%= locals.errors && errors.lastName ? 'is-invalid' : null %>
-							value="<%= locals.oldData ? oldData.lastName : null %>"
+              <label for="last_name"></label>
+              <input placeholder="Apellido" type="text" name="last_name" class="input-form"
+              <%= locals.errors && errors.last_name ? 'is-invalid' : null %>
+							value="<%= locals.oldData ? oldData.last_name : null %>"
               >
-              <% if(locals.errors && errors.lastName) { %>
+              <% if(locals.errors && errors.last_name) { %>
                 <div class="text-danger" style="color: red">
-                  <%= errors.lastName.msg %>
+                  <%= errors.last_name.msg %>
                 </div>
               <% } %>
             </div>
@@ -109,8 +109,8 @@
                 <option value="" disabled selected>- Seleciona el genero - </option>
                 
                 <% allGenres.forEach(genre => { %>
-                  <option value="<%= `${genre.idSex}` %>">
-                    <%= locals.oldData && (genre.idSex === oldData.gender) ? "select" : null %>
+                  <option value="<%= `${genre.id}` %>">
+                    <%= locals.oldData && (genre.id === oldData.gender) ? "select" : null %>
                     <%= `${genre.description}` %> 
                   </option>
                 <% }) %>  
@@ -129,8 +129,8 @@
               <option value="" disabled selected>- Seleciona el rol - </option>
               
               <% allRol.forEach(rol => { %>
-                <option  value="<%= `${rol.idRol}` %>">
-                  <%= locals.oldData && (rol.idRol == oldData.userRol) ? "selected" : null %>
+                <option  value="<%= `${rol.id}` %>">
+                  <%= locals.oldData && (rol.id == oldData.userRol) ? "selected" : null %>
                   <%= rol.description %> 
                 </option>
               <% }) %> 
@@ -146,12 +146,9 @@
               <input class="bot-tyc" type="checkbox" name="terminosCondiciones" required>
               <label class="term-y-cond"> Acepto los términos y condiciones </label>
             </div>
-            
-
-            <button type="submit" class="reg" onclick="register()">
+            <button type="submit" class="reg">
               Registrarse
             </button>
-
           </form>
         </div>
       </section>

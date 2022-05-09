@@ -316,6 +316,7 @@ input[type="checkbox"]:checked {
 }
 
 /* nuevos */
+
 button.btnFiltro {
   background-color: #00ffcb;
   border: none;
@@ -337,6 +338,7 @@ button.active.btnFiltro {
   color: #00ffcb;
 }
 
+/*
 .check {
   width: 58%;
   display: flex;
@@ -359,7 +361,7 @@ button.active.btnFiltro {
 }
 .check div label {
   margin-left: 0.5em;
-}
+}*/
 
 /* img */
 .containerProfes {

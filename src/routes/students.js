@@ -5,25 +5,23 @@ const studentsController = require('../controllers/studentsController');
 const authMiddlewars = require('../middlewares/authMiddleware');
 //const adminMiddlware = require('../middlewares/adminMiddleware');
 
-///* CRUD ESTUDIANTES *///
-
-/*** GET ALL INFO IN HOME LOGGED ***/ 
-router.get('/home', authMiddlewars, studentsController.home); //funciona
+/*** GET all info in Home Students ***/ 
+router.get('/home', authMiddlewars, studentsController.home);
 
 /*** POST COMMENTS ***/ 
-router.post('/home', studentsController.createComment);
-
-/*** GET ALL PROFESORES  */
-router.get('/packages', authMiddlewars, studentsController.services); //funciona
+router.post('/home', authMiddlewars, studentsController.createComment);
 
 /*** GET PROFESORES */
-router.get('/teachers', authMiddlewars, studentsController.filterTeachers);
+router.get('/teachers', authMiddlewars, studentsController.filterTeachers);  // authMiddlewars, 
+
+/*** GET ALL PROFESORES  */
+router.get('/packages', authMiddlewars, studentsController.services); // authMiddlewars
 
 /*** PROFIL PROFESORES */
-router.get('/configuration', authMiddlewars, studentsController.configuration); //funciona
+router.get('/configuration', authMiddlewars, studentsController.configuration); 
 
 /*** SHOPPING CART  */
-router.get('/shoppingCart', authMiddlewars, studentsController.shoppingCart); //funciona
+router.get('/shoppingCart', authMiddlewars, studentsController.shoppingCart); 
 
 /*** LOGOUT */
 router.get('/logout', studentsController.logout);

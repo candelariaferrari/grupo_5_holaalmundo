@@ -38,136 +38,143 @@
             <div class="layer2Heading">
               <h2>Elegí lo que mas te convenga!</h2>
             </div>
-            <div class="layer2Info">
-              <div class="layerFiltros">
-                <div class="containerFiltros">
-                  <button class="btnFiltro">Idiomas <i class="fas fa-angle-down"></i></button>
-                  <div class="check">
-                    <div>
-                      <input type="checkbox" name="idiomas" value="español" id="español">
-                      <label for="español"> Español </label>
+              <div class="layer2Info">
+                <div class="layerFiltros">
+                  <div class="containerFiltros">
+                    <form action="/students/packages" method="GET">
+                        <button class="btnFiltro" type="button">Idiomas <i class="fas fa-angle-down"></i></button>
+                        <div class="check">
+                          <div>
+                            <input type="checkbox" name="idiomas" value="Spanish" id="español" class="input-control">
+                            <label for="español">Español</label>
+                          </div>
+                          <div>
+                            <input type="checkbox" name="idiomas" value="English" id="ingles" class="input-control">
+                            <label for="ingles">Ingles</label>
+                          </div>
+                          <div>
+                            <input type="checkbox" name="idiomas" value="Portuges" id="portugues" class="input-control">
+                            <label for="portugues">Portugués</label>
+                          </div>
+                          <div>
+                            <input type="checkbox" name="idiomas" value="German" id="german" class="input-control">
+                            <label for="German">Aleman</label>
+                          </div>
+                          <div>
+                            <input type="checkbox" name="idiomas" value="Franch" id="franch" class="input-control">
+                            <label for="Franch">Frances</label>
+                          </div>
+                        </div>
+                        <button class="btnFiltro" type="button">Temas de interes <i class="fas fa-angle-down"></i></button>
+                        <div class="check">
+                          <div>
+                            <input type="checkbox" name="temas-interes" value="cultura" id="cultura">
+                            <label for="cultura">Cultura</label>
+                          </div>
+                          <div>
+                            <input type="checkbox" name="temas-interes" value="noticias" id="noticias">
+                            <label for="noticias">Noticias</label>
+                          </div>
+                          <div>
+                            <input type="checkbox" name="temas-interes" value="deportes" id="deportes">
+                            <label for="deportes">Deportes</label>
+                          </div>
+                          <div>
+                            <input type="checkbox" name="temas-interes" value="culinaria" id="culinaria">
+                            <label for="culinaria">Culinaria</label>
+                          </div>
+                        </div>
+                        <button class="btnFiltro" type="button">Profesiones <i class="fas fa-angle-down"></i></button>
+                        <div class="check">
+                          <div>
+                            <input type="checkbox" name="idiomas" value="español" id="español">
+                            <label for="español">Abogado</label>
+                          </div>
+                          <div>
+                            <input type="checkbox" name="idiomas" value="ingles" id="ingles">
+                            <label for="ingles">Administrador</label>
+                          </div>
+                          <div>
+                            <input type="checkbox" name="idiomas" value="portugues" id="portugues">
+                            <label for="portugues">Contador</label>
+                          </div>
+                          <div>
+                            <input type="checkbox" name="idiomas" value="italiano" id="italiano">
+                            <label for="italiano">Ingeniero</label>
+                          </div>
+                          <div>
+                            <input type="checkbox" name="idiomas" value="aleman" id="aleman">
+                            <label for="aleman">Musico</label>
+                          </div>
+                        </div>
+                        <button class="btnFiltro" type="button">Conversaciones <i class="fas fa-angle-down"></i></button>
+                        <div class="check">
+                          <div>
+                            <input type="checkbox" name="idiomas" value="español" id="español">
+                            <label for="español">Español</label>
+                          </div>
+                          <div>
+                            <input type="checkbox" name="idiomas" value="ingles" id="ingles">
+                            <label for="ingles">Ingles</label>
+                          </div>
+                          <div>
+                            <input type="checkbox" name="idiomas" value="portugues" id="portugues">
+                            <label for="portugues">Portugués</label>
+                          </div>
+                          <div>
+                            <input type="checkbox" name="idiomas" value="italiano" id="italiano">
+                            <label for="italiano">Italiano</label>
+                          </div>
+                        </div>
+                        <button class="btnFiltro" type="button">Match date <i class="fas fa-angle-down"></i></button>
+                        <div class="check">
+                          <div>
+                            <input type="checkbox" name="idiomas" value="español" id="español">
+                            <label for="español">Museos</label>
+                          </div>
+                          <div>
+                            <input type="checkbox" name="idiomas" value="ingles" id="ingles">
+                            <label for="ingles">Rumba</label>
+                          </div>
+                          <div>
+                            <input type="checkbox" name="idiomas" value="portugues" id="portugues">
+                            <label for="portugues">Cena</label>
+                          </div>
+                          <div>
+                            <input type="checkbox" name="idiomas" value="italiano" id="italiano">
+                            <label for="italiano">Compartir</label>
+                          </div>
+                        </div>
+                        <button class="btnAgregar" type="submit">Filtrar</button>
+                    </form>
+                  </div>  
+                </div>
+                <div class="layer2InfoContainer">
+                  <% profesores.forEach(function(profesor) { %>
+                    <div class="profeContainer">
+                      <img class="profeImage" src="/images/<%=profesor.image %>">
+                      <div class="puntuacion">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                      </div>
+                      <div class="footer-profesor">
+                        <button class="footer-profesor">
+                          <%= profesor.name %>
+                        </button>
+                      </div>
                     </div>
-                    <div>
-                      <input type="checkbox" name="idiomas" value="ingles" id="ingles">
-                      <label for="ingles"> Ingles </label>
-                    </div>
-                    <div>
-                      <input type="checkbox" name="idiomas" value="portugues" id="portugues">
-                      <label for="portugues"> Portugués </label>
-                    </div>
-                    <div>
-                      <input type="checkbox" name="idiomas" value="italiano" id="italiano">
-                      <label for="italiano"> Italiano </label>
-                    </div>
-                  </div>
-                  <button class="btnFiltro">Temas de interes <i class="fas fa-angle-down"></i></button>
-                  <div class="check">
-                    <div>
-                      <input type="checkbox" name="temas-interes" value="cultura" id="cultura">
-                      <label for="cultura">Cultura</label>
-                    </div>
-                    <div>
-                      <input type="checkbox" name="temas-interes" value="noticias" id="noticias">
-                      <label for="noticias">Noticias</label>
-                    </div>
-                    <div>
-                      <input type="checkbox" name="temas-interes" value="deportes" id="deportes">
-                      <label for="deportes">Deportes</label>
-                    </div>
-                    <div>
-                      <input type="checkbox" name="temas-interes" value="culinaria" id="culinaria">
-                      <label for="culinaria">Culinaria</label>
-                    </div>
-                  </div>
-                  <button class="btnFiltro">Profesiones <i class="fas fa-angle-down"></i></button>
-                  <div class="check">
-                    <div>
-                      <input type="checkbox" name="idiomas" value="español" id="español">
-                      <label for="español">Abogado</label>
-                    </div>
-                    <div>
-                      <input type="checkbox" name="idiomas" value="ingles" id="ingles">
-                      <label for="ingles">Administrador</label>
-                    </div>
-                    <div>
-                      <input type="checkbox" name="idiomas" value="portugues" id="portugues">
-                      <label for="portugues">Contador</label>
-                    </div>
-                    <div>
-                      <input type="checkbox" name="idiomas" value="italiano" id="italiano">
-                      <label for="italiano">Ingeniero</label>
-                    </div>
-                    <div>
-                      <input type="checkbox" name="idiomas" value="aleman" id="aleman">
-                      <label for="aleman">Musico</label>
-                    </div>
-                  </div>
-                  <button class="btnFiltro">Conversaciones <i class="fas fa-angle-down"></i></button>
-                  <div class="check">
-                    <div>
-                      <input type="checkbox" name="idiomas" value="español" id="español">
-                      <label for="español">Español</label>
-                    </div>
-                    <div>
-                      <input type="checkbox" name="idiomas" value="ingles" id="ingles">
-                      <label for="ingles">Ingles</label>
-                    </div>
-                    <div>
-                      <input type="checkbox" name="idiomas" value="portugues" id="portugues">
-                      <label for="portugues">Portugués</label>
-                    </div>
-                    <div>
-                      <input type="checkbox" name="idiomas" value="italiano" id="italiano">
-                      <label for="italiano">Italiano</label>
-                    </div>
-                  </div>
-                  <button class="btnFiltro">Match date <i class="fas fa-angle-down"></i></button>
-                  <div class="check">
-                    <div>
-                      <input type="checkbox" name="idiomas" value="español" id="español">
-                      <label for="español">Museos</label>
-                    </div>
-                    <div>
-                      <input type="checkbox" name="idiomas" value="ingles" id="ingles">
-                      <label for="ingles">Rumba</label>
-                    </div>
-                    <div>
-                      <input type="checkbox" name="idiomas" value="portugues" id="portugues">
-                      <label for="portugues">Cena</label>
-                    </div>
-                    <div>
-                      <input type="checkbox" name="idiomas" value="italiano" id="italiano">
-                      <label for="italiano">Compartir</label>
-                    </div>
-                  </div>
+                    <% }) %>
                 </div>
               </div>
-              <div class="layer2InfoContainer">
-                <% profesores.forEach(function(profesor) { %>
-                  <div class="profeContainer">
-                    <img class="profeImage" src="/images/<%=profesor.image %>">
-                    <div class="puntuacion">
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="far fa-star"></i>
-                      <i class="far fa-star"></i>
-                    </div>
-                    <div class="footer-profesor">
-                      <button class="footer-profesor">
-                        <%= profesor.name %>
-                      </button>
-                    </div>
-                  </div>
-                  <% }) %>
-              </div>
-            </div>
           </div>
         </div>
 
         <div class="layer3">
           <section id="sectionServicios" onload="reset()">
-            <h2>Nuestros Servicios</h2>
+            <h2> Nuestros Servicios</h2>
 
             <div class="serviceContainer">
               <button class="preBtn">
@@ -176,27 +183,50 @@
               <button class="nxtBtn">
                 <i class="fas fa-chevron-right"></i>
               </button>
-              <% servicios.forEach(function(servicio){ %>
-                <!-- card 1 -->
-                <div class="serviceCard">
-                  <div class="serviceImg">
-                    <span class="discountTag">$ <%=servicio.price %></span>
-                    <i class="fas fa-comments"></i>
-                    <h4>
-                      <%=servicio.name %>
-                    </h4>
-                    <p class="description">
-                      <%=servicio.description %>
-                    </p>
+              <% if(serviciosFiltrados.length > 0 ) { %>
+                <% serviciosFiltrados.forEach(function(servicio){ %>
+                  <div class="serviceCard">
+                    <div class="serviceImg">
+                      <span class="discountTag">$ <%=servicio.price %></span>
+                      <i class="fas fa-comments"></i>
+                      <h4>
+                        <%=servicio.language %>
+                      </h4>
+                      <p class="description">
+                        <%=servicio.description %>
+                      </p>
+                    </div>
+                    <div class="serviceInfo">
+                      <button>
+                        <i class="fas fa-shopping-cart"></i>
+                        Agregar al carrito
+                      </button>
+                    </div>
                   </div>
-                  <div class="serviceInfo">
-                    <button>
-                      <i class="fas fa-shopping-cart"></i>
-                      Agregar al carrito
-                    </button>
-                  </div>
-                </div>
                 <% }) %>
+              <% } else { %>
+                <% servicios.forEach(function(servicio){ %>
+                  <!-- card 1 -->
+                  <div class="serviceCard">
+                    <div class="serviceImg">
+                      <span class="discountTag">$ <%=servicio.price %></span>
+                      <i class="fas fa-comments"></i>
+                      <h4>
+                        <%=servicio.language %>
+                      </h4>
+                      <p class="description">
+                        <%=servicio.description %>
+                      </p>
+                    </div>
+                    <div class="serviceInfo">
+                      <button>
+                        <i class="fas fa-shopping-cart"></i>
+                        Agregar al carrito
+                      </button>
+                    </div>
+                  </div>
+                  <% }) %>
+              <% } %>
             </div>
           </section>
         </div>
@@ -235,110 +265,6 @@
                 <% }) %>
             </div>
           </section>
-          <section id="sectionServicios" onload="reset()">
-            <h2>Los mas vendidos</h2>
-            <div class="serviceContainer">
-              <button class="preBtn">
-                <i class="fas fa-chevron-left"></i>
-              </button>
-              <button class="nxtBtn">
-                <i class="fas fa-chevron-right"></i>
-              </button>
-              <!-- card 1 -->
-              <% serviciosMasVendidos.forEach(function(servicio){ %>
-                <!-- card 1 -->
-                <div class="serviceCard">
-                  <div class="serviceImg">
-                    <span class="discountTag">$ <%=servicio.price %></span>
-                    <i class="fas fa-comments"></i>
-                    <h4>
-                      <%=servicio.name %>
-                    </h4>
-                    <p class="description">
-                      <%=servicio.description %>
-                    </p>
-                  </div>
-                  <div class="serviceInfo">
-                    <button>
-                      <i class="fas fa-shopping-cart"></i>
-                      Agregar al carrito
-                    </button>
-                  </div>
-                </div>
-                <% }) %>
-            </div>
-          </section>
-          <!--  
-            <div>
-                <h2 class = "layer4Heading">Recomendados para ti</h2>
-            </div>
-            <div class = "layer4Servicios">
-                <div class = "serviciosContainer"> 
-                    <div class="servicio-label">Servicios</div>
-                    <div class="container-servicios">
-                        <footer class = "footer-servicios">Agregar al carrito</footer>
-                    </div>
-                </div>
-                <div class = "serviciosContainer">
-                    <div class="servicio-label">Servicios</div>
-                    <div class="container-servicios">
-                        <footer class = "footer-servicios">Agregar al carrito</footer>
-                    </div>
-                </div>
-                <div class = "serviciosContainer">
-                    <div class="servicio-label">Servicios</div>
-                    <div class="container-servicios">
-                        <footer class = "footer-servicios">Agregar al carrito</footer>
-                    </div>
-                </div>
-                <div class = "serviciosContainer">
-                    <div class="servicio-label">Servicios</div>
-                    <div class="container-servicios">
-                        <footer class = "footer-servicios">Agregar al carrito</footer>
-                    </div>
-                </div>
-                <div class = "serviciosContainer">
-                    <div class="servicio-label">Servicios</div>
-                    <div class="container-servicios">
-                        <footer class = "footer-servicios">Agregar al carrito</footer>
-                    </div>
-                </div>
-            </div>    
-            <div>
-                <h2 class = "layer4Heading">Los mas vendidos</h2>
-            </div>
-            <div class = "layer4Servicios">
-                <div class = "serviciosContainer"> 
-                    <div class="servicio-label">Servicios</div>
-                    <div class="container-servicios">
-                        <footer class = "footer-servicios">Agregar al carrito</footer>
-                    </div>
-                </div>
-                <div class = "serviciosContainer">
-                    <div class="servicio-label">Servicios</div>
-                    <div class="container-servicios">
-                        <footer class = "footer-servicios">Agregar al carrito</footer>
-                    </div>
-                </div>
-                <div class = "serviciosContainer">
-                    <div class="servicio-label">Servicios</div>
-                    <div class="container-servicios">
-                        <footer class = "footer-servicios">Agregar al carrito</footer>
-                    </div>
-                </div>
-                <div class = "serviciosContainer">
-                    <div class="servicio-label">Servicios</div>
-                    <div class="container-servicios">
-                        <footer class = "footer-servicios">Agregar al carrito</footer>
-                    </div>
-                </div>
-                <div class = "serviciosContainer">
-                    <div class="servicio-label">Servicios</div>
-                    <div class="container-servicios">
-                        <footer class = "footer-servicios">Agregar al carrito</footer>
-                    </div>
-                </div>
-            </div> -->
         </div>
     </main>
     <!-- chat -->

@@ -1,16 +1,11 @@
-const path = require('path');
-//const teacherServices = require("../services/teachersService");
-//const packageService = require("../services/packagesService");
-//const commentService = require("../services/commentService");
+// ************ Require's ************
+const teacherServices = require("../services/teachersService");
+const packageService = require("../services/packagesService");
+const commentService = require("../services/commentService");
+
 const db = require('../database/models');
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
-
-const Class = db.Class;
-const users = db.User;
-const comment = db.Comment;
-const sex = db.Sex;
-const rol = db.Rol;
 
 let studentsController = {
 
@@ -29,61 +24,52 @@ let studentsController = {
                                         profesores: profesores, 
                                         user: res.locals.userLogged});*/
 
-        const servicios = Class.findAll(
+        const servicios = db.Class.findAll(
             {
-                // Como se haria el include en la vista de home para imprimer el servicio.sale_class.total
-                include: [{association: "sale_class"}]
+                // SELECT * FROM CLASS
+                attributes: ['description', 'language', 'price']
             }
-        )
-        const cantidadTemas = Class.findAll(
+        );
+        const cantidadTemas = db.Class.findAll(
             {
-                include: [
-                    {
-                        // Como opera en un cruce de tablas el where (deberia aparecer uno)
-                        association: "tematica"
-                    }
-                ]
-            }, 
-            {
+                // SELECT COUNTDISTINCT(topics) AS countTopics FROM Class
                 attributes: [
-                    [sequelize.fn('DISTINCT', sequelize.col(`tematica.idTopic`)), `countTopics`]
+                    [sequelize.fn('DISTINCT', sequelize.col(`topics`)), `countTopics`],
                 ]
             }
-        )
-        const cantidadIdiomas = Class.findAll(
+        );
+        const cantidadIdiomas = db.Class.findAll(
             {
+                // SELECT COUNTDISTINCT(language) AS countLanguage FROM Class
                 attributes: [
                     [sequelize.fn('DISTINCT', sequelize.col(`language`)), `countLanguage`]
-                ]
+               ]
             }
-        )
-        const profesores = users.findAll(
+        );
+        const profesores = db.User.findAll(
             {
+                // TODO more queries
+                // SELECT r.description FROM USER 
+                // INNER JOIN ROL as r ON user.user_rol_fk = rol.id
                 include: [
                         {
-                            // Como opera en un cruce de tablas el where (deberia aparecer uno)
                             association: "rol"
                         }
                 ],
                 where: {
-                    rol_id: 2
+                    "$rol.description$": { [Op.like]: '%' + "Profesor" + '%'}
                 }
             }
-        )
-        const serviciosRecomendados = Class.findAll(
+        );
+        const serviciosRecomendados = db.Class.findAll(
             {
                 where: {
                     visited: 1
                 }
             }
-        )
-        const serviciosMasVendidos = Class.findAll(
+        );
+        const serviciosMasVendidos = db.Class.findAll(
             {
-                include: [
-                        {
-                            association: "sale_class"
-                        }
-                ],
                 // Where sale_class.total > 100
                 where: {
                     price: {
@@ -91,14 +77,10 @@ let studentsController = {
                     }
                 }
             }
-        )
+        );
         Promise.all([servicios, profesores, cantidadIdiomas, cantidadTemas, serviciosRecomendados, serviciosMasVendidos])
             .then(function([servicios, profesores, cantidadIdiomas, cantidadTemas, serviciosRecomendados, serviciosMasVendidos]){
-                
-                /*serviciosRecomendados: serviciosRecomendados,
-                serviciosMasVendidos: serviciosMasVendidos,
-                user: res.locals.userLogged*/
-                
+                             
                 res.render('students/homeStudents', {servicios: servicios, 
                                                     profesores: profesores, 
                                                     cantidadIdiomas:cantidadIdiomas, 
@@ -110,7 +92,7 @@ let studentsController = {
                 console.log(error);
         });
     }, 
-    createComment: function(req, res){
+    createComment: function(req, res) {
         //commentService.createComment(req.body);
         //res.redirect('/home');
         comment.create({
@@ -119,25 +101,110 @@ let studentsController = {
             description: req.body.consultaContact
         })
         .then(() =>{
-            res.redirect('/');
+            res.redirect('/students/home');
         })
         .catch(error => {
             console.log(error);
         });
     },
-    services: function(req, res) {
-        const profesores = teacherServices.findAllTeachers();
-        const serviciosRecomendados = packageService.findAllSuggest();
-        const serviciosMasVendidos = packageService.findAllSold();
-        const servicios = packageService.findAllServices();
+    filterTeachers: async function(req, res) {
+
+        let language = req.query.idiomas; // [] 
+        let topics = req.query.tematica;
+        let jobs = req.query.profesion;
+
+        if(language != undefined) {
+            let langagueString = language.toString();
+            let languageSplit = langagueString.split(',');
+            console.log(languageSplit);
+            for(let i = 0; i < languageSplit.length; i++){
+                language = languageSplit[i] // Spanish
+            }
+        }
         
+        const profesores =  await db.User.findAll({
+
+            attributes: ['name', 'avatar'],
+            where: {
+                user_rol_fk: {
+                    [Op.eq]: 2
+                }
+            }
+        });
+
+        const profesoresFiltro = await db.User.findAll({
+            // SELECT * 
+            // FROM user 
+            // INNER JOIN user_class 
+            // ON user.id = user_class.id_user_fk
+            // INNER JOIN class
+            // ON class.id = user_class.id_class_fk;
+            // WHERE language LIKE "" OR 
+            // topics LIKE ""
+
+            include: [
+                {
+                    association: "user_class"
+                }
+            ],
+            where: {
+                user_rol_fk: {
+                    [Op.eq]: 2
+                },
+                [Op.or]: [
+                    {'$user_class.language$': { [Op.like]: '%' + language + '%'}}, 
+                    {'$user_class.topics$': { [Op.like]: '%' + topics + '%'}}, 
+                    // '$user_class.profession$': { [Op.like]: '%' + jobs + '%'},
+                ]
+                 
+            }
+        });
+
+        res.render('students/viewTeachers', {profesores: profesores, 
+                                            profesoresFiltro: profesoresFiltro});
+            
+    },
+    services: async function(req, res) {
+        const profesores = teacherServices.findAllTeachers();
+        // const serviciosRecomendados = packageService.findAllSuggest();
+        // const servicios = packageService.findAllServices();
+
+
+        let language = req.query.idiomas; // [] 
+        
+        //let interest = req.query.interest;
+        //let topics = req.query.tematica;
+        //let jobs = req.query.profesion;
+
+        const servicios =  await db.Class.findAll({
+
+            attributes: ['price', 'language', 'description']
+            
+        });
+
+        const serviciosFiltrados = await db.Class.findAll({
+
+            where: {
+                [Op.or]: [
+                    {'$Class.language$': { [Op.like]: '%' + language + '%'}}, 
+                    //{'$Class.topics$': { [Op.like]: '%' + topics + '%'}}, 
+                    // '$user_class.profession$': { [Op.like]: '%' + jobs + '%'},
+                ]    
+            }
+        });
+
+        const serviciosRecomendados = await db.Class.findAll(
+            {
+                where: {
+                    visited: 1
+                }
+            }
+        );
+
         res.render('students/packageStudents', {profesores: profesores, 
                                                 servicios: servicios,
                                                 serviciosRecomendados: serviciosRecomendados,
-                                                serviciosMasVendidos:serviciosMasVendidos});
-    },
-    filterTeachers: function(req, res) {
-        res.render('students/viewTeachers');
+                                                serviciosFiltrados: serviciosFiltrados});
     },
     configuracion: function(req, res) {       
     },

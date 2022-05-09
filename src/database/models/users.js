@@ -1,49 +1,49 @@
 module.exports = (sequelize, dataTypes) => {
     let alias = 'User'; // esto debería estar en singular
     let cols = {
-        idUsuario: {
+        id: {
             type: dataTypes.BIGINT(10).UNSIGNED,
             primaryKey: true,
             allowNull: false,
-            autoIncrement: true
+            autoIncrement: true,
         },
         name: {
             type: dataTypes.STRING,
-            allowNull: false
         },
-        lastName: {
+        last_name: {
             type: dataTypes.STRING,
-            allowNull: false
+        },
+        phone: {
+            type: dataTypes.STRING,
         },
         email: {
             type: dataTypes.STRING,
-            allowNull: false
-        },
-        phone: {
-            type: dataTypes.INTEGER,
             allowNull: false
         },
         password: {
             type: dataTypes.STRING,
             allowNull: false
         },
-        validationPassword: {
+        avatar: {
             type: dataTypes.STRING,
-            allowNull: false
         },
-        sex_id: {
-            type: dataTypes.INTEGER,
-            allowNull: false
-        },
-        rol_id: {
-            type: dataTypes.INTEGER,
-            allowNull: false
-        },
-        image: {
+        admin: {
             type: dataTypes.STRING,
+        },
+        user_sex_fk: {
+            type: dataTypes.INTEGER,
             allowNull: true
         },
-        terms_condition: {
+        user_rol_fk: {
+            type: dataTypes.INTEGER,
+            allowNull: true
+        },
+        user_address_fk: {
+            type: dataTypes.INTEGER,
+            allowNull: true
+            
+        },
+        terms_conditions: {
             type: dataTypes.STRING,
             allowNull: false
         }
@@ -54,24 +54,35 @@ module.exports = (sequelize, dataTypes) => {
         timestamps: false,
     }
 
-    const User = sequelize.define(alias,cols,config);
+    const User = sequelize.define(alias, cols, config);
 
     //Aquí debes realizar lo necesario para crear las relaciones con los otros modelos
     User.associate = function(models){
         User.belongsTo(models.Sex, {
             as: "sexo",
-            foreignKey: "sex_id"
+            foreignKey: "user_sex_fk"
         });
         User.belongsTo(models.Rol, {
             as: "rol",
-            foreignKey: "rol_id"
+            foreignKey: "user_rol_fk"
+        });
+        User.belongsTo(models.Address, {
+            as: "address",
+            foreignKey: "user_address_fk"
+        });
+        User.belongsToMany(models.Comment, {
+            as: "user_comment",
+            through: "User_Comment",
+            foreignKey: "id_user_fk",
+            otherKey: "id_comment_fk",
+            timestamps: false,
         });
         /** Como seria la relacion con la tabla intermedia */
         User.belongsToMany(models.Class, {
-            as: "classes",
-            through: "Usuarios_Clases",
-            foreignKey: "id_user",
-            otherKey: "id_class",
+            as: "user_class",
+            through: "User_Class",
+            foreignKey: "id_user_fk",
+            otherKey: "id_class_fk",
             timestamps: false,
         });
     }

@@ -1,44 +1,62 @@
-// ************ Require's ************
+// ************ Require's liberies ************
 const createError = require('http-errors');
-const cookies = require('cookie-parser');
 const express = require('express');
-const logger = require('morgan');
 const path = require('path');
-const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
 const session = require("express-session");
+const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
+const cors = require('cors');
+
+// ************ Require's Middlewares ************
 const userLoggedMiddlware = require('./middlewares/userLoggedMiddlware');
+//const rememberMiddleware = require("./middlewares/rememberMiddleware");
+//const localsMiddleware = require('./middlewares/localsMiddleware');
+
+// ************ Routes ************
 const rutasMain = require('./routes/main');
+const adminRouter= require('./routes/admin');
+const usersRouter = require('./routes/users'); 
 const routsStudents = require('./routes/students');
 const routTeachers = require('./routes/teachers');
+// TODO
+//const cartRouter = require("./routes/carrito");
+//const apiRouter = require('./routes/api');
 
 // ************ express() - (don't touch) ************
 const app = express();
 
-// ************ Middlewares - (don't touch) ************
+// ************ Middlewares && View Engine Setup- (don't touch) ************
 app.use(express.static(path.join(__dirname, '../public')));  // Necesario para los archivos estáticos en el folder /public
 app.use(express.urlencoded({ extended: false })); //Necesario para tener el req.body
 app.use(logger('dev'));
 app.use(express.json());
+app.use(cookieParser());
 app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
-
 app.use(session({
   secret:"Secretoo breoo!!",
   resave: true ,
   saveUninitialized: true 
 }));
-
-app.use(cookies());
+app.use(cors());
 
 app.use(userLoggedMiddlware);
-
+// app.use(recordameMiddleware);
+// app.use(localsMiddle);
+ 
 // ************ Template Engine - (don't touch) ************
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 // ************ Route System require and use() ************
 app.use('/', rutasMain);
+app.use('/users', usersRouter);
 app.use('/students', routsStudents);
 app.use('/teachers', routTeachers);
+// TODO
+// app.use("/admin" ,adminRouter);
+// app.use("/cart", cartRouter);
+// app.use('/api', apiRouter);
 
 // ************ Template Engine - (don't touch) ************
 app.set('view engine', 'ejs');

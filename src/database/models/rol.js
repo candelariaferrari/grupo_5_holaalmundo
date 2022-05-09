@@ -1,7 +1,7 @@
 module.exports = (sequelize, dataTypes) => {
     let alias = 'Rol'; // esto debería estar en singular
     let cols = {
-        idRol: {
+        id: {
             type: dataTypes.BIGINT(10).UNSIGNED,
             primaryKey: true,
             allowNull: false,
@@ -17,13 +17,13 @@ module.exports = (sequelize, dataTypes) => {
         timestamps: false,
     }
 
-    const Rol = sequelize.define(alias,cols,config);
+    const Rol = sequelize.define(alias, cols, config);
 
     //Aquí debes realizar lo necesario para crear las relaciones con los otros modelos
     Rol.associate = function(models){
-        Rol.hasMany(models.User, {
-            as: "users",
-            foreignKey: "rol_id"
+        Rol.hasOne(models.User, {
+            as: "user_rol",
+            foreignKey: "user_rol_fk"
         });
     }
 
