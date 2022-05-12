@@ -31,7 +31,7 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING,
             allowNull: false
         },
-        professions: {
+        types: {
             type: dataTypes.STRING,
             allowNull: false
         },
