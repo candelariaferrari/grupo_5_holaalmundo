@@ -110,8 +110,9 @@ let studentsController = {
     filterTeachers: async function(req, res) {
 
         let language = req.query.idiomas; // [] 
+        let cursos = req.query.cursos;
         let topics = req.query.tematica;
-        let jobs = req.query.profesion;
+        let nivelExamen = req.query.examen;
 
         if(language != undefined) {
             let langagueString = language.toString();
@@ -153,8 +154,9 @@ let studentsController = {
                 },
                 [Op.or]: [
                     {'$user_class.language$': { [Op.like]: '%' + language + '%'}}, 
+                    {'$user_class.types$': { [Op.like]: '%' + cursos + '%'}}, 
                     {'$user_class.topics$': { [Op.like]: '%' + topics + '%'}}, 
-                    // '$user_class.profession$': { [Op.like]: '%' + jobs + '%'},
+                    {'$user_class.level$': { [Op.like]: '%' + nivelExamen + '%'}}, 
                 ]
                  
             }
