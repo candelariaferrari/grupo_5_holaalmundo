@@ -119,9 +119,8 @@
 
 <script>
   var btnFiltroReserva = document.getElementsByClassName("btnFiltroReserva");
-  var i;
-
-  for (i = 0; i < btnFiltroReserva.length; i++) {
+ 
+  for (let i = 0; i < btnFiltroReserva.length; i++) {
     btnFiltroReserva[i].addEventListener("click", function () {
       this.classList.toggle("active");
       var check = this.nextElementSibling;
