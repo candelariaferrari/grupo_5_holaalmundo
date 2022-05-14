@@ -211,6 +211,16 @@ let studentsController = {
     shoppingCart: function(req, res) {
         res.render('shoppingCart/shoppingCart');
     }, 
+    detailsTeacher: async function(req, res) {
+       
+        const servicios = await db.Class.findAll(
+            {
+                // SELECT * FROM CLASS
+                attributes: ['description', 'language', 'price']
+            }
+        );
+        res.render('students/detailsTeacher', {servicios: servicios});
+    }, 
     logout: function(req, res) {
         res.clearCookie('userEmail');
         req.session.destroy();

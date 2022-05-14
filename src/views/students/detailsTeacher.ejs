@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profesores Hola al Mundo</title>
+  <script src="https://kit.fontawesome.com/3964fc737d.js" crossorigin="anonymous"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+
+  <link href="/css/style.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/3964fc737d.js" crossorigin="anonymous"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+  
+</head>
+
+<body>
+  <!-- NavBar -->
+  <%- include('../partials/header.ejs')%>
+    <section class="containerBody">
+      <div class="flexBody">
+        <div >
+          <img src="/images/persona-04.png" alt="profe" class="avatar">
+        </div>
+        <div>
+          <h3>Nombre del Profesor</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim ipsum debitis autem accusamus dolore omnis sint eveniet iure dignissimos veniam? Praesentium dolorem nisi corporis earum atque velit unde iusto tempore.</p>
+        </div>
+      </div>
+      <p class="misCursos">Mis cursos</p>
+        <div id="sectionServicios" class="detailsTeacher" onload="reset()">
+          <div class="serviceContainer">
+            <button class="preBtn">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+             <button class="nxtBtn">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+            <% servicios.forEach(function(servicio){ %>
+              <!-- card 1 -->
+              <div class="serviceCard">
+                <div class="serviceImg">
+                  <span class="discountTag">$ <%=servicio.price %></span>
+                  <i class="fas fa-comments"></i>
+                  <h4>
+                    <%=servicio.language %>
+                  </h4>
+                  <p class="description">
+                    <%=servicio.description %>
+                  </p>
+                </div>
+                <div class="serviceInfo">
+                  <button>
+                    <i class="fas fa-shopping-cart"></i>
+                    Agregar al carrito
+                  </button>
+                </div>
+              </div>
+              <% }) %>
+          </div>
+        </div>
+    </section>
+
+
+   <!-- Footer -->
+   <%- include('../partials/footer.ejs')%>
+   <!-- Scripts -->
+   <script src="/js/scriptHeader.js"></script>
+   <script src="/js/scriptCarrusel.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+
+.containerSlide {
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+  filter: brightness(1.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 700px;
+}
+
+/* students profesores */
+.viewTeacher{
+  background-image: url(/images/slideServicios2.png);
+}
+
+.viewTeacher h2{
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 1em auto;
+  color: #ffffff;
+  margin-top: -3em;
+}
+
+/* detalle de profesor */
+.containerBody{
+  background-color: #212121;
+  height: fit-content;
+  padding: 2em 8em;
+}
+.flexBody{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0em 6em;
+  margin: 5em  auto;
+  width: 80vw;
+}
+
+img.avatar{
+  width: 250px;
+  border: 2px solid #00ffcb;
+  border-radius: 35px;
+  padding: 0.5em;
+  margin-right: 2em;
+}
+.flexBody h3{
+  color: #00ffcb;
+  font-size: 2rem;
+ padding-bottom: 1em;
+}
+.flexBody p{
+  color: #ffffff;
+  font-size: 1.2rem;
+  
+}
+
+.misCursos {
+  color: #3657f7;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2em;
+}
