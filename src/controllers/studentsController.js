@@ -171,13 +171,12 @@ let studentsController = {
         // const serviciosRecomendados = packageService.findAllSuggest();
         // const servicios = packageService.findAllServices();
 
-
         let language = req.query.idiomas; // [] 
+        let cursos = req.query.cursos;
+        let topics = req.query.tematica;
+        let week_days = "";
+        let week_times = "";
         
-        //let interest = req.query.interest;
-        //let topics = req.query.tematica;
-        //let jobs = req.query.profesion;
-
         const servicios =  await db.Class.findAll({
 
             attributes: ['price', 'language', 'description']
@@ -188,24 +187,16 @@ let studentsController = {
 
             where: {
                 [Op.or]: [
-                    {'$Class.language$': { [Op.like]: '%' + language + '%'}}, 
-                    //{'$Class.topics$': { [Op.like]: '%' + topics + '%'}}, 
-                    // '$user_class.profession$': { [Op.like]: '%' + jobs + '%'},
-                ]    
+                    {'$language$': { [Op.like]: '%' + language + '%'}}, 
+                    {'$types$': { [Op.like]: '%' + cursos + '%'}}, 
+                    {'$topics$': { [Op.like]: '%' + topics + '%'}}, 
+                ]
+                 
             }
         });
 
-        const serviciosRecomendados = await db.Class.findAll(
-            {
-                where: {
-                    visited: 1
-                }
-            }
-        );
-
-        res.render('students/packageStudents', {profesores: profesores, 
-                                                servicios: servicios,
-                                                serviciosRecomendados: serviciosRecomendados,
+ 
+        res.render('students/packageStudents', { servicios: servicios,
                                                 serviciosFiltrados: serviciosFiltrados});
     },
     configuracion: function(req, res) {       

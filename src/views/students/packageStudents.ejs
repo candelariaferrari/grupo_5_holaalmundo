@@ -56,49 +56,53 @@
               <label for="chino">Chino</label>
             </div>
           </div>
-          <button class="btnFiltro" type="button">Temas de interes <i class="fas fa-angle-down"></i></button>
+          <button class="btnFiltro" type="button">Seleccionar Cursos <i class="fas fa-angle-down"></i></button>
           <div class="check">
             <div>
-              <input type="checkbox" name="temas-interes" value="cultura" id="cultura">
-              <label for="cultura">Cultura</label>
+              <input type="checkbox" name="cursos" value="Conversacion-Individual" id="conversacion-individual" class="input-control">
+              <label for="español">Conversación individual</label>
             </div>
             <div>
-              <input type="checkbox" name="temas-interes" value="noticias" id="noticias">
-              <label for="noticias">Noticias</label>
+              <input type="checkbox" name="cursos" value="Conversación-Grupal" id="conversacion-grupal" class="input-control">
+              <label for="ingles">Conversación grupal</label>
             </div>
             <div>
-              <input type="checkbox" name="temas-interes" value="deportes" id="deportes">
+              <input type="checkbox" name="cursos" value="Clase-Individual" id="clase-individual" class="input-control">
+              <label for="portugues">Clase individual</label>
+            </div>
+            <div>
+              <input type="checkbox" name="cursos" value="Clase-Grupal" id="clase-grupal" class="input-control">
+              <label for="German">Clase grupal</label>
+            </div>
+            <div>
+              <input type="checkbox" name="cursos" value="Exámen" id="examenes" class="input-control">
+              <label for="Franch">Examenes</label>
+            </div>
+          </div>
+          <button class="btnFiltro" type="button">Seleccionar Tematicas  <i class="fas fa-angle-down"></i></button>
+          <div class="check">
+            <div>
+              <input type="checkbox" name="tematica" value="Viajes" id="viajes" class="input-control">
+              <label for="viajes">Viajes</label>
+            </div>
+            <div>
+              <input type="checkbox" name="tematica" value="Culinaria" id="culinaria" class="input-control">
+              <label for="culinaria">Culinaria</label>
+            </div>
+            <div>
+              <input type="checkbox" name="tematica" value="Deportes" id="deportes" class="input-control">
               <label for="deportes">Deportes</label>
             </div>
             <div>
-              <input type="checkbox" name="temas-interes" value="culinaria" id="culinaria">
-              <label for="culinaria">Culinaria</label>
+              <input type="checkbox" name="tematica" value="Musica" id="musica" class="input-control">
+              <label for="cultura">Musica</label>
+            </div>
+            <div>
+              <input type="checkbox" name="tematica" value="Gneral" id="general" class="input-control">
+              <label for="general">General</label>
             </div>
           </div>
-          <button class="btnFiltro" type="button">Profesiones <i class="fas fa-angle-down"></i></button>
-          <div class="check">
-            <div>
-              <input type="checkbox" name="idiomas" value="español" id="español">
-              <label for="español">Abogado</label>
-            </div>
-            <div>
-              <input type="checkbox" name="idiomas" value="ingles" id="ingles">
-              <label for="ingles">Administrador</label>
-            </div>
-            <div>
-              <input type="checkbox" name="idiomas" value="portugues" id="portugues">
-              <label for="portugues">Contador</label>
-            </div>
-            <div>
-              <input type="checkbox" name="idiomas" value="italiano" id="italiano">
-              <label for="italiano">Ingeniero</label>
-            </div>
-            <div>
-              <input type="checkbox" name="idiomas" value="aleman" id="aleman">
-              <label for="aleman">Musico</label>
-            </div>
-          </div>
-          <button class="btnFiltro" type="button">Conversaciones <i class="fas fa-angle-down"></i></button>
+          <button class="btnFiltro" type="button">Seleccionar Dias <i class="fas fa-angle-down"></i></button>
           <div class="check">
             <div>
               <input type="checkbox" name="idiomas" value="español" id="español">
@@ -117,7 +121,7 @@
               <label for="italiano">Italiano</label>
             </div>
           </div>
-          <button class="btnFiltro" type="button">Match date <i class="fas fa-angle-down"></i></button>
+          <button class="btnFiltro" type="button">Seleccionar Horarios <i class="fas fa-angle-down"></i></button>
           <div class="check">
             <div>
               <input type="checkbox" name="idiomas" value="español" id="español">
@@ -187,8 +191,6 @@
     </div>
   </main>
 
-     
- 
     <!-- Footer -->
     <%- include('../partials/footer.ejs')%>
       <script src="/js/scriptHeader.js"></script>
