@@ -10,161 +10,31 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
     rel="stylesheet" />
-  <link href="/css/normalize.css" rel="stylesheet" />
-  <link href="/css/seteoPerfilProfes-2.css" rel="stylesheet" />
-  <link rel="stylesheet" href="/css/partialsCss/partials.css">
+  < <link href="/css/style.css" rel="stylesheet">
 </head>
 
 <body>
   <!-- Header -->
   <%- include('../partials/header.ejs')%>
-    <main class="main">
-      <!-- LAYER 1 -->
-      <div class="layer1">
-        <div class="layer1Container">
-          <div class="greetings">
-            <h2>Completa tu perfil</h2>
-          </div>
-          <form class="formCuentanos">
-            <label for="">Cuentanos sobre vos</label>
-            <textarea name="descripcion" id="" placeholder="Hola, soy .."></textarea>
-            <div class="container-button" style="align-self: flex-end !important;">
-              <button type="submit" class="continuar">Continuar</button>
-            </div>
-          </form>
+    <section class="containerBody">
+      <div class="flexPersonal">
+        <h1>Configuración personal</h1>
+        <form name="form" class="formulario" action="#" method="POST"></form>
+        <input class="input-form" placeholder="Nombre" type="text" name="nombre" required>
+        <input class="input-form" placeholder="Apellido" type="text" name="apellido" required>
+        <input class="input-form" placeholder="Celular" type="text" name="celular" required>
+        <input class="input-form disabled" type="email" value="ferrari@gmailcom" readonly>
+        <input class="input-form disabled" type="password" value="........" readonly>
+        <input class="input-form disabled" id="user" value="profesor" readonly>
+        <input class="input-form disabled" type="user_sex" value="mujer" readonly>
+        <input class="input-form" placeholder="Dirección" type="text" name="user_address" required>
+        <div class="subir">
+          <input type="file" name="group-image" id="nuestroinput" class="inputSubir">
         </div>
-      </div>
-      <!-- layer 2 -->
-      <div class="contenedorFoto">
-        <h2>Subí una foto tuya</h2>
-        <div class="flexCargar">
-          <div class="cargar">
-            <i class="fab fa-google-drive"></i>
-            <p>Drive</p>
-          </div>
-          <div class="cargar">
-            <i class="fab fa-dropbox"></i>
-            <p>DropBox</p>
-          </div>
-  
-          <div class="cargar">
-            <i class="fas fa-upload"></i>            
-            <p>Computadora</p>
-          </div>
-        </div>
-        <div class="nombreArchivo">
-          <p>Nombre del archivo</p>
-        </div>
-        <div class="container-button">
-          <button class="volver">
-            volver
-          </button>
-          <button type="submit" class="continuar">Continuar</button>
-        </div>
+        </form>
       </div>
 
-     <!--  <div class="layer2">
-        <div class="layer2Container">
-          <div class="texto-subir-foto">
-            <h2>Subí una foto tuya</h2>
-          </div>
-          <div class="file-update">
-            <div class="container-image">
-              <div class="card">
-                <i class="fa-brands fa-google-drive"></i>
-              </div>
-              <div class="footer-file">Drive
-                <input type="file"></input>
-              </div>
-            </div>
-            <div class="container-image">
-              <div class="card">
-                <i class="fa-brands fa-dropbox"></i>
-              </div>
-              <div class="footer-file">DropBox
-                <input type="file"></input>
-              </div>
-            </div>
-            <div class="container-image">
-              <div class="card">
-                <i class="fa-solid fa-up-from-line"></i>
-              </div>
-              <div class="footer-file">Computadora
-                <input type="file"></input>
-              </div>
-            </div>
-          </div>
-          <div class="nombre-archivo">
-            <input type="text" placeholder="Nombre del Archivo"></input>
-          </div>
-          <div class="botones">
-            <button type="button" class="volver">
-              Volver
-            </button>
-            <button type="button" class="continuar">
-              Continuar
-            </button>
-          </div>
-        </div>
-      </div> -->
-      <div class="layer3">
-        <div class="layer3Container">
-          <div class="container-info-header">
-            <div class="container-header">
-              <div class="nombre-profe">Nombre Profesor</div>
-              <div class="valor-hora">
-                <p>$ por hora</p>
-              </div>
-            </div>
-          </div>
-          <div class="container-info">
-            <div class="foto-perfil">
-              <img class="profeImage" src="/images/imagen-profesor.png">
-            </div>
-            <div class="info-profe">
-              <div class="header-info">
-                <div class="idioma">
-                  <div class="ingles">
-                    En
-                  </div>
-                  <div class="espa">
-                    Es
-                  </div>
-                  <div class="aleman">
-                    Ger
-                  </div>
-                </div>
-                <div class="ubicacion">
-                  <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
-                  <div class="ciudad">Ciudad, Pais</div>
-                </div>
-              </div>
-              <div class="texto-perfil">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                  et dolore magna aliqua.
-                  Vestibulum lorem sed risus ultricies tristique nulla. Neque ornare aenean euismod elementum nisi.
-                  Penatibus et magnis dis parturient. Risus nullam eget felis eget nunc lobortis. Volutpat blandit
-                  aliquam etiam erat. </p>
-              </div>
-            </div>
-          </div>
-          <div class="categorias">
-            <div class="categoria">Categoria</div>
-            <div class="categoria">Categoria</div>
-            <div class="categoria">Categoria</div>
-            <div class="categoria">Categoria</div>
-          </div>
-          <div class="container-button">
-            <button class="volver">
-              Volver
-            </button>
-            <button class="listo">Continuar</button>
-          </div>
-        </div>
-      </div>
-    </main>
-    <!-- chat -->
-     <%- include('../partials/chat.ejs')%>
+    </section>
     <!-- Footer -->
     <%- include('../partials/footer.ejs')%>
       <script src="/js/scriptHeader.js"></script>

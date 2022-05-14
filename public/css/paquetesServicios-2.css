@@ -558,6 +558,7 @@ a.reservar {
 /* mis alumnos */
  .searchAlumno {
   width: 50%;
+  margin-bottom: 1.5em;
 }
 .searchAlumno input {
   width: 100%;
