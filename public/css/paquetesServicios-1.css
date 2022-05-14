@@ -425,12 +425,7 @@ body {
 .serviceContainer::-webkit-scrollbar {
   display: none;
 }
-.serviceCard {
-  flex: 0 0 auto;
-  width: 300px;
-  height: 450px;
-  margin-right: 40px;
-}
+
 .serviceImg {
   position: relative;
   width: 100%;
@@ -1134,4 +1129,61 @@ button.active.btnFiltro{
     gap: 12px;
     margin-right: 80px;
   }
+}
+
+
+/*---- Nueos -----*/
+main{
+  margin-top: 20vh;
+
+}
+.titulo{
+  color: #6243f7;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2em;
+}
+.contenedorUno{
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 100%;
+}
+
+button.btnFiltrar {
+  background-color: #212121;
+  border: none;
+  border-radius: 15px;
+  color: #fff;
+  padding: 0.5em 1.5em;
+  width: fit-content;
+  font-size: 1rem;
+  margin: 0.5em auto;
+  display: flex;
+  justify-content: center;
+}
+button:hover.btnFiltrar {
+  background-color: #fff;
+  color: #6243f7;
+}
+.filtros{
+  width: 15%;
+}
+.cursos{
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  height: 80vh;
+  overflow-y: scroll;
+  border: 2px solid #212121;
+  border-radius: 25px;
+  padding: 2em 1em;
+  margin-bottom: 5em;
+}
+
+.serviceCard {
+  flex: 0 0 auto;
+  width: 200px;
+  height: 450px;
+  margin-right: 36px;
 }

@@ -316,36 +316,38 @@ input[type="checkbox"]:checked {
 }
 
 /* nuevos */
-button.btnFiltro {
+
+div.btnFiltro {
   background-color: #00ffcb;
   border: none;
   border-radius: 15px;
   color: #212121;
   padding: 0.5em 1em;
-  width: 60%;
+  width: 100%;
   font-size: 1rem;
   margin: 0.5em auto;
   display: flex;
   justify-content: space-between;
 }
-button:hover.btnFiltro {
+div:hover.btnFiltro {
   background-color: #212121;
   color: #00ffcb;
 }
-button.active.btnFiltro {
+div.active.btnFiltro {
   background-color: #212121;
   color: #00ffcb;
 }
 
+
 .check {
-  width: 58%;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin: 0.5em 1em;
+  margin: 1em 1em;
   background-color: transparent;
-  max-height: 0;
+  max-height: 0px;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
 }
@@ -353,12 +355,32 @@ button.active.btnFiltro {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin: 0.2em 0em;
+  margin: 0.5em 0em;
   padding: 0.5em 0em;
   color: #fff;
 }
 .check div label {
   margin-left: 0.5em;
+}
+.check.active{
+  height: 200px;
+}
+
+button.btnFiltrar {
+  background-color: #212121;
+  border: none;
+  border-radius: 15px;
+  color: #fff;
+  padding: 0.5em 1.5em;
+  width: fit-content;
+  font-size: 1rem;
+  margin: 0.5em auto;
+  display: flex;
+  justify-content: center;
+}
+button:hover.btnFiltrar {
+  background-color: #fff;
+  color: #6243f7;
 }
 
 /* img */

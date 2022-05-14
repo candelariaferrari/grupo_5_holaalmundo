@@ -1,9 +1,7 @@
-const {check, body, validationResult} = require("express-validator");
-const fs = require("fs");
-const path = require ("path");
-const bcrypt = require("bcrypt");
-// const userServices = require("../services/usersService");
+const {check, body} = require("express-validator");
+const bcrypt = require("bcryptjs");
 const db = require('../database/models');
+// const userServices = require("../services/usersService");
 
 const validar = {
 
@@ -14,7 +12,7 @@ const validar = {
             .bail()
             .isLength({min:3})
             .withMessage("Campo de nombre debe tener un minimo de 3 caracteres"),
-        body('lastName')
+        body('last_name')
             .notEmpty()
             .withMessage('Tines que ingresar el apellido')
             .bail()
@@ -156,12 +154,13 @@ const validar = {
                         email: req.body.email
                     }
                  }).then(user => {
-                    if(!user){
+                     
+                     if(!user){
                         return Promise.reject("Usuario invalido")
                     } else if(!bcrypt.compareSync(req.body.password, user.password)) {
                         return Promise.reject("La contraseña no corresponde al email ingresado")
                     }
-                })                      
+                });                      
             })
     ]
 }
