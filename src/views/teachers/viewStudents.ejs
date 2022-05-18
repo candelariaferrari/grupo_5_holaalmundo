@@ -20,19 +20,24 @@
 <body>
   <%- include('../partials/header.ejs')%>
     <main>
-
+      
       <section class="container-filtros">
         <div class="container-header">
           <h2>Mis alumnos</h2>
         </div>
         <div class="searchAlumno">
           <i class="fas fa-search"></i>
-          <input class="input" type="search" name="buscar" placeholder="Buscar alumno ...">
+          <input class="input" type="search" name="buscarCurso" placeholder="Buscar curso ...">
+        </div>
+        <div class="searchAlumno">
+          <i class="fas fa-search"></i>
+          <input class="input" type="search" name="buscarAlumno" placeholder="Buscar alumno ...">
         </div>
       </section>
       <section>
        
         <div class="containerProfes">
+          
           <% estudiantes.forEach(function(estudiante) { %>
           <div class="contenedorImg">
             <div class="borde">
@@ -44,15 +49,16 @@
                   <i class="far fa-star"></i>
                   <i class="far fa-star"></i>
                 </div>
-                <img class="img-responsive" src="/images/<%=estudiante.image %>" alt="diego" />
+                <img class="img-responsive" src="/images/profeDos.png" alt="diego" />
                 <div class="overlay">
-                  <button id="myBtn" class="reservar">Contactar</button>
+                  <a id="myBtn" class="reservar">Contactar</a>
                 </div>
               </div>
             </div>
-            <p class="nombre"><%= estudiante.nombre %> <%= estudiante.apellido %></p>
+            <p class="nombre"><%= estudiante.nombre %></p>
           </div>
           <% }) %>
+          
         </div>
         <div class="container-button-ver">
           <button type="button">Ver mas</button>
@@ -60,8 +66,6 @@
       </section>
 
     </main>
-    <!-- chat -->
-    <%- include('../partials/chat.ejs')%>
     <!-- Footer -->
     <%- include('../partials/footer.ejs')%>
     <script src="/js/scriptHeader.js"></script>

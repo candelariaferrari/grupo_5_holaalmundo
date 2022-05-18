@@ -1,0 +1,136 @@
+#sectionServicios.detailsTeacher {
+  width: 100%;
+  padding: 0em 6em;
+  position: relative;
+}
+#sectionServicios.detailsTeacher h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 1em auto;
+  color: #6243f7;
+  text-transform: uppercase;
+}
+.serviceContainer {
+  overflow-y: hidden;
+  overflow-x: auto;
+  display: flex;
+  scroll-behavior: smooth;
+  padding: 0 10vw 0 1vw;
+}
+.serviceContainer::-webkit-scrollbar {
+  display: none;
+}
+.serviceCard {
+  flex: 0 0 auto;
+  width: 300px;
+  height: 450px;
+  margin-right: 40px;
+}
+.serviceImg {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+  background-color: #6243f7;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s;
+}
+.serviceImg i {
+  font-size: 150px;
+  color: #00ffcb;
+  margin-bottom: 22px;
+}
+.serviceImg h4 {
+  font-size: 1.2rem;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.discountTag {
+  position: absolute;
+  background-color: #fff;
+  border-radius: 15px;
+  color: #3651f7;
+  right: 10px;
+  top: 10px;
+  text-transform: capitalize;
+  padding: 5px;
+}
+.description {
+  margin-top: 1em;
+  width: 150px;
+  text-align: center;
+  border: none;
+  transition: 0.5s;
+  opacity: 0;
+  font-size: 1rem;
+  color: #212121;
+  transition: all 0.5s;
+}
+.serviceCard:hover .description {
+  opacity: 1;
+}
+.serviceCard:hover .serviceImg{
+  background-color: #fff;
+  color: #212121;
+
+}
+.serviceCard:hover h4{
+  color: #212121;
+
+}
+.serviceInfo {
+  width: 100%;
+  height: 100%;
+  padding-top: 10px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  top: -1.5em;
+}
+.serviceInfo button {
+  position: absolute;
+  outline: none;
+  border: none;
+  width: 80%;
+  border-radius: 25px;
+  padding: 0.5em 1em;
+  font-size: 1rem;
+  background-color: #00ffcb;
+}
+
+.preBtn,
+.nxtBtn {
+  border: none;
+  width: 5vw;
+  height: 80%;
+  position: absolute;
+  top: 50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  cursor: pointer;
+  z-index: 9;
+  color: #fff;
+}
+.preBtn {
+  left: 0;
+}
+.nxtBtn {
+  right: 0;
+}
+.preBtn i,
+.nxtBtn i {
+  opacity: 0.2;
+}
+.preBtn:hover i,
+.nxtBtn:hover i {
+  opacity: 1;
+}

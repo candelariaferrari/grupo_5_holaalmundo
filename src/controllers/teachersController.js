@@ -1,7 +1,7 @@
 const path = require('path');
 const profesoresServices = require('../services/teachersService');
 
-
+const db = require('../database/models');
 let teachersController = {
 
     home: function (req, res) {
@@ -9,7 +9,8 @@ let teachersController = {
         res.render('teachers/homeTeachers');   
 
     },
-    students: function (req, res) {
+    students:  function (req, res) {
+        
         const estudiantes = profesoresServices.findAllStudients();
         res.render('teachers/viewStudents', {estudiantes: estudiantes});  
     },
