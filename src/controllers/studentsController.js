@@ -110,7 +110,7 @@ let studentsController = {
     },
     filterTeachers: async function(req, res) {
 
-        let language = req.query.idiomas; // [] 
+        let language = req.query.idiomas; // [Español, Aleman, Ingles] 
         let cursos = req.query.cursos;
         let topics = req.query.tematica;
         let nivelExamen = req.query.examen;
@@ -154,7 +154,7 @@ let studentsController = {
                     [Op.eq]: 2
                 },
                 [Op.or]: [
-                    {'$user_class.language$': { [Op.like]: '%' + language + '%'}}, 
+                    {'$user_class.language$': { [Op.like]: '%' + language + '%'}}, // Español, aleman
                     {'$user_class.types$': { [Op.like]: '%' + cursos + '%'}}, 
                     {'$user_class.topics$': { [Op.like]: '%' + topics + '%'}}, 
                     {'$user_class.level$': { [Op.like]: '%' + nivelExamen + '%'}}, 
@@ -175,8 +175,8 @@ let studentsController = {
         let language = req.query.idiomas; // [] 
         let cursos = req.query.cursos;
         let topics = req.query.tematica;
-        let week_days = "";
-        let week_times = "";
+        let week_days = ""; // [Lunes, Miercoles]
+        let week_times = ""; // 8:00 am - 11:00 am
         
         const servicios =  await db.Class.findAll({
 
