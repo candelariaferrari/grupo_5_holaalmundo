@@ -161,7 +161,7 @@ template.innerHTML = `
        Borrar
       </button>
      <button>
-     <a class="comprar" href="inicioAlumnos/carrito">
+     <a class="comprar" href="shoppingCart">
       <i class="far fa-smile-wink"></i>
        Comprar
       </a>

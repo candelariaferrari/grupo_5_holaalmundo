@@ -10,204 +10,207 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
     rel="stylesheet">
-  <link href="/css/normalize.css" rel="stylesheet">
-  <link href="/css/paquetesServicios-2.css" rel="stylesheet">
-  <link href="/css/partialsCss/partials.css" rel="stylesheet">
-  <link href="/css/popUpReserva.css" rel="stylesheet">
+
+  <link href="/css/style.css" rel="stylesheet">
+
 
 </head>
 
 <body>
+  <!-- NavBar -->
   <%- include('../partials/header.ejs')%>
-    <main>
-      <section class="container-filtros">
-        <div class="container-header">
-          <h2>¿Que idioma te gustaría aprender?</h2>
+    <!-- Slide principal -->
+    <section class="containerSlide viewTeacher">
+      <h2>¿Que idioma te gustaría aprender?</h2>
+      <form action="/students/teachers" method="GET">
+        <!-- idioma -->
+        <div class="btnFiltro">Seleccionar Idioma <i class="fas fa-angle-down"></i></div>
+        <div class="check">
+          <div>
+            <input type="checkbox" name="idiomas" value="Español" id="español" class="input-control">
+            <label for="español">Español</label>
+          </div>
+          <div>
+            <input type="checkbox" name="idiomas" value="Inglés" id="ingles" class="input-control">
+            <label for="ingles">Inglés</label>
+          </div>
+          <div>
+            <input type="checkbox" name="idiomas" value="Portugués" id="portugues" class="input-control">
+            <label for="portugues">Portugués</label>
+          </div>
+          <div>
+            <input type="checkbox" name="idiomas" value="Alemán" id="german" class="input-control">
+            <label for="German">Alemán</label>
+          </div>
+          <div>
+            <input type="checkbox" name="idiomas" value="Francés" id="franch" class="input-control">
+            <label for="Franch">Francés</label>
+          </div>
+          <div>
+            <input type="checkbox" name="idiomas" value="Italiano" id="italiano" class="input-control">
+            <label for="italiano">Italiano</label>
+          </div>
+          <div>
+            <input type="checkbox" name="idiomas" value="Chino" id="chino" class="input-control">
+            <label for="chino">Chino</label>
+          </div>
         </div>
-        <form action="/students/teachers" method="GET">
-          <!-- idioma -->
-          <div class="btnFiltro">Seleccionar Idioma <i class="fas fa-angle-down"></i></div>
-          <div class="check">
-            <div>
-              <input type="checkbox" name="idiomas" value="Español" id="español" class="input-control">
-              <label for="español">Español</label>
-            </div>
-            <div>
-              <input type="checkbox" name="idiomas" value="Inglés" id="ingles" class="input-control">
-              <label for="ingles">Inglés</label>
-            </div>
-            <div>
-              <input type="checkbox" name="idiomas" value="Portugués" id="portugues" class="input-control">
-              <label for="portugues">Portugués</label>
-            </div>
-            <div>
-              <input type="checkbox" name="idiomas" value="Alemán" id="german" class="input-control">
-              <label for="German">Alemán</label>
-            </div>
-            <div>
-              <input type="checkbox" name="idiomas" value="Francés" id="franch" class="input-control">
-              <label for="Franch">Francés</label>
-            </div>
-            <div>
-              <input type="checkbox" name="idiomas" value="Italiano" id="italiano" class="input-control">
-              <label for="italiano">Italiano</label>
-            </div>
-            <div>
-              <input type="checkbox" name="idiomas" value="Chino" id="chino" class="input-control">
-              <label for="chino">Chino</label>
-            </div>
+        <!-- cursos -->
+        <div class="btnFiltro">Seleccionar Cursos <i class="fas fa-angle-down"></i></div>
+        <div class="check">
+          <div>
+            <input type="checkbox" name="cursos" value="Conversacion-Individual" id="conversacion-individual"
+              class="input-control">
+            <label for="español">Conversación individual</label>
           </div>
-          <!-- cursos -->
-          <div class="btnFiltro">Seleccionar Cursos <i class="fas fa-angle-down"></i></div>
-          <div class="check">
-            <div>
-              <input type="checkbox" name="cursos" value="Conversacion-Individual" id="conversacion-individual" class="input-control">
-              <label for="español">Conversación individual</label>
-            </div>
-            <div>
-              <input type="checkbox" name="cursos" value="Conversación-Grupal" id="conversacion-grupal" class="input-control">
-              <label for="ingles">Conversación grupal</label>
-            </div>
-            <div>
-              <input type="checkbox" name="cursos" value="Clase-Individual" id="clase-individual" class="input-control">
-              <label for="portugues">Clase individual</label>
-            </div>
-            <div>
-              <input type="checkbox" name="cursos" value="Clase-Grupal" id="clase-grupal" class="input-control">
-              <label for="German">Clase grupal</label>
-            </div>
-            <div>
-              <input type="checkbox" name="cursos" value="Exámen" id="examenes" class="input-control">
-              <label for="Franch">Examenes</label>
-            </div>
+          <div>
+            <input type="checkbox" name="cursos" value="Conversación-Grupal" id="conversacion-grupal"
+              class="input-control">
+            <label for="ingles">Conversación grupal</label>
           </div>
-          <!-- tematicas -->
-          <div class="btnFiltro">Seleccionar Tematicas <i class="fas fa-angle-down"></i></div>
-          <div class="check">
-            <div>
-              <input type="checkbox" name="tematica" value="Viajes" id="viajes" class="input-control">
-              <label for="viajes">Viajes</label>
-            </div>
-            <div>
-              <input type="checkbox" name="tematica" value="Culinaria" id="culinaria" class="input-control">
-              <label for="culinaria">Culinaria</label>
-            </div>
-            <div>
-              <input type="checkbox" name="tematica" value="Deportes" id="deportes" class="input-control">
-              <label for="deportes">Deportes</label>
-            </div>
-            <div>
-              <input type="checkbox" name="tematica" value="Musica" id="musica" class="input-control">
-              <label for="cultura">Musica</label>
-            </div>
-            <div>
-              <input type="checkbox" name="tematica" value="Gneral" id="general" class="input-control">
-              <label for="general">General</label>
-            </div>
+          <div>
+            <input type="checkbox" name="cursos" value="Clase-Individual" id="clase-individual" class="input-control">
+            <label for="portugues">Clase individual</label>
           </div>
-           <!-- examenes -->
-           <div class="btnFiltro">Seleccionar nivel de examen <i class="fas fa-angle-down"></i></div>
-           <div class="check">
-             <div>
-               <input type="checkbox" name="examen" value="Básico" id="basico" class="input-control">
-               <label for="viajes">Básico</label>
-             </div>
-             <div>
-               <input type="checkbox" name="examen" value="Intermedio" id="intermedio" class="input-control">
-               <label for="culinaria">Intermedio</label>
-             </div>
-             <div>
-               <input type="checkbox" name="examen" value="Avanzado" id="avanzado" class="input-control">
-               <label for="deportes">Avanzado</label>
-             </div>
-           </div>
-          <button class="btnFiltrar" type="submit">Filtrar</button>
-        </form>
-
-      </section>
-      <section>
-        <div class="containerProfes">
-          <% if(profesoresFiltro.length> 0) { %>
-            <% profesoresFiltro.forEach(function(profesor) { %>
-              <div class="contenedorImg">
-                <div class="borde">
-                  <div class="hovereffect">
-                    <div class="start">
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="far fa-star"></i>
-                      <i class="far fa-star"></i>
-                    </div>
-                    <img class="img-responsive" src="/images/profeDos.png" alt="<%=profesor.name %>" />
-                    <div class="overlay">
-                      <button id="myBtn" class="reservar">Reservar</button>
-                    </div>
+          <div>
+            <input type="checkbox" name="cursos" value="Clase-Grupal" id="clase-grupal" class="input-control">
+            <label for="German">Clase grupal</label>
+          </div>
+          <div>
+            <input type="checkbox" name="cursos" value="Exámen" id="examenes" class="input-control">
+            <label for="Franch">Examenes</label>
+          </div>
+        </div>
+        <!-- tematicas -->
+        <div class="btnFiltro">Seleccionar Tematicas <i class="fas fa-angle-down"></i></div>
+        <div class="check">
+          <div>
+            <input type="checkbox" name="tematica" value="Viajes" id="viajes" class="input-control">
+            <label for="viajes">Viajes</label>
+          </div>
+          <div>
+            <input type="checkbox" name="tematica" value="Culinaria" id="culinaria" class="input-control">
+            <label for="culinaria">Culinaria</label>
+          </div>
+          <div>
+            <input type="checkbox" name="tematica" value="Deportes" id="deportes" class="input-control">
+            <label for="deportes">Deportes</label>
+          </div>
+          <div>
+            <input type="checkbox" name="tematica" value="Musica" id="musica" class="input-control">
+            <label for="cultura">Musica</label>
+          </div>
+          <div>
+            <input type="checkbox" name="tematica" value="Gneral" id="general" class="input-control">
+            <label for="general">General</label>
+          </div>
+        </div>
+        <!-- examenes -->
+        <div class="btnFiltro">Seleccionar nivel de examen <i class="fas fa-angle-down"></i></div>
+        <div class="check">
+          <div>
+            <input type="checkbox" name="examen" value="Básico" id="basico" class="input-control">
+            <label for="viajes">Básico</label>
+          </div>
+          <div>
+            <input type="checkbox" name="examen" value="Intermedio" id="intermedio" class="input-control">
+            <label for="culinaria">Intermedio</label>
+          </div>
+          <div>
+            <input type="checkbox" name="examen" value="Avanzado" id="avanzado" class="input-control">
+            <label for="deportes">Avanzado</label>
+          </div>
+        </div>
+        <button id="filtrar" class="btnFiltrar" type="submit">Filtrar</button>
+      </form>
+    </section>
+    <!-- Cuerpo -->
+    <section id="elementId">
+      <div class="containerProfes">
+        <% if(profesoresFiltro.length> 0) { %>
+          <% profesoresFiltro.forEach(function(profesor) { %>
+            <div class="contenedorImg">
+              <div class="borde">
+                <div class="hovereffect">
+                  <div class="start">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </div>
+                  <img class="img-responsive" src="/images/profeDos.png" alt="<%=profesor.name %>" />
+                  <div class="overlay">
+                    <a href="detailsTeacher" id="myBtn" class="reservar">Conocer</a>
                   </div>
                 </div>
-                <p class="nombre">
-                  <%=profesor.name %>
-                </p>
               </div>
-              <% }) %>
-                <% } else { %>
-                  <% profesores.forEach(function(profesor){ %>
-                    <div class="contenedorImg">
-                      <div class="borde">
-                        <div class="hovereffect">
-                          <div class="start">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
-                          </div>
-                          <img class="img-responsive" src="/images/profeDos.png" alt="<%=profesor.name %>" />
-                          <div class="overlay">
-                            <button id="myBtn" class="reservar">Reservar</button>
-                          </div>
+              <p class="nombre">
+                <%=profesor.name%>
+              </p>
+            </div>
+            <% }) %>
+              <% } else { %>
+                <% profesores.forEach(function(profesor){ %>
+                  <div class="contenedorImg">
+                    <div class="borde">
+                      <div class="hovereffect">
+                        <div class="start">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="far fa-star"></i>
+                          <i class="far fa-star"></i>
+                        </div>
+                        <img class="img-responsive" src="/images/profeDos.png" alt="<%=profesor.name %>" />
+                        <div class="overlay">
+                          <!-- <button id="myBtn" class="reservar">Conocer</button> -->
+                          <a href="detailsTeacher" id="myBtn" class="reservar">Conocer</a>
                         </div>
                       </div>
-                      <p class="nombre">
-                        <%=profesor.name %>
-                      </p>
                     </div>
-                    <% }) %>
-                      <% } %>
-        </div>
-        <div class="container-button-ver">
-          <button type="button">Ver mas</button>
-        </div>
-        <div id="myModal" class="modal">
-          <div class="modal-content">
-            <%- include('../partials/popUpReserve.ejs') %>
-          </div>
-        </div>
-      </section>
+                    <p class="nombre">
+                      <%=profesor.name %>
+                    </p>
+                  </div>
+                  <% }) %>
+                    <% } %>
+      </div>
 
-    </main>
-    <!-- chat -->
-    <%- include('../partials/chat.ejs')%>
-      <!-- Footer -->
-      <%- include('../partials/footer.ejs')%>
-        <script src="/js/scriptHeader.js"></script>
+    </section>
+    <!-- Footer -->
+    <%- include('../partials/footer.ejs')%>
+      <!-- Scripts -->
+      <script src="/js/scriptHeader.js"></script>
 
-        <script>
-          var btnFiltro = document.getElementsByClassName("btnFiltro");
-          var i;
+      <script>
+        var btnFiltro = document.getElementsByClassName("btnFiltro");
+        var i;
 
-          for (i = 0; i < btnFiltro.length; i++) {
-            btnFiltro[i].addEventListener("click", function () {
-              this.classList.toggle("active");
-              var check = this.nextElementSibling;
-              if (check.style.maxHeight) {
-                check.style.maxHeight = null;
-              } else {
-                check.style.maxHeight = check.scrollHeight + "px";
-              }
-            });
+        for (i = 0; i < btnFiltro.length; i++) {
+          btnFiltro[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var check = this.nextElementSibling;
+            if (check.style.maxHeight) {
+              check.style.maxHeight = null;
+            } else {
+              check.style.maxHeight = check.scrollHeight + "px";
+            }
+          });
+        }
+      </script>
+      <script>
+        let btnName = document.getElementById('filtrar');
+        btnName.addEventListener('click', () => {
+          let element = document.getElementById('elementId');
+          if (element.style.display != 'inline') {
+            element.style.display = 'inline';
           }
-        </script>
+          else {
+            element.style.display = 'none'
+          }
+        })
+      </script>
 </body>
 
 </html>

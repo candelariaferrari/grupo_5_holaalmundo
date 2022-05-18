@@ -1,31 +1,3 @@
-/* COLORES:
-azul mas fuerte: #3657F7
-azul mas oscuro: #1F58A5
-"violeta": #6243F7
-verde claro: #00FFCB
-verde oscuro: #00A987
-gris: #DAD9DE
-negro: #212121
-blanco: #ffffff
- */
-body {
-  font-family: "Roboto", sans-serif;
-  height: fit-content;
-}
-.contenedorConfiguracion {
-  background-color: #fff;
-  height: fit-content;
-  margin: 10% auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.contenedorConfiguracion h1 {
-  color: #212121;
-}
-
 form.formulario {
   display: flex;
   flex-direction: column;
@@ -55,6 +27,32 @@ input:focus,
 input[type]:focus {
   outline: 0 none;
 }
+
+
+.input-form.disabled {
+  display: block;
+  width: 100%;
+  margin: 1em auto;
+  background-color: #cececeb8;
+  padding: 0.5em 1em;
+  border-radius: 15px;
+  border: none;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.input-form.disabled,
+input::placeholder {
+  color: #434343cb;
+  opacity: 1;
+}
+.input-form.disabled:focus,
+input:focus,
+input[type]:focus {
+  outline: 0 none;
+}
+
+
 .subir {
   display: flex !important;
   width: 100%;

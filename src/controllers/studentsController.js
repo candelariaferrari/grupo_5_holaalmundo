@@ -2,6 +2,7 @@
 const teacherServices = require("../services/teachersService");
 const packageService = require("../services/packagesService");
 const commentService = require("../services/commentService");
+const usersService = require("../services/usersService");
 
 const db = require('../database/models');
 const sequelize = db.sequelize;
@@ -199,17 +200,22 @@ let studentsController = {
         res.render('students/packageStudents', { servicios: servicios,
                                                 serviciosFiltrados: serviciosFiltrados});
     },
-    configuracion: function(req, res) {       
-    },
-    reserva: function(req, res) {
-        res.render('partials/popUpReserve');
-    }, 
-    configuration: function(req, res) {
-
+    configuration:function(req, res) {
+        
         res.render('students/configurationStudents');
     }, 
     shoppingCart: function(req, res) {
         res.render('shoppingCart/shoppingCart');
+    }, 
+    detailsTeacher: async function(req, res) {
+       
+        const servicios = await db.Class.findAll(
+            {
+                // SELECT * FROM CLASS
+                attributes: ['description', 'language', 'price']
+            }
+        );
+        res.render('students/detailsTeacher', {servicios: servicios});
     }, 
     logout: function(req, res) {
         res.clearCookie('userEmail');

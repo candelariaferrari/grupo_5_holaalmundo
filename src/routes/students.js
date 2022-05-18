@@ -23,6 +23,9 @@ router.get('/configuration', authMiddlewars, studentsController.configuration);
 /*** SHOPPING CART  */
 router.get('/shoppingCart', authMiddlewars, studentsController.shoppingCart); 
 
+/*** DETAILS TEACHER  */
+router.get('/detailsTeacher', authMiddlewars, studentsController.detailsTeacher); 
+
 /*** LOGOUT */
 router.get('/logout', studentsController.logout);
 
