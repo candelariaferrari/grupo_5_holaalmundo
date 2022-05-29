@@ -57,7 +57,7 @@ module.exports = (sequelize, dataTypes) => {
         },
         link_class: {
             type: dataTypes.STRING,
-            allowNull: false
+            allowNull: true
         }
     };
     let config = {

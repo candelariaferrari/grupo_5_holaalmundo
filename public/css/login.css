@@ -203,3 +203,8 @@ select.input-form {
 .campos{
     width: 100%;
 }
+
+/* Validaciones FRONT */
+.borderInput{
+    border: 1px solid red !important;
+}

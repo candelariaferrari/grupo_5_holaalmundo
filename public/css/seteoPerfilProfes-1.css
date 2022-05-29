@@ -459,3 +459,8 @@ h2.misPaq{
   color: #00ffcb;
   background-color: #212121;
 }
+
+.backgroundFocus {
+  background-color: red !important;
+  color: #212121 !important;
+}

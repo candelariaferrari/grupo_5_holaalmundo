@@ -44,15 +44,21 @@ let teachersController = {
     });
     /* console.log(allLevels) */
     /*  */
-    res.render('teachers/createPackageTeachers',
-    {
-      allLanguages: allLanguages,
-      allWeekDays: allWeekDays,
-      allWeekTimes: allWeekTimes, 
-      allLevels: allLevels,
-      allTypes: allTypes
-    });
-
+      Promise.all([allLanguages,allWeekDays,allWeekTimes,allLevels,allTypes])
+            .then(function([allLanguages,allWeekDays,allWeekTimes,allLevels,allTypes]){ 
+              res.render('teachers/createPackageTeachers',
+              {
+                allLanguages: allLanguages,
+                allWeekDays: allWeekDays,
+                allWeekTimes: allWeekTimes, 
+                allLevels: allLevels,
+                allTypes: allTypes
+              });
+        
+            })
+            .catch(error => {
+                console.log(error);
+        })
   },
   processPackages: async function (req, res, next) {
     const errorsValidation = validationResult(req);
@@ -81,8 +87,7 @@ let teachersController = {
         [sequelize.fn("DISTINCT", sequelize.col(`types`)), `types`],
       ],
     });
-
-    console.log("ERRORES DEL EXPRESS V" + errorsValidation);
+    console.log(errorsValidation);
     if(errorsValidation.errors.length > 0){
         return  res.render('teachers/createPackageTeachers', {
             errors: errorsValidation.mapped(),
@@ -107,8 +112,8 @@ let teachersController = {
         }).catch(function(err){
             console.log(err);
         })
-        console.log("Esto viene en el body al crear un paquete", req.body.language);
-        res.redirect('/teachers/packages');
+        console.log("Esto viene en el body al crear un paquete", req.body);
+        res.redirect('teachers/createPackageTeachers');
     }
   },
   configuration: function (req, res) {

@@ -13,7 +13,7 @@
   <link href="/css/normalize.css" rel="stylesheet">
   <link href="/css/seteoPerfilProfes-1.css" rel="stylesheet">
   <link rel="stylesheet" href="/css/partialsCss/partials.css">
-
+  <script src="/js/validationPackages.js"></script>
 </head>
 
 <body>
@@ -25,117 +25,150 @@
           <div class="container-header">
             <h2>Crea tus paquetes</h2>
           </div>
-          <form action="" method="post">
-            <div class="contentInput">
-              <input class="inputPaquete" type="text" name="name" id="name" placeholder="Nombre del paquete: ">
+          <form name="formPackage" action="/teachers/packages" method="POST" id="crearPackage">
+            <div class="contentInput"><!-- nombre -->
+                <label for="description"></label>
+                <input placeholder="Nombre del paquete" type="text" name="description" class="input-form" id="descriptionPackage"
+                    <%= locals.errors && errors.description ? 'is-invalid' : null %>
+                    value="<%= locals.oldData ? oldData.description : null %>"
+                    >
+                    <% if(locals.errors && errors.description) { %>
+                      <div class="text-danger" style="color: red">
+                        <%= errors.description.msg %>
+                      </div>
+                    <% } %>
             </div>
-            <div class="inputPaquete">
-              <label for="lenguaje">Idioma que vas a enseñanar:</label>
-              <select id="cars" name="carlist" form="carform">
-                <option value="ing">Ingles</option>
-                <option value="es">Español</option>
-                <option value="port">Portugues</option>
-                <option value="ita">Italiano</option>
+            <div><!-- lenguaje -->
+              <label for="language:"></label>
+              <select name="language" id="language" class="input-form" <%=locals.errors && errors.language ? 'is-invalid' : null %>>
+                <option value="" disabled selected>- Seleciona el idoma - </option>
+                <% allLanguages.forEach(language => { %>
+                  <option value="<%= `${language.dataValues.language}` %>">
+                    <%= locals.oldData && (language.dataValues.language===oldData.language) ? "select" : null %>
+                      <%= `${language.dataValues.language}` %>
+                  </option>
+                  <% }) %>
               </select>
+              <% if (locals.errors && errors.language) { %>
+                <div class="text-danger" style="color: red" style="font-weight: bold">
+                  <%= errors.language.msg %>
+                </div>
+                <% } %>
             </div>
-            <div class="inputPaquete">
-              <label for="dias">Dias disponibles:</label>
-              <div class="check">
-                <div>
-                  <input type="checkbox" value="lunes"> Lunes
+            <div><!-- Dias -->
+              <select name="week_days" class="input-form" id="week_days"
+              <%=locals.errors && errors.week_days ? 'is-invalid' : null %>>
+                <option value="" disabled selected>- Seleciona el dias - </option>
+                <% allWeekDays.forEach(days=> { %>
+                  <option value="<%= `${days.dataValues.days}` %>">
+                    <%= locals.oldData && (days.dataValues.days===oldData.days) ? "select" : null %>
+                      <%= `${days.dataValues.days}` %>
+                  </option>
+                  <% }) %>
+              </select>
+              <% if (locals.errors && errors.week_days) { %>
+                <div class="text-danger" style="color: red" style="font-weight: bold">
+                  <%= errors.week_days.msg %>
                 </div>
-                <div>
-                  <input type="checkbox" value="Martes"> Martes
-                </div>
-                <div>
-                  <input type="checkbox" value="Miercoles"> Miércoles
-                </div>
-                <div>
-                  <input type="checkbox" value="jueves"> Jueves
-                </div>
-                <div>
-                  <input type="checkbox" value="Viernes"> Viernes
-                </div>
-                <div>
-                  <input type="checkbox" value="sabado"> Sábado
-                </div>
-                <div>
-                  <input type="checkbox" value="domingo"> Domingo
-                </div>
-              </div>
-
+                <% } %>
             </div>
-            <!-- <div class="btnNext">
-            <button class="next">Continuar<i class="fas fa-angle-down"></i> </button>
-          </div> -->
-            <div id="contentTwo">
-
-              <!--  <div class="btnBack">
-              <button class="back"> <i class="fas fa-angle-up"></i> Volver </button>
-            </div> -->
-              <div class="inputPaquete">
-                <label for="lenguaje">Horarios disponibles:</label>
-                <div class="check">
-                  <div>
-                    <input type="checkbox" value="#"> 08:00 a 9:00
-                  </div>
-                  <div>
-                    <input type="checkbox" value="#"> 10:00 a 11:00
-                  </div>
-                  <div>
-                    <input type="checkbox" value="#"> 14:00 a 15:00
-                  </div>
+            <div><!-- HORAS -->
+              <select name="week_times" id="week_times" class="input-form" 
+              <%=locals.errors && errors.week_times ? 'is-invalid' : null %>>
+                <option value="" disabled selected>- Selecionar Hora - </option>
+                <% allWeekTimes.forEach(times=> { %>
+                  <option value="<%= `${times.dataValues.times}` %>">
+                    <%= locals.oldData && (times.dataValues.times===oldData.times) ? "select" : null %>
+                      <%= `${times.dataValues.times}` %>
+                  </option>
+                  <% }) %>
+              </select>
+              <% if (locals.errors && errors.week_times) { %>
+                <div class="text-danger" style="color: red" style="font-weight: bold">
+                  <%= errors.week_times.msg %>
                 </div>
-                <div class="check">
-                  <div>
-                    <input type="checkbox" value="#"> 16:00 a 17:00
-                  </div>
-                  <div>
-                    <input type="checkbox" value="#"> 18:00 a 19:00
-                  </div>
-                  <div>
-                    <input type="checkbox" value="#"> 20:00 a 21:00
-                  </div>
+                <% } %>
+            </div>
+            <div><!-- Levels -->
+              <select name="level" id="level" class="input-form" 
+              <%=locals.errors && errors.levels ? 'is-invalid' : null %>>
+                <option value="" disabled selected>- Selecionar Nivel - </option>
+                <% allLevels.forEach(levels => { %>
+                  <option value="<%= `${levels.dataValues.levels}` %>">
+                    <%= locals.oldData && (levels.dataValues.levels===oldData.levels) ? "select" : null %>
+                      <%= `${levels.dataValues.levels}` %>
+                  </option>
+                  <% }) %>
+              </select>
+              <% if (locals.errors && errors.level) { %>
+                <div class="text-danger" style="color: red" style="font-weight: bold">
+                  <%= errors.level.msg %>
                 </div>
-              </div>
-              <div class="inputPaquete">
-                <label for="lenguaje">Nivel a enseñar:</label>
-                <select id="cars" name="carlist" form="carform">
-                  <option value="basico">Básico</option>
-                  <option value="medio">Medio</option>
-                  <option value="avanzado">Avanzado</option>
-                </select>
-              </div>
-              <div class="inputPaquete">
-                <label for="lenguaje">Temáticas de interes:</label>
-                <div class="check">
-                  <div>
-                    <input type="checkbox" value="#"> Naturaleza
-                  </div>
-                  <div>
-                    <input type="checkbox" value="#"> Música
-                  </div>
-                  <div>
-                    <input type="checkbox" value="#"> Deportes
-                  </div>
-                  <div>
-                    <input type="checkbox" value="#"> Profesiones
-                  </div>
-                  <div>
-                    <input type="checkbox" value="#"> Viajes
-                  </div>
+                <% } %>
+            </div>
+            <div class="contentInput"><!-- TEMAS DE INTERES -->
+              <label for="topics"></label>
+              <input placeholder="Tematica de interes" id="topics" type="text" name="topics" class="input-form" 
+                  <%= locals.errors && errors.topics ? 'is-invalid' : null %>
+                  value="<%= locals.oldData ? oldData.topics : null %>"
+                  >
+                  <% if(locals.errors && errors.topics) { %>
+                    <div class="text-danger" style="color: red">
+                      <%= errors.topics.msg %>
+                    </div>
+                  <% } %>
+            </div>
+            <div><!-- MODALIDAD -->
+              <select name="types" id="types" class="input-form" 
+              <%=locals.errors && errors.types ? 'is-invalid' : null %>>
+                <option value="" disabled selected>- Selecionar Nivel - </option>
+                <% allTypes.forEach(types => { %>
+                  <option value="<%= `${types.dataValues.types}` %>">
+                    <%= locals.oldData && (types.dataValues.types===oldData.types) ? "select" : null %>
+                      <%= `${types.dataValues.types}` %>
+                  </option>
+                  <% }) %>
+              </select>
+              <% if (locals.errors && errors.types) { %>
+                <div class="text-danger" style="color: red" style="font-weight: bold">
+                  <%= errors.types.msg %>
                 </div>
-              </div>
+                <% } %>
+            </div>
+            <div class="contentInput"><!-- precio -->
               <div class="inputPaquete">
-                <label for="price">Precio por hora:</label>
-                <input type="text" name="price" id="price" class="price">
-              </div>
-              <div class="btnNext">
-                <button class="next">crear<i class="fas fa-check"></i></i> </button>
+                <input placeholder="Precio por hora:" type="text" name="price" id="price" class="price" <%=locals.errors
+                  && errors.price ? 'is-invalid' : null %> value="<%= locals.oldData ? oldData.price : null %>">
+                  <% if(locals.errors && errors.price) { %>
+                    <div class="text-danger" style="color: red">
+                      <%= errors.price.msg %>
+                    </div>
+                    <% } %>
               </div>
             </div>
+            <div class="contentInput"><!-- capacidad max -->
+              <label for="cap_max"></label>
+              <input placeholder="cap max" id="cap_max" type="text" name="cap_max" class="input-form" 
+                  <%= locals.errors && errors.cap_max ? 'is-invalid' : null %>
+                  value="<%= locals.oldData ? oldData.cap_max : null %>"
+                  >
+                  <% if(locals.errors && errors.cap_max) { %>
+                    <div class="text-danger" style="color: red">
+                      <%= errors.cap_max.msg %>
+                    </div>
+                  <% } %>
+            </div>
+            
 
-          </form>
+            <div class="btnNext">
+              <button class="next" type="submit">crear<i class="fas fa-check"></i></i> </button>
+            </div>
+            <ul class=".errores">
+
+            </ul>
+        </div>
+
+        </form>
         </div>
       </section>
       <h2 class="misPaq">Mis paquetes</h2>
@@ -212,13 +245,11 @@
       </div>
 
     </main>
-    <!-- chat -->
-    <%- include('../partials/chat.ejs')%>
-      <!-- Footer -->
-      <%- include('../partials/footer.ejs')%>
+    <!-- Footer -->
+    <%- include('../partials/footer.ejs')%>
 
 
-        <script src="/js/scriptHeader.js"></script>
+      <script src="/js/scriptHeader.js"></script>
 </body>
 
 </html>
