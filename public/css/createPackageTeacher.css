@@ -1,33 +1,39 @@
 html {
   box-sizing: border-box;
 }
+
 body {
   font-family: "Roboto", sans-serif;
   height: fit-content;
 }
-.contentSlide{
+
+.contentSlide {
   height: fit-content;
   width: 100vw;
   padding-top: 18vh;
   background-color: #212121;
 }
-.titulo{
+
+.titulo {
   text-align: center;
 }
-.titulo p{
+
+.titulo p {
   color: #fff;
   font-size: 35px;
   font-style: italic;
   font-weight: 500;
   margin-bottom: -0.8em;
 }
-.titulo h1{
+
+.titulo h1 {
   color: #00FFCB;
   font-size: 40px;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 3px;
 }
+
 .onda {
   background-image: url(/images/new/bkgPackages.png);
   width: 100%;
@@ -39,7 +45,8 @@ body {
   position: relative;
   z-index: -1000;
 }
-.flexInput{
+
+.flexInput {
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
@@ -47,19 +54,22 @@ body {
   margin: auto;
   margin-top: 3em;
 }
+
 .contentInput {
   display: flex;
   flex-direction: column;
   margin-bottom: 1em;
-  
+
 }
-.contentInput label{
+
+.contentInput label {
   font-size: 18px;
   color: #fff;
   padding-left: 1em;
   margin-bottom: 0.2em;
 }
-.contentInput input{
+
+.contentInput input {
   height: 35px;
   width: 100%;
   border: none;
@@ -70,7 +80,8 @@ body {
   font-size: 18px;
   font-weight: 600;
 }
-.contentInput select{
+
+.contentInput select {
   height: 35px;
   width: 100%;
   border: none;
@@ -80,28 +91,30 @@ body {
   padding-inline-start: 1em;
   font-size: 16px;
   font-weight: 600;
-  
+
 }
+
 .contentInput input:focus,
 input:focus,
 input[type]:focus {
   outline: 0 none;
 }
 
-.msgError{
+.msgError {
   color: #fff;
   border-bottom: 1px solid red;
-  padding:0.5em;
+  padding: 0.5em;
   width: fit-content;
   margin-left: 0.5em;
 }
 
 
-.btn{
+.btn {
   outline: none;
   border: none;
 }
-.btn.crear{
+
+.btn.crear {
   background-color: #6243F7;
   margin-top: 2em;
   font-size: 20px;
@@ -113,17 +126,39 @@ input[type]:focus {
   border-radius: 5px;
 }
 
-.backgroundFocus{
-  background-color: red !important;
+.backgroundFocus {
+  background-color: #DAD9DE !important;
+  border: 1px solid #6243F7 !important;
+}
+.backgroundFocus label{
+  color: #3651F7 !important;
 }
 
-.is-valid{
-  background-color: yellow !important;
+.errores {
+ 
+  margin: 2em auto 0em;
+  
+  width: 80%;
+  display: flex;
+  justify-content: center;
 }
-.alert-warning{
-  border: 1px solid red;
+
+.errores ul {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  list-style: none;
 }
-.errores{
+.errores div{
+  color: #00FFCB;
+  padding: 0.5em 0em;
+}
+.errores li {
+  font-size: 0.9rem;
+  display: inline;
   color: #fff;
-  text-align: center;
+}
+
+.errores strong {
+  color: #00FFCB;
 }

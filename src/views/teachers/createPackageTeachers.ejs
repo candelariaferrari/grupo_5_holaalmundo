@@ -128,7 +128,7 @@
             <div class="contentInput">
               <!-- hora -->
               <label for="week_times">Hora de encuentro</label>
-              <select name="language" id="language" <%=locals.errors && errors.week_times ? 'is-invalid' : null %>>
+              <select name="week_times" id="week_times" <%=locals.errors && errors.week_times ? 'is-invalid' : null %>>
                 <option value="" disabled selected></option>
                 <% allWeekTimes.forEach(times=> { %>
                   <option value="<%= `${times.dataValues.times}` %>">
@@ -158,7 +158,7 @@
             </div>
             <div class="contentInput">
               <!-- precio -->
-              <label for="price">Preccio por hora</label>
+              <label for="price">Precio por hora:</label>
               <input type="text" name="price" id="price" class="price" <%=locals.errors
                 && errors.price ? 'is-invalid' : null %> value="<%= locals.oldData ? oldData.price : null %>">
                 <% if(locals.errors && errors.price) { %>
