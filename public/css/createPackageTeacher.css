@@ -1,0 +1,129 @@
+html {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  height: fit-content;
+}
+.contentSlide{
+  height: fit-content;
+  width: 100vw;
+  padding-top: 18vh;
+  background-color: #212121;
+}
+.titulo{
+  text-align: center;
+}
+.titulo p{
+  color: #fff;
+  font-size: 35px;
+  font-style: italic;
+  font-weight: 500;
+  margin-bottom: -0.8em;
+}
+.titulo h1{
+  color: #00FFCB;
+  font-size: 40px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+.onda {
+  background-image: url(/images/new/bkgPackages.png);
+  width: 100%;
+  height: 20em;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+  margin-top: -14em;
+  position: relative;
+  z-index: -1000;
+}
+.flexInput{
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 80%;
+  margin: auto;
+  margin-top: 3em;
+}
+.contentInput {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+  
+}
+.contentInput label{
+  font-size: 18px;
+  color: #fff;
+  padding-left: 1em;
+  margin-bottom: 0.2em;
+}
+.contentInput input{
+  height: 35px;
+  width: 100%;
+  border: none;
+  background-color: #00FFCB;
+  border-radius: 10px;
+  color: #212121;
+  padding-inline-start: 1em;
+  font-size: 18px;
+  font-weight: 600;
+}
+.contentInput select{
+  height: 35px;
+  width: 100%;
+  border: none;
+  background-color: #00FFCB;
+  border-radius: 10px;
+  color: #212121;
+  padding-inline-start: 1em;
+  font-size: 16px;
+  font-weight: 600;
+  
+}
+.contentInput input:focus,
+input:focus,
+input[type]:focus {
+  outline: 0 none;
+}
+
+.msgError{
+  color: #fff;
+  border-bottom: 1px solid red;
+  padding:0.5em;
+  width: fit-content;
+  margin-left: 0.5em;
+}
+
+
+.btn{
+  outline: none;
+  border: none;
+}
+.btn.crear{
+  background-color: #6243F7;
+  margin-top: 2em;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #00FFCB;
+  text-transform: uppercase;
+  padding: 0.5em 3em;
+  border-radius: 5px;
+}
+
+.backgroundFocus{
+  background-color: red !important;
+}
+
+.is-valid{
+  background-color: yellow !important;
+}
+.alert-warning{
+  border: 1px solid red;
+}
+.errores{
+  color: #fff;
+  text-align: center;
+}

@@ -11,54 +11,39 @@
     href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
     rel="stylesheet">
   <link href="/css/normalize.css" rel="stylesheet">
-  <link href="/css/seteoPerfilProfes-1.css" rel="stylesheet">
   <link rel="stylesheet" href="/css/partialsCss/partials.css">
+  <link href="/css/createPackageTeacher.css" rel="stylesheet">
   <script src="/js/validationPackages.js"></script>
 </head>
 
 <body>
   <!-- Header -->
   <%- include('../partials/header.ejs')%>
-    <main class="container-main">
-      <section class="container-filtros">
-        <div class="formPaquetes">
-          <div class="container-header">
-            <h2>Crea tus paquetes</h2>
-          </div>
-          <form name="formPackage" action="/teachers/packages" method="POST" id="crearPackage">
-            <div class="contentInput"><!-- nombre -->
-                <label for="description"></label>
-                <input placeholder="Nombre del paquete" type="text" name="description" class="input-form" id="descriptionPackage"
-                    <%= locals.errors && errors.description ? 'is-invalid' : null %>
-                    value="<%= locals.oldData ? oldData.description : null %>"
-                    >
-                    <% if(locals.errors && errors.description) { %>
-                      <div class="text-danger" style="color: red">
-                        <%= errors.description.msg %>
-                      </div>
-                    <% } %>
+
+    <section class="contentSlide">
+
+      <div class="titulo">
+        <p>Crea tus aulas virtuales para</p>
+        <h1>enseñar tus conocimientos</h1>
+      </div>
+      <form action="/teachers/packages" method="POST" name="formPackage" id="crearPackage">
+        <div class="flexInput">
+          <div style="width: 40%;"><!-- columna 1 -->
+            <div class="contentInput"> <!-- nombre -->
+              <label for="description">Nombre del curso:</label>
+              <input type="text" name="description" id="descriptionPackage" <%=locals.errors && errors.description
+                ? 'is-invalid' : null %>
+              value="<%= locals.oldData ? oldData.description : null %>">
+                <% if(locals.errors && errors.description) { %>
+                  <div class="msgError">
+                    <%= errors.description.msg %>
+                  </div>
+                  <% } %>
             </div>
-            <div><!-- lenguaje -->
-              <label for="language:"></label>
-              <select name="language" id="language" class="input-form" <%=locals.errors && errors.language ? 'is-invalid' : null %>>
-                <option value="" disabled selected>- Seleciona el idoma - </option>
-                <% allLanguages.forEach(language => { %>
-                  <option value="<%= `${language.dataValues.language}` %>">
-                    <%= locals.oldData && (language.dataValues.language===oldData.language) ? "select" : null %>
-                      <%= `${language.dataValues.language}` %>
-                  </option>
-                  <% }) %>
-              </select>
-              <% if (locals.errors && errors.language) { %>
-                <div class="text-danger" style="color: red" style="font-weight: bold">
-                  <%= errors.language.msg %>
-                </div>
-                <% } %>
-            </div>
-            <div><!-- Dias -->
-              <select name="week_days" class="input-form" id="week_days"
-              <%=locals.errors && errors.week_days ? 'is-invalid' : null %>>
-                <option value="" disabled selected>- Seleciona el dias - </option>
+            <div class="contentInput"><!-- dias -->
+              <label for="week_days"> Días de encuentro:</label>
+              <select name="week_days" id="week_days" <%=locals.errors && errors.week_days ? 'is-invalid' : null %>>
+                <option value="" disabled selected></option>
                 <% allWeekDays.forEach(days=> { %>
                   <option value="<%= `${days.dataValues.days}` %>">
                     <%= locals.oldData && (days.dataValues.days===oldData.days) ? "select" : null %>
@@ -67,15 +52,84 @@
                   <% }) %>
               </select>
               <% if (locals.errors && errors.week_days) { %>
-                <div class="text-danger" style="color: red" style="font-weight: bold">
+                <div class="msgError">
                   <%= errors.week_days.msg %>
                 </div>
                 <% } %>
             </div>
-            <div><!-- HORAS -->
-              <select name="week_times" id="week_times" class="input-form" 
-              <%=locals.errors && errors.week_times ? 'is-invalid' : null %>>
-                <option value="" disabled selected>- Selecionar Hora - </option>
+            <div class="contentInput">
+              <!-- nivel -->
+              <label for="level">Nivel a enseñar</label>
+              <select name="level" id="level" <%=locals.errors && errors.levels ? 'is-invalid' : null %>>
+                <option value="" disabled selected></option>
+                <% allLevels.forEach(levels=> { %>
+                  <option value="<%= `${levels.dataValues.levels}` %>">
+                    <%= locals.oldData && (levels.dataValues.levels===oldData.levels) ? "select" : null %>
+                      <%= `${levels.dataValues.levels}` %>
+                  </option>
+                  <% }) %>
+              </select>
+              <% if (locals.errors && errors.level) { %>
+                <div class="msgError">
+                  <%= errors.level.msg %>
+                </div>
+                <% } %>
+            </div>
+            <div class="contentInput">
+              <!-- modalidad -->
+              <label for="types">Tipo de curso:</label>
+              <select name="types" id="types" <%=locals.errors && errors.types ? 'is-invalid' : null %>>
+                <option value="" disabled selected></option>
+                <% allTypes.forEach(types=> { %>
+                  <option value="<%= `${types.dataValues.types}` %>">
+                    <%= locals.oldData && (types.dataValues.types===oldData.types) ? "select" : null %>
+                      <%= `${types.dataValues.types}` %>
+                  </option>
+                  <% }) %>
+              </select>
+              <% if (locals.errors && errors.types) { %>
+                <div class="msgError">
+                  <%= errors.types.msg %>
+                </div>
+                <% } %>
+            </div>
+            <div class="contentInput">
+              <!-- cap max -->
+              <label for="cap_max">Capacidad máxima de alumnos:</label>
+              <input id="cap_max" type="text" name="cap_max" <%=locals.errors && errors.cap_max
+                ? 'is-invalid' : null %>
+              value="<%= locals.oldData ? oldData.cap_max : null %>"
+                >
+                <% if(locals.errors && errors.cap_max) { %>
+                  <div class="msgError">
+                    <%= errors.cap_max.msg %>
+                  </div>
+                  <% } %>
+            </div>
+          </div>
+          <div style="width: 40%;"><!-- columna 2 -->
+            <div class="contentInput"><!-- language -->
+              <label for="language:">Idioma a enseñar:</label>
+              <select name="language" id="language" <%=locals.errors && errors.language ? 'is-invalid' : null %>>
+                <option value="" disabled selected></option>
+                <% allLanguages.forEach(language=> { %>
+                  <option value="<%= `${language.dataValues.language}` %>">
+                    <%= locals.oldData && (language.dataValues.language===oldData.language) ? "select" : null %>
+                      <%= `${language.dataValues.language}` %>
+                  </option>
+                  <% }) %>
+              </select>
+              <% if (locals.errors && errors.language) { %>
+                <div class="msgError">
+                  <%= errors.language.msg %>
+                </div>
+                <% } %>
+            </div>
+            <div class="contentInput">
+              <!-- hora -->
+              <label for="week_times">Hora de encuentro</label>
+              <select name="language" id="language" <%=locals.errors && errors.week_times ? 'is-invalid' : null %>>
+                <option value="" disabled selected></option>
                 <% allWeekTimes.forEach(times=> { %>
                   <option value="<%= `${times.dataValues.times}` %>">
                     <%= locals.oldData && (times.dataValues.times===oldData.times) ? "select" : null %>
@@ -84,167 +138,132 @@
                   <% }) %>
               </select>
               <% if (locals.errors && errors.week_times) { %>
-                <div class="text-danger" style="color: red" style="font-weight: bold">
+                <div class="msgError">
                   <%= errors.week_times.msg %>
                 </div>
                 <% } %>
             </div>
-            <div><!-- Levels -->
-              <select name="level" id="level" class="input-form" 
-              <%=locals.errors && errors.levels ? 'is-invalid' : null %>>
-                <option value="" disabled selected>- Selecionar Nivel - </option>
-                <% allLevels.forEach(levels => { %>
-                  <option value="<%= `${levels.dataValues.levels}` %>">
-                    <%= locals.oldData && (levels.dataValues.levels===oldData.levels) ? "select" : null %>
-                      <%= `${levels.dataValues.levels}` %>
-                  </option>
-                  <% }) %>
-              </select>
-              <% if (locals.errors && errors.level) { %>
-                <div class="text-danger" style="color: red" style="font-weight: bold">
-                  <%= errors.level.msg %>
-                </div>
-                <% } %>
-            </div>
-            <div class="contentInput"><!-- TEMAS DE INTERES -->
-              <label for="topics"></label>
-              <input placeholder="Tematica de interes" id="topics" type="text" name="topics" class="input-form" 
-                  <%= locals.errors && errors.topics ? 'is-invalid' : null %>
-                  value="<%= locals.oldData ? oldData.topics : null %>"
-                  >
-                  <% if(locals.errors && errors.topics) { %>
-                    <div class="text-danger" style="color: red">
-                      <%= errors.topics.msg %>
-                    </div>
+            <div class="contentInput">
+              <!-- tematica -->
+              <label for="topics">Temática de intereses comunes:</label>
+              <input id="topics" type="text" name="topics" <%=locals.errors &&
+                errors.topics ? 'is-invalid' : null %>
+              value="<%= locals.oldData ? oldData.topics : null %>"
+                >
+                <% if(locals.errors && errors.topics) { %>
+                  <div class="msgError">
+                    <%= errors.topics.msg %>
+                  </div>
                   <% } %>
             </div>
-            <div><!-- MODALIDAD -->
-              <select name="types" id="types" class="input-form" 
-              <%=locals.errors && errors.types ? 'is-invalid' : null %>>
-                <option value="" disabled selected>- Selecionar Nivel - </option>
-                <% allTypes.forEach(types => { %>
-                  <option value="<%= `${types.dataValues.types}` %>">
-                    <%= locals.oldData && (types.dataValues.types===oldData.types) ? "select" : null %>
-                      <%= `${types.dataValues.types}` %>
-                  </option>
-                  <% }) %>
-              </select>
-              <% if (locals.errors && errors.types) { %>
-                <div class="text-danger" style="color: red" style="font-weight: bold">
-                  <%= errors.types.msg %>
-                </div>
-                <% } %>
-            </div>
-            <div class="contentInput"><!-- precio -->
-              <div class="inputPaquete">
-                <input placeholder="Precio por hora:" type="text" name="price" id="price" class="price" <%=locals.errors
-                  && errors.price ? 'is-invalid' : null %> value="<%= locals.oldData ? oldData.price : null %>">
-                  <% if(locals.errors && errors.price) { %>
-                    <div class="text-danger" style="color: red">
-                      <%= errors.price.msg %>
-                    </div>
-                    <% } %>
-              </div>
-            </div>
-            <div class="contentInput"><!-- capacidad max -->
-              <label for="cap_max"></label>
-              <input placeholder="cap max" id="cap_max" type="text" name="cap_max" class="input-form" 
-                  <%= locals.errors && errors.cap_max ? 'is-invalid' : null %>
-                  value="<%= locals.oldData ? oldData.cap_max : null %>"
-                  >
-                  <% if(locals.errors && errors.cap_max) { %>
-                    <div class="text-danger" style="color: red">
-                      <%= errors.cap_max.msg %>
-                    </div>
+            <div class="contentInput">
+              <!-- precio -->
+              <label for="price">Preccio por hora</label>
+              <input type="text" name="price" id="price" class="price" <%=locals.errors
+                && errors.price ? 'is-invalid' : null %> value="<%= locals.oldData ? oldData.price : null %>">
+                <% if(locals.errors && errors.price) { %>
+                  <div class="msgError">
+                    <%= errors.price.msg %>
+                  </div>
                   <% } %>
             </div>
-            
-
-            <div class="btnNext">
-              <button class="next" type="submit">crear<i class="fas fa-check"></i></i> </button>
+            <div class="contentInput">
+              <!-- link -->
+              <label for="link_class">Link de plataforma:</label>
+              <input type="text" name="link_class" id="link_class" id="link_class" <%=locals.errors
+                && errors.link_class ? 'is-invalid' : null %> value="<%= locals.oldData ? oldData.link_class : null %>">
+                <% if(locals.errors && errors.link_class) { %>
+                  <div class="msgError">
+                    <%= errors.link_class.msg %>
+                  </div>
+                  <% } %>
             </div>
-            <ul class=".errores">
+          </div>
+        </div>
+        <div style="margin: auto;text-align: center;">
+          <button class="btn crear" type="submit">crear<i class="fas fa-check"></i></i> </button>
+        </div>
+        <div class="errores">
+          <ul></ul>
+        </div>
+      </form>
 
-            </ul>
+    </section>
+    <div class="onda">
+    </div>
+  
+    <h2 class="misPaq">Mis paquetes</h2>
+    <div class="crearPaquete">
+      <!-- card 1 -->
+      <div>
+        <div class="serviceImg">
+          <span class="discountTag"> $5000</span>
+          <i class="fas fa-comments"></i>
+          <h4>
+            Conversación
+          </h4>
+          <p class="description">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa,
+          </p>
         </div>
-
-        </form>
+        <button class="serviceInfo">
+          <i class="fas fa-pen"></i>
+          Modificar
+        </button>
+      </div>
+      <!-- card 1 -->
+      <div>
+        <div class="serviceImg">
+          <span class="discountTag"> $5000</span>
+          <i class="fas fa-comments"></i>
+          <h4>
+            Conversación
+          </h4>
+          <p class="description">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa,
+          </p>
         </div>
-      </section>
-      <h2 class="misPaq">Mis paquetes</h2>
-      <div class="crearPaquete">
-        <!-- card 1 -->
-        <div>
-          <div class="serviceImg">
-            <span class="discountTag"> $5000</span>
-            <i class="fas fa-comments"></i>
-            <h4>
-              Conversación
-            </h4>
-            <p class="description">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa,
-            </p>
-          </div>
-          <button class="serviceInfo">
-            <i class="fas fa-pen"></i>
-            Modificar
-          </button>
+        <button class="serviceInfo">
+          <i class="fas fa-pen"></i>
+          Modificar
+        </button>
+      </div>
+      <!-- card 1 -->
+      <div>
+        <div class="serviceImg">
+          <span class="discountTag"> $5000</span>
+          <i class="fas fa-comments"></i>
+          <h4>
+            Conversación
+          </h4>
+          <p class="description">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa,
+          </p>
         </div>
-        <!-- card 1 -->
-        <div>
-          <div class="serviceImg">
-            <span class="discountTag"> $5000</span>
-            <i class="fas fa-comments"></i>
-            <h4>
-              Conversación
-            </h4>
-            <p class="description">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa,
-            </p>
-          </div>
-          <button class="serviceInfo">
-            <i class="fas fa-pen"></i>
-            Modificar
-          </button>
+        <button class="serviceInfo">
+          <i class="fas fa-pen"></i>
+          Modificar
+        </button>
+      </div>
+      <!-- card 1 -->
+      <div>
+        <div class="serviceImg">
+          <span class="discountTag"> $5000</span>
+          <i class="fas fa-comments"></i>
+          <h4>
+            Conversación
+          </h4>
+          <p class="description">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa,
+          </p>
         </div>
-        <!-- card 1 -->
-        <div>
-          <div class="serviceImg">
-            <span class="discountTag"> $5000</span>
-            <i class="fas fa-comments"></i>
-            <h4>
-              Conversación
-            </h4>
-            <p class="description">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa,
-            </p>
-          </div>
-          <button class="serviceInfo">
-            <i class="fas fa-pen"></i>
-            Modificar
-          </button>
-        </div>
-        <!-- card 1 -->
-        <div>
-          <div class="serviceImg">
-            <span class="discountTag"> $5000</span>
-            <i class="fas fa-comments"></i>
-            <h4>
-              Conversación
-            </h4>
-            <p class="description">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa,
-            </p>
-          </div>
-          <button class="serviceInfo">
-            <i class="fas fa-pen"></i>
-            Modificar
-          </button>
-        </div>
-
+        <button class="serviceInfo">
+          <i class="fas fa-pen"></i>
+          Modificar
+        </button>
       </div>
 
-    </main>
+    </div>
     <!-- Footer -->
     <%- include('../partials/footer.ejs')%>
 

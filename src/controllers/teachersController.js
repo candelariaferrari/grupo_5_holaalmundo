@@ -103,7 +103,8 @@ let teachersController = {
             topics: req.body.topics,
             types: req.body.types,
             price: req.body.price,
-            cap_max: req.body.cap_max
+            cap_max: req.body.cap_max,
+            link_class: req.body.link_class
         }).catch(function(err){
             console.log(err);
         })

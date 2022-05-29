@@ -166,15 +166,18 @@ const validar = {
  createPackages: [
     check("description")
       .notEmpty()
-      .withMessage("Debe colocar un nombre de paquete")
+      .withMessage("Porfavor escriba el nombre de su paquete")
+      .bail()
       .isLength({ max: 20 })
       .withMessage("campo nombre debe superar los 20 caracteres"),
     check('language')
       .notEmpty()
-      .withMessage('Tines que seleccionar un idioma'),
+      .withMessage('Tines que seleccionar un idioma')
+      .bail(),
     check('week_days')
       .notEmpty()
-      .withMessage('Tines que seleccionar un grupo de dias'),
+      .withMessage('Tines que seleccionar un grupo de dias')
+      .bail(),
     check('week_times')
       .notEmpty()
       .withMessage('Tines que seleccionar un horario'),
@@ -197,7 +200,9 @@ const validar = {
       .withMessage("Debe colocar un precio de paquete")
       .isNumeric({ no_symbols: true })
       .withMessage("campo nombre debe contener simbolos"),
-   
+    check("link_class")
+      .notEmpty()
+      .withMessage("Debe colocar un enlace de plataforma")
   ]
 }
 
