@@ -31,7 +31,7 @@
           <div style="width: 40%;"><!-- columna 1 -->
             <div class="contentInput"> <!-- nombre -->
               <label for="description">Nombre del curso:</label>
-              <input type="text" name="description" id="descriptionPackage" <%=locals.errors && errors.description
+              <input type="text" name="description" id="descriptionPackage" autocomplete="off" <%=locals.errors && errors.description
                 ? 'is-invalid' : null %>
               value="<%= locals.oldData ? oldData.description : null %>">
                 <% if(locals.errors && errors.description) { %>
@@ -59,7 +59,7 @@
             </div>
             <div class="contentInput">
               <!-- nivel -->
-              <label for="level">Nivel a enseñar</label>
+              <label for="level">Nivel a enseñar:</label>
               <select name="level" id="level" <%=locals.errors && errors.levels ? 'is-invalid' : null %>>
                 <option value="" disabled selected></option>
                 <% allLevels.forEach(levels=> { %>
@@ -96,7 +96,7 @@
             <div class="contentInput">
               <!-- cap max -->
               <label for="cap_max">Capacidad máxima de alumnos:</label>
-              <input id="cap_max" type="text" name="cap_max" <%=locals.errors && errors.cap_max
+              <input id="cap_max" type="text" name="cap_max" autocomplete="off" <%=locals.errors && errors.cap_max
                 ? 'is-invalid' : null %>
               value="<%= locals.oldData ? oldData.cap_max : null %>"
                 >
@@ -127,7 +127,7 @@
             </div>
             <div class="contentInput">
               <!-- hora -->
-              <label for="week_times">Hora de encuentro</label>
+              <label for="week_times">Hora de encuentro:</label>
               <select name="week_times" id="week_times" <%=locals.errors && errors.week_times ? 'is-invalid' : null %>>
                 <option value="" disabled selected></option>
                 <% allWeekTimes.forEach(times=> { %>
@@ -146,7 +146,7 @@
             <div class="contentInput">
               <!-- tematica -->
               <label for="topics">Temática de intereses comunes:</label>
-              <input id="topics" type="text" name="topics" <%=locals.errors &&
+              <input id="topics" type="text" name="topics" autocomplete="off" <%=locals.errors &&
                 errors.topics ? 'is-invalid' : null %>
               value="<%= locals.oldData ? oldData.topics : null %>"
                 >
@@ -159,7 +159,7 @@
             <div class="contentInput">
               <!-- precio -->
               <label for="price">Precio por hora:</label>
-              <input type="text" name="price" id="price" class="price" <%=locals.errors
+              <input type="text" name="price" id="price" class="price" autocomplete="off" <%=locals.errors
                 && errors.price ? 'is-invalid' : null %> value="<%= locals.oldData ? oldData.price : null %>">
                 <% if(locals.errors && errors.price) { %>
                   <div class="msgError">
@@ -170,7 +170,7 @@
             <div class="contentInput">
               <!-- link -->
               <label for="link_class">Link de plataforma:</label>
-              <input type="text" name="link_class" id="link_class" id="link_class" <%=locals.errors
+              <input type="text" name="link_class" id="link_class" id="link_class" autocomplete="off" <%=locals.errors
                 && errors.link_class ? 'is-invalid' : null %> value="<%= locals.oldData ? oldData.link_class : null %>">
                 <% if(locals.errors && errors.link_class) { %>
                   <div class="msgError">

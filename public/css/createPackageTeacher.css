@@ -81,6 +81,12 @@ body {
   font-weight: 600;
 }
 
+.contentInputClick {
+  background-color: #fff !important;
+  border: 1.5px solid #6243F7 !important;
+  color: #212121;
+}
+
 .contentInput select {
   height: 35px;
   width: 100%;
@@ -99,7 +105,33 @@ input:focus,
 input[type]:focus {
   outline: 0 none;
 }
-
+/* input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  height: 35px;
+  width: 100%;
+  border: none;
+  background-color: #00FFCB;
+  border-radius: 10px;
+  color: #212121;
+  padding-inline-start: 1em;
+  font-size: 16px;
+  font-weight: 600;
+  -webkit-text-fill-color: #212121;
+  -webkit-box-shadow: 0 0 0px 1000px #00FFCB inset;
+  transition: background-color 5000s ease-in-out 0s;
+} */
+.contentInput select:focus,
+select:focus,
+select[type]:focus {
+  outline: 0 none;
+}
 .msgError {
   color: #fff;
   border-bottom: 1px solid red;
@@ -107,13 +139,10 @@ input[type]:focus {
   width: fit-content;
   margin-left: 0.5em;
 }
-
-
 .btn {
   outline: none;
   border: none;
 }
-
 .btn.crear {
   background-color: #6243F7;
   margin-top: 2em;
@@ -125,19 +154,14 @@ input[type]:focus {
   padding: 0.5em 3em;
   border-radius: 5px;
 }
-
 .backgroundFocus {
   background-color: #DAD9DE !important;
   border: 1px solid #6243F7 !important;
 }
-.backgroundFocus label{
-  color: #3651F7 !important;
-}
+
 
 .errores {
- 
   margin: 2em auto 0em;
-  
   width: 80%;
   display: flex;
   justify-content: center;
