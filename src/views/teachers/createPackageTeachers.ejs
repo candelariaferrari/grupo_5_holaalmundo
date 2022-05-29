@@ -28,7 +28,7 @@
       </div>
       <form action="/teachers/packages" method="POST" name="formPackage" id="crearPackage">
         <div class="flexInput">
-          <div style="width: 40%;"><!-- columna 1 -->
+          <div class="contentColumn"><!-- columna 1 -->
             <div class="contentInput"> <!-- nombre -->
               <label for="description">Nombre del curso:</label>
               <input type="text" name="description" id="descriptionPackage" autocomplete="off" <%=locals.errors && errors.description
@@ -107,7 +107,7 @@
                   <% } %>
             </div>
           </div>
-          <div style="width: 40%;"><!-- columna 2 -->
+          <div class="contentColumn"><!-- columna 2 -->
             <div class="contentInput"><!-- language -->
               <label for="language:">Idioma a enseñar:</label>
               <select name="language" id="language" <%=locals.errors && errors.language ? 'is-invalid' : null %>>
@@ -191,84 +191,27 @@
     </section>
     <div class="onda">
     </div>
-  
-    <h2 class="misPaq">Mis paquetes</h2>
-    <div class="crearPaquete">
-      <!-- card 1 -->
-      <div>
-        <div class="serviceImg">
-          <span class="discountTag"> $5000</span>
-          <i class="fas fa-comments"></i>
-          <h4>
-            Conversación
-          </h4>
-          <p class="description">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa,
-          </p>
-        </div>
-        <button class="serviceInfo">
-          <i class="fas fa-pen"></i>
-          Modificar
-        </button>
+    <section class="sectionCursos">
+      <h2>Mis cursos</h2>
+      <div class="containerCursos">
+        <% servicios.forEach(function(servicio){ %>
+          <div class="cardCurso">
+            <div style="width: 100%;">
+              <p class="nombreCurso"> <%=servicio.language %></p>
+              <div class="sub">
+                <p class="diasCurso"> <%=servicio.week_days %></p>
+                <p class="diasCurso"> <%=servicio.week_times %>hs</p>
+              </div>
+              <p class="precioCurso"> $<%=servicio.price %> por hora</p>
+            </div>
+            <button class="btn verCurso">ver curso</button>
+          </div>
+        <% }) %>
       </div>
-      <!-- card 1 -->
-      <div>
-        <div class="serviceImg">
-          <span class="discountTag"> $5000</span>
-          <i class="fas fa-comments"></i>
-          <h4>
-            Conversación
-          </h4>
-          <p class="description">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa,
-          </p>
-        </div>
-        <button class="serviceInfo">
-          <i class="fas fa-pen"></i>
-          Modificar
-        </button>
-      </div>
-      <!-- card 1 -->
-      <div>
-        <div class="serviceImg">
-          <span class="discountTag"> $5000</span>
-          <i class="fas fa-comments"></i>
-          <h4>
-            Conversación
-          </h4>
-          <p class="description">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa,
-          </p>
-        </div>
-        <button class="serviceInfo">
-          <i class="fas fa-pen"></i>
-          Modificar
-        </button>
-      </div>
-      <!-- card 1 -->
-      <div>
-        <div class="serviceImg">
-          <span class="discountTag"> $5000</span>
-          <i class="fas fa-comments"></i>
-          <h4>
-            Conversación
-          </h4>
-          <p class="description">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa,
-          </p>
-        </div>
-        <button class="serviceInfo">
-          <i class="fas fa-pen"></i>
-          Modificar
-        </button>
-      </div>
-
-    </div>
+    </section>
     <!-- Footer -->
     <%- include('../partials/footer.ejs')%>
-
-
-      <script src="/js/scriptHeader.js"></script>
+    <script src="/js/scriptHeader.js"></script>
 </body>
 
 </html>

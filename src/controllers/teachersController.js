@@ -1,5 +1,6 @@
 const path = require('path');
 const profesoresServices = require('../services/teachersService');
+const packageService = require("../services/packagesService");
 const { validationResult } = require("express-validator");
 const db = require('../database/models');
 const sequelize = db.sequelize;
@@ -17,6 +18,9 @@ let teachersController = {
     res.render('teachers/viewStudents', { estudiantes: estudiantes });
   },
   packages: async function (req, res) {
+    const servicios = await db.Class.findAll({
+      attributes: ["description", "language", "week_days", "week_times", "price"],
+    });
     const allLanguages = await db.Class.findAll({
       attributes: [
         [sequelize.fn("DISTINCT", sequelize.col(`language`)), `language`],
@@ -42,10 +46,10 @@ let teachersController = {
         [sequelize.fn("DISTINCT", sequelize.col(`types`)), `types`],
       ],
     });
-    /* console.log(allLevels) */
-    /*  */
+    
     res.render('teachers/createPackageTeachers',
     {
+      servicios: servicios,
       allLanguages: allLanguages,
       allWeekDays: allWeekDays,
       allWeekTimes: allWeekTimes, 
