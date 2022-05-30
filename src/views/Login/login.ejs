@@ -14,6 +14,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <link href="/css/normalize.css" rel="stylesheet">
   <link href="/css/login.css" rel="stylesheet">
+  <script src="/js/validation.js"></script>
 </head>
 
 <body>
@@ -28,12 +29,12 @@
           <form class="formulario" action="/users/login" method="POST" style="width: 60%;">
             <div class="campos">
               <label for="Mail"></label>
-              <input placeholder="Mail" type="email" name="email" class="input-form"
+              <input placeholder="Mail" type="email" name="email" class="input-form" id="email"
               <%= locals.errors && errors.email ? 'is-invalid' : null %>
 							value="<%= locals.oldData ? oldData.email : null %>"
               >
               <% if(locals.errors && errors.email) { %>
-                <div class="text-danger" style="color: red">
+                <div class="text-danger" style="color: red" >
                   <%= errors.email.msg %>
                 </div>
               <% } %>
@@ -41,12 +42,12 @@
 
             <div class="campos">
               <label for="password"></label>
-              <input placeholder="Contraseña" type="password" name="password" class="input-form"
+              <input placeholder="Contraseña" type="password" name="password" class="input-form" id="password"
               <%= locals.errors && errors.password ? 'is-invalid' : null %>
 							value="<%= locals.oldData ? oldData.password : null %>"
               >
               <% if(locals.errors && errors.password) { %>
-                <div class="text-danger" style="color: red">
+                <div class="text-danger" >
                   <%= errors.password.msg %>
                 </div>
               <% } %>
@@ -67,6 +68,7 @@
 
       </section>
   </main>
+  
 </body>
 
 </html>

@@ -450,7 +450,7 @@ footer .footerTeam {
 
 
 /* ---------- RESPONSIVE --------- */
-@media (max-width: 480px) {
+@media (max-width: 850px) {
   .responsive-one {
     display: flex;
     flex-direction: row;

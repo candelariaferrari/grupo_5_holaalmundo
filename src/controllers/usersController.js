@@ -1,8 +1,11 @@
+const fs = require("fs");
+const path = require("path");
 const bcrypt = require("bcryptjs");
 const { validationResult } = require("express-validator");
 const db = require("../database/models")
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
+
 
 const users = {
     login: (req, res, next) => {
@@ -10,11 +13,11 @@ const users = {
     },
     processLogin: (req, res, next) => {
         const errorsValidation = validationResult(req);
-
+        console.log(errorsValidation);
         if(!errorsValidation.isEmpty()){
             return res.render("login/login", { 
                 errors: errorsValidation.mapped(),
-                oldData: req.body 
+                oldData: req.body,
             });
         } else {
             db.User.findOne({
@@ -75,7 +78,7 @@ const users = {
         const errorsValidation = validationResult(req);
         const allGenres = await db.Sex.findAll();
         const allRol = await db.Rol.findAll();
- 
+        console.log(errorsValidation);
         if(errorsValidation.errors.length > 0){
             return  res.render('register/register', {
                 errors: errorsValidation.mapped(),
@@ -85,6 +88,7 @@ const users = {
             });
         } else {
             
+        
            await db.User.create({
                 name: req.body.name,
                 last_name: req.body.last_name,

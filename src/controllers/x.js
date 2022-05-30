@@ -1,6 +1,5 @@
 const path = require('path');
 const profesoresServices = require('../services/teachersService');
-const packageService = require("../services/packagesService");
 const { validationResult } = require("express-validator");
 const db = require('../database/models');
 const sequelize = db.sequelize;
@@ -18,9 +17,6 @@ let teachersController = {
     res.render('teachers/viewStudents', { estudiantes: estudiantes });
   },
   packages: async function (req, res) {
-    const servicios = await db.Class.findAll({
-      attributes: ["description", "language", "week_days", "week_times", "price"],
-    });
     const allLanguages = await db.Class.findAll({
       attributes: [
         [sequelize.fn("DISTINCT", sequelize.col(`language`)), `language`],
@@ -46,17 +42,23 @@ let teachersController = {
         [sequelize.fn("DISTINCT", sequelize.col(`types`)), `types`],
       ],
     });
-    
-    res.render('teachers/createPackageTeachers',
-    {
-      servicios: servicios,
-      allLanguages: allLanguages,
-      allWeekDays: allWeekDays,
-      allWeekTimes: allWeekTimes, 
-      allLevels: allLevels,
-      allTypes: allTypes
-    });
-
+    /* console.log(allLevels) */
+    /*  */
+      Promise.all([allLanguages,allWeekDays,allWeekTimes,allLevels,allTypes])
+            .then(function([allLanguages,allWeekDays,allWeekTimes,allLevels,allTypes]){ 
+              res.render('teachers/createPackageTeachers',
+              {
+                allLanguages: allLanguages,
+                allWeekDays: allWeekDays,
+                allWeekTimes: allWeekTimes, 
+                allLevels: allLevels,
+                allTypes: allTypes
+              });
+        
+            })
+            .catch(error => {
+                console.log(error);
+        })
   },
   processPackages: async function (req, res, next) {
     const errorsValidation = validationResult(req);
@@ -85,8 +87,7 @@ let teachersController = {
         [sequelize.fn("DISTINCT", sequelize.col(`types`)), `types`],
       ],
     });
-
-    console.log("ERRORES DEL EXPRESS V" + errorsValidation);
+    console.log(errorsValidation);
     if(errorsValidation.errors.length > 0){
         return  res.render('teachers/createPackageTeachers', {
             errors: errorsValidation.mapped(),
@@ -107,13 +108,12 @@ let teachersController = {
             topics: req.body.topics,
             types: req.body.types,
             price: req.body.price,
-            cap_max: req.body.cap_max,
-            link_class: req.body.link_class
+            cap_max: req.body.cap_max
         }).catch(function(err){
             console.log(err);
         })
-        console.log("Esto viene en el body al crear un paquete", req.body.language);
-        res.redirect('/teachers/packages');
+        console.log("Esto viene en el body al crear un paquete", req.body);
+        res.redirect('teachers/createPackageTeachers');
     }
   },
   configuration: function (req, res) {

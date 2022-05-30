@@ -11,214 +11,207 @@
     href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
     rel="stylesheet">
   <link href="/css/normalize.css" rel="stylesheet">
-  <link href="/css/seteoPerfilProfes-1.css" rel="stylesheet">
   <link rel="stylesheet" href="/css/partialsCss/partials.css">
-
+  <link href="/css/createPackageTeacher.css" rel="stylesheet">
+  <script src="/js/validationPackages.js"></script>
 </head>
 
 <body>
   <!-- Header -->
   <%- include('../partials/header.ejs')%>
-    <main class="container-main">
-      <section class="container-filtros">
-        <div class="formPaquetes">
-          <div class="container-header">
-            <h2>Crea tus paquetes</h2>
-          </div>
-          <form action="" method="post">
-            <div class="contentInput">
-              <input class="inputPaquete" type="text" name="name" id="name" placeholder="Nombre del paquete: ">
-            </div>
-            <div class="inputPaquete">
-              <label for="lenguaje">Idioma que vas a enseñanar:</label>
-              <select id="cars" name="carlist" form="carform">
-                <option value="ing">Ingles</option>
-                <option value="es">Español</option>
-                <option value="port">Portugues</option>
-                <option value="ita">Italiano</option>
-              </select>
-            </div>
-            <div class="inputPaquete">
-              <label for="dias">Dias disponibles:</label>
-              <div class="check">
-                <div>
-                  <input type="checkbox" value="lunes"> Lunes
-                </div>
-                <div>
-                  <input type="checkbox" value="Martes"> Martes
-                </div>
-                <div>
-                  <input type="checkbox" value="Miercoles"> Miércoles
-                </div>
-                <div>
-                  <input type="checkbox" value="jueves"> Jueves
-                </div>
-                <div>
-                  <input type="checkbox" value="Viernes"> Viernes
-                </div>
-                <div>
-                  <input type="checkbox" value="sabado"> Sábado
-                </div>
-                <div>
-                  <input type="checkbox" value="domingo"> Domingo
-                </div>
-              </div>
 
-            </div>
-            <!-- <div class="btnNext">
-            <button class="next">Continuar<i class="fas fa-angle-down"></i> </button>
-          </div> -->
-            <div id="contentTwo">
+    <section class="contentSlide">
 
-              <!--  <div class="btnBack">
-              <button class="back"> <i class="fas fa-angle-up"></i> Volver </button>
-            </div> -->
-              <div class="inputPaquete">
-                <label for="lenguaje">Horarios disponibles:</label>
-                <div class="check">
-                  <div>
-                    <input type="checkbox" value="#"> 08:00 a 9:00
-                  </div>
-                  <div>
-                    <input type="checkbox" value="#"> 10:00 a 11:00
-                  </div>
-                  <div>
-                    <input type="checkbox" value="#"> 14:00 a 15:00
-                  </div>
-                </div>
-                <div class="check">
-                  <div>
-                    <input type="checkbox" value="#"> 16:00 a 17:00
-                  </div>
-                  <div>
-                    <input type="checkbox" value="#"> 18:00 a 19:00
-                  </div>
-                  <div>
-                    <input type="checkbox" value="#"> 20:00 a 21:00
-                  </div>
-                </div>
-              </div>
-              <div class="inputPaquete">
-                <label for="lenguaje">Nivel a enseñar:</label>
-                <select id="cars" name="carlist" form="carform">
-                  <option value="basico">Básico</option>
-                  <option value="medio">Medio</option>
-                  <option value="avanzado">Avanzado</option>
-                </select>
-              </div>
-              <div class="inputPaquete">
-                <label for="lenguaje">Temáticas de interes:</label>
-                <div class="check">
-                  <div>
-                    <input type="checkbox" value="#"> Naturaleza
-                  </div>
-                  <div>
-                    <input type="checkbox" value="#"> Música
-                  </div>
-                  <div>
-                    <input type="checkbox" value="#"> Deportes
-                  </div>
-                  <div>
-                    <input type="checkbox" value="#"> Profesiones
-                  </div>
-                  <div>
-                    <input type="checkbox" value="#"> Viajes
-                  </div>
-                </div>
-              </div>
-              <div class="inputPaquete">
-                <label for="price">Precio por hora:</label>
-                <input type="text" name="price" id="price" class="price">
-              </div>
-              <div class="btnNext">
-                <button class="next">crear<i class="fas fa-check"></i></i> </button>
-              </div>
-            </div>
-
-          </form>
-        </div>
-      </section>
-      <h2 class="misPaq">Mis paquetes</h2>
-      <div class="crearPaquete">
-        <!-- card 1 -->
-        <div>
-          <div class="serviceImg">
-            <span class="discountTag"> $5000</span>
-            <i class="fas fa-comments"></i>
-            <h4>
-              Conversación
-            </h4>
-            <p class="description">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa,
-            </p>
-          </div>
-          <button class="serviceInfo">
-            <i class="fas fa-pen"></i>
-            Modificar
-          </button>
-        </div>
-        <!-- card 1 -->
-        <div>
-          <div class="serviceImg">
-            <span class="discountTag"> $5000</span>
-            <i class="fas fa-comments"></i>
-            <h4>
-              Conversación
-            </h4>
-            <p class="description">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa,
-            </p>
-          </div>
-          <button class="serviceInfo">
-            <i class="fas fa-pen"></i>
-            Modificar
-          </button>
-        </div>
-        <!-- card 1 -->
-        <div>
-          <div class="serviceImg">
-            <span class="discountTag"> $5000</span>
-            <i class="fas fa-comments"></i>
-            <h4>
-              Conversación
-            </h4>
-            <p class="description">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa,
-            </p>
-          </div>
-          <button class="serviceInfo">
-            <i class="fas fa-pen"></i>
-            Modificar
-          </button>
-        </div>
-        <!-- card 1 -->
-        <div>
-          <div class="serviceImg">
-            <span class="discountTag"> $5000</span>
-            <i class="fas fa-comments"></i>
-            <h4>
-              Conversación
-            </h4>
-            <p class="description">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa,
-            </p>
-          </div>
-          <button class="serviceInfo">
-            <i class="fas fa-pen"></i>
-            Modificar
-          </button>
-        </div>
-
+      <div class="titulo">
+        <p>Crea tus aulas virtuales para</p>
+        <h1>enseñar tus conocimientos</h1>
       </div>
+      <form action="/teachers/packages" method="POST" name="formPackage" id="crearPackage">
+        <div class="flexInput">
+          <div class="contentColumn"><!-- columna 1 -->
+            <div class="contentInput"> <!-- nombre -->
+              <label for="description">Nombre del curso:</label>
+              <input type="text" name="description" id="descriptionPackage" autocomplete="off" <%=locals.errors && errors.description
+                ? 'is-invalid' : null %>
+              value="<%= locals.oldData ? oldData.description : null %>">
+                <% if(locals.errors && errors.description) { %>
+                  <div class="msgError">
+                    <%= errors.description.msg %>
+                  </div>
+                  <% } %>
+            </div>
+            <div class="contentInput"><!-- dias -->
+              <label for="week_days"> Días de encuentro:</label>
+              <select name="week_days" id="week_days" <%=locals.errors && errors.week_days ? 'is-invalid' : null %>>
+                <option value="" disabled selected></option>
+                <% allWeekDays.forEach(days=> { %>
+                  <option value="<%= `${days.dataValues.days}` %>">
+                    <%= locals.oldData && (days.dataValues.days===oldData.days) ? "select" : null %>
+                      <%= `${days.dataValues.days}` %>
+                  </option>
+                  <% }) %>
+              </select>
+              <% if (locals.errors && errors.week_days) { %>
+                <div class="msgError">
+                  <%= errors.week_days.msg %>
+                </div>
+                <% } %>
+            </div>
+            <div class="contentInput">
+              <!-- nivel -->
+              <label for="level">Nivel a enseñar:</label>
+              <select name="level" id="level" <%=locals.errors && errors.levels ? 'is-invalid' : null %>>
+                <option value="" disabled selected></option>
+                <% allLevels.forEach(levels=> { %>
+                  <option value="<%= `${levels.dataValues.levels}` %>">
+                    <%= locals.oldData && (levels.dataValues.levels===oldData.levels) ? "select" : null %>
+                      <%= `${levels.dataValues.levels}` %>
+                  </option>
+                  <% }) %>
+              </select>
+              <% if (locals.errors && errors.level) { %>
+                <div class="msgError">
+                  <%= errors.level.msg %>
+                </div>
+                <% } %>
+            </div>
+            <div class="contentInput">
+              <!-- modalidad -->
+              <label for="types">Tipo de curso:</label>
+              <select name="types" id="types" <%=locals.errors && errors.types ? 'is-invalid' : null %>>
+                <option value="" disabled selected></option>
+                <% allTypes.forEach(types=> { %>
+                  <option value="<%= `${types.dataValues.types}` %>">
+                    <%= locals.oldData && (types.dataValues.types===oldData.types) ? "select" : null %>
+                      <%= `${types.dataValues.types}` %>
+                  </option>
+                  <% }) %>
+              </select>
+              <% if (locals.errors && errors.types) { %>
+                <div class="msgError">
+                  <%= errors.types.msg %>
+                </div>
+                <% } %>
+            </div>
+            <div class="contentInput">
+              <!-- cap max -->
+              <label for="cap_max">Capacidad máxima de alumnos:</label>
+              <input id="cap_max" type="text" name="cap_max" autocomplete="off" <%=locals.errors && errors.cap_max
+                ? 'is-invalid' : null %>
+              value="<%= locals.oldData ? oldData.cap_max : null %>"
+                >
+                <% if(locals.errors && errors.cap_max) { %>
+                  <div class="msgError">
+                    <%= errors.cap_max.msg %>
+                  </div>
+                  <% } %>
+            </div>
+          </div>
+          <div class="contentColumn"><!-- columna 2 -->
+            <div class="contentInput"><!-- language -->
+              <label for="language:">Idioma a enseñar:</label>
+              <select name="language" id="language" <%=locals.errors && errors.language ? 'is-invalid' : null %>>
+                <option value="" disabled selected></option>
+                <% allLanguages.forEach(language=> { %>
+                  <option value="<%= `${language.dataValues.language}` %>">
+                    <%= locals.oldData && (language.dataValues.language===oldData.language) ? "select" : null %>
+                      <%= `${language.dataValues.language}` %>
+                  </option>
+                  <% }) %>
+              </select>
+              <% if (locals.errors && errors.language) { %>
+                <div class="msgError">
+                  <%= errors.language.msg %>
+                </div>
+                <% } %>
+            </div>
+            <div class="contentInput">
+              <!-- hora -->
+              <label for="week_times">Hora de encuentro:</label>
+              <select name="week_times" id="week_times" <%=locals.errors && errors.week_times ? 'is-invalid' : null %>>
+                <option value="" disabled selected></option>
+                <% allWeekTimes.forEach(times=> { %>
+                  <option value="<%= `${times.dataValues.times}` %>">
+                    <%= locals.oldData && (times.dataValues.times===oldData.times) ? "select" : null %>
+                      <%= `${times.dataValues.times}` %>
+                  </option>
+                  <% }) %>
+              </select>
+              <% if (locals.errors && errors.week_times) { %>
+                <div class="msgError">
+                  <%= errors.week_times.msg %>
+                </div>
+                <% } %>
+            </div>
+            <div class="contentInput">
+              <!-- tematica -->
+              <label for="topics">Temática de intereses comunes:</label>
+              <input id="topics" type="text" name="topics" autocomplete="off" <%=locals.errors &&
+                errors.topics ? 'is-invalid' : null %>
+              value="<%= locals.oldData ? oldData.topics : null %>"
+                >
+                <% if(locals.errors && errors.topics) { %>
+                  <div class="msgError">
+                    <%= errors.topics.msg %>
+                  </div>
+                  <% } %>
+            </div>
+            <div class="contentInput">
+              <!-- precio -->
+              <label for="price">Precio por hora:</label>
+              <input type="text" name="price" id="price" class="price" autocomplete="off" <%=locals.errors
+                && errors.price ? 'is-invalid' : null %> value="<%= locals.oldData ? oldData.price : null %>">
+                <% if(locals.errors && errors.price) { %>
+                  <div class="msgError">
+                    <%= errors.price.msg %>
+                  </div>
+                  <% } %>
+            </div>
+            <div class="contentInput">
+              <!-- link -->
+              <label for="link_class">Link de plataforma:</label>
+              <input type="text" name="link_class" id="link_class" id="link_class" autocomplete="off" <%=locals.errors
+                && errors.link_class ? 'is-invalid' : null %> value="<%= locals.oldData ? oldData.link_class : null %>">
+                <% if(locals.errors && errors.link_class) { %>
+                  <div class="msgError">
+                    <%= errors.link_class.msg %>
+                  </div>
+                  <% } %>
+            </div>
+          </div>
+        </div>
+        <div style="margin: auto;text-align: center;">
+          <button class="btn crear" type="submit">crear<i class="fas fa-check"></i></i> </button>
+        </div>
+        <div class="errores">
+          <ul></ul>
+        </div>
+      </form>
 
-    </main>
-    <!-- chat -->
-    <%- include('../partials/chat.ejs')%>
-      <!-- Footer -->
-      <%- include('../partials/footer.ejs')%>
-
-
-        <script src="/js/scriptHeader.js"></script>
+    </section>
+    <div class="onda">
+    </div>
+    <section class="sectionCursos">
+      <h2>Mis cursos</h2>
+      <div class="containerCursos">
+        <% servicios.forEach(function(servicio){ %>
+          <div class="cardCurso">
+            <div style="width: 100%;">
+              <p class="nombreCurso"> <%=servicio.language %></p>
+              <div class="sub">
+                <p class="diasCurso"> <%=servicio.week_days %></p>
+                <p class="diasCurso"> <%=servicio.week_times %>hs</p>
+              </div>
+              <p class="precioCurso"> $<%=servicio.price %> por hora</p>
+            </div>
+            <button class="btn verCurso">ver curso</button>
+          </div>
+        <% }) %>
+      </div>
+    </section>
+    <!-- Footer -->
+    <%- include('../partials/footer.ejs')%>
+    <script src="/js/scriptHeader.js"></script>
 </body>
 
 </html>
