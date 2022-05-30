@@ -27,8 +27,6 @@ const users = {
             }).then( usuarioEncontrado => {
 
                 if(usuarioEncontrado){
-
-                    console.log('Entro en el controlador - Llego el user', usuarioEncontrado);
         
                     let password = req.body.password;
         

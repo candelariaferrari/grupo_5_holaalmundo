@@ -8,7 +8,8 @@ function userLoggedMiddlware(req, res, next) {
     res.locals.isLogged = false;
     res.locals.loggedStudent = false;
     res.locals.loggedTeacher = false;
-    res.locals.user = false
+    res.locals.user = false;
+    res.locals.items = 0;
     // Email que viene en la cookie
     let emailInCookie = req.cookies.userEmail;
     // let userFromCookie = User.findByField('email', emailInCookie);
