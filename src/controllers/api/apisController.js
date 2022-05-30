@@ -5,8 +5,10 @@ const bcrypt = require("bcryptjs");
 
 const apis = {
   usersList: function (req, res) {
-    db.User.findAll().then((users) => { // array 
-      let newData = users.map((user) => { // user
+    db.User.findAll().then((users) => {
+      // array
+      let newData = users.map((user) => {
+        // user
         return {
           id: user.id,
           name: user.name,
@@ -269,9 +271,7 @@ const apis = {
   },
   listClasesLevel: async function (req, res) {
     let Level = await db.Class.findAll({
-      attributes: [
-        [sequelize.fn("DISTINCT", sequelize.col(`level`)), `Level`],
-      ],
+      attributes: [[sequelize.fn("DISTINCT", sequelize.col(`level`)), `Level`]],
       oder: [["level", "DESC"]],
       limit: 10,
     });
@@ -288,9 +288,7 @@ const apis = {
   },
   listClasesTypes: async function (req, res) {
     let Types = await db.Class.findAll({
-      attributes: [
-        [sequelize.fn("DISTINCT", sequelize.col(`types`)), `Types`],
-      ],
+      attributes: [[sequelize.fn("DISTINCT", sequelize.col(`types`)), `Types`]],
       oder: [["types", "DESC"]],
       limit: 10,
     });
@@ -305,7 +303,30 @@ const apis = {
     };
     res.json(jsonTypes);
   },
+  updateCart: async function (req, res) {
+    await db.Item.update(
+      {
+        class_subtotal: Number(req.body.quantity) * Number(req.body.unit_price),
+        class_quantity: Number(req.body.quantity),
+      },
+      {
+        where: {
+          id_user_fk: req.session.userLogged.id,
+          id_order_fk: null,
+          class_name: req.body.class_name,
+        },
+      }
+    );
+    let item = await db.Item.findOne({
+      where: {
+        id_user_fk: req.session.userLogged.id,
+        id_order_fk: null,
+        class_name: req.body.class_name,
+      },
+    });
 
+    res.json(item);
+  },
 };
 
 module.exports = apis;
