@@ -223,6 +223,7 @@ let studentsController = {
     let [español, ingles, portuges, aleman, frances, italiano, chino] = casteoInputs(language); 
     let [conversacionIndividual, conversacionGrupal, claseIndividual, claseGrupal, examen] = casteoInputs(cursos); // if examen -> nivel de examen  && if conversacionInd or conversacionGrup -> Tematicas
     let [viajes, culinaria, deportes, musica, general] = casteoInputs(topics); 
+    console.log(culinaria);
     // let [lunes_miercoles, martes_jueves, lunes_viernes, lunes_miercoles_viernes, martes_miercoles, martes_viernes, miercoles_jueves] = casteoInputs(week_days);
     // let [ocho_diez, nueve_once, diez_doce, once_una, una_tres, doce_dos, tres_cinco, cuatro_seis, cinco_siete, seis_ocho] = casteoInputs(week_times);
 
@@ -255,27 +256,6 @@ let studentsController = {
           { "$topics$": { [Op.like]: "%" + deportes + "%" } },
           { "$topics$": { [Op.like]: "%" + musica + "%" } },
           { "$topics$": { [Op.like]: "%" + general + "%" } },
-
-          // week_days - lunes_miercoles, martes_jueves, lunes_viernes, lunes_miercoles_viernes, martes_miercoles, martes_viernes, miercoles_jueves
-          /*{ "$week_days$": lunes_miercoles },
-          { "$week_days$": martes_jueves },
-          { "$week_days$": lunes_viernes },
-          { "$week_days$": lunes_miercoles_viernes },
-          { "$week_days$": martes_miercoles },
-          { "$week_days$": martes_viernes },
-          { "$week_days$": miercoles_jueves },*/
-
-          // week_times - ocho_diez, nueve_once, diez_doce, once_una, una_tres, doce_dos, tres_cinco, cuatro_seis, cinco_siete, seis_ocho
-          /*{ "$week_times$": ocho_diez },
-          { "$week_times$": nueve_once },
-          { "$week_times$": diez_doce },
-          { "$week_times$": once_una },
-          { "$week_times$": una_tres },
-          { "$week_times$": doce_dos },
-          { "$week_times$": tres_cinco },
-          { "$week_times$": cuatro_seis },
-          { "$week_times$": cinco_siete }, 
-          { "$week_times$": seis_ocho },*/
 
         ],
       },
