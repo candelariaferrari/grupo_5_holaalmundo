@@ -5,19 +5,6 @@ toggleButton.addEventListener('click', () => {
   navList.classList.toggle('active');
 })
 
-
-/* ---- PREVIEW CARRITO ----- */
-function openNav() {
-  document.getElementById("previewCarrito").style.width = "250px";
-  document.getElementById("main").style.marginRight = "250px";
-}
-function closeNav() {
-  document.getElementById("previewCarrito").style.width = "0";
-  document.getElementById("main").style.marginRight = "0";
-}
-const template = document.createElement('template');
-document.body.appendChild(template.content);
-
 /* ---- scroll chat -- */
 const body = document.body;
 const scrollUp = "scroll-up";

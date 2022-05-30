@@ -14,7 +14,7 @@ module.exports = {
     });
     console.log("EL precio total es: ", totalPrice + "\n");
     console.log("Los items son: ", items);
-    return res.render("shoppingCart/shoppingCart", { items, totalPrice });
+    return res.render("shoppingCart/previewCart", { items, totalPrice });
   },
   // How to create the cart item
   addProduct: async (req, res) => {
