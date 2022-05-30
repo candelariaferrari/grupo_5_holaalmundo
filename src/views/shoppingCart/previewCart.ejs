@@ -1,0 +1,40 @@
+<!-- carrito -->
+
+<% if (items.length > 0) { %> <% items.forEach(function(item) { %>
+<div id="previewCarrito" class="sidebar">
+  <div class="title">
+    <h4>Mi carrito</h4>
+    <div href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+      <i class="far fa-times-circle"></i>
+    </div>
+  </div>
+  <div class="details">
+    <p>Nombre del paquete</p>
+    <p><strong>El detalle de lo que contiene el paquete</strong></p>
+  </div>
+  <div class="details">
+    <p>Cantidad</p>
+    <p><strong><%=item.class_quantity %></strong></p>
+  </div>
+  <div class="details">
+    <p>Precio</p>
+    <p><strong>$5000</strong></p>
+  </div>
+  <button>
+    <i class="far fa-trash-alt"></i>
+    Borrar
+  </button>
+  <button>
+    <a class="comprar" href="shoppingCart/shoppingCart">
+      <i class="far fa-smile-wink"></i>
+      Comprar
+    </a>
+  </button>
+</div>
+<% }) %> <% } else { %>
+<div id="emptycart">
+ 
+</div>
+<% } %>
+
+<script src="/js/previewCart.js"></script>
