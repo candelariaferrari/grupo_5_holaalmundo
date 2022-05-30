@@ -20,8 +20,8 @@ const usersRouter = require('./routes/users');
 const routsStudents = require('./routes/students');
 const routTeachers = require('./routes/teachers');
 // TODO
-//const cartRouter = require("./routes/carrito");
-//const apiRouter = require('./routes/api');
+const cartRouter = require("./routes/carrito");
+const apiRouter = require('./routes/api');
 
 // ************ express() - (don't touch) ************
 const app = express();
@@ -55,8 +55,8 @@ app.use('/students', routsStudents);
 app.use('/teachers', routTeachers);
 // TODO
 // app.use("/admin" ,adminRouter);
-// app.use("/cart", cartRouter);
-// app.use('/api', apiRouter);
+app.use("/cart", cartRouter);
+app.use('/api', apiRouter);
 
 // ************ Template Engine - (don't touch) ************
 app.set('view engine', 'ejs');
