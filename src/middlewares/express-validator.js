@@ -1,4 +1,4 @@
-const { check } = require("express-validator");
+const { check, body } = require("express-validator");
 const bcrypt = require("bcryptjs");
 const db = require('../database/models');
 const userServices = require("../services/usersService");
@@ -115,7 +115,7 @@ const validar = {
       .withMessage("Selecciona tu rol"),
   ],
   registerAdmin: [
-    body('admin')
+    check('admin')
     .notEmpty()
     .withMessage('Tines que ingresar el email')
   ],
