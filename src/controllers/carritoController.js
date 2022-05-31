@@ -4,7 +4,7 @@ module.exports = {
   listCart: async (req, res) => {
     let items = await db.Item.findAll({
       where: {
-        id_user_fk: 23 /*req.session.userLogged.id,*/,
+        id_user_fk: req.session.userLogged.id,
         id_order_fk: null, // should be null
       },
     });
@@ -17,21 +17,21 @@ module.exports = {
     return res.render("shoppingCart/shoppingCart", { items, totalPrice });
   },
   // How to create the cart item
-  addProduct: async (req, res) => {
-    let classFound = await db.Class.findByPk(req.params.id);
+  addItem: async (req, res) => {
+    let classFound = await db.Class.findByPk(req.params.id); // Como agarro este parametro
     await db.Item.create({
       class_name: classFound.description,
       class_price: Number(classFound.price),
       class_image: classFound.image,
-      class_subtotal: Number(req.body.cantidad) * Number(classFound.price),
-      class_quantity: Number(req.body.cantidad),
+      class_subtotal: Number(req.body.cantidad) * Number(classFound.price), // Cantidad de clicks
+      class_quantity: Number(req.body.cantidad), // Cantidad de clicks
       id_user_fk: req.session.userLogged.id,
       /**id_order_fk: xxx */
     });
-    return res.redirect("/cart");
+    return res.redirect("/cart"); 
   },
-  destroyItem: async (req, res) => {
-    await db.Item.destroy({
+  destroyItem: async (req, res) => { // Donde se implementa este metodo (click de la caneca)
+    await db.Item.destroy({ 
       where: {
         id: req.params.id, // How do I get this params?
       },

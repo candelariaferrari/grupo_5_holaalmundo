@@ -27,6 +27,8 @@ const users = {
             }).then( usuarioEncontrado => {
 
                 if(usuarioEncontrado){
+
+                    console.log('Entro en el controlador - Llego el user', usuarioEncontrado);
         
                     let password = req.body.password;
         
@@ -99,7 +101,6 @@ const users = {
             }).catch(function(err){
                 console.log(err);
             })
-            console.log("Esto viene en el body al crear el user", req.body);
             res.redirect('/users/login');
         }
     },
@@ -142,4 +143,4 @@ const users = {
     }  
 }    
 
-module.exports=users;
+module.exports = users;

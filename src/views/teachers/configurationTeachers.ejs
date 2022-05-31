@@ -10,7 +10,8 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
     rel="stylesheet" />
-  < <link href="/css/style.css" rel="stylesheet">
+  <link href="/css/style.css" rel="stylesheet">
+  <script src="/js/validationConfigTeachers.js"></script>
 </head>
 
 <body>
@@ -19,18 +20,67 @@
     <section class="containerBody">
       <div class="flexPersonal">
         <h1>Configuración personal</h1>
-        <form name="form" class="formulario" action="#" method="POST"></form>
-        <input class="input-form" placeholder="Nombre" type="text" name="nombre" required>
-        <input class="input-form" placeholder="Apellido" type="text" name="apellido" required>
-        <input class="input-form" placeholder="Celular" type="text" name="celular" required>
-        <input class="input-form disabled" type="email" value="ferrari@gmailcom" readonly>
-        <input class="input-form disabled" type="password" value="........" readonly>
-        <input class="input-form disabled" id="user" value="profesor" readonly>
-        <input class="input-form disabled" type="user_sex" value="mujer" readonly>
-        <input class="input-form" placeholder="Dirección" type="text" name="user_address" required>
+        <form name="form" class="formulario" id="config-teachers" action="/teachers/configuration" method="POST">
+
+        <input class="input-form" placeholder="Nombre" type="text" name="name" id="nameTeacher"
+        <%= locals.errors && errors.name ? "is-invalid" : null %>
+        value="<%= locals.oldData ? oldData.name : null %>">
+          <% if(locals.errors && errors.name) { %>
+            <div class="msgError">
+              <%= errors.name.msg %>
+            </div>
+            <% } %>
+
+        <input class="input-form" placeholder="Apellido" type="text" name="last_name" id="last_nameTeacher"
+        <%= locals.errors && errors.last_name ? "is-invalid" : null %>
+          value="<%= locals.oldData ? oldData.last_name : null %>" >
+          <% if(locals.errors && errors.last_name) { %>
+            <div class="msgError">
+              <%= errors.last_name.msg %>
+            </div>
+            <% } %>
+
+        <input class="input-form" placeholder="Celular" type="text" name="phone" id="phoneTeacher"
+        <%= locals.errors && errors.phone ? "is-invalid" : null %>
+          value="<%= locals.oldData ? oldData.phone : null %>" >
+          <% if(locals.errors && errors.phone) { %>
+            <div class="msgError">
+              <%= errors.phone.msg %>
+            </div>
+            <% } %>
+
+        <input class="input-form disabled" type="email" value="usuario@gmail.com" readonly>
+        <input class="input-form disabled" type="password" value="********" readonly>
+        <input class="input-form disabled" id="user" value="Profesor" readonly>
+        <input class="input-form disabled" type="user_sex" value="Mujer" readonly>
+
         <div class="subir">
-          <input type="file" name="group-image" id="nuestroinput" class="inputSubir">
+          <input type="file" name="avatar" id="nuestroInputTeacher" class="inputSubir" onchange="return imageValidation()"
+            <%= locals.errors && errors.avatar ? "is-invalid" : null %>
+            value="<%= locals.oldData ? oldData.avatar : null %>" >
+            <% if(locals.errors && errors.avatar) { %>
+             <div class="msgError">
+              <%= errors.avatar.msg %>
+             </div>
+            <% } %>
+          </div>
         </div>
+
+        <div id="nuestroInputPreview"> </div>
+
+        <div class="contenedorBtn"> 
+          <button type="submit" class="cancelar">
+            Cancelar
+          </button>
+          <button type="submit" class="reg">
+            Guardar
+          </button>
+        </div>
+
+        <div class="errores-form">
+          <ul></ul>
+        </div>
+
         </form>
       </div>
 

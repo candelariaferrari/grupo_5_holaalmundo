@@ -4,6 +4,7 @@ const packageService = require("../services/packagesService");
 const commentService = require("../services/commentService");
 const usersService = require("../services/usersService");
 
+const { validationResult } = require("express-validator");
 const db = require("../database/models");
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
@@ -223,7 +224,6 @@ let studentsController = {
     let [español, ingles, portuges, aleman, frances, italiano, chino] = casteoInputs(language); 
     let [conversacionIndividual, conversacionGrupal, claseIndividual, claseGrupal, examen] = casteoInputs(cursos); // if examen -> nivel de examen  && if conversacionInd or conversacionGrup -> Tematicas
     let [viajes, culinaria, deportes, musica, general] = casteoInputs(topics); 
-    console.log(culinaria);
     // let [lunes_miercoles, martes_jueves, lunes_viernes, lunes_miercoles_viernes, martes_miercoles, martes_viernes, miercoles_jueves] = casteoInputs(week_days);
     // let [ocho_diez, nueve_once, diez_doce, once_una, una_tres, doce_dos, tres_cinco, cuatro_seis, cinco_siete, seis_ocho] = casteoInputs(week_times);
 
@@ -257,18 +257,60 @@ let studentsController = {
           { "$topics$": { [Op.like]: "%" + musica + "%" } },
           { "$topics$": { [Op.like]: "%" + general + "%" } },
 
+          // week_days - lunes_miercoles, martes_jueves, lunes_viernes, lunes_miercoles_viernes, martes_miercoles, martes_viernes, miercoles_jueves
+          /*{ "$week_days$": lunes_miercoles },
+          { "$week_days$": martes_jueves },
+          { "$week_days$": lunes_viernes },
+          { "$week_days$": lunes_miercoles_viernes },
+          { "$week_days$": martes_miercoles },
+          { "$week_days$": martes_viernes },
+          { "$week_days$": miercoles_jueves },*/
+
+          // week_times - ocho_diez, nueve_once, diez_doce, once_una, una_tres, doce_dos, tres_cinco, cuatro_seis, cinco_siete, seis_ocho
+          /*{ "$week_times$": ocho_diez },
+          { "$week_times$": nueve_once },
+          { "$week_times$": diez_doce },
+          { "$week_times$": once_una },
+          { "$week_times$": una_tres },
+          { "$week_times$": doce_dos },
+          { "$week_times$": tres_cinco },
+          { "$week_times$": cuatro_seis },
+          { "$week_times$": cinco_siete }, 
+          { "$week_times$": seis_ocho },*/
+
         ],
       },
     });
-
     res.render("students/packageStudents", {
       servicios: servicios,
       serviciosFiltrados: serviciosFiltrados,
     });
   },
   configuration: function (req, res) {
-    res.render("students/configurationStudents");
+    res.render("students/configurationStudents")
   },
+  configurationProcess:  async function (req, res, next) {
+  
+    const errorsValidation = validationResult(req);
+
+      console.log("ERRORES DEL EXPRESS V" + errorsValidation);
+      if(errorsValidation.errors.length > 0){
+          return  res.render("students/configurationStudents", {
+              errors: errorsValidation.mapped(),
+              oldData: req.body,
+          });
+      } else {
+         await db.User.update({
+              name: req.body.name,
+              last_name: req.body.last_name,
+              phone: req.body.phone,
+              avatar: req.body.avatar
+          }).catch(function(err){
+              console.log(err);
+          })
+          //console.log("Esto viene en el body al modificar un usuario", req.body.name);
+  }
+},
   shoppingCart: function (req, res) {
     res.render("shoppingCart/shoppingCart");
   },
@@ -286,4 +328,5 @@ let studentsController = {
     return res.redirect("/");
   },
 };
+
 module.exports = studentsController;
