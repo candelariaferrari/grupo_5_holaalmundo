@@ -199,5 +199,34 @@ ul.iconos li
     padding-right: 6px;
 }
 
+/* Validaciones FRONT */
+.borderInput{
+    border: 1px solid red !important;
+}
 
-
+.errores-form {
+    margin: 2em auto 0em;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .errores-form ul {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    list-style: none;
+  }
+  .errores-form div{
+    color: #00FFCB;
+    padding: 0.5em 0em;
+  }
+  .errores-form li {
+    font-size: 0.9rem;
+    display: inline;
+    color: #000;
+  }
+  
+  .errores-form strong {
+    color: #00FFCB;
+  }
