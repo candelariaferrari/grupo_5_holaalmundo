@@ -4,7 +4,7 @@ module.exports = {
   listCart: async (req, res) => {
     let items = await db.Item.findAll({
       where: {
-        id_user_fk: 23 /*req.session.userLogged.id,*/,
+        id_user_fk: req.session.userLogged.id,
         id_order_fk: null, // should be null
       },
     });

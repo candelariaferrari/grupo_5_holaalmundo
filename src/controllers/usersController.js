@@ -101,7 +101,6 @@ const users = {
             }).catch(function(err){
                 console.log(err);
             })
-            console.log("Esto viene en el body al crear el user", req.body);
             res.redirect('/users/login');
         }
     },

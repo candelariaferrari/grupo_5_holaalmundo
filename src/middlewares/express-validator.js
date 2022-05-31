@@ -114,11 +114,16 @@ const validar = {
       .notEmpty()
       .withMessage("Selecciona tu rol"),
   ],
-
+  registerAdmin: [
+    body('admin')
+    .notEmpty()
+    .withMessage('Tines que ingresar el email')
+  ],
   login: [
     check("email")
       .notEmpty() 
       .withMessage("Ingresa tu email")
+      .bail()
       .isEmail()
       .withMessage("El campo email debe tener una dirección de correo válida")
       .custom((value, { req }) => {
@@ -152,6 +157,7 @@ const validar = {
         });
       })
   ],
+
  createPackages: [
     check("description")
       .notEmpty()
