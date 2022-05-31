@@ -215,7 +215,8 @@ select[type]:focus {
 }
 #shoppingCart-metodos{
   background-color: #3651F7;
-  padding: 0em 0em 2em;
+  padding: 0em 0em 8em;
+  box-sizing: border-box;
 }
 #shoppingCart-metodos .titulo {
   border-bottom: none !important;
