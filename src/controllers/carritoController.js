@@ -4,7 +4,7 @@ module.exports = {
   listCart: async (req, res) => {
     let items = await db.Item.findAll({
       where: {
-        id_user_fk: 23 /*req.session.userLogged.id,*/,
+        id_user_fk: req.session.userLogged.id,
         id_order_fk: null, // should be null
       },
     });
@@ -14,7 +14,7 @@ module.exports = {
     });
     console.log("EL precio total es: ", totalPrice + "\n");
     console.log("Los items son: ", items);
-    return res.render("shoppingCart/previewCart", { items, totalPrice });
+    return res.render("shoppingCart/shoppingCart", { items, totalPrice });
   },
   // How to create the cart item
   addProduct: async (req, res) => {

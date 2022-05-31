@@ -123,7 +123,13 @@ const validar = {
       .bail(),
   ],
 
-  login: [
+  registerAdmin: [
+    body('admin')
+    .notEmpty()
+    .withMessage('Tines que ingresar el email')
+  ]
+
+  , login: [
     /** Se toma el campo de name del formulario */
     body('email')
       .notEmpty()
@@ -163,6 +169,7 @@ const validar = {
         });
       })
   ],
+
  createPackages: [
     check("description")
       .notEmpty()
