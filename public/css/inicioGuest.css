@@ -81,8 +81,7 @@ body {
 }
 .form-carrusel {
   background-color: #212121;
-  width: 400px;
-  height: 730px;
+  height: fit-content;
   border-radius: 15px;
   padding: 1em 2em;
   display: flex;
@@ -91,9 +90,8 @@ body {
   justify-content: flex-start;
 }
 .form-carrusel.two {
-  background-color: #00ffcb;
-  width: 400px;
-  height: 550px;
+  background-color: #212121;
+  height: fit-content;
   border-radius: 15px;
   padding: 1em 2em;
   display: flex;
@@ -632,6 +630,75 @@ select {
   opacity: 1;
 }
 
+/* nuevos */
+
+.flexInput {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: auto;
+  margin-top: 1em;
+}
+.contentColumn{
+  width: 40%;
+}
+.contentInput {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+}
+
+.contentInput label {
+  font-size: 18px;
+  color: #fff;
+  padding-left: 1em;
+  margin-bottom: 0.2em;
+}
+
+.contentInput input {
+  height: 35px;
+  width: 100%;
+  border: none;
+  background-color: #00FFCB;
+  border-radius: 10px;
+  color: #212121;
+  padding-inline-start: 1em;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.contentInputClick {
+  background-color: #fff !important;
+  border: 1.5px solid #6243F7 !important;
+  color: #212121;
+}
+
+.contentInput select {
+  height: 35px;
+  width: 100%;
+  border: none;
+  background-color: #00FFCB;
+  border-radius: 10px;
+  color: #212121;
+  padding-inline-start: 1em;
+  font-size: 16px;
+  font-weight: 600;
+
+}
+
+.contentInput input:focus,
+input:focus,
+input[type]:focus {
+  outline: 0 none;
+}
+
+.contentInput select:focus,
+select:focus,
+select[type]:focus {
+  outline: 0 none;
+}
 /* ---------- RESPONSIVE --------- */
 @media (max-width: 480px) {
   .responsive-one {

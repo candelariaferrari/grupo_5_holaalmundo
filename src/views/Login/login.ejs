@@ -15,6 +15,7 @@
   <link href="/css/normalize.css" rel="stylesheet">
   <link href="/css/login.css" rel="stylesheet">
   <script src="/js/validation.js"></script>
+  <script src="/js/validationLogin.js"></script>
 </head>
 
 <body>
@@ -28,13 +29,13 @@
           </div>
           <form class="formulario" action="/users/login" method="POST" style="width: 60%;">
             <div class="campos">
-              <label for="Mail"></label>
-              <input placeholder="Mail" type="email" name="email" class="input-form" id="email"
+              <label for="Email"></label>
+              <input placeholder="Email" type="email" name="email" class="input-form" id="email"
               <%= locals.errors && errors.email ? 'is-invalid' : null %>
 							value="<%= locals.oldData ? oldData.email : null %>"
               >
               <% if(locals.errors && errors.email) { %>
-                <div class="text-danger" style="color: red" >
+                <div class="text-danger">
                   <%= errors.email.msg %>
                 </div>
               <% } %>
@@ -63,10 +64,16 @@
               <button class="reg" type="submit"> 
                 Iniciar
               </button>
+
+              <div class="errores-form">
+                <ul></ul>
+              </div>
+
           </form>
         </div>
 
       </section>
+
   </main>
   
 </body>

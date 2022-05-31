@@ -1,10 +1,11 @@
 const path = require('path');
 const profesoresServices = require('../services/teachersService');
-const packageService = require("../services/packagesService");
+
 const { validationResult } = require("express-validator");
 const db = require('../database/models');
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
+
 let teachersController = {
 
   home: function (req, res) {
@@ -18,9 +19,6 @@ let teachersController = {
     res.render('teachers/viewStudents', { estudiantes: estudiantes });
   },
   packages: async function (req, res) {
-    const servicios = await db.Class.findAll({
-      attributes: ["description", "language", "week_days", "week_times", "price"],
-    });
     const allLanguages = await db.Class.findAll({
       attributes: [
         [sequelize.fn("DISTINCT", sequelize.col(`language`)), `language`],
@@ -46,10 +44,10 @@ let teachersController = {
         [sequelize.fn("DISTINCT", sequelize.col(`types`)), `types`],
       ],
     });
-    
+    /* console.log(allLevels) */
+    /*  */
     res.render('teachers/createPackageTeachers',
     {
-      servicios: servicios,
       allLanguages: allLanguages,
       allWeekDays: allWeekDays,
       allWeekTimes: allWeekTimes, 
@@ -119,6 +117,28 @@ let teachersController = {
   configuration: function (req, res) {
     res.render('teachers/configurationTeachers');
   },
+  configurationProcess:  async function (req, res, next) {
+  
+    const errorsValidation = validationResult(req);
+
+      console.log("ERRORES DEL EXPRESS V" + errorsValidation);
+      if(errorsValidation.errors.length > 0){
+          return  res.render("teachers/configurationTeachers", {
+              errors: errorsValidation.mapped(),
+              oldData: req.body,
+          });
+      } else {
+         await db.User.update({
+              name: req.body.name,
+              last_name: req.body.last_name,
+              phone: req.body.phone,
+              avatar: req.body.avatar
+          }).catch(function(err){
+              console.log(err);
+          })
+          //console.log("Esto viene en el body al modificar un usuario", req.body.name);
+  }
+},
   dashboardLessons: function (req, res) {
     res.render('teachers/dashboardLessons');
   },
