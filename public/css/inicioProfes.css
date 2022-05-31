@@ -472,7 +472,12 @@ blanco: #ffffff
     opacity: 1;
   }
   
-  
+  .bkgContactTeacher{
+  background-color: #212121;
+  position: relative;
+  z-index: -100;
+  margin-top: -24vh;
+  }
   /* ---------- RESPONSIVE --------- */
   @media (max-width: 480px) {
     /* slide main */

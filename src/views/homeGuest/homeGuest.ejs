@@ -61,27 +61,57 @@
                 <!-- REVISAR LAS VALIDACIONES-->
                 <div class="form-one">
                   <form action="/" method="POST">
-                    <input class="input-form" type="text" name="name" id="input-two" placeholder="Nombre">
-                    <input class="input-form" type="text" name="last_name" id="input-two" placeholder="Apellido">
-                    <input class="input-form" type="text" name="phone" id="input-two" placeholder="Celular">
-                    <input class="input-form" type="email" name="email" id="input-two" placeholder="Email">
-                    <input class="input-form" type="password" name="contrasena" id="input-two" placeholder="Contraseña">
-                    <input class="input-form" type="password" name="validationPassword" id="input-two" placeholder="Validacion Contraseña">
-                    <select class="input-form" required name="gender" id="gender">
-                      <label for="Soy:"></label>
-                      <option name="gender" value="Mujer"> Mujer </option>
-                      <option name="gender" value="Hombre"> Hombre </option>
-                    </select>
-                    <select class="input-form" required name="userRol" id="user">
-                      <label for="Soy:"></label>
-                      <option name="rol" value="profesor"> Profesor </option>
-                      <option name="rol" value="estudiante"> Estudiante </option>
-                    </select>
-                    <div class="flexTerminos" id="input-two">
+                    <div class="flexInput">
+                      <div class="contentColumn">
+                        <div class="contentInput"> <!-- nombre -->
+                          <label for="nombre">Nombre:</label>
+                          <input type="text" name="name" id="input-two">
+                        </div>
+                        <div class="contentInput"> 
+                          <label for="phone">Celular:</label>
+                          <input type="text" name="phone" id="input-two">
+                        </div>
+                        <div class="contentInput"> 
+                          <label for="password">Contraseña:</label>
+                          <input type="password" name="contrasena" id="input-two">
+                        </div>
+                        <div class="contentInput"> 
+                          <label for="genre">Sexo:</label>
+                          <select required name="gender" id="gender">
+                            <label for="Soy:"></label>
+                            <option name="gender" value="Mujer"> Mujer </option>
+                            <option name="gender" value="Hombre"> Hombre </option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="contentColumn">
+                        <div class="contentInput"> 
+                          <label for="phone">Apellido:</label>
+                          <input type="text" name="last_name" id="input-two">
+                        </div>
+                        <div class="contentInput"> 
+                          <label for="email">Email:</label>
+                          <input type="email" name="email" id="input-two">
+                        </div>
+                        <div class="contentInput"> 
+                          <label for="validationPassword">Repetir contraseña:</label>
+                          <input type="password" name="validationPassword" id="input-two">
+                        </div>
+                        <div class="contentInput"> 
+                          <label for="email">Soy:</label>
+                          <select required name="userRol" id="user">
+                            <label for="Soy:"></label>
+                            <option name="rol" value="profesor"> Profesor </option>
+                            <option name="rol" value="estudiante"> Estudiante </option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flexTerminos" >
                       <input class="bot-tyc" type="checkbox" name="terminosCondiciones" required>
                       <label class="term-y-cond"> Acepto los términos y condiciones </label>
                     </div>
-                    <button type="submit" class="register">
+                    <button type="submit" class="register" style="margin-bottom:1em;">
                       registrate
                     </button>
                   </form>
@@ -107,27 +137,57 @@
                 </div>
                 <div class="form-one">
                   <form action="/" method="POST">
-                    <input class="input-form" type="text" name="name" id="input-two" placeholder="Nombre">
-                    <input class="input-form" type="text" name="last_name" id="input-two" placeholder="Apellido">
-                    <input class="input-form" type="text" name="phone" id="input-two" placeholder="Celular">
-                    <input class="input-form" type="email" name="email" id="input-two" placeholder="Email">
-                    <input class="input-form" type="password" name="contrasena" id="input-two" placeholder="Contraseña">
-                    <input class="input-form" type="password" name="validationPassword" id="input-two" placeholder="Validacion Contraseña">
-                    <select class="input-form" required name="gender" id="gender">
-                      <label for="Soy:"></label>
-                      <option name="gender" value="Mujer"> Mujer </option>
-                      <option name="gender" value="Hombre"> Hombre </option>
-                    </select>
-                    <select class="input-form" required name="userRol" id="user">
-                      <label for="Soy:"></label>
-                      <option name="rol" value="profesor"> Profesor </option>
-                      <option name="rol" value="estudiante"> Estudiante </option>
-                    </select>
-                    <div class="flexTerminos" id="input-two">
+                    <div class="flexInput">
+                      <div class="contentColumn">
+                        <div class="contentInput"> <!-- nombre -->
+                          <label for="nombre">Nombre:</label>
+                          <input type="text" name="name" id="input-two">
+                        </div>
+                        <div class="contentInput"> 
+                          <label for="phone">Celular:</label>
+                          <input type="text" name="phone" id="input-two">
+                        </div>
+                        <div class="contentInput"> 
+                          <label for="password">Contraseña:</label>
+                          <input type="password" name="contrasena" id="input-two">
+                        </div>
+                        <div class="contentInput"> 
+                          <label for="genre">Sexo:</label>
+                          <select required name="gender" id="gender">
+                            <label for="Soy:"></label>
+                            <option name="gender" value="Mujer"> Mujer </option>
+                            <option name="gender" value="Hombre"> Hombre </option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="contentColumn">
+                        <div class="contentInput"> 
+                          <label for="phone">Apellido:</label>
+                          <input type="text" name="last_name" id="input-two">
+                        </div>
+                        <div class="contentInput"> 
+                          <label for="email">Email:</label>
+                          <input type="email" name="email" id="input-two">
+                        </div>
+                        <div class="contentInput"> 
+                          <label for="validationPassword">Repetir contraseña:</label>
+                          <input type="password" name="validationPassword" id="input-two">
+                        </div>
+                        <div class="contentInput"> 
+                          <label for="email">Soy:</label>
+                          <select required name="userRol" id="user">
+                            <label for="Soy:"></label>
+                            <option name="rol" value="profesor"> Profesor </option>
+                            <option name="rol" value="estudiante"> Estudiante </option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flexTerminos" >
                       <input class="bot-tyc" type="checkbox" name="terminosCondiciones" required>
                       <label class="term-y-cond"> Acepto los términos y condiciones </label>
                     </div>
-                    <button type="submit" class="register">
+                    <button type="submit" class="register" style="margin-bottom:1em;">
                       registrate
                     </button>
                   </form>
@@ -308,6 +368,7 @@
       <!-- Footer -->
       <%- include('../partials/footer.ejs')%>
         <script src="/js/scriptHeader.js"></script>
+        <script src="/js/scriptCarruselSlide.js"></script>
         <script src="/js/scriptCarrusel.js"></script>
 </body>
 
