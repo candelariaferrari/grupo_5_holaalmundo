@@ -5,7 +5,6 @@ let name = document.getElementById("nameTeacher")
 let last_name = document.getElementById("last_nameTeacher")
 let phone = document.getElementById("phoneTeacher")
 let user_address = document.getElementById("user_addressTeacher")
-let image = document.getElementById("nuestroinputTeacher")
 
 let errors = []
 let ulErrors = document.querySelector("div.errores ul")
