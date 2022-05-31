@@ -201,3 +201,37 @@ select[type]:focus {
   padding: 0.5em 3em;
   border-radius: 5px;
 }
+.onda2 {
+  background-image: url(/images/new/onda2.png);
+  width: 100%;
+  height: 10em;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+  margin-top: 2em;
+  position: relative;
+  z-index: -1000;
+  margin-bottom: -3em;
+}
+#shoppingCart-metodos{
+  background-color: #3651F7;
+  padding: 0em 0em 2em;
+}
+#shoppingCart-metodos .titulo {
+  border-bottom: none !important;
+}
+#shoppingCart-metodos .titulo h1{
+  color: #fff;
+  border-bottom: none !important;
+}
+#shoppingCart-metodos .contentInput label {
+  color: #fff;
+}
+#shoppingCart-metodos .btn.pagar{
+  background-color: #212121;
+  color: #00FFCB;
+  padding: 0.5em 4em;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-radius: 5px;
+}
