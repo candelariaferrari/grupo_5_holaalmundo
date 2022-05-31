@@ -154,7 +154,7 @@
 
       <!-- Sección servicios -->
       <section id="sectionServicios" onload="reset()">
-        <h2>Nuestros Servicios</h2>
+        <h2>Nuestros Cursos</h2>
 
         <div class="serviceContainer">
           <button class="preBtn">
@@ -187,16 +187,17 @@
         </div>
       </section>
 
-      <section id="sectionServicios" onload="reset()">
-        <h2>Recomendados para ti</h2>
-        <div class="serviceContainer">
-          <button class="preBtn">
-            <i class="fas fa-chevron-left"></i>
-          </button>
-          <button class="nxtBtn">
-            <i class="fas fa-chevron-right"></i>
-          </button>
+     
           <% serviciosRecomendados.forEach(function(servicio){ %>
+            <section id="sectionServicios" onload="reset()">
+              <h2>Recomendados para ti</h2>
+              <div class="serviceContainer">
+                <button class="preBtn">
+                  <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="nxtBtn">
+                  <i class="fas fa-chevron-right"></i>
+                </button>
             <!-- card 1 -->
             <div class="serviceCard">
               <div class="serviceImg">
@@ -216,9 +217,10 @@
                 </button>
               </div>
             </div>
+          </div>
+        </section>
             <% }) %>
-        </div>
-      </section>
+       
 
       <section id="sectionServicios" onload="reset()">
         <h2>Los mas vendidos</h2>
@@ -252,7 +254,7 @@
             <% }) %>
         </div>
       </section>
-      <section class="idiomas">
+      <!-- <section class="idiomas">
         <div class="paises">
           <div class="card">
             <img class="imagenes-paises" src="/images/banderas-españa.png" />
@@ -270,7 +272,7 @@
         <div class="label">
           <div>¿Que idioma te gustaría aprender o tener una conversación ?</div>
         </div>
-      </section>
+      </section> -->
 
       <!-- section Contacto -->
       <%- include('../partials/contact.ejs')%>
