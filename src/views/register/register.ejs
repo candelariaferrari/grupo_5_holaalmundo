@@ -14,6 +14,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <link href="/css/normalize.css" rel="stylesheet">
   <link href="/css/login.css" rel="stylesheet">
+  <script src="/js/validation.js"></script>
+  <script src="/js/validationRegister.js"></script> 
 </head>
 
 <body>
@@ -29,24 +31,24 @@
           <form name="form" class="formulario" action="/users/register" method="POST">
             <div class="campos">
               <label for="name"></label>
-              <input placeholder="Nombre" type="text" name="name" class="input-form"
+              <input placeholder="Nombre" type="text" name="name" class="input-form" id="name"
                   <%= locals.errors && errors.name ? 'is-invalid' : null %>
                   value="<%= locals.oldData ? oldData.name : null %>"
                   >
                   <% if(locals.errors && errors.name) { %>
-                    <div class="text-danger" style="color: red">
+                    <div class="text-danger">
                       <%= errors.name.msg %>
                     </div>
                   <% } %>
             </div>
             <div class="campos">
               <label for="last_name"></label>
-              <input placeholder="Apellido" type="text" name="last_name" class="input-form"
+              <input placeholder="Apellido" type="text" name="last_name" class="input-form" id="last_name"
               <%= locals.errors && errors.last_name ? 'is-invalid' : null %>
 							value="<%= locals.oldData ? oldData.last_name : null %>"
               >
               <% if(locals.errors && errors.last_name) { %>
-                <div class="text-danger" style="color: red">
+                <div class="text-danger" >
                   <%= errors.last_name.msg %>
                 </div>
               <% } %>
@@ -54,25 +56,25 @@
 
             <div class="campos">
               <label for="phone"></label>
-              <input placeholder="Celular" type="tel" name="phone" class="input-form"
+              <input placeholder="Celular" type="tel" name="phone" class="input-form" id="phone"
               <%= locals.errors && errors.phone ? 'is-invalid' : null %>
 							value="<%= locals.oldData ? oldData.phone : null %>"
               >
               <% if(locals.errors && errors.phone) { %>
-                <div class="text-danger" style="color: red">
+                <div class="text-danger">
                   <%= errors.phone.msg %>
                 </div>
               <% } %>
             </div>
 
             <div class="campos">
-              <label for="Mail"></label>
-              <input placeholder="Mail" type="email" name="email" class="input-form"
+              <label for="Email"></label>
+              <input placeholder="Email" type="email" name="email" class="input-form" id="email"
               <%= locals.errors && errors.email ? 'is-invalid' : null %>
 							value="<%= locals.oldData ? oldData.email : null %>"
               >
               <% if(locals.errors && errors.email) { %>
-                <div class="text-danger" style="color: red">
+                <div class="text-danger">
                   <%= errors.email.msg %>
                 </div>
               <% } %>
@@ -80,33 +82,33 @@
 
             <div class="campos">
               <label for="password"></label>
-              <input placeholder="Contraseña" type="password" name="password" class="input-form"
+              <input placeholder="Contraseña" type="password" name="password" class="input-form" id="password"
               <%= locals.errors && errors.contrasenia ? 'is-invalid' : null %>
 							value="<%= locals.oldData ? oldData.password : null %>"
               >
               <% if(locals.errors && errors.password) { %>
-                <div class="text-danger" style="color: red">
+                <div class="text-danger">
                   <%= errors.password.msg %>
                 </div>
               <% } %>
             </div>
             <div class="campos">
               <label for="validationContrasenia"></label>
-              <input placeholder="Confirma la contraseña" type="password" name="validationPassword" class="input-form"
+              <input placeholder="Confirmar Contraseña" type="password" name="validationPassword" class="input-form" id="validationPassword"
               <%= locals.errors && errors.validationPassword ? 'is-invalid' : null %>
 							value="<%= locals.oldData ? oldData.validationPassword : null %>"
               >
               <% if(locals.errors && errors.validationPassword) { %>
-                <div class="text-danger" style="color: red">
+                <div class="text-danger">
                   <%= errors.validationPassword.msg %>
                 </div>
               <% } %>
             </div>
             <div class="campos">
               <label for="gender:"></label>
-              <select name="gender" id="gender" class="input-form" 
+              <select name="gender" id="gender" class="input-form"
                 <%= locals.errors && errors.gender ? 'is-invalid' : null %>>
-                <option value="" disabled selected>- Seleciona el genero - </option>
+                <option value="" disabled selected> Género </option>
                 
                 <% allGenres.forEach(genre => { %>
                   <option value="<%= `${genre.id}` %>">
@@ -116,7 +118,7 @@
                 <% }) %>  
               </select>
               <% if (locals.errors && errors.gender) { %>
-                <div class="text-danger" style="color: red" style="font-weight: bold">
+                <div class="text-danger">
                   <%= errors.gender.msg %>
                 </div>
               <% } %>
@@ -126,7 +128,7 @@
               <label for="userRol:"></label>
               <select name="userRol" id="userRol" class="input-form"
               <%= locals.errors && errors.userRol ? 'is-invalid' : null %>>
-              <option value="" disabled selected>- Seleciona el rol - </option>
+              <option value="" disabled selected> Rol </option>
               
               <% allRol.forEach(rol => { %>
                 <option  value="<%= `${rol.id}` %>">
@@ -137,7 +139,7 @@
               
             </select>
             <% if (locals.errors && errors.userRol) { %>
-              <div class="text-danger" style="color: red" style="font-weight: bold">
+              <div class="text-danger">
                 <%= errors.userRol.msg %>
               </div>
             <% } %>
@@ -149,6 +151,11 @@
             <button type="submit" class="reg">
               Registrarse
             </button>
+
+            <div class="errores-form">
+              <ul></ul>
+            </div>
+
           </form>
         </div>
       </section>
