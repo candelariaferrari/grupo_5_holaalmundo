@@ -1,419 +1,206 @@
 <!DOCTYPE html>
 
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Carrito De Compras</title>
-    <script
-      src="https://kit.fontawesome.com/3964fc737d.js"
-      crossorigin="anonymous"
-    ></script>
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link href="/css/normalize.css" rel="stylesheet" />
-    <link href="/css/carritoCompras.css" rel="stylesheet" />
-    <link rel="stylesheet" href="/css/partialsCss/partials.css" />
-  </head>
 
-  <body>
-    <!-- Header -->
-    <%- include('../partials/header.ejs')%>
-    <main>
-      <section id="contentSlide">
-        <div class="layer1">
-          <h2 class="mi-compra-container">Mi compra</h2>
-          <% items.forEach(function(item) { %>
-          <div class="info-compra-container">
-            <div class="left">
-              <div class="header-left">
-                <div class="info">Nombre Clase</div>
-                <div class="info">Cantidad</div>
-                <div class="info">Precio</div>
-              </div>
-              <div class="footer-left">
-                <div class="info"><%=item.class_name %></div>
-                <div class="info"><%= item.class_quantity %></div>
-                <div class="info"><%=item.class_price%></div>
-                <div class="info"><i class="fas fa-trash-alt"> </i></div> <!-- Llamar al servicio -->
-              </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carrito De Compras</title>
+  <script src="https://kit.fontawesome.com/3964fc737d.js" crossorigin="anonymous"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet" />
+  <link href="/css/normalize.css" rel="stylesheet" />
+  <link href="/css/shoppingCart.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/partialsCss/partials.css" />
+</head>
+
+<body>
+  <!-- Header -->
+  <%- include('../partials/header.ejs')%>
+
+    <section class="contentSlide">
+      <div class="titulo">
+        <h1>Mi COMPRA</h1>
+      </div>
+      <div class="flexContainer">
+        <!-- columna 1 -->
+        <div class="contentColumn">
+          <div class="contentTitulo">
+            <div class="name">
+              Curso
             </div>
-            <div class="right">
-              <div class="header-right">
-                <div class="info">Subtotal</div>
-                <div class="info"><%=item.class_subtotal%></div>
+            <div class="cant">
+              Cant.
+            </div>
+            <div class="precio">
+              Precio
+            </div>
+          </div>
+          <% items.forEach(function(item) { %>
+            <div class="contentDetalles">
+              <div class="name">
+                <%=item.class_name %>
               </div>
-              <div class="body-right">
-                <div class="info">Codigo de descuento</div>
-                <div class="info">ABC123</div>
+              <div class="cant">
+                <%= item.class_quantity %>
               </div>
-              <div class="footer-right">
-                <div class="info">TOTAL</div>
-                <div class="info"><%=totalPrice%></div>
+              <div class="precio">
+                $<%=item.class_price%>
               </div>
             </div>
             <% }) %>
-          </div>
-          <div class="button-comprar">
-            <button>Comprar</button>
-          </div>
         </div>
-      </section>
-      <section id="bkgCuerpo">
-        <div class="layer2">
-          <h2 class="login">Login</h2>
-          <div class="contenedorFoto">
-            <div class="flexCargar">
-              <div class="cargar">
-                <i class="fab fa-google"></i>
-                <p>Gmail</p>
-              </div>
-              <div class="cargar">
-                <i class="fab fa-facebook-f"></i>
-                <p>Facebook</p>
-              </div>
+        <!-- columna 2 -->
+        <div class="contentColumn">
+          <div class="contentTitulo">
+            <div class="name">
+              Subtotal
+            </div>
+            <div class="cant">
+              Cant.
+            </div>
+            <div class="precio">
             </div>
           </div>
-
-          <form action="#" method="POST" class="info-container">
-            <div class="head-conteiner-left">
-              <div class="campos">
-                <label for="name"></label>
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Nombre"
-                  class="form-control"
-                />
+          <% items.forEach(function(item) { %>
+            <div class="contentDetalles">
+              <div class="name">
+                <%=item.class_subtotal %>
               </div>
-              <div class="campos">
-                <label for="email"></label>
-                <input
-                  type="text"
-                  name="email"
-                  placeholder="Email"
-                  class="form-control"
-                />
+              <div class="cant">
+                <%= item.class_quantity %>
+              </div>
+              <div class="precio">
+                <i class="fas fa-trash-alt"> </i>
               </div>
             </div>
-            <div class="head-conteiner-right">
-              <div class="campos">
-                <label for="apellido"></label>
-                <input
-                  type="text"
-                  name="apellido"
-                  placeholder="Apellido"
-                  class="form-control"
-                />
+            <% }) %>
+              <div class="contenedorComprar">
+                <div class="total">
+                  Total:
+                  <strong>$<%=totalPrice%></strong>
+                </div>
+                <!-- <div class="buttonComprar">
+                  <button>Comprar</button>
+                </div> -->
               </div>
-              <div class="campos">
-                <label for="celular"></label>
-                <input
-                  type="text"
-                  name="celular"
-                  placeholder="Celular"
-                  class="form-control"
-                />
-              </div>
-            </div>
-          </form>
-          <div class="texto-metodo-pago">Metodos de pago</div>
-          <div class="metodo-pago">
-            <div class="pagos">Tarjeta Credito</div>
-            <div class="pagos">Tarjeta Debito</div>
-            <div class="pagos">Mercado Pago</div>
-          </div>
-
-          <form action="#" method="POST" class="info-container">
-            <div class="head-conteiner-left">
-              <div class="campos">
-                <label for="numero"></label
-                ><input
-                  type="text"
-                  name="numero"
-                  placeholder="Numero"
-                  class="form-control"
-                />
-              </div>
-              <div class="campos">
-                <label for="cuotas"></label>
-                <select name="" id="" class="form-control">
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
-                  <option value="7">7</option>
-                  <option value="8">8</option>
-                  <option value="9">9</option>
-                  <option value="10">10</option>
-                  <option value="11">11</option>
-                  <option value="12">12</option>
-                </select>
-              </div>
-              <div class="campos">
-                <label for="vencimiento"></label
-                ><input
-                  type="date"
-                  name="vencimiento"
-                  placeholder="Fecha de Vencimiento"
-                  class="form-control"
-                />
-              </div>
-              <div class="campos">
-                <label for="DNI"></label
-                ><input
-                  type="text"
-                  name="DNI"
-                  placeholder="DNI del pagador"
-                  class="form-control"
-                />
-              </div>
-            </div>
-            <div class="head-conteiner-right">
-              <div class="campos">
-                <label for="tarjeta">
-                  <input
-                    type="text"
-                    name="tarjeta"
-                    placeholder="Numero de la tarjeta"
-                    class="form-control"
-                  />
-                </label>
-              </div>
-              <div class="campos">
-                <label for="nombre">
-                  <input
-                    type="text"
-                    name="nombre"
-                    placeholder="Nombre y Apellido del titular"
-                    class="form-control"
-                  />
-                </label>
-              </div>
-              <div class="campos">
-                <label for="codigo">
-                  <input
-                    type="text"
-                    name="codigo"
-                    placeholder="Codigo de Seguridad"
-                    class="form-control"
-                  />
-                </label>
-              </div>
-            </div>
-          </form>
-          <div class="button"><button>Pagar</button></div>
         </div>
-      </section>
-    </main>
-
-    <!-- chat -->
-    <div id="contentChat" class="desactivado">
-      <svg
-        class="svgimg"
-        width="100"
-        height="100"
-        viewBox="0 0 149 153"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M18.625 0.549561C13.6853 0.549561 8.948 2.63128 5.45514 6.33677C1.96227 10.0423 0 15.068 0 20.3083L0 99.3435C0 104.584 1.96227 109.61 5.45514 113.315C8.948 117.021 13.6853 119.102 18.625 119.102H41.9062C43.352 119.102 44.7778 119.459 46.0709 120.145C47.364 120.831 48.4888 121.827 49.3563 123.054L67.05 148.079C67.9174 149.305 69.0422 150.301 70.3353 150.987C71.6284 151.673 73.0543 152.03 74.5 152.03C75.9457 152.03 77.3716 151.673 78.6647 150.987C79.9578 150.301 81.0826 149.305 81.95 148.079L99.6437 123.054C100.511 121.827 101.636 120.831 102.929 120.145C104.222 119.459 105.648 119.102 107.094 119.102H130.375C135.315 119.102 140.052 117.021 143.545 113.315C147.038 109.61 149 104.584 149 99.3435V20.3083C149 15.068 147.038 10.0423 143.545 6.33677C140.052 2.63128 135.315 0.549561 130.375 0.549561L18.625 0.549561Z"
-          fill="#212121"
-          border="1px solid #00ffcb"
-        />
-      </svg>
-      <p>Chat</p>
+      </div>
+    </section>
+    <div class="onda">
     </div>
 
-    <!-- chat -->
-    <%- include('../partials/chat.ejs')%>
+    <section id="shoppingCart-login" style="width:80%;margin:auto;margin-bottom:2em;border-bottom: 1.5px solid #6243f7;">
+      <div class="titulo black">
+        <h1>Mis Datos</h1>
+      </div>
+      <form action="/" method="POST" name="form">
+        <div class="flexInput">
+          <div class="contentColumn"><!-- columna 1 -->
+            <div class="contentInput"> <!-- nombre -->
+              <label for="nombre">Nombre:</label>
+              <input type="text" name="nombre" autocomplete="off">
+            </div>
+            <div class="contentInput"> <!-- email -->
+              <label for="email">Email:</label>
+              <input type="text" name="email" autocomplete="off">
+            </div>
+          </div>
+          <div class="contentColumn"><!-- columna 2 -->
+            <div class="contentInput"> <!-- apellido -->
+              <label for="apellido">Apellido:</label>
+              <input type="text" name="apellido" autocomplete="off">
+            </div>
+            <div class="contentInput"> <!-- cel -->
+              <label for="apellido">Celular:</label>
+              <input type="text" name="apellido" autocomplete="off">
+            </div>
+          </div>
+          <div style="display:flex;justify-content: flex-end;width: 100%;padding-right:4em;">
+            <button class="btn crear" type="submit">Guardar<i class="fas fa-check"></i></i> </button>
+          </div>
+        </div >
+      </form >
+    </section>
+    <section id="shoppingCart-login" >
+      <div class="titulo black" >
+        <h1>Métodos de pago</h1>
+      </div>
+      <form action="/" method="POST" name="form">
+        <div class="flexInput">
+          <div class="contentColumn"><!-- columna 1 -->
+            <div class="contentInput"> <!-- nombre -->
+              <label for="nombre">Tarjeta:</label>
+              <select name="tarjeta" id="tarjeta" >
+                <option value="" disabled>
+                  seleccione uno
+                </option>
+                <option value="" >
+                  débito
+                </option>
+                <option value="" >
+                  visa credito
+                </option>
+                <option value="" >
+                  mastercart credito
+                </option>
+              </select>
+            </div>
+            <div class="contentInput"> <!-- email -->
+              <label for="email">Cuotas:</label>
+              <select name="tarjeta" id="tarjeta" >
+                <option value="" disabled>
+                  seleccione uno
+                </option>
+                <option value="" >
+                  1
+                </option>
+                <option value="" >
+                  3
+                </option>
+                <option value="" >
+                  6
+                </option>
+              </select>
+            </div>
+            <div class="contentInput">
+              <label for="apellido">Vencimiento:</label>
+              <input type="text" name="apellido" autocomplete="off">
+            </div>
+            <div class="contentInput">
+              <label for="apellido">DNI del titular:</label>
+              <input type="text" name="apellido" autocomplete="off">
+            </div>
+          </div>
+          <div class="contentColumn"><!-- columna 2 -->
+            <div class="contentInput"> 
+              <label for="apellido">Numero de tarjeta:</label>
+              <input type="text" name="apellido" autocomplete="off">
+            </div>
+            <div class="contentInput">
+              <label for="apellido">Cod. Seguridad:</label>
+              <input type="text" name="apellido" autocomplete="off">
+            </div>
+            <div class="contentInput">
+              <label for="apellido">Nombre del titular:</label>
+              <input type="text" name="apellido" autocomplete="off">
+            </div>
+            
+          </div>
+          <div style="display:flex;justify-content: flex-end;width: 100%;padding-right:4em;">
+            <button class="btn crear" type="submit">Pagar<i class="fas fa-check"></i></i> </button>
+          </div>
+        </div>
+      </form>
+    </section>
+    
+
     <!-- Footer -->
     <%- include('../partials/footer.ejs')%>
-    <script src="/js/scriptHeader.js"></script>
-  </body>
+      <script src="/js/scriptHeader.js"></script>
+</body>
+
 </html>
-<!--   
-         <main>
- 
-         <img class="fon" src="/images/bg-violeta.png">
-
-         <p class="tit"> Mi compra </p>
-
-         <hr class="lin1" color= #00FFCB>
-
-         <p>
-         <ul class="linea-sup">
-         <li type="none"> Nombre del paquete </li>
-         <li type="none"> Cantidad </li>
-         <li type="none"> Precio </li>
-         </ul>
-         </p>
-        
-         <hr class="lin2" color= #00FFCB>
-
-         <p>
-         <ul class="linea-inf">
-         <li type="none"> Paquete 1 </li>
-         <li type="none"> 1  </li>
-         <li type="none"> $5000 </li>
-         <li type="none" class="tacho"> <i class="far fa-trash-alt"> </i> </li>
-         </ul>
-         </p>
-
-         <hr class="lin3" color= #00FFCB>
-
-         <p>
-         <ul class="linea-der1">
-         <li type="none"> Subtotal </li>
-         <li type="none"> $5000 </li>
-         </ul>
-         </p>
-
-         <hr class="lin4" color= #00FFCB>
-
-         <p>
-         <ul class="linea-der2">
-         <li type="none"> Código de descuento </li>
-         <li type="none"> BIENV2022 </li>
-         </ul>
-         </p>
-
-         <hr class="lin5" color= #00FFCB>
-
-         <p>
-         <ul class="linea-der3">
-         <li type="none"> TOTAL </li>
-         <li type="none"> $4000 </li>
-         </ul>
-         </p>
-
-         <p>
-         <button class="bot-com" type="submit"> Comprar </button>
-         </p>
-
-         </main>
-
-         <section>
-         
-         <img class="verde1" src="/images/side-verde.png">
-
-         <img class="azul" src="/images/side-azul.png">
-
-         <img class="violeta" src="/images/side-violeta.png">
-
-         <img class="verde2" src="/images/side-verde-2.png">
-
-         <p class="tit-sec"> Login </p>
- 
-         <img class="cir1" src="/images/cir-verde.png">
-
-         <img class="cir2" src="/images/cir-verde.png">
-
-         <ul class="ic"> 
-         <li type="none"> <a href="https://www.google.com/account/about/?hl=es&utm_source=google-account&utm_medium=web"> <i class="fab fa-google"> </i> </a> </li>
-         <li type="none"> <a href="https://es-la.facebook.com/login/device-based/regular/login/"> <i class="fab fa-facebook-f"> </i> </a> </li>
-         </ul>
-
-         <form action="/carritoDeCompras" method="POST"> 
-              
-         <p class="campos">
-         <input placeholder= "Nombre" type="text" name="Nombre" required> 
-         </p>
-                     
-         <p class="campos">
-         <input placeholder= "Apellido" type="text" name="Apellido" required>
-         </p>
-                     
-         <p class="campos">
-         <input placeholder= "Mail" type="email" name="Mail" required>
-         </p>
-
-         <p class="campos">
-         <input placeholder= "Celular" type="tel" name="Celular" required>
-         </p>
-
-         <p class="campos">
-         <button class="reg" type="submit"> Ingresar </button>
-         </p>
-
-         </form>
-              
-         <p class="tit-ter"> Métodos de pago </p>
-
-         <ul class="tar-acep">
-         <li type="none"> TARJETA DE CRÉDITO  </li>
-         <li type="none"> TARJETA DE DÉBITO  </li>
-         <li type="none"> MERCADO PAGO </li>
-         </ul>
-
-         <img class="rec1" src="/images/tar-verde.png">
-
-         <img class="rec2" src="/images/tar-verde.png">
-
-         <img class="rec3" src="/images/tar-verde.png">
-
-         <form action="/carritoDeCompras" method="POST"> 
-              
-         <p class="camp">
-         <input placeholder="Número de tarjeta" type="tel" name="Tarjeta" required> 
-         </p>
-                        
-         <p class="camp">
-         <input placeholder="Nombre y Apellido del titular (como figura en la tarjeta)" type="text" name="NyA" required>
-         </p>
-                        
-         <p class="camp">
-         <input class="fecha" placeholder="Vencimiento (MM/AA)" type="tel" name="Vencimiento" required>
-         </p>
-   
-         <p class="camp">
-         <input placeholder="Código de seguridad" type="tel" name="Codigo" required>
-         </p>
-
-         <p class="camp">
-         <select required>
-         <option value=" " selected hidden> Cantidad de cuotas </option>
-         <option value="1"> 1 </option>
-         <option value="3"> 3 </option>
-         <option value="6"> 6 </option>
-         <option value="12"> 12 </option>
-         </select>
-         </p>
-
-         <p class="camp">
-         <input placeholder="Documento del titular" type="tel" name="Documento" required>
-         </p>
-
-         <p class="camp">
-         <button class="pag" type="submit"> Pagar </button>
-         </p>
-   
-         </form>
-
-         </section>
-
-         <footer>
-
-         <img class="gris" src="/images/top-gris.png"> 
-
-         <ul class="iconos">
-         <li type="none"> <i class="fab fa-facebook-f"> </i> </li>
-         <li type="none"> <i class="fab fa-instagram"> </i> </li>   
-         <li type="none"> <i class="fab fa-linkedin-in"> </i> </li>
-         <li type="none"> <i class="fab fa-whatsapp"> </i> </li>
-         </ul>
-  
-         <div class="cr"> Creado por Carlos - Martina - Carmela - Candelaria </div>
-
-         </footer>
-        -->

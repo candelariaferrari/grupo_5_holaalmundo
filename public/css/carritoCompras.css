@@ -43,13 +43,13 @@ h1 {
   -o-background-size: cover;
   object-fit: cover;
   filter: brightness(1.1);
-  height: 650px;
+  height: 100vh;
   margin: -1em 0em 0em 0em;
   background-position: center top;
   position: relative;
 }
 .layer1 {
-  padding-top: 20em;
+  padding-top: 10em;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -63,22 +63,21 @@ h1 {
   font-size: 2.5rem;
   align-self: center;
   width: 100%;
-  position: absolute;
-  top: 150px;
+  margin-bottom: 1em;
 }
 
 .info-compra-container {
   display: flex;
   width: 100%;
-  justify-content: space-evenly;
-  margin-top: 24px;
-  position: absolute;
-  top: 250px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 }
 
 .left,
 .right {
   width: 400px;
+  margin: auto 2em;
 }
 
 .header-left,
@@ -92,20 +91,20 @@ h1 {
   color: white;
   gap: 24px;
 }
-
 .info i {
   color: #00ffcb;
 }
-
 .info {
   padding: 16px;
 }
-
-.button-comprar {
-  position: absolute;
-  top: 450px;
-  right: 250px;
+.contenedorComprar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 400px;
+  padding: 0.5em 1em;
 }
+
 #bkgCuerpo{
   background-image: url(/images/bkgCarrito2.png);
   width: 100%;
