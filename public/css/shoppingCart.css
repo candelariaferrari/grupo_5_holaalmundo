@@ -66,7 +66,7 @@ body {
 }
 .contentTitulo{
   color: #6243f7;
-  font-size: 0.9rem;
+  font-size: 1rem;
   padding-bottom: 0.8em;
   font-weight: 600;
   text-transform: uppercase;
@@ -75,7 +75,7 @@ body {
 }
 .contentDetalles{
   color: #fff;
-  font-size: 1rem;
+  font-size: 1.1rem;
   border-bottom: 1px solid #00FFCB;
   text-align: left;
   padding-bottom: 0.5em;
