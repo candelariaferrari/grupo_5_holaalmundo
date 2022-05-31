@@ -55,7 +55,7 @@
         <input class="input-form disabled" type="user_sex" value="Mujer" readonly>
 
         <div class="subir">
-          <input type="file" name="avatar" id="nuestroinputTeacher" class="inputSubir" onchange="return imageValidation()"
+          <input type="file" name="avatar" id="nuestroInputTeacher" class="inputSubir" onchange="return imageValidation()"
             <%= locals.errors && errors.avatar ? "is-invalid" : null %>
             value="<%= locals.oldData ? oldData.avatar : null %>" >
             <% if(locals.errors && errors.avatar) { %>
