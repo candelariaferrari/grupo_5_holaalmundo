@@ -1,7 +1,6 @@
 // ************ Require's ************
 const express = require("express");
 const router = express.Router();
-
 const studentsController = require('../controllers/studentsController');
 const authMiddlewars = require('../middlewares/authMiddleware');
 const validator = require('../middlewares/express-validator');
