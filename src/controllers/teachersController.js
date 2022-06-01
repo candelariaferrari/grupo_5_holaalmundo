@@ -42,6 +42,18 @@ let teachersController = {
     console.log(filterAlumnos + " ALUMNOS")
     res.render('teachers/viewStudents', { allClass: allClass, filterAlumnos: filterAlumnos, allStudents: allStudents });
   },
+  detailsStudent: async function (req, res) {
+    const alumno = await db.User.findByPk(req.params.id,{
+      attributes: ["id", "name","last_name", "avatar"],
+    });
+    
+    const servicios = await db.Class.findAll({
+      // SELECT * FROM CLASS
+      attributes: ["description", "language", "price"],
+    });
+    console.log(alumno)
+    res.render("teachers/detailsStudent", {alumno: alumno, servicios:servicios });
+  },
   packages: async function (req, res) {
     const servicios = await db.Class.findAll({
       attributes: ["description", "language", "week_days", "week_times", "price"],

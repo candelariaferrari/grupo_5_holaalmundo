@@ -1,0 +1,20 @@
+.contBtn{
+  width: 100%;
+  display: flex;
+}
+.btn{
+  outline: none;
+  border: none;
+}
+
+.filtrar {
+  background-color: #212121;
+  margin: 2em auto 4em;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #00FFCB;
+  text-transform: uppercase;
+  padding: 0.5em 3em;
+  border-radius: 5px;
+}

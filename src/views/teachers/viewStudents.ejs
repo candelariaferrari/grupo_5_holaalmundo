@@ -11,47 +11,23 @@
     href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
     rel="stylesheet">
   <link href="/css/normalize.css" rel="stylesheet">
-  <link href="/css/paquetesServicios-2.css" rel="stylesheet">
+  <link href="/css/style.css" rel="stylesheet">
   <link href="/css/partialsCss/partials.css" rel="stylesheet">
-  
+
 </head>
 
 <body>
   <%- include('../partials/header.ejs')%>
-  <!-- Slide principal -->
-  <section class="containerSlide viewTeacher">
-    <h2>¿Que idioma te gustaría aprender?</h2>
-    <form action="/teachers/students" method="GET">
-      <div class="btnFiltro">Seleccionar Curso <i class="fas fa-angle-down"></i>
-      <select name="allClass">
-        <option value="" disabled selected></option>
-        <% allClass.forEach(clase=> { %>
-          <option value="<%= `${clase.language}` %>">
-            <%= locals.oldData && (clase.language===oldData.clase) ? "select" : null %>
-              <%= `${clase.language}` %>
-          </option>
-          <% }) %>
-      </select>
-    </div>
-    </form>
-  </section>
-
-
-
-
-
-
-
-    <main>
-      <section class="container-filtros">
-        <div class="container-header">
-          <h2>Mis alumnos</h2>
-        </div>
-        <form action="/teachers/students" method="GET">
-          <div class="searchAlumno">
-            <label for="allClass"> Seleccionar curso:</label>
-            <select name="allClass">
-              <option value="" disabled selected></option>
+    <!-- Slide principal -->
+    <section class="contentSlide blue" id="elementId">
+      <div class="titulo">
+        <h2>Mis alumnos</h2>
+      </div>
+      <form action="/teachers/students" method="GET">
+        <div class="flexInput">
+          <div class="viewStudent">
+            <select name="allClass" class="input-select">
+              <option value="" disabled selected> Seleccionar Curso</option>
               <% allClass.forEach(clase=> { %>
                 <option value="<%= `${clase.language}` %>">
                   <%= locals.oldData && (clase.language===oldData.clase) ? "select" : null %>
@@ -60,51 +36,52 @@
                 <% }) %>
             </select>
           </div>
-          <div class="searchAlumno">
-            <i class="fas fa-search"></i>
-            <input class="input" type="search" name="buscarAlumno" placeholder="Buscar alumno ...">
+          <div class="viewStudent">
+            <input type="search" name="buscarAlumno" placeholder="Buscar alumno ..." class="input-form">
           </div>
-          <button id="filtrar" class="btnFiltrar" type="submit">Buscar</button>
-        </form>
-
-      </section>
-      <section>
-
-        <div class="containerProfes">
-          <% if(filterAlumnos.length > 0){ %> 
-            <% filterAlumnos.forEach(function(alumno) { %>
-              <div class="contenedorImg">
-                <div class="borde">
-                  <div class="hovereffect">
-                    <div class="start">
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="far fa-star"></i>
-                      <i class="far fa-star"></i>
-                    </div>
-                    <img class="img-responsive" src="/images/profeDos.png" alt="diego" />
-                    <div class="overlay">
-                      <a id="myBtn" class="reservar">Contactar</a>
-                    </div>
+        </div>
+        <div class="contBtn">
+          <button id="filtrar" class="btn filtrar" type="submit">Buscar</button>
+        </div>
+        
+      </form>
+    </section>
+    <section class="black bodyViewStudents" id="elementId">
+      <div class="onda3">
+      </div>
+      <div class="containerProfes">
+        <% if(filterAlumnos.length> 0) { %>
+          <% filterAlumnos.forEach(function(alumno){ %>
+            <div class="contenedorImg">
+              <div class="borde">
+                <div class="hovereffect">
+                  <div class="start">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </div>
+                  <img class="img-responsive" src="/images/profeDos.png" alt="<%=alumno.name %>" />
+                  <div class="overlay">
+                    <a href="/teachers/students/<%=alumno.id%>" id="myBtn" class="reservar">Conocer</a>
                   </div>
                 </div>
-                <p class="nombre"><%= alumno.name %></p>
               </div>
-              <% }) %>
-          <% } else { %>
-           
-          <% } %> 
-        </div>
-        <div class="container-button-ver">
-          <button type="button">Ver mas</button>
-        </div>
-      </section>
+              <p class="nombre">
+                <%=alumno.name + " " + alumno.last_name%>
+              </p>
+            </div>
+            <% }) %>
+              <% } %>
+      </div>
 
-    </main>
+    </section>
+
     <!-- Footer -->
     <%- include('../partials/footer.ejs')%>
       <script src="/js/scriptHeader.js"></script>
+      
 </body>
 
 </html>

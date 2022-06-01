@@ -22,4 +22,5 @@ router.get('/dashboardLessons', teacherController.dashboardLessons);//funciona
 /*** LOGOUT */
 router.get('/logout', teacherController.logout);
 
+router.get("/students/:id", authMiddlewars, teacherController.detailsStudent);
 module.exports = router;

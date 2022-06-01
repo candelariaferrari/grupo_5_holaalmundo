@@ -5,6 +5,19 @@ form.formulario {
   width: 50vw;
 }
 
+.flexInput {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: auto;
+  margin-top: 3em;
+}
+.contentColumn{
+  width: 40%;
+}
+
 .input-form {
   display: block;
   width: 100%;
@@ -119,4 +132,34 @@ input[type]:focus {
 .cancelar:hover {
   color: #00ffcb;
   background-color: #6243f7;
+}
+
+/* viewStudents */
+.viewStudent{
+  width: 50vw;
+}
+.input-select {
+  display: block;
+  width: 100%;
+  margin: 1em auto;
+  background-color: #00ffcb;
+  padding: 0.5em 1em;
+  border-radius: 15px;
+  border: none;
+  font-size: 1rem;
+  color: #212121;
+}
+.input-select:focus,
+select:focus,
+select[type]:focus {
+  outline: 0 none;
+  background-color: #fff;
+  border: 2px solid #00ffcb;
+}
+.viewStudent .input-form:focus,
+input:focus,
+input[type]:focus {
+  outline: 0 none;
+  background-color: #fff;
+  border: 2px solid #00ffcb;
 }
