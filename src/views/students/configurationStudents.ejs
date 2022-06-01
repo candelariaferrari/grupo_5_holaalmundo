@@ -21,45 +21,47 @@
 <body id="alumnos">
   <%- include('../partials/header.ejs')%>
     <main>
+     
       <section class="contenedorConfiguracion">
-        <h1>Mis datos</h1>
-        <form name="form" class="formulario" id="config-students" action="/students/configuration" method="POST">
-            <input class="input-form" placeholder="Nombre" type="text" name="name" id="nameStudent" 
-            <%= locals.errors && errors.name ? "is-invalid" : null %>
-            value="<%= locals.oldData ? oldData.name : null %>">
-              <% if(locals.errors && errors.name) { %>
-                <div class="msgError">
-                  <%= errors.name.msg %>
-                </div>
-                <% } %>
 
-          <input class="input-form" placeholder="Apellido" type="text" name="last_name" id="last_nameStudent"
-          <%= locals.errors && errors.last_name ? "is-invalid" : null %>
-          value="<%= locals.oldData ? oldData.last_name : null %>" >
-          <% if(locals.errors && errors.last_name) { %>
-            <div class="msgError">
-              <%= errors.last_name.msg %>
-            </div>
-            <% } %>
+        <h1> Configuración </h1>
+
+        <form method="POST" action="/students/configuration/<%= userLogged.id %>/?_method=PUT" name="form" class="formulario" id="config-students">
+
+          <input class="input-form disabled" placeholder="Nombre" type="text" name="name"
+           value="<%= userLogged.name%>" >
+
+          <input class="input-form disabled" placeholder="Apellido" type="text" name="last_name"
+           value="<%= userLogged.last_name %>" >
 
           <input class="input-form" placeholder="Celular" type="text" name="phone" id="phoneStudent"
           <%= locals.errors && errors.phone ? "is-invalid" : null %>
-          value="<%= locals.oldData ? oldData.phone : null %>" >
+           value="<%= userLogged.phone %>" >
           <% if(locals.errors && errors.phone) { %>
             <div class="msgError">
               <%= errors.phone.msg %>
             </div>
-            <% } %>
+          <% } %>
 
-          <input class="input-form disabled"  type="email" value="usuario@gmail.com" name="email" readonly>
-          <input class="input-form disabled"  type="password" value="********" readonly>
-          <input class="input-form disabled"  id="user" value="Estudiante" readonly>
-          <input class="input-form disabled" type="user_sex" value="Mujer" readonly>
+          <input class="input-form disabled" 
+           value="<%= userLogged.email %>" >
+
+          <input class="input-form disabled"  
+           value="********" >
+
+          <input class="input-form disabled" 
+           value="Estudiante">
+
+          <% if(userLogged.user_sex_fk == 1) { %>
+            <input class="input-form disabled" value="Masculino">
+          <% } else { %> 
+            <input class="input-form disabled" value="Femenino">
+          <% } %>
 
           <div class="subir">
             <input type="file" name="avatar" id="nuestroInputStudent" class="inputSubir" onchange="return imageValidation()"
-            <%= locals.errors && errors.avatar ? "is-invalid" : null %>
-            value="<%= locals.oldData ? oldData.avatar : null %>" >
+            <%= locals.errors && errors.avatar ? "is-invalid" : null %> 
+             value="<%= locals.oldData ? oldData.avatar : null %>" >
             <% if(locals.errors && errors.avatar) { %>
              <div class="msgError">
               <%= errors.avatar.msg %>
@@ -70,12 +72,8 @@
           <div id="nuestroInputPreview"> </div>
 
           <div class="contenedorBtn"> 
-            <button type="submit" class="cancelar">
-              Cancelar
-            </button>
-            <button type="submit" class="reg">
-              Guardar
-            </button>
+            <button type="submit" class="reg"> Guardar </button>
+            <button type="submit" class="cancelar"> Cancelar </button>
           </div>
           
           <div class="errores-form">
@@ -83,6 +81,7 @@
           </div>
 
         </form>
+
       </section>
     </main>
       <!-- Footer -->
