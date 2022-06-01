@@ -88,7 +88,6 @@ window.addEventListener("load", function () {
     } else {
       link_class.classList.remove('backgroundFocus')
     }; 
-    
     /* --- errores --- */
     if (errors.length > 0) {
       e.preventDefault();

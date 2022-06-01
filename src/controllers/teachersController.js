@@ -1,6 +1,6 @@
 const path = require('path');
 const profesoresServices = require('../services/teachersService');
-
+const packageService = require("../services/packagesService");
 const { validationResult } = require("express-validator");
 const db = require('../database/models');
 const sequelize = db.sequelize;
@@ -19,6 +19,9 @@ let teachersController = {
     res.render('teachers/viewStudents', { estudiantes: estudiantes });
   },
   packages: async function (req, res) {
+    const servicios = await db.Class.findAll({
+      attributes: ["description", "language", "week_days", "week_times", "price"],
+    });
     const allLanguages = await db.Class.findAll({
       attributes: [
         [sequelize.fn("DISTINCT", sequelize.col(`language`)), `language`],
@@ -44,20 +47,23 @@ let teachersController = {
         [sequelize.fn("DISTINCT", sequelize.col(`types`)), `types`],
       ],
     });
-    /* console.log(allLevels) */
-    /*  */
+    
     res.render('teachers/createPackageTeachers',
     {
+      servicios: servicios,
       allLanguages: allLanguages,
       allWeekDays: allWeekDays,
       allWeekTimes: allWeekTimes, 
       allLevels: allLevels,
-      allTypes: allTypes
+      allTypes: allTypes, 
     });
 
   },
   processPackages: async function (req, res, next) {
     const errorsValidation = validationResult(req);
+    const servicios = await db.Class.findAll({
+      attributes: ["description", "language", "week_days", "week_times", "price"],
+    });
     const allLanguages = await db.Class.findAll({
       attributes: [
         [sequelize.fn("DISTINCT", sequelize.col(`language`)), `language`],
@@ -83,8 +89,6 @@ let teachersController = {
         [sequelize.fn("DISTINCT", sequelize.col(`types`)), `types`],
       ],
     });
-
-    console.log("ERRORES DEL EXPRESS V" + errorsValidation);
     if(errorsValidation.errors.length > 0){
         return  res.render('teachers/createPackageTeachers', {
             errors: errorsValidation.mapped(),
@@ -94,6 +98,7 @@ let teachersController = {
             allWeekTimes, 
             allLevels,
             allTypes,
+            servicios
         });
     } else {
        await db.Class.create({
@@ -110,22 +115,23 @@ let teachersController = {
         }).catch(function(err){
             console.log(err);
         })
-        console.log("Esto viene en el body al crear un paquete", req.body.language);
         res.redirect('/teachers/packages');
     }
   },
   configuration: function (req, res) {
-    res.render('teachers/configurationTeachers');
+    let userLogged = req.session.userLogged
+    console.log(userLogged.name + " USUARIO LOGGED")
+    res.render('teachers/configurationTeachers'),{userLogged: userLogged};
   },
   configurationProcess:  async function (req, res, next) {
-  
+    let userLogged = req.session.userLogged
     const errorsValidation = validationResult(req);
-
-      console.log("ERRORES DEL EXPRESS V" + errorsValidation);
+  
       if(errorsValidation.errors.length > 0){
           return  res.render("teachers/configurationTeachers", {
               errors: errorsValidation.mapped(),
               oldData: req.body,
+              userLogged: userLogged
           });
       } else {
          await db.User.update({
@@ -133,9 +139,16 @@ let teachersController = {
               last_name: req.body.last_name,
               phone: req.body.phone,
               avatar: req.body.avatar
+          }, 
+          {
+            where: {
+              id: userLogged.id
+            },
           }).catch(function(err){
               console.log(err);
           })
+          
+          return res.redirect('/')
           //console.log("Esto viene en el body al modificar un usuario", req.body.name);
   }
 },

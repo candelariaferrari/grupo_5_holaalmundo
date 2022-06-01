@@ -21,15 +21,18 @@
   <!-- NavBar -->
   <%- include('../partials/header.ejs')%>
     <section class="containerBody">
-      <div class="flexBody">
-        <div >
-          <img src="/images/persona-04.png" alt="profe" class="avatar">
+      
+        <div class="flexBody">
+          <div >
+            <img src="/images/persona-02.png" alt="profe" class="avatar">
+          </div>
+          <div>
+            <h3><%=profesor.name%></h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim ipsum debitis autem accusamus dolore omnis sint eveniet iure dignissimos veniam? Praesentium dolorem nisi corporis earum atque velit unde iusto tempore.</p>
+          </div>
         </div>
-        <div>
-          <h3>Nombre del Profesor</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim ipsum debitis autem accusamus dolore omnis sint eveniet iure dignissimos veniam? Praesentium dolorem nisi corporis earum atque velit unde iusto tempore.</p>
-        </div>
-      </div>
+   
+      
       <p class="misCursos">Mis cursos</p>
         <div id="sectionServicios" class="detailsTeacher" onload="reset()">
           <div class="serviceContainer">

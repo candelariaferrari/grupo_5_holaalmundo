@@ -24,7 +24,6 @@
       <section class="contenedorConfiguracion">
         <h1>Mis datos</h1>
         <form name="form" class="formulario" id="config-students" action="/students/configuration" method="POST">
-
             <input class="input-form" placeholder="Nombre" type="text" name="name" id="nameStudent" 
             <%= locals.errors && errors.name ? "is-invalid" : null %>
             value="<%= locals.oldData ? oldData.name : null %>">

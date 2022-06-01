@@ -8,6 +8,7 @@ module.exports = {
         id_order_fk: null, // should be null
       },
     });
+    
     let totalPrice = 0;
     items.forEach((item) => {
       totalPrice += item.class_subtotal;
