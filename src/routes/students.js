@@ -21,9 +21,10 @@ router.get("/teachers", authMiddlewars, studentsController.filterTeachers); // a
 router.get("/packages", authMiddlewars, studentsController.services); // authMiddlewars
 
 /*** PROFIL PROFESORES */
+/*** Configuración de estudiantes ***/
+router.get("/configuration", authMiddlewars, studentsController.configuration)
+router.put("/configuration/:id", validator.configurationStudents, studentsController.configurationProcess)
 
-router.get('/configuration', authMiddlewars, studentsController.configuration); 
-router.post('/configuration', validator.configurationStudents, studentsController.configurationProcess)
 
 /*** SHOPPING CART  */
 router.get("/shoppingCart", authMiddlewars, studentsController.shoppingCart);

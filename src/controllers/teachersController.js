@@ -156,38 +156,34 @@ let teachersController = {
   },
   configuration: function (req, res) {
     let userLogged = req.session.userLogged
-    console.log(userLogged.name + " USUARIO LOGGED")
-    res.render('teachers/configurationTeachers'), { userLogged: userLogged };
+    res.render("teachers/configurationTeachers"), {userLogged: userLogged};
   },
-  configurationProcess: async function (req, res, next) {
+  configurationProcess:  async function (req, res, next) {
     let userLogged = req.session.userLogged
     const errorsValidation = validationResult(req);
-
-    if (errorsValidation.errors.length > 0) {
-      return res.render("teachers/configurationTeachers", {
-        errors: errorsValidation.mapped(),
-        oldData: req.body,
-        userLogged: userLogged
-      });
-    } else {
-      await db.User.update({
-        name: req.body.name,
-        last_name: req.body.last_name,
-        phone: req.body.phone,
-        avatar: req.body.avatar
-      },
-        {
-          where: {
-            id: userLogged.id
-          },
-        }).catch(function (err) {
-          console.log(err);
-        })
-
-      return res.redirect('/')
-      //console.log("Esto viene en el body al modificar un usuario", req.body.name);
-    }
-  },
+  
+      if(errorsValidation.errors.length > 0){
+          return  res.render("teachers/configurationTeachers", {
+              errors: errorsValidation.mapped(),
+              oldData: req.body,
+              userLogged: userLogged
+          })
+      } else {
+         await db.User.update({
+              phone: req.body.phone,
+              avatar: req.body.avatar
+          }, 
+          {
+            where: {
+              id: userLogged.id
+            },
+          }).catch(function(err){
+              console.log(err);
+          })
+          
+          return res.redirect("/")
+  }
+},
   dashboardLessons: function (req, res) {
     res.render('teachers/dashboardLessons');
   },

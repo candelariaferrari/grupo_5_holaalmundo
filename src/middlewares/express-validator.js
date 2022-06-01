@@ -197,16 +197,6 @@ const validar = {
       .withMessage("Ingresa el link hacia una plataforma")
   ],
   configurationStudents: [
-    check("name")
-      .notEmpty()
-      .withMessage("Ingresa tu nombre")
-      .isLength({ min: 3 })
-      .withMessage("El campo nombre debe tener un mínimo de 3 caracteres"),
-    check("last_name")
-      .notEmpty()
-      .withMessage("Ingresa tu apellido")
-      .isLength({ min: 3 })
-      .withMessage("El campo apellido debe tener un mínimo de 3 caracteres"),
     check("phone")
       .notEmpty()
       .withMessage("Ingresa tu número de celular")
@@ -217,16 +207,6 @@ const validar = {
       .withMessage("Carga una foto para tu perfil")
   ],
   configurationTeachers: [
-    check("name")
-      .notEmpty()
-      .withMessage("Ingresa tu nombre")
-      .isLength({ min: 3 })
-      .withMessage("El campo nombre debe tener un mínimo de 3 caracteres"),
-    check("last_name")
-      .notEmpty()
-      .withMessage("Ingresa tu apellido")
-      .isLength({ min: 3 })
-      .withMessage("El campo apellido debe tener un mínimo de 3 caracteres"),
     check("phone")
       .notEmpty()
       .withMessage("Ingresa tu número de celular")

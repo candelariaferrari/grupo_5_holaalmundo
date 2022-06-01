@@ -15,8 +15,8 @@ router.get('/students', teacherController.students); //funciona
 router.get('/packages',teacherController.packages); //funcona
 router.post('/packages', validator.createPackages,teacherController.processPackages);
 
-router.get('/configuration', authMiddlewars, teacherController.configuration); 
-router.put('/configuration/:id', validator.configurationTeachers, teacherController.configurationProcess)
+router.get("/configuration", authMiddlewars, teacherController.configuration)
+router.put("/configuration/:id", validator.configurationTeachers, teacherController.configurationProcess)
 
 router.get('/dashboardLessons', teacherController.dashboardLessons);//funciona
 /*** LOGOUT */

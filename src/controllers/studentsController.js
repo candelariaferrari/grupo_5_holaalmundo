@@ -287,30 +287,35 @@ let studentsController = {
     });
   },
   configuration: function (req, res) {
-    res.render("students/configurationStudents")
+    let userLogged = req.session.userLogged
+    res.render("students/configurationStudents"), {userLogged: userLogged}
   },
-  configurationProcess:  async function (req, res, next) {
+  configurationProcess:  async function (req, res) {
+    let userLogged = req.session.userLogged
+    const errorsValidation = validationResult(req)
   
-    const errorsValidation = validationResult(req);
-
-      console.log("ERRORES DEL EXPRESS V" + errorsValidation);
       if(errorsValidation.errors.length > 0){
           return  res.render("students/configurationStudents", {
               errors: errorsValidation.mapped(),
               oldData: req.body,
+              userLogged: userLogged
           });
       } else {
          await db.User.update({
-              name: req.body.name,
-              last_name: req.body.last_name,
               phone: req.body.phone,
               avatar: req.body.avatar
+          }, 
+          {
+            where: {
+              id: userLogged.id
+            },
           }).catch(function(err){
               console.log(err);
           })
-          //console.log("Esto viene en el body al modificar un usuario", req.body.name);
-  }
-},
+          
+          return res.redirect('/')
+        }
+      },
   shoppingCart: function (req, res) {
     res.render("shoppingCart/shoppingCart");
   },
