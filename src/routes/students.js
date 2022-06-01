@@ -1,40 +1,34 @@
-// ************ Require's ************
-const express = require("express");
-const router = express.Router();
-const studentsController = require("../controllers/studentsController");
-const authMiddlewars = require("../middlewares/authMiddleware");
-const validator = require("../middlewares/express-validator");
-const upload = require('../middlewares/multer/multerRegister');
+//*** Constantes ***/
+const express = require("express")
+const router = express.Router()
 
-//const adminMiddlware = require('../middlewares/adminMiddleware');
+const studentsController = require("../controllers/studentsController")
+const authMiddlewars = require("../middlewares/authMiddleware")
+const validator = require("../middlewares/express-validator")
+   
+/*** Inicio de estudiantes ***/
+router.get("/home", authMiddlewars, studentsController.home)
 
-/*** GET all info in Home Students ***/
-router.get("/home", authMiddlewars, studentsController.home);
+/*** Sección de comentarios ***/
+router.post("/home", authMiddlewars, studentsController.createComment)
+ 
+/*** Todos los profesores ***/
+router.get("/teachers", authMiddlewars, studentsController.filterTeachers)
 
-/*** POST COMMENTS ***/
-router.post("/home", authMiddlewars, studentsController.createComment);
+/*** Todos los paquetes ***/
+router.get("/packages", authMiddlewars, studentsController.services)
 
-/*** GET PROFESORES */
-router.get("/teachers", authMiddlewars, studentsController.filterTeachers); // authMiddlewars,
+/*** Configuración de estudiantes ***/
+router.get("/configuration", authMiddlewars, studentsController.configuration)
+router.put("/configuration/:id", validator.configurationStudents, studentsController.configurationProcess)
 
-/*** GET ALL PROFESORES  */
-router.get("/packages", authMiddlewars, studentsController.services); // authMiddlewars
+/*** Carrito de compras ***/
+router.get("/shoppingCart", authMiddlewars, studentsController.shoppingCart)
 
-/*** PROFIL PROFESORES */
+/*** Cerrar sesión ***/
+router.get("/logout", studentsController.logout)
 
-router.get("/configuration", authMiddlewars, studentsController.configuration);
+/*** Detalles de los profesores ***/
+router.get("/teachers/:id", authMiddlewars, studentsController.detailsTeacher)
 
-router.post(
-  "/configuration",
-  upload.any(),
-  validator.configurationStudents,
-  studentsController.configurationProcess
-);
-
-/*** LOGOUT */
-router.get("/logout", studentsController.logout);
-
-/*** DETAILS TEACHER  */
-router.get("/teachers/:id", authMiddlewars, studentsController.detailsTeacher);
-
-module.exports = router;
+module.exports = router
