@@ -5,6 +5,7 @@ const { validationResult } = require("express-validator");
 const db = require('../database/models');
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
+const { all } = require('../routes/students');
 
 let teachersController = {
 
@@ -13,10 +14,33 @@ let teachersController = {
     res.render('teachers/homeTeachers');
 
   },
-  students: function (req, res) {
+  students: async function (req, res) {
+    let cursos = req.query.buscarCurso;
+    let userLogged = req.session.userLogged.id;
+    let alumnos = req.query.buscarAlumno;
 
-    const estudiantes = profesoresServices.findAllStudients();
-    res.render('teachers/viewStudents', { estudiantes: estudiantes });
+    const allClass = await db.Class.findAll({
+      include: [{
+        association: "class_user",
+      }],
+      where: {
+        "$class_user.id$": userLogged,
+      }
+    })
+    const filterAlumnos = await db.User.findAll({
+      include: [
+        {
+          association: "user_class",
+        },
+      ],
+      where: {
+       [Op.or]: { "$user.name$": { [Op.like]: "%" + alumnos + "%" } }
+      }
+
+    })
+    const allStudents = await db.User.findAll();
+    console.log(filterAlumnos + " ALUMNOS")
+    res.render('teachers/viewStudents', { allClass: allClass, filterAlumnos: filterAlumnos, allStudents: allStudents });
   },
   packages: async function (req, res) {
     const servicios = await db.Class.findAll({
@@ -47,16 +71,16 @@ let teachersController = {
         [sequelize.fn("DISTINCT", sequelize.col(`types`)), `types`],
       ],
     });
-    
+
     res.render('teachers/createPackageTeachers',
-    {
-      servicios: servicios,
-      allLanguages: allLanguages,
-      allWeekDays: allWeekDays,
-      allWeekTimes: allWeekTimes, 
-      allLevels: allLevels,
-      allTypes: allTypes, 
-    });
+      {
+        servicios: servicios,
+        allLanguages: allLanguages,
+        allWeekDays: allWeekDays,
+        allWeekTimes: allWeekTimes,
+        allLevels: allLevels,
+        allTypes: allTypes,
+      });
 
   },
   processPackages: async function (req, res, next) {
@@ -89,69 +113,69 @@ let teachersController = {
         [sequelize.fn("DISTINCT", sequelize.col(`types`)), `types`],
       ],
     });
-    if(errorsValidation.errors.length > 0){
-        return  res.render('teachers/createPackageTeachers', {
-            errors: errorsValidation.mapped(),
-            oldData: req.body,
-            allLanguages,
-            allWeekDays,
-            allWeekTimes, 
-            allLevels,
-            allTypes,
-            servicios
-        });
+    if (errorsValidation.errors.length > 0) {
+      return res.render('teachers/createPackageTeachers', {
+        errors: errorsValidation.mapped(),
+        oldData: req.body,
+        allLanguages,
+        allWeekDays,
+        allWeekTimes,
+        allLevels,
+        allTypes,
+        servicios
+      });
     } else {
-       await db.Class.create({
-            description: req.body.description,
-            language: req.body.language,
-            week_days: req.body.week_days, 
-            week_times: req.body.week_times,
-            level: req.body.level,
-            topics: req.body.topics,
-            types: req.body.types,
-            price: req.body.price,
-            cap_max: req.body.cap_max,
-            link_class: req.body.link_class
-        }).catch(function(err){
-            console.log(err);
-        })
-        res.redirect('/teachers/packages');
+      await db.Class.create({
+        description: req.body.description,
+        language: req.body.language,
+        week_days: req.body.week_days,
+        week_times: req.body.week_times,
+        level: req.body.level,
+        topics: req.body.topics,
+        types: req.body.types,
+        price: req.body.price,
+        cap_max: req.body.cap_max,
+        link_class: req.body.link_class
+      }).catch(function (err) {
+        console.log(err);
+      })
+      res.redirect('/teachers/packages');
     }
   },
   configuration: function (req, res) {
     let userLogged = req.session.userLogged
     console.log(userLogged.name + " USUARIO LOGGED")
-    res.render('teachers/configurationTeachers'),{userLogged: userLogged};
+    res.render('teachers/configurationTeachers'), { userLogged: userLogged };
   },
-  configurationProcess:  async function (req, res, next) {
+  configurationProcess: async function (req, res, next) {
     let userLogged = req.session.userLogged
     const errorsValidation = validationResult(req);
-  
-      if(errorsValidation.errors.length > 0){
-          return  res.render("teachers/configurationTeachers", {
-              errors: errorsValidation.mapped(),
-              oldData: req.body,
-              userLogged: userLogged
-          });
-      } else {
-         await db.User.update({
-              name: req.body.name,
-              last_name: req.body.last_name,
-              phone: req.body.phone,
-              avatar: req.body.avatar
-          }, 
-          {
-            where: {
-              id: userLogged.id
-            },
-          }).catch(function(err){
-              console.log(err);
-          })
-          
-          return res.redirect('/')
-          //console.log("Esto viene en el body al modificar un usuario", req.body.name);
-  }
-},
+
+    if (errorsValidation.errors.length > 0) {
+      return res.render("teachers/configurationTeachers", {
+        errors: errorsValidation.mapped(),
+        oldData: req.body,
+        userLogged: userLogged
+      });
+    } else {
+      await db.User.update({
+        name: req.body.name,
+        last_name: req.body.last_name,
+        phone: req.body.phone,
+        avatar: req.body.avatar
+      },
+        {
+          where: {
+            id: userLogged.id
+          },
+        }).catch(function (err) {
+          console.log(err);
+        })
+
+      return res.redirect('/')
+      //console.log("Esto viene en el body al modificar un usuario", req.body.name);
+    }
+  },
   dashboardLessons: function (req, res) {
     res.render('teachers/dashboardLessons');
   },

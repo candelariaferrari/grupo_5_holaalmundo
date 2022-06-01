@@ -13,52 +13,88 @@
   <link href="/css/normalize.css" rel="stylesheet">
   <link href="/css/paquetesServicios-2.css" rel="stylesheet">
   <link href="/css/partialsCss/partials.css" rel="stylesheet">
-  <link href="/css/popUpReserva.css" rel="stylesheet">
-
+  
 </head>
 
 <body>
   <%- include('../partials/header.ejs')%>
+  <!-- Slide principal -->
+  <section class="containerSlide viewTeacher">
+    <h2>¿Que idioma te gustaría aprender?</h2>
+    <form action="/teachers/students" method="GET">
+      <div class="btnFiltro">Seleccionar Curso <i class="fas fa-angle-down"></i>
+      <select name="allClass">
+        <option value="" disabled selected></option>
+        <% allClass.forEach(clase=> { %>
+          <option value="<%= `${clase.language}` %>">
+            <%= locals.oldData && (clase.language===oldData.clase) ? "select" : null %>
+              <%= `${clase.language}` %>
+          </option>
+          <% }) %>
+      </select>
+    </div>
+    </form>
+  </section>
+
+
+
+
+
+
+
     <main>
-      
       <section class="container-filtros">
         <div class="container-header">
           <h2>Mis alumnos</h2>
         </div>
-        <div class="searchAlumno">
-          <i class="fas fa-search"></i>
-          <input class="input" type="search" name="buscarCurso" placeholder="Buscar curso ...">
-        </div>
-        <div class="searchAlumno">
-          <i class="fas fa-search"></i>
-          <input class="input" type="search" name="buscarAlumno" placeholder="Buscar alumno ...">
-        </div>
+        <form action="/teachers/students" method="GET">
+          <div class="searchAlumno">
+            <label for="allClass"> Seleccionar curso:</label>
+            <select name="allClass">
+              <option value="" disabled selected></option>
+              <% allClass.forEach(clase=> { %>
+                <option value="<%= `${clase.language}` %>">
+                  <%= locals.oldData && (clase.language===oldData.clase) ? "select" : null %>
+                    <%= `${clase.language}` %>
+                </option>
+                <% }) %>
+            </select>
+          </div>
+          <div class="searchAlumno">
+            <i class="fas fa-search"></i>
+            <input class="input" type="search" name="buscarAlumno" placeholder="Buscar alumno ...">
+          </div>
+          <button id="filtrar" class="btnFiltrar" type="submit">Buscar</button>
+        </form>
+
       </section>
       <section>
-       
+
         <div class="containerProfes">
-          
-          <% estudiantes.forEach(function(estudiante) { %>
-          <div class="contenedorImg">
-            <div class="borde">
-              <div class="hovereffect">
-                <div class="start">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="far fa-star"></i>
-                  <i class="far fa-star"></i>
+          <% if(filterAlumnos.length > 0){ %> 
+            <% filterAlumnos.forEach(function(alumno) { %>
+              <div class="contenedorImg">
+                <div class="borde">
+                  <div class="hovereffect">
+                    <div class="start">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="far fa-star"></i>
+                      <i class="far fa-star"></i>
+                    </div>
+                    <img class="img-responsive" src="/images/profeDos.png" alt="diego" />
+                    <div class="overlay">
+                      <a id="myBtn" class="reservar">Contactar</a>
+                    </div>
+                  </div>
                 </div>
-                <img class="img-responsive" src="/images/profeDos.png" alt="diego" />
-                <div class="overlay">
-                  <a id="myBtn" class="reservar">Contactar</a>
-                </div>
+                <p class="nombre"><%= alumno.name %></p>
               </div>
-            </div>
-            <p class="nombre"><%= estudiante.nombre %></p>
-          </div>
-          <% }) %>
-          
+              <% }) %>
+          <% } else { %>
+           
+          <% } %> 
         </div>
         <div class="container-button-ver">
           <button type="button">Ver mas</button>
@@ -68,7 +104,7 @@
     </main>
     <!-- Footer -->
     <%- include('../partials/footer.ejs')%>
-    <script src="/js/scriptHeader.js"></script>
+      <script src="/js/scriptHeader.js"></script>
 </body>
 
 </html>
