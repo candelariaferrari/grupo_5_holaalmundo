@@ -315,11 +315,16 @@ let studentsController = {
     res.render("shoppingCart/shoppingCart");
   },
   detailsTeacher: async function (req, res) {
+    const profesor = await db.User.findByPk(req.params.id,{
+      attributes: ["id", "name", "avatar"],
+    });
+    
     const servicios = await db.Class.findAll({
       // SELECT * FROM CLASS
       attributes: ["description", "language", "price"],
     });
-    res.render("students/detailsTeacher", { servicios: servicios });
+    console.log(profesor)
+    res.render("students/detailsTeacher", { profesor: profesor, servicios: servicios });
   },
   logout: function (req, res) {
     res.clearCookie("userEmail");

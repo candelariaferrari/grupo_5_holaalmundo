@@ -13,7 +13,7 @@
   <link href="/css/normalize.css" rel="stylesheet">
   <link rel="stylesheet" href="/css/partialsCss/partials.css">
   <link href="/css/createPackageTeacher.css" rel="stylesheet">
-  <script src="/js/validationPackages.js"></script>
+  <script src="/js/validationPackages.js"></script> 
 </head>
 
 <body>
@@ -130,7 +130,7 @@
               <label for="week_times">Hora de encuentro:</label>
               <select name="week_times" id="week_times" <%=locals.errors && errors.week_times ? 'is-invalid' : null %>>
                 <option value="" disabled selected></option>
-                <% allWeekTimes.forEach(times=> { %>
+                <% allWeekTimes.forEach(times => { %>
                   <option value="<%= `${times.dataValues.times}` %>">
                     <%= locals.oldData && (times.dataValues.times===oldData.times) ? "select" : null %>
                       <%= `${times.dataValues.times}` %>
@@ -200,7 +200,7 @@
               <p class="nombreCurso"> <%=servicio.language %></p>
               <div class="sub">
                 <p class="diasCurso"> <%=servicio.week_days %></p>
-                <p class="diasCurso"> <%=servicio.week_times %>hs</p>
+                <p class="diasCurso"> <%=servicio.week_times %></p>
               </div>
               <p class="precioCurso"> $<%=servicio.price %> por hora</p>
             </div>

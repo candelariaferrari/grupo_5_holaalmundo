@@ -11,29 +11,30 @@
     href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
     rel="stylesheet" />
   <link href="/css/style.css" rel="stylesheet">
+ 
   <script src="/js/validationConfigTeachers.js"></script>
 </head>
 
 <body>
   <!-- Header -->
   <%- include('../partials/header.ejs')%>
-    <section class="containerBody">
+    <section class="containerBody" style="background-color: white !important;">
       <div class="flexPersonal">
-        <h1>Configuración personal</h1>
-        <form name="form" class="formulario" id="config-teachers" action="/teachers/configuration" method="POST">
+        <h1>Configuración personal <%=userLogged.name%></h1>
+        <form method="POST" action="/teachers/configuration/<%= userLogged.id%>/?_method=PUT" name="form" class="formulario" id="config-teachers"  >
 
         <input class="input-form" placeholder="Nombre" type="text" name="name" id="nameTeacher"
         <%= locals.errors && errors.name ? "is-invalid" : null %>
-        value="<%= locals.oldData ? oldData.name : null %>">
+        value="<%=userLogged.name%>">
           <% if(locals.errors && errors.name) { %>
             <div class="msgError">
               <%= errors.name.msg %>
             </div>
-            <% } %>
+          <% } %>
 
         <input class="input-form" placeholder="Apellido" type="text" name="last_name" id="last_nameTeacher"
         <%= locals.errors && errors.last_name ? "is-invalid" : null %>
-          value="<%= locals.oldData ? oldData.last_name : null %>" >
+          value="<%=userLogged.last_name%>" >
           <% if(locals.errors && errors.last_name) { %>
             <div class="msgError">
               <%= errors.last_name.msg %>
@@ -42,7 +43,7 @@
 
         <input class="input-form" placeholder="Celular" type="text" name="phone" id="phoneTeacher"
         <%= locals.errors && errors.phone ? "is-invalid" : null %>
-          value="<%= locals.oldData ? oldData.phone : null %>" >
+          value="<%=userLogged.phone%>" >
           <% if(locals.errors && errors.phone) { %>
             <div class="msgError">
               <%= errors.phone.msg %>

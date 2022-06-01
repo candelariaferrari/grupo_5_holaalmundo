@@ -17,6 +17,7 @@ router.post("/home", authMiddlewars, studentsController.createComment);
 /*** GET PROFESORES */
 router.get("/teachers", authMiddlewars, studentsController.filterTeachers); // authMiddlewars,
 
+
 /*** GET ALL PROFESORES  */
 router.get("/packages", authMiddlewars, studentsController.services); // authMiddlewars
 
@@ -29,13 +30,15 @@ router.post('/configuration', validator.configurationStudents, studentsControlle
 router.get("/shoppingCart", authMiddlewars, studentsController.shoppingCart);
 
 /*** DETAILS TEACHER  */
-router.get(
+/* router.get(
   "/detailsTeacher",
   authMiddlewars,
   studentsController.detailsTeacher
-);
+); */
+
 
 /*** LOGOUT */
 router.get("/logout", studentsController.logout);
 
+router.get("/teachers/:id", authMiddlewars, studentsController.detailsTeacher);
 module.exports = router;
