@@ -9,9 +9,11 @@
   flex-wrap: wrap;
   gap: 2em;
   width: 100vw;
-  margin: -2em auto 5em;
-  padding: 1em 6em;
+  margin: 2em auto 5em;
+  padding: 10em 6em 0em;
+
 }
+
 .borde {
   border-radius: 48px;
   border: 3px solid #00ffcb;
@@ -41,7 +43,7 @@
 .hovereffect .overlay {
   width: 100%;
   height: 100%;
-  position: absolute;
+  position: absolute !important;
   overflow: hidden;
   top: 0;
   left: 0;
@@ -96,7 +98,7 @@ a.reservar {
   transform: translate3d(0, 0, 0);
 }
 .nombre {
-  background-color: #212121;
+  background-color: #3651F7;
   color: #fff;
   border-radius: 15px;
   margin: 0.5em auto;

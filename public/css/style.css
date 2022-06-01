@@ -5,3 +5,14 @@
 @import  url("./new/containerImg.css");
 @import  url("./new/carrusel.css");
 @import  url("./new/input.css");
+@import  url("./new/titulos.css");
+
+.black{
+  background-color: #212121;
+}
+.blue{
+  background-color: #3651F7;
+}
+.bodyViewStudents{
+  padding-bottom: 2em;
+} 

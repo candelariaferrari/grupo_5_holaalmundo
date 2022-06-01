@@ -1,0 +1,29 @@
+.titulo h1 {
+  color: #00FFCB;
+  font-size: 40px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin: auto;
+  text-align: center;
+}
+.titulo h2{
+  font-size: 35px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin: auto;
+  text-align: center;
+  color: #fff;
+}
+@media (max-width: 450px){
+  .contentSlide {
+    padding-top: 28vh;
+  }
+  .titulo p {
+    font-size: 25px;
+  }
+  .titulo h1 {
+    font-size: 30px;
+  }
+}
