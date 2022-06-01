@@ -29,4 +29,3 @@ router.get("/dashboardLessons", teacherController.dashboardLessons)
 router.get("/logout", teacherController.logout)
 
 module.exports = router
-
