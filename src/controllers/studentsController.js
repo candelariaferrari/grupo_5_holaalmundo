@@ -200,6 +200,9 @@ let studentsController = {
 
     const serviciosFiltrados = await db.Class.findAll({
       where: {
+        /* 
+          SELECT * FROM CLASS WHERE LANGUAGE LIKE % Español % 
+        */
         [Op.or]: [
           { $language$: { [Op.like]: "%" + language + "%" } },
           { $topics$: { [Op.like]: "%" + cursos + "%" } },

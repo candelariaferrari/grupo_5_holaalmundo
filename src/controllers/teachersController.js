@@ -39,7 +39,6 @@ let teachersController = {
 
     })
     const allStudents = await db.User.findAll();
-    console.log(filterAlumnos + " ALUMNOS")
     res.render('teachers/viewStudents', { allClass: allClass, filterAlumnos: filterAlumnos, allStudents: allStudents });
   },
   detailsStudent: async function (req, res) {
