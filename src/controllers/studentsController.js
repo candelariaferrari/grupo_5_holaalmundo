@@ -215,35 +215,35 @@ let studentsController = {
     });
   },
   configuration: function (req, res) {
-    res.render("students/configurationStudents");
+    let userLogged = req.session.userLogged
+    res.render("students/configurationStudents"), {userLogged: userLogged}
   },
-  configurationProcess: async function (req, res, next) {
-    const errorsValidation = validationResult(req);
-
-    if (errorsValidation.errors.length > 0) {
-      return res.render("students/configurationStudents", {
-        errors: errorsValidation.mapped(),
-        oldData: req.body,
-      });
-    } else {
-      let imagesTocreate = req.files.map((file) => {
-        return {
-          name: file.filename,
-          product_id: productCreate.id,
-        };
-      });
-
-      await db.User.update({
-        name: req.body.name,
-        last_name: req.body.last_name,
-        phone: req.body.phone,
-        avatar: req.body.avatar,
-        // avatar: imagesTocreate.
-      }).catch(function (err) {
-        console.log(err);
-      });
-    }
-  },
+  configurationProcess:  async function (req, res) {
+    let userLogged = req.session.userLogged
+    const errorsValidation = validationResult(req)
+  
+      if(errorsValidation.errors.length > 0){
+          return  res.render("students/configurationStudents", {
+              errors: errorsValidation.mapped(),
+              oldData: req.body,
+              userLogged: userLogged
+          });
+      } else {
+         await db.User.update({
+              phone: req.body.phone,
+              avatar: req.body.avatar
+          }, 
+          {
+            where: {
+              id: userLogged.id
+            },
+          }).catch(function(err){
+              console.log(err);
+          })
+          
+          return res.redirect('/')
+        }
+      },
   detailsTeacher: async function (req, res) {
     const profesor = await db.User.findByPk(req.params.id, {
       attributes: ["id", "name", "avatar"],
