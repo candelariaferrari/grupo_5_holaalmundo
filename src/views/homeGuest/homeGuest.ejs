@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Hola al Mundo </title>
+  <script src="https://kit.fontawesome.com/3964fc737d.js" crossorigin="anonymous"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/css/inicioGuest.css">
+  <link rel="stylesheet" href="/css/partialsCss/partials.css">
+</head>
+
+<body>
+  <%- include('../partials/header')%>
+    <main>
+      <!-- Carrusel principal -->
+      <section>
+        <div class="main-carrusel">
+          <!-- img 1 -->
+          <div class="mySlides fade">
+            <img class="imagen" src="/images/carrusel01.png">
+            <div class="content-text">
+              <p class="text"> Comenzá ahora tu experiencia </p>
+              <p class="text"> Registrate hoy mismo </p>
+              <p class="text"> Sólo toma unos minutos </p>
+            </div>
+          </div>
+          <!-- img 2 -->
+          <div class="mySlides fade">
+            <img class="imagen" src="/images/carrusel02.png">
+            <div class="flex-form">
+              <div class="text-one">
+                <h2>¿Te gustaría enseñar con nosotros? </h2> 
+                <br>
+                <p class="subtitle">¿Qué estas esperando para formar parte de la comunidad de hola al mundo? </p>
+                <br>
+              </div>
+              <div class="form-carrusel">
+                <div class="flex-icon">
+                  <div class="circulo">
+                    <i class="fab fa-google"></i>
+                  </div>
+                  <div class="circulo">
+                    <i class="fab fa-facebook-f"></i>
+                  </div>
+                  <div class="circulo">
+                    <i class="fab fa-linkedin-in"></i>
+                  </div>
+                </div>
+                <!-- REVISAR LAS VALIDACIONES-->
+                <div class="form-one">
+                  <form action="/" method="POST">
+                    <div class="flexInput">
+                      <div class="contentColumn">
+                        <div class="contentInput"> <!-- nombre -->
+                          <label for="nombre">Nombre:</label>
+                          <input type="text" name="name" id="input-two">
+                        </div>
+                        <div class="contentInput"> 
+                          <label for="phone">Celular:</label>
+                          <input type="text" name="phone" id="input-two">
+                        </div>
+                        <div class="contentInput"> 
+                          <label for="password">Contraseña:</label>
+                          <input type="password" name="contrasena" id="input-two">
+                        </div>
+                        <div class="contentInput"> 
+                          <label for="genre">Sexo:</label>
+                          <select required name="gender" id="gender">
+                            <label for="Soy:"></label>
+                            <option name="gender" value="Mujer"> Mujer </option>
+                            <option name="gender" value="Hombre"> Hombre </option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="contentColumn">
+                        <div class="contentInput"> 
+                          <label for="phone">Apellido:</label>
+                          <input type="text" name="last_name" id="input-two">
+                        </div>
+                        <div class="contentInput"> 
+                          <label for="email">Email:</label>
+                          <input type="email" name="email" id="input-two">
+                        </div>
+                        <div class="contentInput"> 
+                          <label for="validationPassword">Repetir contraseña:</label>
+                          <input type="password" name="validationPassword" id="input-two">
+                        </div>
+                        <div class="contentInput"> 
+                          <label for="email">Soy:</label>
+                          <select required name="userRol" id="user">
+                            <label for="Soy:"></label>
+                            <option name="rol" value="profesor"> Profesor </option>
+                            <option name="rol" value="estudiante"> Estudiante </option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flexTerminos" >
+                      <input class="bot-tyc" type="checkbox" name="terminosCondiciones" required>
+                      <label class="term-y-cond"> Acepto los términos y condiciones </label>
+                    </div>
+                    <button type="submit" class="register" style="margin-bottom:1em;">
+                      Registrate
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- img 3 -->
+          <div class="mySlides fade">
+            <img class="imagen" src="/images/carrusel03.png">
+            <div class="flex-form">
+              <div class="form-carrusel two">
+                <div class="flex-icon">
+                  <div class="circulo">
+                    <i class="fab fa-google"></i>
+                  </div>
+                  <div class="circulo">
+                    <i class="fab fa-facebook-f"></i>
+                  </div>
+                  <div class="circulo">
+                    <i class="fab fa-linkedin-in"></i>
+                  </div>
+                </div>
+                <div class="form-one">
+                  <form action="/" method="POST">
+                    <div class="flexInput">
+                      <div class="contentColumn">
+                        <div class="contentInput"> <!-- nombre -->
+                          <label for="nombre">Nombre:</label>
+                          <input type="text" name="name" id="input-two">
+                        </div>
+                        <div class="contentInput"> 
+                          <label for="phone">Celular:</label>
+                          <input type="text" name="phone" id="input-two">
+                        </div>
+                        <div class="contentInput"> 
+                          <label for="password">Contraseña:</label>
+                          <input type="password" name="contrasena" id="input-two">
+                        </div>
+                        <div class="contentInput"> 
+                          <label for="genre">Sexo:</label>
+                          <select required name="gender" id="gender">
+                            <label for="Soy:"></label>
+                            <option name="gender" value="Mujer"> Mujer </option>
+                            <option name="gender" value="Hombre"> Hombre </option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="contentColumn">
+                        <div class="contentInput"> 
+                          <label for="phone">Apellido:</label>
+                          <input type="text" name="last_name" id="input-two">
+                        </div>
+                        <div class="contentInput"> 
+                          <label for="email">Email:</label>
+                          <input type="email" name="email" id="input-two">
+                        </div>
+                        <div class="contentInput"> 
+                          <label for="validationPassword">Repetir contraseña:</label>
+                          <input type="password" name="validationPassword" id="input-two">
+                        </div>
+                        <div class="contentInput"> 
+                          <label for="email">Soy:</label>
+                          <select required name="userRol" id="user">
+                            <label for="Soy:"></label>
+                            <option name="rol" value="profesor"> Profesor </option>
+                            <option name="rol" value="estudiante"> Estudiante </option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flexTerminos" >
+                      <input class="bot-tyc" type="checkbox" name="terminosCondiciones">
+                      <label class="term-y-cond"> Acepto los términos y condiciones </label>
+                    </div>
+                    <button type="submit" class="register" style="margin-bottom:1em;">
+                      Registrate
+                    </button>
+                  </form>
+                </div>
+              </div>
+              <div class="text-one">
+                <h2> ¿Te gustaría aprender con nosotros?</h2>
+                <br>
+                <p class="subtitle"> ¿Qué estas esperando para formar parte de la comunidad de hola al mundo? </p>
+                <br>
+                <p> ¡Completá en este mismo instante nuestro formulario de registro! </p>
+              </div>
+            </div>
+          </div>
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          <div class="content-dot">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seccion profesores -->
+      <section id="profesores">
+        <div class="section-profesores">
+          <div class="title-profesores">
+            <h2> Nuestros Profesores</h2>
+          </div>
+          <!-- grilla -->
+          <div class="container-teacher">
+            <div class="g-uno">
+              <img src="/images/profe.png" alt="profe" />
+            </div>
+            <div class="g-dos">
+              <img src="/images/persona-01.png" alt="profe" />
+            </div>
+            <div class="g-tres">
+              <img src="/images/persona-02.png" alt="profe" />
+            </div>
+            <div class="g-cuatro">
+              <img src="/images/persona-03.png" alt="profe" />
+            </div>
+            <div class="g-cinco">
+              <img src="/images/persona-04.png" alt="profe" />
+            </div>
+            <div class="g-seis">
+              <img src="/images/persona-08.png" alt="profe" />
+            </div>
+            <div class="g-siete">
+              <img src="/images/persona-06.png" alt="profe" />
+            </div>
+            <div class="g-ocho">
+              <img src="/images/persona-09.png" alt="profe" />
+            </div>
+
+            <div class="boton-mas">
+  
+              <button>Ver más</button>
+            </div>
+
+            <!-- Seccion Estadisticas -->
+            <div class="est" id="sectionEstadisticas">
+              <div class="title-estadisticas">
+                <h2>Hola al Mundo cuenta con </h2>
+              </div>
+              <div class="cantidades">
+                <div>
+                  <p class="number">
+                    <%= data.profesores.length %>
+                  </p>
+                  <p class="text">Profesores</p>
+                </div>
+                <div>
+                  <p class="number">+ 5000 </p>
+                  <p class="text">Alumnos</p>
+                </div>
+                <div>
+                  <p class="number"> <%= data.cantidadTemas.length %> </p>
+                  <p class="text">Temáticas</p>
+                </div>
+                <div>
+                  <p class="number"> <%= data.cantidadIdiomas.length %> </p>
+                  <p class="text">Idiomas</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Sección servicios -->
+      <section id="sectionServicios" onload="reset()">
+        <h2>Nuestros Servicios</h2>
+
+        <div class="serviceContainer">
+          <button class="preBtn">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="nxtBtn">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+          <%if (data.servicios) { %>
+              <% data.servicios.forEach(function(servicio){ %>
+                <!-- TODO - Como envio el servicio al carrito-->
+                <div class="serviceCard">
+                  <div class="serviceImg">
+                    <span class="discountTag">$ <%= servicio.price %></span>
+                    <i class="fas fa-comments"></i>
+                    <h4>
+                      <%=servicio.language %>
+                    </h4>
+                    <p class="description">
+                      <%=servicio.description %>
+                    </p>
+                  </div>
+                  <div class="serviceInfo">
+                    <button>
+                      <a href="/users/login" style="text-decoration:none"> <i class="fas fa-shopping-cart"></i>
+                        Agregar al carrito </a>
+                    </button>
+                  </div>
+                </div>
+                <% }) %>
+            <% } %> 
+        </div>
+      </section>
+      <!-- section Contacto -->
+      <%- include('../partials/contact')%>
+
+    </main>
+    <!-- chat -->
+    <%- include('../partials/chat')%>
+      <!-- Footer -->
+      <%- include('../partials/footer.ejs')%>
+        <script src="/js/scriptHeader.js"></script>
+        <script src="/js/scriptCarruselSlide.js"></script>
+        <script src="/js/scriptCarrusel.js"></script>
+</body>
+
+</html>

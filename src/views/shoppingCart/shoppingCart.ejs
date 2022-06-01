@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carrito De Compras</title>
+  <script src="https://kit.fontawesome.com/3964fc737d.js" crossorigin="anonymous"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet" />
+  <link href="/css/normalize.css" rel="stylesheet" />
+  <link href="/css/shoppingCart.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/partialsCss/partials.css" />
+</head>
+
+<body>
+  <!-- Header -->
+  <%- include('../partials/header.ejs')%>
+
+    <section class="contentSlide">
+      <div class="titulo">
+        <h1>Mi COMPRA</h1>
+      </div>
+      <div class="flexContainer">
+        <!-- columna 1 -->
+        <div class="contentColumn">
+          <div class="contentTitulo">
+            <div class="name">
+              Curso
+            </div>
+            <div class="cant">
+              Cant.
+            </div>
+            <div class="precio">
+              Precio
+            </div>
+          </div>
+          <% items.forEach(function(item) { %>
+            <div class="contentDetalles">
+              <div class="name">
+                <%=item.class_name %>
+              </div>
+              <div class="cant">
+                <%= item.class_quantity %>
+              </div>
+              <div class="precio">
+                $<%=item.class_price%>
+              </div>
+            </div>
+            <% }) %>
+        </div>
+        <!-- columna 2 -->
+        <div class="contentColumn">
+          <div class="contentTitulo">
+            <div class="name">
+              Subtotal
+            </div>
+            <div class="cant">
+              Cant.
+            </div>
+            <div class="precio">
+            </div>
+          </div>
+          <% items.forEach(function(item) { %>
+            <div class="contentDetalles">
+              <div class="name">
+                <%=item.class_subtotal %>
+              </div>
+              <div class="cant">
+                <%= item.class_quantity %>
+              </div>
+              <div class="precio">
+                <button type="submit"> <i class="fas fa-trash-alt"> </i> </button>
+              </div>
+            </div>
+            <% }) %>
+              <div class="contenedorComprar">
+                <div class="total">
+                  Total:
+                  <strong>$<%=totalPrice%></strong>
+                </div>
+                <!-- <div class="buttonComprar">
+                  <button>Comprar</button>
+                </div> -->
+              </div>
+        </div>
+      </div>
+    </section>
+    <div class="onda">
+    </div>
+
+    <section id="shoppingCart-login" style="margin-top: 2em;">
+      <div class="titulo black">
+        <h1>Mis Datos</h1>
+      </div>
+      <form action="/" method="POST" name="form">
+        <div class="flexInput">
+          <div class="contentColumn"><!-- columna 1 -->
+            <div class="contentInput"> <!-- nombre -->
+              <label for="nombre">Nombre:</label>
+              <input type="text" name="nombre" autocomplete="off">
+            </div>
+            <div class="contentInput"> <!-- email -->
+              <label for="email">Email:</label>
+              <input type="text" name="email" autocomplete="off">
+            </div>
+          </div>
+          <div class="contentColumn"><!-- columna 2 -->
+            <div class="contentInput"> <!-- apellido -->
+              <label for="apellido">Apellido:</label>
+              <input type="text" name="apellido" autocomplete="off">
+            </div>
+            <div class="contentInput"> <!-- cel -->
+              <label for="apellido">Celular:</label>
+              <input type="text" name="apellido" autocomplete="off">
+            </div>
+          </div>
+          <div style="display:flex;justify-content: flex-end;width: 100%;padding-right:4em;">
+            <button class="btn crear" type="submit">Guardar<i class="fas fa-check"></i></i> </button>
+          </div>
+        </div >
+      </form >
+    </section>
+    <div class="onda2">
+    </div>
+    <section id="shoppingCart-metodos" >
+      <div class="titulo black" >
+        <h1>Métodos de pago</h1>
+      </div>
+      <form action="/" method="POST" name="form">
+        <div class="flexInput">
+          <div class="contentColumn"><!-- columna 1 -->
+            <div class="contentInput"> <!-- nombre -->
+              <label for="nombre">Tarjeta:</label>
+              <select name="tarjeta" id="tarjeta" >
+                <option value="" disabled>
+                  seleccione uno
+                </option>
+                <option value="" >
+                  débito
+                </option>
+                <option value="" >
+                  visa credito
+                </option>
+                <option value="" >
+                  mastercart credito
+                </option>
+              </select>
+            </div>
+            <div class="contentInput"> <!-- email -->
+              <label for="email">Cuotas:</label>
+              <select name="tarjeta" id="tarjeta" >
+                <option value="" disabled>
+                  seleccione uno
+                </option>
+                <option value="" >
+                  1
+                </option>
+                <option value="" >
+                  3
+                </option>
+                <option value="" >
+                  6
+                </option>
+              </select>
+            </div>
+            <div class="contentInput">
+              <label for="apellido">Vencimiento:</label>
+              <input type="text" name="apellido" autocomplete="off">
+            </div>
+            <div class="contentInput">
+              <label for="apellido">DNI del titular:</label>
+              <input type="text" name="apellido" autocomplete="off">
+            </div>
+          </div>
+          <div class="contentColumn"><!-- columna 2 -->
+            <div class="contentInput"> 
+              <label for="apellido">Numero de tarjeta:</label>
+              <input type="text" name="apellido" autocomplete="off">
+            </div>
+            <div class="contentInput">
+              <label for="apellido">Cod. Seguridad:</label>
+              <input type="text" name="apellido" autocomplete="off">
+            </div>
+            <div class="contentInput">
+              <label for="apellido">Nombre del titular:</label>
+              <input type="text" name="apellido" autocomplete="off">
+            </div>
+            
+          </div>
+          
+        </div>
+        <div style="text-align: center;margin: auto;">
+          <button class="btn pagar" type="submit">Pagar<i class="fas fa-check" style="margin-left:0.5em;"></i></i> </button>
+        </div>
+      </form>
+    </section>
+    
+
+    <!-- Footer -->
+    <%- include('../partials/footer.ejs')%>
+      <script src="/js/scriptHeader.js"></script>
+</body>
+
+</html>

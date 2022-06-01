@@ -1,0 +1,588 @@
+@import "./buttons.css";
+html {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  height: fit-content;
+}
+/* ------ LAYER 1 --------- */
+.container-main {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-filtros {
+  background-image: url(/images/slideServicios2.png);
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+  filter: brightness(1.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 700px;
+}
+
+.container-header {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 1em auto;
+  color: #ffffff;
+  margin-top: -3em;
+}
+
+.layerFiltros {
+  width: 60%;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  top: 300px;
+}
+
+.layer-idioma .layer-tematicas .layer-profesion {
+  margin: auto;
+}
+
+.cardFiltrosHorario {
+  background-color: #00ffcb;
+  border-radius: 16px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: black;
+  width: 100%;
+  padding: 4px;
+  height: 60px;
+}
+
+.form-group label {
+  font-size: 1em;
+}
+
+.cardFiltrosHorario i {
+  color: #00ffcb;
+  margin-left: 800px;
+  font-size: 1.9em;
+}
+
+.filtro-idiomas-formulario {
+  display: none;
+}
+
+.filtro-tematicas-formulario {
+  display: none;
+}
+
+.filtro-profesion-formulario {
+  display: none;
+}
+
+.layer-idioma:hover > .filtro-idiomas-formulario {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  margin: auto;
+  padding: 10px;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.layer-tematicas:hover > .filtro-tematicas-formulario {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  margin: auto;
+  padding: 10px;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.layer-profesion:hover > .filtro-profesion-formulario {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  margin: auto;
+  padding: 10px;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.grupo1 {
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+  gap: 5px;
+}
+
+.grupo2 {
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+  gap: 5px;
+}
+
+.grupo3 {
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+  gap: 5px;
+}
+
+.form-group label {
+  background: transparent;
+  border: #00ffcb;
+}
+
+input[type="checkbox"]:checked {
+  box-shadow: 0 0 0 3px #00ffcb;
+}
+
+.input-control[type="checkbox"] {
+  color: #6243f7;
+}
+
+.container-button {
+  align-self: center;
+  display: flex;
+  justify-content: end;
+  font-size: 2rem;
+  font-weight: 800;
+  padding: 5px;
+  margin-top: 34px;
+  position: absolute;
+  top: 600px;
+  width: 60%;
+}
+
+.container-button button {
+  background-color: #212121;
+  border-radius: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: none;
+  color: #00ffcb;
+  margin-top: 24px;
+  height: 1.2em;
+}
+
+.container-button:hover button {
+  background-color: #6243f7;
+  color: #ffffff;
+}
+
+/* ----- LAYER 2 ------- */
+
+.container-profesores {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.layer2InfoContainer {
+  display: flex;
+  width: 80%;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin-top: 50px;
+}
+
+.profeContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 1 0px;
+  position: relative;
+  padding: 4px;
+}
+
+.profeImage {
+  width: 16em;
+  height: 18em;
+  object-fit: cover;
+  border: 0.3em solid rgb(255, 255, 255);
+  border-radius: 1.5em;
+  box-shadow: 0 10px 30px black;
+  transition: 0.3s;
+  margin: 0.5em -1em -1em -1em;
+}
+
+a.reserva {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #00ffcb;
+  color: black;
+  text-align: center;
+  height: 50px;
+  font-size: 1.2em;
+  position: absolute;
+  top: 140px;
+  padding: 8px;
+  text-decoration: none;
+}
+
+a.reserva {
+  display: none;
+}
+
+.profeContainer:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgb(2, 173, 164);
+  background-color: #6243f7;
+  z-index: 1;
+  position: relative;
+}
+
+.profeContainer:hover .puntuacion {
+  z-index: 3;
+}
+
+.profeContainer:hover .reserva {
+  z-index: 3;
+}
+
+.profeContainer:hover .container-image {
+  background-color: rgba(17, 17, 20, 0.8);
+  z-index: -1;
+}
+
+.profeContainer:hover .container-button {
+  background-color: rgba(17, 17, 20, 0.9);
+}
+
+.profeContainer:hover {
+  background-color: rgba(67, 74, 208, 0.9);
+}
+
+.profeContainer:hover .reserva {
+  display: flex;
+}
+
+.profeContainer:hover .footer-profesor {
+  background-color: black;
+  color: #00ffcb;
+}
+
+.puntuacion {
+  display: flex;
+  font-size: 1em;
+  position: absolute;
+  top: 20px;
+}
+
+.puntuacion i {
+  color: #3657f7;
+}
+
+.footer-profesor {
+  width: 100%;
+  height: 30px;
+  padding-top: 10px;
+  display: flex;
+  justify-content: center;
+  top: -1.5em;
+  position: relative;
+  top: 2px;
+  margin-bottom: 25px;
+  color: #fff;
+  border-radius: 16px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-profesor button {
+  height: 14px;
+  position: absolute;
+  outline: none;
+  border: none;
+  width: 80%;
+  border-radius: 25px;
+  padding: 1em 1em;
+  font-size: 1rem;
+  background-color: #3657f7;
+}
+
+.layer2Profe {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+/* nuevos */
+
+div.btnFiltro {
+  background-color: #00ffcb;
+  border: none;
+  border-radius: 15px;
+  color: #212121;
+  padding: 0.5em 1em;
+  width: 100%;
+  font-size: 1rem;
+  margin: 0.5em auto;
+  display: flex;
+  justify-content: space-between;
+}
+div:hover.btnFiltro {
+  background-color: #212121;
+  color: #00ffcb;
+}
+div.active.btnFiltro {
+  background-color: #212121;
+  color: #00ffcb;
+}
+
+
+.check {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1em 1em;
+  background-color: transparent;
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.check div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0.5em 0em;
+  padding: 0.5em 0em;
+  color: #fff;
+}
+.check div label {
+  margin-left: 0.5em;
+}
+.check.active{
+  height: 200px;
+}
+
+button.btnFiltrar {
+  background-color: #212121;
+  border: none;
+  border-radius: 15px;
+  color: #fff;
+  padding: 0.5em 1.5em;
+  width: fit-content;
+  font-size: 1rem;
+  margin: 0.5em auto;
+  display: flex;
+  justify-content: center;
+}
+button:hover.btnFiltrar {
+  background-color: #fff; 
+  color: #6243f7;
+}
+
+/* img */
+.containerProfes {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2em;
+  width: 100vw;
+  margin: 2em auto;
+  padding: 1em 6em;
+}
+
+.borde {
+  border-radius: 48px;
+  border: 3px solid #00ffcb;
+  width: 100%;
+  height: 306px;
+  
+}
+.start {
+  color: #3651f7;
+  position: absolute;
+  top: 10px;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  width: 260px;
+}
+.hovereffect {
+  width: 260px;
+  height: 300px;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  cursor: default;
+  background: #3651f7;
+  border-radius: 46px;
+}
+
+.hovereffect .overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  padding: 50px 20px;
+}
+a.reservar {
+  background-color: #00ffcb;
+  color: #212121 !important;
+  border: none;
+  width: 260px;
+  padding: 0.5em 1em;
+  /* line-height: 0.1 !important; */
+}
+
+.hovereffect img {
+  display: block;
+  position: relative;
+  max-width: none;
+  width: 100%;
+  height: 100%;
+  border-radius: 0%;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(-0px, 0, 0);
+  transform: translate3d(-0px, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.hovereffect:hover img {
+  opacity: 0.3;
+  filter: alpha(opacity=40);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.hovereffect a {
+  color: #212121;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(100%, 0, 0);
+  transform: translate3d(100%, 0, 0);
+}
+
+.hovereffect:hover a {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.nombre {
+  background-color: #212121;
+  color: #fff;
+  border-radius: 15px;
+  margin: 0.5em auto;
+  padding: 0.5em 1em;
+  text-align: center;
+}
+
+.container-button-ver {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  margin: 2em auto;
+}
+
+.container-button-ver button {
+  background-color: #3651f7;
+  border-radius: 15px;
+  border: none;
+  font-size: 1rem;
+  padding: 0.5em 1em;
+  color: #fff;
+}
+
+/* modal */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 444;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fff;
+  margin: auto;
+  border: 1px solid #00ffcb;
+  border-radius: 80px;
+  width: 720px;
+  height: fit-content;
+}
+
+/* The Close Button */
+.close {
+  color: #00ffcb;
+  margin-left: 5em;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #6243f7;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+/* mis alumnos */
+ .searchAlumno {
+  width: 50%;
+  margin-bottom: 1.5em;
+}
+.searchAlumno input {
+  width: 100%;
+  position: relative;
+  padding: 0.5em 1em;
+  border-radius: 50px;
+  border: none;
+  padding-inline-start: 35px;
+  background-color: #212121;
+  color: #fff;
+}
+.searchAlumno input::placeholder {
+  padding-inline-start: 0px;
+  color: #fff;
+}
+
+/* .input:focus {
+  outline: 2px solid #00ffcb;
+} */
+
+.searchAlumno i {
+  position: absolute;
+  z-index: 22222;
+  margin-top: 5px;
+  margin-left: 10px;
+  color: #00ffcb;
+}

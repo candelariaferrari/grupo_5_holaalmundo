@@ -1,0 +1,1004 @@
+/* COLORES:
+azul mas fuerte: #3657F7
+azul mas oscuro: #1F58A5
+"violeta": #6243F7
+verde claro: #00FFCB
+verde oscuro: #00A987
+gris: #DAD9DE
+negro: #212121
+blanco: #ffffff
+ */
+
+/* Header - Menu */
+
+body {
+  font-family: "Roboto", sans-serif;
+  height: fit-content;
+}
+/* ----- CARRUSEL ----- */
+.main-carrusel {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+  box-sizing: border-box;
+}
+.mySlides {
+  display: none;
+}
+.main-carrusel img.imagen {
+  width: 100%;
+  margin-top: 1em;
+  display: block;
+}
+.mySlides .content-text {
+  position: absolute;
+  top: 10em;
+  right: 10em;
+  box-sizing: border-box;
+}
+
+.content-text .text {
+  color: #fff;
+  background-color: #3657f7;
+  border-radius: 25px;
+  font-size: 25px;
+  font-weight: 300;
+  padding: 0.5em 1.5em;
+  margin: 0.5em auto;
+  width: 100%;
+}
+.mySlides .flex-form {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  top: 10em;
+}
+.text-one {
+  width: 35vw;
+}
+.text-one h2 {
+  color: #00ffcb;
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 0.9em;
+  margin-bottom: 0.5em;
+}
+.text-one p {
+  color: #fff;
+  font-size: 25px;
+  font-weight: 300;
+}
+.text-one .subtitle {
+  margin-top: 0.5em;
+  font-size: 30px;
+  font-weight: 500;
+}
+.text-one .subtitle strong {
+  color: #00ffcb;
+}
+.form-carrusel {
+  background-color: #212121;
+  height: fit-content;
+  border-radius: 15px;
+  padding: 1em 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.form-carrusel.two {
+  background-color: #212121;
+  height: fit-content;
+  border-radius: 15px;
+  padding: 1em 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.form-carrusel .flex-icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0.5em auto 1em auto;
+}
+.form-carrusel .flex-icon .circulo {
+  background-color: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 0.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form-carrusel form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form-carrusel .flex-icon i {
+  color: #212121;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.form-carrusel.two .flex-icon i {
+  color: #6243f7;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.form-carrusel .input-form {
+  display: block;
+  width: 300px;
+  margin: 1em auto;
+  background-color: #00ffcb;
+  padding: 0.5em 1em;
+  border-radius: 15px;
+  border: none;
+  font-size: 1rem;
+  color: #212121;
+}
+.form-carrusel.two .input-form {
+  display: block;
+  width: 300px;
+  margin: 0.5em auto;
+  background-color: #212121;
+  padding: 0.5em 1em;
+  border-radius: 15px;
+  border: none;
+  font-size: 1rem;
+  color: #ffffff;
+}
+#input-two::placeholder {
+  color: #fff;
+  opacity: 1;
+}
+.input-form,
+input::placeholder {
+  color: #212121;
+  opacity: 1;
+}
+.input-form:focus,
+input:focus,
+input[type]:focus {
+  outline: 0 none;
+  color: #212121;
+
+}
+.flexTerminos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.5em;
+}
+.bot-tyc {
+  border-radius: 10px;
+  border-color: #00ffcb;
+}
+
+.term-y-cond {
+  font-size: 11px;
+  color: #fff;
+  position: relative;
+  margin-left: 0.5em;
+}
+#input-two .bot-tyc {
+  border-color: #212121;
+}
+#input-two .term-y-cond {
+  color: #212121;
+}
+select {
+  text-align-last: left;
+  padding-left: 6px;
+  direction: ltr;
+  background-color: #00ffcb;
+  border-radius: 10px;
+  width: 244px;
+  height: 36px;
+  border: transparent;
+  color: #424242;
+  font-size: 14px;
+}
+.form-one button.register {
+  border: none;
+  background-color: #fff;
+  color: #212121;
+  font-size: 15px;
+  font-weight: 500;
+  width: 200px;
+  margin: 2em auto 0 auto;
+  padding: 0.5em;
+  text-transform: capitalize;
+  border-radius: 15px;
+}
+.form-one button:hover.register {
+  background-color: #6243f7;
+  color: #00ffcb;
+}
+.content-dot {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 20vh;
+  width: 100%;
+}
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: background-color 0.6s ease;
+}
+
+.activeDot,
+.dot:hover {
+  background-color: #212121;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: #212121;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* -------- PREVIEW CARRITO -------- */
+
+/* -------- CARACTERISTICAS ---------- */
+.content-characteristics {
+  margin: 4em auto;
+  padding: 0em 4em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.content-characteristics .caracteristicas {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.caracteristicas .circulo {
+  background-color: #6243f7;
+  color: #00ffcb;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1em;
+}
+.caracteristicas .circulo i {
+  font-size: 100px;
+}
+.caracteristicas h3 {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  color: #6243f7;
+  margin-bottom: 0.5em;
+}
+.caracteristicas p {
+  font-size: 1rem;
+  color: #212121;
+  text-align: center;
+}
+
+/* ----- PROFESORES ------- */
+#profesores {
+  box-sizing: border-box;
+  width: 100vw;
+  height: fit-content;
+}
+.section-profesores {
+  width: 100%;
+  height: 1431px;
+  margin: 5em 0em 0em 0em;
+  background-image: url(../images/bkg-profes.png);
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center top;
+  position: relative;
+}
+.section-profesores .title-profesores {
+  position: absolute;
+  z-index: 444;
+  left: 6em;
+  top: 8em;
+  width: 30%;
+}
+.title-profesores h2 {
+  font-size: 40px;
+  font-weight: 800;
+  color: #3651f7;
+  text-transform: uppercase;
+}
+.title-profesores p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #212121;
+  margin-top: 1em;
+}
+.content-right {
+  position: relative;
+  z-index: 333;
+  right: 0;
+}
+.container-teacher {
+  box-sizing: border-box;
+  width: 100%;
+  padding-top: 2em;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  grid-template-rows: auto auto auto auto auto;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". . . . g-uno ."
+    ". . . g-tres . g-dos"
+    ". . g-cinco . g-cuatro ."
+    "boton-mas g-ocho . g-siete . g-seis"
+    "est est est est est est";
+
+  /* grid-template-areas:
+    ". . . . . . . g-uno ."
+    ". . . . . . g-tres . g-dos"
+    ". . . . . g-cinco . g-cuatro ."
+    ". . . boton-mas g-ocho . g-siete . g-seis"
+    ". . . est est est est est est"; */
+}
+
+.container-teacher img {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  border-radius: 35px;
+  border: 3px solid #fff;
+}
+.g-uno {
+  grid-area: g-uno;
+  margin: auto;
+}
+.g-dos {
+  grid-area: g-dos;
+  margin: auto;
+}
+.g-tres {
+  grid-area: g-tres;
+  margin: auto;
+}
+.g-cuatro {
+  grid-area: g-cuatro;
+  margin: auto;
+}
+.g-cinco {
+  grid-area: g-cinco;
+  margin: auto;
+}
+.g-seis {
+  grid-area: g-seis;
+  margin: auto;
+}
+.g-siete {
+  grid-area: g-siete;
+  margin: auto;
+}
+.g-ocho {
+  grid-area: g-ocho;
+  margin: auto;
+}
+
+.boton-mas {
+  grid-area: boton-mas;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.boton-mas button {
+  background-color: #3657f7;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 15px;
+  padding: 0.5em 1em;
+  width: 200px;
+}
+
+/* ---- section estadistica ----- */
+.est {
+  grid-area: est;
+}
+#section-estadisticas {
+  width: 100%;
+  padding: 4em 2em;
+}
+.title-estadisticas h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 2em auto;
+  color: #212121;
+}
+.cantidades {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+.cantidades .number {
+  font-size: 80px;
+  font-weight: 600;
+  color: #6243f7;
+  text-align: center;
+}
+.cantidades .text {
+  font-size: 20px;
+  font-weight: 600;
+  color: #212121;
+  text-align: center;
+}
+/* ----- SECCION SERVICIOS ---- */
+#sectionServicios {
+  width: 100%;
+  padding: 0em 6em;
+  position: relative;
+}
+#sectionServicios h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 1em auto;
+  color: #6243f7;
+  text-transform: uppercase;
+}
+.serviceContainer {
+  overflow-y: hidden;
+  overflow-x: auto;
+  display: flex;
+  scroll-behavior: smooth;
+  padding: 0 10vw 0 1vw;
+}
+.serviceContainer::-webkit-scrollbar {
+  display: none;
+}
+.serviceCard {
+  flex: 0 0 auto;
+  width: 300px;
+  height: 450px;
+  margin-right: 40px;
+}
+.serviceImg {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+  background-color: #6243f7;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s;
+}
+.serviceImg i {
+  font-size: 150px;
+  color: #00ffcb;
+  margin-bottom: 22px;
+}
+.serviceImg h4 {
+  font-size: 1.2rem;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.discountTag {
+  position: absolute;
+  background-color: #fff;
+  border-radius: 15px;
+  color: #3651f7;
+  right: 10px;
+  top: 10px;
+  text-transform: capitalize;
+  padding: 5px;
+}
+.description {
+  margin-top: 1em;
+  width: 150px;
+  text-align: center;
+  border: none;
+  transition: 0.5s;
+  opacity: 0;
+  font-size: 1rem;
+  color: #fff;
+  transition: all 0.5s;
+}
+.serviceCard:hover .description {
+  opacity: 1;
+}
+.serviceCard:hover .serviceImg {
+  background-color: #212121;
+}
+.serviceInfo {
+  width: 100%;
+  height: 100%;
+  padding-top: 10px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  top: -1.5em;
+}
+.serviceInfo button {
+  position: absolute;
+  outline: none;
+  border: none;
+  width: 80%;
+  border-radius: 25px;
+  padding: 0.5em 1em;
+  font-size: 1rem;
+  background-color: #00ffcb;
+}
+
+.preBtn,
+.nxtBtn {
+  border: none;
+  width: 5vw;
+  height: 80%;
+  position: absolute;
+  top: 50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  cursor: pointer;
+  z-index: 9;
+}
+.preBtn {
+  left: 0;
+}
+.nxtBtn {
+  right: 0;
+}
+.preBtn i,
+.nxtBtn i {
+  opacity: 0.2;
+}
+.preBtn:hover i,
+.nxtBtn:hover i {
+  opacity: 1;
+}
+
+/* nuevos */
+
+.flexInput {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: auto;
+  margin-top: 1em;
+}
+.contentColumn{
+  width: 40%;
+}
+.contentInput {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+}
+
+.contentInput label {
+  font-size: 18px;
+  color: #fff;
+  padding-left: 1em;
+  margin-bottom: 0.2em;
+}
+
+.contentInput input {
+  height: 35px;
+  width: 100%;
+  border: none;
+  background-color: #00FFCB;
+  border-radius: 10px;
+  color: #212121;
+  padding-inline-start: 1em;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.contentInputClick {
+  background-color: #fff !important;
+  border: 1.5px solid #6243F7 !important;
+  color: #212121;
+}
+
+.contentInput select {
+  height: 35px;
+  width: 100%;
+  border: none;
+  background-color: #00FFCB;
+  border-radius: 10px;
+  color: #212121;
+  padding-inline-start: 1em;
+  font-size: 16px;
+  font-weight: 600;
+
+}
+
+.contentInput input:focus,
+input:focus,
+input[type]:focus {
+  outline: 0 none;
+}
+
+.contentInput select:focus,
+select:focus,
+select[type]:focus {
+  outline: 0 none;
+}
+/* ---------- RESPONSIVE --------- */
+@media (max-width: 480px) {
+  .responsive-one {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  .responsive-two {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 1em;
+  }
+  .navbar {
+    flex-direction: column;
+  }
+  .navbar.logo {
+    width: 40%;
+  }
+  .nav-list {
+    display: none;
+  }
+  .nav-list .nav-item {
+    display: block;
+    padding: 1em 0.5em;
+  }
+  .navbar .search {
+    width: fit-content;
+    box-sizing: border-box;
+    float: right;
+  }
+  .botones-iconos {
+    flex-flow: row nowrap;
+    width: 30%;
+  }
+  .button-responsive {
+    display: block;
+  }
+  .button-responsive i {
+    color: #fff;
+    font-size: 1.5rem;
+  }
+  .active {
+    display: block;
+    order: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+  }
+  /* slide main */
+  .main-carrusel img.imagen {
+    margin-top: 9em;
+    height: 38vh;
+  }
+  .content-dot {
+    bottom: 2vh;
+  }
+  .dot {
+    height: 10px;
+    width: 10px;
+  }
+  .mySlides .content-text {
+    top: 1em;
+    right: 2em;
+  }
+  .content-text .text {
+    font-size: 12px;
+    padding: 0.5em 1em;
+  }
+  .text-one {
+    width: 30vw;
+  }
+  .text-one h2 {
+    font-size: 1rem;
+    padding-right: 0.5em;
+  }
+  .text-one p {
+    font-size: 0.8rem;
+    display: none;
+  }
+  .text-one .subtitle {
+    font-size: 1rem;
+  }
+  .mySlides .flex-form {
+    top: 1em;
+    justify-content: center;
+  }
+  .form-carrusel {
+    width: 160px;
+    height: 180px;
+    padding: 0.5em;
+  }
+  .form-carrusel .flex-icon {
+    margin-top: 0em;
+    margin-bottom: 0.5em;
+  }
+  .form-carrusel .flex-icon .circulo {
+    width: 25px;
+    height: 25px;
+  }
+  .form-carrusel .flex-icon i {
+    font-size: 1rem;
+  }
+  .form-carrusel .input-form {
+    width: 150px;
+    margin: 0.2em auto;
+    padding: 0.2em 1em;
+    font-size: 0.8rem;
+  }
+  .form-one button.register {
+    font-size: 0.8rem;
+    width: 100px;
+    margin: 0.5em auto 0 auto;
+    padding: 0.2em;
+  }
+  .form-carrusel.two {
+    width: 160px;
+    height: 180px;
+    padding: 0.5em;
+    margin-right: 0.5em;
+  }
+  .form-carrusel.two .flex-icon {
+    margin-top: 0em;
+    margin-bottom: 0.5em;
+  }
+  .form-carrusel.two .flex-icon .circulo {
+    width: 25px;
+    height: 25px;
+  }
+  .form-carrusel.two .flex-icon i {
+    font-size: 1rem;
+  }
+  .form-carrusel.two .input-form {
+    width: 150px;
+    margin: 0.2em auto;
+    padding: 0.2em 1em;
+    font-size: 0.8rem;
+  }
+  .form-one button.register {
+    font-size: 0.8rem;
+    width: 100px;
+    margin: 0.5em auto 0 auto;
+    padding: 0.2em;
+  }
+  /* caracteristicas */
+  .content-characteristics {
+    margin: 2em auto;
+    padding: 0em 1em;
+    flex-direction: column;
+  }
+  .content-characteristics .caracteristicas {
+    width: 100%;
+  }
+  .caracteristicas .circulo {
+    width: 150px;
+    height: 150px;
+  }
+  .caracteristicas p {
+    font-size: 0.8rem;
+    padding-bottom: 1em;
+  }
+  /* profes */
+  #profesores {
+    height: 200vh;
+    width: 100vw;
+    margin-top: -8em;
+  }
+  .section-profesores {
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/bkg-profes-responsive.svg);
+  }
+  .container-teacher {
+    box-sizing: border-box;
+    width: 100%;
+    padding-top: 20em;
+    display: grid;
+    grid-template-columns: 140px 140px 140px;
+    grid-template-rows: 150px 150px 150px auto;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". . g-uno"
+      ". boton-mas g-dos"
+      "g-cinco g-cuatro g-tres"
+      "est est est";
+  }
+  .g-seis,
+  .g-siete,
+  .g-ocho {
+    display: none !important;
+  }
+  .section-profesores .title-profesores {
+    left: 0em;
+    top: 8em;
+    width: 100%;
+    padding: 1em;
+    box-sizing: border-box;
+  }
+  .title-profesores h2 {
+    font-size: 1.2rem;
+  }
+  .title-profesores p {
+    width: 60%;
+    font-size: 0.9rem;
+  }
+  .boton-mas {
+    width: 100px;
+  }
+  #section-estadisticas {
+    padding: 2em 1em;
+  }
+  .title-estadisticas h2 {
+    font-size: 1.2rem;
+  }
+  .cantidades {
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 95%;
+    margin-top: -1.5em;
+    align-content: center;
+  }
+  .cantidades .number {
+    font-size: 3rem;
+  }
+  .cantidades .text {
+    font-size: 1rem;
+  }
+  /* Servicios */
+  #sectionServicios {
+    padding: 0em 1em;
+  }
+  #sectionServicios h2 {
+    font-size: 1.2rem;
+  }
+  .serviceImg h4 {
+    font-size: 1rem;
+  }
+  .serviceImg i {
+    font-size: 100px;
+  }
+  .serviceCard {
+    width: 80%;
+    margin-right: 40px;
+  }
+  /* contacto */
+  .contactoHome {
+    width: 100%;
+    background-image: url(../images/bkg-contacto-responsive.svg);
+  }
+  .flexContacto {
+    padding: 1em;
+    position: absolute;
+    top: 6.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: space-around;
+    align-items: flex-start;
+  }
+  .titleContact {
+    width: 100%;
+  }
+  .titleContact h3 {
+    font-size: 2rem;
+  }
+  .titleContact p {
+    font-size: 1rem;
+    padding-bottom: 0.2em;
+  }
+  .titleContact .redes a {
+    font-size: 1rem;
+  }
+  .flexContacto .formulario {
+    width: 100%;
+  }
+  .flexContacto .formulario button.enviar {
+    padding: 0.5em;
+    font-size: 0.9rem;
+  }
+
+  
+  /* footer */
+  footer {
+    padding: 0em;
+    justify-content: space-around;
+  }
+  footer .footerTeam {
+    font-size: 0.8rem;
+  }
+  .redesFooter a {
+    display: block;
+  }
+}

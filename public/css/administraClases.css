@@ -1,0 +1,312 @@
+/* Header - Menu */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  height: fit-content;
+}
+/* ----- SLIDE PROFES ----- */
+#slideProfes {
+  background-image: url(../images/slideAdministrar.png);
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center top;
+  width: 100vw;
+  height: 100vh;
+}
+/* jsPdf
+html2canvas */
+.contenedorSlide {
+  position: relative;
+  width: 50vw;
+  margin: auto;
+  /* padding: 0em 10em 5em 10em; */
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.contenedorSlide h1 {
+  font-size: 3rem;
+  color: #00ffcb;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+.flexSlide {
+  background-color: #ffffff;
+  border-radius: 25px;
+  padding: 1.5em 0.5em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+.flexSlide .imgAlumno {
+  width: fit-content;
+}
+.flexSlide .texto {
+  width: 50%;
+  margin-left: 1em;
+}
+.flexSlide h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5em;
+}
+.flexContenedor{
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin: 4em;
+  width: 100vw;
+}
+.imgAlumno img {
+  border: 2px solid #00ffcb;
+  border-radius: 35px;
+  box-shadow: 4px 4px 5px 0px #bebebe;
+  margin-bottom: -0.5em;
+}
+.imgAlumno p {
+  background-color: #212121;
+  color: #00ffcb;
+  font-size: 1rem;
+  margin: 1em;
+  padding: 0.5em 1em;
+  border-radius: 15px;
+  font-weight: 400;
+}
+.texto p {
+  width: 100%;
+  background-color: #212121;
+  color: #00ffcb;
+  font-size: 1rem;
+  margin: 1em;
+  padding: 1em;
+  border-radius: 15px;
+  font-weight: 400;
+}
+.texto p strong {
+  color: #fff;
+  margin-left: 0.5em;
+}
+.containerFiltros{
+  display: flex;
+  flex-direction: column;
+  margin:2em auto;
+}
+button.btnFiltro{
+  background-color: #212121;
+  border: none;
+  border-radius: 15px;
+  color: #fff;
+  padding: 0.5em 1em;
+  width: 200px;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+button:hover.btnFiltro{
+  background-color: #00ffcb;
+  color: #212121;
+}
+button.active.btnFiltro{
+  background-color: #00ffcb;
+  color: #212121;
+}
+
+.check{
+  display: flex;
+  flex-direction: column;
+  margin: 0.5em 1em;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.check div{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0.2em 0em;
+}
+.check div p{
+  margin-left: 0.5em;
+}
+/* SECTION 1 */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4em 0em;
+}
+.container h2{
+  color: #6243F7;
+  font-size: 2.5rem;
+}
+
+
+.container-info {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.layerFiltros {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+  flex-shrink: 1;
+}
+
+/* Filtro desplegable*/
+
+.filtro-idiomas-formulario,
+.filtro-temas-interes-formulario,
+.filtro-profesiones-formulario,
+.filtro-horario-formulario,
+.filtro-conversacion-formulario,
+.filtro-match-formulario {
+  display: none;
+}
+
+.layer-idiomas:hover > .filtro-idiomas-formulario {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  padding: 5px;
+  margin-left: 15px;
+}
+
+.layer-idiomas:hover button {
+  background-color: #3657f7;
+}
+
+.layer-temas:hover button {
+  background-color: #3657f7;
+}
+
+.layer-profesiones:hover button {
+  background-color: #3657f7;
+}
+
+.layer-horario:hover button {
+  background-color: #3657f7;
+}
+
+.layer-conversacion:hover button {
+  background-color: #3657f7;
+}
+
+.layer-match:hover button {
+  background-color: #3657f7;
+}
+
+.layer-idiomas i {
+  color: #00ffcb;
+}
+
+.layer-temas i {
+  color: #00ffcb;
+}
+.layer-profesiones i {
+  color: #00ffcb;
+}
+.layer-horario i {
+  color: #00ffcb;
+}
+.layer-conversacion i {
+  color: #00ffcb;
+}
+.layer-match i {
+  color: #00ffcb;
+}
+
+.layer-temas:hover > .filtro-temas-interes-formulario {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  padding: 5px;
+  margin-left: 15px;
+}
+
+.layer-profesiones:hover > .filtro-profesiones-formulario {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  padding: 5px;
+  margin-left: 15px;
+}
+
+.layer-horario:hover > .filtro-horario-formulario {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  padding: 5px;
+  margin-left: 15px;
+}
+
+.layer-conversacion:hover > .filtro-conversacion-formulario {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  padding: 5px;
+  margin-left: 15px;
+}
+
+.layer-match:hover > .filtro-match-formulario {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  padding: 5px;
+  margin-left: 15px;
+}
+
+.cardFiltros1,
+.cardFiltros2,
+.cardFiltros3,
+.cardFiltros4,
+.cardFiltros5,
+.cardFiltros6 {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 16px;
+  margin: 20px;
+  color: white;
+  text-align: center;
+  width: 180px;
+  height: 40px;
+  align-self: center;
+  padding: 4px;
+  transition: all;
+}
+
+.cardFiltros {
+  transition: all;
+}
+.cardFiltros:hover {
+  color: rgb(59, 210, 230);
+}
+
+.form-group {
+  display: inline-block;
+}
+
+.input-control {
+  color: rgb(2, 173, 164);
+  background-color: rgb(2, 173, 164);
+  border: 1px rgb(2, 173, 164);
+}
+
+.imagen-estadisticas {
+  margin: auto;
+}
+

@@ -1,0 +1,122 @@
+form.formulario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50vw;
+}
+
+.input-form {
+  display: block;
+  width: 100%;
+  margin: 1em auto;
+  background-color: #00ffcb;
+  padding: 0.5em 1em;
+  border-radius: 15px;
+  border: none;
+  font-size: 1rem;
+  color: #212121;
+}
+
+.input-form,
+input::placeholder {
+  color: #212121;
+  opacity: 1;
+}
+.input-form:focus,
+input:focus,
+input[type]:focus {
+  outline: 0 none;
+}
+
+
+.input-form.disabled {
+  display: block;
+  width: 100%;
+  margin: 1em auto;
+  background-color: #cececeb8;
+  padding: 0.5em 1em;
+  border-radius: 15px;
+  border: none;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.input-form.disabled,
+input::placeholder {
+  color: #434343cb;
+  opacity: 1;
+}
+.input-form.disabled:focus,
+input:focus,
+input[type]:focus {
+  outline: 0 none;
+}
+
+
+.subir {
+  display: flex !important;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 1em auto;
+}
+
+.inputSubir::-webkit-file-upload-button {
+  visibility: hidden;
+  width: 0%;
+}
+.inputSubir::before {
+  content: "Subir imagen";
+  display: inline-block;
+  background: #00ffcb;
+  border: none;
+  border-radius: 15px;
+  padding: 0.5em 1em;
+  outline: none;
+  white-space: nowrap;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1rem;
+}
+.inputSubir:hover::before {
+  background: #212121;
+  color: #00ffcb;
+}
+.inputSubir:active::before {
+  background: #212121;
+  color: #00ffcb;
+}
+
+.contenedorBtn {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.reg {
+  padding: 0.5em 1em;
+  border-radius: 15px;
+  border: transparent;
+  color: #00ffcb;
+  background-color: #6243f7;
+  margin: 1em 0.5em;
+}
+
+.reg:hover {
+  color: #00ffcb;
+  background-color: #212121;
+}
+
+.cancelar {
+  padding: 0.5em 1em;
+  border-radius: 15px;
+  border: 1px solid #6243f7;
+  color: #212121;
+  background-color: transparent;
+  margin: 1em 0.5em;
+}
+
+.cancelar:hover {
+  color: #00ffcb;
+  background-color: #6243f7;
+}

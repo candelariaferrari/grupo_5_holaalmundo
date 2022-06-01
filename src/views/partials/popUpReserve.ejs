@@ -1,0 +1,134 @@
+<section class="contenedor">
+  <div class="nombreProfe">
+    <div class="flexTitulo">
+      <h2>Pepito Juarez</h2>
+      <span class="close">&times;</span>
+
+    </div>
+  </div>
+  <div class="container-pop-body">
+    <div class="container-text">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam ut
+        feugiat nec interdum gravida aenean amet egestas. Aliquam nibh nunc,
+        sollicitudin vitae. Mattis habitant lacus libero pharetra.
+        Pellentesque sed orci, vel diam. Egestas neque eu nec pulvinar.
+        Consequat est fermentum ut urna scelerisque lacus, dictum. Ut eu
+        cursus mauris bibendum adipiscing in morbi felis. Diam egestas
+        nullam viverra ut amet vitae lectus. Sit sed eu id habitasse quis
+        ac.
+      </p>
+    </div>
+    <div class="layerFiltros">
+      <div id="contenedorCheck">
+        <button class="btnFiltroReserva">Dias <i class="fas fa-angle-down"></i></button>
+        <div class="check">
+          <div class="grupo1">
+            <div>
+              <input type="checkbox" name="horario" value="todos" id="todos" />
+              <label for="todos">Todos</label>
+            </div>
+            <div>
+              <input type="checkbox" name="horario" value="lunes" id="lunes" />
+              <label for="lunes">Lunes</label>
+            </div>
+            <div>
+              <input type="checkbox" name="horario" value="martes" id="martes" />
+              <label for="martes">Martes</label>
+            </div>
+          </div>
+          <div class="grupo2">
+            <div>
+              <input type="checkbox" name="horario" value="miercoles" id="miercoles" />
+              <label for="miercoles">Miercoles</label>
+            </div>
+            <div>
+              <input type="checkbox" name="horario" value="jueves" id="jueves" />
+              <label for="jueves">Jueves</label>
+            </div>
+            <div>
+              <input type="checkbox" name="horario" value="viernes" id="viernes" />
+              <label for="viernes">Viernes</label>
+            </div>
+          </div>
+          <div class="grupo3">
+            <div>
+              <input type="checkbox" name="horario" value="sabado" id="sabado" />
+              <label for="sabado">Sabado</label>
+            </div>
+            <div>
+              <input type="checkbox" name="horario" value="domingo" id="domingo" />
+              <label for="domingo">Domingo</label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="contenedorCheck">
+        <button class="btnFiltroReserva">Hora <i class="fas fa-angle-down"></i></button>
+        <div class="check">
+          <div class="grupo1">
+            <div>
+              <input type="checkbox" name="idiomas" value="horario1" id="horario1" />
+              <label for="horario1">7:00-8:00</label>
+            </div>
+            <div>
+              <input type="checkbox" name="idiomas" value="horario1" id="horario1" />
+              <label for="horario1">8:00-9:00</label>
+            </div>
+            <div>
+              <input type="checkbox" name="idiomas" value="horario1" id="horario1" />
+              <label for="horario1">9:00-10:00</label>
+            </div>
+          </div>
+          <div class="grupo2">
+            <div>
+              <input type="checkbox" name="idiomas" value="horario1" id="horario1" />
+              <label for="horario1">10:00-11:00</label>
+            </div>
+            <div>
+              <input type="checkbox" name="idiomas" value="horario1" id="horario1" />
+              <label for="horario1">11:00-12:00</label>
+            </div>
+            <div>
+              <input type="checkbox" name="idiomas" value="horario1" id="horario1" />
+              <label for="horario1">12:00-1:00</label>
+            </div>
+          </div>
+          <div class="grupo3">
+            <div>
+              <input type="checkbox" name="idiomas" value="horario1" id="horario1" />
+              <label for="horario1">1:00-2:00</label>
+            </div>
+            <div>
+              <input type="checkbox" name="idiomas" value="horario1" id="horario1" />
+              <label for="horario1">2:00-3:00</label>
+            </div>
+            <div>
+              <input type="checkbox" name="idiomas" value="horario1" id="horario1" />
+              <label for="horario1">3:00-4:00</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="containerBtn">
+      <button class="btnReservaPopUp">Reservar</button>
+    </div>
+  </div>
+</section>
+
+<script>
+  var btnFiltroReserva = document.getElementsByClassName("btnFiltroReserva");
+ 
+  for (let i = 0; i < btnFiltroReserva.length; i++) {
+    btnFiltroReserva[i].addEventListener("click", function () {
+      this.classList.toggle("active");
+      var check = this.nextElementSibling;
+      if (check.style.maxHeight) {
+        check.style.maxHeight = null;
+      } else {
+        check.style.maxHeight = check.scrollHeight + "px";
+      }
+    });
+  }
+</script>

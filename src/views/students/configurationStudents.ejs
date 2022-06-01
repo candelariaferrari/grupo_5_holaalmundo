@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> Configuración </title>
+  <script src="https://kit.fontawesome.com/3964fc737d.js" crossorigin="anonymous"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <link href="/css/normalize.css" rel="stylesheet" />
+  <link href="/css/configuracion.css" rel="stylesheet" />
+  <link href="/css/style.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/partialsCss/partials.css" />
+  <script src="/js/validationConfigStudents.js"></script>
+</head>
+
+<body id="alumnos">
+
+  <!-- Header -->
+  <%- include('../partials/header.ejs')%>
+
+    <main>
+
+      <section class="contenedorConfiguracion">
+
+        <h1> Configuración </h1>
+
+        <form method="POST" action="/students/configuration/<%= userLogged.id %>/?_method=PUT" name="form" class="formulario" id="config-students">
+
+          <input class="input-form disabled" placeholder="Nombre" type="text" name="name"
+           value="<%= userLogged.name%>" >
+
+          <input class="input-form disabled" placeholder="Apellido" type="text" name="last_name"
+           value="<%= userLogged.last_name %>" >
+
+          <input class="input-form" placeholder="Celular" type="text" name="phone" id="phoneStudent"
+          <%= locals.errors && errors.phone ? "is-invalid" : null %>
+           value="<%= userLogged.phone %>" >
+          <% if(locals.errors && errors.phone) { %>
+            <div class="msgError">
+              <%= errors.phone.msg %>
+            </div>
+          <% } %>
+
+          <input class="input-form disabled" 
+           value="<%= userLogged.email %>" >
+
+          <input class="input-form disabled"  
+           value="********" >
+
+          <input class="input-form disabled" 
+           value="Estudiante">
+
+          <% if(userLogged.user_sex_fk == 1) { %>
+            <input class="input-form disabled" value="Masculino">
+          <% } else { %> 
+            <input class="input-form disabled" value="Femenino">
+          <% } %>
+
+          <div class="subir">
+            <input type="file" name="avatar" id="nuestroInputStudent" class="inputSubir" onchange="return imageValidation()"
+            <%= locals.errors && errors.avatar ? "is-invalid" : null %> 
+             value="<%= locals.oldData ? oldData.avatar : null %>" >
+            <% if(locals.errors && errors.avatar) { %>
+             <div class="msgError">
+              <%= errors.avatar.msg %>
+             </div>
+            <% } %>
+          </div>
+
+          <div id="nuestroInputPreview"> </div>
+
+          <div class="contenedorBtn"> 
+            <button type="submit" class="reg"> Guardar </button>
+            <button type="submit" class="cancelar"> Cancelar </button>
+          </div>
+          
+          <div class="errores-form">
+            <ul></ul>
+          </div>
+
+        </form>
+
+      </section>
+
+    </main>
+
+      <!-- Footer -->
+      <%- include('../partials/footer.ejs')%>
+
+      <script src="/js/scriptHeader.js"></script>
+
+</body>
+
+</html>
