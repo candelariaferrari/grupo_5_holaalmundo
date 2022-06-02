@@ -8,12 +8,13 @@
     <script
       src="https://kit.fontawesome.com/3964fc737d.js"
       crossorigin="anonymous"
-    ></script>
+    ></script> 
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
     <link href="/css/style.css" rel="stylesheet" />
+    <script src="/js/scriptViewTeachers.js"> </script>
   </head>
   <body>
     <!-- NavBar -->
@@ -21,7 +22,7 @@
     <!-- Slide principal -->
     <section class="containerSlide viewTeacher">
       <h2>¿Que idioma te gustaría aprender?</h2>
-      <form action="/students/teachers" method="GET">
+      <form action="/students/teachers" method="GET" class="filter-form">
         <!-- idioma -->
         <div class="btnFiltro">
           Seleccionar Idioma <i class="fas fa-angle-down"></i>
@@ -99,7 +100,7 @@
           </div>
         </div>
         <!-- cursos -->
-        <div class="btnFiltro">
+        <div class="btnFiltro" id="cursos">
           Seleccionar Cursos <i class="fas fa-angle-down"></i>
         </div>
         <div class="check">
@@ -155,7 +156,7 @@
           </div>
         </div>
         <!-- tematicas -->
-        <div class="btnFiltro">
+        <div class="btnFiltro" id="tematicas">
           Seleccionar Tematicas <i class="fas fa-angle-down"></i>
         </div>
         <div class="check">
@@ -197,7 +198,7 @@
               id="musica"
               class="input-control"
             />
-            <label for="cultura">Musica</label>
+            <label for="musica">Musica</label>
           </div>
           <div>
             <input
@@ -211,8 +212,8 @@
           </div>
         </div>
         <!-- examenes -->
-        <div class="btnFiltro">
-          Seleccionar nivel de examen <i class="fas fa-angle-down"></i>
+        <div class="btnFiltro" id="niveles">
+          Seleccionar Nivel <i class="fas fa-angle-down"></i>
         </div>
         <div class="check">
           <div>

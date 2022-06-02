@@ -11,7 +11,6 @@ window.addEventListener("load", function ()
   form.addEventListener("submit", (e) => 
   {
     e.preventDefault()
-
     if (phone.value == "") 
     {
       errors.push("El campo Celular no puede estar vacío")

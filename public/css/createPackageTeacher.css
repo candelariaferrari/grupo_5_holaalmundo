@@ -264,3 +264,34 @@ select[type]:focus {
     font-size: 30px;
   }
 }
+
+
+
+/* ------- estudiantes -> cursos */
+.flexBodyCourses{
+  display: flex;
+  justify-content: space-between;
+  width: 80vw;
+  margin: auto;
+}
+
+
+/* --- configuraciones user*/
+.contentInput.disabled input {
+  height: 35px;
+  width: 100%;
+  border: none;
+  background-color: #DAD9DE;
+  border-radius: 10px;
+  color: #212121;
+  padding-inline-start: 1em;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.contentSubir label {
+  font-size: 18px;
+  color: #fff;
+  padding-left: 1em;
+  margin-bottom: 0.2em;
+}

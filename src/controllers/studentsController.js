@@ -37,6 +37,19 @@ let studentsController = {
         "$rol.description$": { [Op.like]: "%" + "Profesor" + "%" },
       },
     });
+    const alumnos = db.User.findAll({
+      // TODO more queries
+      // SELECT r.description FROM USER
+      // INNER JOIN ROL as r ON user.user_rol_fk = rol.id
+      include: [
+        {
+          association: "rol",
+        },
+      ],
+      where: {
+        "$rol.description$": { [Op.like]: "%" + "Estudiante" + "%" },
+      },
+    });
     const serviciosRecomendados = db.Class.findAll({
       where: {
         visited: 1,
@@ -53,6 +66,7 @@ let studentsController = {
     Promise.all([
       servicios,
       profesores,
+      alumnos,
       cantidadIdiomas,
       cantidadTemas,
       serviciosRecomendados,
@@ -61,14 +75,17 @@ let studentsController = {
       .then(function ([
         servicios,
         profesores,
+        alumnos,
         cantidadIdiomas,
         cantidadTemas,
         serviciosRecomendados,
         serviciosMasVendidos,
       ]) {
+    
         res.render("students/homeStudents", {
           servicios: servicios,
           profesores: profesores,
+          alumnos: alumnos,
           cantidadIdiomas: cantidadIdiomas,
           cantidadTemas: cantidadTemas,
           serviciosRecomendados,
