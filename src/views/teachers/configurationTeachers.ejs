@@ -42,18 +42,18 @@
           <% } %>
 
           <input class="input-form disabled" 
-           value="<%= userLogged.email %>" >
+           value="<%= userLogged.email %>" disabled>
 
           <input class="input-form disabled" 
-           value="********" >
+           value="********">
 
           <input class="input-form disabled" 
-           value="Profesor">
+           value="Profesor" disabled> 
 
           <% if(userLogged.user_sex_fk == 1) { %>
-            <input class="input-form disabled" value="Masculino">
+            <input class="input-form disabled" value="Masculino" disabled>
           <% } else { %> 
-            <input class="input-form disabled" value="Femenino">
+            <input class="input-form disabled" value="Femenino" disabled>
           <% } %>
 
           <div class="subir">

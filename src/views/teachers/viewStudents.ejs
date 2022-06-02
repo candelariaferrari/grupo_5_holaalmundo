@@ -26,10 +26,10 @@
       <form action="/teachers/students" method="GET">
         <div class="flexInput">
           <div class="viewStudent">
-            <select name="allClass" class="input-select">
-              <option value="" disabled selected> Seleccionar Curso</option>
+            <select name="buscarCurso" class="input-select">
+              <option disabled selected> Seleccionar Curso</option>
               <% allClass.forEach(clase=> { %>
-                <option value="<%= `${clase.language}` %>">
+                <option value="<%= clase.id %>">
                   <%= locals.oldData && (clase.language===oldData.clase) ? "select" : null %>
                     <%= `${clase.language}` %>
                 </option>
