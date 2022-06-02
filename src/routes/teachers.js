@@ -1,15 +1,15 @@
 //*** Constantes ***/
 const express = require("express")
 const router = express.Router()
-const multer = require("multer")
-const path = require("path")
-
-const validator = require("../middlewares/express-validator")
 const teacherController = require("../controllers/teachersController")
 const authMiddlewars = require("../middlewares/authMiddleware")
-   
+const validator = require("../middlewares/express-validator")
+
 /*** Inicio de profesores ***/
 router.get("/home", authMiddlewars, teacherController.home)
+
+/*** Sección de comentarios ***/
+router.post("/home", authMiddlewars, teacherController.createComment)
 
 /*** Todos los alumnos ***/
 router.get("/students", teacherController.students)
@@ -27,5 +27,7 @@ router.get("/dashboardLessons", teacherController.dashboardLessons)
 
 /*** Cerrar sesión ***/
 router.get("/logout", teacherController.logout)
+
+router.get("/students/:id", authMiddlewars, teacherController.detailsStudent)
 
 module.exports = router

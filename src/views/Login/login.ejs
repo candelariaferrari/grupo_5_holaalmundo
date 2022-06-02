@@ -30,38 +30,38 @@
           <form class="formulario" action="/users/login" method="POST" style="width: 60%;">
             <div class="campos">
               <label for="Email"></label>
-              <input placeholder="Email" type="email" name="email" class="input-form" id="email"
-              <%= locals.errors && errors.email ? 'is-invalid' : null %>
-							value="<%= locals.oldData ? oldData.email : null %>"
-              >
-              <% if(locals.errors && errors.email) { %>
-                <div class="text-danger">
-                  <%= errors.email.msg %>
-                </div>
-              <% } %>
+              <input placeholder="Email" type="email" name="email" class="input-form" id="email" <%=locals.errors &&
+                errors.email ? 'is-invalid' : null %>
+              value="<%= locals.oldData ? oldData.email : null %>"
+                >
+                <% if(locals.errors && errors.email) { %>
+                  <div class="text-danger">
+                    <%= errors.email.msg %>
+                  </div>
+                  <% } %>
             </div>
 
             <div class="campos">
               <label for="password"></label>
               <input placeholder="Contraseña" type="password" name="password" class="input-form" id="password"
-              <%= locals.errors && errors.password ? 'is-invalid' : null %>
-							value="<%= locals.oldData ? oldData.password : null %>"
-              >
-              <% if(locals.errors && errors.password) { %>
-                <div class="text-danger" >
-                  <%= errors.password.msg %>
-                </div>
-              <% } %>
+                <%=locals.errors && errors.password ? 'is-invalid' : null %>
+              value="<%= locals.oldData ? oldData.password : null %>"
+                >
+                <% if(locals.errors && errors.password) { %>
+                  <div class="text-danger">
+                    <%= errors.password.msg %>
+                  </div>
+                  <% } %>
             </div>
-            <div class="formulario"> 
-                <label for="">
-                  <input type="checkbox" name="remember_user" > Recordar Usuario
-                </label>
+            <div class="formulario">
+              <label for="">
+                <input type="checkbox" name="remember_user"> Recordar Usuario
+              </label>
             </div>
-          
+
             <div class="campos">
               <a class="olv-cont" href="#"> ¿Olvidaste tu contraseña? </a>
-              <button class="reg" type="submit"> 
+              <button class="reg" type="submit">
                 Iniciar
               </button>
 
@@ -75,7 +75,7 @@
       </section>
 
   </main>
-  
+
 </body>
 
 </html>
