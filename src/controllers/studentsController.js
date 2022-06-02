@@ -229,6 +229,17 @@ let studentsController = {
         ],
       },
     });
+
+    
+    /*
+    Como tomo info de la vista para procesarla en el controlador?
+    let pakageSelected = document.querySelector('.cursos');
+    console.log(pakageSelected);
+  
+    pakageSelected.addEventListener('click', function(e) {
+        console.log('Selecionado el paquete')
+    })*/
+    
     res.render("students/packageStudents", {
       servicios: servicios,
       serviciosFiltrados: serviciosFiltrados,
