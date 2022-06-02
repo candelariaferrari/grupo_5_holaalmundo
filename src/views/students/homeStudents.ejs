@@ -1,31 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
-    <script
-      src="https://kit.fontawesome.com/3964fc737d.js"
-      crossorigin="anonymous"
-    ></script>
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
-      rel="stylesheet"
-    />
-    <link href="/css/normalize.css" rel="stylesheet" />
-    <link href="/css/InicioLogged.css" rel="stylesheet" />
-    <link rel="stylesheet" href="/css/partialsCss/partials.css" />
-  </head>
 
-  <body id="alumnos">
-    <%- include('../partials/header.ejs')%>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+  <script src="https://kit.fontawesome.com/3964fc737d.js" crossorigin="anonymous"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <link href="/css/normalize.css" rel="stylesheet" />
+  <link href="/css/InicioLogged.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/partialsCss/partials.css" />
+</head>
+
+<body id="alumnos">
+  <%- include('../partials/header.ejs')%>
     <main>
       <!-- Slide principal -->
       <section id="slideProfes">
@@ -135,20 +127,26 @@
                 </div>
                 <div class="cantidades">
                   <div>
-                    <p class="number"><%=profesores.length %></p>
+                    <p class="number">
+                     +<%=profesores.length %>
+                    </p>
                     <p class="text">Profesores</p>
                   </div>
                   <div>
-                    <p class="number">+ 5000</p>
+                    <p class="number">+<%=alumnos.length %></p>
                     <p class="text">Alumnos</p>
                   </div>
                   <div>
-                    <p class="number"><%= cantidadTemas.length %></p>
+                    <p class="number">
+                      +<%= cantidadTemas.length %>
+                    </p>
                     <p class="text">Temáticas</p>
                   </div>
                   <div>
-                    <p class="number"><%=cantidadIdiomas.length%></p>
-                    <p class="text">Idomas</p>
+                    <p class="number">
+                      +<%=cantidadIdiomas.length%>
+                    </p>
+                    <p class="text">Idiomas</p>
                   </div>
                 </div>
               </div>
@@ -169,92 +167,107 @@
             <i class="fas fa-chevron-right"></i>
           </button>
           <% servicios.forEach(function(servicio){ %>
-          <!-- card 1 -->
-          <div class="serviceCard">
-            <div class="serviceImg">
-              <span class="discountTag">$ <%=servicio.price %></span>
-              <i class="fas fa-comments"></i>
-              <h4><%=servicio.language %></h4>
-              <p class="description"><%=servicio.description %></p>
+            <!-- card 1 -->
+            <div class="serviceCard">
+              <div class="serviceImg">
+                <span class="discountTag">$ <%=servicio.price %></span>
+                <i class="fas fa-comments"></i>
+                <h4>
+                  <%=servicio.language %>
+                </h4>
+                <p class="description">
+                  <%=servicio.description %>
+                </p>
+              </div>
+              <div class="serviceInfo">
+                <button>
+                  <i class="fas fa-shopping-cart"></i>
+                  Agregar al carrito
+                </button>
+              </div>
             </div>
-            <div class="serviceInfo">
-              <button>
-                <i class="fas fa-shopping-cart"></i>
-                Agregar al carrito
-              </button>
-            </div>
-          </div>
-          <% }) %>
+            <% }) %>
         </div>
       </section>
 
-      <section id="sectionServicios" onload="reset()">
-        <h2>Recomendados para ti</h2>
-        <div class="serviceContainer">
-          <button class="preBtn">
-            <i class="fas fa-chevron-left"></i>
-          </button>
-          <button class="nxtBtn">
-            <i class="fas fa-chevron-right"></i>
-          </button>
-        <% serviciosRecomendados.forEach(function(servicio){ %>
-          <!-- card 1 -->
-          <div class="serviceCard">
-            <div class="serviceImg">
-              <span class="discountTag">$ <%=servicio.price %></span>
-              <i class="fas fa-comments"></i>
-              <h4><%=servicio.language %></h4>
-              <p class="description"><%=servicio.description %></p>
-            </div>
-            <div class="serviceInfo">
-              <button>
-                <i class="fas fa-shopping-cart"></i>
-                Agregar al carrito
-              </button>
+
+      <% serviciosRecomendados.forEach(function(servicio){ %>
+        <section id="sectionServicios" onload="reset()">
+          <h2>Recomendados para ti</h2>
+          <div class="serviceContainer">
+            <button class="preBtn">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="nxtBtn">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+            <!-- card 1 -->
+            <div class="serviceCard">
+              <div class="serviceImg">
+                <span class="discountTag">$ <%=servicio.price %></span>
+                <i class="fas fa-comments"></i>
+                <h4>
+                  <%=servicio.language %>
+                </h4>
+                <p class="description">
+                  <%=servicio.description %>
+                </p>
+              </div>
+              <div class="serviceInfo">
+                <button>
+                  <i class="fas fa-shopping-cart"></i>
+                  Agregar al carrito
+                </button>
+              </div>
             </div>
           </div>
-          <% }) %>
-        </div>
-      </section>
-      
+        </section>
+        <% }) %>
 
-      <section id="sectionServicios" onload="reset()">
-        <h2>Los mas vendidos</h2>
-        <div class="serviceContainer">
-          <button class="preBtn">
-            <i class="fas fa-chevron-left"></i>
-          </button>
-          <button class="nxtBtn">
-            <i class="fas fa-chevron-right"></i>
-          </button>
-          <% serviciosMasVendidos.forEach(function(servicio){ %>
-          <!-- card 1 -->
-          <div class="serviceCard">
-            <div class="serviceImg">
-              <span class="discountTag">$ <%=servicio.price %></span>
-              <i class="fas fa-comments"></i>
-              <h4><%=servicio.language %></h4>
-              <p class="description"><%=servicio.description %></p>
-            </div>
-            <div class="serviceInfo">
-              <button>
-                <i class="fas fa-shopping-cart"></i>
-                Agregar al carrito
+
+
+          <section id="sectionServicios" onload="reset()">
+            <h2>Los mas vendidos</h2>
+            <div class="serviceContainer">
+              <button class="preBtn">
+                <i class="fas fa-chevron-left"></i>
               </button>
+              <button class="nxtBtn">
+                <i class="fas fa-chevron-right"></i>
+              </button>
+              <% serviciosMasVendidos.forEach(function(servicio){ %>
+                <!-- card 1 -->
+                <div class="serviceCard">
+                  <div class="serviceImg">
+                    <span class="discountTag">$ <%=servicio.price %></span>
+                    <i class="fas fa-comments"></i>
+                    <h4>
+                      <%=servicio.language %>
+                    </h4>
+                    <p class="description">
+                      <%=servicio.description %>
+                    </p>
+                  </div>
+                  <div class="serviceInfo">
+                    <button>
+                      <i class="fas fa-shopping-cart"></i>
+                      Agregar al carrito
+                    </button>
+                  </div>
+                </div>
+                <% }) %>
             </div>
-          </div>
-          <% }) %>
-        </div>
-      </section>
+          </section>
 
-      <!-- section Contacto -->
-      <%- include('../partials/contact.ejs')%>
+          <!-- section Contacto -->
+          <%- include('../partials/contact.ejs')%>
     </main>
 
     <!-- Footer -->
     <%- include('../partials/footer.ejs')%>
-    <script src="/js/scriptHeader.js"></script>
-    <script src="/js/scriptPreviewCart.js"></script>
-    <script src="/js/scriptCarrusel.js"></script>
-  </body>
+      <script src="/js/scriptHeader.js"></script>
+      <script src="/js/scriptPreviewCart.js"></script>
+      <script src="/js/scriptCarrusel.js"></script>
+</body>
+
 </html>
