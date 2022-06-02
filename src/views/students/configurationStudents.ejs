@@ -36,11 +36,11 @@
         <div class="flexInput">
           <div class="contentColumn">
             <div class="contentInput disabled">
-              <label for="description">Nombre:</label>
+              <label for="name">Nombre:</label>
               <input type="text" name="name" value="<%= userLogged.name%>" disabled>
             </div>
             <div class="contentInput">
-              <label for="description">Celular:</label>
+              <label for="phone">Celular:</label>
               <input placeholder="Celular" type="text" name="phone" id="phoneStudent" <%=locals.errors && errors.phone
                 ? "is-invalid" : null %> value="<%= userLogged.phone %>" >
                 <% if(locals.errors && errors.phone) { %>
@@ -50,11 +50,11 @@
                   <% } %>
             </div>
             <div class="contentInput disabled">
-              <label for="description">Contraseña:</label>
+              <label for="password">Contraseña:</label>
               <input value="********" disabled />
             </div>
             <div class="contentInput disabled">
-              <label for="description">Sexo:</label>
+              <label for="user_sex_fk">Sexo:</label>
               <% if(userLogged.user_sex_fk==1) { %>
                 <input value="Masculino" disabled />
                 <% } else { %>
@@ -65,19 +65,19 @@
           <div class="contentColumn">
             <!-- columna 2 -->
             <div class="contentInput disabled">
-              <label for="description">Apellido:</label>
+              <label for="last_name">Apellido:</label>
               <input type="text" name="last_name" value="<%= userLogged.last_name %>" disabled>
             </div>
             <div class="contentInput disabled">
-              <label for="description">Email:</label>
+              <label for="email">Email:</label>
               <input value="<%= userLogged.email %>" disabled />
             </div>
             <div class="contentInput disabled">
-              <label for="description">Rol:</label>
+              <label for="rol">Rol:</label>
               <input value="Estudiante" disabled />
             </div>
             <div class="contentSubir subir">
-              <label for="description">Avatar:</label>
+              <label for="avatar">Avatar:</label>
 
               <input type="file" name="avatar" id="nuestroInputStudent" class="inputSubir"
                 onchange="return imageValidation()" <%=locals.errors && errors.avatar ? "is-invalid" : null %>
