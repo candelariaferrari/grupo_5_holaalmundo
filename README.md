@@ -7,7 +7,7 @@ El sitio web contará con una sección de login para alumnos y profesores, así 
 El publico objetivo se orienta a personas de cualquier sexo que se quieran acercar al aprendizaje de idiomas por  interes personal o profesional, en edad economicamente activa. Nos orientaremos a personas dentro del rango etario de 20 a 40 años.
 La oferta se ajustará a dicho público brindando una experiencia totalmente virtual, en la que los estudiantes potenciales podrán realizar todo el proceso desde sus dispositivos. Así, tanto inscripción como cursada, dependerá totalmente del alumno.
 
------------------------------------------------------------------- Links de Referencia  ---------------------------------------------------------------------
+----------------------------------------------- Links de Referencia  -----------------------------------------------
 
 Sobre el tema relacionado:
 - https://www.elearningforall.org/
@@ -28,7 +28,7 @@ Sobre estética:
 Link mockups:
 - https://www.figma.com/file/UB49FOnDZQgfJuQ1mQqVWf/Hola-al-Mundo?node-id=0%3A1
 
----------------------------------------------------------------- Descripción de los integrantes -----------------------------------------------------------
+----------------------------------------------- Descripción de los integrantes -----------------------------------------------
 
 1. Carlos Alberto Jaramillo Portilla: Mi nombre es Carlos Jaramillo y mi pasión es la implementación de tecnología en el campo jurídico y con impacto social. Soy abogado de profesión, magister en big data y BI, y magister en Derecho Informático. Experto en entender los problemas actuales, sobre todo relacionados con temas jurídicos y desarrollar software a la medida para solventar dichas problemáticas. Tengo la experiencia tanto desde la visión jurídica, pero también desde la visión tecnológica, lo que me permite generar un excelente empalme para comprender los problemas tecnológicos actuales, y generar un andamiaje jurídico frente a las coyunturas que se generan en el desarrollo de software. 
 
