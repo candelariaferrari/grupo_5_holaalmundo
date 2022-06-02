@@ -145,7 +145,7 @@ input[type]:focus {
 .errores-form li {
   font-size: 0.9rem;
   display: inline;
-  color: #000;
+  color: #fff;
 }
 
 .errores-form strong {

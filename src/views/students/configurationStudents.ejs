@@ -26,7 +26,7 @@
       <div class="titulo">
         <h1>Configuración</h1>
         <p style="font-size: 1.5rem;margin:0.5em auto">
-          <%= userLogged.name%> sube tu avatar así te conocemos
+          <%= userLogged.name%> sube tu avatar para conocernos!
         </p>
       </div>
 
@@ -41,7 +41,7 @@
             </div>
             <div class="contentInput">
               <label for="phone">Celular:</label>
-              <input placeholder="Celular" type="text" name="phone" id="phoneStudent" <%=locals.errors && errors.phone
+              <input type="text" name="phone" id="phoneStudent" <%=locals.errors && errors.phone
                 ? "is-invalid" : null %> value="<%= userLogged.phone %>" >
                 <% if(locals.errors && errors.phone) { %>
                   <div class="msgError">

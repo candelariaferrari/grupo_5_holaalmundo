@@ -12,83 +12,100 @@
     rel="stylesheet" />
   <link href="/css/style.css" rel="stylesheet">
   <link rel="stylesheet" href="/css/partialsCss/partials.css" />
+  <link href="/css/createPackageTeacher.css" rel="stylesheet">
+  <link href="/css/configuracion.css" rel="stylesheet" />
   <script src="/js/validationConfigTeachers.js"></script>
 </head>
 <body>
   <!-- Header -->
   <%- include('../partials/header.ejs')%>
-    <section class="containerBody" style="background-color: white !important">
 
-      <div class="flexPersonal">
 
-        <h1> Configuración </h1>
 
-        <form method="POST" action="/teachers/configuration/<%= userLogged.id %>/?_method=PUT" name="form" class="formulario" id="config-teachers">
-
-          <input class="input-form disabled" placeholder="Nombre" type="text" name="name"
-           value="<%= userLogged.name %>" >
-         
-          <input class="input-form disabled" placeholder="Apellido" type="text" name="last_name"
-           value="<%= userLogged.last_name %>" >
-
-          <input class="input-form" placeholder="Celular" type="text" name="phone" id="phoneTeacher"
-          <%= locals.errors && errors.phone ? "is-invalid" : null %>
-           value="<%= userLogged.phone %>" >
-          <% if(locals.errors && errors.phone) { %>
-            <div class="msgError">
-              <%= errors.phone.msg %>
-            </div>
-          <% } %>
-
-          <input class="input-form disabled" 
-           value="<%= userLogged.email %>" disabled>
-
-          <input class="input-form disabled" 
-           value="********">
-
-          <input class="input-form disabled" 
-           value="Profesor" disabled> 
-
-          <% if(userLogged.user_sex_fk == 1) { %>
-            <input class="input-form disabled" value="Masculino" disabled>
-          <% } else { %> 
-            <input class="input-form disabled" value="Femenino" disabled>
-          <% } %>
-
-          <div class="subir">
-            <input type="file" name="avatar" id="nuestroInputTeacher" class="inputSubir" onchange="return imageValidation()"
-            <%= locals.errors && errors.avatar ? "is-invalid" : null %>
-             value="<%= locals.oldData ? oldData.avatar : null %>" >
-            <% if(locals.errors && errors.avatar) { %>
-             <div class="msgError">
-              <%= errors.avatar.msg %>
-             </div>
-            <% } %>
-          </div>
-
-        </div>
-
-      </div>
-
-        <div class="contenedorBtn"> 
-          <button type="submit" class="reg"> Guardar </button>
-          <button type="submit" class="cancelar"> Cancelar </button>
-        </div>
-
-      <div class="contenedorBtn"> 
-        <button type="submit" class="reg"> Guardar </button>
-        <button type="submit" class="cancelar"> Cancelar </button>
-      </div>
-
-        </form>
-
-      </div>
-
-      </form>
-
+  <section class="contenedorConfiguracion">
+    <div class="titulo">
+      <h1>Configuración</h1>
+      <p style="font-size: 1.5rem;margin:0.5em auto">
+        <%= userLogged.name%> sube tu avatar para conocernos!
+      </p>
     </div>
 
+
+    <form method="POST" action="/teachers/configuration/<%= userLogged.id %>/?_method=PUT" name="form" class="formulario" id="config-teachers">
+      <div class="flexInput">
+        <div class="contentColumn">
+          <div class="contentInput disabled">
+            <label for="name">Nombre:</label>
+            <input type="text" name="name" value="<%= userLogged.name%>" disabled>
+          </div>
+          <div class="contentInput">
+            <label for="phone">Celular:</label>
+            <input  type="text" name="phone" id="phoneTeacher" <%=locals.errors && errors.phone
+              ? "is-invalid" : null %> value="<%= userLogged.phone %>" >
+              <% if(locals.errors && errors.phone) { %>
+                <div class="msgError">
+                  <%= errors.phone.msg %>
+                </div>
+                <% } %>
+          </div>
+          <div class="contentInput disabled">
+            <label for="password">Contraseña:</label>
+            <input value="********" disabled />
+          </div>
+          <div class="contentInput disabled">
+            <label for="user_sex_fk">Sexo:</label>
+            <% if(userLogged.user_sex_fk==1) { %>
+              <input value="Masculino" disabled />
+              <% } else { %>
+                <input value="Femenino" disabled />
+                <% } %>
+          </div>
+        </div>
+        <div class="contentColumn">
+          <!-- columna 2 -->
+          <div class="contentInput disabled">
+            <label for="last_name">Apellido:</label>
+            <input type="text" name="last_name" value="<%= userLogged.last_name %>" disabled>
+          </div>
+          <div class="contentInput disabled">
+            <label for="email">Email:</label>
+            <input value="<%= userLogged.email %>" disabled />
+          </div>
+          <div class="contentInput disabled">
+            <label for="rol">Rol:</label>
+            <input value="Profesor" disabled />
+          </div>
+          <div class="contentSubir subir">
+            <label for="avatar">Avatar:</label>
+
+            <input type="file" name="avatar" id="nuestroInputTeacher" class="inputSubir"
+              onchange="return imageValidation()" <%=locals.errors && errors.avatar ? "is-invalid" : null %>
+            value="<%= locals.oldData ? oldData.avatar : null %>" > <% if(locals.errors && errors.avatar) { %>
+                <div class="msgError">
+                  <%= errors.avatar.msg %>
+                </div>
+                <% } %>
+          </div>
+          <div id="nuestroInputPreview"></div>
+
+        </div>
+      </div>
+      
+      <div style="margin: auto;text-align: center;">
+        <button class="btn crear" type="submit">Guardar<i class="fas fa-check"></i></i> </button>
+      </div>
+      <div class="errores-form">
+        <ul></ul>
+      </div>
+    </form>
+
+
+
+
+
+
   </section>
+  
     <!-- Footer -->
     <%- include('../partials/footer.ejs')%>
       <script src="/js/scriptHeader.js"></script>
