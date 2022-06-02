@@ -43,18 +43,6 @@ body {
   font-size: 2rem;
   margin: -2em auto 2em auto;
 }
-/* .layer1 {
-  background-image: url(/images/slideCarrito.png);
-  width: 100%;
-  height: fit-content;
-  background-repeat: no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-position: center top; 
-  
-} */
 
 .layer1Container {
   display: flex;
@@ -429,7 +417,7 @@ body {
 .serviceImg {
   position: relative;
   width: 100%;
-  height: 350px;
+  height: fit-content;
   overflow: hidden;
   background-color: #6243f7;
   border-top-left-radius: 25px;
@@ -439,14 +427,15 @@ body {
   align-items: center;
   justify-content: center;
   transition: all 0.5s;
+  box-sizing: border-box;
 }
 .serviceImg i {
-  font-size: 150px;
+  font-size: 100px;
   color: #00ffcb;
-  margin-bottom: 22px;
+  margin:0.2em auto;
 }
 .serviceImg h4 {
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-align: center;
   color: #fff;
   text-transform: uppercase;
@@ -463,13 +452,14 @@ body {
   padding: 5px;
 }
 .description {
-  margin-top: 1em;
+  margin: 1em auto;
+  padding-bottom: 1em;
   width: 150px;
   text-align: center;
   border: none;
   transition: 0.5s;
   opacity: 0;
-  font-size: 1rem;
+  font-size: 0.8rem;
   color: #fff;
   transition: all 0.5s;
 }
@@ -504,7 +494,7 @@ body {
   width: 80%;
   border-radius: 25px;
   padding: 0.5em 1em;
-  font-size: 1rem;
+  font-size: 0.8rem;
   background-color: #00ffcb;
   color: #212121;
   
@@ -567,7 +557,7 @@ button.btnFiltro{
   border-radius: 15px;
   color: #fff;
   padding: 0.5em 1em;
-  width: 200px;
+  width: 80%;
   font-size: 1rem;
   display: flex;
   justify-content: space-between;
@@ -587,6 +577,7 @@ button.active.btnFiltro{
   margin: 0.5em 1em;
   background-color: white;
   max-height: 0;
+  width: 100%;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
 }
@@ -1147,43 +1138,65 @@ main{
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
-  width: 100%;
+  width: 80vw;
+  margin: auto;
+  margin-top: 3em;
 }
 
 button.btnFiltrar {
-  background-color: #212121;
+  background-color: #6243f7;
   border: none;
   border-radius: 15px;
   color: #fff;
+  font-weight: 600;
   padding: 0.5em 1.5em;
-  width: fit-content;
+  width: 80%;
   font-size: 1rem;
   margin: 0.5em auto;
-  display: flex;
-  justify-content: center;
+ ;
 }
 button:hover.btnFiltrar {
-  background-color: #fff;
+  background-color: #00ffcb;
   color: #6243f7;
 }
 .filtros{
-  width: 15%;
+  width: 30%;
 }
 .cursos{
   display: flex;
   flex-wrap: wrap;
   width: 80%;
   height: 80vh;
+  
   overflow-y: scroll;
-  border: 2px solid #212121;
+  /* border: 2px solid #212121; */
   border-radius: 25px;
-  padding: 2em 1em;
+  padding: 0em 1em 2em;
   margin-bottom: 5em;
 }
 
 .serviceCard {
   flex: 0 0 auto;
-  width: 200px;
-  height: 450px;
-  margin-right: 36px;
+  width: 230px;
+  margin: 0em 1em 1em 1em;
 }
+
+/* .cursos::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+.cursos::-webkit-scrollbar:vertical {
+  width:10px !important;
+}
+
+.cursos::-webkit-scrollbar-button:increment,.contenedor::-webkit-scrollbar-button {
+  display: none;
+} 
+
+.cursos::-webkit-scrollbar {
+  background-color: transparent;
+  border-radius: 20px;
+  width: 5px;
+  background-color: #212121 !important;
+  border: 1px solid #00ffcb;
+} */

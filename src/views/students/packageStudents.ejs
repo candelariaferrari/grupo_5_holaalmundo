@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,218 +12,232 @@
     href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
     rel="stylesheet">
   <link href="/css/paquetesServicios-1.css" rel="stylesheet">
+  <link href="/css/createPackageTeacher.css" rel="stylesheet">
   <link href="/css/normalize.css" rel="stylesheet">
   <link href="/css/partialsCss/partials.css" rel="stylesheet">
 </head>
+
 <body>
   <%- include('../partials/header.ejs')%>
-  <main>
-    <h2 class="titulo">Elegí lo que mas te convenga!</h2>
-    <div class="contenedorUno">
-      <div class="filtros">
-        <form action="/students/packages" method="GET">
-          <button class="btnFiltro" type="button">Seleccionar Idioma <i
-              class="fas fa-angle-down"></i></button>
-          <div class="check">
-            <div>
-              <input type="checkbox" name="idiomas" value="Español" id="español" class="input-control">
-              <label for="español">Español</label>
-            </div>
-            <div>
-              <input type="checkbox" name="idiomas" value="Inglés" id="ingles" class="input-control">
-              <label for="ingles">Inglés</label>
-            </div>
-            <div>
-              <input type="checkbox" name="idiomas" value="Portugués" id="portugues" class="input-control">
-              <label for="portugues">Portugués</label>
-            </div>
-            <div>
-              <input type="checkbox" name="idiomas" value="Alemán" id="german" class="input-control">
-              <label for="German">Alemán</label>
-            </div>
-            <div>
-              <input type="checkbox" name="idiomas" value="Francés" id="franch" class="input-control">
-              <label for="Franch">Francés</label>
-            </div>
-            <div>
-              <input type="checkbox" name="idiomas" value="Italiano" id="italiano" class="input-control">
-              <label for="italiano">Italiano</label>
-            </div>
-            <div>
-              <input type="checkbox" name="idiomas" value="Chino" id="chino" class="input-control">
-              <label for="chino">Chino</label>
-            </div>
-          </div>
-          <button class="btnFiltro" type="button">Seleccionar Cursos <i class="fas fa-angle-down"></i></button>
-          <div class="check">
-            <div>
-              <input type="checkbox" name="cursos" value="Conversacion-Individual" id="conversacion-individual" class="input-control">
-              <label for="conversacion-individual">Conversación individual</label>
-            </div>
-            <div>
-              <input type="checkbox" name="cursos" value="Conversación-Grupal" id="conversacion-grupal" class="input-control">
-              <label for="ingles">Conversación grupal</label>
-            </div>
-            <div>
-              <input type="checkbox" name="cursos" value="Clase-Individual" id="clase-individual" class="input-control">
-              <label for="portugues">Clase individual</label>
-            </div>
-            <div>
-              <input type="checkbox" name="cursos" value="Clase-Grupal" id="clase-grupal" class="input-control">
-              <label for="German">Clase grupal</label>
-            </div>
-            <div>
-              <input type="checkbox" name="cursos" value="Exámen" id="examenes" class="input-control">
-              <label for="Franch">Examenes</label>
-            </div>
-          </div>
-          <button class="btnFiltro" type="button">Seleccionar Tematicas  <i class="fas fa-angle-down"></i></button>
-          <div class="check">
-            <div>
-              <input type="checkbox" name="tematica" value="Viajes" id="viajes" class="input-control">
-              <label for="viajes">Viajes</label>
-            </div>
-            <div>
-              <input type="checkbox" name="tematica" value="Culinaria" id="culinaria" class="input-control">
-              <label for="culinaria">Culinaria</label>
-            </div>
-            <div>
-              <input type="checkbox" name="tematica" value="Deportes" id="deportes" class="input-control">
-              <label for="deportes">Deportes</label>
-            </div>
-            <div>
-              <input type="checkbox" name="tematica" value="Musica" id="musica" class="input-control">
-              <label for="cultura">Musica</label>
-            </div>
-            <div>
-              <input type="checkbox" name="tematica" value="General" id="general" class="input-control">
-              <label for="general">General</label>
-            </div>
-          </div>
-          <button class="btnFiltro" type="button">Seleccionar Dias <i class="fas fa-angle-down"></i></button>
-          <div class="check">
-            <div>
-              <input type="checkbox" name="weekDays" value="Lunes, Miércoles" id="lunes-miercoles">
-              <label for="lunes-miercoles">Lunes, Miércoles</label>
-            </div>
-            <div>
-              <input type="checkbox" name="weekDays" value="Martes, Jueves" id="martes-jueves">
-              <label for="martes-jueves">Martes, Jueves</label>
-            </div>
-            <div>
-              <input type="checkbox" name="weekDays" value="Lunes, Viernes" id="lunes-viernes">
-              <label for="lunes-viernes">Lunes, Viernes</label>
-            </div>
-            <div>
-              <input type="checkbox" name="weekDays" value="Lunes, Miercoles, Viernes" id="lunes-miercoles-viernes">
-              <label for="lunes-miercoles-viernes">Lunes, Miercoles, Viernes</label>
-            </div>
-            <div>
-              <input type="checkbox" name="weekDays" value="Martes, Miércoles" id="martes-miercoles">
-              <label for="martes-miercoles">Martes, Miércoles</label>
-            </div>
-            <div>
-              <input type="checkbox" name="weekDays" value="Martes, Viernes" id="martes-viernes">
-              <label for="martes-viernes">Martes, Viernes</label>
-            </div>
-            <div>
-              <input type="checkbox" name="weekDays" value="Miércoles, Jueves" id="miercoles-jueves">
-              <label for="miercoles-jueves">Miércoles, Jueves</label>
-            </div>
-          </div>
-          <button class="btnFiltro" type="button">Seleccionar Horarios <i class="fas fa-angle-down"></i></button>
-          <div class="check">
-            <div>
-              <input type="checkbox" name="weekTimes" value="8:00-10:00" id="8:00-10:00">
-              <label for="8:00-10:00">8:00-10:00</label>
-            </div>
-            <div>
-              <input type="checkbox" name="weekTimes" value="9:00-11:00" id="9:00-11:00">
-              <label for="9:00-11:00">9:00-11:00</label>
-            </div>
-            <div>
-              <input type="checkbox" name="weekTimes" value="10:00-12:00" id="10:00-12:00">
-              <label for="10:00-12:00">10:00-12:00</label>
-            </div>
-            <div>
-              <input type="checkbox" name="weekTimes" value="11:00-13:00" id="11:00-13:00">
-              <label for="11:00-13:00">11:00-13:00</label>
-            </div>
-            <div>
-              <input type="checkbox" name="weekTimes" value="13:00-15:00" id="13:00-15:00">
-              <label for="13:00-15:00">13:00-15:00</label>
-            </div>
-            <div>
-              <input type="checkbox" name="weekTimes" value="12:00-14:00" id="12:00-14:00">
-              <label for="12:00-14:00">12:00-14:00</label>
-            </div>
-            <div>
-              <input type="checkbox" name="weekTimes" value="15:00-17:00" id="15:00-17:00">
-              <label for="15:00-17:00">15:00-17:00</label>
-            </div>
-            <div>
-              <input type="checkbox" name="weekTimes" value="16:00-18:00" id="16:00-18:00">
-              <label for="16:00-18:00">16:00-18:00</label>
-            </div>
-            <div>
-              <input type="checkbox" name="weekTimes" value="17:00-19:00" id="17:00-19:00">
-              <label for="17:00-19:00">17:00-19:00</label>
-            </div>
-            <div>
-              <input type="checkbox" name="weekTimes" value="italiano" id="italiano">
-              <label for="italiano">18:00-20:00</label>
-            </div>
-          </div>
-          <button class="btnFiltrar" type="submit">Filtrar</button>
+    <section class="contentSlide">
+
+      <div class="titulo">
+        <p>Que idioma te gustaría aprender?</p>
+        <h1>Eligí el que mas te convenga!</h1>
       </div>
-      <div class="cursos">
-        <% if(serviciosFiltrados.length> 0 ) { %>
-          <% serviciosFiltrados.forEach(function(servicio){ %>
-            <div class="serviceCard">
-              <div class="serviceImg">
-                <span class="discountTag">$ <%=servicio.price %></span>
-                <i class="fas fa-comments"></i>
-                <h4>
-                  <%=servicio.language %>
-                </h4>
-                <p class="description">
-                  <%=servicio.description %>
-                </p>
-              </div>
-              <div class="serviceInfo">
-                <button>
-                  <i class="fas fa-shopping-cart"></i>
-                  Agregar al carrito
-                </button>
-              </div>
-            </div>
-            <% }) %>
-            <% } else { %>
-              <% servicios.forEach(function(servicio){ %>
-                <!-- card 1 -->
-                <div class="serviceCard">
-                  <div class="serviceImg">
-                    <span class="discountTag">$ <%=servicio.price %></span>
-                      <i class="fas fa-comments"></i>
-                      <h4>
-                        <%=servicio.language %>
-                      </h4>
-                      <p class="description">
-                        <%=servicio.description %>
-                      </p>
-                  </div>
-                  <div class="serviceInfo">
-                    <button >
-                      <i class="fas fa-shopping-cart"></i>
-                      Agregar al carrito
-                    </button>
-                  </div>
-                </div>
-              <% }) %>
-            <% } %>
-      </div>
+
+    </section>
+    <div class="onda">
     </div>
-  </main>
+    <section>
+      <div class="contenedorUno">
+        <div class="filtros">
+          <form action="/students/packages" method="GET">
+            <button class="btnFiltro" type="button">Seleccionar Idioma <i class="fas fa-angle-down"></i></button>
+            <div class="check">
+              <div>
+                <input type="checkbox" name="idiomas" value="Español" id="español" class="input-control">
+                <label for="español">Español</label>
+              </div>
+              <div>
+                <input type="checkbox" name="idiomas" value="Inglés" id="ingles" class="input-control">
+                <label for="ingles">Inglés</label>
+              </div>
+              <div>
+                <input type="checkbox" name="idiomas" value="Portugués" id="portugues" class="input-control">
+                <label for="portugues">Portugués</label>
+              </div>
+              <div>
+                <input type="checkbox" name="idiomas" value="Alemán" id="german" class="input-control">
+                <label for="German">Alemán</label>
+              </div>
+              <div>
+                <input type="checkbox" name="idiomas" value="Francés" id="franch" class="input-control">
+                <label for="Franch">Francés</label>
+              </div>
+              <div>
+                <input type="checkbox" name="idiomas" value="Italiano" id="italiano" class="input-control">
+                <label for="italiano">Italiano</label>
+              </div>
+              <div>
+                <input type="checkbox" name="idiomas" value="Chino" id="chino" class="input-control">
+                <label for="chino">Chino</label>
+              </div>
+            </div>
+            <button class="btnFiltro" type="button">Seleccionar Cursos <i class="fas fa-angle-down"></i></button>
+            <div class="check">
+              <div>
+                <input type="checkbox" name="cursos" value="Conversacion-Individual" id="conversacion-individual"
+                  class="input-control">
+                <label for="conversacion-individual">Conversación individual</label>
+              </div>
+              <div>
+                <input type="checkbox" name="cursos" value="Conversación-Grupal" id="conversacion-grupal"
+                  class="input-control">
+                <label for="ingles">Conversación grupal</label>
+              </div>
+              <div>
+                <input type="checkbox" name="cursos" value="Clase-Individual" id="clase-individual"
+                  class="input-control">
+                <label for="portugues">Clase individual</label>
+              </div>
+              <div>
+                <input type="checkbox" name="cursos" value="Clase-Grupal" id="clase-grupal" class="input-control">
+                <label for="German">Clase grupal</label>
+              </div>
+              <div>
+                <input type="checkbox" name="cursos" value="Exámen" id="examenes" class="input-control">
+                <label for="Franch">Examenes</label>
+              </div>
+            </div>
+            <button class="btnFiltro" type="button">Seleccionar Tematicas <i class="fas fa-angle-down"></i></button>
+            <div class="check">
+              <div>
+                <input type="checkbox" name="tematica" value="Viajes" id="viajes" class="input-control">
+                <label for="viajes">Viajes</label>
+              </div>
+              <div>
+                <input type="checkbox" name="tematica" value="Culinaria" id="culinaria" class="input-control">
+                <label for="culinaria">Culinaria</label>
+              </div>
+              <div>
+                <input type="checkbox" name="tematica" value="Deportes" id="deportes" class="input-control">
+                <label for="deportes">Deportes</label>
+              </div>
+              <div>
+                <input type="checkbox" name="tematica" value="Musica" id="musica" class="input-control">
+                <label for="cultura">Musica</label>
+              </div>
+              <div>
+                <input type="checkbox" name="tematica" value="General" id="general" class="input-control">
+                <label for="general">General</label>
+              </div>
+            </div>
+            <button class="btnFiltro" type="button">Seleccionar Dias <i class="fas fa-angle-down"></i></button>
+            <div class="check">
+              <div>
+                <input type="checkbox" name="weekDays" value="Lunes, Miércoles" id="lunes-miercoles">
+                <label for="lunes-miercoles">Lunes, Miércoles</label>
+              </div>
+              <div>
+                <input type="checkbox" name="weekDays" value="Martes, Jueves" id="martes-jueves">
+                <label for="martes-jueves">Martes, Jueves</label>
+              </div>
+              <div>
+                <input type="checkbox" name="weekDays" value="Lunes, Viernes" id="lunes-viernes">
+                <label for="lunes-viernes">Lunes, Viernes</label>
+              </div>
+              <div>
+                <input type="checkbox" name="weekDays" value="Lunes, Miercoles, Viernes" id="lunes-miercoles-viernes">
+                <label for="lunes-miercoles-viernes">Lunes, Miercoles, Viernes</label>
+              </div>
+              <div>
+                <input type="checkbox" name="weekDays" value="Martes, Miércoles" id="martes-miercoles">
+                <label for="martes-miercoles">Martes, Miércoles</label>
+              </div>
+              <div>
+                <input type="checkbox" name="weekDays" value="Martes, Viernes" id="martes-viernes">
+                <label for="martes-viernes">Martes, Viernes</label>
+              </div>
+              <div>
+                <input type="checkbox" name="weekDays" value="Miércoles, Jueves" id="miercoles-jueves">
+                <label for="miercoles-jueves">Miércoles, Jueves</label>
+              </div>
+            </div>
+            <button class="btnFiltro" type="button">Seleccionar Horarios <i class="fas fa-angle-down"></i></button>
+            <div class="check">
+              <div>
+                <input type="checkbox" name="weekTimes" value="8:00-10:00" id="8:00-10:00">
+                <label for="8:00-10:00">8:00-10:00</label>
+              </div>
+              <div>
+                <input type="checkbox" name="weekTimes" value="9:00-11:00" id="9:00-11:00">
+                <label for="9:00-11:00">9:00-11:00</label>
+              </div>
+              <div>
+                <input type="checkbox" name="weekTimes" value="10:00-12:00" id="10:00-12:00">
+                <label for="10:00-12:00">10:00-12:00</label>
+              </div>
+              <div>
+                <input type="checkbox" name="weekTimes" value="11:00-13:00" id="11:00-13:00">
+                <label for="11:00-13:00">11:00-13:00</label>
+              </div>
+              <div>
+                <input type="checkbox" name="weekTimes" value="13:00-15:00" id="13:00-15:00">
+                <label for="13:00-15:00">13:00-15:00</label>
+              </div>
+              <div>
+                <input type="checkbox" name="weekTimes" value="12:00-14:00" id="12:00-14:00">
+                <label for="12:00-14:00">12:00-14:00</label>
+              </div>
+              <div>
+                <input type="checkbox" name="weekTimes" value="15:00-17:00" id="15:00-17:00">
+                <label for="15:00-17:00">15:00-17:00</label>
+              </div>
+              <div>
+                <input type="checkbox" name="weekTimes" value="16:00-18:00" id="16:00-18:00">
+                <label for="16:00-18:00">16:00-18:00</label>
+              </div>
+              <div>
+                <input type="checkbox" name="weekTimes" value="17:00-19:00" id="17:00-19:00">
+                <label for="17:00-19:00">17:00-19:00</label>
+              </div>
+              <div>
+                <input type="checkbox" name="weekTimes" value="italiano" id="italiano">
+                <label for="italiano">18:00-20:00</label>
+              </div>
+            </div>
+            <button class="btnFiltrar" type="submit">Filtrar</button>
+          </form>
+        </div>
+        <div class="cursos">
+          <% if(serviciosFiltrados.length> 0 ) { %>
+            <% serviciosFiltrados.forEach(function(servicio){ %>
+              <div class="serviceCard">
+                <div class="serviceImg">
+                  <span class="discountTag">$ <%=servicio.price %></span>
+                  <i class="fas fa-comments"></i>
+                  <h4>
+                    <%=servicio.language %>
+                  </h4>
+                  <p class="description">
+                    <%=servicio.description %>
+                  </p>
+                </div>
+                <div class="serviceInfo">
+                  <button>
+                    <i class="fas fa-shopping-cart"></i>
+                    Agregar al carrito
+                  </button>
+                </div>
+              </div>
+              <% }) %>
+                <% } else { %>
+                  <% servicios.forEach(function(servicio){ %>
+                    <!-- card 1 -->
+                    <div class="serviceCard">
+                      <div class="serviceImg">
+                        <span class="discountTag">$ <%=servicio.price %></span>
+                        <i class="fas fa-comments"></i>
+                        <h4>
+                          <%=servicio.language %>
+                        </h4>
+                        <p class="description">
+                          <%=servicio.description %>
+                        </p>
+                      </div>
+                      <div class="serviceInfo">
+                        <button>
+                          <i class="fas fa-shopping-cart"></i>
+                          Agregar al carrito
+                        </button>
+                      </div>
+                    </div>
+                    <% }) %>
+                      <% } %>
+        </div>
+      </div>
+    </section>
 
     <!-- Footer -->
     <%- include('../partials/footer.ejs')%>

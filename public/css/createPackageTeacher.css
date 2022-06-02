@@ -264,3 +264,13 @@ select[type]:focus {
     font-size: 30px;
   }
 }
+
+
+
+/* ------- estudiantes -> cursos */
+.flexBodyCourses{
+  display: flex;
+  justify-content: space-between;
+  width: 80vw;
+  margin: auto;
+}
