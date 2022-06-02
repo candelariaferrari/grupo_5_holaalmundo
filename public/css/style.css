@@ -16,3 +16,12 @@
 .bodyViewStudents{
   padding-bottom: 2em;
 } 
+#tematicas{
+  display: none
+}
+#niveles{
+  display: none;
+}
+.check-active{
+  display: block !important;
+}

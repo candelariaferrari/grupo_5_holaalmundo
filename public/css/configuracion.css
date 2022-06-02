@@ -13,17 +13,14 @@ body {
   height: fit-content;
 }
 .contenedorConfiguracion {
-  background-color: #fff;
+  background-color: #212121;
   height: fit-content;
-  margin: 10% auto;
+  margin: 0em auto;
+  padding: 10% 0%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.contenedorConfiguracion h1 {
-  color: #212121;
 }
 
 form.formulario {
@@ -72,7 +69,7 @@ input[type]:focus {
   display: inline-block;
   background: #00ffcb;
   border: none;
-  border-radius: 15px;
+  border-radius: 10px;
   padding: 0.5em 1em;
   outline: none;
   white-space: nowrap;
@@ -81,8 +78,8 @@ input[type]:focus {
   font-size: 1rem;
 }
 .inputSubir:hover::before {
-  background: #212121;
-  color: #00ffcb;
+  background: #fff;
+  color: #212121;
 }
 .inputSubir:active::before {
   background: #212121;
@@ -148,9 +145,22 @@ input[type]:focus {
 .errores-form li {
   font-size: 0.9rem;
   display: inline;
-  color: #000;
+  color: #fff;
 }
 
 .errores-form strong {
   color: #00FFCB;
+}
+
+#nuestroInputPreview{
+  width: 150px;
+  margin: 1em 0em;
+  /* border: 1px solid #00ffcb; */
+  padding: 0.2em;
+  box-sizing: border-box;
+  border-radius: 25px;
+}
+
+#nuestroInputPreview img{
+  width: 100%;
 }
