@@ -125,12 +125,12 @@ let teachersController = {
       },
     });
 
-    filterAlumnos.filter(function(alumno){
+    /*filterAlumnos.filter(function(alumno){
       // 1. usuarios 
       // 2. si el id esta en el array (clase incluida)
       console.log(alumno);
       
-    })
+    })*/
 
     const allStudents = await db.User.findAll();
     res.render("teachers/viewStudents", {
