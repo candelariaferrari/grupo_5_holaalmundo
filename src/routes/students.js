@@ -16,6 +16,7 @@ router.get("/teachers", authMiddlewars, studentsController.filterTeachers)
 
 /*** Todos los paquetes ***/
 router.get("/packages", authMiddlewars, studentsController.services)
+router.post("/packages", authMiddlewars, studentsController.services)
 
 /*** Configuración de estudiantes ***/
 router.get("/configuration", authMiddlewars, studentsController.configuration)

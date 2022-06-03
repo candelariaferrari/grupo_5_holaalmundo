@@ -1,4 +1,5 @@
 // ************ Require's ************
+const fetch = require("node-fetch");
 const { validationResult } = require("express-validator");
 const db = require("../database/models");
 const sequelize = db.sequelize;
@@ -81,7 +82,6 @@ let studentsController = {
         serviciosRecomendados,
         serviciosMasVendidos,
       ]) {
-    
         res.render("students/homeStudents", {
           servicios: servicios,
           profesores: profesores,
@@ -211,9 +211,7 @@ let studentsController = {
     let week_days = req.query.weekDays; // REVISAR
     let week_times = req.query.weekTimes; // REVISAR
 
-    const servicios = await db.Class.findAll({
-      attributes: ["price", "language", "description"],
-    });
+    const servicios = await db.Class.findAll({});
 
     const serviciosFiltrados = await db.Class.findAll({
       where: {
@@ -230,51 +228,94 @@ let studentsController = {
       },
     });
 
-    
+    claseId = req.query.claseId;
+
+    if (claseId != null) {
+      /*
+      -> Desde el backend no se usa fetch se usa desde el frontend. 
+          * Se usa un archivo js 
+          * Se usa document para traerme los datos 
+          * 
+      -> Desde el backend se usa un boton para enviar la informacion. 
+      await fetch(`http://localhost:3000/api/clases/${claseId}`)
+        .then((response) => response.json())
+        .then((clase) => {
+          console.log(clase);
+        })*/
+        await fetch(`http://localhost:3000/api/item/${claseId}`, {
+          method: 'POST',
+          body: {
+            nombre: req.body.name
+          }
+        })
+        .then((response) => response.json())
+        .then((item) => {
+          console.log(item);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    }
+
+    cantidadItems = 0;
+
+    /*if (clase != undefined) {
+      if (clase != clase) {
+        // 1
+        console.log("Entro en el contador");
+        cantidadItems += 1;
+      }
+    }
+    console.log(cantidadItems);
+    */
+
     /*
-    Como tomo info de la vista para procesarla en el controlador?
+    Como tomo info de la vista para procesarla en el controlador con el document.querrySelector?
     let pakageSelected = document.querySelector('.cursos');
     console.log(pakageSelected);
   
     pakageSelected.addEventListener('click', function(e) {
         console.log('Selecionado el paquete')
     })*/
-    
+
     res.render("students/packageStudents", {
       servicios: servicios,
       serviciosFiltrados: serviciosFiltrados,
+      cantidadItems: cantidadItems,
     });
   },
   configuration: function (req, res) {
-    let userLogged = req.session.userLogged
-    res.render("students/configurationStudents"), {userLogged: userLogged}
+    let userLogged = req.session.userLogged;
+    res.render("students/configurationStudents"), { userLogged: userLogged };
   },
-  configurationProcess:  async function (req, res) {
-    let userLogged = req.session.userLogged
-    const errorsValidation = validationResult(req)
-  
-      if(errorsValidation.errors.length > 0){
-          return  res.render("students/configurationStudents", {
-              errors: errorsValidation.mapped(),
-              oldData: req.body,
-              userLogged: userLogged
-          });
-      } else {
-         await db.User.update({
-              phone: req.body.phone,
-              avatar: req.body.avatar
-          }, 
-          {
-            where: {
-              id: userLogged.id
-            },
-          }).catch(function(err){
-              console.log(err);
-          })
-          
-          return res.redirect('/')
+  configurationProcess: async function (req, res) {
+    let userLogged = req.session.userLogged;
+    const errorsValidation = validationResult(req);
+
+    if (errorsValidation.errors.length > 0) {
+      return res.render("students/configurationStudents", {
+        errors: errorsValidation.mapped(),
+        oldData: req.body,
+        userLogged: userLogged,
+      });
+    } else {
+      await db.User.update(
+        {
+          phone: req.body.phone,
+          avatar: req.body.avatar,
+        },
+        {
+          where: {
+            id: userLogged.id,
+          },
         }
-      },
+      ).catch(function (err) {
+        console.log(err);
+      });
+
+      return res.redirect("/");
+    }
+  },
   detailsTeacher: async function (req, res) {
     const profesor = await db.User.findByPk(req.params.id, {
       attributes: ["id", "name", "avatar"],
