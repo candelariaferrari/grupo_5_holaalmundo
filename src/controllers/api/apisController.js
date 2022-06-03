@@ -303,6 +303,17 @@ const apis = {
     };
     res.json(jsonTypes);
   },
+  createCart: async function (req, res) {
+    let classFound = await db.Class.findByPk(req.params.id);
+    let item = await db.Item.create({
+      class_name: classFound.description,
+      class_price: Number(classFound.price),
+      class_image: classFound.image,
+      class_subtotal: Number(1) * Number(classFound.price), // Cantidad de clicks
+      class_quantity: Number(1), // Como le paso la cantidad de clicks
+      id_user_fk: req.session.userLogged.id,
+    });
+  },
   updateCart: async function (req, res) {
     await db.Item.update(
       {
@@ -327,6 +338,13 @@ const apis = {
 
     res.json(item);
   },
+  deleteCart: async function (req, res){
+    await db.Item.destroy({ 
+      where: {
+        id: req.params.id, // How do I get this params?
+      },
+    });
+  }
 };
 
 module.exports = apis;
