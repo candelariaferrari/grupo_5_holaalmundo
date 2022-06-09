@@ -303,6 +303,22 @@ const apis = {
     };
     res.json(jsonTypes);
   },
+  listClasesLanguage: async function (req, res) {
+    let ClassxLanguage = await db.Class.findAll({
+      attributes: ["language", [sequelize.fn("COUNT", sequelize.col(`language`)), `ClassxLanguage`]],
+      group: "language"
+    });
+
+    let jsonClassxLanguage = {
+      meta: {
+        status: 200,
+        total_language: ClassxLanguage.length,
+        url: "/api/clases/clasesLanguage",
+      },
+      data: ClassxLanguage
+    };
+    res.json(jsonClassxLanguage);
+  },
   createCart: async function (req, res) {
     let classFound = await db.Class.findByPk(req.params.id);
     let item = await db.Item.create({
