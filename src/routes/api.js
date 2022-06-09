@@ -13,6 +13,8 @@ router.get("/clases/weekTimes", apisController.listClasesWeekTimes);
 router.get("/clases/topics", apisController.listClasesTopics);
 router.get("/clases/level", apisController.listClasesLevel);
 router.get("/clases/types", apisController.listClasesTypes);
+router.get("/clases/clasesLanguage", apisController.listClasesLanguage)
+
 router.post("/cart/update", apisController.updateCart);
 router.post("/cart/delete/:id", apisController.deleteCart);
 
